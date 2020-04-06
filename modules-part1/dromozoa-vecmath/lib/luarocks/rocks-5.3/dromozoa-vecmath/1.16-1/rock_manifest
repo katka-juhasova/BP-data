@@ -1,0 +1,57 @@
+rock_manifest = {
+   doc = {
+      COPYING = "d32239bcb673463ab874e80d47fae504",
+      ["README.md"] = "4f6270fa79561a45d9ccb85ab37799d9"
+   },
+   ["dromozoa-vecmath-1.16-1.rockspec"] = "7e66e973dafa8eaeb4c35e96c265b127",
+   lua = {
+      dromozoa = {
+         svg = {
+            ["arcto.lua"] = "657a957e14a35fb810b1888f0bc3f500",
+            ["close_path.lua"] = "8e5f022d31afbf243ca7dc1a2baa44fe",
+            ["cubic_curveto.lua"] = "60eeeab4f93cf66700538e5db238af4c",
+            ["lineto.lua"] = "5b12b36ea51301e3b0496e0bc49cf0fc",
+            ["moveto.lua"] = "d8ec47cc59b28d512fa84095af0191c4",
+            ["path_data.lua"] = "98cec11059fe5d107060ed9a132b5705",
+            ["quadratic_curveto.lua"] = "a4cb62c6ba4fd287acfcb10d5fadaf50"
+         },
+         ["svg.lua"] = "5ab9674b48dc9e0db29f01c50aaa79ef",
+         vecmath = {
+            ["axis_angle4.lua"] = "4cb3bc0e96aaae22d831c120d39eb85d",
+            ["bernstein.lua"] = "923a90cb711f8a23dff14e686e1d9fd3",
+            ["bezier.lua"] = "96177be9b13da671b8b16ea5b1d6218d",
+            ["bezier_clipping.lua"] = "e5b5a613359c11edfeef5cb4f312f85a",
+            ["bezier_focus.lua"] = "d622d425fc1a6f82221f60b23143533f",
+            ["clip_both.lua"] = "db30dc4a6acce0c2ab97aa48cbb87432",
+            ["color3.lua"] = "1d6157b1009cbeb981e3a957aae84a74",
+            ["color3b.lua"] = "58d6c6cf5e12f2a39d994a3b8d522800",
+            ["color3f.lua"] = "10cd32e9ac3468ae3ba6553a2e7505e3",
+            ["color4.lua"] = "e39fe6f6688b6c986916aeaea2a7821a",
+            ["color4b.lua"] = "1b61d91b3c947ace5e32004efa032542",
+            ["color4f.lua"] = "914df2e3a2be1ff9f3c9ded0c0f14654",
+            ["colors.lua"] = "fc1d21951fa74c32d808226d2228bc31",
+            ["matrix2.lua"] = "14d4f4e7b69cb73405be23ad2d4b3e92",
+            ["matrix3.lua"] = "ceefae7a2502c39050571965ca3b6656",
+            ["matrix4.lua"] = "92750d1a4165cdeadd1bad2e48b211c2",
+            ["point2.lua"] = "f3e21ce4165728984695214c78354cce",
+            ["point3.lua"] = "b0e50c90278f0b2d3a2efcde7da34bac",
+            ["point4.lua"] = "f293e9d504cf23730b532cd503acfe8d",
+            ["polynomial.lua"] = "b43a41d584b8c3292dc2ef59797481a6",
+            ["quat4.lua"] = "5b41377e7d1a3d91309f999cefacdea0",
+            ["quickhull.lua"] = "d64fc4ea95334329f04da9e525edc04a",
+            ["svd2.lua"] = "b88062956f7884a8aa7bf464ed90ed0e",
+            ["svd3.lua"] = "a0e8b7e2333747801c1bf161726b2290",
+            ["tex_coord2.lua"] = "1c2ca1a1875607061c0f339db2d4c577",
+            ["tex_coord3.lua"] = "d0bf8b0a6630622258092df63c8fb5bd",
+            ["tex_coord4.lua"] = "fac3d8b8ed71bfbb4a26f94ff65d68b5",
+            ["tuple2.lua"] = "5887f2eab3a015767668abf6686142ee",
+            ["tuple3.lua"] = "8c8a2fe69b8be2553486f7682c3c4a57",
+            ["tuple4.lua"] = "582dcf642011264cd30d01dc0f03fb93",
+            ["vector2.lua"] = "c86bd66dc48bbc96d1feb1131d2a1f75",
+            ["vector3.lua"] = "60c53b994d6fe43892b1fd2cb63c8f50",
+            ["vector4.lua"] = "738cc9d2b10bb2b21eb5b1b9612d07be"
+         },
+         ["vecmath.lua"] = "91794b0958694c4728054de5fbd27219"
+      }
+   }
+}

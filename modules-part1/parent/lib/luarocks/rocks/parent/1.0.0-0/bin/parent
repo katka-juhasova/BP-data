@@ -1,0 +1,10 @@
+#!/usr/bin/env lua
+
+local parent = require('parent')
+
+if arg and #arg > 0 then
+  local string = parent_string(tonumber(arg[1]))
+  print(string)
+else
+  print("Usage: parent <level>")
+end

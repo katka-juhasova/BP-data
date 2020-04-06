@@ -1,0 +1,13 @@
+rock_manifest = {
+   ["hsm_statechart-0.5-1.rockspec"] = "e6bb935cc9a3e44db54bbb2d275c41e6",
+   lib = {
+      ["hsm_statechart.so"] = "27832a3e40d03fffa936319eae01e04f"
+   },
+   samples = {
+      hula = {
+         ["samek_plus.lua"] = "873e98353e7d1e615703bec5b10c359b",
+         ["watch.lua"] = "27893f8f6b153318e0e73233efa2df23",
+         ["watch.wx.wlua"] = "03fbd0d184ef29ff18b2dcb79e5cccfd"
+      }
+   }
+}

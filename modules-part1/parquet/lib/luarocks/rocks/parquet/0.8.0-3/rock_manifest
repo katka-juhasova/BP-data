@@ -1,0 +1,29 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "ff305fcbd01d05d8b42f2c7fff41734d",
+      LICENSE = "291285f219ea9977a9d39caebac3cfb0",
+      ["README.md"] = "aa9c8fcd4922184d49a697fc039f7099"
+   },
+   lua = {
+      parquet = {
+         ["ParquetCursor.lua"] = "fd83e505b63d00a5915c7dce5c603fc7",
+         ["ParquetEnvelopeReader.lua"] = "de6fe11d0ee744e80f17df55c3afc916",
+         ["ParquetReader.lua"] = "e7a653664d854543b54d141e00ad63c0",
+         codec = {
+            ["plain.lua"] = "54194373bcfc085bd2b95bfd58cf901a",
+            ["rle.lua"] = "113f681378835defe4c43c678907756b",
+            ["varint.lua"] = "5362a523dd2d999be437d79961585d71"
+         },
+         ["codec.lua"] = "35749e3242c168491f10109b76bebb86",
+         ["compression.lua"] = "4a94b8c3d8cfc1283b071ceef1e6cdb1",
+         ["parquet_ttypes.lua"] = "05666a9f37689f0ff9c217b8e0e596d4",
+         ["reader.lua"] = "4f435f7f235b3eda75f7ff0ba293a62a",
+         ["schema.lua"] = "61fea31c2d31e666f79b3f6bc9a96daf",
+         ["shred.lua"] = "81443109e5a85b90e8c7140abc0a01dc",
+         ["types.lua"] = "d8d80c533308518c2dd9d5bb5a8d6083",
+         ["util.lua"] = "c6b1250db3a2936df8a1859f0e78c623"
+      },
+      ["parquet.lua"] = "4c27bf25ff9b573a2ec898c77364d264"
+   },
+   ["parquet-0.8.0-3.rockspec"] = "19fbd0cf329d329e47f52211fa223fcc"
+}

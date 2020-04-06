@@ -1,0 +1,9 @@
+Help [[
+
+select (index, ...)
+-------------------
+
+  If `index` is a number, returns all arguments after argument number `index`.
+  Otherwise, `index` must be the string `"#"`, and `select` returns the total
+  number of extra arguments it received.
+]]

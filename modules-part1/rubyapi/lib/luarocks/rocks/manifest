@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   rubyapi = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   rubyapi = {
+      "rubyapi/1.0-1"
+   }
+}
+repository = {
+   rubyapi = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rubyapi = "rubyapi.lua"
+            }
+         }
+      }
+   }
+}

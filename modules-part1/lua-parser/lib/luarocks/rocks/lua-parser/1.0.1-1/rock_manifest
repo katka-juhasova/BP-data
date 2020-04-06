@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "46ea6723c07f9dcace1614abbf9ffc49",
+      ["README.md"] = "f13b1b43e1b779d0c5f261f81c038391"
+   },
+   lua = {
+      ["lua-parser"] = {
+         ["parser.lua"] = "50f961d46efb1fa368a89a94c266a008",
+         ["pp.lua"] = "83e12fe246a7f79d2a22ac95969d1ad1",
+         ["scope.lua"] = "1185a3bad3b83f2edc3b84608b620f31",
+         ["validator.lua"] = "d6b6c90c76ff2c2e1a806a1f332010d6"
+      }
+   },
+   ["lua-parser-1.0.1-1.rockspec"] = "99eccab3df69ad45e823affa879a09ac"
+}

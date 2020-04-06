@@ -1,0 +1,21 @@
+rock_manifest = {
+   bin = {
+      wagon = "8f633f39aa9dc9b09f5efe9a892ec69c"
+   },
+   doc = {
+      LICENSE = "70ce9fb635eb9c74460855bf9d2aaf1f",
+      ["README.md"] = "5eb7677afad83d02a0245e5f28f38134"
+   },
+   lua = {
+      wagon = {
+         ["builder.lua"] = "ab566b4c5c2213a03685d5dd2e0ea4c2",
+         ["bundler.lua"] = "da37be940c24b0f9987760a40214e11c",
+         ["defs.lua"] = "ff49fef920a53b8e41d234584144640c",
+         ["driver.lua"] = "5bd0b80a9e8c617823d9c471ffa3da5a",
+         ["fs.lua"] = "941a2514fe78b41cb851e8f6ef46ca8f",
+         ["init.lua"] = "fb1cba5e1450af821a5b5e4620c1b5a1",
+         ["log.lua"] = "cdccf84f3ec2f3076b161036f9808b7d"
+      }
+   },
+   ["wagon-0.2.1-1.rockspec"] = "f4b86e94d466bd7d77c5e65b2bc84bae"
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>CMDBuild SOAP API Library</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/cmdbuild.html">cmdbuild</a></li>
+  <li><a href="../modules/cmdbuild.attachment.html">cmdbuild.attachment</a></li>
+  <li><a href="../modules/cmdbuild.card.html">cmdbuild.card</a></li>
+  <li><strong>cmdbuild.lookup</strong></li>
+  <li><a href="../modules/cmdbuild.relation.html">cmdbuild.relation</a></li>
+  <li><a href="../modules/cmdbuild.workflow.html">cmdbuild.workflow</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/Readme.md.html">Readme</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>cmdbuild.lookup</code></h1>
+<p>List methods: list, by_id, translation_by_id</p>
+<p></p>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">cmdbuild.Lookup:get().list(your_args)</pre>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#methods.list">methods.list (lookup_type, value, need_parent_list)</a></td>
+	<td class="summary">It returns a complete list of Lookup values corresponding to the specified "type".</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#methods.by_id">methods.by_id (lookup_id)</a></td>
+	<td class="summary">It returns the Lookup heading which shows the specified "Id" identification</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#methods.translation_by_id">methods.translation_by_id (lookup_id)</a></td>
+	<td class="summary">Only model from DBIC</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lookup:create">Lookup:create (lookup_type, code, description, id, notes, parent_id, position)</a></td>
+	<td class="summary">Lookup:create
+  It creates in the database a new heading of a data Lookup list
+ containing information inserted in the “Lookup” object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lookup:delete">Lookup:delete (lookup_id)</a></td>
+	<td class="summary">Lookup:delete
+  It deletes logically - in the identified class -
+ the pre-existing card with the identified "id".</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lookup:update">Lookup:update (lookup_type, code, description, id, notes, parent_id, position)</a></td>
+	<td class="summary">Lookup:update - table
+  It updates the pre-existing Lookup heading.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#methods">methods</a></td>
+	<td class="summary"></td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "methods.list"></a>
+    <strong>methods.list (lookup_type, value, need_parent_list)</strong>
+    </dt>
+    <dd>
+    It returns a complete list of Lookup values corresponding to the specified "type".
+ If the "value" parameter is specified, only the related heading is returned.
+ If “parentList” takes the “True” value, it returns the complete hierarchy available for the multilevel Lookup lists.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lookup_type</span>
+         - Name of the Lookup list which includes the current heading(string)
+        </li>
+        <li><span class="parameter">value</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+        <li><span class="parameter">need_parent_list</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {+RETURNS+}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "methods.by_id"></a>
+    <strong>methods.by_id (lookup_id)</strong>
+    </dt>
+    <dd>
+    It returns the Lookup heading which shows the specified "Id" identification
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lookup_id</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {+RETURNS+}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "methods.translation_by_id"></a>
+    <strong>methods.translation_by_id (lookup_id)</strong>
+    </dt>
+    <dd>
+    Only model from DBIC
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lookup_id</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        {+RETURNS+}
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lookup:create"></a>
+    <strong>Lookup:create (lookup_type, code, description, id, notes, parent_id, position)</strong>
+    </dt>
+    <dd>
+    Lookup:create
+  It creates in the database a new heading of a data Lookup list
+ containing information inserted in the “Lookup” object.
+ It returns the "id" identification attribute.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lookup_type</span>
+         - Name of the Lookup list which includes the current heading (string)
+        </li>
+        <li><span class="parameter">code</span>
+         - Code of the Lookup heading (one single heading of a Lookup list).(string)
+        </li>
+        <li><span class="parameter">description</span>
+         - Description of the Lookup heading (one single heading of a Lookup list) (string)
+        </li>
+        <li><span class="parameter">id</span>
+         - Lookup identification, it is automatically assigned by the database (number)
+        </li>
+        <li><span class="parameter">notes</span>
+         - Notes connected with the Lookup heading (string)
+        </li>
+        <li><span class="parameter">parent_id</span>
+         - Identification of the parent Lookup in the current heading (if applicable) (number)
+        </li>
+        <li><span class="parameter">position</span>
+         - Location of the Lookup heading in the related Lookup list (number)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        id (integer)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lookup:delete"></a>
+    <strong>Lookup:delete (lookup_id)</strong>
+    </dt>
+    <dd>
+    Lookup:delete
+  It deletes logically - in the identified class -
+ the pre-existing card with the identified "id".
+ It returns “true” if the operation went through.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lookup_id</span>
+         - {+DESCRIPTION+} (number)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lookup:update"></a>
+    <strong>Lookup:update (lookup_type, code, description, id, notes, parent_id, position)</strong>
+    </dt>
+    <dd>
+    Lookup:update - table
+  It updates the pre-existing Lookup heading.   It returns “true” if the operation went through.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lookup_type</span>
+         - Name of the Lookup list which includes the current heading (string)
+        </li>
+        <li><span class="parameter">code</span>
+         - Code of the Lookup heading (one single heading of a Lookup list).(string)
+        </li>
+        <li><span class="parameter">description</span>
+         - Description of the Lookup heading (one single heading of a Lookup list).(string)
+        </li>
+        <li><span class="parameter">id</span>
+         - Lookup identification, it is automatically assigned by the database (number)
+        </li>
+        <li><span class="parameter">notes</span>
+         - Notes connected with the Lookup heading (string)
+        </li>
+        <li><span class="parameter">parent_id</span>
+         - Identification of the parent Lookup in the current heading (if applicable) (number)
+        </li>
+        <li><span class="parameter">position</span>
+         - Location of the Lookup heading in the related Lookup list (number)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        id (integer)</li>
+        <li>
+        {+RETURNS+}</li>
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Tables"></a>Tables</h2>
+    <dl class="function">
+    <dt>
+    <a name = "methods"></a>
+    <strong>methods</strong>
+    </dt>
+    <dd>
+
+  Only model from DBIC
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">list</span>
+
+ It returns a complete list of Lookup values corresponding to the specified "type".
+ If the "value" parameter is specified, only the related heading is returned.
+ If “parentList” takes the “True” value, it returns the complete hierarchy available for the multilevel Lookup lists.
+        </li>
+        <li><span class="parameter">by_id</span>
+
+  It returns the Lookup heading which shows the specified "Id" identification
+        </li>
+        <li><span class="parameter">translate_by_id</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.2</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

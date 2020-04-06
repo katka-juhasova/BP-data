@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   xssfilter = {
+      ["10.12.28-1"] = {}
+   }
+}
+modules = {
+   xssfilter = {
+      "xssfilter/10.12.28-1"
+   }
+}
+repository = {
+   xssfilter = {
+      ["10.12.28-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               xssfilter = "xssfilter.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,232 @@
+#!/usr/bin/env lua
+
+
+local pash = {}
+
+
+templet = require( 'templet' )
+inspect = require( 'inspect' )
+lfs = require( 'lfs' )
+
+
+-- table deep-copy utility function
+function pash.copy( original )
+  local original_type = type( original )
+  local copy
+  if original_type == 'table' then
+    copy = {}
+    for original_key, original_value in next, original, nil do
+      copy[pash.copy( original_key ) ] = pash.copy( original_value )
+    end
+    -- use the same metatable (do not copy that too)
+    setmetatable( copy, getmetatable( original ) )
+  else -- number, string, boolean, etc
+    copy = original
+  end
+  return copy
+end
+
+
+function pash.run_code( code, context, name )
+
+  -- copy context into _G for the purposes of execution
+  for k,v in pairs( context ) do _G[k] = v end
+
+  -- check syntax and return a function
+  local func, err = load( code, name, 't', _G )
+
+  if err then
+    error( err )
+  else
+    -- execute with protection and catch errors
+    local result, returned = pcall( func )
+    if ( result == false ) then
+      error( returned )
+    else
+      -- copy back special keys in case there have been any changes
+      context.page = _G.page
+      context.site = _G.site
+      context.pash = _G.pash
+      return returned, context
+    end
+  end
+
+end
+
+
+function pash.read_file( name )
+  local infile = assert( io.open( name, 'r' ) )
+  local content = infile:read( '*a' )
+  infile:close()
+  return content
+end
+
+
+function pash.write_file( name, content )
+  local outfile = io.open( name, 'w' )
+  outfile:write( content )
+  outfile:close()
+end
+
+
+function pash.run_file( name, context )
+  return pash.run_code( pash.read_file( name ), context, name )
+end
+
+
+function pash.render_file( filename, env )
+  function include( filename )
+    local template = templet.loadfile( filename )
+    return template( env )
+  end
+  
+  -- copy env into _G for the purposes of execution
+  for k,v in pairs( env ) do _G[k] = v end
+  env = _G
+  
+  return include( filename )
+end
+
+
+function pash.render_tree( source, destination, level, context, silent )
+  level = level or 0
+  context = context or {}
+
+  local whitespace = ' '
+  local directories = {}
+  local files = {}
+
+  -- check for 'subdir/_context.lua' and add to context if it exists
+  file = io.open( source..'/_context.pash', 'r' )
+  if file then _, context = pash.run_file( source..'/_context.pash', context ); file.close(); if not silent then print( whitespace:rep( level * 2 )..'[found _context.pash at '..source..']' ) end end
+
+  -- create tables of the file and directory names
+  for item in lfs.dir( source ) do
+    local attr = lfs.attributes( source..'/'..item )
+    if item:sub( 1, 1 ) ~= '_' and item:sub( 1, 1 ) ~= '.' and item ~= arg[0] then
+      if attr.mode == "directory" then
+        table.insert( directories, item )
+      elseif attr.mode == 'file' then
+        table.insert( files, item )
+      end
+    end
+  end
+  table.sort( directories ) ; table.sort( files )
+
+  local tree = {}
+
+  -- process directories first for depth-first search
+  for count, directory in ipairs( directories ) do
+
+    if not silent then print( whitespace:rep( level * 2 )..directory..'/' ) end
+    destination_attr = lfs.attributes( destination..'/'..directory )
+    if ( destination_attr == nil and not silent ) then
+      lfs.mkdir( destination..'/'..directory )
+    end
+    local subtree = pash.render_tree( source..'/'..directory, destination..'/'..directory, level + 1, pash.copy( context ), silent )
+
+    tree[directory] = subtree
+  end
+
+  -- process files now that search has already processed any children
+  for count, file in ipairs( files ) do
+  
+    pash.processing = source..'/'..file
+    
+    -- setup file specific page values
+    context.page.level = level
+    context.page.directory = source:gsub( '^%.%/', '' )
+    context.page.file = file
+    context.page.path = ( context.page.directory..'/'..context.page.file ):gsub( '^%.%/', '' )
+
+    
+    local output, after_context
+    
+    
+    if file:match( '%.jpg$' ) 
+      or file:match( '%.jpeg$' ) 
+      or file:match( '%.gif$' ) 
+      or file:match( '%.png$' ) 
+      or file:match( '%.eot$' ) 
+      or file:match( '%.ttf$' )
+      or file:match( '%.woff$' ) 
+      or destination:match( 'js' ) then
+      -- skip template processing
+      
+      output = pash.read_file( source..'/'..file )
+      after_context = context
+    else
+    
+      -- process templates
+      after_context = pash.copy( context )
+
+      output = pash.render_file( source..'/'..file, after_context )
+      
+      
+      -- embed in a layout if one was specified
+      if after_context.page.layout then
+        after_context.page.content = output
+        
+        output = pash.render_file( after_context.page.layout, after_context )
+        
+        if not silent and not after_context.page.ignore then print( whitespace:rep( level * 2 )..file..' ('..after_context.page.layout..')' ) end
+      else
+        if not silent and not after_context.page.ignore then print( whitespace:rep( level * 2 )..file ) end
+      end
+    
+    end
+    
+    if not after_context.page.ignore then
+      table.insert( tree, { directory = context.page.directory, file = context.page.file, path = context.page.path, title = after_context.page.title, layout = after_context.page.layout, hidden = after_context.page.hidden } )
+      if not silent then 
+        outfile = io.open( destination..'/'..file, "w" )
+        outfile:write( output )
+        outfile:close() 
+      end
+    end
+    
+  end
+
+  return tree
+
+end
+
+
+pash.context = {}
+
+pash.source = arg[1] or nil
+pash.destination = arg[2] or nil
+
+
+if ( #arg ~= 2 ) then
+  print( 'Usage: pash <source> <destination>' )
+else
+  local source_attr = lfs.attributes( pash.source )
+  local destination_attr = lfs.attributes( pash.destination )
+  if type( source_attr ) ~= 'table' or source_attr.mode ~= 'directory' then
+    print( '<source> needs to be an existing directory' )  
+  elseif type( destination_attr ) ~= 'table' or destination_attr.mode ~= 'directory' then
+    print( '<destination> needs to be an existing directory' )
+  else
+    
+    local here = lfs.currentdir()
+    pash.source = here..'/'..pash.source
+    pash.destination = here..'/'..pash.destination
+    
+    print( pash.source.. ' --> ' )
+    print( pash.destination )
+    
+    lfs.chdir( arg[1] )
+  
+    -- stand-in for the tree for the first pass of render (as the tree is generated in this initial pass)
+    pash.context.site = { tree = {} }
+    pash.context.page = {}
+    pash.context.pash = {}
+    local site_tree = pash.render_tree( '.', pash.destination, 0, pash.copy( pash.context ), true )
+
+    pash.context.site = { tree = site_tree }
+    pash.context.page = {}
+    pash.context.pash = {}    
+    pash.render_tree( '.', pash.destination, 0, pash.context )
+  end
+end

@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   husl = {
+      ["1.0-0"] = {}
+   }
+}
+modules = {
+   husl = {
+      "husl/1.0-0"
+   }
+}
+repository = {
+   husl = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               husl = "husl.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,119 @@
+commands = {}
+dependencies = {
+   luagraphs = {
+      ["1.0-5"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["luagraphs.connectivity.ConnectedComponents"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.connectivity.StronglyConnectedComponents"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.data.IndexedMinPQ"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.data.MinPQ"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.data.UnionFind"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.data.graph"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.data.list"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.data.network"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.data.queue"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.data.stack"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.flow.FordFulkerson"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.mst.EagerPrimMST"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.mst.KruskalMST"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.mst.PrimMST"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.search.BreadthFirstSearch"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.search.DepthFirstSearch"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.shortest_paths.BellmanFord"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.shortest_paths.Dijkstra"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.shortest_paths.TopoSortShortestPath"] = {
+      "luagraphs/1.0-5"
+   },
+   ["luagraphs.sort.TopologicalSort"] = {
+      "luagraphs/1.0-5"
+   }
+}
+repository = {
+   luagraphs = {
+      ["1.0-5"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["luagraphs.connectivity.ConnectedComponents"] = "luagraphs/connectivity/ConnectedComponents.lua",
+               ["luagraphs.connectivity.StronglyConnectedComponents"] = "luagraphs/connectivity/StronglyConnectedComponents.lua",
+               ["luagraphs.data.IndexedMinPQ"] = "luagraphs/data/IndexedMinPQ.lua",
+               ["luagraphs.data.MinPQ"] = "luagraphs/data/MinPQ.lua",
+               ["luagraphs.data.UnionFind"] = "luagraphs/data/UnionFind.lua",
+               ["luagraphs.data.graph"] = "luagraphs/data/graph.lua",
+               ["luagraphs.data.list"] = "luagraphs/data/list.lua",
+               ["luagraphs.data.network"] = "luagraphs/data/network.lua",
+               ["luagraphs.data.queue"] = "luagraphs/data/queue.lua",
+               ["luagraphs.data.stack"] = "luagraphs/data/stack.lua",
+               ["luagraphs.flow.FordFulkerson"] = "luagraphs/flow/FordFulkerson.lua",
+               ["luagraphs.mst.EagerPrimMST"] = "luagraphs/mst/EagerPrimMST.lua",
+               ["luagraphs.mst.KruskalMST"] = "luagraphs/mst/KruskalMST.lua",
+               ["luagraphs.mst.PrimMST"] = "luagraphs/mst/PrimMST.lua",
+               ["luagraphs.search.BreadthFirstSearch"] = "luagraphs/search/BreadthFirstSearch.lua",
+               ["luagraphs.search.DepthFirstSearch"] = "luagraphs/search/DepthFirstSearch.lua",
+               ["luagraphs.shortest_paths.BellmanFord"] = "luagraphs/shortest_paths/BellmanFord.lua",
+               ["luagraphs.shortest_paths.Dijkstra"] = "luagraphs/shortest_paths/Dijkstra.lua",
+               ["luagraphs.shortest_paths.TopoSortShortestPath"] = "luagraphs/shortest_paths/TopoSortShortestPath.lua",
+               ["luagraphs.sort.TopologicalSort"] = "luagraphs/sort/TopologicalSort.lua"
+            }
+         }
+      }
+   }
+}

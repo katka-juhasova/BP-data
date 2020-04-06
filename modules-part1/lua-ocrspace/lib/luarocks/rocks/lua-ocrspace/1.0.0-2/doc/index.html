@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Local_Functions">Local Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>ocr-space</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ocr-space</code></h1>
+<p>A lua ocr.space wrapper</p>
+<p> Get your key here https://ocr.space/ocrapi</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: IgorMael</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#OcrSpace.new">OcrSpace.new (apiKey, default)</a></td>
+	<td class="summary">Initialize the api and set the api key</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#OcrSpace:set_default">OcrSpace:set_default (options)</a></td>
+	<td class="summary">Define the default api options</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#OcrSpace:get_default">OcrSpace:get_default ()</a></td>
+	<td class="summary">Get the current default setting</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#OcrSpace:post">OcrSpace:post (source, options)</a></td>
+	<td class="summary">Do a post request to the api and return the parsed text</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#OcrSpace:get">OcrSpace:get (imageUrl, options)</a></td>
+	<td class="summary">Make a get request to the Api and return the parsed text</td>
+	</tr>
+</table>
+<h2><a href="#Local_Functions">Local Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#get_type">get_type (source)</a></td>
+	<td class="summary">Define the requisition file type
+ find which key type is present on the function</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "OcrSpace.new"></a>
+    <strong>OcrSpace.new (apiKey, default)</strong>
+    </dt>
+    <dd>
+    Initialize the api and set the api key
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">apiKey</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         The apiKey
+        </li>
+        <li><span class="parameter">default</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+         The default request settings
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+        An ocrSpace instance
+      <ul>
+        </ul>
+    </ol>
+     <h3>Or</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">nil</span></span>
+        </li>
+      <ul>
+        </ul>
+        <li>
+        Error Message</li>
+      <ul>
+            <li><span class="parameter">1</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+             You must provide an apiKey</li>
+            <li><span class="parameter">2</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+              The apikey must be a string</li>
+        </ul>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OcrSpace:set_default"></a>
+    <strong>OcrSpace:set_default (options)</strong>
+    </dt>
+    <dd>
+    Define the default api options
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+         A table with the new default settings
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OcrSpace:get_default"></a>
+    <strong>OcrSpace:get_default ()</strong>
+    </dt>
+    <dd>
+    Get the current default setting
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+        a table with the currenty settings
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OcrSpace:post"></a>
+    <strong>OcrSpace:post (source, options)</strong>
+    </dt>
+    <dd>
+    Do a post request to the api and return the parsed text
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+         The source of the request
+        </li>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+         A table with the request settings
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+        a table with the parsed result
+    </ol>
+     <h3>Or</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">nil</span></span>
+        </li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        You should specify a url, file or base64Image</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OcrSpace:get"></a>
+    <strong>OcrSpace:get (imageUrl, options)</strong>
+    </dt>
+    <dd>
+    Make a get request to the Api and return the parsed text
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">imageUrl</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         A url to the source image
+        </li>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+         A table with the request settings
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+        a table with the parsed result
+    </ol>
+     <h3>Or</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">nil</span></span>
+        </li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        source should be a string</li>
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Local_Functions"></a>Local Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "get_type"></a>
+    <strong>get_type (source)</strong>
+    </dt>
+    <dd>
+    Define the requisition file type
+ find which key type is present on the function
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">source</span>
+         The source of the request
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        a string with the type url | file | base64Image
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2019-04-17 16:02:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

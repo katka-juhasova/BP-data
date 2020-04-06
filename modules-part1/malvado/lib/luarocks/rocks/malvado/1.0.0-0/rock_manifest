@@ -1,0 +1,37 @@
+rock_manifest = {
+   doc = {
+      ["config.ld"] = "f6c8c81ec68e09161f72500f4c9cf21c",
+      ["cookbook.md"] = "4a6dddb0af85d884281d59902fa29466",
+      ["index.html"] = "c33ecd245f0f20d023eb12cdeb5d92ab",
+      ["ldoc.css"] = "e2b04e90ff648f8e00d9d4d458de59d9",
+      ["ldoc_fixed.css"] = "d6f4ca3f36936380fc16c7b80c3eb52e",
+      modules = {
+         ["malvado.core.html"] = "9170f3732df532b2609cabbc4fc3d1bb",
+         ["malvado.draw.html"] = "9c11f1a891e503b5d2df3e86ffed41ba",
+         ["malvado.effects.html"] = "f0fcfe0563ae008a431a881c6b9da756",
+         ["malvado.key.html"] = "c1a841834f941f018813d84d8ebc4e1b",
+         ["malvado.map.html"] = "6460dfda0c99ab4dc823dd766ce78562",
+         ["malvado.math.html"] = "b6f9dd83537d5e8efbc9e147dc07f381",
+         ["malvado.mouse.html"] = "949fd9391b55a6919b6a7b91dc97f4d9",
+         ["malvado.text.html"] = "e3c3c6586609b6c791409b104fa99c1d"
+      }
+   },
+   lua = {
+      malvado = {
+         ["core.lua"] = "6d3c7d5bd34fc7d695dcef89b1fdd4be",
+         ["draw.lua"] = "f209b16ff305b91e3205832ff20ee404",
+         ["effects.lua"] = "9ce2eb9ed6d9a17e1edc00aa35a61506",
+         ["init.lua"] = "a2a1baa032136f351ca91342f12a6cef",
+         ["key.lua"] = "45176bee9e617542c7df3d1142b2f740",
+         ["map.lua"] = "0ff804a9a55eac5e304413d482cedadc",
+         ["math.lua"] = "b99cc7b073fcd16fd4ce3de21063c797",
+         ["mouse.lua"] = "9e4d87c7c51b4a0fa7b24f7d38ed9e5c",
+         ["screen.lua"] = "939156e5958b7e0fe8ecf588b6045f03",
+         ["text.lua"] = "12758d1002bb8badd37f7e0a8e7021e0",
+         ["utils.lua"] = "c65ad2c4452d17103be5ad2fb1966c28",
+         ["video.lua"] = "fad9493713b760a45478795336ae76cc",
+         ["wm.lua"] = "9ca75acd0a2711ea752a54f717a55a04"
+      }
+   },
+   ["malvado-1.0.0-0.rockspec"] = "62168e70433a81eeb99ff7509536cadf"
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   chain = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   chain = {
+      "chain/1.0-1"
+   }
+}
+repository = {
+   chain = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               chain = "chain.lua"
+            }
+         }
+      }
+   }
+}

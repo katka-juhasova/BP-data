@@ -1,0 +1,190 @@
+commands = {
+   vert = {
+      "vert/0.0.3-3"
+   },
+   vert_wrapper = {
+      "vert/0.0.3-3"
+   }
+}
+dependencies = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   vert = {
+      ["0.0.3-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luafilesystem"
+         },
+         {
+            constraints = {},
+            name = "luasocket"
+         }
+      }
+   }
+}
+modules = {
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   optimal = {
+      "vert/0.0.3-3"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   },
+   utils = {
+      "vert/0.0.3-3"
+   },
+   vert = {
+      "vert/0.0.3-3"
+   },
+   vert_initialize = {
+      "vert/0.0.3-3"
+   },
+   vert_list = {
+      "vert/0.0.3-3"
+   },
+   vert_make = {
+      "vert/0.0.3-3"
+   },
+   vert_remove = {
+      "vert/0.0.3-3"
+   }
+}
+repository = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   vert = {
+      ["0.0.3-3"] = {
+         {
+            arch = "installed",
+            commands = {
+               vert = "vert",
+               vert_wrapper = "vert_wrapper"
+            },
+            dependencies = {
+               luafilesystem = "1.7.0-2",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               optimal = "optimal.lua",
+               utils = "utils.lua",
+               vert = "vert.lua",
+               vert_initialize = "vert_initialize.lua",
+               vert_list = "vert_list.lua",
+               vert_make = "vert_make.lua",
+               vert_remove = "vert_remove.lua"
+            }
+         }
+      }
+   }
+}

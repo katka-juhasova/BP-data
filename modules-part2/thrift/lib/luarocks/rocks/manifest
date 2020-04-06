@@ -1,0 +1,539 @@
+commands = {}
+dependencies = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   long = {
+      ["1.0.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, 2, revision = 0, string = "5.3.2-0"
+                  }
+               }
+            },
+            name = "bit32"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "<=",
+                  version = {
+                     4, 1, revision = 0, string = "4.1-0"
+                  }
+               }
+            },
+            name = "middleclass"
+         }
+      }
+   },
+   middleclass = {
+      ["4.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   thrift = {
+      ["0.10.0-5"] = {
+         {
+            constraints = {
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, 0, revision = 1, string = "5.3.0-1"
+                  }
+               }
+            },
+            name = "bit32"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, 3, string = "1.0.3"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     2, 0, 0, string = "2.0.0"
+                  }
+               }
+            },
+            name = "long"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "<=",
+                  version = {
+                     4, 1, revision = 0, string = "4.1-0"
+                  }
+               }
+            },
+            name = "middleclass"
+         },
+         {
+            constraints = {
+               {
+                  op = "<=",
+                  version = {
+                     2, 0, 1, revision = 1, string = "2.0.1-1"
+                  }
+               }
+            },
+            name = "vstruct"
+         }
+      }
+   },
+   vstruct = {
+      ["2.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   bit32 = {
+      "bit32/5.3.0-1"
+   },
+   long = {
+      "long/1.0.3-1"
+   },
+   ["long.bit32s"] = {
+      "long/1.0.3-1"
+   },
+   middleclass = {
+      "middleclass/4.1-0"
+   },
+   thrift = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.TApplicationException"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.TApplicationExceptionType"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.TException"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.TServer"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.TSimpleServer"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.libluabitwise"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.libluabpack"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.liblualongnumber"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.print_r"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TBinaryProtocol"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TBinaryProtocolFactory"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TCompactProtocol"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TCompactProtocolFactory"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TCompactProtocolType"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TJsonProtocol"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TJsonProtocolFactory"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TMessageType"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TProtocol"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TProtocolException"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TProtocolExceptionType"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TProtocolFactory"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.protocol.TType"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.terror"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TBufferedTransport"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TBufferedTransportFactory"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TFramedTransport"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TFramedTransportFactory"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.THttpTransport"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.THttpTransportFactory"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TMemoryBuffer"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TServerSocket"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TServerTransport"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TSocket"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TTransport"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TTransportException"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TTransportExceptionType"] = {
+      "thrift/0.10.0-5"
+   },
+   ["thrift.transport.TTransportFactory"] = {
+      "thrift/0.10.0-5"
+   },
+   vstruct = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.api"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast.Bitpack"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast.IO"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast.List"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast.Name"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast.Node"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast.Repeat"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast.Root"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.ast.Table"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.compat1x"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.cursor"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.a"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.b"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.bigendian"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.c"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.defaults"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.endianness"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.f"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.hostendian"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.i"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.littleendian"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.m"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.p"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.s"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.seekb"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.seekf"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.seekto"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.u"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.x"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.io.z"] = {
+      "vstruct/2.0.1-1"
+   },
+   ["vstruct.lexer"] = {
+      "vstruct/2.0.1-1"
+   }
+}
+repository = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit32 = "bit32.so"
+            }
+         }
+      }
+   },
+   long = {
+      ["1.0.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               bit32 = "5.3.0-1",
+               middleclass = "4.1-0"
+            },
+            modules = {
+               long = "long.lua",
+               ["long.bit32s"] = "long/bit32s.lua"
+            }
+         }
+      }
+   },
+   middleclass = {
+      ["4.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               middleclass = "middleclass.lua"
+            }
+         }
+      }
+   },
+   thrift = {
+      ["0.10.0-5"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               bit32 = "5.3.0-1",
+               long = "1.0.3-1",
+               middleclass = "4.1-0",
+               vstruct = "2.0.1-1"
+            },
+            modules = {
+               thrift = "thrift.lua",
+               ["thrift.TApplicationException"] = "thrift/TApplicationException.lua",
+               ["thrift.TApplicationExceptionType"] = "thrift/TApplicationExceptionType.lua",
+               ["thrift.TException"] = "thrift/TException.lua",
+               ["thrift.TServer"] = "thrift/TServer.lua",
+               ["thrift.TSimpleServer"] = "thrift/TSimpleServer.lua",
+               ["thrift.libluabitwise"] = "thrift/libluabitwise.lua",
+               ["thrift.libluabpack"] = "thrift/libluabpack.lua",
+               ["thrift.liblualongnumber"] = "thrift/liblualongnumber.lua",
+               ["thrift.print_r"] = "thrift/print_r.lua",
+               ["thrift.protocol.TBinaryProtocol"] = "thrift/protocol/TBinaryProtocol.lua",
+               ["thrift.protocol.TBinaryProtocolFactory"] = "thrift/protocol/TBinaryProtocolFactory.lua",
+               ["thrift.protocol.TCompactProtocol"] = "thrift/protocol/TCompactProtocol.lua",
+               ["thrift.protocol.TCompactProtocolFactory"] = "thrift/protocol/TCompactProtocolFactory.lua",
+               ["thrift.protocol.TCompactProtocolType"] = "thrift/protocol/TCompactProtocolType.lua",
+               ["thrift.protocol.TJsonProtocol"] = "thrift/protocol/TJsonProtocol.lua",
+               ["thrift.protocol.TJsonProtocolFactory"] = "thrift/protocol/TJsonProtocolFactory.lua",
+               ["thrift.protocol.TMessageType"] = "thrift/protocol/TMessageType.lua",
+               ["thrift.protocol.TProtocol"] = "thrift/protocol/TProtocol.lua",
+               ["thrift.protocol.TProtocolException"] = "thrift/protocol/TProtocolException.lua",
+               ["thrift.protocol.TProtocolExceptionType"] = "thrift/protocol/TProtocolExceptionType.lua",
+               ["thrift.protocol.TProtocolFactory"] = "thrift/protocol/TProtocolFactory.lua",
+               ["thrift.protocol.TType"] = "thrift/protocol/TType.lua",
+               ["thrift.terror"] = "thrift/terror.lua",
+               ["thrift.transport.TBufferedTransport"] = "thrift/transport/TBufferedTransport.lua",
+               ["thrift.transport.TBufferedTransportFactory"] = "thrift/transport/TBufferedTransportFactory.lua",
+               ["thrift.transport.TFramedTransport"] = "thrift/transport/TFramedTransport.lua",
+               ["thrift.transport.TFramedTransportFactory"] = "thrift/transport/TFramedTransportFactory.lua",
+               ["thrift.transport.THttpTransport"] = "thrift/transport/THttpTransport.lua",
+               ["thrift.transport.THttpTransportFactory"] = "thrift/transport/THttpTransportFactory.lua",
+               ["thrift.transport.TMemoryBuffer"] = "thrift/transport/TMemoryBuffer.lua",
+               ["thrift.transport.TServerSocket"] = "thrift/transport/TServerSocket.lua",
+               ["thrift.transport.TServerTransport"] = "thrift/transport/TServerTransport.lua",
+               ["thrift.transport.TSocket"] = "thrift/transport/TSocket.lua",
+               ["thrift.transport.TTransport"] = "thrift/transport/TTransport.lua",
+               ["thrift.transport.TTransportException"] = "thrift/transport/TTransportException.lua",
+               ["thrift.transport.TTransportExceptionType"] = "thrift/transport/TTransportExceptionType.lua",
+               ["thrift.transport.TTransportFactory"] = "thrift/transport/TTransportFactory.lua"
+            }
+         }
+      }
+   },
+   vstruct = {
+      ["2.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               vstruct = "vstruct/init.lua",
+               ["vstruct.api"] = "vstruct/api.lua",
+               ["vstruct.ast"] = "vstruct/ast.lua",
+               ["vstruct.ast.Bitpack"] = "vstruct/ast/Bitpack.lua",
+               ["vstruct.ast.IO"] = "vstruct/ast/IO.lua",
+               ["vstruct.ast.List"] = "vstruct/ast/List.lua",
+               ["vstruct.ast.Name"] = "vstruct/ast/Name.lua",
+               ["vstruct.ast.Node"] = "vstruct/ast/Node.lua",
+               ["vstruct.ast.Repeat"] = "vstruct/ast/Repeat.lua",
+               ["vstruct.ast.Root"] = "vstruct/ast/Root.lua",
+               ["vstruct.ast.Table"] = "vstruct/ast/Table.lua",
+               ["vstruct.compat1x"] = "vstruct/compat1x.lua",
+               ["vstruct.cursor"] = "vstruct/cursor.lua",
+               ["vstruct.io"] = "vstruct/io.lua",
+               ["vstruct.io.a"] = "vstruct/io/a.lua",
+               ["vstruct.io.b"] = "vstruct/io/b.lua",
+               ["vstruct.io.bigendian"] = "vstruct/io/bigendian.lua",
+               ["vstruct.io.c"] = "vstruct/io/c.lua",
+               ["vstruct.io.defaults"] = "vstruct/io/defaults.lua",
+               ["vstruct.io.endianness"] = "vstruct/io/endianness.lua",
+               ["vstruct.io.f"] = "vstruct/io/f.lua",
+               ["vstruct.io.hostendian"] = "vstruct/io/hostendian.lua",
+               ["vstruct.io.i"] = "vstruct/io/i.lua",
+               ["vstruct.io.littleendian"] = "vstruct/io/littleendian.lua",
+               ["vstruct.io.m"] = "vstruct/io/m.lua",
+               ["vstruct.io.p"] = "vstruct/io/p.lua",
+               ["vstruct.io.s"] = "vstruct/io/s.lua",
+               ["vstruct.io.seekb"] = "vstruct/io/seekb.lua",
+               ["vstruct.io.seekf"] = "vstruct/io/seekf.lua",
+               ["vstruct.io.seekto"] = "vstruct/io/seekto.lua",
+               ["vstruct.io.u"] = "vstruct/io/u.lua",
+               ["vstruct.io.x"] = "vstruct/io/x.lua",
+               ["vstruct.io.z"] = "vstruct/io/z.lua",
+               ["vstruct.lexer"] = "vstruct/lexer.lua"
+            }
+         }
+      }
+   }
+}

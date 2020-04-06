@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "113f2f7cbaef6a22ab5b27ecbf5759d8",
+      ["README.md"] = "632d19eb25ff722adb701df2c64544c3"
+   },
+   lua = {
+      resty = {
+         exec = {
+            ["socket.lua"] = "4b779d1a5f0407c556d6ab33e47d1c13"
+         },
+         ["exec.lua"] = "6ad6ed3883ec8a7b4eab07b7d7d97450"
+      }
+   },
+   ["lua-resty-exec-3.0.3-0.rockspec"] = "e6b07116b1c8578a27abf7d97404202d"
+}

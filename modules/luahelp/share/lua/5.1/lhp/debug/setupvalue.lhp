@@ -1,9 +1,0 @@
-Help [[
-
-debug.setupvalue (func, up, value)
-----------------------------------
-
-  This function assigns the value `value` to the upvalue with index `up` of
-  the function `func`. The function returns **nil** if there is no upvalue
-  with the given index. Otherwise, it returns the name of the upvalue.
-]]

@@ -1,0 +1,109 @@
+commands = {}
+dependencies = {
+   ["coro-http-luv"] = {
+      ["1.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luv"
+         }
+      }
+   },
+   luv = {
+      ["1.34.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["coro-http-luv"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.coro-channel"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.coro-net"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.coro-wrapper"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.http-codec"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.secure-socket"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.secure-socket.biowrap"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.secure-socket.bit"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.secure-socket.context"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   ["coro-http-luv.secure-socket.root_ca"] = {
+      "coro-http-luv/1.0.0-0"
+   },
+   luv = {
+      "luv/1.34.1-1"
+   }
+}
+repository = {
+   ["coro-http-luv"] = {
+      ["1.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luv = "1.34.1-1"
+            },
+            modules = {
+               ["coro-http-luv"] = "coro-http-luv/init.lua",
+               ["coro-http-luv.coro-channel"] = "coro-http-luv/coro-channel.lua",
+               ["coro-http-luv.coro-net"] = "coro-http-luv/coro-net.lua",
+               ["coro-http-luv.coro-wrapper"] = "coro-http-luv/coro-wrapper.lua",
+               ["coro-http-luv.http-codec"] = "coro-http-luv/http-codec.lua",
+               ["coro-http-luv.secure-socket"] = "coro-http-luv/secure-socket/init.lua",
+               ["coro-http-luv.secure-socket.biowrap"] = "coro-http-luv/secure-socket/biowrap.lua",
+               ["coro-http-luv.secure-socket.bit"] = "coro-http-luv/secure-socket/bit.lua",
+               ["coro-http-luv.secure-socket.context"] = "coro-http-luv/secure-socket/context.lua",
+               ["coro-http-luv.secure-socket.root_ca"] = "coro-http-luv/secure-socket/root_ca.lua"
+            }
+         }
+      }
+   },
+   luv = {
+      ["1.34.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luv = "luv.so"
+            }
+         }
+      }
+   }
+}

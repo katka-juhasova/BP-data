@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-laxjson"] = {
+      ["0.3.5-1"] = {}
+   }
+}
+modules = {
+   laxjson = {
+      "lua-laxjson/0.3.5-1"
+   }
+}
+repository = {
+   ["lua-laxjson"] = {
+      ["0.3.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               laxjson = "laxjson.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,13 @@
+rock_manifest = {
+   ["kong-plugin-abac-0.0.8-1.rockspec"] = "287a64b8ceb0dfe515edc69340ffe09d",
+   lua = {
+      kong = {
+         plugins = {
+            abac = {
+               ["handler.lua"] = "4b2085cf056995b7b50fdf49ef084d5d",
+               ["schema.lua"] = "1ab29366594829cd3a2a18950f0d436c"
+            }
+         }
+      }
+   }
+}

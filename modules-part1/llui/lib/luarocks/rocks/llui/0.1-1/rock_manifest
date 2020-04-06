@@ -1,0 +1,47 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "24bcd68c2365f34eda7dd35df874b526",
+      ["README.md"] = "f17500e0fe99ed2ba50f90bbf302343b"
+   },
+   ["llui-0.1-1.rockspec"] = "9a290cc18226d324e517f95136e216ab",
+   lua = {
+      LLUI = {
+         ["DRM.lua"] = "9af9c221509b1f614e213efd3e8cfe7d",
+         ["DRMCard.lua"] = "d9e699b3cd06ebb85ce1facc220f7693",
+         ["DRMCardConnector.lua"] = "2c6d908f81a4c7111c81a7b2fc5fde9e",
+         ["DRMCardMode.lua"] = "0eaea8e4c418cc5c7fb7928dfa045834",
+         ["DRMCrtController.lua"] = "764930c26c18151e6f098cce33dde46b",
+         ["DRMEncoder.lua"] = "34556836815f2a990eb4e145da2c8d4f",
+         ["DRMFrameBuffer.lua"] = "e3136221688ea601fe5d9f00787bb3be",
+         ["EVContext.lua"] = "7dfae023a7842343cbf95c532fc6234b",
+         ["EVDevice.lua"] = "1361ba3c386deac3cf31068286b5b61d",
+         ["EVEvent.lua"] = "9aef46bf3193abb363228a86d5cc19ae",
+         ["UDVContext.lua"] = "d4de39dece3ef38d83cc3daed1c0a975",
+         ["UDVDevice.lua"] = "be3f7b1c3acc174c4379eb3908f51af4",
+         ["UDVHwdb.lua"] = "00ea61cefae47791efa5a73d83a01f98",
+         ["UDVListEntry.lua"] = "b572675d4b1650b5ce953f18ebb2cb35",
+         ["UDVListIterator.lua"] = "6dfeec36c8c8db22f21c3e4fd39d6bf5",
+         ["drm.lua"] = "a22d98521863273906694151a06c4359",
+         ["drm_ffi.lua"] = "914abae6a626c167e6a9196106509f77",
+         ["drm_mode.lua"] = "a2444ffcbab1df9297084c6d19ed5ed6",
+         ["evdev.lua"] = "773c9da56de12f117541e1d93a8186d3",
+         ["evdev_ffi.lua"] = "af8877e33278e30ceafe0bfb86b9889e",
+         ["fun.lua"] = "67cb3bc90620e1c0a6b5d15863795c85",
+         ["kernel.lua"] = "feddfc7253c2233f857ddb6497121ef3",
+         ["libc.lua"] = "f0ab33a9177c1df67b3b8d9ba55628ec",
+         ["libudev_ffi.lua"] = "9cfcbae60a0ae94c4c0322d0c199c58b",
+         ["linux_input.lua"] = "3b38731f23a29db0228d5be67ae23f6d",
+         ["lz4_ffi.lua"] = "6b5425367f3c861961dff3576cfca06d",
+         ["lz4frame_ffi.lua"] = "e48aff1aa84036649cffec57d2dfa768",
+         ["lz4hc_ffi.lua"] = "9289c5a27f317103cb2dfad69eddd2ff",
+         ["pixman.lua"] = "d82e406590f4425b9170f082b38e7095",
+         ["pixman_ffi.lua"] = "bc68946b3f9b045048f8b4731dfc982e",
+         ["stat.lua"] = "06bc6899933cda2750592cd312d98f92",
+         ["uinput.lua"] = "405d5b4bd58b429f68a38955ad72d409",
+         ["xf86drmMode_ffi.lua"] = "4e5e1058b899a3126cb65de770cd4786",
+         ["xf86drm_ffi.lua"] = "11d22af8a5f036187b540592374821bd",
+         ["xxhash.lua"] = "383a6c4cbedd5ced4b7bb2840fd3cfd5",
+         ["xxhash_ffi.lua"] = "9066b6e738e8cb8bbaedd8454fd01642"
+      }
+   }
+}

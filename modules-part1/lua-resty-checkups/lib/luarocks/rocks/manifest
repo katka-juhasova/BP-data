@@ -1,0 +1,69 @@
+commands = {}
+dependencies = {
+   ["lua-resty-checkups"] = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.checkups"] = {
+      "lua-resty-checkups/0.1-0"
+   },
+   ["resty.checkups.api"] = {
+      "lua-resty-checkups/0.1-0"
+   },
+   ["resty.checkups.base"] = {
+      "lua-resty-checkups/0.1-0"
+   },
+   ["resty.checkups.consistent_hash"] = {
+      "lua-resty-checkups/0.1-0"
+   },
+   ["resty.checkups.dyconfig"] = {
+      "lua-resty-checkups/0.1-0"
+   },
+   ["resty.checkups.heartbeat"] = {
+      "lua-resty-checkups/0.1-0"
+   },
+   ["resty.checkups.round_robin"] = {
+      "lua-resty-checkups/0.1-0"
+   },
+   ["resty.checkups.try"] = {
+      "lua-resty-checkups/0.1-0"
+   },
+   ["resty.subsystem"] = {
+      "lua-resty-checkups/0.1-0"
+   }
+}
+repository = {
+   ["lua-resty-checkups"] = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.checkups"] = "resty/checkups.lua",
+               ["resty.checkups.api"] = "resty/checkups/api.lua",
+               ["resty.checkups.base"] = "resty/checkups/base.lua",
+               ["resty.checkups.consistent_hash"] = "resty/checkups/consistent_hash.lua",
+               ["resty.checkups.dyconfig"] = "resty/checkups/dyconfig.lua",
+               ["resty.checkups.heartbeat"] = "resty/checkups/heartbeat.lua",
+               ["resty.checkups.round_robin"] = "resty/checkups/round_robin.lua",
+               ["resty.checkups.try"] = "resty/checkups/try.lua",
+               ["resty.subsystem"] = "resty/subsystem.lua"
+            }
+         }
+      }
+   }
+}

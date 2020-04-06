@@ -1,0 +1,26 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "3539465761259f6c801c3214d7beca67",
+      ["CONTRIBUTING.md"] = "24f9d143cca72def51c624e3c075bb09",
+      LICENSE = "95f1d792625934cf4c1337f9b4714eb6",
+      ["README.md"] = "001adc6339f50f053684a3eccb2da732"
+   },
+   ["kong-plugin-proxy-cache-2.0.0-1.rockspec"] = "527fc69efa8a264d9e4979a02d6bf4e5",
+   lua = {
+      kong = {
+         plugins = {
+            ["proxy-cache"] = {
+               ["access.lua"] = "27904ba9d1fc29292a41added662fb1f",
+               ["body_filter.lua"] = "85cd3d7179b0043eef2a3e6a98e79f6f",
+               ["cache.lua"] = "5be1debeb49e729fc4bf6f467356af21",
+               ["encoder.lua"] = "73990c1e05e07423efa6a755fc831e9b",
+               ["handler.lua"] = "82030e6650b5f8370a13b82daaf5c646",
+               ["header_filter.lua"] = "752cdf6506907b3d32382e2d0be8f90b",
+               ["schema.lua"] = "055f5000d6ce66d8f2afd64fef28747a",
+               ["storage.lua"] = "fd3f6fda03847ae4845eb93a318535b1",
+               ["validators.lua"] = "dea2ac49637e8ca6010a823d5b28686c"
+            }
+         }
+      }
+   }
+}

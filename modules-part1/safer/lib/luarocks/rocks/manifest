@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   safer = {
+      ["0.2-1"] = {}
+   }
+}
+modules = {
+   safer = {
+      "safer/0.2-1"
+   }
+}
+repository = {
+   safer = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               safer = "safer.lua"
+            }
+         }
+      }
+   }
+}

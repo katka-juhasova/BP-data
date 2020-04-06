@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   rndplugin = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.rndplugin.handler"] = {
+      "rndplugin/1.0-1"
+   },
+   ["kong.plugins.rndplugin.schema"] = {
+      "rndplugin/1.0-1"
+   }
+}
+repository = {
+   rndplugin = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.rndplugin.handler"] = "kong/plugins/rndplugin/handler.lua",
+               ["kong.plugins.rndplugin.schema"] = "kong/plugins/rndplugin/schema.lua"
+            }
+         }
+      }
+   }
+}

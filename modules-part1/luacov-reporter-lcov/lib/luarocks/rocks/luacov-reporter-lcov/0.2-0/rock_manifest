@@ -1,0 +1,14 @@
+rock_manifest = {
+   doc = {
+      ["LICENSE.md"] = "381771e8bbd53005f92749b7d512f8ac",
+      ["README.md"] = "f00e529caeff01390904465e63d5824a"
+   },
+   lua = {
+      luacov = {
+         reporter = {
+            ["lcov.lua"] = "e3b52156d1ad41bcf879c111ee79aadf"
+         }
+      }
+   },
+   ["luacov-reporter-lcov-0.2-0.rockspec"] = "b577becc5057d6b5be51533258752029"
+}

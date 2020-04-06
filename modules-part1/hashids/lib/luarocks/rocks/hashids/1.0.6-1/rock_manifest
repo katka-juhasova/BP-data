@@ -1,0 +1,17 @@
+rock_manifest = {
+   doc = {
+      ["LICENSE.txt"] = "7e92112528a3c7ce805ff62b9a63bc40",
+      ["README.md"] = "2bf8d8f0da8eb70366bc4ede3720180c"
+   },
+   ["hashids-1.0.6-1.rockspec"] = "3acc63d11915623d2d00214f22201753",
+   lib = {
+      hashids = {
+         ["clib.so"] = "65f993ff6699ac0c8f2dc4f5b8dc2466"
+      }
+   },
+   lua = {
+      hashids = {
+         ["init.lua"] = "75d0b81f41a072b7e5e6b8494d5654ad"
+      }
+   }
+}

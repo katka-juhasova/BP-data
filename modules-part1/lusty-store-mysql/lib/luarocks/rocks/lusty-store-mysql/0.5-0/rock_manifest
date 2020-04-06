@@ -1,0 +1,22 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "07005119ba5ad60ed955c03f725a9773",
+      ["README.md"] = "55fa4ee65314db6bd0e22787d1a4f3b8"
+   },
+   lua = {
+      ["lusty-store-mysql"] = {
+         ["query.lua"] = "572babb3551c913bceb27c702be0f36b",
+         store = {
+            mysql = {
+               ["connection.lua"] = "54e36ad59ed3f93e602a85a3bca3716e",
+               ["delete.lua"] = "84c7595d72dd143495d9db11980ba3bd",
+               ["get.lua"] = "1fe53367876568745d3d7e1bdd392063",
+               ["patch.lua"] = "79cad476888bdb4b55da97fd314ce54f",
+               ["post.lua"] = "de6f4692d61477a8f1656d383d415653"
+            },
+            ["mysql.lua"] = "9387446e704a12711c1db1e0eb4da447"
+         }
+      }
+   },
+   ["lusty-store-mysql-0.5-0.rockspec"] = "7a91df22b783282fe35318935a20b33c"
+}

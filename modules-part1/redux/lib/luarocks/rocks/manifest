@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   redux = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   redux = {
+      "redux/0.1.0-1"
+   },
+   ["redux.assign"] = {
+      "redux/0.1.0-1"
+   },
+   ["redux.connect"] = {
+      "redux/0.1.0-1"
+   },
+   ["redux.createStore"] = {
+      "redux/0.1.0-1"
+   }
+}
+repository = {
+   redux = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               redux = "redux/init.lua",
+               ["redux.assign"] = "redux/assign.lua",
+               ["redux.connect"] = "redux/connect.lua",
+               ["redux.createStore"] = "redux/createStore.lua"
+            }
+         }
+      }
+   }
+}

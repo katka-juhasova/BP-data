@@ -1,0 +1,27 @@
+rock_manifest = {
+   doc = {
+      COPYING = "70c4284956fcb10510c236044e39db09",
+      README = "c1938fb56eeaccd54336d2dfb72450ec",
+      lcurses = {
+         classes = {
+            ["curses.chstr.html"] = "ec62c02033916820406953d09cae8f98",
+            ["curses.window.html"] = "918f4d3a4a014288f0b968320dd46db8"
+         },
+         examples = {
+            ["curses.lua.html"] = "707cc9881616097c0b349d4d585250ae"
+         },
+         ["index.html"] = "d84fa4e7d4f0029afa44049bdaa5061a",
+         ["ldoc.css"] = "f9ac1f28d976ae7c42bfabc154196d68",
+         modules = {
+            ["curses.html"] = "d63d250e57d17a70af4f241ac6eb449f"
+         }
+      }
+   },
+   ["lcurses-9.0.0-1.rockspec"] = "213f68c8e2e77175719b45035b715a37",
+   lib = {
+      ["curses_c.so"] = "af046fee83fe4b3b33711bad3c14763d"
+   },
+   lua = {
+      ["curses.lua"] = "09ccd91ae96467c997a0e07d9b6fea5a"
+   }
+}

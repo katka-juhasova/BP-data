@@ -1,0 +1,129 @@
+commands = {}
+dependencies = {
+   ["lua-industrial-logger"] = {
+      ["1.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lil.AnsiDecoratedStringBuilder"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.ConsoleAppender"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.DebugLogger"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.FileAppender"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.FileConfigurationLoader"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.FileUtils"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.IdUtils"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.Levels"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.Logger"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.LoggerConfiguration"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.LoggerConfigurationDsl"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.LoggerFactory"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.LuaOsUtils"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.NativeOsUtils"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.OsFacts"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.OsUtils"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.OsUtilsConfig"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.PatternBuilder"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.PatternGeneratorMap"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.RollingFileAppender"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.StringUtils"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.ThreadUtils"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.polyfills.loadstring"] = {
+      "lua-industrial-logger/1.1-0"
+   },
+   ["lil.polyfills.setfenv"] = {
+      "lua-industrial-logger/1.1-0"
+   }
+}
+repository = {
+   ["lua-industrial-logger"] = {
+      ["1.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lil.AnsiDecoratedStringBuilder"] = "lil/AnsiDecoratedStringBuilder.lua",
+               ["lil.ConsoleAppender"] = "lil/ConsoleAppender.lua",
+               ["lil.DebugLogger"] = "lil/DebugLogger.lua",
+               ["lil.FileAppender"] = "lil/FileAppender.lua",
+               ["lil.FileConfigurationLoader"] = "lil/FileConfigurationLoader.lua",
+               ["lil.FileUtils"] = "lil/FileUtils.lua",
+               ["lil.IdUtils"] = "lil/IdUtils.lua",
+               ["lil.Levels"] = "lil/Levels.lua",
+               ["lil.Logger"] = "lil/Logger.lua",
+               ["lil.LoggerConfiguration"] = "lil/LoggerConfiguration.lua",
+               ["lil.LoggerConfigurationDsl"] = "lil/LoggerConfigurationDsl.lua",
+               ["lil.LoggerFactory"] = "lil/LoggerFactory.lua",
+               ["lil.LuaOsUtils"] = "lil/LuaOsUtils.lua",
+               ["lil.NativeOsUtils"] = "lil/NativeOsUtils.lua",
+               ["lil.OsFacts"] = "lil/OsFacts.lua",
+               ["lil.OsUtils"] = "lil/OsUtils.lua",
+               ["lil.OsUtilsConfig"] = "lil/OsUtilsConfig.lua",
+               ["lil.PatternBuilder"] = "lil/PatternBuilder.lua",
+               ["lil.PatternGeneratorMap"] = "lil/PatternGeneratorMap.lua",
+               ["lil.RollingFileAppender"] = "lil/RollingFileAppender.lua",
+               ["lil.StringUtils"] = "lil/StringUtils.lua",
+               ["lil.ThreadUtils"] = "lil/ThreadUtils.lua",
+               ["lil.polyfills.loadstring"] = "lil/polyfills/loadstring.lua",
+               ["lil.polyfills.setfenv"] = "lil/polyfills/setfenv.lua"
+            }
+         }
+      }
+   }
+}

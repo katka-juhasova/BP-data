@@ -1,0 +1,47 @@
+commands = {}
+dependencies = {
+   cmath = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cmath = {
+      "cmath/0.1-0"
+   },
+   cmath_anon = {
+      "cmath/0.1-0"
+   }
+}
+repository = {
+   cmath = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cmath = "cmath.lua",
+               cmath_anon = "cmath_anon.lua"
+            }
+         }
+      }
+   }
+}

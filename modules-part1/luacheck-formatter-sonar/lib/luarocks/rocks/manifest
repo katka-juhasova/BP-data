@@ -1,0 +1,86 @@
+commands = {}
+dependencies = {
+   ["luacheck-formatter-sonar"] = {
+      ["0.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 4, 2, string = "0.4.2"
+                  }
+               }
+            },
+            name = "rapidjson"
+         }
+      }
+   },
+   rapidjson = {
+      ["0.6.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   rapidjson = {
+      "rapidjson/0.6.1-1"
+   },
+   sonar = {
+      "luacheck-formatter-sonar/0.3.0-1"
+   }
+}
+repository = {
+   ["luacheck-formatter-sonar"] = {
+      ["0.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               rapidjson = "0.6.1-1"
+            },
+            modules = {
+               sonar = "sonar.lua"
+            }
+         }
+      }
+   },
+   rapidjson = {
+      ["0.6.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rapidjson = "rapidjson.so"
+            }
+         }
+      }
+   }
+}

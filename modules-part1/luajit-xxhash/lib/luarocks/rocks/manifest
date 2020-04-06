@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["luajit-xxhash"] = {
+      ["0.1.5-1"] = {}
+   }
+}
+modules = {
+   xxhash = {
+      "luajit-xxhash/0.1.5-1"
+   }
+}
+repository = {
+   ["luajit-xxhash"] = {
+      ["0.1.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               xxhash = "xxhash.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,5 +1,0 @@
-tmr.create():alarm(1000, tmr.ALARM_SINGLE, function()
-  xpcall(function()
-    dofile('app.lc')
-  end, print)
-end)

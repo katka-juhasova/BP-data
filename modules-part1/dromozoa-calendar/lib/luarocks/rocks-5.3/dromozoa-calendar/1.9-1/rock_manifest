@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      COPYING = "d32239bcb673463ab874e80d47fae504",
+      ["README.md"] = "6e9147a63dfe7c870595233cc7100769"
+   },
+   ["dromozoa-calendar-1.9-1.rockspec"] = "1c572c98c4391e5403375c33df60cc3b",
+   lua = {
+      dromozoa = {
+         calendar = {
+            ["date_to_jdn.lua"] = "0453e6c082ea157ce29f85ca4baf9c5f",
+            ["holidays.lua"] = "b3ea47ab3dd353fc3d7e24e7094f2fbe",
+            ["is_holiday.lua"] = "cb5ecc705c410289846ff0e0fa1a374f",
+            ["jdn_to_date.lua"] = "96bc0e007e7b5794d32212e61933885c"
+         },
+         ["calendar.lua"] = "c27f3e578508a24df730bd92a2b71fa1"
+      }
+   }
+}

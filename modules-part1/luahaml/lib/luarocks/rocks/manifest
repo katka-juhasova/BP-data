@@ -1,0 +1,131 @@
+commands = {
+   luahaml = {
+      "luahaml/0.2.0-1"
+   }
+}
+dependencies = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luahaml = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lpeg"
+         }
+      }
+   }
+}
+modules = {
+   haml = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.code"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.comment"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.end_stack"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.ext"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.filter"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.header"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.lua_adapter"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.parser"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.precompiler"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.renderer"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.string_buffer"] = {
+      "luahaml/0.2.0-1"
+   },
+   ["haml.tag"] = {
+      "luahaml/0.2.0-1"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   luahaml = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luahaml = "luahaml"
+            },
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               haml = "haml.lua",
+               ["haml.code"] = "haml/code.lua",
+               ["haml.comment"] = "haml/comment.lua",
+               ["haml.end_stack"] = "haml/end_stack.lua",
+               ["haml.ext"] = "haml/ext.lua",
+               ["haml.filter"] = "haml/filter.lua",
+               ["haml.header"] = "haml/header.lua",
+               ["haml.lua_adapter"] = "haml/lua_adapter.lua",
+               ["haml.parser"] = "haml/parser.lua",
+               ["haml.precompiler"] = "haml/precompiler.lua",
+               ["haml.renderer"] = "haml/renderer.lua",
+               ["haml.string_buffer"] = "haml/string_buffer.lua",
+               ["haml.tag"] = "haml/tag.lua"
+            }
+         }
+      }
+   }
+}

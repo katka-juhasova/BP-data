@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>LuaCov - Coverage analysis for Lua scripts</title>
+    <link rel="stylesheet" href="doc.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+pre {
+   font-family: "Andale Mono", monospace;
+}
+div.Example {
+   font-family: "Andale Mono", monospace;
+   background-color: #f0f0f0;
+   margin-left: 1em;
+   margin-right: 1em;
+   margin-top: 0.5em;
+   margin-bottom 0.5em;
+   padding: 0.5em;
+}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+    
+<div id="product">
+    <div id="product_logo"><a href="https://keplerproject.github.com/luacov">
+        <img alt="LuaCov logo" src="luacov.png" />
+    </a></div>
+    <div id="product_name"><big><strong>LuaCov</strong></big></div>
+    <div id="product_description">Coverage analysis for Lua scripts</div>
+</div> <!-- id="product" -->
+
+<div id="main">
+
+<div id="navigation">
+
+<h1>LuaCov</h1>
+
+<ul>
+    <li><strong>Home</strong>
+        <ul>
+            <li> <a href="index.html#over">Overview</a></li>
+            <li> <a href="index.html#download">Download</a></li>
+            <li> <a href="index.html#instructions">Instructions</a></li>
+            <li> <a href="index.html#history">History</a></li>
+            <li> <a href="index.html#credits">Credits</a></li>
+        </ul>
+    </li>
+    <li><a href="doc/index.html">Reference</a></li>
+    <li><a href="https://github.com/keplerproject/luacov">Project</a>
+        <ul>
+            <li><a href="https://github.com/keplerproject/luacov">Git</a></li>
+        </ul>
+    </li>
+    <li><a href="license.html">License</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h2><a name="over"></a>Overview</h2>
+
+<p>
+LuaCov is a simple coverage analyzer for <a href="https://www.lua.org">Lua</a>
+scripts. When a Lua script is run with the <tt>luacov</tt> module loaded, it
+generates a stats file with the number of executions of each line of the
+script and its loaded modules. The <tt>luacov</tt> command-line script then
+processes this file generating a report file which allows one to visualize
+which code paths were not traversed, which is useful for verifying the
+effectiveness of a test suite.
+</p>
+
+<p>
+LuaCov is free software and uses the same <a href="license.html">license</a> as Lua (MIT).
+</p>
+
+<h2><a name="download"></a>Download</h2>
+
+<p>
+LuaCov can be downloaded via LuaRocks:
+</p>
+
+<pre class="example">
+luarocks install luacov
+</pre>
+
+<p>
+There are some C extensions LuaCov can use (if they are available) to improve performance
+and analysis accuracy. To install LuaCov with these extensions install
+<a href="https://github.com/mpeterv/cluacov">CLuaCov</a> package instead:
+</p>
+
+<pre class="example">
+luarocks install cluacov
+</pre>
+
+<p>
+LuaCov itself is written in pure Lua and has no external dependencies.
+</p>
+
+<p>
+You can also get the code directly from <a href="https://github.com/keplerproject/luacov">the git repo</a>.
+</p>
+
+<h2><a name="instructions"></a>Instructions</h2>
+
+<p>
+Using LuaCov consists of two steps: running your script to collect
+coverage data, and then running <tt>luacov</tt> on the collected data to
+generate a report.
+</p>
+
+<p>
+To collect coverage data, your script needs to load the <tt>luacov</tt>
+Lua module. This can be done from the command-line, without modifying
+your script, like this:
+</p>
+
+<pre class="example">
+lua -lluacov test.lua
+</pre>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or
+</p>
+
+<pre class="example">
+lua -erequire('luacov.runner')('myconfigfilename') test.lua
+</pre>
+
+<p>
+(Alternatively, you can add <tt>require("luacov")</tt> to the first line
+of your script.)
+</p>
+
+<p>
+Once the script is run, a file called <tt>luacov.stats.out</tt> is generated.
+If the file already exists, statistics are <i>added</i> to it. This is useful,
+for example, for making a series of runs with different input parameters in
+a test suite. To start the accounting from scratch, just delete the stats file.
+</p>
+
+<p>
+To generate a report, just run the <tt>luacov</tt> command-line script.
+It expects to find a file named <tt>luacov.stats.out</tt> in the current
+directory, and outputs a file named <tt>luacov.report.out</tt>.
+</p>
+
+<p>This is an example output of the report file:</p>
+
+<pre class="example">
+==============================================================================
+test.lua
+==============================================================================
+ 1 if 10 > 100 then
+*0    print("I don't think this line will execute.")
+   else
+ 1    print("Hello, LuaCov!")
+   end
+</pre>
+
+<p>
+Note that to generate this report, <tt>luacov</tt> reads the source files.
+Therefore, it expects to find them in the same location they were when
+the <tt>luacov</tt> module ran (the stats file stores the filenames, but
+not the sources themselves).
+</p>
+
+<p>
+To silence missed line reporting for a group of lines, place inline options
+<tt>luacov: disable</tt> and <tt>luacov: enable</tt> in short comments around them:
+</p>
+
+<pre class="example">
+if SOME_DEBUG_CONDITION_THAT_IS_ALWAYS_FALSE_IN_TESTS then
+   -- luacov: disable
+
+   -- Lines here are not marked as missed even though they are not covered.
+
+   -- luacov: enable
+end
+</pre>
+
+<p>
+LuaCov saves its stats upon normal program termination. If your program
+is a daemon -- in other words, if it does not terminate normally -- you
+can use the <tt>luacov.tick</tt> module or the <tt>tick</tt> configuration option,
+which periodically saves the stats file. For example, to run (on Unix systems)
+LuaCov on <a href="https://keplerproject.github.io/xavante/">Xavante</a>,
+just modify the first line of <tt>xavante_start.lua</tt> so it reads:
+</p>
+
+<pre class="example">
+#!/usr/bin/env lua -lluacov.tick
+</pre>
+
+or add this to <tt>.luacov</tt> config file:
+
+<pre class="example">
+tick = true
+</pre>
+
+LuaCov includes several configuration options, which have their defaults
+stored in <a href="doc/modules/luacov.defaults.html">luacov.defaults module</a>.
+These are the global defaults. To use project specific configuration, create a Lua script
+setting options as globals or returning a table with some options and store it as
+<tt>.luacov</tt> in the project directory from where <tt>luacov</tt> is being run.
+For example, this config informs LuaCov that only <tt>foo</tt> module and its submodules
+should be covered and that they are located inside <tt>src</tt> directory:
+
+<pre class="example">
+modules = {
+   ["foo"] = "src/foo/init.lua",
+   ["foo.*"] = "src"
+}
+</pre>
+
+<h2><a name="history"></a>History</h2>
+
+<dl>
+    <dt><strong>0.14.0</strong> [Jan 28, 2020]</dt>
+    <dd>
+        <ul>
+            <li>Added option to include untested files in the report</li>
+            <li>Reduce probability of interrupt errors when running LuaCov in a subprocess</li>
+        </ul>
+    </dd>
+    <dt><strong>0.13.0</strong> [May 5, 2018]</dt>
+    <dd>
+        <ul>
+            <li>Added <tt>luacov: disable</tt> and <tt>luacov: enable</tt> inline options that mark source lines between them as impossible to hit.</li>
+            <li>Fixed error when reporing coverage for files with a shebang lines using CLuaCov.</li>
+        </ul>
+    </dd>
+    <dt><strong>0.12.0</strong> [June 29, 2016]</dt>
+    <dd>
+        <ul>
+            <li>Added support for experimental C extensions (<a href="https://github.com/mpeterv/cluacov">CLuaCov</a>).</li>
+            <li>Changed config format: options are now set by assigning to globals, old format (returning a table) is still supported.</li>
+            <li>Added <tt>tick</tt>config option, equivalent to using <tt>luacov.tick</tt> module.</li>
+            <li>Fixed coverage data being saved to wrong file when using relative <tt>statsfile</tt> path and the program running LuaCov changes directories.</li>
+            <li>Improved config loading error handling.</li>
+            <li>Added <tt>:on_file_error()</tt> stub method to base reporter class, used for reporting problems when analyzing coverage data related to a file.</li>
+        </ul>
+    </dd>
+    <dt><strong>0.11.0</strong> [April 18, 2016]</dt>
+    <dd>
+        <ul>
+            <li>Fixed several cases of lines falsely reported as missed.</li>
+            <li>Fixed <tt>luacov.tick</tt> module not working.</li>
+            <li>Improved default reporter output format.</li>
+            <li>Reduced coverage collection overhead.</li>
+            <li>Changed how coverage is saved, it's now possible to start a child Lua process with LuaCov enabled without wrapping the launch in <tt>luacov.pause</tt> and <tt>luacov.resume</tt> in the parent.
+            <li>Several minor fixes and improvements.</li>
+        </ul>
+    </dd>
+    <dt><strong>0.10.0</strong> [February 9, 2016]</dt>
+    <dd>
+        <ul>
+            <li>Added debug_hook() function for use in custom debug hooks.</li>
+            <li>Fixed patterns passed as command-line arguments matching too much.</li>
+            <li>Fixed order in which module name translations are applied</li>
+        </ul>
+    </dd>
+    <dt><strong>0.9.1</strong> [December 7, 2015]</dt>
+    <dd>
+        <ul>
+            <li>Fixed error when running LuaCov using Lua 5.1.</li>
+        </ul>
+    </dd>
+    <dt><strong>0.9</strong> [December 6, 2015]</dt>
+    <dd>
+        <ul>
+            <li>with_luacov() function for covering coroutines created via the C API.</li>
+            <li>fix priorities in modules list</li>
+            <li>improve coverage analysis/exclusions list</li>
+            <li>improve handling of multiline function declarations</li>
+            <li>LDoc documentation</li>
+        </ul>
+    </dd>
+    <dt><strong>0.8</strong> [September 30, 2015]</dt>
+    <dd>
+        <ul>
+            <li>Improved lexer which reduces false positives</li>
+            <li>luacov.pause() and luacov.resume() functions</li>
+            <li>"modules" option for configuration</li>
+            <li>Plus several fixes and code cleanups.</li>
+        </ul>
+    </dd>
+    <dt><strong>0.7</strong> [January 12, 2015]</dt>
+    <dd>
+        <ul>
+            <li>Improvement in detection of long strings.</li>
+            <li>Added "savestepsize" option.</li>
+            <li>Fix handling "codefromstring" option.</li>
+        </ul>
+    </dd>
+    <dt><strong>0.6</strong> [September 10, 2014]</dt>
+    <dd>
+        <ul>
+            <li>Support for custom reporter objects</li>
+            <li>Configuration option for processing/skipping strings</li>
+            <li>Several fixes: behavior of on_exit, inclusion/exclusions lists, etc.</li>
+        </ul>
+    </dd>
+    <dt><strong>0.5</strong> [February 8, 2014]</dt>
+    <dd>
+        <ul>
+            <li>Improved performance in reporter module</li>
+            <li>More improvements in exclusions list</li>
+        </ul>
+    </dd>
+    <dt><strong>0.4</strong> [December 3, 2013]</dt>
+    <dd>
+        <ul>
+            <li>Lua 5.2 compatibility fixes</li>
+            <li>Several improvements in exclusions list</li>
+        </ul>
+    </dd>
+    <dt><strong>0.3</strong> [October 10, 2012]</dt>
+    <dd>
+        <ul>
+            <li>Added configuration options and files</li>
+            <li>Summary in report</li>
+            <li>Improved handling of long strings and comments</li>
+            <li>Support for coroutines and os.exit()</li>
+        </ul>
+    </dd>
+    <dt><strong>0.2</strong> [April 30, 2009]</dt>
+    <dd>
+        <ul>
+            <li>Ignore code loaded from strings.</li>
+        </ul>
+    </dd>
+    <dt><strong>0.1</strong> [July 16, 2007]</dt>
+    <dd>
+        <ul>
+            <li>Initial release.</li>
+        </ul>
+    </dd>
+</dl>
+
+<h2><a name="credits"></a>Credits</h2>
+
+<p>
+LuaCov was originally designed and implemented by Hisham Muhammad as
+a tool for testing <a href="https://luarocks.org">LuaRocks</a>. A number
+of people have improved it since: see the Git logs for the full list of
+contributors!
+</p>
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+</div> <!-- id="container" -->
+
+</body>
+</html>

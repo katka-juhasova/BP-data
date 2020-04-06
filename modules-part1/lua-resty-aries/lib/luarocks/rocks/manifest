@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["lua-resty-aries"] = {
+      ["release-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.aries"] = {
+      "lua-resty-aries/release-1"
+   },
+   ["resty.aries.lib"] = {
+      "lua-resty-aries/release-1"
+   },
+   ["resty.aries.tools"] = {
+      "lua-resty-aries/release-1"
+   }
+}
+repository = {
+   ["lua-resty-aries"] = {
+      ["release-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.aries"] = "resty/aries.lua",
+               ["resty.aries.lib"] = "resty/aries/lib.lua",
+               ["resty.aries.tools"] = "resty/aries/tools.lua"
+            }
+         }
+      }
+   }
+}

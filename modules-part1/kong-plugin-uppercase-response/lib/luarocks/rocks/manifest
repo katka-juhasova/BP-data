@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-uppercase-response"] = {
+      ["0.0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.uppercase-response.handler"] = {
+      "kong-plugin-uppercase-response/0.0.1-0"
+   },
+   ["kong.plugins.uppercase-response.schema"] = {
+      "kong-plugin-uppercase-response/0.0.1-0"
+   }
+}
+repository = {
+   ["kong-plugin-uppercase-response"] = {
+      ["0.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.uppercase-response.handler"] = "kong/plugins/uppercase-response/handler.lua",
+               ["kong.plugins.uppercase-response.schema"] = "kong/plugins/uppercase-response/schema.lua"
+            }
+         }
+      }
+   }
+}

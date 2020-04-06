@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-https-redirect"] = {
+      ["0.0.1-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.https-redirect.handler"] = {
+      "kong-https-redirect/0.0.1-0"
+   },
+   ["kong.plugins.https-redirect.schema"] = {
+      "kong-https-redirect/0.0.1-0"
+   }
+}
+repository = {
+   ["kong-https-redirect"] = {
+      ["0.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.https-redirect.handler"] = "kong/plugins/https-redirect/handler.lua",
+               ["kong.plugins.https-redirect.schema"] = "kong/plugins/https-redirect/schema.lua"
+            }
+         }
+      }
+   }
+}

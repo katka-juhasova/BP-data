@@ -1,0 +1,89 @@
+commands = {}
+dependencies = {
+   ["metalua-parser"] = {
+      ["0.7.3-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["metalua.compiler"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.annot.generator"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.annot.grammar"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.expr"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.ext"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.lexer"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.meta"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.misc"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.stat"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.table"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.grammar.generator"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.grammar.lexer"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.pprint"] = {
+      "metalua-parser/0.7.3-2"
+   }
+}
+repository = {
+   ["metalua-parser"] = {
+      ["0.7.3-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["metalua.compiler"] = "metalua/compiler.lua",
+               ["metalua.compiler.parser"] = "metalua/compiler/parser.lua",
+               ["metalua.compiler.parser.annot.generator"] = "metalua/compiler/parser/annot/generator.lua",
+               ["metalua.compiler.parser.annot.grammar"] = "metalua/compiler/parser/annot/grammar.lua",
+               ["metalua.compiler.parser.expr"] = "metalua/compiler/parser/expr.lua",
+               ["metalua.compiler.parser.ext"] = "metalua/compiler/parser/ext.lua",
+               ["metalua.compiler.parser.lexer"] = "metalua/compiler/parser/lexer.lua",
+               ["metalua.compiler.parser.meta"] = "metalua/compiler/parser/meta.lua",
+               ["metalua.compiler.parser.misc"] = "metalua/compiler/parser/misc.lua",
+               ["metalua.compiler.parser.stat"] = "metalua/compiler/parser/stat.lua",
+               ["metalua.compiler.parser.table"] = "metalua/compiler/parser/table.lua",
+               ["metalua.grammar.generator"] = "metalua/grammar/generator.lua",
+               ["metalua.grammar.lexer"] = "metalua/grammar/lexer.lua",
+               ["metalua.pprint"] = "metalua/pprint.lua"
+            }
+         }
+      }
+   }
+}

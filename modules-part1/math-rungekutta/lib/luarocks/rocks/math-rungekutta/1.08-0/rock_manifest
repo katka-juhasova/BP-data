@@ -1,0 +1,14 @@
+rock_manifest = {
+   doc = {
+      ["RungeKutta.html"] = "8dfa13b64bd60087ff31b40d417cac28"
+   },
+   lua = {
+      Math = {
+         ["RungeKutta.lua"] = "a70a10aceff20e56c310bd27ff375547"
+      }
+   },
+   ["math-rungekutta-1.08-0.rockspec"] = "e248b4a794ff8d837ef09b35ecebd915",
+   test = {
+      ["test_runge.lua"] = "841bbd02033cd2b93d18f9f1aee32033"
+   }
+}

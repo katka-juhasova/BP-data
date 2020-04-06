@@ -1,0 +1,45 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "72ba599db9da6729c9d16bc9d3d5891d",
+      ["README.md"] = "cd19a4c4131f1c992c584a04edc0512c"
+   },
+   lua = {
+      luagraphs = {
+         connectivity = {
+            ["ConnectedComponents.lua"] = "c078bd76b634da9a221cf3de07440062",
+            ["StronglyConnectedComponents.lua"] = "7b37dd9ecd7a1cc56f8ded8b59142fc8"
+         },
+         data = {
+            ["IndexedMinPQ.lua"] = "3f4a7e6878065d6318c393ca44b123b4",
+            ["MinPQ.lua"] = "84550aa9001fcef8a9de568295feec33",
+            ["UnionFind.lua"] = "92e8ca21f8d61465fb961098a2fd8baa",
+            ["graph.lua"] = "b44731d75a55f37a0fa3d1de1e4b39c1",
+            ["list.lua"] = "3bd8be29bdd835ad8e82ea2c1599867a",
+            ["network.lua"] = "72e9bf3b6bf17a13b993a28325c3c785",
+            ["queue.lua"] = "f124a156d8344e8cf685dac00c1607a3",
+            ["stack.lua"] = "2fd654cbfdafd8cc4ad936785e5e672f"
+         },
+         flow = {
+            ["FordFulkerson.lua"] = "d9a4a639b94b0b79aa380dd04ac0565a"
+         },
+         mst = {
+            ["EagerPrimMST.lua"] = "8b93bfcc261ce274c276d59e7263bf90",
+            ["KruskalMST.lua"] = "7c350c040acbba6c6d5fdea00234d8da",
+            ["PrimMST.lua"] = "0f97b8c5b95e7fc90cd48a234f381ca9"
+         },
+         search = {
+            ["BreadthFirstSearch.lua"] = "5d5238af215c6852bfddc70face9e153",
+            ["DepthFirstSearch.lua"] = "f5349d7a7d4fec969ea1af50a6a78774"
+         },
+         shortest_paths = {
+            ["BellmanFord.lua"] = "bd6215136ce5097f224aa0adace08be6",
+            ["Dijkstra.lua"] = "66b22cef63051fcaadfa1cb37a1d3f41",
+            ["TopoSortShortestPath.lua"] = "221a0d5e2b956d185a75b7ec75365cc6"
+         },
+         sort = {
+            ["TopologicalSort.lua"] = "cbcc964cc04e1412c39f55ada4812a97"
+         }
+      }
+   },
+   ["luagraphs-1.0-5.rockspec"] = "e6c89025fbabf3424828c709b8584d51"
+}

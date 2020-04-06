@@ -1,0 +1,47 @@
+commands = {}
+dependencies = {
+   darksidesync = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   darksidesync = {
+      "darksidesync/1.0-1"
+   },
+   dss = {
+      "darksidesync/1.0-1"
+   }
+}
+repository = {
+   darksidesync = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               darksidesync = "darksidesync.so",
+               dss = "dss.lua"
+            }
+         }
+      }
+   }
+}

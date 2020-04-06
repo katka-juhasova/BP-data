@@ -1,0 +1,13 @@
+rock_manifest = {
+   ["kong-force-https-0.1.1-1.rockspec"] = "4ddb0dcd6f55ae66271ec715d60054de",
+   lua = {
+      kong = {
+         plugins = {
+            ["http-to-https"] = {
+               ["handler.lua"] = "423904c00ca48229d0e85415da014ad9",
+               ["schema.lua"] = "d41d8cd98f00b204e9800998ecf8427e"
+            }
+         }
+      }
+   }
+}

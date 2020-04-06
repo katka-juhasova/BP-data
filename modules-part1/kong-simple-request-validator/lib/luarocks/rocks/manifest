@@ -1,0 +1,176 @@
+commands = {}
+dependencies = {
+   jsonschema = {
+      ["0.5-0"] = {
+         {
+            constraints = {},
+            name = "net-url"
+         }
+      }
+   },
+   ["kong-simple-request-validator"] = {
+      ["0.0.4-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 7, revision = 1, string = "2.7-1"
+                  }
+               }
+            },
+            name = "lua-resty-validation"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 5, revision = 0, string = "0.5-0"
+                  }
+               }
+            },
+            name = "jsonschema"
+         }
+      }
+   },
+   ["lua-resty-validation"] = {
+      ["2.7-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["net-url"] = {
+      ["0.9-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   jsonschema = {
+      "jsonschema/0.5-0"
+   },
+   ["jsonschema.store"] = {
+      "jsonschema/0.5-0"
+   },
+   ["kong.plugins.kong-simple-request-validator.access"] = {
+      "kong-simple-request-validator/0.0.4-3"
+   },
+   ["kong.plugins.kong-simple-request-validator.handler"] = {
+      "kong-simple-request-validator/0.0.4-3"
+   },
+   ["kong.plugins.kong-simple-request-validator.schema"] = {
+      "kong-simple-request-validator/0.0.4-3"
+   },
+   ["net.url"] = {
+      "net-url/0.9-1"
+   },
+   ["resty.validation"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.injection"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.ngx"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.tz"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.utf8"] = {
+      "lua-resty-validation/2.7-1"
+   }
+}
+repository = {
+   jsonschema = {
+      ["0.5-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["net-url"] = "0.9-1"
+            },
+            modules = {
+               jsonschema = "jsonschema.lua",
+               ["jsonschema.store"] = "jsonschema/store.lua"
+            }
+         }
+      }
+   },
+   ["kong-simple-request-validator"] = {
+      ["0.0.4-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               jsonschema = "0.5-0",
+               ["lua-resty-validation"] = "2.7-1",
+               ["net-url"] = "0.9-1"
+            },
+            modules = {
+               ["kong.plugins.kong-simple-request-validator.access"] = "kong/plugins/kong-simple-request-validator/access.lua",
+               ["kong.plugins.kong-simple-request-validator.handler"] = "kong/plugins/kong-simple-request-validator/handler.lua",
+               ["kong.plugins.kong-simple-request-validator.schema"] = "kong/plugins/kong-simple-request-validator/schema.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-validation"] = {
+      ["2.7-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.validation"] = "resty/validation.lua",
+               ["resty.validation.injection"] = "resty/validation/injection.lua",
+               ["resty.validation.ngx"] = "resty/validation/ngx.lua",
+               ["resty.validation.tz"] = "resty/validation/tz.lua",
+               ["resty.validation.utf8"] = "resty/validation/utf8.lua"
+            }
+         }
+      }
+   },
+   ["net-url"] = {
+      ["0.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["net.url"] = "net/url.lua"
+            }
+         }
+      }
+   }
+}

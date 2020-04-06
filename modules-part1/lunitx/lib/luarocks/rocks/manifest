@@ -1,0 +1,61 @@
+commands = {
+   ["lunit.sh"] = {
+      "lunitx/0.8-1"
+   }
+}
+dependencies = {
+   lunitx = {
+      ["0.8-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 5, string = "5.5"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lunit = {
+      "lunitx/0.8-1"
+   },
+   ["lunit.console"] = {
+      "lunitx/0.8-1"
+   },
+   lunitx = {
+      "lunitx/0.8-1"
+   },
+   ["lunitx.atexit"] = {
+      "lunitx/0.8-1"
+   }
+}
+repository = {
+   lunitx = {
+      ["0.8-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["lunit.sh"] = "lunit.sh"
+            },
+            dependencies = {},
+            modules = {
+               lunit = "lunit.lua",
+               ["lunit.console"] = "lunit/console.lua",
+               lunitx = "lunitx.lua",
+               ["lunitx.atexit"] = "lunitx/atexit.lua"
+            }
+         }
+      }
+   }
+}

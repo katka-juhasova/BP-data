@@ -1,0 +1,106 @@
+commands = {}
+dependencies = {
+   lpeglabel = {
+      ["1.6.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["parser-gen"] = {
+      ["1.2-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 12, 2, string = "0.12.2"
+                  }
+               }
+            },
+            name = "lpeglabel"
+         }
+      }
+   }
+}
+modules = {
+   equals = {
+      "parser-gen/1.2-0"
+   },
+   errorgen = {
+      "parser-gen/1.2-0"
+   },
+   lpeglabel = {
+      "lpeglabel/1.6.0-1"
+   },
+   ["parser-gen"] = {
+      "parser-gen/1.2-0"
+   },
+   ["peg-parser"] = {
+      "parser-gen/1.2-0"
+   },
+   relabel = {
+      "lpeglabel/1.6.0-1"
+   },
+   stack = {
+      "parser-gen/1.2-0"
+   }
+}
+repository = {
+   lpeglabel = {
+      ["1.6.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeglabel = "lpeglabel.so",
+               relabel = "relabel.lua"
+            }
+         }
+      }
+   },
+   ["parser-gen"] = {
+      ["1.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeglabel = "1.6.0-1"
+            },
+            modules = {
+               equals = "equals.lua",
+               errorgen = "errorgen.lua",
+               ["parser-gen"] = "parser-gen.lua",
+               ["peg-parser"] = "peg-parser.lua",
+               stack = "stack.lua"
+            }
+         }
+      }
+   }
+}

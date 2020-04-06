@@ -1,0 +1,17 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "eb501a049c6252cd75cad7dbbf437398"
+   },
+   ["header-transfer-0.0.2-1.rockspec"] = "24204a9590c87cb91915f570d54ed8da",
+   lua = {
+      kong = {
+         plugins = {
+            ["header-transfer"] = {
+               ["access.lua"] = "0c47bd0e5f80afdd96574d5dc735e15a",
+               ["handler.lua"] = "855d43b318195a70d1d4699315a4a881",
+               ["schema.lua"] = "56f5b2f00c3274f6557bf2f9283f719c"
+            }
+         }
+      }
+   }
+}

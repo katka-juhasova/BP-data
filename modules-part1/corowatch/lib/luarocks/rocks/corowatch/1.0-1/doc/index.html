@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Coroutine watcher</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>corowatch</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>corowatch</strong></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="topics/readme.md.html">readme</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>corowatch</code></h1>
+<p>Module to watch coroutine executiontime.</p>
+<p> Coroutines running too long without
+ yielding can be killed to prevent them from locking the Lua state.
+ The module uses <code>LuaSocket</code> to get the time (<code>socket.gettime</code> function). If you
+ do not want that, override the <code>coroutine.gettime</code> method with your own
+ implementation.</p>
+
+<p> Version 1.0, <a href="http://www.thijsschreijer.nl">copyright (c) 2013-2014 - Thijs Schreijer</a></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#create">create (f)</a></td>
+	<td class="summary">This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.create">coroutine.create</a> , except that when the running
+ coroutine is watched, then children spawned will also be watched with the same
+ settings.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#export">export (t)</a></td>
+	<td class="summary">Export the corowatch functions to an external table, or the global environment.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#gettime">gettime ()</a></td>
+	<td class="summary">returns current time in seconds.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#resume">resume (coro, ...)</a></td>
+	<td class="summary">This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.resume">coroutine.resume</a> .</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sethook">sethook (coro, ...)</a></td>
+	<td class="summary">This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-debug.sethook">debug.sethook</a> , except that when trying to set a
+ hook on a coroutine that is being watched, if will throw an error.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#status">status (coro)</a></td>
+	<td class="summary">This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.status">coroutine.status</a> .</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#watch">watch (coro, tkilllimit, twarnlimit, cb)</a></td>
+	<td class="summary">Protects a coroutine from running too long without yielding.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#wrap">wrap (f)</a></td>
+	<td class="summary">This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.wrap">coroutine.wrap</a> , except that when the running
+ coroutine is watched, then children spawned will also be watched with the same
+ settings.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#wrapf">wrapf (f, tkilllimit, twarnlimit, cb)</a></td>
+	<td class="summary">This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.wrap">coroutine.wrap</a> , except that the coroutine created
+ is watched according to the parameters provided, and not according to the watch
+ parameters of the currently running coroutine.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#yield">yield (...)</a></td>
+	<td class="summary">This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.yield">coroutine.yield</a> .</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "create"></a>
+    <strong>create (f)</strong>
+    </dt>
+    <dd>
+    This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.create">coroutine.create</a> , except that when the running
+ coroutine is watched, then children spawned will also be watched with the same
+ settings.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">f</span>
+         see <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.create">coroutine.create</a>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "export"></a>
+    <strong>export (t)</strong>
+    </dt>
+    <dd>
+    Export the corowatch functions to an external table, or the global environment.
+ The functions exported are <a href="index.html#create">create</a> , <a href="index.html#yield">yield</a> , <a href="index.html#resume">resume</a> , <a href="index.html#status">status</a> , <a href="index.html#wrap">wrap</a> , and <a href="index.html#wrapf">wrapf</a> . The standard
+ <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.running">coroutine.running</a>  will be added if there is no <code>running</code> value in the table yet. So
+ basically it exports a complete <a href="http://www.lua.org/manual/5.1/manual.html#5.2">coroutine</a>  table + <a href="index.html#wrapf">wrapf</a> .
+ If the provided table contains subtables <a href="http://www.lua.org/manual/5.1/manual.html#5.2">coroutine</a>  and/or <a href="http://www.lua.org/manual/5.1/manual.html#5.9">debug</a>  then it is assumed to
+ be a function/global environment and <a href="index.html#sethook">sethook</a>  will be exported as well (exports will then
+ go into the two subtables)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+         table (optional) to which to export the coroutine functions.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        the table provided, or a new table if non was provided, with the exported functions
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ <span class="comment">-- monkey patch global environment, both coroutine and debug tables
+</span> <span class="global">require</span>(<span class="string">"corowatch"</span>).export(_G)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "gettime"></a>
+    <strong>gettime ()</strong>
+    </dt>
+    <dd>
+    returns current time in seconds.  If not overridden, it will require <code>luasocket</code> and use
+ <code>socket.gettime</code> to get the current time.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "resume"></a>
+    <strong>resume (coro, ...)</strong>
+    </dt>
+    <dd>
+    This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.resume">coroutine.resume</a> .
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">coro</span>
+         see <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.resume">coroutine.resume</a>
+        </li>
+        <li><span class="parameter">...</span>
+         see <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.resume">coroutine.resume</a>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sethook"></a>
+    <strong>sethook (coro, ...)</strong>
+    </dt>
+    <dd>
+    This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-debug.sethook">debug.sethook</a> , except that when trying to set a
+ hook on a coroutine that is being watched, if will throw an error.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">coro</span>
+         see <a href="http://www.lua.org/manual/5.1/manual.html#pdf-debug.sethook">debug.sethook</a>
+        </li>
+        <li><span class="parameter">...</span>
+         see <a href="http://www.lua.org/manual/5.1/manual.html#pdf-debug.sethook">debug.sethook</a>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "status"></a>
+    <strong>status (coro)</strong>
+    </dt>
+    <dd>
+    This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.status">coroutine.status</a> .
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">coro</span>
+         see <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.status">coroutine.status</a>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "watch"></a>
+    <strong>watch (coro, tkilllimit, twarnlimit, cb)</strong>
+    </dt>
+    <dd>
+    Protects a coroutine from running too long without yielding.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">coro</span>
+         coroutine to be protected
+        </li>
+        <li><span class="parameter">tkilllimit</span>
+         (optional) time in seconds it is allowed to run without yielding
+        </li>
+        <li><span class="parameter">twarnlimit</span>
+         (optional) time in seconds it is allowed before <code>cb</code> is called
+ (must be smaller than <code>tkilllimit</code>)
+        </li>
+        <li><span class="parameter">cb</span>
+         (optional) callback executed when the kill or warn limit is reached.
+ The callback has 1 parameter (string value being either "warn" or "kill"), but runs
+ on the coroutine that is subject of the warning. If the "warn" callback returns a
+ truthy value (neither <code>false</code>, nor <code>nil</code>) then the timeouts for kill and warn limits
+ will be reset (buying more time for the coroutine to finish its business).
+ NOTE: the callback runs inside a debughook.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        coro
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "wrap"></a>
+    <strong>wrap (f)</strong>
+    </dt>
+    <dd>
+    This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.wrap">coroutine.wrap</a> , except that when the running
+ coroutine is watched, then children spawned will also be watched with the same
+ settings.  To set sepecific settings for watching use <code>coroutine.wrapf</code>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">f</span>
+         see <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.wrap">coroutine.wrap</a>
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#wrapf">wrapf</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "wrapf"></a>
+    <strong>wrapf (f, tkilllimit, twarnlimit, cb)</strong>
+    </dt>
+    <dd>
+    This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.wrap">coroutine.wrap</a> , except that the coroutine created
+ is watched according to the parameters provided, and not according to the watch
+ parameters of the currently running coroutine.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">f</span>
+         function to wrap
+        </li>
+        <li><span class="parameter">tkilllimit</span>
+         see <a href="index.html#watch">watch</a>
+        </li>
+        <li><span class="parameter">twarnlimit</span>
+         see <a href="index.html#watch">watch</a>
+        </li>
+        <li><span class="parameter">cb</span>
+         see <a href="index.html#watch">watch</a>
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="index.html#create">create</a></li>
+         <li><a href="index.html#wrap">wrap</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "yield"></a>
+    <strong>yield (...)</strong>
+    </dt>
+    <dd>
+    This is the same as the regular <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.yield">coroutine.yield</a> .
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+         see <a href="http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.yield">coroutine.yield</a>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.2</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+rock_manifest = {
+   docs = {
+      ["README.md"] = "32ddd16fc22db6694fdb65288c1d1698",
+      ["benchmark.md"] = "a7048d7b2d0c3332c971293299c38a92",
+      ["config.ld"] = "0056c44c53d548cb498027964f3bb11e",
+      examples = {
+         ["example.lua.html"] = "54f39b682662914be2fc84828005206f"
+      },
+      ["index.html"] = "aeda43e49df1182e1f074cf794b8b9cf",
+      ["ldoc.css"] = "e2b04e90ff648f8e00d9d4d458de59d9",
+      source = {
+         ["LibDeflate.lua.html"] = "bc1d052652becb1a8f65ebd57897731d"
+      },
+      topics = {
+         ["benchmark.md.html"] = "35580bb677ce9079d1245fd6a9c6d308",
+         ["changelog.md.html"] = "4d50edc9abf210fafc36007876312a2a",
+         ["readme.md.html"] = "bf4f4380d6598abf564b7cc8602e44fc"
+      }
+   },
+   examples = {
+      ["example.lua"] = "cf640b92a3c50a184077a04e4629eca0"
+   },
+   ["libdeflate-1.0.1-1.rockspec"] = "1118b293050f16cf582fb4936dff1b23",
+   lua = {
+      ["LibDeflate.lua"] = "d6dc242d37f64f6070a5fc768a9a1c28"
+   }
+}

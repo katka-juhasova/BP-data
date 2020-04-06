@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "7f26b2e4d414bb9216b58395f63e9622"
+   },
+   ["kong-signature-and-remove-attr-0.1.0-1.rockspec"] = "9184ca8c940706ba9f99afc92ac7079f",
+   lua = {
+      kong = {
+         plugins = {
+            ["kong-signature-and-remove-attr"] = {
+               ["handler.lua"] = "7222927e46fc0e05c21b287378d067a5",
+               ["schema.lua"] = "de00ea8995dfe648343c37a1c4025b24"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   chalk = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   chalk = {
+      "chalk/0.1.0-1"
+   }
+}
+repository = {
+   chalk = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               chalk = "chalk.lua"
+            }
+         }
+      }
+   }
+}

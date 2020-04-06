@@ -1,0 +1,92 @@
+commands = {
+   ["ccrunx-image"] = {
+      "ccrunx-image/0.3-2"
+   }
+}
+dependencies = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["ccrunx-image"] = {
+      ["0.3-2"] = {
+         {
+            constraints = {},
+            name = "argparse"
+         },
+         {
+            constraints = {},
+            name = "ltext"
+         }
+      }
+   },
+   ltext = {
+      ["1.1.0-2"] = {}
+   }
+}
+modules = {
+   argparse = {
+      "argparse/0.7.0-1"
+   },
+   ltext = {
+      "ltext/1.1.0-2"
+   }
+}
+repository = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               argparse = "argparse.lua"
+            }
+         }
+      }
+   },
+   ["ccrunx-image"] = {
+      ["0.3-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["ccrunx-image"] = "ccrunx-image"
+            },
+            dependencies = {
+               argparse = "0.7.0-1",
+               ltext = "1.1.0-2"
+            },
+            modules = {}
+         }
+      }
+   },
+   ltext = {
+      ["1.1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltext = "ltext.lua"
+            }
+         }
+      }
+   }
+}

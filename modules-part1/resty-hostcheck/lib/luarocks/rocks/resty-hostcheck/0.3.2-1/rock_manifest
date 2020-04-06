@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "cbf2d3c117f276ddd47d5e8e8198a653",
+      ["README.md"] = "ac0e8a7965f0d6d491e270261f7e7431"
+   },
+   lua = {
+      resty = {
+         hostcheck = {
+            ["dns.lua"] = "569ecbad69764f7d92a38f3e10ec8bfc"
+         },
+         ["hostcheck.lua"] = "7f443a3576c6ffc41fe5cf2d10f63b05"
+      }
+   },
+   ["resty-hostcheck-0.3.2-1.rockspec"] = "56f6cc1dd8c527e1a4bd3f04ac1b114b"
+}

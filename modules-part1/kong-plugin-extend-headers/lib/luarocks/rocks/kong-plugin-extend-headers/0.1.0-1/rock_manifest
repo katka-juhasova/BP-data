@@ -1,0 +1,21 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "7f960b3a26edb79ab5a1394786eff8fd"
+   },
+   ["kong-plugin-extend-headers-0.1.0-1.rockspec"] = "9d6770bd70719955a6f1306a2422f77b",
+   lua = {
+      kong = {
+         plugins = {
+            ["extend-headers"] = {
+               ["handler.lua"] = "076eabe8cfddbc7e04ca7a8d6566f921",
+               ["schema.lua"] = "463b9392cf13830fe79adea21019737c"
+            }
+         }
+      },
+      spec = {
+         ["extend-headers"] = {
+            ["01-header_filter_spec.lua"] = "2a32ce5394c5b52f03c90fbead2f6f21"
+         }
+      }
+   }
+}

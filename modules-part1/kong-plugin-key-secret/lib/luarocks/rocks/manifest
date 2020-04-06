@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-key-secret"] = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.key-secret.access"] = {
+      "kong-plugin-key-secret/0.1.0-1"
+   },
+   ["kong.plugins.key-secret.handler"] = {
+      "kong-plugin-key-secret/0.1.0-1"
+   },
+   ["kong.plugins.key-secret.schema"] = {
+      "kong-plugin-key-secret/0.1.0-1"
+   },
+   ["spec.key-secret.01-access_spec"] = {
+      "kong-plugin-key-secret/0.1.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-key-secret"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.key-secret.access"] = "kong/plugins/key-secret/access.lua",
+               ["kong.plugins.key-secret.handler"] = "kong/plugins/key-secret/handler.lua",
+               ["kong.plugins.key-secret.schema"] = "kong/plugins/key-secret/schema.lua",
+               ["spec.key-secret.01-access_spec"] = "spec/key-secret/01-access_spec.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,3 +1,0 @@
-# dromozoa-benchmark
-
-Microbenchmark utility.

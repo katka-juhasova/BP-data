@@ -1,0 +1,37 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "3611f4cb2ecc6c0de9212fe7b3bfe1cf",
+      ["README.md"] = "7f4b60f54d2915145a9e9ac108d22abb"
+   },
+   lua = {
+      lil = {
+         ["AnsiDecoratedStringBuilder.lua"] = "812ba5af1c09426600a06af541798a98",
+         ["ConsoleAppender.lua"] = "ccf229b5e2a3af2022ce9b5ed0a06538",
+         ["DebugLogger.lua"] = "f03c21c23cd77852831782d655134148",
+         ["FileAppender.lua"] = "3572909552a7e3ddb624dfa6b80c6f10",
+         ["FileConfigurationLoader.lua"] = "ff973645a6c13ea3a1535f89281b6e34",
+         ["FileUtils.lua"] = "4ba766e84ca8e14bc17f466f1c8648af",
+         ["IdUtils.lua"] = "1bef23f809805d63c99e5da11d40a09e",
+         ["Levels.lua"] = "3f55cc5ba3d7e832e4c0779a9f3f179c",
+         ["Logger.lua"] = "ac9a9740c4f0e053e5781bf82e8b6bdb",
+         ["LoggerConfiguration.lua"] = "0d6c08a230b50b970881a3fc0309b534",
+         ["LoggerConfigurationDsl.lua"] = "2f69ebe9c1b8354292ccc2a7bfd7c2d4",
+         ["LoggerFactory.lua"] = "e1de16cecace5b6ab30e83764ef61a3c",
+         ["LuaOsUtils.lua"] = "381808af4108535f71a3eacc915d3738",
+         ["NativeOsUtils.lua"] = "f7360ed27aa617d89c19e4863f7e3ed7",
+         ["OsFacts.lua"] = "1be41310d5663a6ee7b915b086fc12f2",
+         ["OsUtils.lua"] = "223fdaafdc1dc43327354f22c191175a",
+         ["OsUtilsConfig.lua"] = "928ab0488bbcf0f767a782cf08ef6665",
+         ["PatternBuilder.lua"] = "4f9fd774c8760b2a20e40c1cee44708d",
+         ["PatternGeneratorMap.lua"] = "030ebb25a51b95eb450ac296c1378fa3",
+         ["RollingFileAppender.lua"] = "78d5afde734ea81e77f90da8ddd02c0f",
+         ["StringUtils.lua"] = "88048d5a78070a807677bebe8e5e9c23",
+         ["ThreadUtils.lua"] = "a373a3612da91d8fa5931d8062c05d17",
+         polyfills = {
+            ["loadstring.lua"] = "98f35a502f16402f16e03ae53481cb17",
+            ["setfenv.lua"] = "cdf5ed13ee594366600a29ac3944b402"
+         }
+      }
+   },
+   ["lua-industrial-logger-1.1-0.rockspec"] = "13974fb06341f9c7064be06290a3c79e"
+}

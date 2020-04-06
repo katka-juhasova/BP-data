@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-resty-lock"] = {
+      ["0.08-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.lock"] = {
+      "lua-resty-lock/0.08-0"
+   }
+}
+repository = {
+   ["lua-resty-lock"] = {
+      ["0.08-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.lock"] = "resty/lock.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   void = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   void = {
+      "void/1.0-1"
+   }
+}
+repository = {
+   void = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               void = "void.so"
+            }
+         }
+      }
+   }
+}

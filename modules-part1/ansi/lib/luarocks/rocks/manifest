@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   ansi = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ansi = {
+      "ansi/0.1.0-1"
+   },
+   ["ansi.base"] = {
+      "ansi/0.1.0-1"
+   },
+   ["ansi.color"] = {
+      "ansi/0.1.0-1"
+   },
+   ["ansi.term"] = {
+      "ansi/0.1.0-1"
+   }
+}
+repository = {
+   ansi = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ansi = "ansi.lua",
+               ["ansi.base"] = "ansi/base.lua",
+               ["ansi.color"] = "ansi/color.lua",
+               ["ansi.term"] = "ansi/term.lua"
+            }
+         }
+      }
+   }
+}

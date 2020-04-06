@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-timechecking"] = {
+      ["0.1.0-4"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-timechecking.handler"] = {
+      "kong-timechecking/0.1.0-4"
+   },
+   ["kong.plugins.kong-timechecking.schema"] = {
+      "kong-timechecking/0.1.0-4"
+   }
+}
+repository = {
+   ["kong-timechecking"] = {
+      ["0.1.0-4"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-timechecking.handler"] = "kong/plugins/kong-timechecking/handler.lua",
+               ["kong.plugins.kong-timechecking.schema"] = "kong/plugins/kong-timechecking/schema.lua"
+            }
+         }
+      }
+   }
+}

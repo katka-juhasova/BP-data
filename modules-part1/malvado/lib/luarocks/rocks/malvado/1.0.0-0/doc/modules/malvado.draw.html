@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>malvado documentation</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>malvado</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/malvado.core.html">malvado.core</a></li>
+  <li><strong>malvado.draw</strong></li>
+  <li><a href="../modules/malvado.effects.html">malvado.effects</a></li>
+  <li><a href="../modules/malvado.key.html">malvado.key</a></li>
+  <li><a href="../modules/malvado.map.html">malvado.map</a></li>
+  <li><a href="../modules/malvado.math.html">malvado.math</a></li>
+  <li><a href="../modules/malvado.mouse.html">malvado.mouse</a></li>
+  <li><a href="../modules/malvado.text.html">malvado.text</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>malvado.draw</code></h1>
+<p>Draw module implements the draw privimites utilities</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#set_color">set_color (red, green, blue, alpha)</a></td>
+	<td class="summary">Sets the color of the next primitive to be painted.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#draw_circle">draw_circle (x0, y0, radius)</a></td>
+	<td class="summary">Draws a non-filled circle with center (x0,y0) and radius radius.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#draw_fcircle">draw_fcircle (x0, y0, radius)</a></td>
+	<td class="summary">Draws a filled circle with center (x0,y0) and radius radius.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#draw_box">draw_box (x0, y0, x1, y1)</a></td>
+	<td class="summary">Draws a filled rectangle with corners (x0,y0), (x0,y1), (x1,y0) and (x1,y1).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#draw_rect">draw_rect (x0, y0, x1, y1)</a></td>
+	<td class="summary">Draws a non filled rectangle with corners (x0,y0), (x0,y1), (x1,y0) and (x1,y1).</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "set_color"></a>
+    <strong>set_color (red, green, blue, alpha)</strong>
+    </dt>
+    <dd>
+    Sets the color of the next primitive to be painted.  It's an alias of: love.graphics.setColor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">red</span>
+         Red
+        </li>
+        <li><span class="parameter">green</span>
+         Green
+        </li>
+        <li><span class="parameter">blue</span>
+         Blue
+        </li>
+        <li><span class="parameter">alpha</span>
+         Alpha (Optional: Default 255)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "draw_circle"></a>
+    <strong>draw_circle (x0, y0, radius)</strong>
+    </dt>
+    <dd>
+    Draws a non-filled circle with center (x0,y0) and radius radius.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x0</span>
+         X position
+        </li>
+        <li><span class="parameter">y0</span>
+         Y position
+        </li>
+        <li><span class="parameter">radius</span>
+         Circle Radius
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "draw_fcircle"></a>
+    <strong>draw_fcircle (x0, y0, radius)</strong>
+    </dt>
+    <dd>
+    Draws a filled circle with center (x0,y0) and radius radius.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x0</span>
+         X position
+        </li>
+        <li><span class="parameter">y0</span>
+         Y position
+        </li>
+        <li><span class="parameter">radius</span>
+         Circle Radius
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "draw_box"></a>
+    <strong>draw_box (x0, y0, x1, y1)</strong>
+    </dt>
+    <dd>
+    Draws a filled rectangle with corners (x0,y0), (x0,y1), (x1,y0) and (x1,y1).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x0</span>
+         The x coordinate of one corner of the filled rectangle.
+        </li>
+        <li><span class="parameter">y0</span>
+         The y coordinate of one corner of the filled rectangle.
+        </li>
+        <li><span class="parameter">x1</span>
+         The x coordinate of the diagonally opposite corner of the filled rectangle.
+        </li>
+        <li><span class="parameter">y1</span>
+         The y coordinate of the diagonally opposite corner of the filled rectangle.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "draw_rect"></a>
+    <strong>draw_rect (x0, y0, x1, y1)</strong>
+    </dt>
+    <dd>
+    Draws a non filled rectangle with corners (x0,y0), (x0,y1), (x1,y0) and (x1,y1).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x0</span>
+         The x coordinate of one corner of the filled rectangle.
+        </li>
+        <li><span class="parameter">y0</span>
+         The y coordinate of one corner of the filled rectangle.
+        </li>
+        <li><span class="parameter">x1</span>
+         The x coordinate of the diagonally opposite corner of the filled rectangle.
+        </li>
+        <li><span class="parameter">y1</span>
+         The y coordinate of the diagonally opposite corner of the filled rectangle.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-07-29 15:26:59 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

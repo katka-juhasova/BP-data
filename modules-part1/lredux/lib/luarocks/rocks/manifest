@@ -1,0 +1,81 @@
+commands = {}
+dependencies = {
+   lredux = {
+      ["0.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lredux.applyMiddleware"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.combineReducers"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.compose"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.createStore"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.env"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.helpers.array"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.helpers.assign"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.null"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.utils.actionTypes"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.utils.inspect"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.utils.isPlainObject"] = {
+      "lredux/0.3.0-1"
+   },
+   ["lredux.utils.logger"] = {
+      "lredux/0.3.0-1"
+   }
+}
+repository = {
+   lredux = {
+      ["0.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lredux.applyMiddleware"] = "lredux/applyMiddleware.lua",
+               ["lredux.combineReducers"] = "lredux/combineReducers.lua",
+               ["lredux.compose"] = "lredux/compose.lua",
+               ["lredux.createStore"] = "lredux/createStore.lua",
+               ["lredux.env"] = "lredux/env.lua",
+               ["lredux.helpers.array"] = "lredux/helpers/array.lua",
+               ["lredux.helpers.assign"] = "lredux/helpers/assign.lua",
+               ["lredux.null"] = "lredux/null.lua",
+               ["lredux.utils.actionTypes"] = "lredux/utils/actionTypes.lua",
+               ["lredux.utils.inspect"] = "lredux/utils/inspect.lua",
+               ["lredux.utils.isPlainObject"] = "lredux/utils/isPlainObject.lua",
+               ["lredux.utils.logger"] = "lredux/utils/logger.lua"
+            }
+         }
+      }
+   }
+}

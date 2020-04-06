@@ -1,0 +1,54 @@
+commands = {}
+dependencies = {
+   ["lua-resty-ipmatcher"] = {
+      ["0.4-0"] = {}
+   },
+   ["lua-resty-radixtree"] = {
+      ["1.7-0"] = {
+         {
+            constraints = {},
+            name = "lua-resty-ipmatcher"
+         }
+      }
+   }
+}
+modules = {
+   librestyradixtree = {
+      "lua-resty-radixtree/1.7-0"
+   },
+   ["resty.ipmatcher"] = {
+      "lua-resty-ipmatcher/0.4-0"
+   },
+   ["resty.radixtree"] = {
+      "lua-resty-radixtree/1.7-0"
+   }
+}
+repository = {
+   ["lua-resty-ipmatcher"] = {
+      ["0.4-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.ipmatcher"] = "resty/ipmatcher.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-radixtree"] = {
+      ["1.7-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-ipmatcher"] = "0.4-0"
+            },
+            modules = {
+               librestyradixtree = "librestyradixtree.so",
+               ["resty.radixtree"] = "resty/radixtree.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "bfe50696cc69b9e6e89fe6688dcfefef"
+   },
+   ["kong-plugin-jwt-up-1.7-0.rockspec"] = "6e80d5d9328c01b02bdd6ab270b87fbe",
+   lua = {
+      kong = {
+         plugins = {
+            ["jwt-up"] = {
+               ["fixtures.lua"] = "50243d399f89abb7e1ebe1d2b134e96f",
+               ["handler.lua"] = "f35be892bae345f4b02283619c29859d",
+               ["jwt_parser.lua"] = "2ea01f6e36b3a71a662e17a6e8edcba9",
+               ["schema.lua"] = "c752c8e2cd41796c90f2e7baaf882080"
+            }
+         }
+      }
+   }
+}

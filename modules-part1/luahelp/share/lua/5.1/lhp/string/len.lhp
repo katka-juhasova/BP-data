@@ -1,0 +1,8 @@
+Help [[
+
+string.len (s)
+--------------
+
+  Receives a string and returns its length. The empty string `""` has length
+  0. Embedded zeros are counted, so `"a\000b\000c"` has length 5.
+]]

@@ -1,0 +1,20 @@
+rock_manifest = {
+   doc = {
+      CHANGELOG = "9b69bd10952adeb84a74edf110574953",
+      LICENSE = "e59093011a263584c58bd53f831e8e06",
+      README = "6f3849bafe4ac0b404bad7af4a30a450"
+   },
+   lib = {
+      ["termfx.so"] = "1682ec8d2a01057340cfc3344041067e"
+   },
+   samples = {
+      ["blittest.lua"] = "dcc53f6dc4268a070a8e83bcef4a5c63",
+      ["colortest.lua"] = "a1f3477f5b5d7b2b2d10f8de3305bdbc",
+      ["copyregiontest.lua"] = "2df9f1cdd9533b43df474a73e9b7027a",
+      ["printtest.lua"] = "fae0dd9db839fbc1c14c28ff855322c8",
+      ["screenshot.lua"] = "8994a19f6c5fd23b026a500f9a51be08",
+      ["simpleui.lua"] = "80936442411a17ddf62a54c28635cd5c",
+      ["termfxtest.lua"] = "b6e9b5512da48a3ebecd3da50f4e950d"
+   },
+   ["termfx-0.7.1-1.rockspec"] = "69af9320043db4be82a8858493e697b2"
+}

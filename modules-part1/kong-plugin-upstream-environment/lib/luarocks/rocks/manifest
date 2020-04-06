@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-upstream-environment"] = {
+      ["0.1.3-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.upstream-environment.handler"] = {
+      "kong-plugin-upstream-environment/0.1.3-1"
+   },
+   ["kong.plugins.upstream-environment.schema"] = {
+      "kong-plugin-upstream-environment/0.1.3-1"
+   }
+}
+repository = {
+   ["kong-plugin-upstream-environment"] = {
+      ["0.1.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.upstream-environment.handler"] = "kong/plugins/upstream-environment/handler.lua",
+               ["kong.plugins.upstream-environment.schema"] = "kong/plugins/upstream-environment/schema.lua"
+            }
+         }
+      }
+   }
+}

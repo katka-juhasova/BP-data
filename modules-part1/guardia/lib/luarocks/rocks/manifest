@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   guardia = {
+      ["3.0.3-1"] = {}
+   }
+}
+modules = {
+   guardia = {
+      "guardia/3.0.3-1"
+   },
+   ["guardia.guards"] = {
+      "guardia/3.0.3-1"
+   }
+}
+repository = {
+   guardia = {
+      ["3.0.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               guardia = "guardia/init.lua",
+               ["guardia.guards"] = "guardia/guards.lua"
+            }
+         }
+      }
+   }
+}

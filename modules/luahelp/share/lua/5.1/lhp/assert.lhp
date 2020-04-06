@@ -1,9 +1,0 @@
-Help [[
-
-assert (v [, message])
-----------------------
-
-  Issues an error when the value of its argument `v` is false (i.e., **nil**
-  or **false**); otherwise, returns all its arguments. `message` is an error
-  message; when absent, it defaults to "assertion failed!"
-]]

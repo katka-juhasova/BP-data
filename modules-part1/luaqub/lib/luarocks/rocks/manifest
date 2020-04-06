@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   luaqub = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luaqub = {
+      "luaqub/1.1.0-1"
+   }
+}
+repository = {
+   luaqub = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luaqub = "luaqub.lua"
+            }
+         }
+      }
+   }
+}

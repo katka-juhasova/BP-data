@@ -1,0 +1,19 @@
+Help [[
+
+io.lines ([filename])
+---------------------
+
+  Opens the given file name in read mode and returns an iterator function
+  that, each time it is called, returns a new line from the file. Therefore,
+  the construction
+
+        for line in io.lines(filename) do body end
+
+  will iterate over all lines of the file. When the iterator function detects
+  the end of file, it returns **nil** (to finish the loop) and automatically
+  closes the file.
+
+  The call `io.lines()` (without a file name) is equivalent to
+  `io.input():lines()`; that is, it iterates over the lines of the default
+  input file. In this case it does not close the file when the loop ends.
+]]

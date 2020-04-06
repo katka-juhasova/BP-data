@@ -1,0 +1,31 @@
+rock_manifest = {
+   doc = {
+      us = {
+         ["doc.css"] = "d0a913514fb190240b3b4033d105cbc0",
+         ["experimental.html"] = "712dc01b72bf79e2043a357753813e29",
+         ["index.html"] = "fb77d005b9c25d6c972a5ca24633c437",
+         ["license.html"] = "156e756c2fa2c64cd432014533a1933e",
+         ["manual.html"] = "e733a1f639d15f153fae14216b0624fa",
+         ["sajax.html"] = "c169973bcb37b94d2ad5c3e8365488bd",
+         ["xavante.gif"] = "d88ba87fe667dd66c556e1cbba538aed"
+      }
+   },
+   lua = {
+      ["sajax.lua"] = "a1162972ac9a4134a627601d1b523b1d",
+      xavante = {
+         ["cgiluahandler.lua"] = "fec0f79831509a380a5fa955706577af",
+         ["encoding.lua"] = "970ad27e9647cf3a3629a02542eda944",
+         ["filehandler.lua"] = "3673292076a4ce17bf5d6ba0fc44d5ec",
+         ["httpd.lua"] = "f21e230287d664275c6a7714a8313fb2",
+         ["indexhandler.lua"] = "ad4f1afc476212d802e24cac3506dd95",
+         ["mime.lua"] = "86fd8021c13440522e48b87983187ec9",
+         ["patternhandler.lua"] = "1519f70bf13b58eca8d211bf6088765c",
+         ["redirecthandler.lua"] = "de8996834b77aa0d0dbf0e77305d0a29",
+         ["ruleshandler.lua"] = "5c9f2c268c6e0b11c0de8938c233b1e9",
+         ["urlhandler.lua"] = "c16a9619af6668a97e4e232966a67d49",
+         ["vhostshandler.lua"] = "3fea82a02ba3bd01b16e591a9157e5f5"
+      },
+      ["xavante.lua"] = "d19a4469446c3799a728c7345cf56418"
+   },
+   ["xavante-2.4.0-1.rockspec"] = "029fb20c283c196bce3fe01cd9322627"
+}

@@ -1,0 +1,9 @@
+Help [[
+
+debug.getupvalue (func, up)
+---------------------------
+
+  This function returns the name and the value of the upvalue with index `up`
+  of the function `func`. The function returns **nil** if there is no upvalue
+  with the given index.
+]]

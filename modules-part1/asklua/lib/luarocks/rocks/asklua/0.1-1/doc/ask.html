@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=iso-8859-15" />
+   <title>Module ask</title><style type="text/css">
+body {
+   font-family: Verdana, Helvetica, Arial, sans-serif;
+   font-size: 11pt; color: black; background-color: #fbfbfb;
+}
+#content {
+   top: 120px; margin-left: 225px;
+}
+#navigate {
+   position: fixed; top: 10px; width: 210px; float: left;
+	padding: 0 0 0 5px; background-color: #e6e6f2; line-height: 170%;
+}
+#navigate h1 {
+   font-size: large; text-align: left;  
+}
+#navigate ul {
+	margin-left: 5px; padding-left: 10px;
+}
+#navigate ul ul {
+   font-size: 10pt; margin-left: 5px; padding-left: 10px; line-height: 130%;
+}
+#navigate ul ul ul {
+   font-size: 90%; margin-left: 5px; padding-left: 10px; line-height: 110%;
+}
+#navigate a:link {
+	color: #000099; text-decoration: none;
+}
+#navigate a:visited {
+	color: #000099; text-decoration: none;
+}
+#navigate a:hover {
+   color: #996633; text-decoration: none;
+}
+h1 {
+   text-align: center; color: #000000; width: auto;
+}
+h2 {
+   color: #006600; background-color: #ccffff; padding: 10px;
+}
+h3 {
+   color: #000099; background-color: #ffffcc; padding: 5px;
+}
+h4 {
+   font-size: normal; color: #990099;
+}
+h5 {
+   border-top: 1px solid; font-size: medium; color: #990000;
+}
+h6 {
+   font-size: medium; font-style: italic;
+}
+a:hover {
+   color: #996633;
+}
+p.listoffun {
+   word-spacing: 2em;
+}
+pre {
+   font-size: 90%; border: 1px dotted #888888;
+   background-color: #f9f9f9; padding: 5pt;
+}
+code {
+   font-size: 95%; color: #006666;
+}
+var {
+   color: #008040; font-style: italic; font-weight: normal;
+}
+</style>
+</head> <body>
+<div class="noprint" id="navigate">
+
+<h1>Module <code>ask</code></h1>
+
+
+<ul>
+
+<li><a href="#basic">Basic information</a></li>
+
+<li><a href="#list">List of functions</a></li>
+
+<li><a href="#usage">Usage of the module</a></li>
+
+<li><a href="#more">More specific information</a></li>
+
+<li><a href="#example">Examples</a></li>
+
+<li><a href="#description">Description of functions</a>
+
+<ul>
+
+<li><a href="#about">about</a></li>
+<li><a href="#base">base</a></li>
+<li><a href="#doc">doc</a></li>
+
+</ul></li>
+
+<li><a href="#version">Version</a></li>
+
+<li><a href="#notes">Notes</a></li>
+
+</ul></div>
+
+<div id="content">
+
+<h1>Module ask</h1>
+
+
+<h2 id ="basic">Basic information</h2>
+
+
+
+<p><code>ask</code> is a system that provides help for modules.</p>
+
+<p>It searches eight types of information:</p>
+
+<pre><code>basic   list   usage   more   seealso   example   version   notes
+</code></pre>
+
+<p>Execute <code>ask"/ask^usage"</code> and <code>ask"/ask^more"</code> for more explanation.</p>
+
+<p>Apart from this, documentation in <code>html</code> format can 
+be generated (see <code>ask.doc</code>).</p>
+
+
+
+
+<h2 id ="list">List of functions</h2>
+
+
+<p class="listoffun">
+<a href="#about">about</a>
+<a href="#base">base</a>
+<a href="#doc">doc</a>
+</p>
+
+
+
+
+
+<h2 id ="usage">Usage of the module</h2>
+
+
+
+<p><code>ask(search)</code></p>
+
+<p>@params:</p>
+
+<ol>
+    <li><code>search</code> is a string in the form <code>"what^kind"</code> (a caret
+    separates two parts of the argument).</li>
+</ol>
+
+<p>@returns: nothing.</p>
+
+<p>@effects: it prints in <code>io.stderr</code>.</p>
+
+<p><code>what</code> is what are looking for; if the first character in it is <code>/</code>
+an <em>absolute</em> path is searched; if not the string defined in <code>ask.base</code> is used as a basis;</p>
+
+<p><code>kind</code> is the type of information we want, that can be:</p>
+
+<pre><code>"basic"   | "list"    | "usage"   | "more"   | "seealso"
+"b"       | "l"       | "u"       | "m"      | "s"
+
+"example" | "version" | "notes"   | "all"  
+"e"       | "v"       | "n"       | "a"
+</code></pre>
+
+<p>(as we see, we can use only the first letter).
+If <code>all</code> is requested then all information
+(basic, list, usage, seealso, example, version, notes) <em>if exists</em> is given.
+If no kind is provided (in this case the caret is optional) <code>"basic"</code> is assumed.</p>
+
+<p><code>ask(nil)</code> and <code>ask.about(nil)</code> are equivalent to
+<code>ask"/ask^basic"</code>, that is, help about this helping system
+is given.</p>
+
+
+
+
+<h2 id ="more">More specific information</h2>
+
+
+
+<p>The search of information is controlled by two strings:
+<code>what</code> and <code>kind</code>. Both are typed separated by a caret, <code>"^"</code>.</p>
+
+<p>The first, <code>what</code>, is what we are searching. Normally this
+is a sequence <code>name1[.name2[.name3 ...] ]</code> in which <code>name1</code> is a module
+name, and <code>name2</code>, <code>name3</code>, ... indicate functions in the module or
+tables with functions in the module.</p>
+
+<p>If <code>what</code> begins with a slash, <code>/</code>, then an absolute path is searched.
+Otherwise the help system adds as a prefix the string stored in a local
+variable assigned with the function <code>ask.base</code>. This improves the
+interactivity because the user is not enforced to always type the
+complete path of help.</p>
+
+<p>The second, <code>kind</code>, is the type of information we want:</p>
+
+<ul>
+    <li><p><code>basic</code>:    the purpose of the module or function inside a module,</p></li>
+    <li><p><code>list</code>:     the listing of functions in the module,</p></li>
+    <li><p><code>usage</code>:    the use of a function, describing the arguments and returns,</p></li>
+    <li><p><code>more</code>:     more specific information,</p></li>
+    <li><p><code>seealso</code>:  some related information,</p></li>
+    <li><p><code>example</code>:  an example of use,</p></li>
+    <li><p><code>version</code>:  information about version and author,</p></li>
+    <li><p><code>notes</code>:    other information, usually license one,</p></li>
+    <li><p><code>all</code>:      show all the previous information.</p></li>
+</ul>
+
+<p>For activate the help system the user (interactively) or some module
+should invoke</p>
+
+<pre><code> require"ask"
+</code></pre>
+
+<p><strong>Note</strong>: the present help system manages a module variable <code>_H</code>.
+This means that <code>_H</code> cannot be used for other purposes in
+the module.</p>
+
+
+
+
+<h2 id ="example">Examples</h2>
+
+
+
+<p>Some examples (with equivalences):</p>
+
+<p>We assume the <em>first</em> invoking after <code>require"ask"</code> (by the user
+or by some module):</p>
+
+<pre><code>ask""                   --&gt;&lt;--    ask"/ask^basic"
+ask"^a"                 --&gt;&lt;--    ask"/ask^all"
+ask"/somemodule.fun^u"  --&gt;&lt;--    ask"/somemodule.fun^usage"
+
+ask.base"somemodule"    -- changes basis for searching
+
+ask"^l"                 --&gt;&lt;--    ask"/somemodule^list"
+ask"fun^u"              --&gt;&lt;--    ask"/somemodule.fun^usage"
+ask"/ask^m"             --&gt;&lt;--    ask"/ask^more"
+</code></pre>
+
+
+
+
+<h2 id = "description">Description of functions</h2>
+
+
+<h3 id="about">ask.about</h3>
+
+
+<h4>Basic information</h4>
+
+
+
+<p>Main function for on line help (synonym of <code>ask</code>)</p>
+
+
+
+
+<h4>Usage of function</h4>
+
+
+
+<p><code>ask.about(search)</code></p>
+
+
+<p><code>ask(search)</code></p>
+
+<p>@params:</p>
+
+<ol>
+    <li><code>search</code> is a string in the form <code>"what^kind"</code> (a caret
+    separates two parts of the argument).</li>
+</ol>
+
+<p>@returns: nothing.</p>
+
+<p>@effects: it prints in <code>io.stderr</code>.</p>
+
+<p><code>what</code> is what are looking for; if the first character in it is <code>/</code>
+an <em>absolute</em> path is searched; if not the string defined through
+<code>ask.base</code> is used as a basis;</p>
+
+<p><code>kind</code> is the type of information we want, that can be:</p>
+
+<pre><code>"basic"   | "list"    | "usage"   | "more"   | "seealso"
+"b"       | "l"       | "u"       | "m"      | "s"
+
+"example" | "version" | "notes"   | "all"  
+"e"       | "v"       | "n"       | "a"
+</code></pre>
+
+<p>(as we can see we can use only the first letter).
+If <code>all</code> is requested then all information,
+(basic, list, usage, seealso, example, version, notes) <em>if exists</em> is given.
+If no kind is provided <code>"basic"</code> is assumed.</p>
+
+<p>Spaces typed by the user in the set <code>what^kind</code> are deleted before
+the search of the help. Also, multiple <code>"."</code> are collapsed.</p>
+
+<p><code>ask(nil)</code> and <code>ask.about(nil)</code> are equivalent to
+<code>ask"/ask^basic"</code>, that is, help about this helping system
+is given.</p>
+
+
+
+<h3 id="base">ask.base</h3>
+
+
+<h4>Basic information</h4>
+
+
+
+<p>Establishes a <em>basis prefix</em> for help searching</p>
+
+
+
+
+<h4>Usage of function</h4>
+
+
+
+<p><code>ask.base(basis)</code></p>
+
+<p>@params:</p>
+
+<ol>
+    <li><code>basis</code>, string.</li>
+</ol>
+
+<p>@returns: nothing.</p>
+
+<p>This function changes the <code>basis</code> (a string) to add as a prefix in the
+desired information path when this does not begin with a slash, <code>/</code>.</p>
+
+<p>When providind <code>basis</code> the slashdot <code>"/"</code> is not required.</p>
+
+<p>Initially basis has the value <code>"ask"</code> but the loading of a module
+sets the current <code>basis</code> to the module name.</p>
+
+<p>When calling <code>ask.base""</code> the current basis is displayed.</p>
+
+<p>Calling <code>ask.base(nil)</code> establishes <code>"ask"</code> as basis.</p>
+
+
+
+<h3 id="doc">ask.doc</h3>
+
+
+<h4>Basic information</h4>
+
+
+
+<p>Create <code>html</code> documentation for a module</p>
+
+
+
+
+<h4>Usage of function</h4>
+
+
+
+<p><code>ask.doc(modulename, filename)</code></p>
+
+<p>@params: </p>
+
+<ol>
+    <li><code>modulename</code>: string (optional) is the name of the module
+    of which we want the documentation.
+    If not provided then the basis is used.</li>
+    <li><code>filename</code>: string (optional) is the name of the output file,
+    in <code>html</code> format. If not given the name of the module is used.
+    If one of the extensions <code>".html"</code> or <code>".htm"</code> (in lowercase) is
+    not provided then automatically <code>".html"</code> is added to the filename.</li>
+</ol>
+
+<p>@returns: nothing</p>
+
+<p>@effects: it creates a file.</p>
+
+<p>For generating the documentation module
+<a href="http://www.frykholm.se/programming.html">markdown.lua</a> from Niklas Frykholm
+must be accessible. 
+(Note: the version in <a href="http://luaforge.net">luaforge.net</a> is obsolete.)</p>
+
+
+
+
+<h4>More specific information</h4>
+
+
+
+<p>A CSS file called <code>default.css</code>, which is possible
+to customize, is used. This file is embeded in the <code>html</code> output file.
+If not provided the system uses an internal style.</p>
+
+<p>The resulting <code>html</code> file can be converted, v.g., to PS
+with <a href="http://user.it.uu.se/~jan/html2ps.html">html2ps</a>, from Jan Kärrman.
+After that <code>ps2pdf</code> can be used to convert it to PDF format.</p>
+
+
+
+
+<h2 id ="version">Version</h2>
+
+
+
+<p>by Julio M. Fernández-Díaz, Dept. of Physics,
+University of Oviedo, Spain, Version 0.1, February 2010</p>
+
+<p>julio a t uniovi d o t es</p>
+
+
+
+
+<h2 id ="notes">Notes</h2>
+
+
+
+<p>THIS CODE IS HEREBY PLACED IN PUBLIC DOMAIN.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+
+
+
+</div>
+
+</body></html>

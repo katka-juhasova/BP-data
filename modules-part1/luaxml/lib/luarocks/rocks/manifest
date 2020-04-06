@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   luaxml = {
+      ["101012-2"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   LuaXML = {
+      "luaxml/101012-2"
+   },
+   LuaXML_lib = {
+      "luaxml/101012-2"
+   }
+}
+repository = {
+   luaxml = {
+      ["101012-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               LuaXML = "LuaXML.lua",
+               LuaXML_lib = "LuaXML_lib.so"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["kong-user-agent-based-routing"] = {
+      ["0.1-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-user-agent-based-routing.access"] = {
+      "kong-user-agent-based-routing/0.1-0"
+   },
+   ["kong.plugins.kong-user-agent-based-routing.handler"] = {
+      "kong-user-agent-based-routing/0.1-0"
+   },
+   ["kong.plugins.kong-user-agent-based-routing.schema"] = {
+      "kong-user-agent-based-routing/0.1-0"
+   }
+}
+repository = {
+   ["kong-user-agent-based-routing"] = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-user-agent-based-routing.access"] = "kong/plugins/kong-user-agent-based-routing/access.lua",
+               ["kong.plugins.kong-user-agent-based-routing.handler"] = "kong/plugins/kong-user-agent-based-routing/handler.lua",
+               ["kong.plugins.kong-user-agent-based-routing.schema"] = "kong/plugins/kong-user-agent-based-routing/schema.lua"
+            }
+         }
+      }
+   }
+}

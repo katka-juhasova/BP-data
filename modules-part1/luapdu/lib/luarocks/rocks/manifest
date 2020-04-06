@@ -1,0 +1,87 @@
+commands = {}
+dependencies = {
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luapdu = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luabitop"
+         }
+      }
+   }
+}
+modules = {
+   bit = {
+      "luabitop/1.0.2-3"
+   },
+   luapdu = {
+      "luapdu/0.1-1"
+   },
+   ["luapdu.smsobject"] = {
+      "luapdu/0.1-1"
+   },
+   ["luapdu.string"] = {
+      "luapdu/0.1-1"
+   }
+}
+repository = {
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit = "bit.so"
+            }
+         }
+      }
+   },
+   luapdu = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luabitop = "1.0.2-3"
+            },
+            modules = {
+               luapdu = "luapdu.lua",
+               ["luapdu.smsobject"] = "luapdu/smsobject.lua",
+               ["luapdu.string"] = "luapdu/string.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lzw = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lzw_tiny = {
+      "lzw/1.0-1"
+   }
+}
+repository = {
+   lzw = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lzw_tiny = "lzw_tiny.lua"
+            }
+         }
+      }
+   }
+}

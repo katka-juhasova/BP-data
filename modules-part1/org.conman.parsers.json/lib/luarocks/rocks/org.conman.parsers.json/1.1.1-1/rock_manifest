@@ -1,0 +1,12 @@
+rock_manifest = {
+   lua = {
+      org = {
+         conman = {
+            parsers = {
+               ["json.lua"] = "f1a7cbc29785f3ada0b8b9b364704cc0"
+            }
+         }
+      }
+   },
+   ["org.conman.parsers.json-1.1.1-1.rockspec"] = "b2691c0e80b49b38fa5b9bf9d40ec21b"
+}

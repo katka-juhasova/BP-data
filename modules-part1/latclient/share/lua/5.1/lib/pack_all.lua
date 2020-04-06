@@ -1,0 +1,1 @@
+os.execute('packer.lua ..\\..\\js\\lua51js\\js-lua.js / / js.lua')

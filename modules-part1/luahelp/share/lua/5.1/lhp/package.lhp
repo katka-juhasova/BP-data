@@ -1,0 +1,6 @@
+Help [[
+
+The package library provides basic facilities for loading and building modules
+in Lua. It exports two of its functions directly in the global environment:
+`require` and `module`. Everything else is exported in a table `package`.
+]]

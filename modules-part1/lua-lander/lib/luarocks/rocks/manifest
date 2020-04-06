@@ -1,0 +1,132 @@
+commands = {}
+dependencies = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-lander"] = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 10, revision = 1, string = "0.10-1"
+                  }
+               }
+            },
+            name = "lpeg"
+         }
+      }
+   }
+}
+modules = {
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   ["lua-lander"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.array"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.assert"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.color"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.event"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.func"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.lang"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.math"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.number"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.string"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.table"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.util"] = {
+      "lua-lander/1.0-1"
+   },
+   ["lua-lander.mods.variables"] = {
+      "lua-lander/1.0-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   ["lua-lander"] = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               ["lua-lander"] = "lua-lander/init.lua",
+               ["lua-lander.mods.array"] = "lua-lander/mods/array.lua",
+               ["lua-lander.mods.assert"] = "lua-lander/mods/assert.lua",
+               ["lua-lander.mods.color"] = "lua-lander/mods/color.lua",
+               ["lua-lander.mods.event"] = "lua-lander/mods/event.lua",
+               ["lua-lander.mods.func"] = "lua-lander/mods/func.lua",
+               ["lua-lander.mods.lang"] = "lua-lander/mods/lang.lua",
+               ["lua-lander.mods.math"] = "lua-lander/mods/math.lua",
+               ["lua-lander.mods.number"] = "lua-lander/mods/number.lua",
+               ["lua-lander.mods.string"] = "lua-lander/mods/string.lua",
+               ["lua-lander.mods.table"] = "lua-lander/mods/table.lua",
+               ["lua-lander.mods.util"] = "lua-lander/mods/util.lua",
+               ["lua-lander.mods.variables"] = "lua-lander/mods/variables.lua"
+            }
+         }
+      }
+   }
+}

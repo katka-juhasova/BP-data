@@ -1,0 +1,155 @@
+commands = {
+   caas = {
+      "caas/1.0.4-0"
+   }
+}
+dependencies = {
+   caas = {
+      ["1.0.4-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 2, string = "1.2"
+                  }
+               }
+            },
+            name = "dromozoa-shlex"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 7, string = "1.7"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 32, string = "1.32"
+                  }
+               }
+            },
+            name = "luv"
+         }
+      }
+   },
+   ["dromozoa-shlex"] = {
+      ["1.2-1"] = {}
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luv = {
+      ["1.32.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["caas.jobs"] = {
+      "caas/1.0.4-0"
+   },
+   ["caas.luvhttpd"] = {
+      "caas/1.0.4-0"
+   },
+   ["caas.persistence"] = {
+      "caas/1.0.4-0"
+   },
+   ["dromozoa.shlex"] = {
+      "dromozoa-shlex/1.2-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   luv = {
+      "luv/1.32.0-0"
+   }
+}
+repository = {
+   caas = {
+      ["1.0.4-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               caas = "caas"
+            },
+            dependencies = {
+               ["dromozoa-shlex"] = "1.2-1",
+               luafilesystem = "1.7.0-2",
+               luv = "1.32.0-0"
+            },
+            modules = {
+               ["caas.jobs"] = "caas/jobs.lua",
+               ["caas.luvhttpd"] = "caas/luvhttpd.lua",
+               ["caas.persistence"] = "caas/persistence.lua"
+            }
+         }
+      }
+   },
+   ["dromozoa-shlex"] = {
+      ["1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["dromozoa.shlex"] = "dromozoa/shlex.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luv = {
+      ["1.32.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luv = "luv.so"
+            }
+         }
+      }
+   }
+}

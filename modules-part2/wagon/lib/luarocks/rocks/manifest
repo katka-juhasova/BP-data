@@ -1,0 +1,103 @@
+commands = {
+   wagon = {
+      "wagon/0.2.1-1"
+   }
+}
+dependencies = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   wagon = {
+      ["0.2.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luafilesystem"
+         }
+      }
+   }
+}
+modules = {
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   wagon = {
+      "wagon/0.2.1-1"
+   },
+   ["wagon.builder"] = {
+      "wagon/0.2.1-1"
+   },
+   ["wagon.bundler"] = {
+      "wagon/0.2.1-1"
+   },
+   ["wagon.defs"] = {
+      "wagon/0.2.1-1"
+   },
+   ["wagon.driver"] = {
+      "wagon/0.2.1-1"
+   },
+   ["wagon.fs"] = {
+      "wagon/0.2.1-1"
+   },
+   ["wagon.log"] = {
+      "wagon/0.2.1-1"
+   }
+}
+repository = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   wagon = {
+      ["0.2.1-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               wagon = "wagon"
+            },
+            dependencies = {
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               wagon = "wagon/init.lua",
+               ["wagon.builder"] = "wagon/builder.lua",
+               ["wagon.bundler"] = "wagon/bundler.lua",
+               ["wagon.defs"] = "wagon/defs.lua",
+               ["wagon.driver"] = "wagon/driver.lua",
+               ["wagon.fs"] = "wagon/fs.lua",
+               ["wagon.log"] = "wagon/log.lua"
+            }
+         }
+      }
+   }
+}

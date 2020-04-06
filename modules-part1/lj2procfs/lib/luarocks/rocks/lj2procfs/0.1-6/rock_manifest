@@ -1,0 +1,56 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "24bcd68c2365f34eda7dd35df874b526",
+      ["README.md"] = "66fb86459fad88750d9e9e6186b9558f"
+   },
+   ["lj2procfs-0.1-6.rockspec"] = "1d6df7ffe269fe8a34c38802f6d2e33c",
+   lua = {
+      lj2procfs = {
+         ["Decoders.lua"] = "d27a0b7bdc9907e0d574c41c874cff5c",
+         ["ProcessEntry.lua"] = "a5748acf45442fc776fcfbd4b814ad3f",
+         codecs = {
+            ["buddyinfo.lua"] = "0e09290b371f8d46179beae023bafc8f",
+            ["cgroups.lua"] = "7676a41b8eaf31a2039b2dc79e0375a5",
+            ["cmdline.lua"] = "bb0320dde4a52a0134e66efea6ada32d",
+            ["cpuinfo.lua"] = "6f6b6bb8cdccf7ab20d46f59fd02d58c",
+            ["crypto.lua"] = "dbbd4d2c70587ac423821e207fd261b7",
+            ["devices.lua"] = "032e0b6210df1deab4b70094975516fe",
+            ["diskstats.lua"] = "8cd83aed4bec288e5010cc6016e3ceb5",
+            ["interrupts.lua"] = "111c0b11829c811ecc3d1e309130d890",
+            ["iomem.lua"] = "f6f2d352a734defb2db8d536f23f7a2e",
+            ["ioports.lua"] = "ab25f9b03c7353173f965f5f7cdc23db",
+            ["kallsyms.lua"] = "98f3f3338b5a90e28b1c232f1d6907f0",
+            ["loadavg.lua"] = "4aa4c6cf7a33c121a9019df9e4a4d67d",
+            ["meminfo.lua"] = "3b036a7dbe24b6de7622ea34ca69a170",
+            ["modules.lua"] = "ffd23c9822a54b555473eb13b9aa0a31",
+            net = {
+               ["dev.lua"] = "ccbad6c22955b1391014d101010355ef",
+               ["netstat.lua"] = "9643008c7896c99f522e9bb027471886"
+            },
+            ["net.lua"] = "dfa550f1bea9c2d4006b64a981ef64dd",
+            ["partitions.lua"] = "cfc5ccd9bd388db4c6219132a122a784",
+            process = {
+               ["environ.lua"] = "3f9745804ebdc975d8a951a2b2af2573",
+               ["exe.lua"] = "e4a83b2225f4944012ce233b726db131",
+               ["io.lua"] = "094662434a83cd9addd4999af0d06e8f",
+               ["limits.lua"] = "40087fc1b18f2f8e5558a73887e6c219",
+               ["maps.lua"] = "f218c53637e38444243ab55efc096840",
+               ["mounts.lua"] = "a9a83a4598084a3efbd1b76183903e17",
+               ["sched.lua"] = "dd723a5320eddbc4391679dc035c193d",
+               ["status.lua"] = "e6fd5146f2562e607ef7bd0fac864fbd"
+            },
+            ["softirqs.lua"] = "5e0458748b6a88461e6bd1db9f98fd60",
+            ["stat.lua"] = "a3a7f22d29ad0dfddfd3b0ffe14d77fb",
+            ["sys.lua"] = "452e78e7b51176524b76497019e13821",
+            ["uptime.lua"] = "6f35738aa51211b11d3debeff59c0c44",
+            ["vmstat.lua"] = "585a596de469af22586e7950470ef820"
+         },
+         ["fs-util.lua"] = "9d061ff4da66f42503e3fe5210cab6e7",
+         ["fun.lua"] = "67cb3bc90620e1c0a6b5d15863795c85",
+         ["libc.lua"] = "281e972c70363b2e4c07eb800e1aedf9",
+         ["print-util.lua"] = "b21bd135c07f4714f384f399e745cd92",
+         ["procfs.lua"] = "7d1b661e97eb3bef9710c0b5ac28c038",
+         ["string-util.lua"] = "91dd51332999c81646f69908cc0956f2"
+      }
+   }
+}

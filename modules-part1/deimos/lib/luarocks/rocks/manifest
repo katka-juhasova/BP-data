@@ -1,0 +1,53 @@
+commands = {}
+dependencies = {
+   deimos = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   deimos = {
+      "deimos/1.0-1"
+   },
+   ["deimos.array"] = {
+      "deimos/1.0-1"
+   },
+   ["deimos.class"] = {
+      "deimos/1.0-1"
+   },
+   ["deimos.hash"] = {
+      "deimos/1.0-1"
+   },
+   ["deimos.utility"] = {
+      "deimos/1.0-1"
+   }
+}
+repository = {
+   deimos = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               deimos = "deimos.lua",
+               ["deimos.array"] = "deimos/array.lua",
+               ["deimos.class"] = "deimos/class.lua",
+               ["deimos.hash"] = "deimos/hash.lua",
+               ["deimos.utility"] = "deimos/utility.lua"
+            }
+         }
+      }
+   }
+}

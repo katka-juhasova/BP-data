@@ -1,0 +1,21 @@
+rock_manifest = {
+   bindings = {
+      lua = {
+         examples = {
+            ["at.lua"] = "bb0c53470d78ee3700c10e569e25ff4c"
+         }
+      }
+   },
+   doc = {
+      ["example.lua"] = "5fe795b4266be08170a38b35011c5ca4"
+   },
+   lib = {
+      rs232 = {
+         ["core.so"] = "0647ac5a79bbd9476beadb2558391c6e"
+      }
+   },
+   lua = {
+      ["rs232.lua"] = "f735de844989efffb5c0b94f10373bf0"
+   },
+   ["rs232-0.1.0-1.rockspec"] = "d55d6116774d9e0c1fdec72b0139a698"
+}

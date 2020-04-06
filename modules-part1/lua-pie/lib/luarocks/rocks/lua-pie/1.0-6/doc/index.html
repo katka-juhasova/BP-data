@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>lua-pie</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>lua-pie</strong></li>
+</ul>
+<h2>Examples</h2>
+<ul class="nowrap">
+  <li><a href="examples/examples.lua.html">examples.lua</a></li>
+  <li><a href="examples/main.lua.html">main.lua</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>lua-pie</code></h1>
+<p>Classes in Lua with lua-pie (polymorphism, inheritance, encapsulation)</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#import">import (name)</a></td>
+	<td class="summary">Imports a class.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#extends">extends (name)</a></td>
+	<td class="summary">Extends a class with another class.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#static">static (tab)</a></td>
+	<td class="summary">Defines static methods in a class definition.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#public">public (tab)</a></td>
+	<td class="summary">Defines public methods in a class definition.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#private">private (tab)</a></td>
+	<td class="summary">Defines private methods in a class definition.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#operators">operators (tab)</a></td>
+	<td class="summary">Allows adding metamethods for operators.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#class">class (name)</a></td>
+	<td class="summary">Creates a new class.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#class_body">class_body (tab)</a></td>
+	<td class="summary">Anonymous function returned by class() that accepts a table as a class body.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#interface">interface (name)</a></td>
+	<td class="summary">Defines an interface.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#abstract_function">abstract_function (...)</a></td>
+	<td class="summary">Defines an abstract function in an interface.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#implements">implements (interfaces)</a></td>
+	<td class="summary">Implements an interface.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#is">is (object, className)</a></td>
+	<td class="summary">Check if an object is an instance of a class.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#show_warnings">show_warnings (bool)</a></td>
+	<td class="summary">Toggle displaying of warnings.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#allow_writing_to_objects">allow_writing_to_objects (bool)</a></td>
+	<td class="summary">Toggle writing to objects.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "import"></a>
+    <strong>import (name)</strong>
+    </dt>
+    <dd>
+    Imports a class.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the class to import
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> MyClass = import(<span class="string">"MyClass"</span>)
+<span class="keyword">local</span> instance = MyClass()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "extends"></a>
+    <strong>extends (name)</strong>
+    </dt>
+    <dd>
+    Extends a class with another class.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the class to extend with
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "static"></a>
+    <strong>static (tab)</strong>
+    </dt>
+    <dd>
+    Defines static methods in a class definition.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tab</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A table containing static function definitions or variables
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">static {
+   my_var = <span class="number">5</span>;
+   my_func = <span class="keyword">function</span>(self, args)
+   <span class="keyword">end</span>
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "public"></a>
+    <strong>public (tab)</strong>
+    </dt>
+    <dd>
+    Defines public methods in a class definition.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tab</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A table containing public function definitions
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">public {
+   my_func = <span class="keyword">function</span>(self, args)
+   <span class="keyword">end</span>
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "private"></a>
+    <strong>private (tab)</strong>
+    </dt>
+    <dd>
+    Defines private methods in a class definition.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tab</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A table containing private function definitions
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">private {
+   my_func = <span class="keyword">function</span>(self, args)
+   <span class="keyword">end</span>
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "operators"></a>
+    <strong>operators (tab)</strong>
+    </dt>
+    <dd>
+    Allows adding metamethods for operators.
+ The first parameter of the metamethod is the object (self) and allows access to private members.
+ __index and __newindex are currently not allowed.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tab</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         A table containing operator function definitions.
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">operators {
+    __add = <span class="keyword">function</span>(self, other)
+    <span class="keyword">end</span>
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "class"></a>
+    <strong>class (name)</strong>
+    </dt>
+    <dd>
+    Creates a new class.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The class name
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A function that accepts a table with private, public, static and operator definitions
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="index.html#implements">implements</a></li>
+         <li><a href="index.html#extends">extends</a></li>
+         <li><a href="index.html#static">static</a></li>
+         <li><a href="index.html#private">private</a></li>
+         <li><a href="index.html#public">public</a></li>
+         <li><a href="index.html#operators">operators</a></li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">class <span class="string">"MyClass"</span> {
+   implements {
+       <span class="string">"IMyInterface"</span>,
+       <span class="string">"IAnotherInterface"</span>
+   };
+   extends <span class="string">"Parent"</span>;
+   static { ... };
+   private { ... };
+   public { ... };
+   operators { ... };
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "class_body"></a>
+    <strong>class_body (tab)</strong>
+    </dt>
+    <dd>
+    Anonymous function returned by class() that accepts a table as a class body.
+ Private, public, static and operator members must be declared in the input table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tab</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        the created class table that can be instantiated by calling it (same as import("ClassName")).
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="index.html#class">class</a></li>
+         <li><a href="index.html#import">import</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "interface"></a>
+    <strong>interface (name)</strong>
+    </dt>
+    <dd>
+    Defines an interface.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the interface
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#abstract_function">abstract_function</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">interface <span class="string">"IMyInterface"</span> {
+    my_func = abstract_function(<span class="string">"arg1"</span>, <span class="string">"arg2"</span>)
+}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "abstract_function"></a>
+    <strong>abstract_function (...)</strong>
+    </dt>
+    <dd>
+    Defines an abstract function in an interface.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+         Varargs with variable names
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#interface">interface</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "implements"></a>
+    <strong>implements (interfaces)</strong>
+    </dt>
+    <dd>
+    Implements an interface.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">interfaces</span>
+         A single string with an interface name or a table of interface names
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "is"></a>
+    <strong>is (object, className)</strong>
+    </dt>
+    <dd>
+    Check if an object is an instance of a class.
+ An object is also considered an instance of its super class, any of its implemented interfaces
+ as well as any interface implemented by the super class.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         The object to compare
+        </li>
+        <li><span class="parameter">className</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the class
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "show_warnings"></a>
+    <strong>show_warnings (bool)</strong>
+    </dt>
+    <dd>
+    Toggle displaying of warnings.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Whether or not to show warnings
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "allow_writing_to_objects"></a>
+    <strong>allow_writing_to_objects (bool)</strong>
+    </dt>
+    <dd>
+    Toggle writing to objects.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Whether or not objects may be written to
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-12-10 15:44:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

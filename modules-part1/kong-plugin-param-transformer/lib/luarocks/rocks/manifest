@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-param-transformer"] = {
+      ["0.1.1-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.param-transformer.handler"] = {
+      "kong-plugin-param-transformer/0.1.1-1"
+   },
+   ["kong.plugins.param-transformer.schema"] = {
+      "kong-plugin-param-transformer/0.1.1-1"
+   }
+}
+repository = {
+   ["kong-plugin-param-transformer"] = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.param-transformer.handler"] = "kong/plugins/param-transformer/handler.lua",
+               ["kong.plugins.param-transformer.schema"] = "kong/plugins/param-transformer/schema.lua"
+            }
+         }
+      }
+   }
+}

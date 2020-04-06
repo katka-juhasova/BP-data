@@ -1,0 +1,51 @@
+This is command line evaluator library for Lua 5.1.
+
+To try the library, just edit Makefile to reflect your installation of Lua and
+then run make. This will build the library and run a simple test. For detailed
+installation instructions, see
+	http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/install.html
+
+There is no manual, except the brief explanation below, but the library is
+simple and intuitive; see the summary below. Read also test.lua, which shows
+the library in action.
+
+This code is hereby placed in the public domain.
+Please send comments, suggestions, and bug reports to lhf@tecgraf.puc-rio.br .
+
+-------------------------------------------------------------------------------
+
+cl library:
+ eval(s) 	 sexp(s) 	 unpack(s) 
+
+-------------------------------------------------------------------------------
+
+Command lines are series of words, which may be quoted using matching single
+or double quotes. Command lines are evaluated in a given environment, or in
+the global environment if none is given. The command is the first word in the
+line; a function with that name is called in the environment and is given the
+rest of the words in the line as arguments.
+
+The library supports command lines in two flavors: shell command lines, which
+are evaluated with cl.eval, and and lisp s-expressions, which are evaluated
+with cl.sexp. Both functions evaluate a series of command lines contained in
+a string.
+
+In shell command lines, every word becomes a string, except that words like
+$var are replaced by the value of var in the environment. Shell command lines
+can be separated by newlines or semicolons. A typical shell command line looks
+like this
+	print us $me and $you
+and is evaluated in Lua as
+	print("us",me,"and",you)
+
+In s-expressions, every unquoted word is replaced by its value in the
+environment.  A typical s-expression looks like this
+	(print 'us' me "and" you)
+and is evaluated in Lua as
+	print("us",me,"and",you)
+S-expressions can be nested. The results of inner expressions are merged into
+the argument list of the outer expression.
+
+The evaluation returns true in case of success. In the case of s-expressions,
+all evaluated values are returned as well. In the case of errors, the
+evaluation returns false plus the location of the error plus an error message.

@@ -1,0 +1,47 @@
+commands = {
+   pgn2eco = {
+      "chess-fen/1.6-0"
+   },
+   pgn2fen = {
+      "chess-fen/1.6-0"
+   }
+}
+dependencies = {
+   ["chess-fen"] = {
+      ["1.6-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["chess.fen"] = {
+      "chess-fen/1.6-0"
+   }
+}
+repository = {
+   ["chess-fen"] = {
+      ["1.6-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               pgn2eco = "pgn2eco",
+               pgn2fen = "pgn2fen"
+            },
+            dependencies = {},
+            modules = {
+               ["chess.fen"] = "chess/fen.lua"
+            }
+         }
+      }
+   }
+}

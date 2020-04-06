@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-logger"] = {
+      ["0.1-6"] = {}
+   }
+}
+modules = {
+   logger = {
+      "lua-logger/0.1-6"
+   }
+}
+repository = {
+   ["lua-logger"] = {
+      ["0.1-6"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               logger = "logger.lua"
+            }
+         }
+      }
+   }
+}

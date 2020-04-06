@@ -1,0 +1,72 @@
+commands = {}
+dependencies = {
+   classic = {
+      ["0.1.0-1"] = {}
+   },
+   ["kong-plugin-rule-based-header-transformer"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 1, 0, revision = 1, string = "0.1.0-1"
+                  }
+               }
+            },
+            name = "classic"
+         }
+      }
+   }
+}
+modules = {
+   classic = {
+      "classic/0.1.0-1"
+   },
+   ["kong.plugins.rule-based-header-transformer.handler"] = {
+      "kong-plugin-rule-based-header-transformer/0.1.0-1"
+   },
+   ["kong.plugins.rule-based-header-transformer.schema"] = {
+      "kong-plugin-rule-based-header-transformer/0.1.0-1"
+   }
+}
+repository = {
+   classic = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               classic = "classic.lua"
+            }
+         }
+      }
+   },
+   ["kong-plugin-rule-based-header-transformer"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               classic = "0.1.0-1"
+            },
+            modules = {
+               ["kong.plugins.rule-based-header-transformer.handler"] = "kong/plugins/rule-based-header-transformer/handler.lua",
+               ["kong.plugins.rule-based-header-transformer.schema"] = "kong/plugins/rule-based-header-transformer/schema.lua"
+            }
+         }
+      }
+   }
+}

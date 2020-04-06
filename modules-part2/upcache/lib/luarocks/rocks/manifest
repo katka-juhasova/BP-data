@@ -1,0 +1,232 @@
+commands = {}
+dependencies = {
+   ["lua-messagepack"] = {
+      ["0.5.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-jwt"] = {
+      ["0.2.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-string"] = {
+      ["0.09-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   upcache = {
+      ["1.2.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 2, 0, string = "0.2.0"
+                  }
+               }
+            },
+            name = "lua-resty-jwt"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 9, string = "0.09"
+                  }
+               }
+            },
+            name = "lua-resty-string"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 5, 1, string = "0.5.1"
+                  }
+               }
+            },
+            name = "lua-messagepack"
+         }
+      }
+   }
+}
+modules = {
+   MessagePack = {
+      "lua-messagepack/0.5.2-1"
+   },
+   ["resty.aes"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.evp"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.hmac"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.jwt"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.jwt-validators"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.md5"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.random"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha1"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha224"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha256"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha384"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha512"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.string"] = {
+      "lua-resty-string/0.09-0"
+   },
+   upcache = {
+      "upcache/1.2.0-2"
+   },
+   ["upcache.common"] = {
+      "upcache/1.2.0-2"
+   },
+   ["upcache.lock"] = {
+      "upcache/1.2.0-2"
+   },
+   ["upcache.map"] = {
+      "upcache/1.2.0-2"
+   },
+   ["upcache.tag"] = {
+      "upcache/1.2.0-2"
+   },
+   ["upcache.vary"] = {
+      "upcache/1.2.0-2"
+   }
+}
+repository = {
+   ["lua-messagepack"] = {
+      ["0.5.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               MessagePack = "MessagePack.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-jwt"] = {
+      ["0.2.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.evp"] = "resty/evp.lua",
+               ["resty.hmac"] = "resty/hmac.lua",
+               ["resty.jwt"] = "resty/jwt.lua",
+               ["resty.jwt-validators"] = "resty/jwt-validators.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-string"] = {
+      ["0.09-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.aes"] = "resty/aes.lua",
+               ["resty.md5"] = "resty/md5.lua",
+               ["resty.random"] = "resty/random.lua",
+               ["resty.sha"] = "resty/sha.lua",
+               ["resty.sha1"] = "resty/sha1.lua",
+               ["resty.sha224"] = "resty/sha224.lua",
+               ["resty.sha256"] = "resty/sha256.lua",
+               ["resty.sha384"] = "resty/sha384.lua",
+               ["resty.sha512"] = "resty/sha512.lua",
+               ["resty.string"] = "resty/string.lua"
+            }
+         }
+      }
+   },
+   upcache = {
+      ["1.2.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-messagepack"] = "0.5.2-1",
+               ["lua-resty-jwt"] = "0.2.0-0",
+               ["lua-resty-string"] = "0.09-0"
+            },
+            modules = {
+               upcache = "upcache.lua",
+               ["upcache.common"] = "upcache/common.lua",
+               ["upcache.lock"] = "upcache/lock.lua",
+               ["upcache.map"] = "upcache/map.lua",
+               ["upcache.tag"] = "upcache/tag.lua",
+               ["upcache.vary"] = "upcache/vary.lua"
+            }
+         }
+      }
+   }
+}

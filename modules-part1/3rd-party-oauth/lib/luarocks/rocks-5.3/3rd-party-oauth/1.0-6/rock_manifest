@@ -1,0 +1,18 @@
+rock_manifest = {
+   ["3rd-party-oauth-1.0-6.rockspec"] = "bfe2f4fd2e24a8ebfba1337312fd188c",
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "40d9e1dbc65b3e0b9cb1cb3b3a6a1041"
+   },
+   lua = {
+      kong = {
+         plugins = {
+            ["3rd-party-oauth"] = {
+               ["access.lua"] = "8b9024c6b126427f4765414ca7af9b4e",
+               ["handler.lua"] = "bf303110be7569ca23af0353e7efb2e6",
+               ["schema.lua"] = "c72167a8a43ca22f2dae88f8a95fb21b"
+            }
+         }
+      }
+   }
+}

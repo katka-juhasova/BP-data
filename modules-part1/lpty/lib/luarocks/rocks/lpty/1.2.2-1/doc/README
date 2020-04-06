@@ -1,0 +1,389 @@
+# README #
+
+## lpty ##
+
+a library that allows lua to start processes and control them via pty
+
+Author: Gunnar Zötl , 2010-2015.
+Released under MIT/X11 license. See file LICENSE for details.
+
+## Introduction ##
+
+This is a simple interface to pty functionality, providing the ability
+to fork a process and run it under pty control. It does not try to
+mimic the posix API but instead focuses on the function of running and
+controlling a program. The interface is very bare bones, no additional
+functionality is provided, especially nothing like a full blown expect,
+which should be a different package. A rather simple version of expect
+is available, however.
+
+This has been developed on Linux and tested on MacOS X. It should
+compile and run on any platform supporting the Unix 98 interface to
+pty's. Support for additional Unixen might follow in the future,
+depending on demand (especially my own ;) ). No support for windows is
+planned, as ptys are a Unix thing. It might work with cygwin.
+
+## Installing ##
+
+This uses only stuff that comes with your system, so you do not need to
+install any additional libraries to satisfy any dependencies.
+
+There are 2 options for building and installing this module, the first
+and most obvious being luarocks. Normally, calling:
+
+	sudo luarocks install lpty
+
+or when you have an unpacked source folder:
+
+	sudo luarocks make
+
+should do the right thing.
+
+There is also a Makefile in the distribution, that has been created for
+use with Linux and MacOS X. It may work for other platforms, or you may
+have to edit it by hand. Calling:
+
+	make && make install
+
+will build the module and install it to some standard location for your
+version of lua.
+
+## Using ##
+
+Load the module with:
+
+	lpty = require "lpty"
+
+Note: since version 1.0, lpty no longer registers a global table lpty
+with lua.
+
+### Constructor ###
+
+`pty = lpty.new([options])`
+:	Creates and fully initializes the master side of a pty, and
+	returns an object to interact with the pty. Options for the pty
+	may be passed as key - value pairs in a table. These options
+	are:
+	
+:	* `throw_errors` - if true, errors are thrown, otherwise they are
+		returned as a standard nil, "error message" pair. Default is false.
+	* `no_local_echo` - If true, stuff sent to the parent side of the pty
+		will not be echoed back to the parent side, otherwise it will be
+		echoed back. Default is false.  
+		Beware that this may not always work as expected.
+	* `raw_mode` - If true, sets the terminal to raw mode. Default is false.
+	* `use_path` - If true, the pty:startproc() method for the created pty
+		will search for an executable file if the specified filename does
+		not contain a slash (/) character. The search path is the path
+		specified in the parents environment by the PATH variable, no
+		default will be used.  
+		If false, the path to the executable must be explicitly
+		specified. Default is true.
+	* `separate_stderr`- If true, then a separate channel will be opened
+		to be used as the slaves' stderr stream. You can then read data
+		from this channel by using the readerr() method, and retrieve its
+		file descriptor with geterrfd(). Default is false.
+	
+:	if you do not want to pass any options, you may omit the options
+	table altogether.
+
+### Process handling ###
+
+`ok = pty:startproc(command, arg1, arg2, ...)`
+:	Starts a process with the slave side of the pty as its
+	controlling terminal. The child processes stdin, stdout and
+	stderr are set to use the slave side of th pty. The command and
+	its arguments must be separate arguments to the startproc
+	method. If the pty has been created with `use_path=true` (the
+	default), then this uses the PATH environment variable of the
+	calling process (the one using lpty) to find any executables, so
+	in that case specifying a full path to the command is not always
+	necessary. Returns true if the call to fork() was successful. If
+	anything goes wrong whilst starting the new process, an error is
+	signalled (that is, thrown or returned as two values nil, "error
+	message", depending on the setting of the throw_errors flag.
+
+:	If there is already an active process attached to the pty, the
+	new process is not started and the method returns false.
+	
+:	The `pty:startproc()` method can not check whether running the
+	command in the child process or basically anything that happens
+	in the child process after the fork is successful. If
+	`pty:startproc()` returns true, this means that setting up the
+	client side of the tty and fork()ing went well and yielded a
+	running child process. You may want to check wether it is still
+	running when you need it using the `pty:hasproc()` method,
+	especially if you're dealing with an interactive program. If the
+	program the child was supposed to start is not running when you
+	expect it to, you will have to call the `pty:exitstatus()` method
+	and maybe even check the contents of the pty for the reason.
+
+`pty:endproc([kill])`
+:	Terminates the process running with the pty as its controlling
+	terminal. If the optional parameter kill is false or omitted,
+	send the child process a SIGTERM, otherwise send a SIGKILL. It
+	is not an error to call this on a pty object that has no active
+	child processes. You do not need to call it when you have
+	already terminated the child process using more civilized means
+	(like, for example, sending it a quit command it understands).
+	After the child process has been terminated, a new one can be
+	started using the same PTY.
+
+`ok = pty:hasproc()`
+:	returns true if the pty has an active child process, false if
+	not (none has been created, the child has terminated, ...).
+
+`reason, code = pty:exitstatus()`
+:	Determines the reason why a previous child process has
+	terminated. Returns a the reason for termination and the code.
+	Possible combinations are:
+	
+:	* `false, nil` - if the pty has an active child process or never had one,
+	* `"exit", exitcode` - if the child process has exited normally,
+	* `"sig", signum` - if the child process was terminated by a signal,
+	* `"unk", 0` - if the reason for the death of the child process can not
+		be determined any more.
+	
+:	The `pty:exitstatus()` method works by having a fixed length
+	ringbuffer, in which the signal handler responsible for reaping
+	child processes places what `waitpid()` returns. Because of the
+	fixed size, when you create a lot of processes, the ring buffer
+	might wrap before you retrieve the exit status of your process,
+	in which case the `'unk', 0` values will be returned, 'unk'
+	meaning "unknown". If you hit this a lot, you may want to check
+	the exit status earlier, or if that does not help, change the
+	value for `EXITSTATUS_BUFSIZ` in lpty.c.
+
+### Process Environments ###
+
+`env = pty:getenviron()`
+:	Returns a table containing the environment a child process of
+	the pty will be executed in. If no custom environment has been
+	set using the `pty:setenviron()` method, this will be the
+	environment the parent process is running in.
+
+`pty:setenviron(env)`
+:	Sets a custom environment for the child process to be executed
+	within the pty. The argument must be a table containing a
+	complete environment for the child process. If you want to
+	modify the current environment, obtain it with the
+	`pty:getenviron()` method, modify it and pass it into this method
+	as a new environment.
+	
+:	Calling this function with nil as its argument resets the
+	environment to the environment the parent process is running in.
+
+### Communication ###
+
+Where the following functions have a timeout argument, the timeout is
+specified in seconds. The value can be fractional, i.e. you can specify
+a timeout of 0.1 seconds. The resolution depends on the underlying
+system.
+
+`ok = pty:readok([timeout])`
+:	returns true if the pty has data available to be read, false
+	otherwise. If a timeout value is specified, the call will wait
+	at most that amount of seconds for data to become available to
+	read. No value is equivalent to a timeout of 0 seconds.
+
+`data = pty:read([timeout])`
+:	reads data from the pty. This is a blocking read, so you can
+	specify an optional timeout in seconds after which the read
+	should return to the caller whether there was data or not. If
+	the timeout is omitted, the read will block until there is
+	something to read. Returns the data read, or nil if the request
+	timed out or was interrupted (failed with EINTR or ECHILD). If
+	an error occurred during the read attempt, it is signalled to
+	lua.
+	
+:	Note: unless you specified no_local_echo=true when creating the
+	pty, this reads data output from the client process as well as
+	data sent to the client process from the controlling skript.
+	
+:	The pty:read() method reads its data into a buffer. The size of
+	this buffer determines how much data can be returned from an
+	individual read. It is set by a #define in the module source and
+	by default is set to 4096. Considering the C-typical terminating
+	zero, this will leave a maximum of 4095 bytes to be read in one
+	go. In order to fetch all available data, just loop while
+	pty:readok() returns true and concatenate the results.
+
+`data = pty:readline([wantnl [, timeout]])`
+:	reads an individual line from the pty. A line in this case is
+	defined as either everything that can be read up to and
+	including the next newline character, or everything that can be
+	read until there is nothing more to read from the pty. If you
+	can read faster than the remote side writes, this may mean that
+	your line is truncated.
+	
+:	If wantnl is specified and true, the closing newline character,
+	if present, is returned at the end of the string, otherwise it
+	will be removed.
+	
+:	Note that, as long as we actually can read stuff from the pty,
+	the call will not time out, even if all the reading takes longer
+	than the timeout value specifies.
+	
+	The notes for pty:read() also apply here.
+
+`data = pty:expect(pattern [, plain [, timeout]])`
+:	consumes all input until pattern is matched. If plain is true,
+	pattern is taken as a literal string, otherwise it is a lua
+	pattern. timeout is a timeout value, in seconds, for the expect
+	operation. Returns the match, or if the pattern has captures,
+	all of the captures, or nil on timeout.
+	
+:	Note that in any case, pty:expect() will have consumed as much
+	input as it could get. However, as it reads from the pty line by
+	line, only all lines up to and including the one with the match
+	will be consumed, everything after that will still be available.
+	
+:	Also, as long as we actually can read stuff from the pty, the
+	call will not time out, even if all the reading takes longer
+	than the timeout value specifies.
+	
+:	Because expect() may read stuff faster than the remote side
+	writes it, you may get spurious matches. It is probably a good
+	idea to call expect with some timeout, unless you know your data
+	is available.
+
+`data = pty:readerr([timeout])`
+:	reads data from the clients' stderr stream, if that was separated
+	using the separate_stderr flag. Returns any data written to stderr
+	by the client, or nil if there is no data available or if the stderr
+	stream was not separated in the pty. If a timeout value is specified,
+	the call will wait at most that many seconds for data to become
+	available on the stderr stream. No value is equivalent to a timeout
+	of 0 seconds. If the stderr channel has not been separated, then the
+	timeout will be ignored and the method returns immediately.
+
+`ok = pty:sendok([timeout])`
+:	returns true if the pty can accept data sent to it, false
+	otherwise. If a timeout value is specified, the call will wait
+	at most that many seconds for the pty to accept data, No value
+	is equivalent to a timeout of 0 seconds.
+
+`sent = pty:send(data [, timeout])`
+:	sends data to the pty. This will then be available to the child
+	process on its stdin. As sending data may block, there is an
+	optional argument for a timeout in seconds on the send
+	operation. If the timeout argument is omitted, pty:send() will
+	block until the pty can accept the data. Returns the number of
+	bytes written, or nil if the send timed out or was interrupted
+	(failed with EINTR or ECHILD). If an error occurred during the
+	attempt to write it is signalled to lua.
+	
+:	The pty:send() method may not send all data you gave it in one
+	go. For small amounts of data this is quite improbable, but in
+	industrial strength applications you should probably check the
+	return value of the pty:send() method against the length of the
+	data you intended to send.
+
+`pty:flush([mode])`
+:	flushes data from the pty. mode is an optional string argument.
+	If mode is "i", flush data received but not read. If mode is
+	"o", flush data written but not transmitted. If mode is anything
+	else or omitted, flush both sides.
+	
+:	Note that the mode "o" is hardly ever useful, because when
+	send() returns, the data it claims to have sent will already be
+	transmitted to the client side.
+
+### Information ###
+
+`name = pty:ttyname()`
+:	return the tty name of the slave side of the pty.
+
+`fd = pty:getfd()`
+:	return the file handle of the master side of the pty. This is
+	intended for use with luasocket's select() or luaposix's poll()
+	and similar functions.
+
+`fd = pty:geterrfd()`
+:	return the file handle of the master side of the  separated stderr
+	stream. This will be -1 if the stderr stream has not been separated.
+
+`tbl = pty:getflags()`
+:	return a table with the flags and their values that were used on
+	creation of the pty, as specifiable for lpty.new()
+
+`ok = pty:setflag(flag, value)`
+:	set or reset any of the pty creation flags. The primary use for this
+	is to re-enable no_local_echo or raw mode, if a controlled program
+	has changed those settings, but you can also change all other flags.
+
+## Additional Details ##
+
+### The local echo thing ###
+
+As written in the description of the no_local_echo flag, this may not
+always work as expected. Programs are free to set their terminals to
+whatever settings they like, and indeed some programs do, or even
+completely roll their own local echo policy. The most notable piece of
+code to do this is Gnu readline, though it seems that this does not
+happen for all versions of it. On Mac OS X, it certainly does, whereas
+on my Ubuntu Box it does not. So if you write something using lpty that
+is supposed to be used on different unixen, you better not rely on
+no_local_echo to do what you think it should.
+
+### Communication and process handling ###
+
+If you have a pty without a running child process, you can still write
+to it. Anything you write to the pty will be available as input to a
+child process that you start later.
+
+You can also read from a pty without a child process, but only what you
+have written to it - unless you specified no_local_echo=true for pty
+creation, in which case there is nothing to read from it. This means
+that if you (or the last active child process) have nothing written to
+it, a read with timeout will always time out, and a read without
+timeout will block. Also, if you read stuff back from the master side
+of a pty without a child, that you have written there, it will not be
+removed from a subsequent child process's input.
+
+Starting a process takes some time, so after you have called
+pty:startproc() it may take a while for data to become available from
+the child process. So don't be surprised if a pty:readok() fails
+directly after a pty:startproc().
+
+Similar things are true for calls to pty:hasproc(). If you call
+pty:hasproc() directly after pty:startproc(), chances are it will
+return true whatever the outcome of starting the child process was,
+because it just may not have had enough time to crash. Calling
+pty:hasproc() will yield a much saner result if you do it after, for
+example, a pty:read() timed out when you didn't expect it to, or
+similar occurrences.
+
+### Garbage disposal ###
+
+When a lpty object is garbage collected, its master side pty handle is
+closed, and if it has a child process, that is terminated with a
+SIGKILL. So it is reasonably safe to let pty's with active processes
+become garbage, it just isn't very friendly towards the child
+processes.
+
+### Example ###
+
+A very simple example for lpty follows. In a real application you
+should probably do some checking for errors and stuff output by your
+child process. This uses lua to compute the sum of 2 numbers:
+
+	lpty = require "lpty"
+	p = lpty.new()
+	p:startproc("lua")
+	p:read() -- skip startup message
+	p:send("=111+234\n")
+	r = p:read()
+	print("Result is "..r)
+	p:send("os.exit()\n") -- terminate lua all friendly-like
+	print("Done.")
+
+Also, see the samples folder in the distribution archive.
+
+### References ###
+
+Read up on ptys on your local friendly linux system:
+[man 7 pty](http://www.kernel.org/doc/man-pages/online/pages/man7/pty.7.html "man 7 pty")
+and friends. This link is linux specific, but as lpty is implemented
+using Unix 98 pseudo ttys, which Linux is using, the information is
+probably valid whereever lpty runs.

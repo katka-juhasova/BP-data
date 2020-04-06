@@ -1,0 +1,11 @@
+Help [[
+
+dofile (filename)
+-----------------
+
+  Opens the named file and executes its contents as a Lua chunk. When called
+  without arguments, `dofile` executes the contents of the standard input
+  (stdin). Returns all values returned by the chunk. In case of errors,
+  `dofile` propagates the error to its caller (that is, `dofile` does not run
+  in protected mode).
+]]
