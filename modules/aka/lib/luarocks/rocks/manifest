@@ -1,0 +1,39 @@
+commands = {
+   aka = {
+      "aka/1.3.0-1"
+   }
+}
+dependencies = {
+   aka = {
+      ["1.3.0-1"] = {}
+   }
+}
+modules = {
+   aka = {
+      "aka/1.3.0-1"
+   },
+   ["aka.core"] = {
+      "aka/1.3.0-1"
+   },
+   ["aka.utils"] = {
+      "aka/1.3.0-1"
+   }
+}
+repository = {
+   aka = {
+      ["1.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               aka = "aka"
+            },
+            dependencies = {},
+            modules = {
+               aka = "aka/init.lua",
+               ["aka.core"] = "aka/core.lua",
+               ["aka.utils"] = "aka/utils.lua"
+            }
+         }
+      }
+   }
+}

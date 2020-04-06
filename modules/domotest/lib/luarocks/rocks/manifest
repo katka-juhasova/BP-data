@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   domotest = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   domotest = {
+      "domotest/0.1-1"
+   }
+}
+repository = {
+   domotest = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               domotest = "domotest.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,464 @@
+
+function _(text)
+    return text or ""
+end
+
+function newblock()
+    return ".\n\\newblock "
+end
+
+function newsentence()
+    return ". "
+end
+
+function catIf(cond, items)
+    if cond == nil or cond == "" then
+        cond = false
+    end
+
+    local ret = ""
+    if cond then
+        ret = join(items)
+    end
+
+    return ret
+end
+
+
+function isEmpty(val)
+    return val == nil or val == ""
+end
+
+
+function part(text)
+    local ret = ""
+    if not isEmpty(text) then
+        ret = ", " .. text
+    end
+    --print("!" .. ret .. "!") --<<<<<
+    return ret
+end
+
+--##############################################################################
+local function tieOrSpaceConnect(text)
+    local ret
+    if #text > 3 then
+        ret = " " .. text
+    else
+        ret = "~" .. text
+    end
+    return ret
+end
+
+--------------------------------------------------------------------------------
+local format = {}
+
+function format.names(nameTable)
+    local nameList = map(joinName, nameTable)
+    local initNames = take(#nameList-1, nameList)
+    local lastName = ltable.last(nameList)
+    local names
+    if #nameList == 1 then
+        names = nameList[1]
+    elseif #nameList == 2 then
+        names = join(nameList, " and ")
+    else
+        names = join({join(initNames, ", "), lastName}, ", and ")
+        --names = join({join(initNames, ", "), lastName}, " and ")
+    end
+    return names
+end
+
+function format.author(entry)
+    return format.names(entry.author)
+end
+
+function format.editor(entry)
+    local ret = ""
+    if not isEmpty(entry.editor) then
+        ret = format.names(entry.editor)
+        if #entry.editor > 1 then
+            ret = ret .. ", editors"
+        else
+            ret = ret .. ", editor"
+        end
+    end
+    return ret
+end
+
+function format.title(entry)
+    return changeCase(entry.title, "t")
+end
+
+function format.btitle(entry)
+    return texFormatItalics(entry.title)
+end
+
+function format.journal(entry)
+    return texFormatItalics(entry.journal)
+end
+
+function format.volume(entry)
+    return entry.volume
+end
+
+function format.number(entry)
+    return "(" .. entry.number .. ")"
+end
+
+function format.pages(entry)
+    local ret = ""
+    if entry.pages ~= nil then
+        ret = ":" .. string.gsub(entry.pages, "(%d+)-(%d+)", "%1--%2")
+    end
+    return ret
+end
+
+function format.volNumPages(entry)
+    local volume = entry.volume or ""
+    local ret = volume
+    if entry.number ~= nil then
+        ret = ret .. "(" .. entry.number .. ")"
+        if entry.volume == nil then
+            print("there's a number but no volume in " .. entry.refName)
+        end
+    end
+
+    if entry.pages ~= nil then
+        ret = ret .. format.pages(entry)
+    end
+
+    return ret
+end
+
+function format.trNumber(entry)
+    local ret = ""
+    if entry.type == nil then
+        ret = ret .. "Technical Report "
+    else
+        ret = ret .. entry.type .. " "
+    end
+
+    if entry.number ~= nil then
+        ret = ret .. entry.number
+    end
+
+    return ret
+end
+
+
+function format.date(entry)
+    local ret = ", "
+    if entry.year == nil then
+        if entry.month ~= nil then
+            print("there's a month but no year in " .. entry.refName)
+            ret = ret .. entry.month
+        end
+    else
+        if entry.month == nil then
+            ret = ret .. entry.year
+        else
+            ret = ret .. entry.month .. " " .. entry.year
+        end
+    end
+
+    return ret
+end
+
+
+function format.chapterPages(entry)
+    local ret = ", "
+    if entry.chapter == nil then
+        ret = format.pages(entry)
+    else
+        ret = ret .. string.lower(entry.type or "chapter")
+        ret = ret .. tieOrSpaceConnect(entry.chapter)
+        if entry.pages ~= nil then
+            ret = ret .. ", " .. format.pages(entry)
+        end
+    end
+
+    return ret
+end
+
+function eitherOrCheck(entry, key, valMsg)
+    if entry[key] == nil then
+        print( "can't use both " .. valMsg .. " fields in " .. entry.refName)
+    end
+end
+
+function format.bvolume(entry)
+    local ret = ""
+    if entry.volume ~= nil then
+        ret = ret .. "volume " .. entry.volume
+        if entry.series ~= nil then
+            ret = ret .. " of " .. texFormatItalics(entry.series)
+        end
+        eitherOrCheck(entry, "number", "volume and number")
+    end
+    return ret
+end
+
+function format.InEdBooktitle(entry)
+    local ret = ""
+    if not isEmpty(entry.booktitle) then
+        local booktitle = texFormatItalics(entry.booktitle)
+        if isEmpty(entry.editor) then
+            ret = "In " .. booktitle
+        else
+            ret = "In " .. format.editor(entry) .. ", " ..  booktitle
+        end
+    end
+    return ret
+end
+
+function format.numberSeries(entry)
+    ret = ""
+    if isEmpty(entry.volume) then
+        if isEmpty(entry.number) then
+            ret = ret .. _(entry.series)
+        else
+            --if{ output.state mid.sentence =
+            --    { "number" }
+            --else
+            --    { "Number" }
+            --end
+            ret = ret .. "number"
+            ret = ret .. tieOrSpaceConnect(entry.number)
+
+            if isEmpty(entry.series) then
+                print("there's a number but no series in " .. entry.refName)
+            else
+                ret = ret .. " in " .. entry.series
+            end
+        end
+    end
+
+    return ret
+end
+
+
+--##############################################################################
+
+local sentence_mt =
+{
+    __index = function(self, i)
+        local function f(entry)
+            return format[i](entry) .. "."
+        end
+        return f
+    end,
+}
+sentence = setmetatable({}, sentence_mt)
+
+function sentencesWith(bblEntry, ...)
+    local arg = {...}
+    local ret = {}
+    for i, formatter in ipairs(arg) do
+        if type(formatter) == "string" then
+            table.insert(ret, formatter)
+        elseif type(formatter) == "function" then
+            table.insert(ret, formatter(bblEntry))
+        elseif type(formatter) == "table" then
+            table.insert(ret, inSentenceWith(bblEntry, unpack(formatter)))
+        else
+            -- Erro
+        end
+    end
+
+    ret = filter(partial(op.ne, ""), ret)
+    --ret = filter(compose(partial(op.ne, ""), trim), ret)
+    ret = map(rpartial(op.cat, "."), ret)
+
+    return join(ret, " ")
+end
+
+
+function inSentenceWith(bblEntry, ...)
+    local arg = {...}
+    local ret = {}
+    for i, formatter in ipairs(arg) do
+        if type(formatter) == "string" then
+            table.insert(ret, formatter)
+        elseif type(formatter) == "function" then
+            table.insert(ret, formatter(bblEntry))
+        else
+            -- Erro
+        end
+    end
+    ret = filter(partial(op.ne, ""), ret)
+    --ret = filter(compose(partial(op.ne, ""), trim), ret)
+    return join(ret, ", ")
+end
+
+
+--##############################################################################
+
+
+local entryStyle = {}
+
+
+entryStyle.article =
+{
+    --layout = "#author.\n#title.\n#journal, #volume#number#pages#year.",
+    --[[
+    layout = function(entry)
+        local ret = sentencesWith(entry,
+            sentence.author,
+            newblock,
+            sentence.title,
+            newblock,
+            {format.journal, format.volNumPages, format.date}
+        )
+
+        return ret
+    end,
+    ]]
+    layout = function(entry)
+        local ret = ""
+        ret = ret .. format.author(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.title(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.journal(entry) .. ", "
+        ret = ret .. format.volNumPages(entry)
+        ret = ret .. format.date(entry) .. "."
+        return ret
+    end,
+
+}
+
+
+entryStyle.book =
+{
+    --layout = "#author.\n#title.\n#publisher#address#year",
+    layout = function (entry)
+        local ret = ""
+
+        ret = ret .. format.author(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.btitle(entry)
+        ret = ret .. newblock()
+        ret = ret .. _(entry.publisher)
+        ret = ret .. part(entry.address)
+        ret = ret .. format.date(entry)
+        ret = ret .. "."
+
+        return ret
+    end,
+}
+
+
+entryStyle.inbook =
+{
+    --layout = "#author.\n#title, capítulo #chapter. #publisher, #address, #year.",
+    layout = function (entry)
+        local ret = ""
+        ret = ret .. format.author(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.btitle(entry) .. format.chapterPages(entry)
+        ret = ret .. newblock()
+        ret = ret .. _(entry.publisher) .. ", " .. _(entry.address)
+        ret = ret .. format.date(entry) .. "."
+        return ret
+    end,
+}
+
+
+entryStyle.incollection =
+{
+    --layout = "#author.\n#title.\n#editor, #booktitle. #publisher, #year.",
+    layout = function (entry)
+        local ret = ""
+        ret = ret .. format.author(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.title(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.InEdBooktitle(entry)
+        ret = ret .. newsentence()
+        ret = ret .. _(entry.publisher) .. part(entry.address)
+        ret = ret .. format.date(entry) .. "."
+        return ret
+    end,
+
+}
+
+
+entryStyle.inproceedings =
+{
+    --layout    = "#author.\n#title. Em #editor#booktitle#number#series#publisher#year.",
+    layout = function (entry)
+        local ret = ""
+        ret = ret .. format.author(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.title(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.InEdBooktitle(entry)
+        ret = ret .. part(format.numberSeries(entry))
+        ret = ret .. _(entry.publisher) .. part(entry.address)
+        ret = ret .. format.date(entry) .. "."
+        --ret = ret .. join{entry.editor, entry.booktitle, entry.number, entry.series, entry.publisher, entry.year, "."}
+        return ret
+    end,
+
+}
+
+
+entryStyle.techreport =
+{
+    --layout      = "#author.\n#title. #number, #institution, #year.",
+    layout = function (entry)
+        local ret = ""
+        ret = ret .. format.author(entry)
+        ret = ret .. newblock()
+        ret = ret .. format.title(entry)
+        ret = ret .. newblock()
+        ret = ret .. join({format.trNumber(entry), entry.institution, entry.year}, ", ") .. "."
+        return ret
+    end,
+
+}
+
+
+entryStyle.misc =
+{
+}
+
+
+--##############################################################################
+local bibStyle =
+{
+    customBblHeader = "\n",
+    customBblFooter = "",
+}
+
+
+function bibStyle.genItem(bblItem)
+    -- Definir formatadores:
+    local fieldStyle = entryStyle[bblItem.refType]
+    --print(bblItem.refType) --<<<<<
+    local strBblItem = ""
+    if fieldStyle == nil then
+        print("Unknown reftype: " .. bblItem.refType)
+    else
+        -- Montar o item:
+        strBblItem = strBblItem .. "\\bibitem{" .. bblItem.refName .. "}\n"
+        if type(fieldStyle.layout) == "function" then
+            strBblItem = strBblItem .. fieldStyle.layout(bblItem)
+        end
+    end
+
+    return strBblItem
+end
+
+
+function bibStyle.sortBblData(bblData)
+    -- Ordenar a lista:
+    sortBy(bblData, "year")
+    sortByAuthorLastName(bblData)
+
+    return bblData
+end
+
+
+return bibStyle

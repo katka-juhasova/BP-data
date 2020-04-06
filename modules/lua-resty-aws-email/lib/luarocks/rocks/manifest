@@ -1,0 +1,387 @@
+commands = {}
+dependencies = {
+   ["lua-erento-hmac"] = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-aws-auth"] = {
+      ["0.12-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-erento-hmac"
+         },
+         {
+            constraints = {},
+            name = "lua-resty-string"
+         }
+      }
+   },
+   ["lua-resty-aws-email"] = {
+      ["0.2-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "xml"
+         },
+         {
+            constraints = {},
+            name = "lua-resty-http"
+         },
+         {
+            constraints = {},
+            name = "lua-resty-aws-auth"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-string"] = {
+      ["0.09-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lub = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 4, 0, string = "1.4.0"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         }
+      }
+   },
+   xml = {
+      ["1.1.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, 3, string = "1.0.3"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     2, string = "2"
+                  }
+               }
+            },
+            name = "lub"
+         }
+      }
+   }
+}
+modules = {
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   lub = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Autoload"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Dir"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Param"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Template"] = {
+      "lub/1.1.0-1"
+   },
+   ["resty.aes"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.aws_auth"] = {
+      "lua-resty-aws-auth/0.12-0"
+   },
+   ["resty.aws_email"] = {
+      "lua-resty-aws-email/0.2-0"
+   },
+   ["resty.hmac"] = {
+      "lua-erento-hmac/1.0-0"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.md5"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.random"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha1"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha224"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha256"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha384"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha512"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.string"] = {
+      "lua-resty-string/0.09-0"
+   },
+   xml = {
+      "xml/1.1.3-1"
+   },
+   ["xml.Parser"] = {
+      "xml/1.1.3-1"
+   },
+   ["xml.core"] = {
+      "xml/1.1.3-1"
+   }
+}
+repository = {
+   ["lua-erento-hmac"] = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.hmac"] = "resty/hmac.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-aws-auth"] = {
+      ["0.12-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-erento-hmac"] = "1.0-0",
+               ["lua-resty-string"] = "0.09-0"
+            },
+            modules = {
+               ["resty.aws_auth"] = "resty/aws_auth.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-aws-email"] = {
+      ["0.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-erento-hmac"] = "1.0-0",
+               ["lua-resty-aws-auth"] = "0.12-0",
+               ["lua-resty-http"] = "0.15-0",
+               ["lua-resty-string"] = "0.09-0",
+               luafilesystem = "1.7.0-2",
+               lub = "1.1.0-1",
+               xml = "1.1.3-1"
+            },
+            modules = {
+               ["resty.aws_email"] = "resty/aws_email.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-string"] = {
+      ["0.09-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.aes"] = "resty/aes.lua",
+               ["resty.md5"] = "resty/md5.lua",
+               ["resty.random"] = "resty/random.lua",
+               ["resty.sha"] = "resty/sha.lua",
+               ["resty.sha1"] = "resty/sha1.lua",
+               ["resty.sha224"] = "resty/sha224.lua",
+               ["resty.sha256"] = "resty/sha256.lua",
+               ["resty.sha384"] = "resty/sha384.lua",
+               ["resty.sha512"] = "resty/sha512.lua",
+               ["resty.string"] = "resty/string.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   lub = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               lub = "lub/init.lua",
+               ["lub.Autoload"] = "lub/Autoload.lua",
+               ["lub.Dir"] = "lub/Dir.lua",
+               ["lub.Param"] = "lub/Param.lua",
+               ["lub.Template"] = "lub/Template.lua"
+            }
+         }
+      }
+   },
+   xml = {
+      ["1.1.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2",
+               lub = "1.1.0-1"
+            },
+            modules = {
+               xml = "xml/init.lua",
+               ["xml.Parser"] = "xml/Parser.lua",
+               ["xml.core"] = "xml/core.so"
+            }
+         }
+      }
+   }
+}

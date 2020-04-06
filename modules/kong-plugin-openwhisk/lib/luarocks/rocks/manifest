@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-openwhisk"] = {
+      ["0.1.2-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.openwhisk.handler"] = {
+      "kong-plugin-openwhisk/0.1.2-0"
+   },
+   ["kong.plugins.openwhisk.schema"] = {
+      "kong-plugin-openwhisk/0.1.2-0"
+   }
+}
+repository = {
+   ["kong-plugin-openwhisk"] = {
+      ["0.1.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.openwhisk.handler"] = "kong/plugins/openwhisk/handler.lua",
+               ["kong.plugins.openwhisk.schema"] = "kong/plugins/openwhisk/schema.lua"
+            }
+         }
+      }
+   }
+}

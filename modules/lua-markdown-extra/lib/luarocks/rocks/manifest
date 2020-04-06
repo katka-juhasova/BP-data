@@ -1,0 +1,227 @@
+commands = {}
+dependencies = {
+   cmark = {
+      ["0.29.0-1"] = {}
+   },
+   ["lua-markdown-extra"] = {
+      ["0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "cmark"
+         },
+         {
+            constraints = {},
+            name = "yaml"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lub = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 4, 0, string = "1.4.0"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         }
+      }
+   },
+   yaml = {
+      ["1.1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, 3, string = "1.0.3"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     2, string = "2"
+                  }
+               }
+            },
+            name = "lub"
+         }
+      }
+   }
+}
+modules = {
+   cmark = {
+      "cmark/0.29.0-1"
+   },
+   ["cmark.builder"] = {
+      "cmark/0.29.0-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   lub = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Autoload"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Dir"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Param"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Template"] = {
+      "lub/1.1.0-1"
+   },
+   markdown_extra = {
+      "lua-markdown-extra/0.6-1"
+   },
+   yaml = {
+      "yaml/1.1.2-1"
+   },
+   ["yaml.core"] = {
+      "yaml/1.1.2-1"
+   }
+}
+repository = {
+   cmark = {
+      ["0.29.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cmark = "cmark.so",
+               ["cmark.builder"] = "cmark/builder.lua"
+            }
+         }
+      }
+   },
+   ["lua-markdown-extra"] = {
+      ["0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               cmark = "0.29.0-1",
+               luafilesystem = "1.7.0-2",
+               lub = "1.1.0-1",
+               yaml = "1.1.2-1"
+            },
+            modules = {
+               markdown_extra = "markdown_extra.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   lub = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               lub = "lub/init.lua",
+               ["lub.Autoload"] = "lub/Autoload.lua",
+               ["lub.Dir"] = "lub/Dir.lua",
+               ["lub.Param"] = "lub/Param.lua",
+               ["lub.Template"] = "lub/Template.lua"
+            }
+         }
+      }
+   },
+   yaml = {
+      ["1.1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2",
+               lub = "1.1.0-1"
+            },
+            modules = {
+               yaml = "yaml/init.lua",
+               ["yaml.core"] = "yaml/core.so"
+            }
+         }
+      }
+   }
+}

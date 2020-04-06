@@ -1,0 +1,31 @@
+rock_manifest = {
+   docs = {
+      classes = {
+         ["Command.html"] = "d56c29f289c10ff1745719a9684ef369",
+         ["Lummander.html"] = "5dbfa6b54f997c1227f50df1f2bc0250",
+         ["Parsed.html"] = "7d497264e1deeca68abc824240a4dede",
+         ["Pcall.html"] = "cdd5e01eea759c4bbf584ffc7bf64e19",
+         ["ThemeColor.html"] = "496eeb2139a7ccba2bbcd3a25e59d021"
+      },
+      ["index.html"] = "b01c68b4f9a6e44311c6900f4322da6f",
+      ["ldoc.css"] = "e2b04e90ff648f8e00d9d4d458de59d9",
+      topics = {
+         ["readme.md.html"] = "c6470b720411e1d102c90f1d84c9cfac"
+      }
+   },
+   lua = {
+      lummander = {
+         ["command.lua"] = "f44a4c8608f926531bd472cc28fe38ee",
+         ["init.lua"] = "8261a88e8d424b1b6a6ea7eab120ca38",
+         ["lummander.lua"] = "2ab981ca46164537cf9a360d8a3ecc6c",
+         ["parsed.lua"] = "e7626774efa927ae0d7b918c2bcaf285",
+         ["pcall.lua"] = "48c595f272645edaad5ee0da54186b17",
+         ["themecolor.lua"] = "7ed4feb7f13c227e25e2157fe4c09bc0",
+         themes = {
+            ["acid.lua"] = "bee8d59a509aad8711327f91391f92b5",
+            ["default.lua"] = "f955ca175bfa47d31b4449a0e42b13df"
+         }
+      }
+   },
+   ["lummander-0.1.0-2.rockspec"] = "b8a436f4fcd9239397aef4d1bb0fc401"
+}

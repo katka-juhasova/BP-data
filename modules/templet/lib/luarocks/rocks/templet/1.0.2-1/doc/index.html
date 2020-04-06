@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Peter Colberg" />
+  <title>Templet for Lua</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+<ul>
+<li><a href="index.html">Templet for Lua</a></li>
+<li><a href="INSTALL.html">Installing</a></li>
+<li><a href="README.html">User's Guide</a></li>
+<li><a href="examples.html">Examples</a></li>
+<li><a href="reference.html">Reference</a></li>
+<li><a href="https://lists.colberg.org/listinfo/lua-templet">Mailing list</a></li>
+<li><a href="CHANGES.html">Releases</a></li>
+</ul>
+</div>
+<div class="body">
+<h1>Templet for Lua</h1>
+<p><a href="https://colberg.org/lua-templet/"><img src="lua-templet.png" title="Templet for Lua" /></a> <a href="https://colberg.org/lua-templet/">Templet</a> is a template preprocessor written in pure <a href="http://www.lua.org/about.html">Lua</a> that parses text templates with embedded Lua statements and expressions. Templet may be used to preprocess source files of any language, such as <a href="http://www.khronos.org/opencl/">OpenCL C</a>. Templet works with <a href="http://www.lua.org/manual/5.1/">Lua 5.1</a>, <a href="http://www.lua.org/manual/5.2/">Lua 5.2</a>, <a href="http://www.lua.org/manual/5.3/">Lua 5.3</a>, and <a href="http://luajit.org/luajit.html">LuaJIT</a>.</p>
+<p>Consider a system of non-interacting classical particles. We would like to generate C code that moves the particles by a given time step. This should work for both 2 and 3 dimensional systems, and constant parameters should be substituted along the way.</p>
+<p>First, the template is parsed, e.g., from a multi-line Lua string:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> templet <span class="ot">=</span> <span class="fu">require</span><span class="ot">(</span><span class="st">&quot;templet&quot;</span><span class="ot">)</span>
+
+<span class="kw">local</span> temp <span class="ot">=</span> templet<span class="ot">.</span>loadstring<span class="ot">(</span><span class="st">[[</span>
+<span class="st">for (int i = 0; i &lt; ${nparticle}; ++i) {</span>
+<span class="st">  |for i = 1, #coord do</span>
+<span class="st">  r[i].${coord[i]} = r[i].${coord[i]} + v[i].${coord[i]} * ${timestep};</span>
+<span class="st">  |end</span>
+<span class="st">}</span>
+<span class="st">]]</span><span class="ot">)</span></code></pre>
+<p>The template is then rendered, given a set of parameters:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> env <span class="ot">=</span> <span class="ot">{</span>coord <span class="ot">=</span> <span class="ot">{</span><span class="st">&quot;x&quot;</span><span class="ot">,</span> <span class="st">&quot;y&quot;</span><span class="ot">,</span> <span class="st">&quot;z&quot;</span><span class="ot">},</span> nparticle <span class="ot">=</span> <span class="dv">5000</span><span class="ot">,</span> timestep <span class="ot">=</span> <span class="dv">0.001</span><span class="ot">}</span>
+<span class="fu">io.write</span><span class="ot">(</span>temp<span class="ot">(</span>env<span class="ot">))</span></code></pre>
+<p>In the resulting output, the loop has been expanded, and constants substituted:</p>
+<pre><code>for (int i = 0; i &lt; 5000; ++i) {
+  r[i].x = r[i].x + v[i].x * 0.001;
+  r[i].y = r[i].y + v[i].y * 0.001;
+  r[i].z = r[i].z + v[i].z * 0.001;
+}</code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> env <span class="ot">=</span> <span class="ot">{</span>coord <span class="ot">=</span> <span class="ot">{</span><span class="st">&quot;x&quot;</span><span class="ot">,</span> <span class="st">&quot;y&quot;</span><span class="ot">},</span> nparticle <span class="ot">=</span> <span class="dv">1000</span><span class="ot">,</span> timestep <span class="ot">=</span> <span class="dv">0.002</span><span class="ot">}</span>
+<span class="fu">io.write</span><span class="ot">(</span>temp<span class="ot">(</span>env<span class="ot">))</span></code></pre>
+<p>The same template can be rendered, e.g., for a 2-dimensional system:</p>
+<pre><code>for (int i = 0; i &lt; 1000; ++i) {
+  r[i].x = r[i].x + v[i].x * 0.002;
+  r[i].y = r[i].y + v[i].y * 0.002;
+}</code></pre>
+<p>The resulting C code could be passed to a just-in-time C compiler for immediate execution.</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>I would like to thank Rici Lake for writing the <a href="http://lua-users.org/wiki/SlightlyLessSimpleLuaPreprocessor">Slightly Less Simple Lua Preprocessor</a>, which provided the basis of the Templet parser, as well as Michal Januszewski and the <a href="http://sailfish.us.edu.pl">Sailfish</a> contributors for providing a real-world example of dynamically compiled GPU code templates in a simulation code.</p>
+</div>
+<div class="footer">
+&copy; Copyright 2012–2015, Peter Colberg.
+Created using <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>.
+</div>
+</body>
+</html>

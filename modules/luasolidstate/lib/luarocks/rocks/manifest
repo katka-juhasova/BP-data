@@ -1,0 +1,80 @@
+commands = {}
+dependencies = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasolidstate = {
+      ["1.3.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 5, 0, string = "1.5.0"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         }
+      }
+   }
+}
+modules = {
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   state = {
+      "luasolidstate/1.3.2-1"
+   }
+}
+repository = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luasolidstate = {
+      ["1.3.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               state = "state/init.lua"
+            }
+         }
+      }
+   }
+}

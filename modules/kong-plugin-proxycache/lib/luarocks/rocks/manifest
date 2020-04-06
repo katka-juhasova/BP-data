@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-proxycache"] = {
+      ["0.1.2-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.proxycache.handler"] = {
+      "kong-plugin-proxycache/0.1.2-1"
+   },
+   ["kong.plugins.proxycache.schema"] = {
+      "kong-plugin-proxycache/0.1.2-1"
+   }
+}
+repository = {
+   ["kong-plugin-proxycache"] = {
+      ["0.1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.proxycache.handler"] = "kong/plugins/proxycache/handler.lua",
+               ["kong.plugins.proxycache.schema"] = "kong/plugins/proxycache/schema.lua"
+            }
+         }
+      }
+   }
+}

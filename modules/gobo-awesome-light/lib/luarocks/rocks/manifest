@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["gobo-awesome-light"] = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   ["gobo.awesome.light"] = {
+      "gobo-awesome-light/0.1-1"
+   }
+}
+repository = {
+   ["gobo-awesome-light"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["gobo.awesome.light"] = "gobo/awesome/light.lua"
+            }
+         }
+      }
+   }
+}

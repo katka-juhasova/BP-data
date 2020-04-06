@@ -1,0 +1,21 @@
+rock_manifest = {
+   docs = {
+      ["index.md"] = "782bb542888eb8745f3de27f95e80927",
+      ["testlongstring.md"] = "c424fb7c6ae64fdad5200b2489a9000a"
+   },
+   lua = {
+      Test = {
+         ["LongString.lua"] = "7ca443f39d3ae726b67d86c6dec8959d"
+      }
+   },
+   ["lua-testlongstring-0.2.2-2.rockspec"] = "826bb00b02cfa9d5682b38e3a7e1b2bc",
+   test = {
+      ["00require.t"] = "da566340bdd5dae2e10c8cf4eee9b614",
+      ["99example.t"] = "e38f50d092fa05f1d5d72823bd63153f",
+      ["contains_string.t"] = "a7283348078c6d7aefc59e4f735faf47",
+      ["is_string.t"] = "da8b489bd0be6c6365b49640da9fea93",
+      ["is_string_nows.t"] = "68a26d0baed7ef0854c99f8113d1c806",
+      ["lacks_string.t"] = "f372b407c507e645c1c65912736e2069",
+      ["like_string.t"] = "3d76fe9d8cfd612b93dbaf2363985ec8"
+   }
+}

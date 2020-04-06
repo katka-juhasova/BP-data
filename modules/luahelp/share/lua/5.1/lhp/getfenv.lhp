@@ -1,0 +1,11 @@
+Help [[
+
+getfenv (f)
+-----------
+
+  Returns the current environment in use by the function. `f` can be a Lua
+  function or a number that specifies the function at that stack level: Level
+  1 is the function calling `getfenv`. If the given function is not a Lua
+  function, or if `f` is 0, `getfenv` returns the global environment. The
+  default for `f` is 1.
+]]

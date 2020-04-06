@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   luakiwis = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["helloworld.access"] = {
+      "luakiwis/1.0-1"
+   },
+   ["helloworld.handler"] = {
+      "luakiwis/1.0-1"
+   },
+   ["helloworld.schema"] = {
+      "luakiwis/1.0-1"
+   }
+}
+repository = {
+   luakiwis = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["helloworld.access"] = "helloworld/access.lua",
+               ["helloworld.handler"] = "helloworld/handler.lua",
+               ["helloworld.schema"] = "helloworld/schema.lua"
+            }
+         }
+      }
+   }
+}

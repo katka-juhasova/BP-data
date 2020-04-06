@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-auth-signature"] = {
+      ["0.1.0-4"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-auth-signature.handler"] = {
+      "kong-auth-signature/0.1.0-4"
+   },
+   ["kong.plugins.kong-auth-signature.schema"] = {
+      "kong-auth-signature/0.1.0-4"
+   }
+}
+repository = {
+   ["kong-auth-signature"] = {
+      ["0.1.0-4"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-auth-signature.handler"] = "kong/plugins/kong-auth-signature/handler.lua",
+               ["kong.plugins.kong-auth-signature.schema"] = "kong/plugins/kong-auth-signature/schema.lua"
+            }
+         }
+      }
+   }
+}

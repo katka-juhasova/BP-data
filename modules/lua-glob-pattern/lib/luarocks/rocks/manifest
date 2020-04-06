@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-glob-pattern"] = {
+      ["0.2.1.20120406-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   globtopattern = {
+      "lua-glob-pattern/0.2.1.20120406-1"
+   }
+}
+repository = {
+   ["lua-glob-pattern"] = {
+      ["0.2.1.20120406-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               globtopattern = "globtopattern.lua"
+            }
+         }
+      }
+   }
+}

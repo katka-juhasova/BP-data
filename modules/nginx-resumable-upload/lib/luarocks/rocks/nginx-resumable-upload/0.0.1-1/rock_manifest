@@ -1,0 +1,20 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "0474f2785535e52a8142964682fcb277",
+      ["README.md"] = "cf278545ca5436608e87c88abc75b9b4"
+   },
+   lua = {
+      shuaicj = {
+         upload = {
+            checksum = {
+               ["crc32.lua"] = "ca675d82bff5f96b3514f7c0e682b0ab",
+               ["md5.lua"] = "475237cb0090151a0894e7260b42c6dc",
+               ["sha1.lua"] = "6d62dc8e6a6ec076a6a17ec0f0067b8e"
+            },
+            ["util.lua"] = "2e3180e68660007a55628cfaa6f0c122"
+         },
+         ["upload.lua"] = "ed87eb6a9c94435c0b937e135b09f3d9"
+      }
+   },
+   ["nginx-resumable-upload-0.0.1-1.rockspec"] = "550b928e2650cc49ad25b3d4feb3bcb3"
+}

@@ -1,0 +1,61 @@
+commands = {}
+dependencies = {
+   hump = {
+      ["0.4-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["hump.camera"] = {
+      "hump/0.4-2"
+   },
+   ["hump.class"] = {
+      "hump/0.4-2"
+   },
+   ["hump.gamestate"] = {
+      "hump/0.4-2"
+   },
+   ["hump.signal"] = {
+      "hump/0.4-2"
+   },
+   ["hump.timer"] = {
+      "hump/0.4-2"
+   },
+   ["hump.vector"] = {
+      "hump/0.4-2"
+   },
+   ["hump.vector-light"] = {
+      "hump/0.4-2"
+   }
+}
+repository = {
+   hump = {
+      ["0.4-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["hump.camera"] = "hump/camera.lua",
+               ["hump.class"] = "hump/class.lua",
+               ["hump.gamestate"] = "hump/gamestate.lua",
+               ["hump.signal"] = "hump/signal.lua",
+               ["hump.timer"] = "hump/timer.lua",
+               ["hump.vector"] = "hump/vector.lua",
+               ["hump.vector-light"] = "hump/vector-light.lua"
+            }
+         }
+      }
+   }
+}

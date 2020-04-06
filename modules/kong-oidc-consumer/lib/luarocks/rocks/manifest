@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["kong-oidc-consumer"] = {
+      ["0.0.1-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.oidc-consumer.handler"] = {
+      "kong-oidc-consumer/0.0.1-1"
+   },
+   ["kong.plugins.oidc-consumer.schema"] = {
+      "kong-oidc-consumer/0.0.1-1"
+   },
+   ["kong.plugins.oidc-consumer.utils"] = {
+      "kong-oidc-consumer/0.0.1-1"
+   }
+}
+repository = {
+   ["kong-oidc-consumer"] = {
+      ["0.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.oidc-consumer.handler"] = "kong/plugins/oidc-consumer/handler.lua",
+               ["kong.plugins.oidc-consumer.schema"] = "kong/plugins/oidc-consumer/schema.lua",
+               ["kong.plugins.oidc-consumer.utils"] = "kong/plugins/oidc-consumer/utils.lua"
+            }
+         }
+      }
+   }
+}

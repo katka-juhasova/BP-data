@@ -1,0 +1,84 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-deviceuid"] = {
+      ["0.2.4-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, string = "0.1.0"
+                  }
+               }
+            },
+            name = "lua-resty-cookie"
+         }
+      }
+   },
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.deviceuid.handler"] = {
+      "kong-plugin-deviceuid/0.2.4-0"
+   },
+   ["kong.plugins.deviceuid.schema"] = {
+      "kong-plugin-deviceuid/0.2.4-0"
+   },
+   ["resty.cookie"] = {
+      "lua-resty-cookie/0.1.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-deviceuid"] = {
+      ["0.2.4-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-cookie"] = "0.1.0-1"
+            },
+            modules = {
+               ["kong.plugins.deviceuid.handler"] = "kong/plugins/deviceuid/handler.lua",
+               ["kong.plugins.deviceuid.schema"] = "kong/plugins/deviceuid/schema.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.cookie"] = "resty/cookie.lua"
+            }
+         }
+      }
+   }
+}

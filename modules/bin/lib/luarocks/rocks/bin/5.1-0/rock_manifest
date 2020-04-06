@@ -1,0 +1,32 @@
+rock_manifest = {
+   ["bin-5.1-0.rockspec"] = "f1909418b522de40a521e61684356297",
+   doc = {
+      ["BinRewrite.md"] = "543a1083949863ae488ba446ad9da265",
+      LICENSE = "86a3eb4900a923aa5d6bde487f701ba5",
+      ["README.md"] = "37e0196faae0859b1858d7581479f7d5"
+   },
+   lua = {
+      bin = {
+         compressors = {
+            ["lzw.lua"] = "57695c28e495e191485362dbcce8522d"
+         },
+         converters = {
+            ["base64.lua"] = "35b68a9fa6f9458a72726c09b1e756bd",
+            ["base91.lua"] = "f8705dee009d902243184d3a2b26d057"
+         },
+         hashes = {
+            ["md5.lua"] = "68cea5c1777e52bb5a6d205d1f9f399a"
+         },
+         ["init.lua"] = "49a66b9eefd87678a632c67abc1990ae",
+         numbers = {
+            ["BigNum.lua"] = "dee3bb1d2dba7690516d2fae1e333ff9",
+            ["BigRat.lua"] = "20e28266bc7312a5bf9a6009f37b85db",
+            ["no_jit_bit.lua"] = "6620b1682161c566b3ec19e441ef1069",
+            ["random.lua"] = "1a1bc5caf11e33b4880d09865405805a"
+         },
+         support = {
+            ["vfs.lua"] = "697a7546706893738d6037ef42ec2d06"
+         }
+      }
+   }
+}

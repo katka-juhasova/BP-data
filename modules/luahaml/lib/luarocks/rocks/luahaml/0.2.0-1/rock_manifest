@@ -1,0 +1,27 @@
+rock_manifest = {
+   bin = {
+      luahaml = "a71e4e5979ecec888591ef9d5910f9b7"
+   },
+   doc = {
+      ["Changelog.md"] = "4f50f0be57085564d904b8e3974adc18",
+      ["README.md"] = "826d2bee723d6dea26ad2c8e5d885686"
+   },
+   lua = {
+      haml = {
+         ["code.lua"] = "3850bf18a9927078c891c433e3d61508",
+         ["comment.lua"] = "f5abfb1b506e8c1ba360ec999b880199",
+         ["end_stack.lua"] = "5e1a3bcaa45cd97e0c789d8e2a29a8ac",
+         ["ext.lua"] = "c96be1eb6ac3a03e24dfd0b3603b8208",
+         ["filter.lua"] = "91d4347a685c31199c117f570076c14b",
+         ["header.lua"] = "9121ba46db2816698c2d1a37348c070d",
+         ["lua_adapter.lua"] = "652ee018774deed9277cb69ab2c2af42",
+         ["parser.lua"] = "72463968ce74bd140e6550c18e6fc05b",
+         ["precompiler.lua"] = "59518283cdfc0ed6e106527260602e6c",
+         ["renderer.lua"] = "696cf7c2ab828b48ee6dd5a1d6a8b18d",
+         ["string_buffer.lua"] = "6a54a6a2d26d1cebac60624a2c8ee1dc",
+         ["tag.lua"] = "cb4fd82b949fa7143ec4ab48f6ecfa3f"
+      },
+      ["haml.lua"] = "9b3939e5556c1023a280fb3567ec8cb1"
+   },
+   ["luahaml-0.2.0-1.rockspec"] = "ee7ec3c2d4ea9de0cdcaa097ce612b79"
+}

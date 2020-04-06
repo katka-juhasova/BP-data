@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   remy = {
+      ["0.2.14-1"] = {}
+   }
+}
+modules = {
+   remy = {
+      "remy/0.2.14-1"
+   },
+   ["remy.cgilua"] = {
+      "remy/0.2.14-1"
+   },
+   ["remy.file_obj"] = {
+      "remy/0.2.14-1"
+   },
+   ["remy.lwan"] = {
+      "remy/0.2.14-1"
+   },
+   ["remy.mod_magnet"] = {
+      "remy/0.2.14-1"
+   },
+   ["remy.mod_plua"] = {
+      "remy/0.2.14-1"
+   },
+   ["remy.nginx"] = {
+      "remy/0.2.14-1"
+   }
+}
+repository = {
+   remy = {
+      ["0.2.14-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               remy = "remy.lua",
+               ["remy.cgilua"] = "remy/cgilua.lua",
+               ["remy.file_obj"] = "remy/file_obj.lua",
+               ["remy.lwan"] = "remy/lwan.lua",
+               ["remy.mod_magnet"] = "remy/mod_magnet.lua",
+               ["remy.mod_plua"] = "remy/mod_plua.lua",
+               ["remy.nginx"] = "remy/nginx.lua"
+            }
+         }
+      }
+   }
+}

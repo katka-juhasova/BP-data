@@ -1,0 +1,189 @@
+commands = {
+   lubs = {
+      "lubs/1.0.4-1"
+   }
+}
+dependencies = {
+   ["lua-path"] = {
+      ["0.3.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lubs = {
+      ["1.0.4-1"] = {
+         {
+            constraints = {},
+            name = "lua-path"
+         },
+         {
+            constraints = {},
+            name = "luv"
+         }
+      }
+   },
+   luv = {
+      ["1.34.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lubs = {
+      "lubs/1.0.4-1"
+   },
+   ["lubs.dest"] = {
+      "lubs/1.0.4-1"
+   },
+   ["lubs.src"] = {
+      "lubs/1.0.4-1"
+   },
+   ["lubs.task"] = {
+      "lubs/1.0.4-1"
+   },
+   ["lubs.utils"] = {
+      "lubs/1.0.4-1"
+   },
+   ["lubs.watch"] = {
+      "lubs/1.0.4-1"
+   },
+   luv = {
+      "luv/1.34.1-1"
+   },
+   path = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.findfile"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.lfs.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.lfs.impl.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.module"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.syscall.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.types"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.utils"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.wcs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.types"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.wcs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.wcs"] = {
+      "lua-path/0.3.1-1"
+   }
+}
+repository = {
+   ["lua-path"] = {
+      ["0.3.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               path = "path.lua",
+               ["path.findfile"] = "path/findfile.lua",
+               ["path.fs"] = "path/fs.lua",
+               ["path.lfs.fs"] = "path/lfs/fs.lua",
+               ["path.lfs.impl.fs"] = "path/lfs/impl/fs.lua",
+               ["path.module"] = "path/module.lua",
+               ["path.syscall.fs"] = "path/syscall/fs.lua",
+               ["path.win32.alien.fs"] = "path/win32/alien/fs.lua",
+               ["path.win32.alien.types"] = "path/win32/alien/types.lua",
+               ["path.win32.alien.utils"] = "path/win32/alien/utils.lua",
+               ["path.win32.alien.wcs"] = "path/win32/alien/wcs.lua",
+               ["path.win32.ffi.fs"] = "path/win32/ffi/fs.lua",
+               ["path.win32.ffi.types"] = "path/win32/ffi/types.lua",
+               ["path.win32.ffi.wcs"] = "path/win32/ffi/wcs.lua",
+               ["path.win32.fs"] = "path/win32/fs.lua",
+               ["path.win32.wcs"] = "path/win32/wcs.lua"
+            }
+         }
+      }
+   },
+   lubs = {
+      ["1.0.4-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               lubs = "lubs"
+            },
+            dependencies = {
+               ["lua-path"] = "0.3.1-1",
+               luv = "1.34.1-1"
+            },
+            modules = {
+               lubs = "lubs/init.lua",
+               ["lubs.dest"] = "lubs/dest.lua",
+               ["lubs.src"] = "lubs/src.lua",
+               ["lubs.task"] = "lubs/task.lua",
+               ["lubs.utils"] = "lubs/utils.lua",
+               ["lubs.watch"] = "lubs/watch.lua"
+            }
+         }
+      }
+   },
+   luv = {
+      ["1.34.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luv = "luv.so"
+            }
+         }
+      }
+   }
+}

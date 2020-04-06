@@ -1,0 +1,23 @@
+Help [[
+
+package.path
+------------
+
+  The path used by `require` to search for a Lua loader.
+
+  At start-up, Lua initializes this variable with the value of the environment
+  variable LUA_PATH or with a default path defined in luaconf.h, if the
+  environment variable is not defined. Any ";;" in the value of the
+  environment variable is replaced by the default path.
+
+  A path is a sequence of _templates_ separated by semicolons. For each
+  template, `require` will change each interrogation mark in the template by
+  `filename`, which is `modname` with each dot replaced by a "directory
+  separator" (such as "/" in Unix); then it will try to load the resulting
+  file name. So, for instance, if the Lua path is
+
+         "./?.lua;./?.lc;/usr/local/?/init.lua"
+
+  the search for a Lua loader for module foo will try to load the files
+  `./foo.lua`, `./foo.lc`, and `/usr/local/foo/init.lua`, in that order.
+]]

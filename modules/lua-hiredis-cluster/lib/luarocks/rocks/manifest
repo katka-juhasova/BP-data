@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-hiredis-cluster"] = {
+      ["1.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   hiredis = {
+      "lua-hiredis-cluster/1.0-2"
+   },
+   redis_cluster = {
+      "lua-hiredis-cluster/1.0-2"
+   }
+}
+repository = {
+   ["lua-hiredis-cluster"] = {
+      ["1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               hiredis = "hiredis.so",
+               redis_cluster = "redis_cluster.lua"
+            }
+         }
+      }
+   }
+}

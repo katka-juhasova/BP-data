@@ -1,0 +1,102 @@
+commands = {}
+dependencies = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lub = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 4, 0, string = "1.4.0"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         }
+      }
+   }
+}
+modules = {
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   lub = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Autoload"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Dir"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Param"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Template"] = {
+      "lub/1.1.0-1"
+   }
+}
+repository = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   lub = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               lub = "lub/init.lua",
+               ["lub.Autoload"] = "lub/Autoload.lua",
+               ["lub.Dir"] = "lub/Dir.lua",
+               ["lub.Param"] = "lub/Param.lua",
+               ["lub.Template"] = "lub/Template.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,20 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "7173b3c5121479b9a0fbd61e49b5bb7c",
+      ["README.MD"] = "d0bbad8c7ef1c58a9b852bffd909d0ff",
+      ["index.md"] = "a20c1fa6f198232d7a0a505b61e7d7b0"
+   },
+   lua = {
+      kong = {
+         plugins = {
+            sphericaldefence = {
+               ["access.lua"] = "ffc6795b4675e143f8ed845d2bebbe9a",
+               ["handler.lua"] = "90181c8b7385edfc62f3566edd043d9b",
+               ["json.lua"] = "6ad473bf7c0640bf0991855426e743d7",
+               ["schema.lua"] = "e73a70b58651180ecac0def1248c1693"
+            }
+         }
+      }
+   },
+   ["sphericaldefence-0.0.3-3.rockspec"] = "e265a8008b87bef738b5da0bd9bd2e13"
+}

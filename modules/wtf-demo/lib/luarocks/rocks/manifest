@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["wtf-demo"] = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   ["wtf.actions.log"] = {
+      "wtf-demo/0.1-1"
+   },
+   ["wtf.plugins.demo.hello_world"] = {
+      "wtf-demo/0.1-1"
+   },
+   ["wtf.solvers.demo_solver"] = {
+      "wtf-demo/0.1-1"
+   }
+}
+repository = {
+   ["wtf-demo"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["wtf.actions.log"] = "wtf/actions/log.lua",
+               ["wtf.plugins.demo.hello_world"] = "wtf/plugins/demo/hello_world.lua",
+               ["wtf.solvers.demo_solver"] = "wtf/solvers/demo_solver.lua"
+            }
+         }
+      }
+   }
+}

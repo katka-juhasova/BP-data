@@ -1,0 +1,13 @@
+rock_manifest = {
+   ["kong-plugin-myplugin1-0.1.0-1.rockspec"] = "489e853933efaf031dcdcb23aae50e09",
+   lua = {
+      kong = {
+         plugins = {
+            myplugin = {
+               ["handler.lua"] = "248fb1713abfa23b6ad6793c9ae87f09",
+               ["schema.lua"] = "24093808d38ce6724cc8dfd969f4420a"
+            }
+         }
+      }
+   }
+}

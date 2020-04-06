@@ -1,0 +1,44 @@
+rock_manifest = {
+   examples = {
+      ["example.lua"] = "b2d66e736415c9507158e41377e748d3"
+   },
+   lua = {
+      ["config.ld"] = "511280dd4b2302e2abd75b491d842f63",
+      pop3 = {
+         ["charset.lua"] = "710852a44a6cff40578a8d88c64b928a",
+         ["message.lua"] = "0d65083780b937fbf47440856443054e",
+         ["module.lua"] = "9cad3a342a8d2c5f9d65ab1e6bee1620",
+         win = {
+            ["cp.lua"] = "1036c64b1aa377ea156378d9e2d83517"
+         }
+      },
+      ["pop3.lua"] = "6706a4f7b1e8650831a0f15a48c86f12"
+   },
+   ["pop3-0.1.6-1.rockspec"] = "0cef652bc069af0a58dc808ea2906cf3",
+   test = {
+      ["test-message.lua"] = "d11003205f0343d538d8c16356e3d221",
+      tests = {
+         test1 = {
+            ["1.jpg"] = "ab0adbc647e4b9b754bb8ac65e5777fe",
+            ["SEP7-8.png"] = "ed7da516232f601653ed31b8faa645d3",
+            ["kokouk.bmp"] = "2db96a1b9eca7493a699fad672fcb6f3",
+            ["logo.jpg"] = "898e6de3a5de9260964fbadcc3c29fcb",
+            ["test.eml"] = "01e330dfe43eb91a360b49bc69b73ae3",
+            ["text.html"] = "f5cda93c2c92150e89e71156d6c93fbb",
+            ["text.txt"] = "3f9846738f5b8595f605be1a90356b65"
+         },
+         test2 = {
+            ["test.eml"] = "a8654ab5640169302055b038fc80e62a",
+            ["text.html"] = "4449eea6f2489b182234f88139c9a464",
+            ["text.txt"] = "155cf69c09b4b029c4b0422c39eb535a"
+         },
+         test3 = {
+            ["html.html"] = "67f8694becf5c28ffed219d33a1e0828",
+            ["test.eml"] = "ed7ab8dcab1a19d35d3b8000ea0b8ef1",
+            ["text1.txt"] = "1ed1bea44ef268186d9466fef8c033f5",
+            ["text2.txt"] = "6b05236bc40bad49d25cefd53abcf6d5"
+         }
+      },
+      ["utils.lua"] = "2740a510625afafc8fdd367c17452562"
+   }
+}

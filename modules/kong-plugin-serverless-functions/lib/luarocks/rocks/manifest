@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-serverless-functions"] = {
+      ["0.3.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.post-function.handler"] = {
+      "kong-plugin-serverless-functions/0.3.1-0"
+   },
+   ["kong.plugins.post-function.schema"] = {
+      "kong-plugin-serverless-functions/0.3.1-0"
+   },
+   ["kong.plugins.pre-function._handler"] = {
+      "kong-plugin-serverless-functions/0.3.1-0"
+   },
+   ["kong.plugins.pre-function._schema"] = {
+      "kong-plugin-serverless-functions/0.3.1-0"
+   },
+   ["kong.plugins.pre-function.handler"] = {
+      "kong-plugin-serverless-functions/0.3.1-0"
+   },
+   ["kong.plugins.pre-function.schema"] = {
+      "kong-plugin-serverless-functions/0.3.1-0"
+   }
+}
+repository = {
+   ["kong-plugin-serverless-functions"] = {
+      ["0.3.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.post-function.handler"] = "kong/plugins/post-function/handler.lua",
+               ["kong.plugins.post-function.schema"] = "kong/plugins/post-function/schema.lua",
+               ["kong.plugins.pre-function._handler"] = "kong/plugins/pre-function/_handler.lua",
+               ["kong.plugins.pre-function._schema"] = "kong/plugins/pre-function/_schema.lua",
+               ["kong.plugins.pre-function.handler"] = "kong/plugins/pre-function/handler.lua",
+               ["kong.plugins.pre-function.schema"] = "kong/plugins/pre-function/schema.lua"
+            }
+         }
+      }
+   }
+}

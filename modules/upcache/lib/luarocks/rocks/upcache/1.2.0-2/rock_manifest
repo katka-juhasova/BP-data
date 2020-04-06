@@ -1,0 +1,31 @@
+rock_manifest = {
+   lua = {
+      upcache = {
+         ["common.lua"] = "de087a067fabbc508ab38d2737938472",
+         ["lock.lua"] = "eda474749500b8faffa3f21df036cc58",
+         ["map.lua"] = "0f721b6fd1fdee04540ac2856fe79bcd",
+         ["tag.lua"] = "967e4fc1e7ec7a43c68ce21984c98c67",
+         ["vary.lua"] = "811ad8699850f6bd7b4e1abb327ceb18"
+      },
+      ["upcache.lua"] = "7a134a6a5b0d5d3b55ca76927a29ca13"
+   },
+   nginx = {
+      ["README.md"] = "9befbcd5219b4064c0fffd761a447e38",
+      ["conf.d"] = {
+         ["gzip.conf"] = "b216da45bed142b7a7f024f78b2785d6",
+         ["memcached.conf"] = "02edb913635a21891a6919571d47e3f9",
+         ["upcache.conf"] = "8697114ca11ebd0a4f9715556cb46f2e"
+      },
+      ["location.d"] = {
+         ["upcache.conf"] = "0db6cdb29c8ab2370eb9d91900b669f4"
+      },
+      ["nginx.conf"] = "7ed8fbe33e802ececd7be9be8f75a6c9",
+      ["server.d"] = {
+         ["upcache.conf"] = "8640d43eb392c7bb7214a8e9ad6d6649"
+      },
+      sites = {
+         ["sample.conf"] = "06031319325ff2ed4f0443301a658c85"
+      }
+   },
+   ["upcache-1.2.0-2.rockspec"] = "97c48eab6789a14747d2803bd9d55adc"
+}

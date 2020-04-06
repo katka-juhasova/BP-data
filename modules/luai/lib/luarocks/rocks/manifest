@@ -1,0 +1,99 @@
+commands = {}
+dependencies = {
+   luai = {
+      ["1.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["luai.Attribute"] = {
+      "luai/1.0-2"
+   },
+   ["luai.DecisionTree"] = {
+      "luai/1.0-2"
+   },
+   ["luai.Logger"] = {
+      "luai/1.0-2"
+   },
+   ["luai.MLP"] = {
+      "luai/1.0-2"
+   },
+   ["luai.NaiveBayesClassifier"] = {
+      "luai/1.0-2"
+   },
+   ["luai.Record"] = {
+      "luai/1.0-2"
+   },
+   ["luai.TreeNode"] = {
+      "luai/1.0-2"
+   },
+   ["luai.samples.DecisionTreeBot"] = {
+      "luai/1.0-2"
+   },
+   ["luai.samples.GameAgent"] = {
+      "luai/1.0-2"
+   },
+   ["luai.samples.GameUtil"] = {
+      "luai/1.0-2"
+   },
+   ["luai.samples.GameWeapon"] = {
+      "luai/1.0-2"
+   },
+   ["luai.samples.GameWorld"] = {
+      "luai/1.0-2"
+   },
+   ["luai.samples.MLPBot"] = {
+      "luai/1.0-2"
+   },
+   ["luai.samples.NBCBot"] = {
+      "luai/1.0-2"
+   },
+   ["luai.samples.data"] = {
+      "luai/1.0-2"
+   }
+}
+repository = {
+   luai = {
+      ["1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["luai.Attribute"] = "luai/Attribute.lua",
+               ["luai.DecisionTree"] = "luai/DecisionTree.lua",
+               ["luai.Logger"] = "luai/Logger.lua",
+               ["luai.MLP"] = "luai/MLP.lua",
+               ["luai.NaiveBayesClassifier"] = "luai/NaiveBayesClassifier.lua",
+               ["luai.Record"] = "luai/Record.lua",
+               ["luai.TreeNode"] = "luai/TreeNode.lua",
+               ["luai.samples.DecisionTreeBot"] = "luai/samples/DecisionTreeBot.lua",
+               ["luai.samples.GameAgent"] = "luai/samples/GameAgent.lua",
+               ["luai.samples.GameUtil"] = "luai/samples/GameUtil.lua",
+               ["luai.samples.GameWeapon"] = "luai/samples/GameWeapon.lua",
+               ["luai.samples.GameWorld"] = "luai/samples/GameWorld.lua",
+               ["luai.samples.MLPBot"] = "luai/samples/MLPBot.lua",
+               ["luai.samples.NBCBot"] = "luai/samples/NBCBot.lua",
+               ["luai.samples.data"] = "luai/samples/data.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,1 @@
+# kong-signature-and-remove-attr

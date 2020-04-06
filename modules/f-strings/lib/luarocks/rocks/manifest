@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["f-strings"] = {
+      ["0.2-1"] = {}
+   }
+}
+modules = {
+   F = {
+      "f-strings/0.2-1"
+   }
+}
+repository = {
+   ["f-strings"] = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               F = "F.lua"
+            }
+         }
+      }
+   }
+}

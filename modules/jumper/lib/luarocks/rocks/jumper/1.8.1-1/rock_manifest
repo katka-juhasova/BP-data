@@ -1,0 +1,50 @@
+rock_manifest = {
+   docs = {
+      ["index.html"] = "23ca92e4aedf8267ccd5a168435c606f",
+      ["ldoc.css"] = "ebbbc2e14d8843b67204f42b89208aae",
+      modules = {
+         ["jumper.core.bheap.html"] = "6e632fa9cdc9f6d2dfe7abb42744fa11",
+         ["jumper.core.heuristics.html"] = "5ec32e5888fb0f625317fa78d4413252",
+         ["jumper.core.node.html"] = "25a951b0a17e578ce3c41a68bb5db62e",
+         ["jumper.core.path.html"] = "7acf2bfd3caad45ef8ad857102b199ef",
+         ["jumper.grid.html"] = "b46f36d0643ff23a8696b6f79bea7a9b",
+         ["jumper.pathfinder.html"] = "6c6a0eb8bf6fd9f341face9bd86f84d4"
+      },
+      scripts = {
+         ["jumper.search.astar.html"] = "d45b7ef22d5c8466ac92fbea3378a482",
+         ["jumper.search.bfs.html"] = "d975273c484a8ae6b164f548e98d22b4",
+         ["jumper.search.dfs.html"] = "39a0b5cbf31ff2f7d344ec6c959af058",
+         ["jumper.search.dijkstra.html"] = "ea4122ce86a3838908d4aa90ebaae674",
+         ["jumper.search.jps.html"] = "4ddafdd1659ee2ac62b26bc10c8b3f9a",
+         ["jumper.search.thetastar.html"] = "a8288fadc72fc6b7b66422f168db1b61"
+      }
+   },
+   ["jumper-1.8.1-1.rockspec"] = "9c98565d7918fa600b862135e7aa892d",
+   lua = {
+      jumper = {
+         core = {
+            ["bheap.lua"] = "a393747c19ce47b3add4da4885ad9048",
+            ["heuristics.lua"] = "d848998bb97998e625f3a4ae4e2f2751",
+            ["node.lua"] = "b1b0885a1bab1e4caf8bdec7e286dac9",
+            ["path.lua"] = "af5928c7abc874e6391fb833339f62c8"
+         },
+         ["grid.lua"] = "d309c0d51bd861ee410f920b21916608",
+         ["pathfinder.lua"] = "73ca1006889c013633890fa609f734e1",
+         search = {
+            ["astar.lua"] = "2f1517b7182a5d99d2feeb1204d871a2",
+            ["bfs.lua"] = "45709b7b00d564f077640336d437eb65",
+            ["dfs.lua"] = "36547cb02f4d05331da60cbaf2e04765",
+            ["dijkstra.lua"] = "6132dcbebebae8d8fe8bc5e53fc02498",
+            ["jps.lua"] = "4a994699b05f3257c4375e92dc58393e"
+         }
+      }
+   },
+   specs = {
+      ["bheap_specs.lua"] = "6438e344b240618157ed3a7976caad4b",
+      ["grid_specs.lua"] = "46bda6b7584842252597344f19cc106d",
+      ["heuristics_specs.lua"] = "b2708aded90bd0bcbcd4136450a1f309",
+      ["node_specs.lua"] = "0d28af7f1b95e400a8d24ec1e2311050",
+      ["path_specs.lua"] = "290c64d798f3d9e213886ad6972e8c0b",
+      ["pathfinder_specs.lua"] = "ae9bcbac7e0390d8cde40d578bf9df2b"
+   }
+}

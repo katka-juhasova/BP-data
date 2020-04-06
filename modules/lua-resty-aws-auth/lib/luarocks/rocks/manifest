@@ -1,0 +1,144 @@
+commands = {}
+dependencies = {
+   ["lua-erento-hmac"] = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-aws-auth"] = {
+      ["0.12-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-erento-hmac"
+         },
+         {
+            constraints = {},
+            name = "lua-resty-string"
+         }
+      }
+   },
+   ["lua-resty-string"] = {
+      ["0.09-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.aes"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.aws_auth"] = {
+      "lua-resty-aws-auth/0.12-0"
+   },
+   ["resty.hmac"] = {
+      "lua-erento-hmac/1.0-0"
+   },
+   ["resty.md5"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.random"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha1"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha224"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha256"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha384"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.sha512"] = {
+      "lua-resty-string/0.09-0"
+   },
+   ["resty.string"] = {
+      "lua-resty-string/0.09-0"
+   }
+}
+repository = {
+   ["lua-erento-hmac"] = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.hmac"] = "resty/hmac.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-aws-auth"] = {
+      ["0.12-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-erento-hmac"] = "1.0-0",
+               ["lua-resty-string"] = "0.09-0"
+            },
+            modules = {
+               ["resty.aws_auth"] = "resty/aws_auth.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-string"] = {
+      ["0.09-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.aes"] = "resty/aes.lua",
+               ["resty.md5"] = "resty/md5.lua",
+               ["resty.random"] = "resty/random.lua",
+               ["resty.sha"] = "resty/sha.lua",
+               ["resty.sha1"] = "resty/sha1.lua",
+               ["resty.sha224"] = "resty/sha224.lua",
+               ["resty.sha256"] = "resty/sha256.lua",
+               ["resty.sha384"] = "resty/sha384.lua",
+               ["resty.sha512"] = "resty/sha512.lua",
+               ["resty.string"] = "resty/string.lua"
+            }
+         }
+      }
+   }
+}

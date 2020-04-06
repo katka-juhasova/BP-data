@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "b3a2c3e17698620303465625bb35ed1b"
+   },
+   ["kong-aliyun-http-filter-0.0.2-0.rockspec"] = "4270f71591693920d917c7352f2532ec",
+   lua = {
+      kong = {
+         plugins = {
+            ["aliyun-http-filter"] = {
+               ["handler.lua"] = "7581d7b89deb0bc8f176943cfd16ff3c",
+               ["schema.lua"] = "ec664793f37ddddbc4fda16e43210d16"
+            }
+         }
+      }
+   }
+}

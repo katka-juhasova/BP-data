@@ -1,0 +1,140 @@
+commands = {
+   ["resty-auto-ssl/dehydrated"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty-auto-ssl/letsencrypt_hooks"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty-auto-ssl/sockproc"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty-auto-ssl/start_sockproc"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   }
+}
+dependencies = {
+   ["lua-resty-auto-ssl-de"] = {
+      ["0.11.1-1"] = {
+         {
+            constraints = {},
+            name = "lua-resty-http"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.auto-ssl"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.init_master"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.init_worker"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.jobs.renewal"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.servers.challenge"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.servers.hook"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.ssl_certificate"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.ssl_providers.lets_encrypt"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.storage"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.storage_adapters.file"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.storage_adapters.redis"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.utils.run_command"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.utils.shell_execute"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.utils.start_sockproc"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.auto-ssl.vendor.shell"] = {
+      "lua-resty-auto-ssl-de/0.11.1-1"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.15-0"
+   }
+}
+repository = {
+   ["lua-resty-auto-ssl-de"] = {
+      ["0.11.1-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["resty-auto-ssl/dehydrated"] = "resty-auto-ssl/dehydrated",
+               ["resty-auto-ssl/letsencrypt_hooks"] = "resty-auto-ssl/letsencrypt_hooks",
+               ["resty-auto-ssl/sockproc"] = "resty-auto-ssl/sockproc",
+               ["resty-auto-ssl/start_sockproc"] = "resty-auto-ssl/start_sockproc"
+            },
+            dependencies = {
+               ["lua-resty-http"] = "0.15-0"
+            },
+            modules = {
+               ["resty.auto-ssl"] = "resty/auto-ssl.lua",
+               ["resty.auto-ssl.init_master"] = "resty/auto-ssl/init_master.lua",
+               ["resty.auto-ssl.init_worker"] = "resty/auto-ssl/init_worker.lua",
+               ["resty.auto-ssl.jobs.renewal"] = "resty/auto-ssl/jobs/renewal.lua",
+               ["resty.auto-ssl.servers.challenge"] = "resty/auto-ssl/servers/challenge.lua",
+               ["resty.auto-ssl.servers.hook"] = "resty/auto-ssl/servers/hook.lua",
+               ["resty.auto-ssl.ssl_certificate"] = "resty/auto-ssl/ssl_certificate.lua",
+               ["resty.auto-ssl.ssl_providers.lets_encrypt"] = "resty/auto-ssl/ssl_providers/lets_encrypt.lua",
+               ["resty.auto-ssl.storage"] = "resty/auto-ssl/storage.lua",
+               ["resty.auto-ssl.storage_adapters.file"] = "resty/auto-ssl/storage_adapters/file.lua",
+               ["resty.auto-ssl.storage_adapters.redis"] = "resty/auto-ssl/storage_adapters/redis.lua",
+               ["resty.auto-ssl.utils.run_command"] = "resty/auto-ssl/utils/run_command.lua",
+               ["resty.auto-ssl.utils.shell_execute"] = "resty/auto-ssl/utils/shell_execute.lua",
+               ["resty.auto-ssl.utils.start_sockproc"] = "resty/auto-ssl/utils/start_sockproc.lua",
+               ["resty.auto-ssl.vendor.shell"] = "resty/auto-ssl/vendor/shell.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   }
+}

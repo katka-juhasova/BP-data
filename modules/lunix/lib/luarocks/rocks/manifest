@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   lunix = {
+      ["20170920-1"] = {}
+   }
+}
+modules = {
+   unix = {
+      "lunix/20170920-1"
+   }
+}
+repository = {
+   lunix = {
+      ["20170920-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               unix = "unix.so"
+            }
+         }
+      }
+   }
+}

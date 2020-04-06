@@ -1,0 +1,29 @@
+rock_manifest = {
+   bin = {
+      ["lua-mud-read"] = "5cf697783a3c4e169f29623a50819a99",
+      ["lua-mud-rulebuilder"] = "b12d3a256592260b2c8c15416dcc82aa"
+   },
+   doc = {
+      ["draft-ietf-netmod-acl-model-19.txt"] = "18284c1cb58e1f6ce88b2ca3d7d407c3"
+   },
+   lua = {
+      mud = {
+         Makefile = "718343fdb2e63af54a81543277b774a6",
+         ["mud-cli-match.lua"] = "0da3c5bc3adb3eda6ba4b0c1e9828551",
+         ["mud-cli-read.lua"] = "5b534945db4b8a0d963240a6145ed5ed",
+         ["mud-cli-rulebuilder.lua"] = "8bd97616690896a84fd9ebbdbd55acc6",
+         ["mud.lua"] = "4bd63069bcf040c0aa5adb49507b90ea",
+         rulebuilders = {
+            ["iptables.lua"] = "66998842692c1114978a181a659a6e42",
+            ["nftables.lua"] = "75e35af5a16f0100ce5103fe03ec2696"
+         },
+         yang = {
+            ["basic_types.lua"] = "a9ab107887b1a3f065085344a600668e",
+            ["complex_types.lua"] = "5a40f07ca36fa4b575425420262c3cd2",
+            ["util.lua"] = "7c0c9ff812c28e9daf6077c3c8ac3aec"
+         },
+         ["yang.lua"] = "caceada9950ce6953a02a9e8c5b9d533"
+      }
+   },
+   ["lua-mud-0.2-1.rockspec"] = "20c0c2097519434cc6f2084f15a8e1cb"
+}

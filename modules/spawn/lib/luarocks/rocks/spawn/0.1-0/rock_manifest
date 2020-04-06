@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "087871555f81354069d14b0d925e0baf",
+      ["README.md"] = "ceaff51b045be79dfd1d49df52a6962d"
+   },
+   lib = {
+      spawn = {
+         ["posix.so"] = "aca838bd60573ad826e5dd5c1fe55b1a"
+      }
+   },
+   lua = {
+      spawn = {
+         ["init.lua"] = "222b41ae7e0014c06d31d4eccdf3d1df",
+         ["wait.lua"] = "4f86bd01482b9d21b73bf916a9c86d68"
+      }
+   },
+   ["spawn-0.1-0.rockspec"] = "f933551138022bcb90977e538a34b93a"
+}

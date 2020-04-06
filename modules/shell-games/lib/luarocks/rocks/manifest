@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["shell-games"] = {
+      ["1.1.0-1"] = {}
+   }
+}
+modules = {
+   ["shell-games"] = {
+      "shell-games/1.1.0-1"
+   }
+}
+repository = {
+   ["shell-games"] = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["shell-games"] = "shell-games.lua"
+            }
+         }
+      }
+   }
+}

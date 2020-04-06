@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["oauth-token-validate"] = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.oauth-token-validate.handler"] = {
+      "oauth-token-validate/1.1-1"
+   },
+   ["kong.plugins.oauth-token-validate.schema"] = {
+      "oauth-token-validate/1.1-1"
+   }
+}
+repository = {
+   ["oauth-token-validate"] = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.oauth-token-validate.handler"] = "kong/plugins/oauth-token-validate/handler.lua",
+               ["kong.plugins.oauth-token-validate.schema"] = "kong/plugins/oauth-token-validate/schema.lua"
+            }
+         }
+      }
+   }
+}

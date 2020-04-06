@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   classyng = {
+      ["0.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   classyng = {
+      "classyng/0.3-1"
+   }
+}
+repository = {
+   classyng = {
+      ["0.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               classyng = "classyng.lua"
+            }
+         }
+      }
+   }
+}

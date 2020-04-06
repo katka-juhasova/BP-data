@@ -1,0 +1,61 @@
+commands = {}
+dependencies = {
+   ["lua-resty-healthcheck-snz1"] = {
+      ["0.3.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 3, 1, string = "0.3.1"
+                  }
+               }
+            },
+            name = "lua-resty-worker-events"
+         }
+      }
+   },
+   ["lua-resty-worker-events"] = {
+      ["0.3.1-1"] = {}
+   }
+}
+modules = {
+   ["resty.healthcheck"] = {
+      "lua-resty-healthcheck-snz1/0.3.1-1"
+   },
+   ["resty.healthcheck.utils"] = {
+      "lua-resty-healthcheck-snz1/0.3.1-1"
+   },
+   ["resty.worker.events"] = {
+      "lua-resty-worker-events/0.3.1-1"
+   }
+}
+repository = {
+   ["lua-resty-healthcheck-snz1"] = {
+      ["0.3.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-worker-events"] = "0.3.1-1"
+            },
+            modules = {
+               ["resty.healthcheck"] = "resty/healthcheck.lua",
+               ["resty.healthcheck.utils"] = "resty/healthcheck/utils.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-worker-events"] = {
+      ["0.3.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.worker.events"] = "resty/worker/events.lua"
+            }
+         }
+      }
+   }
+}

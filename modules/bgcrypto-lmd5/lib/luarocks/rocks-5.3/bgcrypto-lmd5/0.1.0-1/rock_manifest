@@ -1,0 +1,16 @@
+rock_manifest = {
+   ["bgcrypto-lmd5-0.1.0-1.rockspec"] = "b48b61e433c683d2733407fbadbc8644",
+   doc = {
+      LICENSE = "53f348c197f4273cc2b34e0df327dde7",
+      ["README.md"] = "a50605cb23d43cb5e090c05805e21e3e"
+   },
+   lua = {
+      bgcrypto = {
+         ["md5.lua"] = "94bed9c62292aaf5fe8ee64319d17cee",
+         private = {
+            ["digest.lua"] = "c16e28bd78584720df54cc4de840a57c"
+         },
+         ["ripemd160.lua"] = "ff54a444852eeabc37cda6dfc8a61528"
+      }
+   }
+}

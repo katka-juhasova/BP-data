@@ -1,0 +1,22 @@
+rock_manifest = {
+   ["copas-2.0.0-1.rockspec"] = "6fcf5b046026a590bd2e8306a1f3c938",
+   doc = {
+      us = {
+         ["copas.png"] = "246f076e04d89aae3b4e771c04033e5f",
+         ["doc.css"] = "d0a913514fb190240b3b4033d105cbc0",
+         ["index.html"] = "bf341b1aa2e04c36af4a89315af196bc",
+         ["license.html"] = "05544f61d00372ff00e787daa31ed569",
+         ["manual.html"] = "409da02596db0d82863ccd56c0779c05",
+         ["reference.html"] = "ce322022e2cb5791a958e5a90e255c71"
+      }
+   },
+   lua = {
+      copas = {
+         ["ftp.lua"] = "59ab5010cd86de8989d67787c1821f47",
+         ["http.lua"] = "08d8f1bf9857d972779d6ab47be52d82",
+         ["limit.lua"] = "7a409c8248ca2539b65693e25b30fa9e",
+         ["smtp.lua"] = "5605eda931a48810132bc7b08efa82e2"
+      },
+      ["copas.lua"] = "a89947cbded42d7807e6151fbcc31417"
+   }
+}

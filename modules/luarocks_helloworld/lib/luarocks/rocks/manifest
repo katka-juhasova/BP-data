@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   luarocks_helloworld = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   apple = {
+      "luarocks_helloworld/1.0-1"
+   }
+}
+repository = {
+   luarocks_helloworld = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               apple = "apple.lua"
+            }
+         }
+      }
+   }
+}

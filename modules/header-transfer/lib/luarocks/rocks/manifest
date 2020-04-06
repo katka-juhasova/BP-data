@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["header-transfer"] = {
+      ["0.0.2-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.header-transfer.access"] = {
+      "header-transfer/0.0.2-1"
+   },
+   ["kong.plugins.header-transfer.handler"] = {
+      "header-transfer/0.0.2-1"
+   },
+   ["kong.plugins.header-transfer.schema"] = {
+      "header-transfer/0.0.2-1"
+   }
+}
+repository = {
+   ["header-transfer"] = {
+      ["0.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.header-transfer.access"] = "kong/plugins/header-transfer/access.lua",
+               ["kong.plugins.header-transfer.handler"] = "kong/plugins/header-transfer/handler.lua",
+               ["kong.plugins.header-transfer.schema"] = "kong/plugins/header-transfer/schema.lua"
+            }
+         }
+      }
+   }
+}

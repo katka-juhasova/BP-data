@@ -1,0 +1,240 @@
+luaprompt
+
+Copyright (C) 2012-2015 Dimitris Papavasileiou <dpapavas@gmail.com>
+
+luaprompt is both an interactive Lua prompt that can be used instead
+of the official interpreter, as well as a module that provides a Lua
+command prompt that can be embedded in a host application.  As a
+standalone interpreter it provides many conveniences that are missing
+from the official Lua interpreter.  As an embedded prompt, it's meant
+for applications that use Lua as a configuration or interface language
+and can therefore benefit from an interactive prompt for debugging or
+regular use.
+
+luaprompt features:
+
+* Readline-based input with history and completion: In particular all
+  keywords, global variables and table accesses (with string or
+  integer keys) can be completed in addition to readline's standard
+  file completion.  Module names are also completed, for modules
+  installed in the standard directories, and completed modules can
+  optionally be loaded.
+
+* Persistent command history (retained across sessions), as well as
+  recording of command results for future reference.
+
+* Proper value pretty-printing for interactive use: When an expression
+  is entered at the prompt, all returned values are printed
+  (prepending with an equal sign is not required).  Values are printed
+  in a descriptive way that tries to be as readable as possible.  The
+  formatting tries to mimic Lua code (this is done to minimize
+  ambiguities and no guarantees are made that it is valid code).
+
+* Color highlighting of error messages and variable printouts.
+
+Installation
+============
+
+luaprompt is available as a rock.  It can be installed via LuaRocks with:
+
+    luarocks install luaprompt
+
+Alternatively, you can customize the behavior as described in the
+"Configuration" section.  Start by downloading and unpacking the
+sources with:
+
+    luarocks unpack luaprompt
+
+Change to the directory it was downloaded to, edit the rockspec file
+to add, remove or change the default configuration macros, and then
+build and install with:
+
+    luarocks make <rockspec-file>
+
+Standalone usage
+================
+
+Besides the luaprompt module, the rock contains a standalone
+interpreter based on luaprompt. It tries to mimic the standard Lua
+interpreter as much as possible (currently only the -E flag is not
+supported) while providing the extra set of features described above.
+          
+To invoke the interpreter, simply type "luap" instead of "lua" on the
+command line.
+
+The prompt module
+=================
+     
+Using the module is pretty straightforward, as it essentially wraps
+the calls described in the section on embedding luaprompt below.  This
+functionality is available, either in variables which can be set or
+queried, or in Lua functions.  An example session, which covers
+everything and should be self-explanatory, follows:
+
+> prompt = require "prompt"
+> prompt.colorize = true
+> prompt.name = "myprompt"
+> prompt.history = "/tmp/.myprompt_history"
+> prompt.prompts = {"%  ", "%% "}
+> prompt.enter()
+%   _G[nil] = 
+%% nil
+myprompt:2: table index is nil
+
+Stack trace:
+	#0 [C]: in function '__newindex'
+	#1 myprompt:2: in the main chunk
+	#2 [C]: in function 'enter'
+	#3 stdin:1: in the main chunk
+	#4 [C]: in function ?
+
+% ^D 
+>
+
+One can also use just the pretty-printer of luaprompt, by calling
+prompt.describe, which returns a string with a pretty print-out of the
+argument.  For example:
+
+> =prompt.describe(coroutine)
+{ 
+  create = <function: 0x41a8b0>,
+  yield = <function: 0x41a630>,
+  wrap = <function: 0x41a910>,
+  running = <function: 0x41a890>,
+  resume = <function: 0x41a9e0>,
+  status = <function: 0x41a770>,
+}
+
+Configuration
+=============
+
+You can customize luaprompts command line interface, as it is based on
+GNU Readline.  This includes the ability to change behavior, such as
+how completion is performed, define additional keybindings or redefine
+existing ones, define custom macros and other possibilities.  It is
+therefore highly recommended to consult the Readline's documentation
+for more information.
+
+Note that luaprompt sets its application name, so that you can have
+custom Readline configuration, that will be effective for luaprompt
+only (thus not affecting every other Readline-enabled application on
+your system).  You can achieve that using $if ... $endif conditional
+constructs within Readline's initialization file.  Again, see
+Readline's documentation for more information.
+
+At build time, you can use several macros in order to configure
+luaprompt's functionality, by defining them in your Makefile.  For
+instance, to pass the macro MACRO_NAME to the compiler, simply add
+-DMACRO_NAME, or -DMACRO_WITH_VALUE=\"value\" to the compile flags.
+
+The following macros control auto-completion:
+
+COMPLETE_KEYWORDS:       Keywords such as for, while, etc
+COMPLETE_MODULES:        Module names
+COMPLETE_TABLE_KEYS:     Table keys, including global variables
+COMPLETE_METATABLE_KEYS: Keys in the __index metafield, if it
+                         exists and is a table
+COMPLETE_FILE_NAMES:     File names
+
+Define SAVE_RESULTS to enable tracking of results.  When enabled each
+returned value, that is, each value the prompt prints out, is also
+added to a table for future reference.
+
+The name of the table holding the results can be configured by
+defining RESULTS_TABLE_NAME to the desired table name (as a C string).
+
+The table holding the results, can also be made to have weak values,
+so as not to interfere with garbage collection.  To enable this,
+define WEAK_RESULTS.
+
+Uncomment the following line and customize the prefix as desired to
+
+You can keep the auto-completer from considering certain table keys
+(and hence global variables) for completion, based on their prefix.
+To enable this behavior, define HIDDEN_KEY_PREFIX to the desired
+prefix (as a C string).
+
+When completing certain kinds of values, such as tables or
+functions, the completer also appends certain useful suffixes such
+as '.', '[' or '('. Normally these are appended only when the
+value's name has already been fully entered, or previously fully
+completed, so that one can still complete the name without the
+suffix.  In order to append the suffix, one then only has to press
+the completion key one more time.
+
+Define ALWAYS_APPEND_SUFFIXES to make the completer always append
+these suffixes.
+
+The autocompleter can complete module names, as if they were already
+require'd and available as a global variable.  Once the module name is
+fully completed, a further tab press loads the module and exports it
+as a global variable so that all further tab-completions now apply to
+the module's table.
+
+You can disable this functionality, by defining NO_MODULE_LOAD.
+Module names will then only be completed inside strings (for use with
+require).
+
+To make the auto-completer ask for confirmation before loading or
+globalizing a module, define CONFIRM_MODULE_LOAD.
+
+Embedded Usage
+==============
+
+To embed luaprompt into a host application, simply compile and link
+prompt.c with your sources.  A POSIX environment is assumed and GNU
+Readline is required for proper command line editing.  If it is
+provided, you should define the macros HAVE_LIBREADLINE and
+HAVE_READLINE_HISTORY.  You should also define HAVE_IOCTL, unless your
+environment doesn't support the TIOCGWINSZ ioctl call to get the
+terminal width.
+
+The API is very simple:
+
+void luap_enter (lua_State *L)
+Call this to begin an interactive session.  The session can be
+terminated with Ctrl-D.
+
+void luap_setname (lua_State *L, const char *name)
+Set the name of the application.  This is basically the chunk name
+displayed with error messages.  The default program name is "lua".
+
+void luap_setprompts (lua_State *L, const char *single, char *multi)
+Provide two prompts, one for single-line and one for multi-line
+input. The defaults prompts are "> " and ">> ".
+
+void luap_sethistory (lua_State *L, const char *file) Set the file to
+be used to perist the command history across sessions.  If this
+function isn't called the command history is lost on session exit.
+Note that the provided name is used as-is, that is, it is not expanded
+as if it was entered at the shell so you cannot use a string of the
+form "~/.lua_history" for example.
+
+void luap_setcolor (lua_State *L, int enable)
+Setting enable to zero disables color output.  Color output is enabled
+by default if the output has not been redirected to a file or pipe.
+
+There are also matching luap_get* calls, which work much like you'd
+expect them to:
+
+void luap_getprompts(lua_State *L, const char **single, const char **multi)
+void luap_gethistory(lua_State *L, const char **file)
+void luap_getcolor(lua_State *L, int *enabled)
+void luap_getname(lua_State *L, const char **name)
+
+In addition to the above the following calls, which are meant for
+internal use can be used by the host application as well if required.
+
+char *luap_describe (lua_State *L, int index)
+Returns a string with a human-readable serialization of the value at
+the specified index.
+
+int luap_call (lua_State *L, int n)
+Calls a function with n arguments and provides a stack trace on error.
+This is equivalent to calling lua_pcall with LUA_MULTRET.
+
+License
+=======
+
+luaprompt is released under the terms and conditions of the MIT/X11
+license.  See the LICENSE file for details.

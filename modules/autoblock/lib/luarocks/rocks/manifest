@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   autoblock = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.autoblock.handler"] = {
+      "autoblock/0.1.0-1"
+   },
+   ["kong.plugins.autoblock.schema"] = {
+      "autoblock/0.1.0-1"
+   }
+}
+repository = {
+   autoblock = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.autoblock.handler"] = "kong/plugins/autoblock/handler.lua",
+               ["kong.plugins.autoblock.schema"] = "kong/plugins/autoblock/schema.lua"
+            }
+         }
+      }
+   }
+}

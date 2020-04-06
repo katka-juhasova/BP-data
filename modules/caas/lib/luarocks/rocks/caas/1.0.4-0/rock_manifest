@@ -1,0 +1,16 @@
+rock_manifest = {
+   bin = {
+      caas = "c80d09507d04da0c2737b9097a3ca50a"
+   },
+   ["caas-1.0.4-0.rockspec"] = "96523229ade6c65b85fde86d93454d05",
+   doc = {
+      ["Readme.md"] = "c77f7080a2a39f9db43fd19f5598e324"
+   },
+   lua = {
+      caas = {
+         ["jobs.lua"] = "0d66ad65f53a2f31e042890625ead73e",
+         ["luvhttpd.lua"] = "03205d9fafe547fde8dc94ac9cc1c349",
+         ["persistence.lua"] = "b978f487b3a075ac76270ebabc347726"
+      }
+   }
+}

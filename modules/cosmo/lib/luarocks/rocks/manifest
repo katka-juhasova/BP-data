@@ -1,0 +1,81 @@
+commands = {}
+dependencies = {
+   cosmo = {
+      ["16.06.04-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 9, string = "0.9"
+                  }
+               }
+            },
+            name = "lpeg"
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cosmo = {
+      "cosmo/16.06.04-1"
+   },
+   ["cosmo.fill"] = {
+      "cosmo/16.06.04-1"
+   },
+   ["cosmo.grammar"] = {
+      "cosmo/16.06.04-1"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   cosmo = {
+      ["16.06.04-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               cosmo = "cosmo.lua",
+               ["cosmo.fill"] = "cosmo/fill.lua",
+               ["cosmo.grammar"] = "cosmo/grammar.lua"
+            }
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   }
+}

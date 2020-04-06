@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-xml-threat-protection"] = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.xml-threat-protection.handler"] = {
+      "kong-plugin-xml-threat-protection/1.0-0"
+   },
+   ["kong.plugins.xml-threat-protection.schema"] = {
+      "kong-plugin-xml-threat-protection/1.0-0"
+   },
+   ["kong.plugins.xml-threat-protection.xml_validator"] = {
+      "kong-plugin-xml-threat-protection/1.0-0"
+   }
+}
+repository = {
+   ["kong-plugin-xml-threat-protection"] = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.xml-threat-protection.handler"] = "kong/plugins/xml-threat-protection/handler.lua",
+               ["kong.plugins.xml-threat-protection.schema"] = "kong/plugins/xml-threat-protection/schema.lua",
+               ["kong.plugins.xml-threat-protection.xml_validator"] = "kong/plugins/xml-threat-protection/xml_validator.lua"
+            }
+         }
+      }
+   }
+}

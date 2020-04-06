@@ -1,0 +1,15 @@
+rock_manifest = {
+   ["deimos-1.0-1.rockspec"] = "20deee6517cf223430f15c98e1fddf1b",
+   doc = {
+      LICENSE = "bbe2a801b123a4bb9cf35fe914325d74"
+   },
+   lua = {
+      deimos = {
+         ["array.lua"] = "ce3ddda83b2d28a3db9623170d82e01a",
+         ["class.lua"] = "0647bf935f56f7cf16f73f1cffd473b4",
+         ["hash.lua"] = "07c5beeb002443a851409d3d46619215",
+         ["utility.lua"] = "1e7cafdeb251d3f7c736910839b2b784"
+      },
+      ["deimos.lua"] = "3f3545b87bba59abfa41e443d36a5493"
+   }
+}

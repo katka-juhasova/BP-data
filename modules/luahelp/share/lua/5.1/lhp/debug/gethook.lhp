@@ -1,0 +1,9 @@
+Help [[
+
+debug.gethook ([thread])
+------------------------
+
+  Returns the current hook settings of the thread, as three values: the
+  current hook function, the current hook mask, and the current hook count (as
+  set by the `debug.sethook` function).
+]]

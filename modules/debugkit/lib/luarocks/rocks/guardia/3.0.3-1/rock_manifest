@@ -1,0 +1,25 @@
+rock_manifest = {
+   docs = {
+      ["changelog.md"] = "11ebf4fb1bfa53b40ee940b6425c4748",
+      examples = {
+         ["core.md"] = "070e45c55adc6870d5d911e3a4061ec1",
+         ["simple-type-checking.md"] = "0343c4de91a62024ff561e03496d3386"
+      },
+      ["index.md"] = "2857bbdb404a430baf5be8ba355df1d1",
+      manual = {
+         ["core.md"] = "1e28b98011083dc08a3a460b0e724b96",
+         ["guards.md"] = "3b92e78d17329164242376c2dd6ff8cb"
+      },
+      module = {
+         ["guardia.guards.md"] = "f1b3ab5987a63e44670a08faa09ff352",
+         ["guardia.init.md"] = "e3f161ba8e9acc109e50b8ca64fc6260"
+      }
+   },
+   ["guardia-3.0.3-1.rockspec"] = "bbee84181de21d3e2c9559333f55ad34",
+   lua = {
+      guardia = {
+         ["guards.lua"] = "dfb9c7b66e2311b8b8cb5dd95fc45469",
+         ["init.lua"] = "a63ebdf9795c28c5553314254cd19e0a"
+      }
+   }
+}

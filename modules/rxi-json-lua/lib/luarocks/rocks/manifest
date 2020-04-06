@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   ["rxi-json-lua"] = {
+      ["e1dbe93-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["rxi-json-lua"] = {
+      "rxi-json-lua/e1dbe93-0"
+   }
+}
+repository = {
+   ["rxi-json-lua"] = {
+      ["e1dbe93-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["rxi-json-lua"] = "rxi-json-lua.lua"
+            }
+         }
+      }
+   }
+}

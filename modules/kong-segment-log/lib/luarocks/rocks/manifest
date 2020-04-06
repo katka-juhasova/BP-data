@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["kong-segment-log"] = {
+      ["1.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.segment-log.handler"] = {
+      "kong-segment-log/1.2.0-1"
+   },
+   ["kong.plugins.segment-log.jwt_parser"] = {
+      "kong-segment-log/1.2.0-1"
+   },
+   ["kong.plugins.segment-log.schema"] = {
+      "kong-segment-log/1.2.0-1"
+   }
+}
+repository = {
+   ["kong-segment-log"] = {
+      ["1.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.segment-log.handler"] = "kong/plugins/segment-log/handler.lua",
+               ["kong.plugins.segment-log.jwt_parser"] = "kong/plugins/segment-log/jwt_parser.lua",
+               ["kong.plugins.segment-log.schema"] = "kong/plugins/segment-log/schema.lua"
+            }
+         }
+      }
+   }
+}

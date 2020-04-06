@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   ljndpi = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ndpi = {
+      "ljndpi/0.1.0-1"
+   },
+   ["ndpi.c"] = {
+      "ljndpi/0.1.0-1"
+   },
+   ["ndpi.protocol_bitmask"] = {
+      "ljndpi/0.1.0-1"
+   },
+   ["ndpi.protocol_ids_1_7"] = {
+      "ljndpi/0.1.0-1"
+   },
+   ["ndpi.protocol_ids_1_8"] = {
+      "ljndpi/0.1.0-1"
+   },
+   ["ndpi.wrap"] = {
+      "ljndpi/0.1.0-1"
+   }
+}
+repository = {
+   ljndpi = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ndpi = "ndpi.lua",
+               ["ndpi.c"] = "ndpi/c.lua",
+               ["ndpi.protocol_bitmask"] = "ndpi/protocol_bitmask.lua",
+               ["ndpi.protocol_ids_1_7"] = "ndpi/protocol_ids_1_7.lua",
+               ["ndpi.protocol_ids_1_8"] = "ndpi/protocol_ids_1_8.lua",
+               ["ndpi.wrap"] = "ndpi/wrap.lua"
+            }
+         }
+      }
+   }
+}

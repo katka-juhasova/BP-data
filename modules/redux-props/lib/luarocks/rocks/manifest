@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["redux-props"] = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["redux-props.component"] = {
+      "redux-props/0.2.0-1"
+   },
+   ["redux-props.connect"] = {
+      "redux-props/0.2.0-1"
+   },
+   ["redux-props.provider"] = {
+      "redux-props/0.2.0-1"
+   }
+}
+repository = {
+   ["redux-props"] = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["redux-props.component"] = "redux-props/component.lua",
+               ["redux-props.connect"] = "redux-props/connect.lua",
+               ["redux-props.provider"] = "redux-props/provider.lua"
+            }
+         }
+      }
+   }
+}

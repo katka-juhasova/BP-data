@@ -1,0 +1,77 @@
+commands = {}
+dependencies = {
+   ["dromozoa-serializer"] = {
+      ["1.5-1"] = {}
+   }
+}
+modules = {
+   ["dromozoa.serializer"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.decode"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.decode_v1"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.decode_v2"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.encode"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.encode_v1"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.encode_v2"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.equal"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.read"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.read_v1"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.read_v2"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.write"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.write_v1"] = {
+      "dromozoa-serializer/1.5-1"
+   },
+   ["dromozoa.serializer.write_v2"] = {
+      "dromozoa-serializer/1.5-1"
+   }
+}
+repository = {
+   ["dromozoa-serializer"] = {
+      ["1.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["dromozoa.serializer"] = "dromozoa/serializer.lua",
+               ["dromozoa.serializer.decode"] = "dromozoa/serializer/decode.lua",
+               ["dromozoa.serializer.decode_v1"] = "dromozoa/serializer/decode_v1.lua",
+               ["dromozoa.serializer.decode_v2"] = "dromozoa/serializer/decode_v2.lua",
+               ["dromozoa.serializer.encode"] = "dromozoa/serializer/encode.lua",
+               ["dromozoa.serializer.encode_v1"] = "dromozoa/serializer/encode_v1.lua",
+               ["dromozoa.serializer.encode_v2"] = "dromozoa/serializer/encode_v2.lua",
+               ["dromozoa.serializer.equal"] = "dromozoa/serializer/equal.lua",
+               ["dromozoa.serializer.read"] = "dromozoa/serializer/read.lua",
+               ["dromozoa.serializer.read_v1"] = "dromozoa/serializer/read_v1.lua",
+               ["dromozoa.serializer.read_v2"] = "dromozoa/serializer/read_v2.lua",
+               ["dromozoa.serializer.write"] = "dromozoa/serializer/write.lua",
+               ["dromozoa.serializer.write_v1"] = "dromozoa/serializer/write_v1.lua",
+               ["dromozoa.serializer.write_v2"] = "dromozoa/serializer/write_v2.lua"
+            }
+         }
+      }
+   }
+}

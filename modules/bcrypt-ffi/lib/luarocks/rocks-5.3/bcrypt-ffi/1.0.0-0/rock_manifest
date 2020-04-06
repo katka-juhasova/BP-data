@@ -1,0 +1,13 @@
+rock_manifest = {
+   ["bcrypt-ffi-1.0.0-0.rockspec"] = "7a31918abd27b699f39f47fbfbff9170",
+   doc = {
+      LICENSE = "669079c098645439a5c2a2e2ac2cb571",
+      ["README.md"] = "5fb0ec3d6b0fe1056720dfb68193781b"
+   },
+   lib = {
+      ["libluabcrypt.so"] = "61d4cb1a4674f4c6a93ead52101b1ad8"
+   },
+   lua = {
+      ["bcrypt.lua"] = "509d0c1b419b5e6324814106be3733ff"
+   }
+}

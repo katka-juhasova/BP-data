@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   stringdistance = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   stringdistance = {
+      "stringdistance/1.1.0-1"
+   }
+}
+repository = {
+   stringdistance = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               stringdistance = "stringdistance.so"
+            }
+         }
+      }
+   }
+}

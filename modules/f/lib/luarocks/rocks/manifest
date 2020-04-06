@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   f = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   f = {
+      "f/0.1.0-1"
+   },
+   ["f.string"] = {
+      "f/0.1.0-1"
+   },
+   ["f.table"] = {
+      "f/0.1.0-1"
+   }
+}
+repository = {
+   f = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               f = "f/init.lua",
+               ["f.string"] = "f/string.lua",
+               ["f.table"] = "f/table.lua"
+            }
+         }
+      }
+   }
+}

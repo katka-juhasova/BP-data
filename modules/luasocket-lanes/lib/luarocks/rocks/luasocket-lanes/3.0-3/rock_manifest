@@ -1,0 +1,120 @@
+rock_manifest = {
+   doc = {
+      ["dns.html"] = "5203a5aaf47dbfdc1253ce4005374f9f",
+      ["ftp.html"] = "c197a7c2ef823106a4f0b0fd52f7d37e",
+      ["http.html"] = "c1bbe1e861e84f2ee5aae4635ae1cd3b",
+      ["index.html"] = "6cee258eb1d55afc78735b39f784d6b0",
+      ["installation.html"] = "6a3b3480c7bd22010e179e400b8e3c15",
+      ["introduction.html"] = "0fca35966da7c54cdba20da1b87d42b3",
+      ["ltn12.html"] = "622810b8db8986e214dead2146a6b994",
+      ["lua05.ppt"] = "138887c05687da1628f40d2193583ce3",
+      ["luasocket.png"] = "6d494f2e2c4d6b7698bbddb3ea8069af",
+      ["mime.html"] = "a59324fa55bf6e90913641f893a995cd",
+      ["reference.css"] = "f764a8e501c02f0f2c3a39d0736d1eae",
+      ["reference.html"] = "4e62045008e8411cb2822e52544e9045",
+      ["smtp.html"] = "59fc6edb8b6191d39843bcaa8e598cde",
+      ["socket.html"] = "1d100e51010027a4dfb8394af8d5c55f",
+      ["tcp.html"] = "b3d5ebb95aa85972b88bca7a4cda6710",
+      ["udp.html"] = "2eaa8a365da8e06ad5ca90122ca55f8f",
+      ["url.html"] = "973c726b0ee6d509ad38704529f4497e"
+   },
+   etc = {
+      README = "8462da5ab3408c46a1fbe28e4e0d584a",
+      ["b64.lua"] = "7579b4b4a02f7f1d22490c8d9beed2bf",
+      ["check-links.lua"] = "9de4443d53a11364f6e04d4f12eef939",
+      ["check-memory.lua"] = "dff5b86b54c0324d67f936586f34b275",
+      ["cookie.lua"] = "4a2f0c6b6ca6fb5d3f71680060caa1a7",
+      ["dict.lua"] = "69fe71f1f0dda94a93177490058edca3",
+      ["dispatch.lua"] = "985c7ed039c77e03fd49e0c3bb412f31",
+      ["eol.lua"] = "2f07dcdaeac84699bf9706038c97f953",
+      ["forward.lua"] = "4c704ca815beac88be911f157f07222a",
+      ["get.lua"] = "2d2fdb1758c57308dad83f1b99a9c1da",
+      links = "93b1847bc705949479171f8e736882a2",
+      ["lp.lua"] = "7c39cb582267454db39d87d93759278b",
+      ["qp.lua"] = "622a0826e5fae31a22af42ae8e19be09",
+      ["tftp.lua"] = "02abb556055bdda78e6a56c3485c8537"
+   },
+   lib = {
+      ["mime-lanes"] = {
+         ["core.so"] = "a874021af599ddf16925f23ad9068263"
+      },
+      ["socket-lanes"] = {
+         ["core.so"] = "fa7581d2caac9258a7eda46cdd4e9989",
+         ["serial.so"] = "725c7bda86d5ff2f1640fdf67cb4d80c",
+         ["unix.so"] = "d66e911f62ee91b244d84bce548eb46b"
+      }
+   },
+   lua = {
+      ["ltn12-lanes.lua"] = "edef8753511326398c641481d200fc44",
+      ["mime-lanes.lua"] = "e59faab1a91a7ad9caa128b5602475fc",
+      ["socket-lanes"] = {
+         ["ftp.lua"] = "789eadbf9f8a5acb8f6a2d4cc645d05a",
+         ["headers.lua"] = "78f62c472e3c67bfff3ede1c2620d780",
+         ["http.lua"] = "1673f2c9c1e2fe011b744c63f3aa6749",
+         ["smtp.lua"] = "e3fe4c8f51a1f4803a305c15402db3be",
+         ["tp.lua"] = "c4db690beae97d7d36e526a9be1d1411",
+         ["url.lua"] = "7676a1bdf43f2632ba5b97079f404a88"
+      },
+      ["socket-lanes.lua"] = "b821367e1df5a2267a19b669b3d549d0"
+   },
+   ["luasocket-lanes-3.0-3.rockspec"] = "463364ecf6f235bd381d2c3a61ad23d7",
+   samples = {
+      README = "603ecb1020c14ed947d7efb4afd6d27e",
+      ["cddb.lua"] = "b8270830ed7a49f35f58b6b7fc2982ab",
+      ["daytimeclnt.lua"] = "f48047001c337309c2deea9171a5ee6a",
+      ["echoclnt.lua"] = "65300240b2a6e97d457fe8bb5895d1f0",
+      ["echosrvr.lua"] = "6b5996b7ada179df29d172f4ebbd9040",
+      ["listener.lua"] = "37d434b11e9276eb2bf557135b922eef",
+      ["lpr.lua"] = "b3cbcba12885461d9bbbf591c9c4072b",
+      ["mclisten.lua"] = "d0e8e160a503cf6ac54aff95b7e205e2",
+      ["mcsend.lua"] = "c39285af1878c6ad6e1844c8dc2435b3",
+      ["talker.lua"] = "eb3885d5b2129e03f5147e5c32bb6454",
+      ["tinyirc.lua"] = "d4f792fe517ed7c0e18e59d49c2a755e"
+   },
+   test = {
+      README = "514370fb3bc2b5e7048c29862cca62d4",
+      auth = {
+         [".htpasswd"] = "4e1daa84a24bc83c7946e83ad926a2dd",
+         ["index.html"] = "7e660b8b5a91cf72db43cd15fa1365e9"
+      },
+      cgi = {
+         cat = "4729ebfdf7407fa9ff82ee78d5d4b794",
+         ["cat-index-html"] = "6035b86c1df3c3f9fa68590060c168e9",
+         env = "9c7c6e4f82947b317e09aebdc42c9e4a",
+         ["query-string"] = "505856d5d2a8ebd002c52e4654c5f8d7",
+         ["redirect-loop"] = "dc798184f9816d90444e4ca8669b4f4c",
+         ["request-uri"] = "635e9772b16adb661e6bd90a3c932f55"
+      },
+      ["dicttest.lua"] = "3d1b036a8e8b5b652627c0f54b937886",
+      ["excepttest.lua"] = "14c3844090aeda45647399de2179ae23",
+      ["find-connect-limit"] = "c846ac0b71c644c67959f5011e261dd7",
+      ["ftptest.lua"] = "6efc8a51125dd532571bd4291f727500",
+      ["hello.lua"] = "2f57dde140eaaf06a454accd9328b6ba",
+      ["httptest.lua"] = "1d38a3a095d927345386ac30325290d9",
+      ["index.html"] = "7e660b8b5a91cf72db43cd15fa1365e9",
+      ["ltn12test.lua"] = "394ccd4a0514b283f351d0acf9a9c4b5",
+      ["luasocket.png"] = "6d494f2e2c4d6b7698bbddb3ea8069af",
+      ["mimetest.lua"] = "2ab3ffc441ab36ad2f4fbbfc65572d0b",
+      ["smtptest.lua"] = "bd1124113f718c94ffbe1befe1635441",
+      ["stufftest.lua"] = "36c85be701f15276804220126642f6bb",
+      ["tcp-getoptions"] = "dd0feba7d549aa031bea04db981ae1b8",
+      ["test_bind.lua"] = "63c09bfbdd8ef18bea85bbb8d5ec3bdb",
+      ["test_getaddrinfo.lua"] = "781dec33b645a0b001adda8dbe5fbe59",
+      ["test_socket_error.lua"] = "128ca8bf79cadb42443d352d007fc83d",
+      ["testclnt.lua"] = "ec7b8725d195db8a2275009399e22566",
+      ["testmesg.lua"] = "2ba4831c5c75595cc9ebe67dd2922da5",
+      ["testsrvr.lua"] = "513dc55b588a5fd0e8a296d769af828a",
+      ["testsupport.lua"] = "76f1b64a0155fbebdbced58912d46eb8",
+      ["tftptest.lua"] = "3a74a67cb2ba4d4331ae01a3243d57ab",
+      ["udp-zero-length-send"] = "d1496ad481de1575e2e12e954c01a8ca",
+      ["udp-zero-length-send-recv"] = "0b1f9659ab63c04b08e7506b5947c73b",
+      ["udpconnectclnt.lua"] = "edfb0f9defffa88b9d6d05aedc7a1b22",
+      ["udpconnectsrvr.lua"] = "6921acf45abca1ec9be4bad5e57754f2",
+      ["unixclnt.lua"] = "da2e5d244922becfcc8bf06e8f56b2be",
+      ["unixsrvr.lua"] = "c79e40e2713e5b7f590a648401da3dd8",
+      ["upload.html"] = "87454ce5243c5c899b65cb15b5c25c6f",
+      ["urltest.lua"] = "8e6bbdf84a4b12edc9fae778633b6a4c",
+      ["utestclnt.lua"] = "1cb348906f04a4b50a0e72804f04ce72",
+      ["utestsrvr.lua"] = "55e61dfca550f67a7d24a890d7618654"
+   }
+}

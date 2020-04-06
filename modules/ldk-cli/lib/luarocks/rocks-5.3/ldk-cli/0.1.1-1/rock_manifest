@@ -1,0 +1,21 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "b0bf31ca2b040f57a581103611439dc4",
+      ["README.md"] = "1d7a6858cf835721f7a23020de25fb47"
+   },
+   ["ldk-cli-0.1.1-1.rockspec"] = "af5a4d57ec2a6b8f897230b5e139a28d",
+   lua = {
+      ldk = {
+         cli = {
+            ["cmd.lua"] = "8103910f1e10c1a80166a8a5e94acdaa",
+            ["flag.lua"] = "160d520607c5a6a22af02be61ca5a2d8",
+            ["help.lua"] = "6c4376efc3dd2ae439c0bdc0e8208f78",
+            ["parser.lua"] = "39e25b86e45ec9f6de6ca7b5ef722ce9",
+            ["reader.lua"] = "000baac355be301bdb3816683e41cc37",
+            ["schema.lua"] = "f10711b30571adb16affc760dee00117",
+            ["util.lua"] = "d7d5237ce4cb48d2ba013e40b10b7cf5"
+         },
+         ["cli.lua"] = "4b60d6c8d0e61468d416106bee8d2858"
+      }
+   }
+}

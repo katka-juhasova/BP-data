@@ -1,0 +1,3 @@
+#!/bin/sh
+
+LUAROCKS_SYSCONFDIR='/usr/local/etc/luarocks' exec '/usr/local/bin/lua' -e 'package.path="/home/katka/Desktop/FIIT/BP/luadb/etc/luarocks_test/modules/heroku-openresty/share/lua/5.3/?.lua;/home/katka/Desktop/FIIT/BP/luadb/etc/luarocks_test/modules/heroku-openresty/share/lua/5.3/?/init.lua;"..package.path;package.cpath="/home/katka/Desktop/FIIT/BP/luadb/etc/luarocks_test/modules/heroku-openresty/lib/lua/5.3/?.so;"..package.cpath;local k,l,_=pcall(require,"luarocks.loader") _=k and l.add_context("heroku-openresty","1.2.8.6-1")' '/home/katka/Desktop/FIIT/BP/luadb/etc/luarocks_test/modules/heroku-openresty/lib/luarocks/rocks-5.3/heroku-openresty/1.2.8.6-1/bin/compile_nginx_config.lua' "$@"

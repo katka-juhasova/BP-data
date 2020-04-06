@@ -1,0 +1,34 @@
+commands = {}
+dependencies = {
+   lecho = {
+      ["1.0.2-0"] = {
+         {
+            constraints = {},
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lecho = {
+      "lecho/1.0.2-0"
+   },
+   ["lecho.core"] = {
+      "lecho/1.0.2-0"
+   }
+}
+repository = {
+   lecho = {
+      ["1.0.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lecho = "lecho.lua",
+               ["lecho.core"] = "lecho/core.so"
+            }
+         }
+      }
+   }
+}

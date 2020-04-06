@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   coxpcall = {
+      ["1.17.0-1"] = {}
+   }
+}
+modules = {
+   coxpcall = {
+      "coxpcall/1.17.0-1"
+   }
+}
+repository = {
+   coxpcall = {
+      ["1.17.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               coxpcall = "coxpcall.lua"
+            }
+         }
+      }
+   }
+}

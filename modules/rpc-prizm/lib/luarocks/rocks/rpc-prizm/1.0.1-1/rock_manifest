@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "79bb57c24b37939673e1099903632bd3",
+      ["Readme.md"] = "8fd089c659234f3cbfd1916b9b85904b"
+   },
+   lua = {
+      ["rpc-prizm"] = {
+         ["http_statuses.lua"] = "db404c0d306989b8c424ce3d7ea47129",
+         ["logger.lua"] = "42890c8bad350def307fb7f8ce208726",
+         ["proxy.lua"] = "89f7f57c2847ac0062f695ab5acdf43a",
+         ["request.lua"] = "dfe67f6c402ff3ae545709cf915d1ea7",
+         ["response_builder.lua"] = "204906228b2aecc45546ccc85e3916d7",
+         ["router.lua"] = "57441df6fc4b1e876063643806f6d8d6"
+      },
+      ["rpc-prizm.lua"] = "4328b543532f41ab67603e956ac976b3"
+   },
+   ["rpc-prizm-1.0.1-1.rockspec"] = "e5b23fb2668c8ceec11a07a8f4b511f4"
+}

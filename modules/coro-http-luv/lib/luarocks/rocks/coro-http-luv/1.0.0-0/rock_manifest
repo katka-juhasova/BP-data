@@ -1,0 +1,23 @@
+rock_manifest = {
+   ["coro-http-luv-1.0.0-0.rockspec"] = "9d7c68ea85c1c266cc03892d9a3b45a3",
+   doc = {
+      LICENSE = "9028da199617215ab5e69dfc769d4270",
+      ["README.md"] = "395f76b1454811a1ffb935eb9335becc"
+   },
+   lua = {
+      ["coro-http-luv"] = {
+         ["coro-channel.lua"] = "206c4bb65d082cef93928867f2d47e27",
+         ["coro-net.lua"] = "461c418b8d5cd844e89a5d36bc1fe2b7",
+         ["coro-wrapper.lua"] = "e587f827c7fdc6efc52f925f4def0f8d",
+         ["http-codec.lua"] = "c1ebfc08bbe3ae9d0c8ab5059e083d3c",
+         ["init.lua"] = "6276a8c736b5c96a39c52c1e325534e8",
+         ["secure-socket"] = {
+            ["biowrap.lua"] = "c8eb2d1874796a49e090301b88d43492",
+            ["bit.lua"] = "0f9d4babcbee1ef791145301c04661dc",
+            ["context.lua"] = "fedde5b089c2a5cb112ee84969d564e4",
+            ["init.lua"] = "c9c7db944c8c2606c2639a265e6d2ec8",
+            ["root_ca.lua"] = "df70c21de8b550c52684b4a15f49bb61"
+         }
+      }
+   }
+}

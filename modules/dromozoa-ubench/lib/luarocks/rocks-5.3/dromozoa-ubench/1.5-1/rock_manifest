@@ -1,0 +1,26 @@
+rock_manifest = {
+   bin = {
+      ["dromozoa-ubench"] = "3c9794123239b8616799eeecd4783e95",
+      ["dromozoa-ubench-report"] = "6b0d4ad6264e66d641ea1f9bf0869db0"
+   },
+   doc = {
+      COPYING = "d32239bcb673463ab874e80d47fae504",
+      ["README.md"] = "2e7f9c5c80cf10b8166f198a73ff06a3"
+   },
+   ["dromozoa-ubench-1.5-1.rockspec"] = "2a5dff9b8c71bf8a44c9ddb5bdbe05c6",
+   lua = {
+      dromozoa = {
+         ubench = {
+            ["context.lua"] = "15d5baed8fe861005b3e81d7aff5c5d6",
+            ["dump.lua"] = "0f25bf8e41883f8ba10fd86f3de105a6",
+            ["linest.lua"] = "ff3cfccbd51d20923b2969e0d0d1110b",
+            ["max.lua"] = "1a8420ede1a1e92f85aaaf109a63cacb",
+            ["min.lua"] = "6710de5b063cb876a8238e97803802b1",
+            ["report.lua"] = "dadfa9d603770d4fc51dfb429696e79a",
+            ["run.lua"] = "227fb310fdc6d8d17f4b4831d6027b26",
+            ["stdev.lua"] = "ab53053c417224d5c8df7344f64f3351"
+         },
+         ["ubench.lua"] = "f766e5e3eb7920f00082d99e27fbfe6f"
+      }
+   }
+}

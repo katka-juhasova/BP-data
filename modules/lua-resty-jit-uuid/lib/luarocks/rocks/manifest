@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-jit-uuid"] = {
+      ["0.0.7-2"] = {}
+   }
+}
+modules = {
+   ["resty.jit-uuid"] = {
+      "lua-resty-jit-uuid/0.0.7-2"
+   }
+}
+repository = {
+   ["lua-resty-jit-uuid"] = {
+      ["0.0.7-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.jit-uuid"] = "resty/jit-uuid.lua"
+            }
+         }
+      }
+   }
+}

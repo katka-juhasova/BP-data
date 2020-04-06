@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   debugger = {
+      ["scm-1"] = {}
+   }
+}
+modules = {
+   debugger = {
+      "debugger/scm-1"
+   }
+}
+repository = {
+   debugger = {
+      ["scm-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               debugger = "debugger.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,70 @@
+rock_manifest = {
+   doc = {
+      ["index.html"] = "d6625f3edd01562b6cdef1ea535746fe"
+   },
+   lua = {
+      lut = {
+         ["Builder.lua"] = "e14380fc30e156b6eef1e875592786f8",
+         ["Doc.lua"] = "4af9ced70e0229920ce5f5a0ea6a837c",
+         ["Project.lua"] = "45fb978dfa4b25a1e69544b7f7e12e86",
+         ["Test.lua"] = "eaf1306f78f983a08772af67efc1ac63",
+         assets = {
+            builder = {
+               ["CMakeLists.txt.in"] = "77224a75b5c408ea11861dbd74b4da79",
+               ["dist.info.in"] = "6dd8af4699c360b01dc975352db80494",
+               ["rockspec.in"] = "bbf85721004d48519f83a7d36ed5878e"
+            },
+            doc = {
+               css = {
+                  ["bootstrap-responsive.min.css"] = "12d88b292711cd2af776fc3c8cf2649e",
+                  ["bootstrap.min.css"] = "323f5dbc2c30537175dad260d75cf7ad",
+                  ["docs.css"] = "c7308b42fee8a42c7f6419059e3321e4"
+               },
+               img = {
+                  ["glyphicons-halflings-white.png"] = "9bbc6e9602998a385c2ea13df56470fd",
+                  ["glyphicons-halflings.png"] = "2516339970d710819585f90773aebe0a"
+               },
+               js = {
+                  ["bootstrap.min.js"] = "2916bdd0ab40bc45f6cb6d5b99e34368"
+               },
+               ["template.html"] = "80db118d7106e12096ecf418c6bbf8fe"
+            },
+            project = {
+               ["History.txt"] = "234acb90569082d489e36d05b44f6649",
+               LICENSE = "dbbba01aa4ae74b9fcd8b732df608e92",
+               ["README.md"] = "83c7d6c524de259efeb1113465ee1f12",
+               doc = {
+                  ["LiveFoo_lua.lua"] = "92272aa0a2d432d8e71c89e73aaf908e",
+                  ["index.html"] = "4b1ddb15b64a9882400821c4ea1ce937"
+               },
+               include = {
+                  type = {
+                     ["Foo.h"] = "a72e38dddb374ef5f6c01544d623f21f",
+                     ["type.h"] = "03830ddc5e3089cb2aac30c10a96ec45"
+                  }
+               },
+               scripts = {
+                  ["bind_lua.lua"] = "e6ba0b3bf429ef7a552018870b169c69",
+                  ["build_lua.lua"] = "fee6a2e2c9a7228dbc460d5809e7c168",
+                  ["doc_lua.lua"] = "75500faebdf27dbc4cf5d43c2486b5dd"
+               },
+               src = {
+                  ["Foo.cpp"] = "128d97df80c1884d572e58fe0fb7bfd2",
+                  ["type.cpp"] = "0e24e96012745cc7eb328cf9852080e4"
+               },
+               test = {
+                  ["Foo_test_lua.lua"] = "550e535aa44b3b33d9ef1678d7390908",
+                  ["all_lua.lua"] = "f0fc9da425a7ddd8aa5423ccc2933808",
+                  ["type_test_lua.lua"] = "e99b86003c3c25d40bc84b427a6c0f7e"
+               },
+               type = {
+                  ["Foo_lua.lua"] = "2ac4d28d318074d05b34805655d669e0",
+                  ["init_lua.lua"] = "b908e96b7769948dc6ed26c78b0d0042"
+               }
+            }
+         },
+         ["init.lua"] = "0bb2285d1b883163c5a0e93ec60702c5"
+      }
+   },
+   ["lut-1.2.1-1.rockspec"] = "a76bec74d454596fa986587d49620db6"
+}

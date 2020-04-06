@@ -1,0 +1,18 @@
+rock_manifest = {
+   docs = {
+      ["index.html"] = "3010fd82342326017a278021637487e9",
+      ["ldoc_pale.css"] = "ccd5b7e5868e2a6faa443171b75fe92c",
+      topics = {
+         ["README.md.html"] = "45bc6bbd3b2acf9c4496a48fe8ed9dbe"
+      }
+   },
+   ["enum-0.1.1-1.rockspec"] = "803016f3b300560f1d31f45b16c2a16c",
+   lua = {
+      enum = {
+         ["init.lua"] = "bef537343c9d2149434a990038d3b09e"
+      }
+   },
+   tests = {
+      ["enum_spec.lua"] = "8e5247b6c3019439c196b8b7bb6e2acc"
+   }
+}

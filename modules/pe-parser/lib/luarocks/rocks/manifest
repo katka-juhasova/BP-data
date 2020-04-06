@@ -1,0 +1,49 @@
+commands = {
+   ["pe-parser"] = {
+      "pe-parser/0.5.0-2"
+   }
+}
+dependencies = {
+   ["pe-parser"] = {
+      ["0.5.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["pe-parser"] = {
+      "pe-parser/0.5.0-2"
+   }
+}
+repository = {
+   ["pe-parser"] = {
+      ["0.5.0-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["pe-parser"] = "pe-parser"
+            },
+            dependencies = {},
+            modules = {
+               ["pe-parser"] = "pe-parser.lua"
+            }
+         }
+      }
+   }
+}

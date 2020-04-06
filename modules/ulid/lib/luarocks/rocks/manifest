@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ulid = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   ulid = {
+      "ulid/0.1.0-1"
+   }
+}
+repository = {
+   ulid = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ulid = "ulid.lua"
+            }
+         }
+      }
+   }
+}

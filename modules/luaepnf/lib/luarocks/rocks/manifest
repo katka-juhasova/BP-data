@@ -1,0 +1,90 @@
+commands = {}
+dependencies = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luaepnf = {
+      ["0.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 8, string = "0.8"
+                  }
+               }
+            },
+            name = "lpeg"
+         }
+      }
+   }
+}
+modules = {
+   epnf = {
+      "luaepnf/0.3-1"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   luaepnf = {
+      ["0.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               epnf = "epnf.lua"
+            }
+         }
+      }
+   }
+}

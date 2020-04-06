@@ -1,0 +1,14 @@
+rock_manifest = {
+   ["compat52-0.3-1.rockspec"] = "a643c5181557d233ccf74d3147b43cc4",
+   doc = {
+      LICENSE = "d3bf3c07c9585e444c8010120cf66618",
+      ["README.md"] = "994bafe17fd9a462d99d6c4b55e5541b"
+   },
+   lua = {
+      compat52 = {
+         ["mstrict.lua"] = "e329925f32df674be9a079d0744abbcc",
+         ["strict.lua"] = "9178e9b24ed0ad873473e031268f790b"
+      },
+      ["compat52.lua"] = "98ea720fda6e64f2b1a54f9859fc01e6"
+   }
+}

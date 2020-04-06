@@ -1,0 +1,51 @@
+commands = {
+   test_deepcl = {
+      "luadeepcl/5.5.0-1"
+   },
+   test_qlearning = {
+      "luadeepcl/5.5.0-1"
+   }
+}
+dependencies = {
+   luadeepcl = {
+      ["5.5.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   LuaDeepCL = {
+      "luadeepcl/5.5.0-1"
+   },
+   luaunit = {
+      "luadeepcl/5.5.0-1"
+   }
+}
+repository = {
+   luadeepcl = {
+      ["5.5.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               test_deepcl = "test_deepcl",
+               test_qlearning = "test_qlearning"
+            },
+            dependencies = {},
+            modules = {
+               LuaDeepCL = "LuaDeepCL.so",
+               luaunit = "luaunit.lua"
+            }
+         }
+      }
+   }
+}

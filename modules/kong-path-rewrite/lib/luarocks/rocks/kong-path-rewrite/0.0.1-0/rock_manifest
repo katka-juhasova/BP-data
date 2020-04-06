@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "86d3f3a95c324c9479bd8986968f4327"
+   },
+   ["kong-path-rewrite-0.0.1-0.rockspec"] = "9632a7d27cd8b2957805cce0af189cfd",
+   lua = {
+      kong = {
+         plugins = {
+            ["kong-path-rewrite"] = {
+               ["handler.lua"] = "f84fcd39112858e6759d3267df77b45b",
+               ["schema.lua"] = "3146554889697e9b7ca6595b5d2fd722"
+            }
+         }
+      }
+   }
+}

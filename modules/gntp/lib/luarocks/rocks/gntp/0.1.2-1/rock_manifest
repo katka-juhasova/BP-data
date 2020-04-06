@@ -1,0 +1,22 @@
+rock_manifest = {
+   examples = {
+      ["GNTPLuaSocket.lua"] = "962663755dcb88084b8221bb04ddc085",
+      ["GNTPSubscribe.lua"] = "f0179341ebb60188bbd70d04ca5dd8d4"
+   },
+   ["gntp-0.1.2-1.rockspec"] = "10f757f265239145b7b8a07f56e743fc",
+   lua = {
+      gntp = {
+         connector = {
+            ["lluv.lua"] = "9d9c20321a5c017b77c54f4130512876",
+            ["luasocket.lua"] = "2f7562c4d1f12e4adfcc540577178bde"
+         },
+         ["crypto.lua"] = "f0485a21a4c52d15a6192aa50e64e768",
+         ["utils.lua"] = "b2e3c6543b70bff2c8a5c70d7b1bd3f1"
+      },
+      ["gntp.lua"] = "4e68d08c449725c6af4a1266e1823b26"
+   },
+   test = {
+      ["test.lua"] = "ddb1728dc424bec2492a6bebc8bf49ec",
+      ["utils.lua"] = "f1feb54f72ea113b039c992f35380c76"
+   }
+}

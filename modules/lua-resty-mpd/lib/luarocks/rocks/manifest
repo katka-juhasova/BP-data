@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-resty-mpd"] = {
+      ["1.0.4-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.mpd"] = {
+      "lua-resty-mpd/1.0.4-0"
+   }
+}
+repository = {
+   ["lua-resty-mpd"] = {
+      ["1.0.4-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.mpd"] = "resty/mpd.lua"
+            }
+         }
+      }
+   }
+}

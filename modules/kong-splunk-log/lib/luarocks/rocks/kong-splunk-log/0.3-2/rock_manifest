@@ -1,0 +1,21 @@
+rock_manifest = {
+   doc = {
+      ["CODE_OF_CONDUCT.md"] = "384c7875618cc65da69145882d5abe5f",
+      ["CONTRIBUTING.md"] = "fa828967e6ff4674cb38dbb278c6e896",
+      ["INDIVIDUAL_CONTRIBUTOR_LICENSE.md"] = "f75cf03859e2a6b79f614d800958641e",
+      LICENSE = "86d3f3a95c324c9479bd8986968f4327",
+      ["README.md"] = "86a52bfeec97395db0c61edf367632aa"
+   },
+   ["kong-splunk-log-0.3-2.rockspec"] = "e148737ac13a2c9f75ef424ded96ae91",
+   lua = {
+      kong = {
+         plugins = {
+            ["kong-splunk-log"] = {
+               ["basic.lua"] = "b62daabb962c66d01792015372eb513a",
+               ["handler.lua"] = "b9bfde8d6d86fe1e46501b798e6d3f83",
+               ["schema.lua"] = "d8f94ea7c429cef9087a587b60ff9c4c"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,173 @@
+commands = {}
+dependencies = {
+   ltui = {
+      ["1.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ltui = {
+      "ltui/1.5-1"
+   },
+   ["ltui.action"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.application"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.base.dlist"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.base.log"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.base.os"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.base.path"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.base.string"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.base.table"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.border"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.boxdialog"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.button"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.canvas"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.choicebox"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.choicedialog"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.curses"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.desktop"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.dialog"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.event"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.inputdialog"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.label"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.mconfdialog"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.menubar"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.menuconf"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.object"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.panel"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.point"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.program"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.rect"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.statusbar"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.textarea"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.textdialog"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.textedit"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.view"] = {
+      "ltui/1.5-1"
+   },
+   ["ltui.window"] = {
+      "ltui/1.5-1"
+   }
+}
+repository = {
+   ltui = {
+      ["1.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltui = "ltui.lua",
+               ["ltui.action"] = "ltui/action.lua",
+               ["ltui.application"] = "ltui/application.lua",
+               ["ltui.base.dlist"] = "ltui/base/dlist.lua",
+               ["ltui.base.log"] = "ltui/base/log.lua",
+               ["ltui.base.os"] = "ltui/base/os.lua",
+               ["ltui.base.path"] = "ltui/base/path.lua",
+               ["ltui.base.string"] = "ltui/base/string.lua",
+               ["ltui.base.table"] = "ltui/base/table.lua",
+               ["ltui.border"] = "ltui/border.lua",
+               ["ltui.boxdialog"] = "ltui/boxdialog.lua",
+               ["ltui.button"] = "ltui/button.lua",
+               ["ltui.canvas"] = "ltui/canvas.lua",
+               ["ltui.choicebox"] = "ltui/choicebox.lua",
+               ["ltui.choicedialog"] = "ltui/choicedialog.lua",
+               ["ltui.curses"] = "ltui/curses.lua",
+               ["ltui.desktop"] = "ltui/desktop.lua",
+               ["ltui.dialog"] = "ltui/dialog.lua",
+               ["ltui.event"] = "ltui/event.lua",
+               ["ltui.inputdialog"] = "ltui/inputdialog.lua",
+               ["ltui.label"] = "ltui/label.lua",
+               ["ltui.mconfdialog"] = "ltui/mconfdialog.lua",
+               ["ltui.menubar"] = "ltui/menubar.lua",
+               ["ltui.menuconf"] = "ltui/menuconf.lua",
+               ["ltui.object"] = "ltui/object.lua",
+               ["ltui.panel"] = "ltui/panel.lua",
+               ["ltui.point"] = "ltui/point.lua",
+               ["ltui.program"] = "ltui/program.lua",
+               ["ltui.rect"] = "ltui/rect.lua",
+               ["ltui.statusbar"] = "ltui/statusbar.lua",
+               ["ltui.textarea"] = "ltui/textarea.lua",
+               ["ltui.textdialog"] = "ltui/textdialog.lua",
+               ["ltui.textedit"] = "ltui/textedit.lua",
+               ["ltui.view"] = "ltui/view.lua",
+               ["ltui.window"] = "ltui/window.lua"
+            }
+         }
+      }
+   }
+}

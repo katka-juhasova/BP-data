@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-http-log-multi-body"] = {
+      ["0.1.4-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.http-log-multi-body.handler"] = {
+      "kong-plugin-http-log-multi-body/0.1.4-1"
+   },
+   ["kong.plugins.http-log-multi-body.schema"] = {
+      "kong-plugin-http-log-multi-body/0.1.4-1"
+   }
+}
+repository = {
+   ["kong-plugin-http-log-multi-body"] = {
+      ["0.1.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.http-log-multi-body.handler"] = "kong/plugins/http-log-multi-body/handler.lua",
+               ["kong.plugins.http-log-multi-body.schema"] = "kong/plugins/http-log-multi-body/schema.lua"
+            }
+         }
+      }
+   }
+}

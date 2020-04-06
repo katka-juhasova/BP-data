@@ -1,0 +1,81 @@
+commands = {}
+dependencies = {
+   ["lua-resty-ljsonschema"] = {
+      ["0.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "net-url"
+         }
+      }
+   },
+   ["net-url"] = {
+      ["0.9-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["net.url"] = {
+      "net-url/0.9-1"
+   },
+   ["resty.ljsonschema"] = {
+      "lua-resty-ljsonschema/0.3.0-1"
+   },
+   ["resty.ljsonschema.metaschema"] = {
+      "lua-resty-ljsonschema/0.3.0-1"
+   },
+   ["resty.ljsonschema.store"] = {
+      "lua-resty-ljsonschema/0.3.0-1"
+   }
+}
+repository = {
+   ["lua-resty-ljsonschema"] = {
+      ["0.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["net-url"] = "0.9-1"
+            },
+            modules = {
+               ["resty.ljsonschema"] = "resty/ljsonschema/init.lua",
+               ["resty.ljsonschema.metaschema"] = "resty/ljsonschema/metaschema.lua",
+               ["resty.ljsonschema.store"] = "resty/ljsonschema/store.lua"
+            }
+         }
+      }
+   },
+   ["net-url"] = {
+      ["0.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["net.url"] = "net/url.lua"
+            }
+         }
+      }
+   }
+}

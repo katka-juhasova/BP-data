@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-opa"] = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.opa.handler"] = {
+      "kong-opa/0.1-1"
+   },
+   ["kong.plugins.opa.schema"] = {
+      "kong-opa/0.1-1"
+   }
+}
+repository = {
+   ["kong-opa"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.opa.handler"] = "kong/plugins/opa/handler.lua",
+               ["kong.plugins.opa.schema"] = "kong/plugins/opa/schema.lua"
+            }
+         }
+      }
+   }
+}

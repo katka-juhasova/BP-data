@@ -1,0 +1,36 @@
+rock_manifest = {
+   bin = {
+      lunadoc = "2cd581588e519ed028f88e0f6de55b7f",
+      lunamark = "6b5df6ef2008fd6e4dd08584deb7e16a"
+   },
+   doc = {
+      LICENSE = "1bd9ebc9805efeb49193e42c1d3a259d",
+      ["README.markdown"] = "87547fdebc15b66a1a34c3cc256ed60c"
+   },
+   lua = {
+      lunamark = {
+         ["entities.lua"] = "6153c77b9b9f42405ad5bc01869f40da",
+         reader = {
+            ["markdown.lua"] = "2e0644d8b76a5b52921cfe37f8e2858b"
+         },
+         ["reader.lua"] = "eedf39095035398ec74ec8357b204d14",
+         ["util.lua"] = "e569821fb3312643c8476ba3d944cf57",
+         writer = {
+            ["context.lua"] = "0a47716094eab7a3b53515760d93b8dc",
+            ["docbook.lua"] = "893ba8ce4809428632fd3d41a5161395",
+            ["dzslides.lua"] = "edaeb46195ccd8f8311c92cae5328b48",
+            ["generic.lua"] = "66e0edf061cda175f5b28de10fc9a903",
+            ["groff.lua"] = "76f53dc4a15e2a557f7cc3f64ed2954c",
+            ["html.lua"] = "90c10d5a024ee433790ec6f7933aa41e",
+            ["html5.lua"] = "1b0ec02537ae4cccc26959bea8cf9a9b",
+            ["latex.lua"] = "eaa738576b1eb669f84fbf9e74f7e7c1",
+            ["man.lua"] = "784bb03b1853669719c49e8cee2ddc74",
+            ["tex.lua"] = "7425b5ce0fe49fc46cf04677858e3d58",
+            ["xml.lua"] = "2d90b8c5171f746a946495236b69cb70"
+         },
+         ["writer.lua"] = "c81efa4740055d81124e9d8fd5740e52"
+      },
+      ["lunamark.lua"] = "146cdf3b6a023d7782709a4c392a71d9"
+   },
+   ["lunamark-0.5.0-1.rockspec"] = "f9ac129f36097a7a08b63578f33a91d0"
+}

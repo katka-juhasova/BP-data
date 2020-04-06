@@ -1,0 +1,13 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "fc784314ae8829eb94395cc958648f42"
+   },
+   lua = {
+      resty = {
+         limit = {
+            ["rate.lua"] = "7bd65d26ab1a3225602989ec67fbdf59"
+         }
+      }
+   },
+   ["lua-resty-limit-rate-0.1-1.rockspec"] = "bb162e7a136264b681c7b6423f602a8b"
+}

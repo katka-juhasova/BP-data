@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   notification = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.notification.access"] = {
+      "notification/1.0-1"
+   },
+   ["kong.plugins.notification.handler"] = {
+      "notification/1.0-1"
+   },
+   ["kong.plugins.notification.schema"] = {
+      "notification/1.0-1"
+   }
+}
+repository = {
+   notification = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.notification.access"] = "kong/plugins/notification/access.lua",
+               ["kong.plugins.notification.handler"] = "kong/plugins/notification/handler.lua",
+               ["kong.plugins.notification.schema"] = "kong/plugins/notification/schema.lua"
+            }
+         }
+      }
+   }
+}

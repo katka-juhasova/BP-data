@@ -1,0 +1,220 @@
+commands = {}
+dependencies = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lefthook = {
+      ["1.0-0"] = {
+         {
+            constraints = {},
+            name = "luasec"
+         },
+         {
+            constraints = {},
+            name = "dkjson"
+         },
+         {
+            constraints = {},
+            name = "luasocket"
+         }
+      }
+   },
+   luasec = {
+      ["0.9-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luasocket"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   dkjson = {
+      "dkjson/2.5-2"
+   },
+   ["lefthook.Embed"] = {
+      "lefthook/1.0-0"
+   },
+   ["lefthook.Type"] = {
+      "lefthook/1.0-0"
+   },
+   ["lefthook.Webhook"] = {
+      "lefthook/1.0-0"
+   },
+   ["lefthook.WebhookBatch"] = {
+      "lefthook/1.0-0"
+   },
+   ["lefthook.WebhookForm"] = {
+      "lefthook/1.0-0"
+   },
+   ["lefthook.init"] = {
+      "lefthook/1.0-0"
+   },
+   ["lefthook.static"] = {
+      "lefthook/1.0-0"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ssl = {
+      "luasec/0.9-1"
+   },
+   ["ssl.https"] = {
+      "luasec/0.9-1"
+   }
+}
+repository = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dkjson = "dkjson.lua"
+            }
+         }
+      }
+   },
+   lefthook = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               dkjson = "2.5-2",
+               luasec = "0.9-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               ["lefthook.Embed"] = "lefthook/Embed.lua",
+               ["lefthook.Type"] = "lefthook/Type.lua",
+               ["lefthook.Webhook"] = "lefthook/Webhook.lua",
+               ["lefthook.WebhookBatch"] = "lefthook/WebhookBatch.lua",
+               ["lefthook.WebhookForm"] = "lefthook/WebhookForm.lua",
+               ["lefthook.init"] = "lefthook/init.lua",
+               ["lefthook.static"] = "lefthook/static.lua"
+            }
+         }
+      }
+   },
+   luasec = {
+      ["0.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               ssl = "ssl.lua",
+               ["ssl.https"] = "ssl/https.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   }
+}

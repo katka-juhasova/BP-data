@@ -1,0 +1,93 @@
+commands = {}
+dependencies = {
+   rapidjson = {
+      ["0.6.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["raven-lua-rjson"] = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "rapidjson"
+         }
+      }
+   }
+}
+modules = {
+   rapidjson = {
+      "rapidjson/0.6.1-1"
+   },
+   raven = {
+      "raven-lua-rjson/0.1-1"
+   },
+   ["raven.senders.luasocket"] = {
+      "raven-lua-rjson/0.1-1"
+   },
+   ["raven.senders.ngx"] = {
+      "raven-lua-rjson/0.1-1"
+   },
+   ["raven.senders.reference"] = {
+      "raven-lua-rjson/0.1-1"
+   },
+   ["raven.senders.test"] = {
+      "raven-lua-rjson/0.1-1"
+   },
+   ["raven.util"] = {
+      "raven-lua-rjson/0.1-1"
+   }
+}
+repository = {
+   rapidjson = {
+      ["0.6.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rapidjson = "rapidjson.so"
+            }
+         }
+      }
+   },
+   ["raven-lua-rjson"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               rapidjson = "0.6.1-1"
+            },
+            modules = {
+               raven = "raven/init.lua",
+               ["raven.senders.luasocket"] = "raven/senders/luasocket.lua",
+               ["raven.senders.ngx"] = "raven/senders/ngx.lua",
+               ["raven.senders.reference"] = "raven/senders/reference.lua",
+               ["raven.senders.test"] = "raven/senders/test.lua",
+               ["raven.util"] = "raven/util.lua"
+            }
+         }
+      }
+   }
+}

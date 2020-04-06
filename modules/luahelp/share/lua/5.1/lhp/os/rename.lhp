@@ -1,0 +1,8 @@
+Help [[
+
+os.rename (oldname, newname)
+----------------------------
+
+  Renames file named `oldname` to `newname`. If this function fails, it
+  returns **nil**, plus a string describing the error.
+]]

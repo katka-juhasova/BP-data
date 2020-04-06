@@ -1,0 +1,15 @@
+rock_manifest = {
+   ["cldr-0.0.0-0.rockspec"] = "c40950c78610600b6be3b0221880ab03",
+   doc = {
+      LICENSE = "0ee288e617a4bc568fcd02707d41e24f",
+      ["README.md"] = "3cd8eb5fa951c37beccdf1a2e6bd97c5"
+   },
+   lua = {
+      cldr = {
+         data = {
+            ["locales.lua"] = "e8aed1c7a89b80b2776ac52820a0d5a0"
+         },
+         ["init.lua"] = "52323acceab8259d83e120d81f27779c"
+      }
+   }
+}

@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   ["alt-getopt"] = {
+      ["0.8.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   alt_getopt = {
+      "alt-getopt/0.8.0-1"
+   }
+}
+repository = {
+   ["alt-getopt"] = {
+      ["0.8.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               alt_getopt = "alt_getopt.lua"
+            }
+         }
+      }
+   }
+}

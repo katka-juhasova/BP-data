@@ -1,0 +1,28 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "00d6d81ecf89c5963615d0273d76dc50",
+      ["README.md"] = "150c07895ff918ff6f3ac82e9e22aa08"
+   },
+   lua = {
+      luai = {
+         ["Attribute.lua"] = "26f564dc67a5308351268871e4791305",
+         ["DecisionTree.lua"] = "2486886172db8c69343339bdc2c378f4",
+         ["Logger.lua"] = "9806db4b9dad59e80fc59cfea80e69b9",
+         ["MLP.lua"] = "85d8dfbfa4014bf2e6c095cd32c29063",
+         ["NaiveBayesClassifier.lua"] = "92f80be09d3070240e722ba718b1c148",
+         ["Record.lua"] = "a5bd1f9b2aaba290d3d930751e12c847",
+         ["TreeNode.lua"] = "dcf92283243d6059e19b80a25a165871",
+         samples = {
+            ["DecisionTreeBot.lua"] = "023b3b1fe9f6852b60f2b2d290cacdc5",
+            ["GameAgent.lua"] = "7e9b36d48d74edb10ce81cfd045d1f5a",
+            ["GameUtil.lua"] = "0fc48e97858cf0edd8f84ee6d27270dc",
+            ["GameWeapon.lua"] = "2b0e07d889c56b98e545d56c49cfd224",
+            ["GameWorld.lua"] = "7f4166f65c661881336022f0693084c5",
+            ["MLPBot.lua"] = "5cc4208e3c48359408e20570e9c31490",
+            ["NBCBot.lua"] = "bd08a2ea4851631419c5b1cda493cbf2",
+            ["data.lua"] = "e399aae9d21e966ec822240b8f9011bf"
+         }
+      }
+   },
+   ["luai-1.0-2.rockspec"] = "32a6d04f3b94f8418f2664ad18720692"
+}

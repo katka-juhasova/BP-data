@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["string-split"] = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["string.split"] = {
+      "string-split/0.2.0-1"
+   }
+}
+repository = {
+   ["string-split"] = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["string.split"] = "string/split.lua"
+            }
+         }
+      }
+   }
+}

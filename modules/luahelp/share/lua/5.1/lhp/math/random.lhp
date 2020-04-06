@@ -1,0 +1,17 @@
+Help [=[
+
+math.random ([m [, n]])
+-----------------------
+
+  This function is an interface to the simple pseudo-random generator function
+  `rand` provided by ANSI C. (No guarantees can be given for its statistical
+  properties.)
+
+  When called without arguments, returns a pseudo-random real number in the
+  range __[0,1)__. When called with a number `m`, `math.random` returns a
+  pseudo-random integer in the range __[1, m]__. When called with two numbers
+  `m` and `n`, `math.random` returns a pseudo-random integer in the range
+  __[m, n]__.
+
+  __See also__: `math.randomseed`
+]=]

@@ -1,0 +1,61 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "975808d92ea7f8ff4d18ac50c1e9c254",
+      ["CONTRIBUTING.md"] = "47af7941cc889096ab741f73ead70f79",
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "66dd5049401ef9916747c37424c403b6"
+   },
+   lua = {
+      ["stuart-ml"] = {
+         clustering = {
+            ["KMeans.lua"] = "dd03ea07f87d79fa4339cf931ab85e99",
+            ["KMeansModel.lua"] = "7a64bde3bfd4fdc707dc1df28773dc9d",
+            ["VectorWithNorm.lua"] = "416adac74dbc8c38bd06dbfca47b3954",
+            ["localKMeans.lua"] = "ed9586e5cbc5822ffa072eeb95ad3e7e"
+         },
+         linalg = {
+            ["BLAS.lua"] = "9998b71f5ca9acbd7e3304a26485c600",
+            ["DenseMatrix.lua"] = "4e9f1a25058119d26021029d5fdd7446",
+            ["DenseVector.lua"] = "23d3bdcaf1e9e6ec5611fcac1aba2df5",
+            ["Matrices.lua"] = "4ffea08849fbdca497c3c5a0c457ffcb",
+            ["Matrix.lua"] = "d508df0c3ffad83be01ba7473847ce8b",
+            ["SparseMatrix.lua"] = "302b43c535e127eff4c36c54518ca6ab",
+            ["SparseVector.lua"] = "593e6cd3128ef652230805ae69380cb1",
+            ["Vector.lua"] = "e97210730b79407003152a24e1cdbc6a",
+            ["Vectors.lua"] = "28c4ffe9705b2750886244cf09b18c5d",
+            distributed = {
+               ["RowMatrix.lua"] = "e3a3c837b6ec6db9146973b9c5b7405a"
+            }
+         },
+         random = {
+            ["RandomRDDs.lua"] = "eb3235055dcd66698ef133be9df359f0"
+         },
+         regression = {
+            ["LabeledPoint.lua"] = "a972ea640b3f02ffb53d592e18d841ba"
+         },
+         stat = {
+            ["MultivariateOnlineSummarizer.lua"] = "6716b97eed45b28d9d1742bb4733d265",
+            corr = {
+               ["Correlation.lua"] = "53127904c653b09aa5cfb46d8c1132e5",
+               ["Correlations.lua"] = "1e62b7c2fd3a5b27b253afd7204f57bd",
+               ["PearsonCorrelation.lua"] = "0e6fa6ad104cbb1736db0298b116cbd1"
+            },
+            ["statistics.lua"] = "27c9f13ff3c5ed688cb1ed79d267ae0e"
+         },
+         util = {
+            ["Loader.lua"] = "03992b044f0ea3ba62bcda1030702930",
+            ["MLUtils.lua"] = "b63d19be348fdc4ef6fdf9fd17d2f0fd",
+            ["NumericParser.lua"] = "1ce0d6dd491d32e5e8135e5438264cf0",
+            ["StringTokenizer.lua"] = "54a0313b802d4f14543f5a5029d3eaad",
+            java = {
+               ["arrays.lua"] = "2244456ff287e8c159fba7ba103adce7",
+               ["iterator.lua"] = "866c71a1ebb3ea68122f9f5f5d0850bd"
+            },
+            ["random.lua"] = "9b0dbdd34dd40b47243e501d4151df9d"
+         },
+         ["util.lua"] = "9d4ec266130e36fbfaa570fcd888fca5"
+      },
+      ["stuart-ml.lua"] = "d77c9174318b82386d9b43746092b495"
+   },
+   ["stuart-ml-2.0.4-1.rockspec"] = "31023e752a0b5532e17b1026d09efc94"
+}

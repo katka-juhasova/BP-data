@@ -1,0 +1,53 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-request-firewall"] = {
+      ["0.2.9-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.request-firewall.access"] = {
+      "kong-plugin-request-firewall/0.2.9-1"
+   },
+   ["kong.plugins.request-firewall.base64"] = {
+      "kong-plugin-request-firewall/0.2.9-1"
+   },
+   ["kong.plugins.request-firewall.file-reader"] = {
+      "kong-plugin-request-firewall/0.2.9-1"
+   },
+   ["kong.plugins.request-firewall.handler"] = {
+      "kong-plugin-request-firewall/0.2.9-1"
+   },
+   ["kong.plugins.request-firewall.multipart"] = {
+      "kong-plugin-request-firewall/0.2.9-1"
+   },
+   ["kong.plugins.request-firewall.quoted-printable"] = {
+      "kong-plugin-request-firewall/0.2.9-1"
+   },
+   ["kong.plugins.request-firewall.schema"] = {
+      "kong-plugin-request-firewall/0.2.9-1"
+   },
+   ["kong.plugins.request-firewall.utils"] = {
+      "kong-plugin-request-firewall/0.2.9-1"
+   }
+}
+repository = {
+   ["kong-plugin-request-firewall"] = {
+      ["0.2.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.request-firewall.access"] = "kong/plugins/request-firewall/access.lua",
+               ["kong.plugins.request-firewall.base64"] = "kong/plugins/request-firewall/base64.lua",
+               ["kong.plugins.request-firewall.file-reader"] = "kong/plugins/request-firewall/file-reader.lua",
+               ["kong.plugins.request-firewall.handler"] = "kong/plugins/request-firewall/handler.lua",
+               ["kong.plugins.request-firewall.multipart"] = "kong/plugins/request-firewall/multipart.lua",
+               ["kong.plugins.request-firewall.quoted-printable"] = "kong/plugins/request-firewall/quoted-printable.lua",
+               ["kong.plugins.request-firewall.schema"] = "kong/plugins/request-firewall/schema.lua",
+               ["kong.plugins.request-firewall.utils"] = "kong/plugins/request-firewall/utils.lua"
+            }
+         }
+      }
+   }
+}

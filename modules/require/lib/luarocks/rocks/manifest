@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   require = {
+      ["0.1.7-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   require = {
+      "require/0.1.7-2"
+   }
+}
+repository = {
+   require = {
+      ["0.1.7-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               require = "require.lua"
+            }
+         }
+      }
+   }
+}

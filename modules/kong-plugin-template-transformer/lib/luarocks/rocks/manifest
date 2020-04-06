@@ -1,0 +1,139 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-template-transformer"] = {
+      ["0.13.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-resty-http"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 9, revision = 1, string = "1.9-1"
+                  }
+               }
+            },
+            name = "lua-resty-template"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-template"] = {
+      ["1.9-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.kong-plugin-template-transformer.handler"] = {
+      "kong-plugin-template-transformer/0.13.0-0"
+   },
+   ["kong.plugins.kong-plugin-template-transformer.schema"] = {
+      "kong-plugin-template-transformer/0.13.0-0"
+   },
+   ["kong.plugins.kong-plugin-template-transformer.template_transformer"] = {
+      "kong-plugin-template-transformer/0.13.0-0"
+   },
+   ["kong.plugins.kong-plugin-template-transformer.utils"] = {
+      "kong-plugin-template-transformer/0.13.0-0"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.template"] = {
+      "lua-resty-template/1.9-1"
+   },
+   ["resty.template.html"] = {
+      "lua-resty-template/1.9-1"
+   },
+   ["resty.template.microbenchmark"] = {
+      "lua-resty-template/1.9-1"
+   }
+}
+repository = {
+   ["kong-plugin-template-transformer"] = {
+      ["0.13.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-http"] = "0.15-0",
+               ["lua-resty-template"] = "1.9-1"
+            },
+            modules = {
+               ["kong.plugins.kong-plugin-template-transformer.handler"] = "kong/plugins/kong-plugin-template-transformer/handler.lua",
+               ["kong.plugins.kong-plugin-template-transformer.schema"] = "kong/plugins/kong-plugin-template-transformer/schema.lua",
+               ["kong.plugins.kong-plugin-template-transformer.template_transformer"] = "kong/plugins/kong-plugin-template-transformer/template_transformer.lua",
+               ["kong.plugins.kong-plugin-template-transformer.utils"] = "kong/plugins/kong-plugin-template-transformer/utils.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-template"] = {
+      ["1.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.template"] = "resty/template.lua",
+               ["resty.template.html"] = "resty/template/html.lua",
+               ["resty.template.microbenchmark"] = "resty/template/microbenchmark.lua"
+            }
+         }
+      }
+   }
+}

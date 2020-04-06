@@ -1,0 +1,20 @@
+rock_manifest = {
+   bin = {
+      ["luacov-cobertura"] = "e5eda5041adc9de14fa0d85587f3c689"
+   },
+   doc = {
+      LICENSE = "829cf587565e50ad8f18c08c5190f922",
+      ["README.md"] = "783f183a5aa32eb6397372414209f7ec"
+   },
+   lua = {
+      luacov = {
+         cobertura = {
+            ["luatoxml.lua"] = "abc61e45e0fe233a6d17a3c4b96ce2ca"
+         },
+         reporter = {
+            ["cobertura.lua"] = "7b15d780f463a9930559ea80cf980e04"
+         }
+      }
+   },
+   ["luacov-cobertura-0.2-1.rockspec"] = "c42d98b612fe79659017b750cf7f2cfa"
+}

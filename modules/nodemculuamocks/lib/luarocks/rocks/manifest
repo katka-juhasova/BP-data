@@ -1,0 +1,150 @@
+commands = {}
+dependencies = {
+   luaunit = {
+      ["3.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   nodemculuamocks = {
+      ["1.0-5"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luaunit"
+         }
+      }
+   }
+}
+modules = {
+   JSON = {
+      "nodemculuamocks/1.0-5"
+   },
+   LinkedList = {
+      "nodemculuamocks/1.0-5"
+   },
+   Timer = {
+      "nodemculuamocks/1.0-5"
+   },
+   adc = {
+      "nodemculuamocks/1.0-5"
+   },
+   dht = {
+      "nodemculuamocks/1.0-5"
+   },
+   enduser_setup = {
+      "nodemculuamocks/1.0-5"
+   },
+   file = {
+      "nodemculuamocks/1.0-5"
+   },
+   gpio = {
+      "nodemculuamocks/1.0-5"
+   },
+   i2c = {
+      "nodemculuamocks/1.0-5"
+   },
+   luaunit = {
+      "luaunit/3.3-1"
+   },
+   mdns = {
+      "nodemculuamocks/1.0-5"
+   },
+   net = {
+      "nodemculuamocks/1.0-5"
+   },
+   node = {
+      "nodemculuamocks/1.0-5"
+   },
+   sjson = {
+      "nodemculuamocks/1.0-5"
+   },
+   tmr = {
+      "nodemculuamocks/1.0-5"
+   },
+   u8g = {
+      "nodemculuamocks/1.0-5"
+   },
+   wifi = {
+      "nodemculuamocks/1.0-5"
+   }
+}
+repository = {
+   luaunit = {
+      ["3.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luaunit = "luaunit.lua"
+            }
+         }
+      }
+   },
+   nodemculuamocks = {
+      ["1.0-5"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luaunit = "3.3-1"
+            },
+            modules = {
+               JSON = "JSON.lua",
+               LinkedList = "LinkedList.lua",
+               Timer = "Timer.lua",
+               adc = "adc.lua",
+               dht = "dht.lua",
+               enduser_setup = "enduser_setup.lua",
+               file = "file.lua",
+               gpio = "gpio.lua",
+               i2c = "i2c.lua",
+               mdns = "mdns.lua",
+               net = "net.lua",
+               node = "node.lua",
+               sjson = "sjson.lua",
+               tmr = "tmr.lua",
+               u8g = "u8g.lua",
+               wifi = "wifi.lua"
+            }
+         }
+      }
+   }
+}

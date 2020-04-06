@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "07005119ba5ad60ed955c03f725a9773",
+      ["README.md"] = "7e96f50017db84a6c3480f700d8895da"
+   },
+   lua = {
+      ["lusty-nginx"] = {
+         ["init.lua"] = "b4762bbf82b7c078597a10b1e58c92da",
+         ["log.lua"] = "0b0ffbc98ffbd944efed9fc4522efea2",
+         ["request.lua"] = "cd17a26e2a420c2a2276bd9fadfc7351",
+         ["response.lua"] = "d5f72b9edd0b1c2e456261cc679ebcf4"
+      }
+   },
+   ["lusty-nginx-0.4-0.rockspec"] = "c39bc6e41f974a00a68e7b6e937e5372"
+}

@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   ["kong-uma-rs"] = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.kong-uma-rs.access"] = {
+      "kong-uma-rs/1.0-0"
+   },
+   ["kong.plugins.kong-uma-rs.handler"] = {
+      "kong-uma-rs/1.0-0"
+   },
+   ["kong.plugins.kong-uma-rs.helper"] = {
+      "kong-uma-rs/1.0-0"
+   },
+   ["kong.plugins.kong-uma-rs.schema"] = {
+      "kong-uma-rs/1.0-0"
+   }
+}
+repository = {
+   ["kong-uma-rs"] = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-uma-rs.access"] = "kong/plugins/kong-uma-rs/access.lua",
+               ["kong.plugins.kong-uma-rs.handler"] = "kong/plugins/kong-uma-rs/handler.lua",
+               ["kong.plugins.kong-uma-rs.helper"] = "kong/plugins/kong-uma-rs/helper.lua",
+               ["kong.plugins.kong-uma-rs.schema"] = "kong/plugins/kong-uma-rs/schema.lua"
+            }
+         }
+      }
+   }
+}

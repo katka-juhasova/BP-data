@@ -1,0 +1,89 @@
+commands = {}
+dependencies = {
+   mach = {
+      ["5.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   mach = {
+      "mach/5.1-0"
+   },
+   ["mach.CompletedCall"] = {
+      "mach/5.1-0"
+   },
+   ["mach.Expectation"] = {
+      "mach/5.1-0"
+   },
+   ["mach.ExpectedCall"] = {
+      "mach/5.1-0"
+   },
+   ["mach.any"] = {
+      "mach/5.1-0"
+   },
+   ["mach.deep_compare_matcher"] = {
+      "mach/5.1-0"
+   },
+   ["mach.format_arguments"] = {
+      "mach/5.1-0"
+   },
+   ["mach.format_call_status"] = {
+      "mach/5.1-0"
+   },
+   ["mach.format_value"] = {
+      "mach/5.1-0"
+   },
+   ["mach.match"] = {
+      "mach/5.1-0"
+   },
+   ["mach.not_all_calls_occurred_error"] = {
+      "mach/5.1-0"
+   },
+   ["mach.out_of_order_call_error"] = {
+      "mach/5.1-0"
+   },
+   ["mach.unexpected_args_error"] = {
+      "mach/5.1-0"
+   },
+   ["mach.unexpected_call_error"] = {
+      "mach/5.1-0"
+   }
+}
+repository = {
+   mach = {
+      ["5.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               mach = "mach.lua",
+               ["mach.CompletedCall"] = "mach/CompletedCall.lua",
+               ["mach.Expectation"] = "mach/Expectation.lua",
+               ["mach.ExpectedCall"] = "mach/ExpectedCall.lua",
+               ["mach.any"] = "mach/any.lua",
+               ["mach.deep_compare_matcher"] = "mach/deep_compare_matcher.lua",
+               ["mach.format_arguments"] = "mach/format_arguments.lua",
+               ["mach.format_call_status"] = "mach/format_call_status.lua",
+               ["mach.format_value"] = "mach/format_value.lua",
+               ["mach.match"] = "mach/match.lua",
+               ["mach.not_all_calls_occurred_error"] = "mach/not_all_calls_occurred_error.lua",
+               ["mach.out_of_order_call_error"] = "mach/out_of_order_call_error.lua",
+               ["mach.unexpected_args_error"] = "mach/unexpected_args_error.lua",
+               ["mach.unexpected_call_error"] = "mach/unexpected_call_error.lua"
+            }
+         }
+      }
+   }
+}

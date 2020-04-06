@@ -1,0 +1,20 @@
+rock_manifest = {
+   doc = {
+      COPYING = "7bae63a234e80ee7c6427dce9fdba6cc",
+      ["README.md"] = "c4fc668ca66f369da50e071ca1612202",
+      ["TODO.md"] = "814af0a3f7d9df0ced7ff4b3c02c12dc"
+   },
+   ["irc-engine-5.2.2-1.rockspec"] = "bea0988c45df1ac09a929c67d4a688dd",
+   lua = {
+      irce = {
+         ["init.lua"] = "4ee8499c538f54ea2324e66d5d8976d1",
+         modules = {
+            ["base.lua"] = "63f33df9fbf17639b9b51b3f0b90cf1f",
+            ["channel.lua"] = "59e7c3fd843c9df002663e720aea2de5",
+            ["message.lua"] = "09718dd10bf5a48de691b51b6089c08f",
+            ["motd.lua"] = "8353f8ebcd472269e219931a295b4001"
+         },
+         ["util.lua"] = "3372dcdd7e7520dbccafdaa08a2657e2"
+      }
+   }
+}

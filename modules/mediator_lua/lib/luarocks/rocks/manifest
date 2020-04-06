@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   mediator_lua = {
+      ["1.1.2-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   mediator = {
+      "mediator_lua/1.1.2-0"
+   }
+}
+repository = {
+   mediator_lua = {
+      ["1.1.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               mediator = "mediator.lua"
+            }
+         }
+      }
+   }
+}

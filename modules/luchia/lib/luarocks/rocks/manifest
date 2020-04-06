@@ -1,0 +1,269 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   luchia_get = {
+      "luchia/1.1.2-1"
+   }
+}
+dependencies = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lualogging = {
+      ["1.3.0-1"] = {
+         {
+            constraints = {},
+            name = "luasocket"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luchia = {
+      ["1.1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-cjson"
+         },
+         {
+            constraints = {},
+            name = "lualogging"
+         },
+         {
+            constraints = {},
+            name = "luasocket"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   logging = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.console"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.email"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.file"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.rolling_file"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.socket"] = {
+      "lualogging/1.3.0-1"
+   },
+   ["logging.sql"] = {
+      "lualogging/1.3.0-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   luchia = {
+      "luchia/1.1.2-1"
+   },
+   ["luchia.conf"] = {
+      "luchia/1.1.2-1"
+   },
+   ["luchia.core.attachment"] = {
+      "luchia/1.1.2-1"
+   },
+   ["luchia.core.document"] = {
+      "luchia/1.1.2-1"
+   },
+   ["luchia.core.log"] = {
+      "luchia/1.1.2-1"
+   },
+   ["luchia.core.server"] = {
+      "luchia/1.1.2-1"
+   },
+   ["luchia.database"] = {
+      "luchia/1.1.2-1"
+   },
+   ["luchia.document"] = {
+      "luchia/1.1.2-1"
+   },
+   ["luchia.utilities"] = {
+      "luchia/1.1.2-1"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   lualogging = {
+      ["1.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               logging = "logging.lua",
+               ["logging.console"] = "logging/console.lua",
+               ["logging.email"] = "logging/email.lua",
+               ["logging.file"] = "logging/file.lua",
+               ["logging.rolling_file"] = "logging/rolling_file.lua",
+               ["logging.socket"] = "logging/socket.lua",
+               ["logging.sql"] = "logging/sql.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   luchia = {
+      ["1.1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luchia_get = "luchia_get"
+            },
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1",
+               lualogging = "1.3.0-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               luchia = "luchia.lua",
+               ["luchia.conf"] = "luchia/conf.lua",
+               ["luchia.core.attachment"] = "luchia/core/attachment.lua",
+               ["luchia.core.document"] = "luchia/core/document.lua",
+               ["luchia.core.log"] = "luchia/core/log.lua",
+               ["luchia.core.server"] = "luchia/core/server.lua",
+               ["luchia.database"] = "luchia/database.lua",
+               ["luchia.document"] = "luchia/document.lua",
+               ["luchia.utilities"] = "luchia/utilities.lua"
+            }
+         }
+      }
+   }
+}

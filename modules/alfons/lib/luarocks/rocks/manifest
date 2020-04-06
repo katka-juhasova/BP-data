@@ -1,0 +1,67 @@
+commands = {
+   alfons = {
+      "alfons/2.3.2-2"
+   }
+}
+dependencies = {
+   alfons = {
+      ["2.3.2-2"] = {
+         {
+            constraints = {},
+            name = "ltext"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ltext = {
+      ["1.1.0-2"] = {}
+   }
+}
+modules = {
+   file = {
+      "alfons/2.3.2-2"
+   },
+   ltext = {
+      "ltext/1.1.0-2"
+   }
+}
+repository = {
+   alfons = {
+      ["2.3.2-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               alfons = "alfons"
+            },
+            dependencies = {
+               ltext = "1.1.0-2"
+            },
+            modules = {
+               file = "file.lua"
+            }
+         }
+      }
+   },
+   ltext = {
+      ["1.1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltext = "ltext.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   datafile = {
+      ["0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   datafile = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.caller"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.luarocks"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.unix"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.xdg"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.util"] = {
+      "datafile/0.6-1"
+   }
+}
+repository = {
+   datafile = {
+      ["0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               datafile = "datafile.lua",
+               ["datafile.openers.caller"] = "datafile/openers/caller.lua",
+               ["datafile.openers.luarocks"] = "datafile/openers/luarocks.lua",
+               ["datafile.openers.unix"] = "datafile/openers/unix.lua",
+               ["datafile.openers.xdg"] = "datafile/openers/xdg.lua",
+               ["datafile.util"] = "datafile/util.lua"
+            }
+         }
+      }
+   }
+}

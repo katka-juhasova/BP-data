@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "46ca6867d83fffd4b13bce16ecfcbbee"
+   },
+   lua = {
+      kong = {
+         plugins = {
+            ["request-limit-validator"] = {
+               ["handler.lua"] = "9cdca36236dfdcda86b24b193c4af7bf",
+               ["schema.lua"] = "9a1e8c8045000c58f0d541b6a36f6a74"
+            }
+         }
+      }
+   },
+   ["request-limit-validator-0.1.2-1.rockspec"] = "faf8f7c02034357089e51989aa731388"
+}

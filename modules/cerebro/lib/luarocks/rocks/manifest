@@ -1,0 +1,43 @@
+commands = {
+   cerebro = {
+      "cerebro/1.1.0-1"
+   }
+}
+dependencies = {
+   cerebro = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cerebro = {
+      "cerebro/1.1.0-1"
+   }
+}
+repository = {
+   cerebro = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               cerebro = "cerebro"
+            },
+            dependencies = {},
+            modules = {
+               cerebro = "cerebro.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["luafilesystem-ffi"] = {
+      ["scm-1"] = {}
+   }
+}
+modules = {
+   lfs = {
+      "luafilesystem-ffi/scm-1"
+   }
+}
+repository = {
+   ["luafilesystem-ffi"] = {
+      ["scm-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.lua"
+            }
+         }
+      }
+   }
+}

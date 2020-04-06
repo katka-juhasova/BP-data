@@ -1,0 +1,86 @@
+commands = {}
+dependencies = {
+   inline = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 3, string = "1.3"
+                  }
+               }
+            },
+            name = "murmurhash3"
+         }
+      }
+   },
+   murmurhash3 = {
+      ["1.3-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   inline = {
+      "inline/0.1-0"
+   },
+   murmurhash3 = {
+      "murmurhash3/1.3-0"
+   }
+}
+repository = {
+   inline = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               murmurhash3 = "1.3-0"
+            },
+            modules = {
+               inline = "inline.lua"
+            }
+         }
+      }
+   },
+   murmurhash3 = {
+      ["1.3-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               murmurhash3 = "murmurhash3.so"
+            }
+         }
+      }
+   }
+}

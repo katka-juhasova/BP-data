@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   heaps = {
+      ["1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   binary_heap = {
+      "heaps/1-1"
+   },
+   skew_heap = {
+      "heaps/1-1"
+   }
+}
+repository = {
+   heaps = {
+      ["1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               binary_heap = "binary_heap.lua",
+               skew_heap = "skew_heap.lua"
+            }
+         }
+      }
+   }
+}

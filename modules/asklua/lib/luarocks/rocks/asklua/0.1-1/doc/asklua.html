@@ -1,0 +1,865 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<title><em>asklua</em>: adding interactive help to other modules</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+</head>
+<body>
+
+
+<h1><em>asklua</em>: adding interactive help to other modules</h1>
+
+
+<p><strong>Julio Manuel Fernández-Díaz</strong></p>
+
+<p><em>Profesor Titular,
+Department of Physics, University of Oviedo (Spain),
+February 2010</em></p>
+
+<p>Abstract:</p>
+
+<blockquote>
+    <p>We present <code>AskLua</code>, a system for managing help: for on line use in
+    the interactive interpreter, and for generating documentation in <code>html</code>
+    and printed formats.</p>
+    
+    <p>Module <code>ask</code>, provided by <code>AskLua</code>, is little intrusive and, although
+    it occupies some memory, it can be deleted by the user at any time if
+    he/she does not want to continue with the help on line.</p>
+    
+    <p>The system is fairly integrated, in such a way that it is possible to
+    easily add help for an existing module, even of binary type.</p>
+</blockquote>
+
+
+
+<h2>1 Introduction</h2>
+
+<p>When we learn a new subject it is suitable to have information, as
+complete as possible, about the topic. Often this is achieved through an
+expert (teacher).  Nevertheless, we have not always access to one. For
+this it is necessary to be self-taught. In these occasions a good helping
+system, as interactive as possible, is very interesting.</p>
+
+<p>Both <a href="http://www.python.org">Python</a> and <a href="http://www.Matlab.com">Matlab</a>, for example, have interactive help on
+line. This allows the beginners a comfortable access to the system during
+the first phases of their learning.</p>
+
+<p>Obviously tools like the mentioned languages will have more use 
+with an easy access to the documentation. And this is very interesting
+for designers of Lua modules.</p>
+
+<p>Lua has a quite minimalist approach, almost opposite to two mentioned.
+Therefore, it is practically a chimera the inclusion of a help system
+in the standard.</p>
+
+<p>Lua does not impose policies, but it is very extensible. This allows us
+to easily include a system (module) of help, which is loaded if we wish.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Literate_programming">Literate programming</a>, very aimed to the programmer, does not convince
+me as a mechanism to solve our problem, since it is necessary to learn
+another <em>pseudo-language</em> and it really serves for another thing.</p>
+
+<p>The system of documentation that accompanies <code>stdlua</code> with <code>@param</code>,
+<code>@returns</code>, etc., is not of my taste, since it consists of
+comments in the code. This is nice for checking and studying Lua
+code, but to obtain a system of documentation on line it is
+relatively complex. In addition, the documentation is also aimed to
+the programmer and not so much to the user of some module (for example,
+an engineer who wants to use <a href="http://numlua.luaforge.net">Numlua</a>).</p>
+
+<p>A system very similar to <code>stdlua</code>, though more advanced
+is <a href="http://luadoc.luaforge.net">Luadoc</a>, which allows the creation of documentation in <code>html</code> format,
+also starting from comments in the modules. The final format is friendly
+enough for managing the documentation in a browser, but it does
+not serve for on line help, which is what I initially wished.</p>
+
+<p>In any case, both <code>stdlua</code> and Luadoc can be easily adapted
+to our purposes (below explained): it is enough to integrate the
+comments (by hand, before their use) in the corresponding help tables.</p>
+
+<p>When I was ending this documentation I discovered in <a href="http://luarocks.org/repositories/rocks/">LuaRocks</a>
+a module named <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a> (being December 13, 2009, the date of the
+first version). Initially I thought that my work had been useless since
+others have done the module that I was wishing.  (Anyhow, new things are
+always learnt on programming.) I have to say that the announce of it in
+<a href="http://lua-users.org/lists/lua-l/">lua list</a> goes unnoticed to me.</p>
+
+<p>Once analyzed the topic more deeply, I have realized the differences
+(although <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a> might be adapted in many ways, obviously): the
+documentation that I propose is included in the own module, whereas the
+other one is included in auxiliary files placed in a concrete path.
+In addition, the method here presented allows to consult separately
+specific parts of the help: how a function in a module is used,
+examples of use, the list of functions of a module, etc.  They are two
+different approaches with its advantages and disadvantages (that the
+user can verify).</p>
+
+<p>The unique trouble is that we was compelled to change the name of my
+module. Now its name is <code>ask</code> (and I had preferred <code>help</code>).  That way
+they can use both modules simultaneously. Anyhow, if the user wishes to
+rename <code>ask</code> and to call it <code>help</code> only renaming <code>ask.lua</code> to <code>help.lua</code>
+is sufficient. In this case it is interesting to change the notices that
+a module gives when loaded (see section 
+<a href="#know">4.3 How we know that a module has help</a>).</p>
+
+<p>Another specific possibility is to load module <code>ask</code>, by referencing it
+with a variable <code>help</code> in the following way:</p>
+
+<pre><code>local help = require "ask"
+</code></pre>
+
+<p>Et voilà. We can choose both <code>ask</code> and <code>help</code> for using the present module
+(from this moment we cannot use <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a>, obviously).</p>
+
+
+
+<h2>2 The problem</h2>
+
+<p>It has two aspects:</p>
+
+<ol>
+    <li><p>On the one hand, for the <em>programmer</em> of a module who wants to add help.
+    It will have to be easy to implement, with the minimal modifications
+    to his/her module.</p></li>
+    <li><p>On the other hand, for the module <em>users</em>. The browsing of the
+    documentation will have to be as complete as possible but of easy managing.</p></li>
+</ol>
+
+<p>As programmers, we are interested in the ease of
+adding documentation, as complete as possible. Also, if possible several
+formats are welcome: </p>
+
+<ul>
+    <li>on line in interactive Lua,</li>
+    <li>on line in a browser, which requires <code>html</code> format (although some
+    others exist, <code>html</code> is a standard),</li>
+    <li>printed format.</li>
+</ul>
+
+<p>In addition, the programmer is very interested in introducing the
+documentation only once, and the existence of an automatic system to
+produce several formats is nearly a must. This avoids many mistakes and the
+modifications, when necessary, have to be done only in one place.</p>
+
+<p>From the user point of view, he/she will want that documentation is:</p>
+
+<ul>
+    <li><em>easy</em> to access, giving only the required information (not more, nor less);</li>
+    <li>the <em>most complete</em> possible, covering many aspects, even secondary in
+    occasions;</li>
+    <li><em>relational</em>, that is, it can allow us to go from one point to another in
+    the documentation (if a relationship exists).</li>
+</ul>
+
+
+<p>After many thoughts, many tests, and designing several versions of the help
+module, finally the system explained below arised.</p>
+
+
+<h2>3 The solution</h2>
+
+<p>The information of help in Lua can go only (more or less) in tables, with
+strings, or in files (as in <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a>). It has seemed to me that
+file managing would be cumbersome enough since files must be accessible and
+possibly where the module resides. It would be
+necessary to search in the <em>paths</em> of Lua and there might be more than one
+file with the name for that we are looking for (and not to correspond the help to
+what it is wished). Therefore I have preferred the other option.</p>
+
+<p>Our module <code>ask</code> must be able to access to these tables (if they
+exist, but throwing a warning if no available information about a certain
+module exists), then giving the proper required information.</p>
+
+
+<p>I will describe module <code>ask</code>.</p>
+
+
+<h3>3.1 Where information is placed</h3>
+
+<p>The first one is <em>where</em> is held the help information of a module.
+In Lua it is obvious that a table is the right place, with possible
+sub-tables, and finally text (strings). Besides, help for a module
+(v.g., <code>mininum</code>, the example attached to <code>ask</code>) must be associated
+to it in some way: Lua have to know the help like it knows about
+module functions (otherwise it cannot "help" us).</p>
+
+<p>The help must be sub-divided. The final idea consists of including in
+the module (v.g., inside <code>module.lua</code>) a table <code>_H</code> with fields and
+sub-tables. Here is the structure:</p>
+
+<pre><code>_H = {
+  _CHARSET = "iso-8985-15",   -- or typically "utf-8"
+  _Name    = [[Name of the module]],
+
+  _basic   = [[Basic help]],
+  _usage   = [[Usage help]],
+  _more    = [[Complementary information]],
+  _seealso = [[Links to more information (internal or external)]],
+  _example = [[An example of use]],
+  _notes   = [[Notes (Copyright, etc.)]]
+  _version = [[Version, name of the author and other subjects]],
+}
+</code></pre>
+
+<p>(Note: <code>_Name</code> has a capital <code>"N"</code>.)</p>
+
+
+<p><code>_CHARSET</code> identifies what encoding has been used in the texts of
+help. For help in <code>html</code> format <code>ask</code> directly uses the value
+in this field.</p>
+
+<p>For on line help, <code>ask</code> detects the operating system character encoding to convert
+from the set of characters indicated in <code>_CHARSET</code> to that
+one of the system (this way help is correctly visualized on screen).
+At the moment this system only is implemented with UFT-8 and iso-8859:
+If <code>ask</code> does not detect UTF-8 then it thinks <code>iso-8859</code> is the enconding
+in the operating system.</p>
+
+<p>This table is included in any point of the file <code>module.lua</code> (although its
+logical place is near the beginning). None of the fields is mandatory:
+if the programmer does not gives an example the field <code>_example</code> is
+not specified.</p>
+
+<p>As we see, in order that the minimal interference exists with other
+variables and functions of the module, I have put <code>"_"</code> in front of the
+table name. In this way, we will avoid collisions of names: it is rare to
+use names of this type (except for local variables). In any case, the user
+of <code>ask</code> can change in the source code <code>_H</code> into another name with a text
+editor (since the source code is provided) and to perform accordingly.</p>
+
+<p>Every function of the module (v.g., <code>about</code>, <code>base</code> and <code>doc</code>
+in the module <code>ask</code>) can have its associate help.  For example, for the
+first function, it is:</p>
+
+<pre><code>_H.about = {
+  _basic   = [[Basic help]],
+  _usage   = [[Usage help]],
+  _more    = [[Complementary information]],
+  _seealso = [[Links to more information (internal or external)]],
+  _example = [[An example of use]],
+}
+</code></pre>
+
+<p>In some cases we have tables of functions. For example, if <code>tabfun</code>
+is a table with functions, namely <code>f1</code> y <code>f2</code>, we could put:</p>
+
+<pre><code>_H.tabfun = { ... }
+
+_H.tabfun.f1 = {
+  _basic   = [[ ... ]],
+  _usage   = [[ ... ]],
+  _example = [[ ... ]],
+}
+
+_H.tabfun.f2 = { ... }
+</code></pre>
+
+<p>Obviously if no information exists about some function, then we do not
+have to specify it (as <code>_more</code> and <code>_seealso</code> in previous <code>f1</code>).</p>
+
+<p>Initially the format of the string going between <code>[[ ]]</code> was pure
+text. With it, for the help on line it is enough. Nevertheless, it was
+my desire that the information can also be printed. Then, a more
+advanced format is better. It leaded me to the format <a href="http://daringfireball.net/projects/markdown">markdown</a>,
+which in addition has an implementation in pure Lua, <a href="http://www.frykholm.se/programming.html">markdown.lua</a>,
+done by Niklas Frykholm. (Note: the version appearing in <a href="http://luaforge.net">luaforge.net</a>
+is obsolete, but the one in <a href="http://luarocks.org/repositories/rocks/">Luarocks</a> is correct.)
+Actually, this document has been prepared in markdown format.</p>
+
+<p>This format is not much intrusive. This is important because I did not
+want to filter help on line, but I wanted it untouched in the strings
+of help.</p>
+
+
+<h3>3.2 How information is accessed</h3>
+
+<p>We have already the information in <em>its</em> place (Lua tables).  When the
+module is loaded also these tables are. Then, from this moment they
+are accessible (evidently they occupy space; in
+<a href="#howto">5 How to use the help interactively</a>
+we will see how to free it if wished).</p>
+
+<p>Now we must talk about <em>how</em> to access the information.
+For that, <code>ask</code> has three functions: <code>about</code>, <code>base</code> and <code>doc</code>.</p>
+
+
+<h4>| about |</h4>
+
+<p>This was also the first one in being designed: it provides the
+information on line. It is necessary to tell it <em>about</em> we want help
+and <em>which</em> of the diverse information piceces we wish (for example
+<code>basic</code>, for the basic information). Function <code>about</code> would be invoked,
+for example:</p>
+
+<pre><code>ask.about"/mininum.root^basic"
+</code></pre>
+
+<p>being <code>mininum</code> the name of the module, <code>root</code> the name of one of the
+functions inside the module, and <code>basic</code> the type of information we wish
+(I will explain below the inclusion of the initial <code>"/"</code>).
+A caret <code>"^"</code> separates what we wish from the type of information
+we want.</p>
+
+<p>In another example we would have:</p>
+
+<pre><code>ask.about"/somemod.tabfun.f1^usage"
+</code></pre>
+
+<p>that is, we ask for <code>usage</code> help of the function <code>f1</code> inside the table
+<code>tabfun</code> of the module <code>somemod</code>.</p>
+
+<p>Another important information for the user exists: the list of functions
+inside the module. The designer of the module has not to introduce it
+because <code>ask</code> obtains this directly. For displaying it in
+screen we have to use:</p>
+
+<pre><code>ask.about"/mininum^list"
+</code></pre>
+
+
+<p>Also it is possible to ask for all the information that exists about
+something, by means of:</p>
+
+<pre><code>ask.about"/mininum.root^all"
+</code></pre>
+
+<p>As we see, the user in this basic format of invocation of <code>about</code> has to
+type much.  The following thing that I did was to admit abbreviations for
+the information type:</p>
+
+<ul>
+    <li><code>b</code> instead of <code>basic</code>, that provides basic information;</li>
+    <li><code>e</code> instead of <code>example</code>, that shows us an example;</li>
+    <li><code>l</code> instead of <code>list</code>, that shows a list of functions in the module
+    (or in a table of functions);</li>
+    <li><code>m</code> instead of <code>more</code>, that shows additional information;</li>
+    <li><code>s</code> instead of <code>seealso</code>, that cites us links to more information
+    (external or internal);</li>
+    <li><code>u</code> instead of <code>usage</code>, that shows us how to use the module or function;</li>
+    <li><code>v</code> instead of <code>version</code>, that shows us version information, name of the
+    authors, etc.</li>
+    <li><code>n</code> instead of <code>notes</code>, that shows us notes as the Copyright, etc.</li>
+    <li><code>a</code> instead of <code>all</code>, that provides all the previous information.</li>
+</ul>
+
+<p>In this way we have the equivalence:</p>
+
+<pre><code>ask.about"/mininum^list"  --&gt;&lt;--  ask.about"/mininum^l"
+</code></pre>
+
+<p>The spaces typed in the argument of <code>ask.about</code> are removed before
+the search. Also <code>about</code> collapses multiple <code>"."</code> that could appear in the
+searching string. For example, we would have the equivalence:</p>
+
+<pre><code>ask.about "/ mininum . root ^ usage" --&gt;&lt;-- ask.about"/mininum.root^u"
+</code></pre>
+
+<p>When information is not provided, by default it is supposed <code>basic</code>.</p>
+
+<p>By using <code>nil</code> as argument of <code>ask.about</code> we obtain basic information
+about the help system. Then,</p>
+
+<pre><code>ask.about()  --&gt;&lt;--  ask.about("/ask^basic")
+</code></pre>
+
+<p>are equivalent.</p>
+
+<p>It is necessary to remember that <code>ask</code> provides the information the
+designer of the module has included in the proper help tables (except for
+<code>list</code> and <code>all</code>, obviously). That is, the information might be
+incorrect, for example, if data about the version is included in <code>_more</code>.</p>
+
+
+<h4>| base |</h4>
+
+<p>The reader can see we have still to type very much.
+Normally when one works with a module (let's say <a href="http://numlua.luaforge.net">Numlua</a>)
+we need help in an implicit way for it (and not for other module).
+For it, I have included the function <code>ask.base</code>.
+This function allows to implicitly assume an information searching prefix.
+For example, by putting:</p>
+
+<pre><code>ask.base"mininum"
+--&gt;  Changing help basis to "mininum"
+</code></pre>
+
+<p>from this moment the prefix <code>"/mininum"</code> is added to the search path
+(sometimes with an added point <code>"."</code>, when referring to a module or to
+a table of functions inside the module and we wish information about an
+specific function). Then, these are equivalent:</p>
+
+<pre><code>ask.about"/mininum^list"  --&gt;&lt;--  ask.about"^l"
+</code></pre>
+
+<p>I have called this prefix <code>basis</code> (stored in a local variable).</p>
+
+<p>Invoking <code>ask.base</code> using as parameter an empty string <code>""</code>, it
+shows us the current <code>basis</code>:</p>
+
+<pre><code>ask.base""  
+--&gt;   Help basis is "mininum"
+</code></pre>
+
+<p>On the other hand, there has seemed suitable to me that:</p>
+
+<pre><code>ask.base(nil)
+</code></pre>
+
+<p>changes <code>basis</code> to <code>"ask"</code>.</p>
+
+<p>The on line help system is already operative, but I liked no much the
+necessity of writing <code>ask.about</code> whenever I wanted help (altough, as read
+<code>ask.about"/mininum.root^usage"</code> is nearly equivalent to <em>ask about
+mininum.root usage</em>).  The solution was to include the chunk of code:</p>
+
+<pre><code>__call = function (t, s, ...)
+   if s == nil then
+      about(nil)
+   elseif type(s) == "string" then
+      about(s)
+   else
+      return t[s](...)
+   end
+end
+
+setmetatable(_G.ask, ask)
+</code></pre>
+
+<p>at the end of <code>ask.lua</code>. The last line allows us to use directly <code>ask</code> as
+a global variable after doing <code>require "ask"</code>. The previous chunk of code
+allows the function <code>about</code> is automatically invoked when <code>ask</code>
+receives a string as argument. Then</p>
+
+<pre><code>ask.about"/mininum.root^usage" --&gt;&lt;-- ask"root^u"
+</code></pre>
+
+<p>are equivalent (with <code>basis = "mininum"</code>).  The simplification is
+manifest, and it is near impossible to type less when asking help.
+Actually, slightly less we can type if the module <code>ask</code> is invoked in
+the way: <code>h = require "ask"</code>; from this moment we can put <code>h"root^u"</code>.
+Nevertheless, it seems to me that <code>ask</code> is not much writing, is more
+descriptive, and it is possible that <code>h</code> has another use inside our
+program.</p>
+
+
+<h4>| doc |</h4>
+
+<p>With the previous function I had already the module with the wished
+functionality. But it is a pity to have the information only on line and
+not to be able to print it on a decent format. Therefore, I have designed
+the function <code>doc</code>. The first idea was to adapt a bit the text output. But
+a bit more of expense when writing the help, using the <a href="http://daringfireball.net/projects/markdown">markdown</a>
+format, allows us an output in <code>html</code> format suitable enough. It was
+easy, since a module exists, <a href="http://www.frykholm.se/programming.html">markdown.lua</a> (that obviously must be
+installed), which can be invoked from <code>ask</code>.</p>
+
+<p>The <code>html</code> version of help is complementary to the on line one.
+It allows a more <em>global</em> vision of a given module, surfing the
+information by browsing among the different functions inside it.
+Hence, it is interesting enough.</p>
+
+<p>In this point system <code>ask</code> seems Luadoc: both generate <code>html</code>
+format. Nevertheless, the starting points are very different.</p>
+
+<p>It is also possible to obtain the help in printed format, printing from
+a browser. Probably it is better to use a program like <a href="http://user.it.uu.se/~jan/html2ps.html">html2ps</a>
+by Jan Kärrman, that generates a Postscript (PS) format (and then PDF,
+also the latter with active hyperlinks).</p>
+
+<p>The function <code>ask.doc</code> has been re-designed several times, and
+I am still not much happy with the result (though it works
+correctly, without being very elegant). It generates <code>html</code>.
+In this case, partial information of functions is not needed inside a module.
+Therefore, the generated <code>html</code> file contains all the information
+corresponding to the module (for it, <code>basis</code> must contain the name of the
+module and not of one of the functions inside).
+For example:</p>
+
+<pre><code>ask.doc""
+</code></pre>
+
+<p>would create <code>html</code> help for <code>basis</code> (v.g., <code>"mininum"</code> previously),
+with the name <code>"mininum.html"</code>, and:</p>
+
+<pre><code>ask.doc"ask"
+</code></pre>
+
+<p>would generate <code>html</code> help for <code>ask</code>.</p>
+
+
+<p>The <code>html</code> file generated by <code>ask.doc</code> contains first generic information
+about the module (the content of <code>_H._basic</code>, <code>_H._usage</code>, etc.), then
+the help of all functions (in alphabetical order), to finish with 
+<code>_H._version</code> and <code>_H._notes</code>.</p>
+
+<hr/>
+
+<p>I apologize since my programming is a little "dirty" in some parts
+of the module. My other occupations have not allowed me more time for
+improving it, and as one of my professors (León Garzón) said "the <em>best</em>
+is enemy of the <em>good</em>".</p>
+
+
+<h2>4 How modules are adapted to add them help</h2>
+
+<h3>4.1 Why markdown format</h3>
+
+<p>The <a href="http://daringfireball.net/projects/markdown">markdown</a> format is simple enough in order that a module
+programmer learns it in an hour. It is not necessary for
+the help on line (even some people can think it is
+something annoying). I believe that it does not introduce much
+<em>noise</em> in the on line help, and nevertheless it allows a good
+presentation in <code>html</code> (and in PDF after other conversions).</p>
+
+<p>It is possible to look up in the indicated address, but there also
+exists a two pages PDF document with a simple help of the
+system <a href="http://media.libsyn.com/media/howtube/Markdown_Cheat_Sheet.pdf">Markdown Syntax Cheat Sheet</a> (the truth, it is necessary
+little more than this simple help to learn <a href="http://daringfireball.net/projects/markdown">markdown</a>).</p>
+
+<p>Thinking a bit more about the help in <code>html</code> and printed formats we could
+introduce even references to images. It is evident that in the on line help
+(always text mode) it is impossible to visualize an image, but its
+reference can be given in <a href="http://daringfireball.net/projects/markdown">markdown</a> format (not much
+intrusive). It would be in the following way:</p>
+
+<pre><code>![Alternative text](/path/to/image.jpg "Optional title")
+</code></pre>
+
+<p>(Instead of JPG format we can also use PNG or GIF.)</p>
+
+<p>The <a href="http://daringfireball.net/projects/markdown">markdown</a> format also allows to show links to other documents
+(internal or external ones) in a simple way. In the on line help this is
+not relevant but in <code>html</code> format is. For example, <code>_seealso</code>
+can be designed including links in the way:</p>
+
+<pre><code>internal:          [label](#reference)
+
+external:          [label](http://what.we.want)
+</code></pre>
+
+
+<h3>4.2 Preparing help data</h3>
+
+<p>The general idea is simple: doing it in an incremental way.  A complete
+documentation can be a long and tedious task.  Therefore, it would be
+convenient to begin with <code>_basic</code> help, then <code>_usage</code>, since they are
+both primary aspects. Since it is usual to put those as comments in
+the head of functions, what we have to do is to convert the comments
+already written in a piece of <code>_H</code>.</p>
+
+<p>Later, other parts that still remain can be added. An example (commented
+if wished) is convenient for the user could try it (even copying and
+pasting code).</p>
+
+<p>The logical place of introducing this information is before the
+corresponding function (as usual), and in case of modules near the
+beginning of the file.</p>
+
+<p>If one wants to prepare the help for a compiled module we have to do
+the following.</p>
+
+<p>If the binary module is ours, and we can recompile it, we can internally
+change the name of the table if we wish, renaming also the compiled
+file. Then one creates a Lua source file, with the included help, with
+the old name and extension <code>.lua</code>) that loads the compiled file.</p>
+
+<p>A second possibility is to name in a different way the compiled module
+and the one that we are going to load with <code>require</code>. For example,
+we have a module compiled in binary format of name <code>mymodule.so</code> (or
+<code>mymodule.dll</code>).  We will create a Lua file with name <code>mymodule1.lua</code>
+of the form:</p>
+
+<pre><code>-- file mymodule1.lua
+require "mymodule"
+mymodule._H = { ... }
+</code></pre>
+
+<p>To load <code>mymodule</code> we must use:</p>
+
+<pre><code>require "mymodule1"
+</code></pre>
+
+<p>and we have available the functions <code>mymodule.&lt;function&gt;</code>,
+and also the help <code>mymodule._H</code>, since this moment.</p>
+
+<p>Another third possibility is to utilize the same name,
+using the fact that Lua
+first looks for source files in <code>LUA_PATH</code> and then binary ones in
+<code>LUA_CPATH</code>. Then, we would create a file <code>mymodule.lua</code> in some place
+in <code>LUA_PATH</code>, in the way:</p>
+
+<pre><code>-- file mymodule.lua
+module(..., package.seeall)
+
+local p = package.path
+package.path = ""
+package.loaded["mymodule"] = nil
+
+require"mymodule"
+package.path = p
+
+mymodule._H = [[ ... help ... ]]
+</code></pre>
+
+<p>In this way we can still use:</p>
+
+<pre><code>require "mymodule"
+</code></pre>
+
+<p>as before, but now with included help.</p>
+
+<p>Anyhow, this third system might fail if the binary module <code>mymodule.so</code>
+(or <code>mymodule.dll</code>) loads in turn modules in Lua source code because
+during its load the search in <code>package.path</code> is deactivated.</p>
+
+
+<h3><span id="know">4.3 How we know that a module has help</span></h3>
+
+
+<p>At the end of the Lua file containing the module it is possible to
+include the following chunk of code to detect if Lua has been launched
+in interactive mode:</p>
+
+<pre><code>-- checks if Lua calling was interactive;
+-- it does not work in all cases, but it does in the normal ones
+local interactive = true
+if _G.arg then
+   for _, v in pairs(_G.arg) do
+     interactive = false
+     if v == "-i" then
+       interactive = true
+       break
+     end
+   end
+end
+</code></pre>
+
+<p>This system of detection does not always work well (and it allows to
+generate the <code>html</code> documentation with a simple line in the
+operating system shell; we will see it in the following
+section).</p>
+
+<p>It would be interesting that in interactive mode the Lua interpreter
+creates a variable indicating it. Or at least it could use the existent
+variable <code>_PROMPT</code> for it: at present, it is created only if the user
+defines it at interpreter launch time, otherwise it is <code>nil</code>.
+It would be enough to define <code>_PROMPT</code> in interactive mode to be
+<code>"&gt;"</code> if the user did not declare another value, and leave it <code>nil</code>
+in non-interactive mode.</p>
+
+<p>After detecting interactivity we have the following chunk:</p>
+
+<pre><code>if interactive then
+   -- reusing interactive
+   interactive = pcall(require, "ask")                          --**
+   if interactive then
+      io.stderr:write('Module "mininum" loaded. ')
+      io.stderr:write('To obtain help invoke ask"mininum".\n')  --**
+      io.stderr:write('Documentation occupies memory. ')
+      io.stderr:write('For freeing it let execute:\n')
+      io.stderr:write('\n    mininum._H = nil\n\n')
+
+      ask.base"mininum"
+   else
+      io.stderr:write('Module "mininum" loaded. It has help\n')
+      io.stderr:write('but module "ask" is not accesible.\n')   --**
+      io.stderr:write('Help removed.\n')
+   end
+end
+
+if not interactive then
+   -- deleting _H
+   _H = nil
+   _G.ask = nil
+   collectgarbage()
+end
+</code></pre>
+
+<p>This frees not necessary memory in non-interactive mode, and in
+addition it shows on screen some messages in interactive mode.</p>
+
+<p>If we want to change the name of <code>ask.lua</code> to another one we will have
+also to change the lines indicated by <code>--**</code> above in a similar way.</p>
+
+<p>Apart from this, in the future there is possible the inclusion of an
+external utility to adapt the format that accompanies <a href="http://luadoc.luaforge.net">Luadoc</a> (and
+also the one that accompanies <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a>) for its use in the module
+<code>ask</code>. This allows to depart not from void for modules whose documentation
+was already prepared in another way.</p>
+
+
+<h2><span id="howto">5 How to use the help interactively</span></h2>
+
+<p>As before we have exposed, a module that takes help will have to show when
+loaded with <code>require</code> in order to the user knows that help is available.</p>
+
+<p>The last loaded module that holds help will change <code>basis</code> to the name
+of the module. The user will have to bear in mind this fact. Anyhow, at
+any time the user will be able to change <code>basis</code> or he/she will be punctually
+able to use the system with the complete path (that begins with <code>"/"</code>).</p>
+
+<p>If one wants to delete the help from memory it is easy.
+Let's suppose that we have the module <code>mininum</code> loaded with:</p>
+
+<pre><code>require "mininum"
+</code></pre>
+
+<p>then, it is enough to type:</p>
+
+<pre><code>mininum._H = nil   -- repeat this with each module
+collectgarbage()
+</code></pre>
+
+<p>After that, if we want to completely delete the help system, we will
+write:</p>
+
+<pre><code>_G.ask = nil
+collectgarbage()
+</code></pre>
+
+<p>From this moment on, the memory is freed of the helping system and the
+help information of module <code>mininum</code> (although, obviously its functions
+are still loaded).</p>
+
+
+<h2>6 How <code>html</code> (and PDF) documentation is generated</h2>
+
+<p>In this type of documents it is important to indicate the set of
+characters used in the help. At these moments I use <code>iso-8859-15</code> and
+therefore, in the help the field is included:</p>
+
+<pre><code>_H._CHARSET = "iso-8859-15"  -- "utf-8" sometimes
+</code></pre>
+
+<p>If one want to use <code>utf-8</code> (more current these days) it is necessary
+to change it in identical way. If not done so, some characters as "ü",
+"ñ", "á", will appear incorrectly. Normally, as we present modules help
+in English, people names and similar are usually the only words affected
+by this matter.</p>
+
+<p>A very simple way to obtain the documentation in <code>html</code> format would be
+the following one in interactive mode:</p>
+
+<pre><code>$ lua
+&gt; require "mininum"
+&gt; ask.doc""
+</code></pre>
+
+<p>This would create <code>mininum.html</code>. Nevertheless, due to a small problem in
+the detection of the interactivity (see the following section), the same
+documentation can be also obtained by means of:</p>
+
+<pre><code>lua -e "require'mininum'; ask.doc''"
+</code></pre>
+
+<p>Once file <code>mininum.html</code> is created it is possible to visualize it
+with a browser to consult the help. The given style sheet <code>default.css</code>
+places at the left part of the page a fixed menu with the links of the
+whole document, including the list of functions inside the module.</p>
+
+<p>The style of the <code>html</code> output is customizable, through a style sheet
+with name <code>default.css</code> (hardcoded inside <code>ask.lua</code>). I recomend to
+do it only with knowledge of CSS, but it does not hurt to play with it.</p>
+
+<p>When a lot of functions exist in the module it is possible that some links
+disappear at the bottom of the screen.  In this case it is necessary
+to diminish the font size (or to visualize the document without style,
+though ugly, it is still operative). Occasionally the font size should
+be diminished to see the examples (the lines do not wrap in the <code>html</code>
+elements of type <code>&lt;pre&gt;</code>; the examples are converted to <code>&lt;pre&gt;</code> elements).</p>
+
+<p>Apart from viewing the <code>html</code> document it is also possible to
+print it, in the browser (not advisable) or with a
+specific program. We recommend the use of <a href="http://user.it.uu.se/~jan/html2ps.html">html2ps</a>,
+which converts <code>html</code> in PS, with a style sheet a bit simplified
+(see the documentation provided in the link). In this case, the menu of
+navigation is not printed.</p>
+
+<p>Later, if wished, we can convert the PS file into PDF by means
+of <code>ps2pdf</code> that accompanies <a href="http://pages.cs.wisc.edu/~ghost/">Ghostscript</a>. This method keeps
+the links, and we can navigate also in the PDF file.</p>
+
+
+<h2>7 Weaknesses and possible improvements</h2>
+
+<p>Firstly, due to the fact that we modify some tables (internal ones in
+the module that is been modified) it is possible that some collateral
+effects appear (which I have still not discovered).</p>
+
+<p>On the other hand, a module can be loaded in a local variable, v.g.,
+in the way:</p>
+
+<pre><code>local m = require"mininum"
+</code></pre>
+
+<p>to use <code>"m."</code> as prefix for the functions of <code>mininum</code> and to write less.
+From this moment it is possible to access the help with <code>mininum</code> and with
+<code>m</code>. This does not matter very much in interactive mode (as it is possible to
+access the functions with <code>m.fun</code> and with <code>mininum.fun</code>).</p>
+
+<p>Nonetheless, <code>ask.doc"m"</code> creates a file <code>mininum.html</code> with the correct name
+(and not with the name <code>m.html</code>).</p>
+
+<p>Functions in the module that are going to have help must not begin
+with <code>"_"</code> since <code>ask</code> supposes they are a part of
+its system. We can begin a function with <code>"_"</code> but it cannot have help.</p>
+
+<p>Sometimes the interactivity does not work well. For example:</p>
+
+<pre><code>lua -e "require'mininum'" somefile.lua
+</code></pre>
+
+<p>shows an initial message and in addition it does not erase the help. Then,
+when it executes <code>somefile.lua</code> the help tables are in memory (what can
+be counter-productive).</p>
+
+<p>Nevertheless it does not matter too much, because it is enough to
+include:</p>
+
+<pre><code>require"mininum"
+</code></pre>
+
+<p>at the beginning of <code>somefile.lua</code>, to invoke <code>lua</code> without the
+option <code>-e</code>, and then the module unloads <code>ask</code> and the help of
+<code>mininum</code> (as soon as it detects that the mode is non-interactive)
+before executing the rest of the program.</p>
+
+<p>In interactive mode, in the future it is possible to include <code>http</code> links
+for more complete help (for example for a description of an algorithm
+or to give a link to a scientific article), or to verify if there are new
+versions of a given module. When some of these links appear
+a browser might be started when the user was asking for help of this type
+(there would be necessary to include a new type, v.g., <code>link</code> with
+<code>k</code> as abbreviation).</p>
+
+<p>Tests could also be added (for every function in the module; partly they
+might be the executable examples). For example, two fields would
+be included: <code>_test</code> with code and <code>_testsolution</code> with text.
+On having executed the first one it should obtain the second one
+(the module <code>ask</code> would verify that they are equal).  I do not know if
+this is interesting. There would be necessary to study it more deeply.</p>
+
+<p>The system as presented here neither is closed nor is the definitive
+solution. It can have much improvement. The author wishes this version
+of the module can serve as an incentive for other programmers think about
+the topic and develop even better systems (or complete this).</p>
+
+
+<h2>8 Conclusions</h2>
+
+<p>We have designed an interesting system to provide help for
+other modules. This is versatile, and it allows on line
+access, <code>html</code> doc generation for its review in a browser,
+and printed format (PS and PDF).</p>
+
+<p>This system is not perfect, but operative. The author believes
+that it can be the seed of a more complete help system
+for Lua. The advanced programmers can do the modifications
+they wish for their personal use. Actually, <code>AskLua</code> is released
+in the public domain. It is awaiting improvements.</p>
+
+
+
+</body></html>

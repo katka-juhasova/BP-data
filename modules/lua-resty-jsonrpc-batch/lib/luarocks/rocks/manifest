@@ -1,0 +1,102 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-jsonrpc-batch"] = {
+      ["0.0.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, 0, string = "2.1.0"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["lib.resty.jsonrpc.batch"] = {
+      "lua-resty-jsonrpc-batch/0.0.1-2"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+repository = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-jsonrpc-batch"] = {
+      ["0.0.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1"
+            },
+            modules = {
+               ["lib.resty.jsonrpc.batch"] = "lib/resty/jsonrpc/batch.lua"
+            }
+         }
+      }
+   }
+}

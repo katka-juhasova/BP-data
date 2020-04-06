@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Portable Executable-parser</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>pe-parser</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>pe-parser</strong></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="topics/readme.md.html">readme</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>pe-parser</code></h1>
+<p>Lua module to parse a Portable Executable (.exe , .dll, etc.) file and extract metadata.</p>
+<p> NOTE: numerical information is extracted as strings (hex) to prevent numerical overflows in
+ case of 64 bit fields (bit/flag fields). Pointer arithmetic is still done numerically, so for
+ very large files this could lead to undefined results. Use with care!</p>
+
+<p> Version 0.5, <a href="http://www.thijsschreijer.nl">copyright (c) 2013-2018 Thijs Schreijer</a></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#dump">dump (obj)</a></td>
+	<td class="summary">Dumps the output parsed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#get_fileoffset">get_fileoffset (obj, RVA)</a></td>
+	<td class="summary">Calculates the fileoffset of a given RVA.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#msvcrt">msvcrt (infile)</a></td>
+	<td class="summary">Checks the msvcrt dll the binary was linked against.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#parse">parse (target)</a></td>
+	<td class="summary">Parses a file and extracts the information.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#toDec">toDec (IN)</a></td>
+	<td class="summary">convert HEX to integer</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#toHex">toHex (IN, len)</a></td>
+	<td class="summary">convert integer to HEX representation</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#const">const</a></td>
+	<td class="summary">Table with named constants/flag-constants.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "dump"></a>
+    <strong>dump (obj)</strong>
+    </dt>
+    <dd>
+    Dumps the output parsed.
+ This function is also available as a method on the parsed output table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">obj</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "get_fileoffset"></a>
+    <strong>get_fileoffset (obj, RVA)</strong>
+    </dt>
+    <dd>
+    Calculates the fileoffset of a given RVA.
+ This function is also available as a method on the parsed output table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">obj</span>
+         a parsed object (return value from <a href="index.html#parse">parse</a>)
+        </li>
+        <li><span class="parameter">RVA</span>
+         an RVA value to convert to a fileoffset (either number or hex-string)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        fileoffset of the given RVA (number)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "msvcrt"></a>
+    <strong>msvcrt (infile)</strong>
+    </dt>
+    <dd>
+    Checks the msvcrt dll the binary was linked against.
+ Mixing and matching dlls only works when they all are using the same runtime, if
+ not unexpected errors will probably occur.
+ Checks the binary provided and then traverses all imported dlls to find the msvcrt
+ used (it will only look for the dlls in the same directory).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">infile</span>
+         binary file to check
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        msvcrt name (uppercase, without extension) + file where the reference was found, or nil + error
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "parse"></a>
+    <strong>parse (target)</strong>
+    </dt>
+    <dd>
+    Parses a file and extracts the information.
+ All numbers are delivered as "string" types containing hex values (to prevent numerical overflows in case of 64bit sizes or bit-fields), see <a href="index.html#toHex">toHex</a> and <a href="index.html#toDec">toDec</a> conversion functions.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">target</span>
+
+
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table with data, or nil + error
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> pe = <span class="global">require</span>(<span class="string">"pe-parser"</span>)
+<span class="keyword">local</span> obj = pe.parse(<span class="string">"c:\lua\lua.exe"</span>)
+obj:dump()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "toDec"></a>
+    <strong>toDec (IN)</strong>
+    </dt>
+    <dd>
+    convert HEX to integer
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">IN</span>
+         the string to convert to dec
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        number in dec format
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "toHex"></a>
+    <strong>toHex (IN, len)</strong>
+    </dt>
+    <dd>
+    convert integer to HEX representation
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">IN</span>
+         the number to convert to hex
+        </li>
+        <li><span class="parameter">len</span>
+         the size to return, any result smaller will be prefixed by "0"s
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string containing hex representation
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "const"></a>
+    <strong>const</strong>
+    </dt>
+    <dd>
+    Table with named constants/flag-constants.
+ Named elements can be looked up by their name in the <a href="index.html#const">const</a> table. The sub tables are index by value.
+ For flag fields the name is extended with <code>_flags</code>.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">Magic</span>
+
+
+
+        </li>
+        <li><span class="parameter">[20b]</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="comment">-- lookup descriptive name for the myobj.Magic value
+</span><span class="keyword">local</span> desc = pe.const.Magic(myobj.Magic)
+
+<span class="comment">-- get list of flag names, indexed by flag values, for the Characteristics field
+</span><span class="keyword">local</span> flag_list = pe.const.Characteristics_flags</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2018-04-12 14:30:04 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

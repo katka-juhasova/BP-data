@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   outcome = {
+      ["0.2.2-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   outcome = {
+      "outcome/0.2.2-0"
+   }
+}
+repository = {
+   outcome = {
+      ["0.2.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               outcome = "outcome.lua"
+            }
+         }
+      }
+   }
+}

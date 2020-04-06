@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-struct"] = {
+      ["0.9.0-1"] = {}
+   }
+}
+modules = {
+   struct = {
+      "lua-struct/0.9.0-1"
+   }
+}
+repository = {
+   ["lua-struct"] = {
+      ["0.9.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               struct = "struct.lua"
+            }
+         }
+      }
+   }
+}

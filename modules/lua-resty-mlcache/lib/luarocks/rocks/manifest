@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["lua-resty-mlcache"] = {
+      ["2.4.1-1"] = {}
+   }
+}
+modules = {
+   ["resty.mlcache"] = {
+      "lua-resty-mlcache/2.4.1-1"
+   },
+   ["resty.mlcache.ipc"] = {
+      "lua-resty-mlcache/2.4.1-1"
+   }
+}
+repository = {
+   ["lua-resty-mlcache"] = {
+      ["2.4.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.mlcache"] = "resty/mlcache.lua",
+               ["resty.mlcache.ipc"] = "resty/mlcache/ipc.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+rock_manifest = {
+   doc = {
+      ["config.ld"] = "894a00898e12a206146b74d1f5379952",
+      html = {
+         examples = {
+            ["ex1.lua.html"] = "7038d602c21aa364702488b98208c4d1",
+            ["ex2.lua.html"] = "1579ab5db943ec950371cbced8574b0e"
+         },
+         guide = {
+            ["README.md.html"] = "96ad215e95e29333096a8c451220211b"
+         },
+         ["index.html"] = "e45273da06690fba541ed1f4d0709ed4",
+         ["ldoc_pale.css"] = "49232f668f2f5fd21082edcea02f3eba",
+         ["mc.css"] = "3d0fe628c369564e6d72ae55ce6d05df",
+         modules = {
+            ["M6502.html"] = "eacf36ae27f5094c0c1e733de75c3b49",
+            ["M6502.utils.html"] = "de5acbb79759baf80dc34a2b57abf15f"
+         }
+      }
+   },
+   lib = {
+      ["M6502.so"] = "b2ca5f6d32347ede5c49f21a544b4886"
+   },
+   lua = {
+      M6502 = {
+         ["utils.lua"] = "9d39099f7058584cfcfff7240f4f4cd2"
+      }
+   },
+   ["lua-m6502-1.0-1.rockspec"] = "9356806e60df6be95a1d7cb939c6707a",
+   tests = {
+      ["callbacks.lua"] = "01a8766b62251bbbe0d89f0b70f3d4aa",
+      ["gc.lua"] = "585b9bba33d9394bbd06d9c88c91ad83",
+      ["poke.lua"] = "89b51ecff3aa2242f2ef0eeace1d67b8",
+      ["push.lua"] = "226d9b24959d2dd948be9fa4a4502f12",
+      ["registers.lua"] = "2973395d39acd74a12ad80d7220ae6e3"
+   }
+}

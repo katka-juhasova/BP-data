@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+lang="en">
+<head>
+<title>path @ piratery.net</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="doc.css" type="text/css"/>
+</head>
+<body>
+
+<div class="chapter" id="header">
+<img width="128" height="128" alt="prtr-path" src="logo.png"/>
+<p>A simple module to manipulate file paths in Lua</p>
+<p class="bar">
+<a href="index.html">home</a> &middot;
+<a href="index.html#installation">installation</a> &middot;
+<a href="index.html#manual">manual</a>
+</p>
+</div>
+
+<div class="chapter">
+<a id="about"/><h1>1 - About</h1>
+
+<p>The prtr-path module is a simple Lua module that manipulates file paths. Path objects can be created from strings, and concatenated together using the / operator. Additionally they provide some useful accessors, methods and metamethods.</p>
+
+<p>The name path is not original, but it reflects the purpose of the library. The prtr- prefix (a contraction for piratery.net, the website domain) is used in case some other Linux bindings emerge with the same naming problems.</p>
+
+<h2>Support</h2>
+
+<p>All support is done through the <a href="http://www.lua.org/lua-l.html">Lua mailing list</a>.</p>
+
+<p>Feel free to ask for further developments. I can't guarantee that I'll develop everything you ask, but I want my code to be as useful as possible, so I'll do my best to help you. You can also send me request or bug reports (for code and documentation) directly at <a href="mailto:jerome.vuarand@gmail.com">jerome.vuarand@gmail.com</a>.</p>
+
+<h2>Credits</h2>
+
+<p>This module is written and maintained by <a href="mailto:jerome.vuarand@gmail.com">Jérôme Vuarand</a>.</p>
+
+<p>It is available under a <a href="LICENSE.txt">MIT-style license</a>.</p>
+
+
+</div>
+
+<div class="chapter">
+<a id="installation"/><h1>2 - Installation</h1>
+
+<p>prtr-path sources are available in its <a href="http://hg.piratery.net/path/">Mercurial repository</a>:</p>
+
+<pre><code>hg clone http://hg.piratery.net/path/
+</code></pre>
+
+<p>Tarballs of the latest code can be downloaded directly from there: as <a href="http://hg.piratery.net/path/get/tip.tar.gz">gz</a>, <a href="http://hg.piratery.net/path/get/tip.tar.bz2">bz2</a> or <a href="http://hg.piratery.net/path/get/tip.zip">zip</a>.</p>
+
+<p>Finally, I published some rockspecs:</p>
+
+<pre><code>luarocks install prtr-path
+</code></pre>
+
+</div>
+
+<div class="chapter">
+<a id="manual"/><h1>3 - Manual</h1>
+
+<p>This module revolves around a <code>path</code> object type. A <code>path</code> can represent the path to a file on the computer filesystem, but hides platform-specific details. It can also represent portions of a URL. At the moment only Unix paths and Windows paths are supported, but more path types may be added on request.</p>
+
+<p>The basic objective of this library is to avoid writing directory separators inside strings in Lua code, to improve the portability of that code. Path strings should be converted to path objects as soon as possible, and from there manipulated using the <code>path</code> object facilities.</p>
+
+<p>To use this module:</p>
+
+<pre><code>local pathlib = require 'path'
+</code></pre>
+
+<p>Note that in the examples here we use the name <code>pathlib</code> in the code to reference the module itself and <code>path</code> to reference the path datatype. This is to avoid ambiguities. The module name however is <code>"path"</code>, and that name should be passed to <code>require</code> (as shown above).</p>
+
+<p>All <code>path</code> objects are immutable, but they are not interned like Lua strings, and as such the semantics when used as keys in tables differ. To create a path object, one can either call the function <code>pathlib.split</code> to split a string, or assemble new paths from existing paths using the / operator. An empty <code>path</code> object is predefined with the name <code>pathlib.empty</code>.</p>
+
+<h3>pathlib.split ( string )</h3>
+
+<p>The <code>split</code> function takes a <code>string</code> as parameter, and converts it to an equivalent <code>path</code> object. The string may contains either a Unix path with slash characters, or a Windows path with backslash characters. The path may optionally start with a root element, which would be a letter followed by a colon to represent a Windows drive, or a double backslash to mark the path as a UNC path.</p>
+
+<p>If the path string following the root starts with a slash or a backslash, it is marked as absolute (UNC paths are always absolute).</p>
+
+<pre><code>local lua = pathlib.split([[/usr/bin/lua]])
+</code></pre>
+
+<p>A convention used in the rest of this manual is to use the alias <code>P</code> for pathlib.split. It is defined as follows:</p>
+
+<pre><code>local P = pathlib.split
+local explorer = P[[C:\Windows\explorer.exe]]
+</code></pre>
+
+<h3>pathlib.empty</h3>
+
+<p><code>pathlib.empty</code> is an empty path. It can be used to represent a special empty path, or as a basis to build relative paths.</p>
+
+<pre><code>local E = pathlib.empty
+
+local conf = E / '.conf' / 'app.cfg'
+</code></pre>
+
+<h3>pathlib.type (value)</h3>
+
+<p>The <code>pathlib.type</code> function is similar to the standard Lua <code>type</code> and <code>io.type</code> functions. It will return the string <code>"path"</code> if <code>value</code> is a path object. Otherwise it will return the same value as the standard Lua <code>type</code> function.</p>
+
+<h3>pathlib.install ()</h3>
+
+<p>The <code>pathlib.install</code> function will install the path module inside the following other modules: <code>_G</code> (for <code>loadfile</code> and <code>dofile</code>), <code>io</code>, <code>os</code> and <code>lfs</code>. All functions in these modules receiving or returning path strings will instead accept or return <code>path</code> objects.</p>
+
+<pre><code>local lfs = require 'lfs'
+pathlib.install()
+
+local root = lfs.currentdir()
+local path = root / '.conf' / 'myapp.cfg'
+local config
+if lfs.attributes(path, 'mode') then
+    config = dofile(path)
+end
+</code></pre>
+
+<h3>path.string</h3>
+
+<p><code>path.string</code> is a string representation of the <code>path</code> object, in a platform-specific format. Use this accessor to pass the path to functions that expect paths as a string in the native representation of the platform. Note that a UNC path will use backslashes on all platforms. To force the use of slashes (or any other character) in UNC paths, use <code>path:tostring(separator)</code> with a <code>separator</code> string.</p>
+
+<h3>path.ustring</h3>
+
+<p><code>path.ustring</code> is a string representation of the <code>path</code> object in Unix format, with slashes as directory separators. A Windows path with a drive root may still have a drive letter before the first slash. A Windows UNC path will start with two slashes.</p>
+
+<h3>path.wstring</h3>
+
+<p><code>path.wstring</code> is a string representation of the <code>path</code> object in Windows format, with backslashes as directory separators.</p>
+
+<h3>path.leaf, path.file</h3>
+
+<p><code>path.file</code> is the last component of a path, as a <code>string</code>. The path library is disconnected from any underlying file system, so this name may represent either a file or a directory (or nothing).</p>
+
+<p><code>path.leaf</code> is an alias for <code>path.file</code>.</p>
+
+<h3>path.parent, path.dir</h3>
+
+<p><code>path.parent</code> is the parent <code>path</code> of the object, which is an identical path minus the last component. The <code>parent</code> of an empty <code>path</code> is <code>nil</code>.</p>
+
+<p><code>path.dir</code> is an alias for <code>path.parent</code>.</p>
+
+<h3>path.root</h3>
+
+<p>A <code>path</code> object may have an optional root. This root is a string that can be either a drive letter (an uppercase letter followed by a colon, for example <code>"C:"</code>), or the string <code>"UNC"</code> for UNC paths. Rooted paths are mostly useful to represent Windows file paths.</p>
+
+<h3>path.absolute</h3>
+
+<p><code>path.absolute</code> is a boolean value that specifies whether the <code>path</code> object is absolute or not. Note that a path with a root drive may not necessarily be absolute. For example <code>[[C:\Windows]]</code> is an absolute path, but <code>[[E:Data\Subdir]]</code> is relative. All UNC paths are absolute.</p>
+
+<h3>path.relative</h3>
+
+<p><code>path.relative</code> is the complementary value of <code>path.absolute</code>.</p>
+
+<h3>path:tostring ([separator])</h3>
+
+<p><code>path:tostring()</code> is identical to <code>path.string</code>. An optional <code>separator</code> string can be passed as argument, and it will be used instead of slashes and backslashes as directory separators. Note that the prefix of a UNC path will consist of two of these separators.</p>
+
+<h3>tostring (path)</h3>
+
+<p><code>tostring(path)</code> is identical to <code>path.string</code>, with the additional benefit that if <code>path</code> is not a <code>path</code> object, the result of the expression is still a string.</p>
+
+<h3># path</h3>
+
+<p><code>#path</code> returns the number of components in the path, excluding any root or the absolute prefix. The following paths all have a length of 3: <code>P[[C:\Windows\system32\kernel32.dll]]</code>, <code>P'/usr/bin/lua'</code>, <code>P".conf/myapp/app.cfg"</code>.</p>
+
+<h3>path:sub (i [, j])</h3>
+
+<p>Returns a path containing the components of <code>path</code> in the range [i-j]. If <code>j</code> is omitted, it is the length of the <code>path</code>. If <code>j</code> is negative, it is considered as an index from the end of the path (-1 being the last component, -2 the one before that, etc.). If <code>i</code> is greater or equal to 1, the resulting path is relative and has no root. To keep the same <code>root</code> and <code>absolute</code> flag as <code>path</code>, <code>i</code> must be 0 or negative. Therefore a convenient way to get the relative part of an absolute path is to call <code>path:sub(1)</code>.</p>
+
+<h3>path1 == path2</h3>
+
+<p>This expression if true if <code>path1</code> and <code>path2</code> are identical paths, including all components, <code>root</code> and <code>absolute</code> flag.</p>
+
+<h3>path / path</h3>
+
+<p>This expression concatenates two paths in a sensible way, which is not always straightforward. However some cases are ambiguous and will generate an error.</p>
+
+<h3>path / string</h3>
+
+<p>This expression concatenates a path and a string, and returns a path identical to the passed one except it contains an additional component. Thanks to Lua operator precedence, several of these can be chained.</p>
+
+<pre><code>local P = pathlib.split
+local path = P(os.getenv('HOME)) / '.conf' / 'myapp' / 'app.cfg'
+</code></pre>
+
+<p>Note however that the division operator has a higher precedence than the concatenation operator, so the following will generate an error:</p>
+
+<pre><code>local appname = 'foo'
+local path = P(os.getenv('HOME)) / '.conf' / appname / appname..'.cfg'
+</code></pre>
+
+<p>In this case the correct syntax would be:</p>
+
+<pre><code>local path = P(os.getenv('HOME)) / '.conf' / appname / (appname..'.cfg')
+</code></pre>
+
+
+</div>
+
+<div class="chapter" id="footer">
+<small>Last update: 2012-12-09 20:20:53 GMT</small>
+</div>
+
+</body>
+</html>
+

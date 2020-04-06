@@ -1,0 +1,190 @@
+commands = {
+   lua2json = {
+      "lua2json/0.1.1-1"
+   }
+}
+dependencies = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lua2json = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luajson"
+         }
+      }
+   },
+   luajson = {
+      ["1.3.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 8, 1, string = "0.8.1"
+                  }
+               }
+            },
+            name = "lpeg"
+         }
+      }
+   }
+}
+modules = {
+   json = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.composite"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.number"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.others"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.state"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.strings"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.util"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.array"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.calls"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.number"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.object"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.others"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.output"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.output_utility"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.strings"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.util"] = {
+      "luajson/1.3.4-1"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   lua2json = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               lua2json = "lua2json"
+            },
+            dependencies = {
+               lpeg = "1.0.2-1",
+               luajson = "1.3.4-1"
+            },
+            modules = {}
+         }
+      }
+   },
+   luajson = {
+      ["1.3.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               json = "json.lua",
+               ["json.decode"] = "json/decode.lua",
+               ["json.decode.composite"] = "json/decode/composite.lua",
+               ["json.decode.number"] = "json/decode/number.lua",
+               ["json.decode.others"] = "json/decode/others.lua",
+               ["json.decode.state"] = "json/decode/state.lua",
+               ["json.decode.strings"] = "json/decode/strings.lua",
+               ["json.decode.util"] = "json/decode/util.lua",
+               ["json.encode"] = "json/encode.lua",
+               ["json.encode.array"] = "json/encode/array.lua",
+               ["json.encode.calls"] = "json/encode/calls.lua",
+               ["json.encode.number"] = "json/encode/number.lua",
+               ["json.encode.object"] = "json/encode/object.lua",
+               ["json.encode.others"] = "json/encode/others.lua",
+               ["json.encode.output"] = "json/encode/output.lua",
+               ["json.encode.output_utility"] = "json/encode/output_utility.lua",
+               ["json.encode.strings"] = "json/encode/strings.lua",
+               ["json.util"] = "json/util.lua"
+            }
+         }
+      }
+   }
+}

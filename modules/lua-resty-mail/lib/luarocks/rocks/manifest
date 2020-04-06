@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-resty-mail"] = {
+      ["1.0.2-1"] = {}
+   }
+}
+modules = {
+   ["resty.mail"] = {
+      "lua-resty-mail/1.0.2-1"
+   },
+   ["resty.mail.headers"] = {
+      "lua-resty-mail/1.0.2-1"
+   },
+   ["resty.mail.message"] = {
+      "lua-resty-mail/1.0.2-1"
+   },
+   ["resty.mail.rfc2822_date"] = {
+      "lua-resty-mail/1.0.2-1"
+   },
+   ["resty.mail.smtp"] = {
+      "lua-resty-mail/1.0.2-1"
+   }
+}
+repository = {
+   ["lua-resty-mail"] = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.mail"] = "resty/mail.lua",
+               ["resty.mail.headers"] = "resty/mail/headers.lua",
+               ["resty.mail.message"] = "resty/mail/message.lua",
+               ["resty.mail.rfc2822_date"] = "resty/mail/rfc2822_date.lua",
+               ["resty.mail.smtp"] = "resty/mail/smtp.lua"
+            }
+         }
+      }
+   }
+}

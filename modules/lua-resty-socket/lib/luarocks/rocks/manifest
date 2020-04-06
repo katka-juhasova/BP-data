@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-socket"] = {
+      ["1.0.0-1"] = {}
+   }
+}
+modules = {
+   ["resty.socket"] = {
+      "lua-resty-socket/1.0.0-1"
+   }
+}
+repository = {
+   ["lua-resty-socket"] = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.socket"] = "resty/socket.lua"
+            }
+         }
+      }
+   }
+}

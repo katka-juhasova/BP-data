@@ -1,0 +1,43 @@
+commands = {
+   templatec = {
+      "template/0.2-3"
+   }
+}
+dependencies = {
+   template = {
+      ["0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   template = {
+      "template/0.2-3"
+   }
+}
+repository = {
+   template = {
+      ["0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {
+               templatec = "templatec"
+            },
+            dependencies = {},
+            modules = {
+               template = "template.lua"
+            }
+         }
+      }
+   }
+}

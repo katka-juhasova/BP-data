@@ -1,0 +1,14 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "9755c0f1202b1e85b33c3866fbe69fda"
+   },
+   lua = {
+      resty = {
+         redis = {
+            ["connector.lua"] = "9ab0b16e65afb3a9677926a79b05fb88",
+            ["sentinel.lua"] = "332f358a6b3580c17c02a67c1ae335d7"
+         }
+      }
+   },
+   ["lua-resty-redis-connector-0.08-0.rockspec"] = "a94113b8bc501e204901790ead7b4d5f"
+}

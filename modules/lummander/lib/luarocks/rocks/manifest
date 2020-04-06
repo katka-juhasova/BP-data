@@ -1,0 +1,188 @@
+commands = {}
+dependencies = {
+   chalk = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   f = {
+      ["0.1.0-1"] = {}
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lummander = {
+      ["0.1.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 7, 0, string = "1.7.0"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, string = "0.1.0"
+                  }
+               }
+            },
+            name = "chalk"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, string = "0.1.0"
+                  }
+               }
+            },
+            name = "f"
+         }
+      }
+   }
+}
+modules = {
+   chalk = {
+      "chalk/0.1.0-1"
+   },
+   f = {
+      "f/0.1.0-1"
+   },
+   ["f.string"] = {
+      "f/0.1.0-1"
+   },
+   ["f.table"] = {
+      "f/0.1.0-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   lummander = {
+      "lummander/0.1.0-2"
+   },
+   ["lummander.command"] = {
+      "lummander/0.1.0-2"
+   },
+   ["lummander.lummander"] = {
+      "lummander/0.1.0-2"
+   },
+   ["lummander.parsed"] = {
+      "lummander/0.1.0-2"
+   },
+   ["lummander.pcall"] = {
+      "lummander/0.1.0-2"
+   },
+   ["lummander.themecolor"] = {
+      "lummander/0.1.0-2"
+   },
+   ["lummander.themes.acid"] = {
+      "lummander/0.1.0-2"
+   },
+   ["lummander.themes.default"] = {
+      "lummander/0.1.0-2"
+   }
+}
+repository = {
+   chalk = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               chalk = "chalk.lua"
+            }
+         }
+      }
+   },
+   f = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               f = "f/init.lua",
+               ["f.string"] = "f/string.lua",
+               ["f.table"] = "f/table.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   lummander = {
+      ["0.1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               chalk = "0.1.0-1",
+               f = "0.1.0-1",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               lummander = "lummander/init.lua",
+               ["lummander.command"] = "lummander/command.lua",
+               ["lummander.lummander"] = "lummander/lummander.lua",
+               ["lummander.parsed"] = "lummander/parsed.lua",
+               ["lummander.pcall"] = "lummander/pcall.lua",
+               ["lummander.themecolor"] = "lummander/themecolor.lua",
+               ["lummander.themes.acid"] = "lummander/themes/acid.lua",
+               ["lummander.themes.default"] = "lummander/themes/default.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+lang="en">
+<head>
+<title>test @ piratery.net</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="doc.css" type="text/css"/>
+</head>
+<body>
+
+<div class="chapter" id="header">
+<img width="128" height="128" alt="prtr-test" src="logo.png"/>
+<p>A simple module to simplify writing Lua modules self tests</p>
+<p class="bar">
+<a href="index.html">home</a> &middot;
+<a href="index.html#installation">installation</a> &middot;
+<a href="index.html#manual">manual</a> &middot;
+<a href="index.html#examples">examples</a>
+</p>
+</div>
+
+<div class="chapter">
+<a id="about"/><h1>1 - About</h1>
+
+<p>The prtr-test module is a simple Lua module that helps writing tests for other Lua modules. It's mainly exposing an <code>expect</code> global function that can be used instead of <code>assert</code> to get better error messages when a test fails. Since this is the only point of the library you may want to have a look at the <a href="#examples">examples</a> below.</p>
+
+<p>The name test is not original, but it reflects the purpose of the library. The prtr- prefix (a contraction for piratery.net, the website domain) is used in case some other Linux bindings emerge with the same naming problems.</p>
+
+<h2>Support</h2>
+
+<p>All support is done through the <a href="http://www.lua.org/lua-l.html">Lua mailing list</a>.</p>
+
+<p>Feel free to ask for further developments. I can't guarantee that I'll develop everything you ask, but I want my code to be as useful as possible, so I'll do my best to help you. You can also send me request or bug reports (for code and documentation) directly at <a href="mailto:jerome.vuarand@gmail.com">jerome.vuarand@gmail.com</a>.</p>
+
+<h2>Credits</h2>
+
+<p>This module is written and maintained by <a href="mailto:jerome.vuarand@gmail.com">Jérôme Vuarand</a>.</p>
+
+<p>It is available under a <a href="LICENSE.txt">MIT-style license</a>.</p>
+
+
+</div>
+
+<div class="chapter">
+<a id="installation"/><h1>2 - Installation</h1>
+
+<p>prtr-test sources are available in its <a href="http://hg.piratery.net/test/">Mercurial repository</a>:</p>
+
+<pre><code>hg clone http://hg.piratery.net/test/
+</code></pre>
+
+<p>Tarballs of the latest code can be downloaded directly from there: as <a href="http://hg.piratery.net/test/get/tip.tar.gz">gz</a>, <a href="http://hg.piratery.net/test/get/tip.tar.bz2">bz2</a> or <a href="http://hg.piratery.net/test/get/tip.zip">zip</a>.</p>
+
+<p>Finally, I published a rockspec:</p>
+
+<pre><code>luarocks install prtr-test
+</code></pre>
+
+</div>
+
+<div class="chapter">
+<a id="manual"/><h1>3 - Manual</h1>
+
+<p>This module is very basic, it creates one global function, <code>expect</code>, that is similar to the Lua built-in <code>assert</code> function, but that will provide better default error messages.</p>
+
+<p>To load the module, simply write:</p>
+
+<pre><code>require 'test'
+</code></pre>
+
+<p>From then on a global <code>expect</code> function will be available.</p>
+
+<h3>expect ( expectation, value )</h3>
+
+<p>The <code>expect</code> function takes two Lua values parameters. It will throw an error if the two values don't match. For immutable values (nil, booleans, numbers and strings), the values must be identical (as defined by the == operator). For functions and threads, both values must be references to the same object.</p>
+
+<p>The case of tables is where this module can come handy. Both tables are compared recursively, and each key-value pair must match, with the restriction that keys can only be booleans, numbers or strings (otherwise an error is thrown).</p>
+
+<p>Finally, if both values are userdata sharing the same metatable, and that metatable has a <code>__tostring</code> field, <code>tostring</code> is called on both values and the resulting strings are compared.</p>
+
+</div>
+
+<div class="chapter">
+<a id="examples"/><h1>4 - Examples</h1>
+
+<p>The purpose of this module is only to get better generated error messages when tests fail. Here are some example to help you decide if this module is worth using it.</p>
+
+<p>When comparing simple values, the following:</p>
+
+<pre><code>local function f() return 42 end
+expect('foo', f())
+</code></pre>
+
+<p>would throw the error:</p>
+
+<pre><code>script.lua:2: expectation failed! foo (string) expected, got 42 (number)
+</code></pre>
+
+<p>When comparing tables, a path to the first mismatching field will be displayed. The following:</p>
+
+<pre><code>local function f() return {
+    data = {'a', 'b2', 'c'},
+} end
+expect({ data = {'a', 'b', 'c'} }, f())
+</code></pre>
+
+<p>would throw the error:</p>
+
+<pre><code>script.lua:4: expectation failed! b (string) expected for field .data[2], got b2 (string)
+</code></pre>
+
+</div>
+
+<div class="chapter" id="footer">
+<small>Last update: 2012-12-10 14:34:39 GMT</small>
+</div>
+
+</body>
+</html>
+

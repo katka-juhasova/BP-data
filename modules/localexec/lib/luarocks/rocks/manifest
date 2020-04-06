@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   localexec = {
+      ["0.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   localexec = {
+      "localexec/0.5-1"
+   }
+}
+repository = {
+   localexec = {
+      ["0.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               localexec = "localexec.lua"
+            }
+         }
+      }
+   }
+}

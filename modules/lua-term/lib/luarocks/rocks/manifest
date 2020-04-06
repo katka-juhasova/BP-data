@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-term"] = {
+      ["0.7-1"] = {}
+   }
+}
+modules = {
+   term = {
+      "lua-term/0.7-1"
+   },
+   ["term.colors"] = {
+      "lua-term/0.7-1"
+   },
+   ["term.core"] = {
+      "lua-term/0.7-1"
+   },
+   ["term.cursor"] = {
+      "lua-term/0.7-1"
+   }
+}
+repository = {
+   ["lua-term"] = {
+      ["0.7-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               term = "term/init.lua",
+               ["term.colors"] = "term/colors.lua",
+               ["term.core"] = "term/core.so",
+               ["term.cursor"] = "term/cursor.lua"
+            }
+         }
+      }
+   }
+}

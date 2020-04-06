@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   app_scheduler = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   app_scheduler = {
+      "app_scheduler/1.0-0"
+   }
+}
+repository = {
+   app_scheduler = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               app_scheduler = "app_scheduler.lua"
+            }
+         }
+      }
+   }
+}

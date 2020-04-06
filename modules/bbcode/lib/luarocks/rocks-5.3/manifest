@@ -1,0 +1,80 @@
+commands = {}
+dependencies = {
+   bbcode = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 8, 0, string = "2.8.0"
+                  }
+               }
+            },
+            name = "lrexlib-pcre"
+         }
+      }
+   },
+   ["lrexlib-pcre"] = {
+      ["2.9.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   bbcode = {
+      "bbcode/1.0-1"
+   },
+   rex_pcre = {
+      "lrexlib-pcre/2.9.0-1"
+   }
+}
+repository = {
+   bbcode = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lrexlib-pcre"] = "2.9.0-1"
+            },
+            modules = {
+               bbcode = "bbcode.lua"
+            }
+         }
+      }
+   },
+   ["lrexlib-pcre"] = {
+      ["2.9.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rex_pcre = "rex_pcre.so"
+            }
+         }
+      }
+   }
+}

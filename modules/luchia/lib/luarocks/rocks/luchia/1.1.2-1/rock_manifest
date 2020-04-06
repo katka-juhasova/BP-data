@@ -1,0 +1,25 @@
+rock_manifest = {
+   bin = {
+      luchia_get = "63fb484d713400e96f742e81cb59c4e6"
+   },
+   doc = {
+      LICENSE = "d20d60b4275eb23db9898f9b4bb137e4",
+      ["README.md"] = "e88c2f6902b7ec4f8a079e861ac0eefb"
+   },
+   lua = {
+      luchia = {
+         ["conf.lua"] = "1bd9381f4e8b5f82008d985552a700d7",
+         core = {
+            ["attachment.lua"] = "4cfa4fe63b6f4c8098c8e0abc98aaaed",
+            ["document.lua"] = "f1ba9705e8dbdf4e5ceacda01efe6e40",
+            ["log.lua"] = "d333cfbca49ff7866e7c2f53050ae38c",
+            ["server.lua"] = "2f4261d2c634f71a49b33aa5c774753b"
+         },
+         ["database.lua"] = "b882305ff86a71e396515145faf86ceb",
+         ["document.lua"] = "838a325896747b2a61424bcb1bf300b2",
+         ["utilities.lua"] = "c0b750c80f3827d68b9e62285fa1de67"
+      },
+      ["luchia.lua"] = "8fb558159bbbd265a578bb88da2cbeb1"
+   },
+   ["luchia-1.1.2-1.rockspec"] = "c2e94c07a665bfbacf4ac4a82206ff3f"
+}

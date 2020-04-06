@@ -1,0 +1,57 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "81323d8a9668fde92ea593387b916a0e",
+      ["README.md"] = "209df043199c48276cd64180d0307f54"
+   },
+   ["lockbox-0.1.0-0.rockspec"] = "104ccd6b870e6bc8ef5c093485f16427",
+   lua = {
+      lockbox = {
+         cipher = {
+            ["aes128.lua"] = "adc82d8ea27beb688cc51896d37ab9b7",
+            ["aes192.lua"] = "e4825e6e0aa21189106e282dada13fdd",
+            ["aes256.lua"] = "8a13dc74cd6a564649192d6b52306789",
+            ["des.lua"] = "1be74bed6a8eefac67c041ec7f45b736",
+            ["des3.lua"] = "d9fda91ce7be36def8794af188dce276",
+            mode = {
+               ["cbc.lua"] = "6146e9d8b14990c8d9f8ea05cfa17baa",
+               ["cfb.lua"] = "ba959fefc0732b0d286c8a36d98e6688",
+               ["ctr.lua"] = "b64f45cb685543419a4cff73069981c9",
+               ["ecb.lua"] = "79e71e6248412f9184cf8147b4ded411",
+               ["ige.lua"] = "d45112bb4d9753bec77739eafb0c9b20",
+               ["ofb.lua"] = "977177e315c4d1bd87c50da9c18e4e80",
+               ["pcbc.lua"] = "b7abd550235f62946c8552541e158852"
+            }
+         },
+         digest = {
+            ["md2.lua"] = "f0290bf4089374deb7747c6983e30ee5",
+            ["md4.lua"] = "742f5d15233b6290e36b84d08a43b896",
+            ["md5.lua"] = "37e3baf661378400cff6cd11a05596b0",
+            ["ripemd128.lua"] = "209d762d89fb7329cb492008b9956b57",
+            ["ripemd160.lua"] = "b6816157f08b22d27aa028ab8f4bec06",
+            ["sha1.lua"] = "c04d153532f3f709bc6871f8f36e1403",
+            ["sha2_224.lua"] = "51bf32d991431bd3d82034a61a1b158f",
+            ["sha2_256.lua"] = "737efa751fd1cd2c9914f6eb82d948c6"
+         },
+         ["init.lua"] = "c853afbf087f10fd09ae3e4d94bd1e8c",
+         kdf = {
+            ["pbkdf2.lua"] = "303b1b2481f614ccf2b1d25c34e68471"
+         },
+         mac = {
+            ["hmac.lua"] = "4ea2b478e33c7a7457abf9bcb4aa23df"
+         },
+         padding = {
+            ["ansix923.lua"] = "70bebd63b07587de825f50e17a697768",
+            ["isoiec7816.lua"] = "f6eaf7282f42a303712987865e6fd26f",
+            ["pkcs7.lua"] = "f0c4e092a65072517843916fc8df0bed",
+            ["zero.lua"] = "68d2c184d1353dca290d152244cdef71"
+         },
+         util = {
+            ["array.lua"] = "f3e4c6ddc402fdd102fd6301497bd7a7",
+            ["base64.lua"] = "adda38c6da939c4a3b5b01ce743903ec",
+            ["bit.lua"] = "f3c97e4799386406c20e9b11b94b8e68",
+            ["queue.lua"] = "e41b1e40fc74641eb8d0205dfde1f170",
+            ["stream.lua"] = "84c07642b7fafcfee7d0f2c42947d447"
+         }
+      }
+   }
+}

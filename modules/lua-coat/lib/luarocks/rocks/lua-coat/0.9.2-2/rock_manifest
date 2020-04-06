@@ -1,0 +1,102 @@
+rock_manifest = {
+   bin = {
+      coat2dot = "d619bcb28a29b652a4d4919d1cec2e4c"
+   },
+   docs = {
+      ["coat.md"] = "46b01b6165f1962b10bba65d942ec82f",
+      ["index.md"] = "51e93c2769c5568ee3bcb51e074d7977",
+      ["inject.md"] = "1fb616ba2a04e8d41bfe89569b65f4e7",
+      ["memoize.md"] = "2399e298667a9364fe4a140cc815c775",
+      ["meta_class.md"] = "242e5d8bd04db352f0d752d614371acd",
+      ["meta_role.md"] = "14c6abaf8f4377ae6c0241f223450c9f",
+      ["mock.md"] = "3ed80322ec00c5ce8fcd4399cebd8bfa",
+      ["role.md"] = "6c18778c11ad1c4055fcf16c22c8e0a5",
+      ["types.md"] = "28720fcbcdd4ff5031e7e450bf6f2ad8",
+      ["uml.md"] = "7eb2f8f16bf894d1733ba1d84f9c42bb"
+   },
+   lua = {
+      Coat = {
+         Meta = {
+            ["Class.lua"] = "c8383bf20ca209ab14d76d23a4e51d7e",
+            ["Role.lua"] = "f5e87cb77249e840e0313c271586ea32"
+         },
+         ["Role.lua"] = "6fe169876cd7177c94c6f717afaefc7f",
+         ["Types.lua"] = "a1c19b8116e57c7aa721c316efa12d7a",
+         ["UML.lua"] = "3e683b0c4555790605c94015a7a04eb8",
+         ["file.lua"] = "50ab36cf5a63a88c408bd5dd85a4d788"
+      },
+      ["Coat.lua"] = "8ab104929c966afddcc0fece3854f372"
+   },
+   ["lua-coat-0.9.2-2.rockspec"] = "9247af9e3def9b1c2061148edf460135",
+   test = {
+      ["000-require.t"] = "f394e4515f8e3801519d2db69340c9cd",
+      ["006-extends.t"] = "692574347a52d9b010a1ad6e60f4a96e",
+      ["007-inheritance.t"] = "48ac43ef3d98bf9d2ae60c724299b999",
+      ["008-multiple_around.t"] = "4d2897a10be33f232c315b902ed8659b",
+      ["010-hooks.t"] = "3ba5e74aa6db28c967a0a1ca32f1b41d",
+      ["011-attr_inheritance.t"] = "859455754bd9b32d8db629daa5874f6f",
+      ["012-attr_default_function.t"] = "bb4ce61517b617e6f0044dce8d5cb721",
+      ["013-type_constraints.t"] = "571049824689dd9da55fd06d1c25f352",
+      ["014-attr_permission.t"] = "074e2de3bfa833e48fc92663542df3c0",
+      ["015-build.t"] = "4951c2006f9b3be96f9fde041d03ccad",
+      ["016-attr_required.t"] = "7d625be2dc83bc2e7f86b01060215b52",
+      ["017-triggers.t"] = "853d7336cb7caa0993844b10314103ba",
+      ["019-type_constraints.t"] = "3187d02b55ca9b7bf9507bbf762a75bc",
+      ["022-type_coercion.t"] = "f7f59419c0816ad2c1fabc6b39aebba2",
+      ["023-parameterized_type_constraint.t"] = "ce3659bf1cb9952e15d0315030548ff3",
+      ["024-class_name_type_constraint.t"] = "22d6ce8f598a8ec28982404031bc32fd",
+      ["026-attr_overloading.t"] = "75c2042a0c0b17a56077e12426bd1466",
+      ["027-handles.t"] = "4194a8b91832931ad69682de9cf3a15c",
+      ["028-build_demolish.t"] = "bf4c324328ab8043a5efcc8b55b0d2a3",
+      ["031-lazy_attr.t"] = "c667a1e29ba33f3d8daccaddd6699677",
+      ["033-cascading_inheritance.t"] = "3b74ee6a89e3cb44cba2d0cf9573fc7d",
+      ["036-type.t"] = "618598914e8e71f0062505c8f199d299",
+      ["037-attr_and_constraints_overload.t"] = "af250954569dae36115103d0817af67e",
+      ["101-attr_value.t"] = "8a53f0ae7a99ef381934ddc52458525e",
+      ["102-override.t"] = "ac5ea7cbba1a9e8f971aaa12532328e4",
+      ["103-attr_builder.t"] = "876f6558191303d449808673c838b814",
+      ["104-attr_lazy_build.t"] = "5a5dc2bbf846b4b4377fb2bed4442463",
+      ["105-attr_writer.t"] = "744cc7a5d18361e4fa21da936588b4e2",
+      ["106-attr_liskov.t"] = "cfe65dc864b5ea7a39262f84db9723fd",
+      ["111-hierarchy.t"] = "1bb76322e827ec17d5c70a84472ad8f0",
+      ["112-hierarchy.t"] = "25f6729d6ecc2381e68292a11b38a74c",
+      ["113-create_hierarchy.t"] = "8f4b61736e6c6b3c758f43032a896a4f",
+      ["121-singleton.t"] = "61d776c6de94e1921c407dcbbabcd6f3",
+      ["122-abstract.t"] = "997905114d0d64dd40232604e1385c80",
+      ["123-augment.t"] = "be54e78dc4142da8f36e6d7fec824456",
+      ["131-handles-meth.t"] = "728c516bf335a11d42a6a6dfc1a66684",
+      ["132-handles-role.t"] = "44fb14760b492d1b25a45011b255de1f",
+      ["133-handles-rolename.t"] = "358143ca0996e7d7aa486913620ada4a",
+      ["141-file.t"] = "3affe42140b78275777f4d2c76cb78a4",
+      ["151-inject.t"] = "b250acf0bd0b93bdb23fb346ab8a48eb",
+      ["161-memoize.t"] = "030ceb72e47671994f6f3ddce6bfa7a1",
+      ["171-mock.t"] = "c0d6e10fdd09a60b1997b851053f45c7",
+      ["181-meta.t"] = "e278241ed72f1ba81101b263bd6f6f09",
+      ["182-anon.t"] = "8ecd3dc489b6291f8aee6e46580f31c9",
+      ["201-role_requires_meth.t"] = "693eb1c20b88636e6ba6565891de7b90",
+      ["202-role_meth_modifier.t"] = "f4c9b9f368fdc74f64f2a46acac8399d",
+      ["203-attr_does.t"] = "2d0f090a670c8c628c5006a19f51ff1b",
+      ["204-role_alias.t"] = "166cd61d26ccb8b9f549c79c32142506",
+      ["205-role_alias_meth.t"] = "e299466c5e061834cd81ddf73236302e",
+      ["206-role_attr_builder.t"] = "7ab05051e5a5ffe1f79a8804a98661e9",
+      ["Car.lua"] = "f34c937f1f6d7a659d9bfdaa3efb490b",
+      ["CheckingAccount.lua"] = "62c24f6e7dcd51521fc1671abb0363ee",
+      MyApp = {
+         Bar = {
+            ["Foo.lua"] = "2d6e93138a652d7f3e78c3fd218202af"
+         },
+         ["Bar.lua"] = "4f7a842c170d59e44c056b068596981f",
+         Baz = {
+            ["Foo.lua"] = "6778088da13a1a3cef9c91992ebfe048"
+         },
+         ["Baz.lua"] = "5b6d448ff0d869af1fe237f3467e27c0"
+      },
+      ["MyApp.lua"] = "d22a6dc5a952957ad617d14455cddab7",
+      ["Point.lua"] = "32b6f5961eebf2f531f6de24b3e92450",
+      ["Point3D.lua"] = "7fb01c1a5c9e8b26a9c8a1b7aefb2b06",
+      ["TestCar.t"] = "4851e1129f9af34ea6b7c23948a34c8b",
+      ["TestCheckingAccount.t"] = "8593565aebc5f02cd891369df318866e",
+      ["TestPoint.t"] = "e45a04c6e52e2f1ca8651c9c7d0a5efa",
+      ["TestPoint3D.t"] = "3582d4d047c1b123a36edadd22b4454e"
+   }
+}

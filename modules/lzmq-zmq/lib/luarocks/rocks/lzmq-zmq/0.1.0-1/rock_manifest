@@ -1,0 +1,13 @@
+rock_manifest = {
+   lua = {
+      zmq = {
+         ["poller.lua"] = "72f521261311ea228112ffc7b36521bf"
+      },
+      ["zmq.lua"] = "0ed4bc037f052bf2b98e989fbfada256"
+   },
+   ["lzmq-zmq-0.1.0-1.rockspec"] = "587a10ddf2d79e1c626c759dbec04fd4",
+   test = {
+      ["test.lua"] = "3740f11fdb1a99845603647ee67c4b24",
+      ["utils.lua"] = "8c4f51a9f57d822470c1ab37adcdbe31"
+   }
+}

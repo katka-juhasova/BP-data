@@ -1,0 +1,13 @@
+#!/usr/bin/env lua
+
+local WAGON = require 'wagon'
+
+local COMMANDS = {
+  help = 'usage',
+  build = 'init',
+  load = 'install',
+  drive = 'run',
+}
+
+return WAGON[COMMANDS[... or 'help']](select(2, ...))
+

@@ -1,0 +1,55 @@
+commands = {}
+dependencies = {
+   ["lua-event-dispatcher"] = {
+      ["0.3-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["event-dispatcher.Dispatcher"] = {
+      "lua-event-dispatcher/0.3-0"
+   },
+   ["event-dispatcher.Event"] = {
+      "lua-event-dispatcher/0.3-0"
+   },
+   ["event-dispatcher.Executor.direct"] = {
+      "lua-event-dispatcher/0.3-0"
+   },
+   ["event-dispatcher.Executor.protected"] = {
+      "lua-event-dispatcher/0.3-0"
+   }
+}
+repository = {
+   ["lua-event-dispatcher"] = {
+      ["0.3-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["event-dispatcher.Dispatcher"] = "event-dispatcher/Dispatcher.lua",
+               ["event-dispatcher.Event"] = "event-dispatcher/Event.lua",
+               ["event-dispatcher.Executor.direct"] = "event-dispatcher/Executor/direct.lua",
+               ["event-dispatcher.Executor.protected"] = "event-dispatcher/Executor/protected.lua"
+            }
+         }
+      }
+   }
+}

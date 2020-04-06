@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   gear = {
+      ["0.03-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   gear = {
+      "gear/0.03-2"
+   },
+   ["gear.DeclaredDependency"] = {
+      "gear/0.03-2"
+   },
+   ["gear.ProvidedDependency"] = {
+      "gear/0.03-2"
+   }
+}
+repository = {
+   gear = {
+      ["0.03-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               gear = "gear.lua",
+               ["gear.DeclaredDependency"] = "gear/DeclaredDependency.lua",
+               ["gear.ProvidedDependency"] = "gear/ProvidedDependency.lua"
+            }
+         }
+      }
+   }
+}

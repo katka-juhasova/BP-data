@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   sfxr = {
+      ["0.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   sfxr = {
+      "sfxr/0.0.2-1"
+   }
+}
+repository = {
+   sfxr = {
+      ["0.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               sfxr = "sfxr.lua"
+            }
+         }
+      }
+   }
+}

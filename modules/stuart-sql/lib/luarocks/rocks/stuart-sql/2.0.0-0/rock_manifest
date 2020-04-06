@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "82472e3de19348880b77d39c61e67b5f",
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "82d6007e9b6f20775725699cb4c09853"
+   },
+   lua = {
+      ["stuart-sql"] = {
+         ["DataFrameReader.lua"] = "35ed4205957fc0fb19b66c14d20f6776",
+         ["SparkSession.lua"] = "4ed7a52ebc0d2c8476a631577b0be61e",
+         ["SparkSession_Builder.lua"] = "eeb0fc46717a9e0a4ded1dfc10b9f57a"
+      },
+      ["stuart-sql.lua"] = "d77c9174318b82386d9b43746092b495"
+   },
+   ["stuart-sql-2.0.0-0.rockspec"] = "3c4b99234e96395b3e765a4eb74616cd"
+}

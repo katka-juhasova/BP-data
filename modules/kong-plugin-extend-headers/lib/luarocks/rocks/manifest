@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-extend-headers"] = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.extend-headers.handler"] = {
+      "kong-plugin-extend-headers/0.1.0-1"
+   },
+   ["kong.plugins.extend-headers.schema"] = {
+      "kong-plugin-extend-headers/0.1.0-1"
+   },
+   ["spec.extend-headers.01-header_filter_spec"] = {
+      "kong-plugin-extend-headers/0.1.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-extend-headers"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.extend-headers.handler"] = "kong/plugins/extend-headers/handler.lua",
+               ["kong.plugins.extend-headers.schema"] = "kong/plugins/extend-headers/schema.lua",
+               ["spec.extend-headers.01-header_filter_spec"] = "spec/extend-headers/01-header_filter_spec.lua"
+            }
+         }
+      }
+   }
+}

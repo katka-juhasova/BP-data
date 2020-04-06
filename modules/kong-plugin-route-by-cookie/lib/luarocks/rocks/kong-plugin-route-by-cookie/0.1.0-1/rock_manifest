@@ -1,0 +1,13 @@
+rock_manifest = {
+   ["kong-plugin-route-by-cookie-0.1.0-1.rockspec"] = "4d2efa4b75cae8cb7cc3cd9e0a7f35ec",
+   lua = {
+      kong = {
+         plugins = {
+            ["route-by-cookie"] = {
+               ["handler.lua"] = "93fabd3e0734b95d40288df07eed221d",
+               ["schema.lua"] = "31e2718e98481ae9ed86df8258695284"
+            }
+         }
+      }
+   }
+}

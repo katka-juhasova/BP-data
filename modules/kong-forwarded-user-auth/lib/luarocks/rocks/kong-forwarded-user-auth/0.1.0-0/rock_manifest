@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "a5125c03bf10e83eb44b6bdf701e00f4"
+   },
+   ["kong-forwarded-user-auth-0.1.0-0.rockspec"] = "13e229da435fccb3b27e277b9875b50e",
+   lua = {
+      kong = {
+         plugins = {
+            ["forwarded-user-auth"] = {
+               ["handler.lua"] = "2c98c1c7614dd5e4fc59d520df45e6fc",
+               ["schema.lua"] = "263bfb8ae41a9a776ecc3b5964c5b91e"
+            }
+         }
+      }
+   }
+}

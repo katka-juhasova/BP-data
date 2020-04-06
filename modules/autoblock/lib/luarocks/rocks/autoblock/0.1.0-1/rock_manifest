@@ -1,0 +1,17 @@
+rock_manifest = {
+   ["autoblock-0.1.0-1.rockspec"] = "5bfba436c6b28537b8e85ed83cc32d6d",
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "dd25ea42c7b6529be2d8345af18209e2"
+   },
+   lua = {
+      kong = {
+         plugins = {
+            autoblock = {
+               ["handler.lua"] = "4e0007d9ee41ccc8d1abbea9cec4cdf7",
+               ["schema.lua"] = "ac4b1851c51e3a07e9641e3fc5f0cf81"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,80 @@
+commands = {}
+dependencies = {
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["resty-shared-session"] = {
+      ["0.1.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, revision = 1, string = "0.1.0-1"
+                  }
+               }
+            },
+            name = "lua-resty-cookie"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.cookie"] = {
+      "lua-resty-cookie/0.1.0-1"
+   },
+   ["resty.shared_session"] = {
+      "resty-shared-session/0.1.1-2"
+   }
+}
+repository = {
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.cookie"] = "resty/cookie.lua"
+            }
+         }
+      }
+   },
+   ["resty-shared-session"] = {
+      ["0.1.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-cookie"] = "0.1.0-1"
+            },
+            modules = {
+               ["resty.shared_session"] = "resty/shared_session.lua"
+            }
+         }
+      }
+   }
+}

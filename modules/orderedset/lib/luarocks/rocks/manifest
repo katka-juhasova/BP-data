@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   orderedset = {
+      ["0.01-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   OrderedSet = {
+      "orderedset/0.01-3"
+   }
+}
+repository = {
+   orderedset = {
+      ["0.01-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               OrderedSet = "OrderedSet.lua"
+            }
+         }
+      }
+   }
+}

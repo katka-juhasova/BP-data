@@ -1,0 +1,24 @@
+rock_manifest = {
+   doc = {
+      ["LICENSE.md"] = "e0e6b6a726660fcbc1436a0711476fb8",
+      ["README.md"] = "489881f711675ad3741053f4e55b16bc"
+   },
+   ["hprose-1.3.1-1.rockspec"] = "94d40d982b3cd5a93a18f2bc51203dfd",
+   lua = {
+      hprose = {
+         ["class_manager.lua"] = "fa6e2adb31b33e016406ade7b2dfa998",
+         ["client.lua"] = "f4acf437388a06cb28100cdc34863f43",
+         ["common.lua"] = "614fad5b226752697efc5847ead8ed21",
+         ["formatter.lua"] = "b4689828106e55e937ab13d9865f1079",
+         ["http_client.lua"] = "76fff3123e4d998dec479190eb093280",
+         ["input_stream.lua"] = "0aac8cb648dd971b787ddeebaf3c83f5",
+         ["output_stream.lua"] = "5182aa37cd471838194113d5b273e213",
+         ["reader.lua"] = "f88ab0a2c424bbb4459f49b1c3e3b76a",
+         ["result_mode.lua"] = "dafa3a3a37369c190685730c01feb366",
+         ["tags.lua"] = "fff16c14f9c3ea54a539f8912a34da9b",
+         ["tcp_client.lua"] = "ee215b84ac4c95d9df69a400bf333bb9",
+         ["writer.lua"] = "2ddd4b71e83c6c8c0edb6d26b1e5e0d0"
+      },
+      ["hprose.lua"] = "14218eff0827b19c4e6b3309078991dd"
+   }
+}

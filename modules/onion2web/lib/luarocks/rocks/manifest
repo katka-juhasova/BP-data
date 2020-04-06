@@ -1,0 +1,80 @@
+commands = {}
+dependencies = {
+   onion2web = {
+      ["1.7-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 7, string = "1.7"
+                  }
+               }
+            },
+            name = "socks5"
+         }
+      }
+   },
+   socks5 = {
+      ["1.7-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   onion2web = {
+      "onion2web/1.7-1"
+   },
+   socks5 = {
+      "socks5/1.7-1"
+   }
+}
+repository = {
+   onion2web = {
+      ["1.7-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               socks5 = "1.7-1"
+            },
+            modules = {
+               onion2web = "onion2web.lua"
+            }
+         }
+      }
+   },
+   socks5 = {
+      ["1.7-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               socks5 = "socks5.lua"
+            }
+         }
+      }
+   }
+}

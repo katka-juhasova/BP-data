@@ -1,0 +1,40 @@
+rock_manifest = {
+   bin = {
+      clpmd = "8f9f2ada9e95b52cd2e9da435e8efba0"
+   },
+   ["concurrentlua-1.0.6-1.rockspec"] = "571870faa2896cf25f11a540ba384c5d",
+   doc = {
+      ["concurrentlua.png"] = "e8309d2e52e12b7128471bd99c8320ad",
+      ["manual.html"] = "ed41a3ecabc25970ce8428b2728515ad",
+      ["stylesheet.css"] = "71636129255589ba226f2f911660e7b0"
+   },
+   lib = {
+      ["cldaemon.so"] = "0169453b6696690eea8d9f381cd511d6",
+      ["cltime.so"] = "d5a876df12be632625a171ef85ea8961"
+   },
+   lua = {
+      concurrent = {
+         distributed = {
+            ["cookie.lua"] = "f53b21444091dd59dcb8e4cd236d050c",
+            ["init.lua"] = "d49756a5211af30d0bb0c451bc00770d",
+            ["link.lua"] = "7be7980523c7443816e3070aad64ff0f",
+            ["message.lua"] = "92bcdf067815dd19cf25eccbf6e7f6c4",
+            ["monitor.lua"] = "5ab4180daed750e2955e7a1142e13748",
+            ["network.lua"] = "a6e49997b836842c656892ca36eb96d4",
+            ["node.lua"] = "55619f2e3b5c0f84f881961b5d15d612",
+            ["process.lua"] = "958247c79d273fafda26bdc06600875a",
+            ["register.lua"] = "ca9b59b8cb00905e2d0cf1421d321503",
+            ["scheduler.lua"] = "735cf758728087b425859619c793de4f"
+         },
+         ["init.lua"] = "c3964fbac45ea5cbc746e1803a0a8102",
+         ["link.lua"] = "fe280acbac0329a108f814d734618bd9",
+         ["message.lua"] = "a1ef6eed3145af3b506a4701e280c8fa",
+         ["monitor.lua"] = "0aa353fd897683ccc5b632c4bcecbed9",
+         ["option.lua"] = "dc6fd454312a74118cff8d76d8f15b95",
+         ["process.lua"] = "eecf864e699363456ae05a77636d1e06",
+         ["register.lua"] = "8af39a3f7156e1ada7483d327fdd7f27",
+         ["root.lua"] = "40e9675085c37a25967604bf7d778fc2",
+         ["scheduler.lua"] = "46fce82660cbfdcf76f5103cf550b93f"
+      }
+   }
+}

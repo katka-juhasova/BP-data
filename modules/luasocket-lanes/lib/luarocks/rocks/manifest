@@ -1,0 +1,85 @@
+commands = {}
+dependencies = {
+   ["luasocket-lanes"] = {
+      ["3.0-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["ltn12-lanes"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["mime-lanes"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["mime-lanes.core"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.core"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.ftp"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.headers"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.http"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.serial"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.smtp"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.tp"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.unix"] = {
+      "luasocket-lanes/3.0-3"
+   },
+   ["socket-lanes.url"] = {
+      "luasocket-lanes/3.0-3"
+   }
+}
+repository = {
+   ["luasocket-lanes"] = {
+      ["3.0-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["ltn12-lanes"] = "ltn12-lanes.lua",
+               ["mime-lanes"] = "mime-lanes.lua",
+               ["mime-lanes.core"] = "mime-lanes/core.so",
+               ["socket-lanes"] = "socket-lanes.lua",
+               ["socket-lanes.core"] = "socket-lanes/core.so",
+               ["socket-lanes.ftp"] = "socket-lanes/ftp.lua",
+               ["socket-lanes.headers"] = "socket-lanes/headers.lua",
+               ["socket-lanes.http"] = "socket-lanes/http.lua",
+               ["socket-lanes.serial"] = "socket-lanes/serial.so",
+               ["socket-lanes.smtp"] = "socket-lanes/smtp.lua",
+               ["socket-lanes.tp"] = "socket-lanes/tp.lua",
+               ["socket-lanes.unix"] = "socket-lanes/unix.so",
+               ["socket-lanes.url"] = "socket-lanes/url.lua"
+            }
+         }
+      }
+   }
+}

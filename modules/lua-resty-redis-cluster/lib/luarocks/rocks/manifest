@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["lua-resty-redis-cluster"] = {
+      ["1.0-0"] = {}
+   }
+}
+modules = {
+   librestyredisslot = {
+      "lua-resty-redis-cluster/1.0-0"
+   },
+   ["resty.rediscluster"] = {
+      "lua-resty-redis-cluster/1.0-0"
+   }
+}
+repository = {
+   ["lua-resty-redis-cluster"] = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               librestyredisslot = "librestyredisslot.so",
+               ["resty.rediscluster"] = "resty/rediscluster.lua"
+            }
+         }
+      }
+   }
+}

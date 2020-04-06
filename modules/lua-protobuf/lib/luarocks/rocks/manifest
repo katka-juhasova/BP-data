@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-protobuf"] = {
+      ["0.3.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   pb = {
+      "lua-protobuf/0.3.1-0"
+   },
+   protoc = {
+      "lua-protobuf/0.3.1-0"
+   }
+}
+repository = {
+   ["lua-protobuf"] = {
+      ["0.3.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               pb = "pb.so",
+               protoc = "protoc.lua"
+            }
+         }
+      }
+   }
+}

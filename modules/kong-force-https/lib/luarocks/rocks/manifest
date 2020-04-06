@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-force-https"] = {
+      ["0.1.1-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.http-to-https.handler"] = {
+      "kong-force-https/0.1.1-1"
+   },
+   ["kong.plugins.http-to-https.schema"] = {
+      "kong-force-https/0.1.1-1"
+   }
+}
+repository = {
+   ["kong-force-https"] = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.http-to-https.handler"] = "kong/plugins/http-to-https/handler.lua",
+               ["kong.plugins.http-to-https.schema"] = "kong/plugins/http-to-https/schema.lua"
+            }
+         }
+      }
+   }
+}

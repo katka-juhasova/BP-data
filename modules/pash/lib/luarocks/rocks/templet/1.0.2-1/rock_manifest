@@ -1,0 +1,32 @@
+rock_manifest = {
+   doc = {
+      ["CHANGES.html"] = "0b6098afd60fcb810033e79d01d33d29",
+      ["CHANGES.mdwn"] = "10a34a9865f1edcc050b9a95b4c3f16d",
+      ["INSTALL.html"] = "b2a1581a72e570ab7194282f25aad1cd",
+      ["INSTALL.mdwn"] = "3031f2665226123469a4da8a50067825",
+      LICENSE = "b7e6e3cf5940d42a3714600079370815",
+      ["README.html"] = "90e77c277fe032a8fa6ff6d8a4adfc7b",
+      ["README.mdwn"] = "e8b265b9f7850a973c41119373e3ceb3",
+      examples = {
+         include = {
+            ["include.lua"] = "b66532971fd3ff889d81e733353430fc",
+            test = {
+               ["included.lua"] = "52780024d248d88df758e17e83ff1aa0",
+               ["main.lua"] = "7abf0f79cb7c9a8aa8db4147ea74b9ef"
+            }
+         }
+      },
+      ["examples.html"] = "b0952d06042c283f63bdf596435fa6f0",
+      ["examples.mdwn"] = "6e78dc4106fef349d5b61964cec36e1d",
+      ["index.html"] = "19df1736bc0d01bc146d7465e0a30744",
+      ["index.mdwn"] = "7e0e4858ce9c736dab17ecfe95212949",
+      ["lua-templet.png"] = "ed0c1caac7ff000e77e9a490ecc0e415",
+      ["pandoc.css"] = "6e1eaa2126bf217c2ff753f587b95d24",
+      ["reference.html"] = "9c9dcd15e2ffc047a750dad0db1ad456",
+      ["reference.mdwn"] = "2f6f251b73a92bfa3f95d66f1a721a18"
+   },
+   lua = {
+      ["templet.lua"] = "0486fd4a847934ae5ddf8ada01840204"
+   },
+   ["templet-1.0.2-1.rockspec"] = "c41dbd4445828639bd856827078e7f86"
+}

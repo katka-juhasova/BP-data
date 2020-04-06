@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   luabenchmark = {
+      ["0.10.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   benchmark = {
+      "luabenchmark/0.10.0-1"
+   },
+   benchmarklib = {
+      "luabenchmark/0.10.0-1"
+   }
+}
+repository = {
+   luabenchmark = {
+      ["0.10.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               benchmark = "benchmark.lua",
+               benchmarklib = "benchmarklib.so"
+            }
+         }
+      }
+   }
+}

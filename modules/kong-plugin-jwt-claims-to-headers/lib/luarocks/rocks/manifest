@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-jwt-claims-to-headers"] = {
+      ["1.0.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.jwt-claims-to-headers.handler"] = {
+      "kong-plugin-jwt-claims-to-headers/1.0.0-1"
+   },
+   ["kong.plugins.jwt-claims-to-headers.schema"] = {
+      "kong-plugin-jwt-claims-to-headers/1.0.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-jwt-claims-to-headers"] = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.jwt-claims-to-headers.handler"] = "kong/plugins/jwt-claims-to-headers/handler.lua",
+               ["kong.plugins.jwt-claims-to-headers.schema"] = "kong/plugins/jwt-claims-to-headers/schema.lua"
+            }
+         }
+      }
+   }
+}

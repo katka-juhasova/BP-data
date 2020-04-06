@@ -1,0 +1,33 @@
+Help [[
+
+string.gmatch (s, pattern)
+--------------------------
+
+  Returns an iterator function that, each time it is called, returns the next
+  captures from `pattern` over string `s`.
+
+  If `pattern` specifies no captures, then the whole match is produced in each
+  call.
+
+  As an example, the following loop
+
+         s = "hello world from Lua"
+         for w in string.gmatch(s, "%a+") do
+           print(w)
+         end
+
+  will iterate over all the words from string `s`, printing one per line.
+  The next example collects all pairs `key=value` from the given string into a
+  table:
+
+         t = {}
+         s = "from=world, to=Lua"
+         for k, v in string.gmatch(s, "(%w+)=(%w+)") do
+           t[k] = v
+         end
+
+   For this function, a `'^'` at the start of a pattern does not work as an
+   anchor, as this would prevent the iteration.
+
+  __See also__: patterns.
+]]

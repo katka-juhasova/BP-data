@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   csv = {
+      ["1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["config.ld"] = {
+      "csv/1-1"
+   },
+   csv = {
+      "csv/1-1"
+   },
+   test = {
+      "csv/1-1"
+   }
+}
+repository = {
+   csv = {
+      ["1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["config.ld"] = "config.ld",
+               csv = "csv.lua",
+               test = "test.lua"
+            }
+         }
+      }
+   }
+}

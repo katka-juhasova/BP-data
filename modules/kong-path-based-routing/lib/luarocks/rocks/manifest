@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["kong-path-based-routing"] = {
+      ["0.1-3"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-path-based-routing.access"] = {
+      "kong-path-based-routing/0.1-3"
+   },
+   ["kong.plugins.kong-path-based-routing.handler"] = {
+      "kong-path-based-routing/0.1-3"
+   },
+   ["kong.plugins.kong-path-based-routing.schema"] = {
+      "kong-path-based-routing/0.1-3"
+   }
+}
+repository = {
+   ["kong-path-based-routing"] = {
+      ["0.1-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-path-based-routing.access"] = "kong/plugins/kong-path-based-routing/access.lua",
+               ["kong.plugins.kong-path-based-routing.handler"] = "kong/plugins/kong-path-based-routing/handler.lua",
+               ["kong.plugins.kong-path-based-routing.schema"] = "kong/plugins/kong-path-based-routing/schema.lua"
+            }
+         }
+      }
+   }
+}

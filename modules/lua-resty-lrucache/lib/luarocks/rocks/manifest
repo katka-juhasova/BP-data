@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["lua-resty-lrucache"] = {
+      ["0.09-2"] = {}
+   }
+}
+modules = {
+   ["resty.lrucache"] = {
+      "lua-resty-lrucache/0.09-2"
+   },
+   ["resty.lrucache.pureffi"] = {
+      "lua-resty-lrucache/0.09-2"
+   }
+}
+repository = {
+   ["lua-resty-lrucache"] = {
+      ["0.09-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.lrucache"] = "resty/lrucache.lua",
+               ["resty.lrucache.pureffi"] = "resty/lrucache/pureffi.lua"
+            }
+         }
+      }
+   }
+}

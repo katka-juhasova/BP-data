@@ -1,0 +1,899 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<title><em>AskLua</em>: añadiendo ayuda interactiva a otros módulos</title>
+	<link rel="stylesheet" type="text/css" href="default.css" />
+</head>
+<body>
+
+
+<h1><em>AskLua</em>: añadiendo ayuda interactiva a otros módulos</h1>
+
+
+<p><strong>Julio Manuel Fernández-Díaz</strong></p>
+
+<p><em>Profesor Titular,
+Departamento de Física de la Universidad de Oviedo (España),
+Febrero de 2010</em></p>
+
+<p>Resumen:</p>
+
+<blockquote>
+    <p>Se presenta <code>AskLua</code> un sistema de
+    gestión de ayuda para Lua: en línea desde
+    el intérprete interactivo, en formato <code>html</code> y en formato impreso.</p>
+    
+    <p>El módulo <code>ask</code>, proporcionado por <code>AskLua</code>,
+    es poco intrusivo ocupando memoria que puede ser
+    liberada por el usuario en cualquier momento si no desea seguir con
+    la ayuda en línea.</p>
+    
+    <p>El sistema está bastante bien integrado, de tal manera que
+    se puede añadir fácilmente ayuda para un módulo ya existente,
+    incluso de tipo binario.</p>
+</blockquote>
+
+
+
+<h2>1 Introducción</h2>
+
+<p>Cuando aprendemos una nueva materia es conveniente disponer de información
+lo más completa posible sobre el tema. Muchas veces esto se logra con
+un experto (profesor). Sin embargo, no siempre tenemos acceso a uno,
+por lo que hay que ser autodidacta. En esas ocasiones un buen sistema
+de ayuda, lo más interactivo posible, es de gran ayuda.</p>
+
+<p>Tanto <a href="http://www.python.org">Python</a> como <a href="http://www.Matlab.com">Matlab</a>, por poner dos ejemplos, tienen
+ayuda interactiva en línea. Esto permite a los principiantes un
+cómodo acceso durante las primeras fases de aprendizaje del sistema.</p>
+
+<p>Obviamente una herramienta como los lenguajes citados tendrá más
+uso si se facilita el acceso a la documentación. Y eso le interesa
+mucho al diseñador de un módulo concreto.</p>
+
+<p>Lua tiene un enfoque casi contrario a los dos lenguajes citados.
+Por tanto, es prácticamente una quimera que pueda incluir
+un sistema de ayuda en el estándar.</p>
+
+<p>Lua no impone <em>políticas</em>, pero es muy
+extensible. Esto nos permite incluir fácilmente un sistema (módulo)
+de ayuda, que se carga cuando se desea.</p>
+
+<p>La <a href="http://en.wikipedia.org/wiki/Literate_programming">Programación literaria</a>, muy orientada al programador, no me
+convence como mecanismo, pues hay que aprender otro <em>pseudolenguaje</em>
+y realmente sirve para otra cosa.</p>
+
+<p>El sistema de documentación que acompaña a <code>stdlua</code> con <code>@param</code>,
+<code>@returns</code>, etc., tampoco es de mi agrado, pues consiste en comentarios al
+código. Esto está bien para revisar y estudiar código Lua, pero conseguir
+un sistema de documentación en línea en este caso es relativamente
+complejo. Además la documentación está también orientada al programador
+y no tanto al usuario de algún módulo (por ejemplo, un ingeniero que
+quiere usar <a href="http://numlua.luaforge.net">Numlua</a>).</p>
+
+<p>Un sistema muy similar al que viene en <code>stdlua</code>, aunque más avanzado
+es <a href="http://luadoc.luaforge.net">Luadoc</a>, que permite generar documentación en formato <code>html</code>
+a partir también de comentarios en los módulos. El formato final
+es bastante amigable para consultar la documentación en un navegador,
+pero no sirve para consultas en línea, que es lo que se deseaba
+inicialmente.</p>
+
+<p>En cualquier caso, tanto el sistema de <code>stdlua</code> como el de Luadoc pueden
+adaptarse fácilmente a lo que se propone más abajo: basta con integrar
+los comentarios en las correspondientes tablas de ayuda.</p>
+
+<p>Cuando estaba acabando esta documentación he descubierto en <a href="http://luarocks.org/repositories/rocks/">LuaRocks</a>
+un módulo denominado <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a> (con fecha de la primera versión de
+13 de diciembre de 2009). Al principio pensé que mi
+trabajo había sido en vano pues ya estaba hecho el módulo que yo deseaba.
+(De todos modos siempre se aprenden cosas nuevas al programar.)
+He de decir que se me pasó su anuncio en la <a href="http://lua-users.org/lists/lua-l/">lista de correo de lua</a>.</p>
+
+<p>Una vez analizado el tema con más profundidad, me he dado cuenta de
+las diferencias (aunque <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a> se podría adaptar de muchas maneras
+evidentemente): la documentación que yo propongo va incluida en el propio
+módulo, mientras que la otra se incluye en ficheros auxiliares situados en
+un camino de búsqueda concreto. Además el método aquí presentado permite
+consultar por separado partes concretas de la ayuda: cómo se usa una
+función dentro de un módulo, ejemplos de uso, la lista de funciones de un
+módulo, etc.  Son dos enfoques distintos con sus ventajas e inconvenientes
+(que el usuario puede comprobar por sí mismo).</p>
+
+<p>La única pega es que me ha hecho cambiar el nombre de mi módulo. Ahora se
+denomina <code>ask</code> (y yo hubiera preferido <code>help</code>).  De esa manera se pueden
+utilizar ambos a la vez. De todos modos, si se desea renombrar <code>ask</code>
+y llamarlo <code>help</code> sólo renombrando <code>ask.lua</code> a <code>help.lua</code> es suficiente.
+En ese caso es interesante cambiar los avisos que un módulo da al cargarse
+(véase el apartado <a href="#sabemos">4.3 Cómo sabemos que un módulo tiene ayuda</a>).</p>
+
+<p>Otra posibilidad puntual es cargar el módulo <code>ask</code> referenciándolo con
+variable de nombre <code>help</code> de la manera siguiente:</p>
+
+<pre><code>local help = require`ask`
+</code></pre>
+
+<p>Et voilà. Ya podemos usar tanto <code>ask</code> como <code>help</code> para usar el
+presente módulo (a partir de ese momento no podremos usar <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a>
+evidentemente).</p>
+
+
+
+<h2>2 El problema</h2>
+
+<p>Tiene dos aspectos:</p>
+
+<ol>
+    <li><p>Por un lado, para el <em>programador</em> de un módulo al que se quiere
+    añadir ayuda. Deberá ser fácil de implementar, con las mínimas
+    modificaciones a su módulo.</p></li>
+    <li><p>Por otro, para los <em>usuarios</em> del módulo. La consulta de la
+    documentación deberá ser lo más completa posible pero de fácil
+    manejo.</p></li>
+</ol>
+
+<p>En el primer aspecto, nos interesa como programadores que sea
+fácil de añadir la documentación, lo más completa posible. También
+que sea fácil darle uno de los tres formatos siguientes:</p>
+
+<ul>
+    <li>en línea en Lua interactivo,</li>
+    <li>en línea en un navegador que requiere evidentemente formato <code>html</code>
+    (es preferible este formato estándar que otros existentes),</li>
+    <li>en formato impreso.</li>
+</ul>
+
+<p>Además, al programador le interesa muchísimo tener que
+introducir la documentación una sola vez
+y que un sistema automático genere los diferentes formatos.
+Esto evita muchos errores y si hay que hacer algún cambio lo
+deberá hacer en un solo lugar.</p>
+
+<p>Desde el punto de vista del usuario, éste querrá que sea:</p>
+
+<ul>
+    <li><em>fácil</em> la consulta, proporcionando sólo la información que se pida en
+    cada momento, ni más ni menos;</li>
+    <li>lo <em>más completa</em> posible, cubriendo muchos aspectos, incluso
+    colaterales a veces;</li>
+    <li><em>relacional</em>, o sea que nos permita ir de un lugar a otro de
+    la documentación siempre que existan relaciones entre diferentes
+    partes de la misma.</li>
+</ul>
+
+<p>Tras darle vueltas a la cuestión, hacer diversas probaturas y
+versiones del módulo de ayuda, al final he llegado al
+sistema que se explica en el apartado siguiente.</p>
+
+
+<h2>3 La solución</h2>
+
+<p>La información de ayuda en Lua sólo (bueno más o menos) puede ir en
+tablas, con strings, o en ficheros (como en <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a>). Me ha parecido
+que el manejo de ficheros sería bastante engorroso pues deben estar
+accesibles y deberían estar posiblemente donde el módulo propiamente
+dicho. Habría que buscar en los <em>path</em> de Lua y podría haber más de un
+fichero con el nombre que buscamos y no corresponder la ayuda a lo que
+se desea. Por tanto he preferido la otra opción.</p>
+
+<p>Nuestro módulo de ayuda <code>ask</code> debe poder acceder a esas
+tablas (si existen y sino avisar de que no hay disponible
+información sobre un determinado módulo) y procesar la
+ayuda como se le pida.</p>
+
+<p>Vamos a describir el módulo <code>ask</code>.</p>
+
+
+
+<h3>3.1 Dónde se almacena la información</h3>
+
+<p>Lo primero es <em>dónde</em> se almacena la ayuda relativa a un módulo.
+En Lua es evidente que debe ir en una tabla, con posibles subtablas,
+y al final texto (strings). Además, la ayuda de un módulo (digamos
+<code>mininum</code>, el ejemplo que se adjunta con <code>ask</code>), debe estar asociada
+al mismo de alguna manera: Lua debe conocer la ayuda al igual que conoce
+las funciones del módulo (sino no podría "ayudarnos").</p>
+
+<p>La ayuda debe estar compartimentada. La idea final consiste en
+incluir en el módulo una tabla <code>_H</code> con campos y también subtablas.
+He aquí la estructura:</p>
+
+<pre><code>_H = {
+  _CHARSET = "iso-8985-15",   -- otras veces "utf-8"
+  _Name    = [[Nombre del módulo]],
+
+  _basic   = [[Ayuda básica]],
+  _usage   = [[Ayuda de cómo se utiliza]],
+  _more    = [[Información complementaria]],
+  _seealso = [[Enlaces a más información interna o externa]],
+  _example = [[Un ejemplo de utilización]],
+  _version = [[Versión, nombre del autor y otras cuestiones]],
+  _notes   = [[Notas, como pueden ser las de Copyright, etc.]]
+}
+</code></pre>
+
+<p>(Nota: fíjense en la <code>N</code> mayúscula de <code>_Name</code>.)</p>
+
+<p><code>_CHARSET</code> indica qué codificación se ha usado en los textos de
+ayuda. Para ayuda generada en formato <code>html</code> el sistema usa
+directamente el valor indicado en este campo.</p>
+
+<p>Para ayuda en línea, <code>ask</code> detecta la codificación de caracteres
+del sistema operativo para convertir la ayuda del conjunto de
+caracteres indicado en <code>_CHARSET</code> al del sistema (y así visualizarse
+correctamente en pantalla).  De momento este sistema sólo está
+implementado con UTF-8 e iso-8859: si <code>ask</code> no detecta UTF-8
+entonces piensa que el sistema operativo trabaja con <code>iso-8859</code>.</p>
+
+<p>Esta tabla se incluye en cualquier punto del fichero <code>módulo.lua</code>
+(aunque lo normal es que vaya cerca del principio). Ninguno de los
+campos es obligatorio. Digamos que si no se presenta un ejemplo
+el campo <code>_example</code> no se especifica.</p>
+
+<p>Como vemos, para que exista la mínima interferencia con otras
+variables y funciones del módulo le he puesto delante del nombre
+<code>"_"</code>. Eso evitará colisiones de nombres: es raro utilizar nombres
+de ese tipo (excepto para variables locales). En cualquier caso
+el usuario de <code>ask</code> puede cambiar en el código fuente del mismo
+<code>_H</code> por otro nombre con un editor de textos (ya que se proporciona
+el código fuente) y tenerlo en cuenta en su propio módulo.</p>
+
+<p>Cada una de las funciones del módulo (v.g. <code>about</code>, <code>base</code> y <code>doc</code>
+en el módulo <code>ask</code>) debe tener su ayuda asociada de la manera (para
+la primera de las funciones):</p>
+
+<pre><code>_H.about = {
+  _basic   = [[Una descripción somera del propósito de la función]],
+  _usage   = [[Una descripción completa de la manera de invocar
+               la función, con sus argumentos y sus retornos]],
+  _more    = [[Información complementaria]],
+  _seealso = [[Enlaces a más información interna o externa]],
+  _example = [[Un ejemplo de utilización]],
+}
+</code></pre>
+
+<p>En algunos casos se tiene tablas de funciones. Si por ejemplo <code>tabfun</code>
+es una tabla con funciones, digamos <code>f1</code> y <code>f2</code>, deberíamos poner:</p>
+
+<pre><code>_H.tabfun = { ... }
+
+_H.tabfun.f1 = {
+  _basic   = [[ ... ]],
+  _usage   = [[ ... ]],
+  _example = [[ ... ]],
+}
+
+_H.tabfun.f2 = { ... }
+</code></pre>
+
+<p>Obviamente si no existe algún tipo de información pues no se especifica
+(como <code>_more</code> y <code>_seealso</code> en la <code>f1</code> anterior).</p>
+
+<p>Inicialmente el formato del texto que va entre <code>[[  ]]</code> era texto
+puro. Con eso para la ayuda en línea es suficiente. Sin embargo
+era mi deseo que la información también se pudiera imprimir y
+entonces algo de formato más avanzado es mejor. Eso me llevó
+al formato <a href="http://daringfireball.net/projects/markdown">markdown</a>, que además tiene una implementación
+en Lua puro <a href="http://www.frykholm.se/programming.html">markdown.lua</a> realizada por Niklas Frykholm.
+(Nota: la versión que aparece en <a href="http://luaforge.net">luaforge.net</a> está anticuada,
+pero la que aparece en <a href="http://luarocks.org/repositories/rocks/">LuaRocks</a> es correcta.)
+Realmente, este documento ha sido preparado usando markdown.</p>
+
+<p>Ese formato no es muy intrusivo. Esto es importante porque no
+deseaba hacer un filtrado de la ayuda en línea, sino que quería
+que apareciera tal cual está en los strings de ayuda.</p>
+
+
+<h3>3.2 Cómo se accede a la información</h3>
+
+<p>Bueno, ya tenemos la información en <em>su</em> sitio (tablas de Lua).
+Cuando se carga el módulo también se cargan esas tablas que
+están accesibles desde ese momento (evidentemente ocupan espacio;
+luego, en <a href="#comousar">5 Cómo usar la ayuda interactivamente</a>
+veremos cómo liberarlo si se desea).</p>
+
+<p>Ahora debemos hablar de <em>cómo</em> se accede a la información.
+Para ello <code>ask</code> tiene tres funciones: <code>about</code>, <code>base</code> y <code>doc</code>.</p>
+
+
+<h4>| about |</h4>
+
+<p>Ésta fue la primera en ser diseñada:
+proporciona la información en línea. Hay que indicarle <em>sobre
+qué</em> queremos ayuda y <em>cuál</em> de las diversas partes de la
+información deseamos (por ejemplo <code>basic</code>, para la información
+básica). Al final la función <code>about</code> se invocaría por ejemplo:</p>
+
+<pre><code>ask.about"/mininum.root^basic"
+</code></pre>
+
+<p>siendo <code>mininum</code> el nombre del módulo, <code>root</code> el nombre de una de
+las funciones dentro del mismo, y <code>basic</code> el tipo de información que
+deseamos (luego explico la aparición de <code>"/"</code> al principio del nombre).
+Como vemos separamos con un acento circunflejo <code>"^"</code> sobre qué se desea
+información de qué tipo de información queremos.</p>
+
+<p>En otro ejemplo tendríamos:</p>
+
+<pre><code>ask.about"/nombre.tabfun.f1^usage"
+</code></pre>
+
+<p>o sea, le pedimos ayuda de uso para la función <code>f1</code> dentro de la
+tabla <code>tabfun</code> del módulo <code>nombre</code>.</p>
+
+<p>Existe otra información importante para el usuario que no hace
+falta que la introduzca el diseñador del módulo: la lista de
+funciones dentro del módulo. Esa información la obtiene <code>ask</code>
+directamente y se presenta en pantalla mediante:</p>
+
+<pre><code>ask.about"/mininum^list"
+</code></pre>
+
+<p>También se puede pedir de una vez toda la información que
+exista sobre algo mediante:</p>
+
+<pre><code>ask.about"/mininum.root^all"
+</code></pre>
+
+<p>Como vemos, el usuario en este formato básico de invocación de
+<code>about</code> tiene que teclear bastante. Lo siguiente que hice fue
+admitir abreviaturas para el tipo de información pedida:</p>
+
+<ul>
+    <li><code>b</code> por <code>basic</code>, que proporciona información básica;</li>
+    <li><code>e</code> por <code>example</code>, que nos muestra un ejemplo;</li>
+    <li><code>l</code> por <code>list</code>, que nos da una lista de funciones en el módulo
+    o en la tabla de funciones sobre la que pedimos ayuda;</li>
+    <li><code>m</code> por <code>more</code>, que nos da información complementaria;</li>
+    <li><code>s</code> por <code>seealso</code>, que nos cita enlaces a más información interna
+    o externa,</li>
+    <li><code>u</code> por <code>usage</code>, que nos muestra cómo se usa el módulo o la función;</li>
+    <li><code>v</code> por <code>version</code>, que nos muestra información sobre la versión, 
+    nombre del autor y otras cuestiones;</li>
+    <li><code>n</code> por <code>notes</code>, que nos muestra notas como las de Copyright, etc.</li>
+    <li><code>a</code> por <code>all</code>, que proporciona toda la información anterior.</li>
+</ul>
+
+<p>De esta manera se tendría la equivalencia:</p>
+
+<pre><code>ask.about"/mininum^list"  --&gt;&lt;--  ask.about"/mininum^l"
+</code></pre>
+
+<p>Los espacios tecleados como argumento de <code>ask.about</code> se eliminan antes
+de la búsqueda. También se colapsan múltiples <code>"."</code> que pudieran aparecer
+en el string de búsqueda. Por ejemplo, tendríamos la equivalencia:</p>
+
+<pre><code>ask.about"/ mininum . root ^ usage"  --  ask.about"/mininum.root^u"
+</code></pre>
+
+
+<p>Por defecto se supone <code>basic</code> como información si no se proporciona.</p>
+
+<p>Usando <code>nil</code> como argumento de <code>ask.about</code> obtenemos información
+básica sobre el sistema de ayuda:</p>
+
+<pre><code>ask.about()  --&gt;&lt;--  ask.about("/ask^basic")
+</code></pre>
+
+<p>son equivalentes.</p>
+
+<p>Hay que recordar que <code>ask</code> proporciona la información que el diseñador
+del módulo haya incluido en las correspondientes tablas de ayuda (excepto
+para <code>list</code> y para <code>all</code>, evidentemente). O sea que la información podría
+ser incorrecta si se introducen, por ejemplo, datos sobre la version como
+si fuera <code>more</code>.</p>
+
+
+<h4>| base |</h4>
+
+<p>El lector verá que todavía tenemos
+que teclear mucho. Normalmente cuando se trabaja con un módulo
+(pongamos <a href="http://numlua.luaforge.net">Numlua</a>) necesitamos ayuda de manera implícita
+del mismo y no de otro. Para eso he incluido la función <code>ask.base</code>.
+Esta función permite asumir implícitamente un prefijo de búsqueda
+de información. Por ejemplo, poniendo:</p>
+
+<pre><code>ask.base"mininum"
+--&gt;  Changing help basis to "mininum"
+</code></pre>
+
+<p>a partir de ese momento se añade el prefijo <code>"/mininum"</code> a la ruta de
+búsqueda (a veces con un punto <code>"."</code> al final si <code>basis</code> se refiere
+a un módulo o a una tabla de funciones dentro del módulo y deseamos
+información sobre una función concreta), y entonces son equivalentes:</p>
+
+<pre><code>ask.about"/mininum^list" --&gt;&lt;-- ask.about"^l"
+</code></pre>
+
+<p>A ese prefijo lo he llamado <code>basis</code> (se guarda en una variable
+local).</p>
+
+<p>Invocando <code>ask.base</code> usando como parámetro un string vacío
+<code>""</code> nos devuelve la <code>basis</code> actual:</p>
+
+<pre><code>ask.base""
+--&gt;   Help basis is "mininum"
+</code></pre>
+
+<p>Por otro lado, me ha parecido conveniente que</p>
+
+<pre><code>ask.base(nil)
+</code></pre>
+
+<p>establezca <code>"ask"</code> como <code>basis</code>.</p>
+
+<p>El sistema de ayuda en línea ya está operativo, pero me gustaba poco
+tener que teclear <code>ask.about</code> cada vez que quería ayuda (aunque según
+se lee <code>ask.about"/mininum.root^usage"</code> es casi equivalente a la frase
+inglesa <em>ask about mininum.root usage</em>).  La solución fue incluir el
+trozo de código:</p>
+
+<pre><code>__call = function (t, s, ...)
+   if s == nil then
+      about(nil)
+   elseif type(s) == "string" then
+      about(s)
+   else
+      return t[s](...)
+   end
+end
+
+setmetatable(_G.ask, ask)
+</code></pre>
+
+<p>al final de <code>ask.lua</code>. La última línea nos permite utilizar directamente
+<code>ask</code> como variable global después de hacer <code>require"ask"</code>. El
+trozo previo de código permite que la función <code>about</code> sea invocada
+automáticamente cuando a <code>ask</code> se le pasa un string como argumento.
+O sea que a partir de este momento son equivalentes:</p>
+
+<pre><code>ask.about"/mininum.root^usage"  --  ask"root^u"
+</code></pre>
+
+<p>(con <code>basis = "mininum"</code>). Como podemos observar, la simplificación
+es manifiesta, y menos ya no se puede teclear al pedir ayuda (algo
+menos si se invoca al módulo <code>ask</code> de la manera:
+<code>h = require"ask"</code> pues a partir de ese momento se podría
+poner <code>h"root^u"</code>; sin embargo me parece que <code>ask</code> no es mucho
+escribir, es más descriptivo, y <code>h</code> es posible que tenga otra
+utilidad dentro de nuestro programa).</p>
+
+
+<h4>| doc |</h4>
+
+<p>Con lo anterior ya tenía el módulo con la funcionalidad deseada.  Pero es
+una pena tener la información sólo en línea y no poder imprimirla en un
+formato decente. Por eso mismo he diseñado la función <code>doc</code>. La primera
+idea era adaptar un poco la salida de texto. Pero un poco más de gasto al
+escribir la ayuda, usando el formato <a href="http://daringfireball.net/projects/markdown">markdown</a>, permite una salida en
+formato <code>html</code> bastante conveniente. Eso fue fácil pues existe un módulo
+<a href="http://www.frykholm.se/programming.html">markdown.lua</a> (que obviamente hay que tener instalado), el cual se
+puede invocar desde <code>ask</code>.</p>
+
+<p>La versión <code>html</code> es complementaria a la versión en línea de la ayuda.
+Permite una visión más <em>global</em> de un módulo dado, y se puede consultar
+navegando entre la ayuda de las diferentes funciones. Por tanto, es
+bastante interesante.</p>
+
+<p>Es en este punto donde se parece el sistema <code>ask</code> y Luadoc, en que
+ambos generan formato <code>html</code>. Sin embargo los puntos de partida son
+muy diferentes.</p>
+
+<p>También se puede obtener en formato impreso, imprimiendo desde el
+navegador, pero quizá es mejor usar un programa como <a href="http://user.it.uu.se/~jan/html2ps.html">html2ps</a> de
+Jan Kärrrman, el cual genera un formato de impresión (PS y luego podemos
+obtener PDF, también este último con hiperenlaces activos).</p>
+
+<p>La función <code>ask.doc</code>, que ha sido rediseñada varias veces, y todavía
+no he quedado totalmente conforme con el resultado (aunque funciona
+correctamente, sin ser muy elegante), es la que genera <code>html</code>.
+En este caso, no se necesita información parcial de funciones dentro de
+un módulo. Por tanto, la misma genera un fichero <code>html</code> con toda la
+información correspondiente al módulo (para ello <code>basis</code> debe
+contener el nombre del módulo y no de una de las funciones del mismo).
+Por ejemplo:</p>
+
+<pre><code>ask.doc""
+</code></pre>
+
+<p>generaría la ayuda para <code>basis</code> (v.g., <code>"mininum"</code> anteriormente),
+en formato <code>html</code> con el nombre <code>"mininum.html"</code>, y:</p>
+
+<pre><code>ask.doc"ask"
+</code></pre>
+
+<p>generaría la ayuda para <code>ask</code>.</p>
+
+<p>El fichero <code>html</code> generado por <code>ask.doc</code> contiene primero información
+genérica sobre el módulo (el contenido de <code>_H._basic</code>, <code>_H._usage</code>,
+etc.) Luego, la ayuda de todas las funciones (en orden alfabético),
+para finalizar con <code>_H._version</code> y <code>_H._notes</code>.</p>
+
+<hr/>
+
+<p>He de pedir disculpas por la programación un poco "sucia" de algunas
+partes del módulo. Mis otras ocupaciones no me han permitido más tiempo
+de momento, y como decía uno de mis profesores (León Garzón) "lo <em>mejor</em>
+es enemigo de lo <em>bueno</em>".</p>
+
+
+
+<h2>4 Cómo adaptar módulos para usar la ayuda</h2>
+
+<h3>4.1 Por qué el formato markdown</h3>
+
+<p>El formato <a href="http://daringfireball.net/projects/markdown">markdown</a> es lo bastante simple como para que
+un programador de un módulo lo domine en una hora. No es necesario
+para la ayuda en línea (incluso hay algunos que pueden pensar
+en que es algo molesto). Yo creo que no introduce mucho
+<em>ruido</em> en la ayuda en línea y sin embargo permite una buena
+presentación en <code>html</code> (y en PDF tras otras conversiones).</p>
+
+<p>Se puede consultar en la dirección indicada, pero también
+existe un documento PDF de un par de páginas impresas
+con una ayuda simple del sistema <a href="http://media.libsyn.com/media/howtube/Markdown_Cheat_Sheet.pdf">Markdown Syntax Cheat Sheet</a>
+(la verdad es que hace falta poco más que esta ayuda simple
+para dominar <a href="http://daringfireball.net/projects/markdown">markdown</a>).</p>
+
+<p>Pensando un poco más en la ayuda en formato <code>html</code> e impreso
+se pueden incluso introducir referencias a alguna imagen. Es
+evidente que en la ayuda en línea, en modo texto, es imposible
+visualizar una imagen, pero se puede dar su referencia en
+formato <a href="http://daringfireball.net/projects/markdown">markdown</a> que no es demasiado intrusiva. Sería
+de la manera siguiente:</p>
+
+<pre><code>![Texto alternativo](/path/to/image.jpg "Título opcional")
+</code></pre>
+
+<p>(En vez de formato JPG se puede usar también PNG o GIF.)</p>
+
+<p>El formato <a href="http://daringfireball.net/projects/markdown">markdown</a> permite también indicar enlaces
+a otros documentos (internos o externos) de una manera
+simple. En la ayuda en línea no es relevante pero sí en
+formato <code>html</code>. Por ejemplo, <code>_seealso</code> puede diseñarse
+incluyendo enlaces de la manera:</p>
+
+
+<pre><code>internos:          [etiqueta](#referencia)
+
+externos:          [etiqueta](http://lo.que.sea)
+</code></pre>
+
+
+<h3>4.2 Preparando la información de ayuda</h3>
+
+<p>La idea general es sencilla: hacerlo de manera incremental.
+La documentación completa puede ser una labor larga y tediosa.
+Por tanto, habría que comenzar implementando <code>_basic</code> y luego
+<code>_usage</code>, pues son los dos aspectos primarios. Como ese
+suele coincidir con lo que se pone como comentario en la cabecera
+de una función lo que tenemos que hacer es convertir los comentarios
+ya escritos en parte de <code>_H</code>.</p>
+
+<p>Posteriormente se pueden ir añadiendo diferentes partes que nos fueron
+quedando. Un ejemplo (comentado si se desea) suele ser conveniente para
+que el usuario pueda probarlo (incluso copiando y pegando código).</p>
+
+<p>El lugar lógico de introducir esa información es delante de la
+función correspondiente (como se suele hacer con los comentarios
+descriptivos de su funcionalidad) y en el caso de módulos cerca
+del principio del fichero.</p>
+
+<p>Si se desea preparar la ayuda para un módulo compilado tenemos
+que hacer lo siguiente.</p>
+
+<p>Si el módulo binario es nuestro, y podemos recompilarlo a nuestro gusto,
+podemos cambiar el nombre de la tabla internamente si lo deseamos,
+y renombrar también el fichero compilado. Luego se crea un fichero
+fuente Lua, con la ayuda incluida, con el nombre antiguo pero extensión
+<code>.lua</code> que carga el fichero compilado.</p>
+
+<p>Una segunda posibilidad es denominar de manera diferente el módulo
+compilado y el que vamos a cargar con <code>require</code>.  Sea por ejemplo
+un módulo compilado en formato binario de nombre <code>mymodule.so</code> (o
+<code>mymodule.dll</code>). Crearemos un fichero Lua con nombre <code>mymodule1.lua</code>
+de la forma:</p>
+
+<pre><code>-- fichero mymodule1.lua
+require "mymodule"
+mymodule._H = { ... }
+</code></pre>
+
+<p>Para cargar <code>mymodule</code> debemos usar:</p>
+
+<pre><code>require "mymodule1"
+</code></pre>
+
+<p>y tendremos a nuestra disposición las funciones <code>mymodule.&lt;function&gt;</code>
+y también la ayuda <code>mymodule._H</code>, a partir de ese momento.</p>
+
+<p>Otra tercera posibilidad es usar el mismo nombre, usando el hecho de
+que Lua primero busca ficheros fuente en <code>LUA_PATH</code> y luego binarios en
+<code>LUA_CPATH</code>. Crearíamos entonces un fichero <code>mymodule.lua</code> en el mismo
+lugar donde está el binario, de la manera:</p>
+
+<pre><code>-- fichero mymodule.lua
+module(..., package.seeall)
+
+local p = package.path
+package.path = ""
+package.loaded["mymodule"] = nil
+
+require"mymodule"
+package.path = p
+
+mymodule._H = [[ayuda]]
+</code></pre>
+
+<p>De esa manera podemos seguir usando</p>
+
+<pre><code>require "mymodule"
+</code></pre>
+
+<p>como siempre, pero ahora con ayuda incluida.</p>
+
+<p>De todos modos, este último método podría fallar si el módulo
+binario <code>mymodule.so</code> (o <code>mymodule.dll</code>) carga a su vez módulos
+en código fuente Lua pues durante el momento de su carga está
+desactivada la búsqueda en <code>package.path</code>.</p>
+
+
+<h3><span id="sabemos">4.3 Cómo sabemos que un módulo tiene ayuda</span></h3>
+
+<p>Al final de fichero Lua que contiene el módulo se puede incluir
+el siguiente trozo de código para detectar si Lua ha sido
+lanzado de manera interactiva:</p>
+
+<pre><code>-- checks if Lua calling was interactive;
+-- it does not work in all cases, but it does in the normal ones
+local interactive = true
+if _G.arg then
+   for _, v in pairs(_G.arg) do
+     interactive = false
+     if v == "-i" then
+       interactive = true
+       break
+     end
+   end
+end
+</code></pre>
+
+<p>Este sistema de detección no siempre funciona bien (y eso permite generar
+la documentación <code>html</code> con una simple línea dentro del intérprete de
+comando del sistema operativo, como veremos en el siguiente apartado).</p>
+
+<p>Sería interesante que en modo interactivo Lua crease una variable que
+lo indicara o al menos usara <code>_PROMPT</code> para ello: si no se expresa
+explicitamente <code>_PROMPT</code> está sin definir y Lua usa <code>"&gt;"</code> para ese
+cometido directamente. Bastaría sólo con definir <code>_PROMPT</code> en modo
+interactivo (<code>"&gt;"</code> si el usuario no definió otro) y dejarlo sin definir
+en otro caso.</p>
+
+<p>Una vez detectada la interactividad del intérprete tendríamos
+el siguiente bloque de código:</p>
+
+<pre><code>if interactive then
+   -- reusing interactive
+   interactive = pcall(require, "ask")                          --**
+   if interactive then
+      io.stderr:write('Module "mininum" loaded. ')
+      io.stderr:write('To obtain help invoke ask"mininum".\n')  --**
+      io.stderr:write('Documentation occupies memory. ')
+      io.stderr:write('For freeing it let execute:\n')
+      io.stderr:write('\n    mininum._H = nil\n\n')
+
+      ask.base"mininum"
+   else
+      io.stderr:write('Module "mininum" loaded. It has help\n')
+      io.stderr:write('but module "ask" is not accesible.\n')   --**
+      io.stderr:write('Help removed.\n')
+   end
+end
+
+if not interactive then
+   -- deleting _H
+   _H = nil
+   _G.ask = nil
+   collectgarbage()
+end
+</code></pre>
+
+<p>Esto libera memoria no necesaria en modo no interactivo, y además
+imprime en pantalla algunos mensajes en modo interactivo.</p>
+
+<p>Si deseamos cambiar el nombre de <code>ask.lua</code> a otro
+nombre deberemos cambiar también las líneas indicadas por <code>--**</code>
+más arriba de manera acorde.</p>
+
+<p>En otro orden de cosas, en el futuro es posible la inclusión de una
+utilidad externa para adaptar el formato que acompaña a <a href="http://luadoc.luaforge.net">Luadoc</a>
+(y también el que acompaña a <a href="http://code.google.com/p/luahelp/downloads/list">LuaHelp</a>) para su uso con el módulo
+<code>ask</code>. Esto permite no partir de vacío para módulos cuya documentación
+ya estaba preparada de algún modo.</p>
+
+
+<h2><span id="comousar">5 Cómo usar la ayuda interactivamente<span></h2>
+
+<p>Como antes hemos expuesto, un módulo que lleve ayuda deberá
+indicarlo al cargarse con <code>require</code> para que el usuario sepa
+que tiene disponible la ayuda.</p>
+
+<p>El último módulo cargado que posea ayuda cambiará <code>basis</code> por el nombre
+del módulo. Esto deberá tenerlo presente el usuario. De todos modos,
+en cualquier momento éste podrá cambiar <code>basis</code> a su gusto o podrá
+de manera puntual usar el sistema con la ruta completa (que empieza
+con <code>"/"</code>).</p>
+
+<p>Si se desea eliminar la ayuda de la memoria es fácil. Supongamos
+que tenemos el módulo <code>mininum</code> cargado con</p>
+
+<pre><code>require "mininum"
+</code></pre>
+
+<p>pues entonces basta con teclear:</p>
+
+<pre><code>mininum._H = nil   -- repetir esto con cada módulo
+collectgarbage()
+</code></pre>
+
+<p>Luego, si queremos eliminar completamente el sistema de ayuda
+teclearemos:</p>
+
+<pre><code>_G.ask = nil
+collectgarbage()
+</code></pre>
+
+<p>A partir de este momento ya no ocupa memoria ni la ayuda concreta
+del módulo <code>mininum</code> (aunque evidentemente sus funciones siguen
+cargadas), ni el sistema <code>ask</code>.</p>
+
+
+
+<h2>6 Cómo generar documentación en formato html (y PDF)</h2>
+
+<p>En este tipo de documentos es importante indicar el
+conjunto de caracteres usado en la ayuda. En estos momentos
+yo estoy trabajando con <code>iso-8859-15</code> y por tanto, en la
+ayuda se incluye el campo:</p>
+
+<pre><code>_H._CHARSET = "iso-8859-15"  -- "utf-8" en otros casos
+</code></pre>
+
+<p>Si se está usando <code>utf-8</code> (más corriente estos días) se debe cambiar
+de manera acorde. Si no se hace así algunos caracteres como "ü", "ñ",
+"á", saldrán incorrectamente. Se suele presentar la documentación en
+inglés por lo que el presente tema típicamente sólo afectaría a nombres
+de personas con esos caracteres.</p>
+
+<p>Una manera muy sencilla de obtener la documentación en formato
+<code>html</code> sería la siguiente en modo interactivo:</p>
+
+<pre><code>$ lua
+&gt; require "mininum"
+&gt; ask.doc""
+</code></pre>
+
+<p>Esto generaría <code>mininum.html</code>. Sin embargo, debido a un pequeño problema
+en la detección de la interactividad (véase el siguiente apartado),
+esta misma documentación también se puede lograr mediante:</p>
+
+<pre><code>lua -e "require'mininum'; ask.doc''"
+</code></pre>
+
+<p>Una vez se tiene el fichero con formato <code>html</code> se puede visualizar
+con un navegador cualquiera para consultar la ayuda. La hoja de estilo
+<code>default.css</code> proporcionada sitúa en la parte izquierda un menú fijo
+con los enlaces de todo el documento, incluyendo la lista de funciones
+dentro del módulo.</p>
+
+<p>El estilo del fichero <code>html</code> de salida es modificable, a través de la
+hoja de estilo <code>default.css</code> (nombre incluido dentro de <code>ask.lua</code>).
+Se recomienda sólo hacerlo en caso de conocimientos de CSS, pero no
+hace daño jugar con él.</p>
+
+<p>Si existen muchas funciones en el módulo es posible que no se vea el
+final de la lista dentro de la pantalla.  En ese caso se debe disminuir el
+tamaño de letra (o visualizar el documento sin estilo, que aunque es más
+feo, es todavía operativo). En ocasiones también tiene que disminuirse
+el tamaño de letra para ver los ejemplos (las líneas no dan vuelta en
+los elementos <code>html</code> de tipo <code>&lt;pre&gt;</code>, a los que se convierten
+los ejemplos).</p>
+
+<p>Aparte de visualizar el documento <code>html</code> también se puede imprimir, ya sea
+con el navegador (no recomendable) o con un programa específico. Aquí se
+recomienda la utilización de <a href="http://user.it.uu.se/~jan/html2ps.html">html2ps</a>, que convierte <code>html</code> en PS,
+con una hoja de estilo un poco simplificada (véase la documentación
+proporcionada en el enlace). En este caso, el menú de navegación no
+se imprime.</p>
+
+<p>Posteriormente, si se desea, se puede convertir el fichero PS en
+PDF mediante el programa <code>ps2pdf</code> que acompaña a <a href="http://pages.cs.wisc.edu/~ghost/">Ghostscript</a>. Tiene
+este sistema la particularidad de que los enlaces se mantienen, pudiendo
+también navegarse con enlaceds en el fichero PDF.</p>
+
+
+<h2>7 Debilidades y posibles mejoras</h2>
+
+<p>En primer lugar, debido a que modificamos algunas tablas
+(internas en el módulo del que se quiere ayuda) es posible
+que haya algunos efectos colaterales (que yo todavía no he
+descubierto).</p>
+
+<p>Por otro lado, cuando se carga un módulo en una variable local
+de la manera, por ejemplo:</p>
+
+<pre><code>local m = require"mininum"
+</code></pre>
+
+<p>para usar <code>"m."</code> como prefijo para las funciones de <code>mininum</code> y escribir
+menos, a partir de ese momento se puede acceder a la ayuda con <code>mininum</code>
+y con <code>m</code>, lo que no importa mucho en modo interactivo (al igual que se
+puede acceder a las funciones con <code>m.fun</code> y con <code>mininum.fun</code>).</p>
+
+<p>Si embargo, <code>ask.doc"m"</code> genera un fichero <code>mininum.html</code> con el nombre
+del módulo <code>mininum</code> (y no el fichero <code>m.html</code>).</p>
+
+<p>Las funciones en el módulo que vayan a tener ayuda no deben empezar por
+<code>"_"</code> pues <code>ask</code> supone que son parte de su sistema (no es que no se
+puedan definir y usar, sino que no se puede proporcionar ayuda).</p>
+
+<p>Algunas veces la interactividad no funciona bien. Por ejemplo:</p>
+
+<pre><code>lua -e "require'mininum'" somefile.lua
+</code></pre>
+
+<p>imprime un mensaje al principio y además no borra la ayuda. O sea
+que cuando se ejecuta <code>somefile.lua</code> las tablas de ayuda están en
+memoria (lo que puede ser contraproducente).</p>
+
+<p>Sin embargo no importa demasiado pues basta incluir</p>
+
+<pre><code>require"mininum"
+</code></pre>
+
+<p>al principio de <code>somefile.lua</code> e invocar a <code>lua</code> sin la opción <code>-e</code>,
+y entonces se descarga el módulo <code>ask</code> y la ayuda de <code>mininum</code> (una vez
+que detecta que el modo no es interactivo) antes de ejecutar el resto
+del programa.</p>
+
+<p>En modo interactivo, en el futuro se puede hacer que haya enlaces <code>http</code>
+para ayuda más completa (por ejemplo para una descripción de un algoritmo
+o para dar un enlace a un artículo científico), o para comprobar si hay
+nuevas versiones de un módulo dado. Cuando apareciera uno de esos enlaces
+se podría lanzar un navegador cuando el usuario pidiera ayuda de ese
+tipo (habría que incluir un nuevo tipo, v.g., <code>link</code> equivalente en el
+modo de una letra a <code>k</code>).</p>
+
+<p>También se pueden añadir test ejecutables (o sea pruebas en cada función
+del módulo; en parte podrían ser los ejemplos ejecutados). Por ejemplo,
+se incluirían dos campos: <code>_test</code> con código y <code>_testsolution</code> con
+texto. Al ejecutar el primero de ellos se debería obtener el segundo
+(el módulo <code>ask</code> comprobaría que son iguales).  No sé si esto es o no
+interesante. Habría que estudiarlo más.</p>
+
+<p>El sistema según se ha presentado no está cerrado ni es la solución
+definitiva. Puede tener muchas mejoras y así lo desea su autor,
+que sea un acicate para que otros programadores piensen sobre el tema
+y desarrollen incluso mejores sistemas (o completen éste).</p>
+
+
+<h2>8 Conclusiones</h2>
+
+<p>Se ha diseñado un interesante sistema para proporcionar ayuda
+en otros módulos. El mismo es versátil, permitiendo ayuda
+en línea, en formato <code>html</code> para su consulta en un navegador
+y en formato PS o PDF para impresión.</p>
+
+<p>El sistema no es perfecto, pero sí operativo. El autor cree
+que puede ser la semilla de un sistema más completo.
+El lector avezado en Lua puede hacer las modificaciones y
+adaptaciones que crea convenientes para su uso personal.
+Realmente, <code>AskLua</code> se distribuye como dominio público.
+Está esperando mejoras.</p>
+
+
+
+
+
+
+</body></html>

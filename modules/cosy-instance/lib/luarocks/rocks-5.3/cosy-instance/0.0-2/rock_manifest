@@ -1,0 +1,18 @@
+rock_manifest = {
+   bin = {
+      ["cosy-instance"] = "f5defa97df90f97a1a6c9b4500953e13"
+   },
+   ["cosy-instance-0.0-2.rockspec"] = "62c6fdcf11ffed2009774a1c034b233d",
+   doc = {
+      LICENSE = "ce03fc431d049859adf7916d68ac67b7",
+      ["README.md"] = "864fe9a3d4f5f42ec18671ca054336ff"
+   },
+   lua = {
+      cosy = {
+         instance = {
+            ["http.lua"] = "8650627a6fdecba5a979f61af424c5e6",
+            ["init.lua"] = "eeb69b4930b7931b1f643497b3fce4da"
+         }
+      }
+   }
+}

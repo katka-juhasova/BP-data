@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   diff = {
+      ["8.06.15-2"] = {}
+   }
+}
+modules = {
+   diff = {
+      "diff/8.06.15-2"
+   }
+}
+repository = {
+   diff = {
+      ["8.06.15-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               diff = "diff.lua"
+            }
+         }
+      }
+   }
+}

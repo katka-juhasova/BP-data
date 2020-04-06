@@ -1,0 +1,14 @@
+rock_manifest = {
+   doc = {
+      COPYING = "d32239bcb673463ab874e80d47fae504",
+      README = "d41d8cd98f00b204e9800998ecf8427e",
+      ["README.md"] = "ec665851a2d1e8189db6a0619bf934e0"
+   },
+   ["dromozoa-unix-1.69-1.rockspec"] = "7d711e872a304bb9a402b6af1873961c",
+   lib = {
+      dromozoa = {
+         ["unix.la"] = "1833521cd33a434b1802a38be5fa9aef",
+         ["unix.so"] = "d73d89d308f6bab4840fffbbbcc579c1"
+      }
+   }
+}

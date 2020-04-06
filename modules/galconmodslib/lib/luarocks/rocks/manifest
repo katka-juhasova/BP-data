@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   galconmodslib = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   galconmodslib = {
+      "galconmodslib/0.1-1"
+   }
+}
+repository = {
+   galconmodslib = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               galconmodslib = "galconmodslib/init.lua"
+            }
+         }
+      }
+   }
+}

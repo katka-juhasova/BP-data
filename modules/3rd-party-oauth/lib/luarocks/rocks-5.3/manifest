@@ -1,0 +1,88 @@
+commands = {}
+dependencies = {
+   ["3rd-party-oauth"] = {
+      ["1.0-6"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 3, string = "0.3"
+                  }
+               }
+            },
+            name = "luacrypto"
+         }
+      }
+   },
+   luacrypto = {
+      ["0.3.2-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   crypto = {
+      "luacrypto/0.3.2-2"
+   },
+   ["kong.plugins.3rd-party-oauth.access"] = {
+      "3rd-party-oauth/1.0-6"
+   },
+   ["kong.plugins.3rd-party-oauth.handler"] = {
+      "3rd-party-oauth/1.0-6"
+   },
+   ["kong.plugins.3rd-party-oauth.schema"] = {
+      "3rd-party-oauth/1.0-6"
+   }
+}
+repository = {
+   ["3rd-party-oauth"] = {
+      ["1.0-6"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luacrypto = "0.3.2-2"
+            },
+            modules = {
+               ["kong.plugins.3rd-party-oauth.access"] = "kong/plugins/3rd-party-oauth/access.lua",
+               ["kong.plugins.3rd-party-oauth.handler"] = "kong/plugins/3rd-party-oauth/handler.lua",
+               ["kong.plugins.3rd-party-oauth.schema"] = "kong/plugins/3rd-party-oauth/schema.lua"
+            }
+         }
+      }
+   },
+   luacrypto = {
+      ["0.3.2-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               crypto = "crypto.so"
+            }
+         }
+      }
+   }
+}

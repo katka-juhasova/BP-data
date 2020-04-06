@@ -1,0 +1,61 @@
+commands = {}
+dependencies = {
+   rxlove = {
+      ["0.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "rxlua"
+         }
+      }
+   },
+   rxlua = {
+      ["0.0.3-1"] = {}
+   }
+}
+modules = {
+   rx = {
+      "rxlua/0.0.3-1"
+   },
+   rxlove = {
+      "rxlove/0.0.1-1"
+   }
+}
+repository = {
+   rxlove = {
+      ["0.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               rxlua = "0.0.3-1"
+            },
+            modules = {
+               rxlove = "rxlove.lua"
+            }
+         }
+      }
+   },
+   rxlua = {
+      ["0.0.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rx = "rx.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["external-oauth3"] = {
+      ["1.1-5"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.external-oauth.access"] = {
+      "external-oauth3/1.1-5"
+   },
+   ["kong.plugins.external-oauth.handler"] = {
+      "external-oauth3/1.1-5"
+   },
+   ["kong.plugins.external-oauth.schema"] = {
+      "external-oauth3/1.1-5"
+   }
+}
+repository = {
+   ["external-oauth3"] = {
+      ["1.1-5"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.external-oauth.access"] = "kong/plugins/external-oauth/access.lua",
+               ["kong.plugins.external-oauth.handler"] = "kong/plugins/external-oauth/handler.lua",
+               ["kong.plugins.external-oauth.schema"] = "kong/plugins/external-oauth/schema.lua"
+            }
+         }
+      }
+   }
+}

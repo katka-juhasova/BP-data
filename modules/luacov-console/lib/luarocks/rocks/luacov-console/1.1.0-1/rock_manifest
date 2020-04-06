@@ -1,0 +1,17 @@
+rock_manifest = {
+   bin = {
+      ["luacov-console"] = "b17f5e2a240d5d009e4c6b8a7d87cead"
+   },
+   doc = {
+      LICENSE = "e32f5247526d802e6556c361a73b974c",
+      ["README.md"] = "d24144c78fb6abc285843c23fcf65d56"
+   },
+   lua = {
+      luacov = {
+         reporter = {
+            ["console.lua"] = "5db8ab01a72f2a687ea02e447f8967fb"
+         }
+      }
+   },
+   ["luacov-console-1.1.0-1.rockspec"] = "785391323596c80b42c1613e908e4820"
+}

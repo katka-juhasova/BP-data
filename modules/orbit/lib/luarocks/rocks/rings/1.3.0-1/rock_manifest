@@ -1,0 +1,22 @@
+rock_manifest = {
+   doc = {
+      us = {
+         ["index.html"] = "cc01a2de184cfc7207c057371c76135d",
+         ["license.html"] = "bae85f5c6caa8b5128a72aff1a108615",
+         ["manual.html"] = "9b7bba87d77a90aaaafa7e6504814194",
+         ["rings.png"] = "4907f55d21c6bac91a842984ca32930e"
+      }
+   },
+   lib = {
+      ["rings.so"] = "8eb7fb252a4f5e497bb060f0a96934ee"
+   },
+   lua = {
+      ["stable.lua"] = "6dae79b5c521f5ade8b50a6560133f89"
+   },
+   ["rings-1.3.0-1.rockspec"] = "de959a2e38164c3635307898483e19c3",
+   tests = {
+      ["sample.lua"] = "4d8bf14335e0294d19d13417a3d63922",
+      ["sample_state.lua"] = "c249e47c6636c197f6e3c1ab9fbfa91c",
+      ["test.lua"] = "2a5b11e98cbe8d289992bc87423f2b9a"
+   }
+}

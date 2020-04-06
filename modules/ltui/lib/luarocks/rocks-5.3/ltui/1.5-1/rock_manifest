@@ -1,0 +1,55 @@
+rock_manifest = {
+   lib = {
+      ["ltui.so"] = "bbf86d23d1a918d7fcd4b0df9df909b7"
+   },
+   ["ltui-1.5-1.rockspec"] = "4c247ae439d3aa77b01facb0998b57af",
+   lua = {
+      ltui = {
+         ["action.lua"] = "fd71ad011f36c39eb222ad1c81d5c9c1",
+         ["application.lua"] = "1671701b3fbcee26a6a8c84a697b6d92",
+         base = {
+            ["dlist.lua"] = "475836e037cbf2c9d31d9a132dba9e7c",
+            ["log.lua"] = "c29aa0bf82e50f4deb8844fd7121aa22",
+            ["os.lua"] = "d7634acb9872022870ba81fd45d8b1b7",
+            ["path.lua"] = "c2cb0343c0c4e154f9c93a0735aa400f",
+            ["string.lua"] = "1bc55b99ba5b39e9e7dbb0fefb62af06",
+            ["table.lua"] = "77c6e2230b476e41e1802586ce891b3c"
+         },
+         ["border.lua"] = "874187ebdd8de355966c99fa87b1ce8c",
+         ["boxdialog.lua"] = "3117455f8c9c374bb958ae4017bb5a31",
+         ["button.lua"] = "53b6bb8efa2e7d3bf4817445a38fa3af",
+         ["canvas.lua"] = "4a23af7024b1d4e2bbf6b5af858284f5",
+         ["choicebox.lua"] = "2d2dfb754b58f4207539beba5f56d6fa",
+         ["choicedialog.lua"] = "ac88382df2b180a2b687abce8866698e",
+         ["curses.lua"] = "1eb1c2b73ca1749bf6c73857281fe70b",
+         ["desktop.lua"] = "c40a24ba867d83985c163b3f9575fd4f",
+         ["dialog.lua"] = "8808d84c404b37f1605ae1287c1505f4",
+         ["event.lua"] = "c2ab2d40bf06ada418a222c1b4988611",
+         ["inputdialog.lua"] = "d8bbddd8b5c984fcfd007a035c7bee91",
+         ["label.lua"] = "ec39ef0f679ef4a7334d452d3b32aca1",
+         ["mconfdialog.lua"] = "1aaccdbb9bf089c1da25c2144efe5287",
+         ["menubar.lua"] = "d64c060972a95a114af55d4f506dc596",
+         ["menuconf.lua"] = "e17fd0b0158933333f463089a99839f4",
+         ["object.lua"] = "d42b73afb251eca20400df55e25fa91a",
+         ["panel.lua"] = "919d8f277b3a43e31e2c6288e5381d74",
+         ["point.lua"] = "3d1d3b9807f294ed67807f73ccf0ae09",
+         ["program.lua"] = "8e4d1a5ada5d5c961dc10a008dab1bcd",
+         ["rect.lua"] = "93b44fe5a5c6e0b9d665fd717e2decb2",
+         ["statusbar.lua"] = "3044e65f1dcd4ba35393ceba523edaa8",
+         ["textarea.lua"] = "6c6cce8e171706875b70f1f5919ab598",
+         ["textdialog.lua"] = "f83fb5edae8305385f6b32cafba657c4",
+         ["textedit.lua"] = "51624e0e6a200b3580bec8d275148a16",
+         ["view.lua"] = "a16ba8decaf56c4e7852b8fdacb6c3cd",
+         ["window.lua"] = "50bd755ed01371e79b704bd7dc78af5e"
+      },
+      ["ltui.lua"] = "43b9d7530022fb2541be62b88804f475"
+   },
+   tests = {
+      ["desktop.lua"] = "2c8d46c97c5156babd90a5502460e31a",
+      ["dialog.lua"] = "167a58182bc94d1ad8e377aac42ac7bc",
+      ["inputdialog.lua"] = "ddcf09b6daac1f795c53e593dee8bc77",
+      ["load.lua"] = "a449b1fe054fb482fde0bbc54365fa38",
+      ["mconfdialog.lua"] = "c03b22685178fb5af96670a82a8eae75",
+      ["window.lua"] = "7f8d2e0c73811949cc0d1a4c180b759b"
+   }
+}

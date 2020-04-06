@@ -1,0 +1,73 @@
+commands = {}
+dependencies = {
+   ["lua-messagepack"] = {
+      ["0.5.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-fluentd"] = {
+      ["0.0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-messagepack"
+         }
+      }
+   }
+}
+modules = {
+   MessagePack = {
+      "lua-messagepack/0.5.2-1"
+   },
+   ["resty.fluentd"] = {
+      "lua-resty-fluentd/0.0.1-0"
+   }
+}
+repository = {
+   ["lua-messagepack"] = {
+      ["0.5.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               MessagePack = "MessagePack.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-fluentd"] = {
+      ["0.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-messagepack"] = "0.5.2-1"
+            },
+            modules = {
+               ["resty.fluentd"] = "resty/fluentd.lua"
+            }
+         }
+      }
+   }
+}

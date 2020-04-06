@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   env = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   env = {
+      "env/0.1-0"
+   }
+}
+repository = {
+   env = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               env = "env.lua"
+            }
+         }
+      }
+   }
+}

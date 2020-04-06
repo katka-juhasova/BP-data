@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-url-regex-rewriter"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.kong-plugin-url-regex-rewriter.handler"] = {
+      "kong-plugin-url-regex-rewriter/0.1.0-1"
+   },
+   ["kong.plugins.kong-plugin-url-regex-rewriter.schema"] = {
+      "kong-plugin-url-regex-rewriter/0.1.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-url-regex-rewriter"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-plugin-url-regex-rewriter.handler"] = "kong/plugins/kong-plugin-url-regex-rewriter/handler.lua",
+               ["kong.plugins.kong-plugin-url-regex-rewriter.schema"] = "kong/plugins/kong-plugin-url-regex-rewriter/schema.lua"
+            }
+         }
+      }
+   }
+}

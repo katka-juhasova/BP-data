@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-upstream-auth-basic"] = {
+      ["1.0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.upstream-auth-basic.handler"] = {
+      "kong-plugin-upstream-auth-basic/1.0.1-0"
+   },
+   ["kong.plugins.upstream-auth-basic.schema"] = {
+      "kong-plugin-upstream-auth-basic/1.0.1-0"
+   }
+}
+repository = {
+   ["kong-plugin-upstream-auth-basic"] = {
+      ["1.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.upstream-auth-basic.handler"] = "kong/plugins/upstream-auth-basic/handler.lua",
+               ["kong.plugins.upstream-auth-basic.schema"] = "kong/plugins/upstream-auth-basic/schema.lua"
+            }
+         }
+      }
+   }
+}

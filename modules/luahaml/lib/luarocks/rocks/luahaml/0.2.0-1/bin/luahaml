@@ -1,0 +1,117 @@
+#!/usr/bin/env lua
+
+local haml = require "haml"
+local ext  = require "haml.ext"
+
+local VERSION = "0.2.0"
+
+local banner = "LuaHaml %s, copyright Norman Clarke <norman@njclarke.com> 2009-2012"
+
+local usage = [[
+
+Usage: luahaml [options] [filename]
+
+Description:
+  Uses the Haml engine to process the specified input and prints
+  the result to standard output.
+
+Options:
+
+  -s,     --stdin          Read from standard input, outputting processed Haml
+  -i,     --inline         Like -s, but read input from command line
+  -p,     --parse          Show the parser's output for debugging
+  -c,     --precompile     Show the precompiler's output for debugging
+  -v,     --version        Show the LuaHaml version
+  -?,-h,  --help           Show this message
+
+Examples:
+
+  Render a template:
+  # luahaml my_template.haml > my_template.haml
+
+  Read input from the command line and render
+  # luahaml -i '%p'
+
+  Read input from the command line and show the parser info
+  # luahaml -p -i '%p'
+
+]]
+
+local haml_options = {format = "xhtml"}
+
+local function read_file()
+  local file = arg[#arg]
+  haml_options.file = file
+  local fh = assert(io.open(file))
+  local input = fh:read '*a'
+  fh:close()
+  return input
+end
+
+local function read_stdin()
+  return io.stdin:read('*a')
+end
+
+local function run_parser(haml_string)
+  local engine  = haml.new(haml_options)
+  local phrases = engine:parse(haml_string)
+  for _, t in pairs(phrases) do
+    print(ext.render_table(t))
+  end
+end
+
+local function run_precompiler(haml_string)
+  local engine   = haml.new(haml_options)
+  local compiled = engine:compile(engine:parse(haml_string))
+  print(compiled)
+end
+
+local function render(haml_string)
+  local engine = haml.new(haml_options)
+  local output = engine:render(haml_string, haml_options)
+  print(output)
+end
+
+local function show_banner()
+  print(string.format(banner, VERSION))
+end
+
+local function show_usage()
+  print(usage)
+end
+
+local exec_func = render
+local input_func = read_file
+
+if #arg == 0 then
+  show_usage()
+  os.exit()
+end
+
+for i, v in ipairs(arg) do
+  if v == '-c' or v == '--precompile' then
+    exec_func = run_precompiler
+  elseif v == '-p' or v == '--parse' then
+    exec_func = run_parser
+  elseif v == '-s' or v == '--stdin' then
+    input_func = read_stdin
+  elseif v == '-i' or v == '--inline' then
+    local input = arg[i + 1]
+    input_func = function() return input end
+  elseif v == '-h' or v == '--help' or v == '-?' then
+    show_banner()
+    show_usage()
+    os.exit()
+  elseif v == '-v' or v == '--version' then
+    show_banner()
+    os.exit()
+  elseif v == '--copyright' then
+    show_license()
+    os.exit()
+  elseif string.match(v, "^-[a-z0-9%-]") then
+    print(string.format('Invalid argument "%s"', v))
+    show_usage()
+    os.exit()
+  end
+end
+exec_func(input_func())

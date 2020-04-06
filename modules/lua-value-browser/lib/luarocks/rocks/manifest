@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   ["lua-value-browser"] = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["debug.browser"] = {
+      "lua-value-browser/0.2-1"
+   }
+}
+repository = {
+   ["lua-value-browser"] = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["debug.browser"] = "debug/browser.lua"
+            }
+         }
+      }
+   }
+}

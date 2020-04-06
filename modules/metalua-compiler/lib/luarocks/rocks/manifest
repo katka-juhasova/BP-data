@@ -1,0 +1,222 @@
+commands = {}
+dependencies = {
+   luafilesystem = {
+      ["1.6.3-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["metalua-compiler"] = {
+      ["0.7.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 6, string = "1.6"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 7, 3, string = "0.7.3"
+                  }
+               }
+            },
+            name = "metalua-parser"
+         }
+      }
+   },
+   ["metalua-parser"] = {
+      ["0.7.3-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lfs = {
+      "luafilesystem/1.6.3-2"
+   },
+   ["metalua.compiler"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.bytecode"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua.compiler.bytecode.compile"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua.compiler.bytecode.lcode"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua.compiler.bytecode.ldump"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua.compiler.bytecode.lopcodes"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua.compiler.globals"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua.compiler.parser"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.annot.generator"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.annot.grammar"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.expr"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.ext"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.lexer"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.meta"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.misc"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.stat"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.compiler.parser.table"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.grammar.generator"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.grammar.lexer"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua.loader"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua.pprint"] = {
+      "metalua-parser/0.7.3-2"
+   },
+   ["metalua/compiler/ast_to_src.mlua"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua/extension/comprehension.mlua"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua/extension/match.mlua"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua/repl.mlua"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua/treequery.mlua"] = {
+      "metalua-compiler/0.7.3-1"
+   },
+   ["metalua/treequery/walk.mlua"] = {
+      "metalua-compiler/0.7.3-1"
+   }
+}
+repository = {
+   luafilesystem = {
+      ["1.6.3-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   ["metalua-compiler"] = {
+      ["0.7.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.6.3-2",
+               ["metalua-parser"] = "0.7.3-2"
+            },
+            modules = {
+               ["metalua.compiler.bytecode"] = "metalua/compiler/bytecode.lua",
+               ["metalua.compiler.bytecode.compile"] = "metalua/compiler/bytecode/compile.lua",
+               ["metalua.compiler.bytecode.lcode"] = "metalua/compiler/bytecode/lcode.lua",
+               ["metalua.compiler.bytecode.ldump"] = "metalua/compiler/bytecode/ldump.lua",
+               ["metalua.compiler.bytecode.lopcodes"] = "metalua/compiler/bytecode/lopcodes.lua",
+               ["metalua.compiler.globals"] = "metalua/compiler/globals.lua",
+               ["metalua.loader"] = "metalua/loader.lua",
+               ["metalua/compiler/ast_to_src.mlua"] = "metalua/compiler/ast_to_src.mlua",
+               ["metalua/extension/comprehension.mlua"] = "metalua/extension/comprehension.mlua",
+               ["metalua/extension/match.mlua"] = "metalua/extension/match.mlua",
+               ["metalua/repl.mlua"] = "metalua/repl.mlua",
+               ["metalua/treequery.mlua"] = "metalua/treequery.mlua",
+               ["metalua/treequery/walk.mlua"] = "metalua/treequery/walk.mlua"
+            }
+         }
+      }
+   },
+   ["metalua-parser"] = {
+      ["0.7.3-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["metalua.compiler"] = "metalua/compiler.lua",
+               ["metalua.compiler.parser"] = "metalua/compiler/parser.lua",
+               ["metalua.compiler.parser.annot.generator"] = "metalua/compiler/parser/annot/generator.lua",
+               ["metalua.compiler.parser.annot.grammar"] = "metalua/compiler/parser/annot/grammar.lua",
+               ["metalua.compiler.parser.expr"] = "metalua/compiler/parser/expr.lua",
+               ["metalua.compiler.parser.ext"] = "metalua/compiler/parser/ext.lua",
+               ["metalua.compiler.parser.lexer"] = "metalua/compiler/parser/lexer.lua",
+               ["metalua.compiler.parser.meta"] = "metalua/compiler/parser/meta.lua",
+               ["metalua.compiler.parser.misc"] = "metalua/compiler/parser/misc.lua",
+               ["metalua.compiler.parser.stat"] = "metalua/compiler/parser/stat.lua",
+               ["metalua.compiler.parser.table"] = "metalua/compiler/parser/table.lua",
+               ["metalua.grammar.generator"] = "metalua/grammar/generator.lua",
+               ["metalua.grammar.lexer"] = "metalua/grammar/lexer.lua",
+               ["metalua.pprint"] = "metalua/pprint.lua"
+            }
+         }
+      }
+   }
+}

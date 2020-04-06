@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   ["lzmq-timer"] = {
+      ["0.4.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lzmq.timer"] = {
+      "lzmq-timer/0.4.2-1"
+   }
+}
+repository = {
+   ["lzmq-timer"] = {
+      ["0.4.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lzmq.timer"] = "lzmq/timer.so"
+            }
+         }
+      }
+   }
+}

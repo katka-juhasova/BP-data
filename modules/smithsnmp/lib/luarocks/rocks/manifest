@@ -1,0 +1,55 @@
+commands = {
+   smithsnmpd = {
+      "smithsnmp/0.8-2"
+   }
+}
+dependencies = {
+   smithsnmp = {
+      ["0.8-2"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   smithsnmp = {
+      "smithsnmp/0.8-2"
+   },
+   ["smithsnmp.core"] = {
+      "smithsnmp/0.8-2"
+   },
+   ["smithsnmp.trap"] = {
+      "smithsnmp/0.8-2"
+   },
+   ["smithsnmp.utils"] = {
+      "smithsnmp/0.8-2"
+   }
+}
+repository = {
+   smithsnmp = {
+      ["0.8-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               smithsnmpd = "smithsnmpd"
+            },
+            dependencies = {},
+            modules = {
+               smithsnmp = "smithsnmp/init.lua",
+               ["smithsnmp.core"] = "smithsnmp/core.so",
+               ["smithsnmp.trap"] = "smithsnmp/trap.lua",
+               ["smithsnmp.utils"] = "smithsnmp/utils.lua"
+            }
+         }
+      }
+   }
+}

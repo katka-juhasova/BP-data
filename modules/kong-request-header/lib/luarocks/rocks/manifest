@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["kong-request-header"] = {
+      ["0.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.kong-request-header.access"] = {
+      "kong-request-header/0.0.1-1"
+   },
+   ["kong.plugins.kong-request-header.handler"] = {
+      "kong-request-header/0.0.1-1"
+   },
+   ["kong.plugins.kong-request-header.schema"] = {
+      "kong-request-header/0.0.1-1"
+   }
+}
+repository = {
+   ["kong-request-header"] = {
+      ["0.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-request-header.access"] = "kong/plugins/kong-request-header/access.lua",
+               ["kong.plugins.kong-request-header.handler"] = "kong/plugins/kong-request-header/handler.lua",
+               ["kong.plugins.kong-request-header.schema"] = "kong/plugins/kong-request-header/schema.lua"
+            }
+         }
+      }
+   }
+}

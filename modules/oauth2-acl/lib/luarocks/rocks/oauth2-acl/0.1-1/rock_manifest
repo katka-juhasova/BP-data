@@ -1,0 +1,17 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "86d3f3a95c324c9479bd8986968f4327",
+      ["README.md"] = "c9f087247215df8c5409aa283994f5e4"
+   },
+   lua = {
+      kong = {
+         plugins = {
+            ["oauth2-acl"] = {
+               ["handler.lua"] = "e826af250e440e815fd156de2ea9a3ea",
+               ["schema.lua"] = "f3751fe91fdfea0f9fd40be73a6ae85d"
+            }
+         }
+      }
+   },
+   ["oauth2-acl-0.1-1.rockspec"] = "be59dbab509d515ddaf8d24c0aae63d1"
+}

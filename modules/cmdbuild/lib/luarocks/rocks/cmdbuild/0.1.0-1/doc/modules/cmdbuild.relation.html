@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>CMDBuild SOAP API Library</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/cmdbuild.html">cmdbuild</a></li>
+  <li><a href="../modules/cmdbuild.attachment.html">cmdbuild.attachment</a></li>
+  <li><a href="../modules/cmdbuild.card.html">cmdbuild.card</a></li>
+  <li><a href="../modules/cmdbuild.lookup.html">cmdbuild.lookup</a></li>
+  <li><strong>cmdbuild.relation</strong></li>
+  <li><a href="../modules/cmdbuild.workflow.html">cmdbuild.workflow</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/Readme.md.html">Readme</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>cmdbuild.relation</code></h1>
+<p>Relation:getRelationList
+  It returns the complete list of relations of the card specified for the specified domain.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#methods.history">methods.history (domain_name, class1name, card1id, class2name, card2id, status, begin_date, end_date)</a></td>
+	<td class="summary">Relation:getRelationHistory
+  It returns the relation history of a card starting from a "Relation" object
+ in which only "Class1Name" and "Card1Id" were defined.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Relation:create">Relation:create (domain_name, class1name, card1Id, class2name, card2Id, status, begin_date, end_date)</a></td>
+	<td class="summary">Relation:createRelation
+  It creates in the database a new relation between the pair of cards specified in the "Relation" object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Relation:delete">Relation:delete (domain_name, class1name, card1id, class2name, card2id, status, begin_date, end_date)</a></td>
+	<td class="summary">Relation:deleteRelation
+  It deletes the existing relation between the pair of cards specified in the "Relation" object.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "methods.history"></a>
+    <strong>methods.history (domain_name, class1name, card1id, class2name, card2id, status, begin_date, end_date)</strong>
+    </dt>
+    <dd>
+    Relation:getRelationHistory
+  It returns the relation history of a card starting from a "Relation" object
+ in which only "Class1Name" and "Card1Id" were defined.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">domain_name</span>
+         - Domain used for the relation. (string)
+        </li>
+        <li><span class="parameter">class1name</span>
+         - ClassName of the first card taking part in the relation (string)
+        </li>
+        <li><span class="parameter">card1id</span>
+         - Identifier of the first card which takes part in the relation (number)
+        </li>
+        <li><span class="parameter">class2name</span>
+         - ClassName of the second card which takes part in the relation. (string)
+        </li>
+        <li><span class="parameter">card2id</span>
+         - Identifier of the second card which takes part in the relation. (number)
+        </li>
+        <li><span class="parameter">status</span>
+         - Relation status ('A' = active, 'N' = removed) (string)
+        </li>
+        <li><span class="parameter">begin_date</span>
+         - Date when the relation was created (format YYYY-MM-DDThh:mm:ssZ) (date)
+        </li>
+        <li><span class="parameter">end_date</span>
+         - Date when the relation was created (format YYYY-MM-DDThh:mm:ssZ) (date)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Relation:create"></a>
+    <strong>Relation:create (domain_name, class1name, card1Id, class2name, card2Id, status, begin_date, end_date)</strong>
+    </dt>
+    <dd>
+    Relation:createRelation
+  It creates in the database a new relation between the pair of cards specified in the "Relation" object.
+ It returns “true” if the operation went through.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">domain_name</span>
+         - Domain used for the relation. (string)
+        </li>
+        <li><span class="parameter">class1name</span>
+         - ClassName of the first card taking part in the relation (string)
+        </li>
+        <li><span class="parameter">card1Id</span>
+         - Identifier of the first card which takes part in the relation (number)
+        </li>
+        <li><span class="parameter">class2name</span>
+         - ClassName of the second card which takes part in the relation. (string)
+        </li>
+        <li><span class="parameter">card2Id</span>
+         - Identifier of the second card which takes part in the relation. (number)
+        </li>
+        <li><span class="parameter">status</span>
+         - Relation status ('A' = active, 'N' = removed) (string)
+        </li>
+        <li><span class="parameter">begin_date</span>
+         - Date when the relation was created (format YYYY-MM-DDThh:mm:ssZ) (date)
+        </li>
+        <li><span class="parameter">end_date</span>
+         - Date when the relation was created (format YYYY-MM-DDThh:mm:ssZ) (date)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Relation:delete"></a>
+    <strong>Relation:delete (domain_name, class1name, card1id, class2name, card2id, status, begin_date, end_date)</strong>
+    </dt>
+    <dd>
+    Relation:deleteRelation
+  It deletes the existing relation between the pair of cards specified in the "Relation" object.
+ It returns “true” if the operation went through.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">domain_name</span>
+         - Domain used for the relation. (string)
+        </li>
+        <li><span class="parameter">class1name</span>
+         - ClassName of the first card taking part in the relation (string)
+        </li>
+        <li><span class="parameter">card1id</span>
+         - Identifier of the first card which takes part in the relation (number)
+        </li>
+        <li><span class="parameter">class2name</span>
+         - ClassName of the second card which takes part in the relation. (string)
+        </li>
+        <li><span class="parameter">card2id</span>
+         - Identifier of the second card which takes part in the relation. (number)
+        </li>
+        <li><span class="parameter">status</span>
+         - Relation status ('A' = active, 'N' = removed) (string)
+        </li>
+        <li><span class="parameter">begin_date</span>
+         - Date when the relation was created (format YYYY-MM-DDThh:mm:ssZ) (date)
+        </li>
+        <li><span class="parameter">end_date</span>
+         - Date when the relation was created (format YYYY-MM-DDThh:mm:ssZ) (date)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.2</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

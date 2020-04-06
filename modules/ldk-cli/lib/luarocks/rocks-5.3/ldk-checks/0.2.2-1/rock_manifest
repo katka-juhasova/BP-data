@@ -1,0 +1,13 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "0f8093cd9858a1d3e9802d682d376400",
+      LICENSE = "8baec3d0fc5d3c7d49f8ed1f968149ac",
+      ["README.md"] = "f53768bda19684c98d507284af4420b6"
+   },
+   ["ldk-checks-0.2.2-1.rockspec"] = "a9e38c8960dcb43ba9e88e50b35f5d05",
+   lib = {
+      ldk = {
+         ["checks.so"] = "73bef89bd565909fede159a0a07a046d"
+      }
+   }
+}

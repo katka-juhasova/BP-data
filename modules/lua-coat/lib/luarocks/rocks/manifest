@@ -1,0 +1,67 @@
+commands = {
+   coat2dot = {
+      "lua-coat/0.9.2-2"
+   }
+}
+dependencies = {
+   ["lua-coat"] = {
+      ["0.9.2-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   Coat = {
+      "lua-coat/0.9.2-2"
+   },
+   ["Coat.Meta.Class"] = {
+      "lua-coat/0.9.2-2"
+   },
+   ["Coat.Meta.Role"] = {
+      "lua-coat/0.9.2-2"
+   },
+   ["Coat.Role"] = {
+      "lua-coat/0.9.2-2"
+   },
+   ["Coat.Types"] = {
+      "lua-coat/0.9.2-2"
+   },
+   ["Coat.UML"] = {
+      "lua-coat/0.9.2-2"
+   },
+   ["Coat.file"] = {
+      "lua-coat/0.9.2-2"
+   }
+}
+repository = {
+   ["lua-coat"] = {
+      ["0.9.2-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               coat2dot = "coat2dot"
+            },
+            dependencies = {},
+            modules = {
+               Coat = "Coat.lua",
+               ["Coat.Meta.Class"] = "Coat/Meta/Class.lua",
+               ["Coat.Meta.Role"] = "Coat/Meta/Role.lua",
+               ["Coat.Role"] = "Coat/Role.lua",
+               ["Coat.Types"] = "Coat/Types.lua",
+               ["Coat.UML"] = "Coat/UML.lua",
+               ["Coat.file"] = "Coat/file.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,185 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   centrilua = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 0, 0, string = "2.0.0"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 11, string = "0.11"
+                  }
+               }
+            },
+            name = "lua-resty-http"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, 0, string = "1.0.0"
+                  }
+               }
+            },
+            name = "lua-api-gateway-hmac"
+         }
+      }
+   },
+   ["lua-api-gateway-hmac"] = {
+      ["1.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["api-gateway.resty.hmac"] = {
+      "lua-api-gateway-hmac/1.0.0-0"
+   },
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.15-0"
+   }
+}
+repository = {
+   centrilua = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-api-gateway-hmac"] = "1.0.0-0",
+               ["lua-cjson"] = "2.1.0.6-1",
+               ["lua-resty-http"] = "0.15-0"
+            },
+            modules = {}
+         }
+      }
+   },
+   ["lua-api-gateway-hmac"] = {
+      ["1.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["api-gateway.resty.hmac"] = "api-gateway/resty/hmac.lua"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   }
+}

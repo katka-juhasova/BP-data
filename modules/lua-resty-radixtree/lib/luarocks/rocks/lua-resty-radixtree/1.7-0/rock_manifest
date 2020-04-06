@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "86d3f3a95c324c9479bd8986968f4327",
+      ["README.md"] = "c3c45be7a82b500abaaaa6838144f72b"
+   },
+   lib = {
+      ["librestyradixtree.so"] = "2b32cc3b021b415a68a3b9a525317613"
+   },
+   lua = {
+      resty = {
+         ["radixtree.lua"] = "12eac61405668adfc0891f60d555274d"
+      }
+   },
+   ["lua-resty-radixtree-1.7-0.rockspec"] = "8f91464d02b0428b5be5dcc86927e53b"
+}

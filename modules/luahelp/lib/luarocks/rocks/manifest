@@ -1,0 +1,661 @@
+commands = {}
+dependencies = {
+   luahelp = {
+      ["0.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   help = {
+      "luahelp/0.3-1"
+   },
+   helpman = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/_G.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/assert.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/collectgarbage.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/coroutine.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/coroutine/create.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/coroutine/resume.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/coroutine/running.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/coroutine/status.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/coroutine/wrap.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/coroutine/yield.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/debug.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/getfenv.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/gethook.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/getinfo.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/getlocal.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/getmetatable.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/getregistry.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/getupvalue.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/setfenv.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/sethook.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/setlocal.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/setmetatable.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/setupvalue.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/debug/traceback.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/dofile.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/error.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/file/close.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/file/flush.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/file/lines.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/file/read.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/file/seek.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/file/setvbuf.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/file/write.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/for.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/getfenv.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/getmetatable.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/help.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/help/print.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/help/register.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/info.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/close.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/flush.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/input.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/lines.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/open.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/output.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/popen.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/read.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/tmpfile.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/type.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/io/write.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/ipairs.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/length.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/lexis.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/license.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/load.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/loadfile.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/loadstring.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/lua.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/luaref.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/luasa.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/abs.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/acos.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/asin.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/atan.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/atan2.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/ceil.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/cos.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/cosh.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/deg.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/exp.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/floor.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/fmod.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/frexp.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/huge.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/ldexp.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/log.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/log10.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/max.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/min.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/modf.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/pi.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/pow.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/rad.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/random.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/randomseed.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/sin.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/sinh.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/sqrt.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/tan.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/math/tanh.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/module.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/next.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/clock.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/date.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/difftime.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/execute.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/exit.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/getenv.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/remove.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/rename.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/setlocale.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/time.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/os/tmpname.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/package.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/package/cpath.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/package/loaded.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/package/loadlib.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/package/path.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/package/preload.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/package/seeall.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/pairs.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/patterns.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/pcall.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/print.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/rawequal.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/rawget.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/rawset.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/require.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/select.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/setfenv.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/setmetatable.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/byte.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/char.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/dump.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/find.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/format.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/gmatch.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/gsub.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/len.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/lower.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/match.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/rep.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/reverse.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/sub.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/string/upper.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/table.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/table/concat.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/table/foreach.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/table/foreachi.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/table/insert.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/table/maxn.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/table/remove.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/table/sort.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/tonumber.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/tostring.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/type.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/types.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/unpack.lhp"] = {
+      "luahelp/0.3-1"
+   },
+   ["lhp/xpcall.lhp"] = {
+      "luahelp/0.3-1"
+   }
+}
+repository = {
+   luahelp = {
+      ["0.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               help = "help.so",
+               helpman = "helpman.lua",
+               ["lhp/_G.lhp"] = "lhp/_G.lhp",
+               ["lhp/assert.lhp"] = "lhp/assert.lhp",
+               ["lhp/collectgarbage.lhp"] = "lhp/collectgarbage.lhp",
+               ["lhp/coroutine.lhp"] = "lhp/coroutine.lhp",
+               ["lhp/coroutine/create.lhp"] = "lhp/coroutine/create.lhp",
+               ["lhp/coroutine/resume.lhp"] = "lhp/coroutine/resume.lhp",
+               ["lhp/coroutine/running.lhp"] = "lhp/coroutine/running.lhp",
+               ["lhp/coroutine/status.lhp"] = "lhp/coroutine/status.lhp",
+               ["lhp/coroutine/wrap.lhp"] = "lhp/coroutine/wrap.lhp",
+               ["lhp/coroutine/yield.lhp"] = "lhp/coroutine/yield.lhp",
+               ["lhp/debug.lhp"] = "lhp/debug.lhp",
+               ["lhp/debug/debug.lhp"] = "lhp/debug/debug.lhp",
+               ["lhp/debug/getfenv.lhp"] = "lhp/debug/getfenv.lhp",
+               ["lhp/debug/gethook.lhp"] = "lhp/debug/gethook.lhp",
+               ["lhp/debug/getinfo.lhp"] = "lhp/debug/getinfo.lhp",
+               ["lhp/debug/getlocal.lhp"] = "lhp/debug/getlocal.lhp",
+               ["lhp/debug/getmetatable.lhp"] = "lhp/debug/getmetatable.lhp",
+               ["lhp/debug/getregistry.lhp"] = "lhp/debug/getregistry.lhp",
+               ["lhp/debug/getupvalue.lhp"] = "lhp/debug/getupvalue.lhp",
+               ["lhp/debug/setfenv.lhp"] = "lhp/debug/setfenv.lhp",
+               ["lhp/debug/sethook.lhp"] = "lhp/debug/sethook.lhp",
+               ["lhp/debug/setlocal.lhp"] = "lhp/debug/setlocal.lhp",
+               ["lhp/debug/setmetatable.lhp"] = "lhp/debug/setmetatable.lhp",
+               ["lhp/debug/setupvalue.lhp"] = "lhp/debug/setupvalue.lhp",
+               ["lhp/debug/traceback.lhp"] = "lhp/debug/traceback.lhp",
+               ["lhp/dofile.lhp"] = "lhp/dofile.lhp",
+               ["lhp/error.lhp"] = "lhp/error.lhp",
+               ["lhp/file/close.lhp"] = "lhp/file/close.lhp",
+               ["lhp/file/flush.lhp"] = "lhp/file/flush.lhp",
+               ["lhp/file/lines.lhp"] = "lhp/file/lines.lhp",
+               ["lhp/file/read.lhp"] = "lhp/file/read.lhp",
+               ["lhp/file/seek.lhp"] = "lhp/file/seek.lhp",
+               ["lhp/file/setvbuf.lhp"] = "lhp/file/setvbuf.lhp",
+               ["lhp/file/write.lhp"] = "lhp/file/write.lhp",
+               ["lhp/for.lhp"] = "lhp/for.lhp",
+               ["lhp/getfenv.lhp"] = "lhp/getfenv.lhp",
+               ["lhp/getmetatable.lhp"] = "lhp/getmetatable.lhp",
+               ["lhp/help.lhp"] = "lhp/help.lhp",
+               ["lhp/help/print.lhp"] = "lhp/help/print.lhp",
+               ["lhp/help/register.lhp"] = "lhp/help/register.lhp",
+               ["lhp/info.lhp"] = "lhp/info.lhp",
+               ["lhp/io.lhp"] = "lhp/io.lhp",
+               ["lhp/io/close.lhp"] = "lhp/io/close.lhp",
+               ["lhp/io/flush.lhp"] = "lhp/io/flush.lhp",
+               ["lhp/io/input.lhp"] = "lhp/io/input.lhp",
+               ["lhp/io/lines.lhp"] = "lhp/io/lines.lhp",
+               ["lhp/io/open.lhp"] = "lhp/io/open.lhp",
+               ["lhp/io/output.lhp"] = "lhp/io/output.lhp",
+               ["lhp/io/popen.lhp"] = "lhp/io/popen.lhp",
+               ["lhp/io/read.lhp"] = "lhp/io/read.lhp",
+               ["lhp/io/tmpfile.lhp"] = "lhp/io/tmpfile.lhp",
+               ["lhp/io/type.lhp"] = "lhp/io/type.lhp",
+               ["lhp/io/write.lhp"] = "lhp/io/write.lhp",
+               ["lhp/ipairs.lhp"] = "lhp/ipairs.lhp",
+               ["lhp/length.lhp"] = "lhp/length.lhp",
+               ["lhp/lexis.lhp"] = "lhp/lexis.lhp",
+               ["lhp/license.lhp"] = "lhp/license.lhp",
+               ["lhp/load.lhp"] = "lhp/load.lhp",
+               ["lhp/loadfile.lhp"] = "lhp/loadfile.lhp",
+               ["lhp/loadstring.lhp"] = "lhp/loadstring.lhp",
+               ["lhp/lua.lhp"] = "lhp/lua.lhp",
+               ["lhp/luaref.lhp"] = "lhp/luaref.lhp",
+               ["lhp/luasa.lhp"] = "lhp/luasa.lhp",
+               ["lhp/math.lhp"] = "lhp/math.lhp",
+               ["lhp/math/abs.lhp"] = "lhp/math/abs.lhp",
+               ["lhp/math/acos.lhp"] = "lhp/math/acos.lhp",
+               ["lhp/math/asin.lhp"] = "lhp/math/asin.lhp",
+               ["lhp/math/atan.lhp"] = "lhp/math/atan.lhp",
+               ["lhp/math/atan2.lhp"] = "lhp/math/atan2.lhp",
+               ["lhp/math/ceil.lhp"] = "lhp/math/ceil.lhp",
+               ["lhp/math/cos.lhp"] = "lhp/math/cos.lhp",
+               ["lhp/math/cosh.lhp"] = "lhp/math/cosh.lhp",
+               ["lhp/math/deg.lhp"] = "lhp/math/deg.lhp",
+               ["lhp/math/exp.lhp"] = "lhp/math/exp.lhp",
+               ["lhp/math/floor.lhp"] = "lhp/math/floor.lhp",
+               ["lhp/math/fmod.lhp"] = "lhp/math/fmod.lhp",
+               ["lhp/math/frexp.lhp"] = "lhp/math/frexp.lhp",
+               ["lhp/math/huge.lhp"] = "lhp/math/huge.lhp",
+               ["lhp/math/ldexp.lhp"] = "lhp/math/ldexp.lhp",
+               ["lhp/math/log.lhp"] = "lhp/math/log.lhp",
+               ["lhp/math/log10.lhp"] = "lhp/math/log10.lhp",
+               ["lhp/math/max.lhp"] = "lhp/math/max.lhp",
+               ["lhp/math/min.lhp"] = "lhp/math/min.lhp",
+               ["lhp/math/modf.lhp"] = "lhp/math/modf.lhp",
+               ["lhp/math/pi.lhp"] = "lhp/math/pi.lhp",
+               ["lhp/math/pow.lhp"] = "lhp/math/pow.lhp",
+               ["lhp/math/rad.lhp"] = "lhp/math/rad.lhp",
+               ["lhp/math/random.lhp"] = "lhp/math/random.lhp",
+               ["lhp/math/randomseed.lhp"] = "lhp/math/randomseed.lhp",
+               ["lhp/math/sin.lhp"] = "lhp/math/sin.lhp",
+               ["lhp/math/sinh.lhp"] = "lhp/math/sinh.lhp",
+               ["lhp/math/sqrt.lhp"] = "lhp/math/sqrt.lhp",
+               ["lhp/math/tan.lhp"] = "lhp/math/tan.lhp",
+               ["lhp/math/tanh.lhp"] = "lhp/math/tanh.lhp",
+               ["lhp/module.lhp"] = "lhp/module.lhp",
+               ["lhp/next.lhp"] = "lhp/next.lhp",
+               ["lhp/os.lhp"] = "lhp/os.lhp",
+               ["lhp/os/clock.lhp"] = "lhp/os/clock.lhp",
+               ["lhp/os/date.lhp"] = "lhp/os/date.lhp",
+               ["lhp/os/difftime.lhp"] = "lhp/os/difftime.lhp",
+               ["lhp/os/execute.lhp"] = "lhp/os/execute.lhp",
+               ["lhp/os/exit.lhp"] = "lhp/os/exit.lhp",
+               ["lhp/os/getenv.lhp"] = "lhp/os/getenv.lhp",
+               ["lhp/os/remove.lhp"] = "lhp/os/remove.lhp",
+               ["lhp/os/rename.lhp"] = "lhp/os/rename.lhp",
+               ["lhp/os/setlocale.lhp"] = "lhp/os/setlocale.lhp",
+               ["lhp/os/time.lhp"] = "lhp/os/time.lhp",
+               ["lhp/os/tmpname.lhp"] = "lhp/os/tmpname.lhp",
+               ["lhp/package.lhp"] = "lhp/package.lhp",
+               ["lhp/package/cpath.lhp"] = "lhp/package/cpath.lhp",
+               ["lhp/package/loaded.lhp"] = "lhp/package/loaded.lhp",
+               ["lhp/package/loadlib.lhp"] = "lhp/package/loadlib.lhp",
+               ["lhp/package/path.lhp"] = "lhp/package/path.lhp",
+               ["lhp/package/preload.lhp"] = "lhp/package/preload.lhp",
+               ["lhp/package/seeall.lhp"] = "lhp/package/seeall.lhp",
+               ["lhp/pairs.lhp"] = "lhp/pairs.lhp",
+               ["lhp/patterns.lhp"] = "lhp/patterns.lhp",
+               ["lhp/pcall.lhp"] = "lhp/pcall.lhp",
+               ["lhp/print.lhp"] = "lhp/print.lhp",
+               ["lhp/rawequal.lhp"] = "lhp/rawequal.lhp",
+               ["lhp/rawget.lhp"] = "lhp/rawget.lhp",
+               ["lhp/rawset.lhp"] = "lhp/rawset.lhp",
+               ["lhp/require.lhp"] = "lhp/require.lhp",
+               ["lhp/select.lhp"] = "lhp/select.lhp",
+               ["lhp/setfenv.lhp"] = "lhp/setfenv.lhp",
+               ["lhp/setmetatable.lhp"] = "lhp/setmetatable.lhp",
+               ["lhp/string.lhp"] = "lhp/string.lhp",
+               ["lhp/string/byte.lhp"] = "lhp/string/byte.lhp",
+               ["lhp/string/char.lhp"] = "lhp/string/char.lhp",
+               ["lhp/string/dump.lhp"] = "lhp/string/dump.lhp",
+               ["lhp/string/find.lhp"] = "lhp/string/find.lhp",
+               ["lhp/string/format.lhp"] = "lhp/string/format.lhp",
+               ["lhp/string/gmatch.lhp"] = "lhp/string/gmatch.lhp",
+               ["lhp/string/gsub.lhp"] = "lhp/string/gsub.lhp",
+               ["lhp/string/len.lhp"] = "lhp/string/len.lhp",
+               ["lhp/string/lower.lhp"] = "lhp/string/lower.lhp",
+               ["lhp/string/match.lhp"] = "lhp/string/match.lhp",
+               ["lhp/string/rep.lhp"] = "lhp/string/rep.lhp",
+               ["lhp/string/reverse.lhp"] = "lhp/string/reverse.lhp",
+               ["lhp/string/sub.lhp"] = "lhp/string/sub.lhp",
+               ["lhp/string/upper.lhp"] = "lhp/string/upper.lhp",
+               ["lhp/table.lhp"] = "lhp/table.lhp",
+               ["lhp/table/concat.lhp"] = "lhp/table/concat.lhp",
+               ["lhp/table/foreach.lhp"] = "lhp/table/foreach.lhp",
+               ["lhp/table/foreachi.lhp"] = "lhp/table/foreachi.lhp",
+               ["lhp/table/insert.lhp"] = "lhp/table/insert.lhp",
+               ["lhp/table/maxn.lhp"] = "lhp/table/maxn.lhp",
+               ["lhp/table/remove.lhp"] = "lhp/table/remove.lhp",
+               ["lhp/table/sort.lhp"] = "lhp/table/sort.lhp",
+               ["lhp/tonumber.lhp"] = "lhp/tonumber.lhp",
+               ["lhp/tostring.lhp"] = "lhp/tostring.lhp",
+               ["lhp/type.lhp"] = "lhp/type.lhp",
+               ["lhp/types.lhp"] = "lhp/types.lhp",
+               ["lhp/unpack.lhp"] = "lhp/unpack.lhp",
+               ["lhp/xpcall.lhp"] = "lhp/xpcall.lhp"
+            }
+         }
+      }
+   }
+}

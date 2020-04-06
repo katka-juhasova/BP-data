@@ -1,0 +1,74 @@
+commands = {}
+dependencies = {
+   luacs = {
+      ["1.0.2-0"] = {
+         {
+            constraints = {},
+            name = "luautf8"
+         }
+      }
+   },
+   luautf8 = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lua-utf8"] = {
+      "luautf8/0.1.1-1"
+   },
+   luacs = {
+      "luacs/1.0.2-0"
+   },
+   ["luacs.parser"] = {
+      "luacs/1.0.2-0"
+   },
+   ["luacs.source"] = {
+      "luacs/1.0.2-0"
+   },
+   ["luacs.xpath-converter"] = {
+      "luacs/1.0.2-0"
+   }
+}
+repository = {
+   luacs = {
+      ["1.0.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luautf8 = "0.1.1-1"
+            },
+            modules = {
+               luacs = "luacs.lua",
+               ["luacs.parser"] = "luacs/parser.lua",
+               ["luacs.source"] = "luacs/source.lua",
+               ["luacs.xpath-converter"] = "luacs/xpath-converter.lua"
+            }
+         }
+      }
+   },
+   luautf8 = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lua-utf8"] = "lua-utf8.so"
+            }
+         }
+      }
+   }
+}

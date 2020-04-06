@@ -1,0 +1,19 @@
+Help [[
+
+file:setvbuf (mode [, size])
+-------------------------------
+
+  Sets the buffering mode for an output file. There are three available modes:
+
+  * `"no"`: no buffering; the result of any output operation appears
+      immediately.
+  * `"full"`: full buffering; output operation is performed only when the
+      buffer is full (or when you explicitly `flush` the file (see
+      io.flush).
+  * `"line"`: line buffering; output is buffered until a newline is output
+      or there is any input from some special files (such as a terminal
+      device).
+
+  For the last two cases, `size` specifies the size of the buffer, in bytes.
+  The default is an appropriate size.
+]]

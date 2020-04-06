@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   dado = {
+      ["1.8.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   dado = {
+      "dado/1.8.3-1"
+   },
+   ["dado.object"] = {
+      "dado/1.8.3-1"
+   },
+   ["dado.sql"] = {
+      "dado/1.8.3-1"
+   },
+   ["table.extra"] = {
+      "dado/1.8.3-1"
+   }
+}
+repository = {
+   dado = {
+      ["1.8.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dado = "dado.lua",
+               ["dado.object"] = "dado/object.lua",
+               ["dado.sql"] = "dado/sql.lua",
+               ["table.extra"] = "table/extra.lua"
+            }
+         }
+      }
+   }
+}

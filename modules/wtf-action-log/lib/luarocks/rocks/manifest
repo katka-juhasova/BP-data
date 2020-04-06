@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["wtf-action-log"] = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   ["wtf.actions.log"] = {
+      "wtf-action-log/0.1-1"
+   }
+}
+repository = {
+   ["wtf-action-log"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["wtf.actions.log"] = "wtf/actions/log.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,169 @@
+commands = {}
+dependencies = {
+   ansicolors = {
+      ["1.0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   c3 = {
+      ["1.0-42"] = {
+         {
+            constraints = {},
+            name = "ansicolors"
+         }
+      }
+   },
+   coronest = {
+      ["1.0-40"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   layeredata = {
+      ["0.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "c3"
+         },
+         {
+            constraints = {},
+            name = "coronest"
+         },
+         {
+            constraints = {},
+            name = "uuid"
+         }
+      }
+   },
+   uuid = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ansicolors = {
+      "ansicolors/1.0.2-3"
+   },
+   c3 = {
+      "c3/1.0-42"
+   },
+   ["coroutine.make"] = {
+      "coronest/1.0-40"
+   },
+   layeredata = {
+      "layeredata/0.0-2"
+   },
+   uuid = {
+      "uuid/0.2-1"
+   }
+}
+repository = {
+   ansicolors = {
+      ["1.0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ansicolors = "ansicolors.lua"
+            }
+         }
+      }
+   },
+   c3 = {
+      ["1.0-42"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ansicolors = "1.0.2-3"
+            },
+            modules = {
+               c3 = "c3.lua"
+            }
+         }
+      }
+   },
+   coronest = {
+      ["1.0-40"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["coroutine.make"] = "coroutine/make.lua"
+            }
+         }
+      }
+   },
+   layeredata = {
+      ["0.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ansicolors = "1.0.2-3",
+               c3 = "1.0-42",
+               coronest = "1.0-40",
+               uuid = "0.2-1"
+            },
+            modules = {
+               layeredata = "layeredata/init.lua"
+            }
+         }
+      }
+   },
+   uuid = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               uuid = "uuid.lua"
+            }
+         }
+      }
+   }
+}

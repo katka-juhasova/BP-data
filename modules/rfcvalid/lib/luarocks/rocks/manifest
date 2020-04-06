@@ -1,0 +1,61 @@
+commands = {}
+dependencies = {
+   rfcvalid = {
+      ["0.6.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["rfcvalid.1035"] = {
+      "rfcvalid/0.6.0-1"
+   },
+   ["rfcvalid.2616"] = {
+      "rfcvalid/0.6.0-1"
+   },
+   ["rfcvalid.6265"] = {
+      "rfcvalid/0.6.0-1"
+   },
+   ["rfcvalid.6749"] = {
+      "rfcvalid/0.6.0-1"
+   },
+   ["rfcvalid.7230"] = {
+      "rfcvalid/0.6.0-1"
+   },
+   ["rfcvalid.implc"] = {
+      "rfcvalid/0.6.0-1"
+   },
+   ["rfcvalid.util"] = {
+      "rfcvalid/0.6.0-1"
+   }
+}
+repository = {
+   rfcvalid = {
+      ["0.6.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["rfcvalid.1035"] = "rfcvalid/1035.lua",
+               ["rfcvalid.2616"] = "rfcvalid/2616.lua",
+               ["rfcvalid.6265"] = "rfcvalid/6265.lua",
+               ["rfcvalid.6749"] = "rfcvalid/6749.lua",
+               ["rfcvalid.7230"] = "rfcvalid/7230.lua",
+               ["rfcvalid.implc"] = "rfcvalid/implc.so",
+               ["rfcvalid.util"] = "rfcvalid/util.lua"
+            }
+         }
+      }
+   }
+}

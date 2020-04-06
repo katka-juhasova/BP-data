@@ -1,0 +1,27 @@
+Help [[
+
+string.format (formatstring, ...)
+---------------------------------
+
+  Returns a formatted version of its variable number of arguments following
+  the description given in its first argument (which must be a string). The
+  format string follows the same rules as the printf family of standard C
+  functions. The only differences are that the options/modifiers `*`, `l`,
+  `L`, `n`, `p`, and `h` are not supported and that there is an extra option,
+  `q`. The `q` option formats a string in a form suitable to be safely read
+  back by the Lua interpreter: the string is written between double quotes,
+  and all double quotes, newlines, embedded zeros, and backslashes in the
+  string are correctly escaped when written. For instance, the call
+
+         string.format('%q', 'a string with "quotes" and \n new line')
+
+  will produce the string:
+
+         "a string with \"quotes\" and \
+          new line"
+
+  The options `c`, `d`, `E`, `e`, `f`, `g`, `G`, `i`, `o`, `u`, `X`, and `x`
+  all expect a number as argument, whereas `q` and `s` expect a string.
+
+  This function does not accept string values containing embedded zeros.
+]]

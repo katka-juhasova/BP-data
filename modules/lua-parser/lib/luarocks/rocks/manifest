@@ -1,0 +1,96 @@
+commands = {}
+dependencies = {
+   lpeglabel = {
+      ["1.6.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-parser"] = {
+      ["1.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 6, 0, string = "1.6.0"
+                  }
+               }
+            },
+            name = "lpeglabel"
+         }
+      }
+   }
+}
+modules = {
+   lpeglabel = {
+      "lpeglabel/1.6.0-1"
+   },
+   ["lua-parser.parser"] = {
+      "lua-parser/1.0.1-1"
+   },
+   ["lua-parser.pp"] = {
+      "lua-parser/1.0.1-1"
+   },
+   ["lua-parser.scope"] = {
+      "lua-parser/1.0.1-1"
+   },
+   ["lua-parser.validator"] = {
+      "lua-parser/1.0.1-1"
+   },
+   relabel = {
+      "lpeglabel/1.6.0-1"
+   }
+}
+repository = {
+   lpeglabel = {
+      ["1.6.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeglabel = "lpeglabel.so",
+               relabel = "relabel.lua"
+            }
+         }
+      }
+   },
+   ["lua-parser"] = {
+      ["1.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeglabel = "1.6.0-1"
+            },
+            modules = {
+               ["lua-parser.parser"] = "lua-parser/parser.lua",
+               ["lua-parser.pp"] = "lua-parser/pp.lua",
+               ["lua-parser.scope"] = "lua-parser/scope.lua",
+               ["lua-parser.validator"] = "lua-parser/validator.lua"
+            }
+         }
+      }
+   }
+}

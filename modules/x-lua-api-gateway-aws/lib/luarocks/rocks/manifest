@@ -1,0 +1,227 @@
+commands = {}
+dependencies = {
+   ["lua-api-gateway-cachemanager"] = {
+      ["1.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-api-gateway-hmac"] = {
+      ["1.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["x-lua-api-gateway-aws"] = {
+      ["1.7.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-api-gateway-hmac"
+         },
+         {
+            constraints = {},
+            name = "lua-api-gateway-cachemanager"
+         },
+         {
+            constraints = {},
+            name = "lua-resty-http"
+         }
+      }
+   }
+}
+modules = {
+   ["api-gateway.aws.AWSBasicCredentials"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.AWSIAMCredentials"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.AWSSTSCredentials"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.AwsDateConverter"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.AwsService"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.AwsV4Signature"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.httpclient.http"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.httpclient.restyhttp"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.httpclient.url"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.kinesis.KinesisService"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.kms.KmsService"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.lambda.LambdaService"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.sns.SnsService"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.aws.sts.SecurityTokenService"] = {
+      "x-lua-api-gateway-aws/1.7.1-0"
+   },
+   ["api-gateway.cache.cache"] = {
+      "lua-api-gateway-cachemanager/1.0.1-1"
+   },
+   ["api-gateway.cache.request.rcache"] = {
+      "lua-api-gateway-cachemanager/1.0.1-1"
+   },
+   ["api-gateway.cache.status.remoteCacheStatus"] = {
+      "lua-api-gateway-cachemanager/1.0.1-1"
+   },
+   ["api-gateway.cache.store"] = {
+      "lua-api-gateway-cachemanager/1.0.1-1"
+   },
+   ["api-gateway.cache.store.localCache"] = {
+      "lua-api-gateway-cachemanager/1.0.1-1"
+   },
+   ["api-gateway.cache.store.redisCache"] = {
+      "lua-api-gateway-cachemanager/1.0.1-1"
+   },
+   ["api-gateway.cache.store.redisHashCache"] = {
+      "lua-api-gateway-cachemanager/1.0.1-1"
+   },
+   ["api-gateway.cache.store.redisSetCache"] = {
+      "lua-api-gateway-cachemanager/1.0.1-1"
+   },
+   ["api-gateway.resty.hmac"] = {
+      "lua-api-gateway-hmac/1.0.0-0"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.15-0"
+   }
+}
+repository = {
+   ["lua-api-gateway-cachemanager"] = {
+      ["1.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["api-gateway.cache.cache"] = "api-gateway/cache/cache.lua",
+               ["api-gateway.cache.request.rcache"] = "api-gateway/cache/request/rcache.lua",
+               ["api-gateway.cache.status.remoteCacheStatus"] = "api-gateway/cache/status/remoteCacheStatus.lua",
+               ["api-gateway.cache.store"] = "api-gateway/cache/store.lua",
+               ["api-gateway.cache.store.localCache"] = "api-gateway/cache/store/localCache.lua",
+               ["api-gateway.cache.store.redisCache"] = "api-gateway/cache/store/redisCache.lua",
+               ["api-gateway.cache.store.redisHashCache"] = "api-gateway/cache/store/redisHashCache.lua",
+               ["api-gateway.cache.store.redisSetCache"] = "api-gateway/cache/store/redisSetCache.lua"
+            }
+         }
+      }
+   },
+   ["lua-api-gateway-hmac"] = {
+      ["1.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["api-gateway.resty.hmac"] = "api-gateway/resty/hmac.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["x-lua-api-gateway-aws"] = {
+      ["1.7.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-api-gateway-cachemanager"] = "1.0.1-1",
+               ["lua-api-gateway-hmac"] = "1.0.0-0",
+               ["lua-resty-http"] = "0.15-0"
+            },
+            modules = {
+               ["api-gateway.aws.AWSBasicCredentials"] = "api-gateway/aws/AWSBasicCredentials.lua",
+               ["api-gateway.aws.AWSIAMCredentials"] = "api-gateway/aws/AWSIAMCredentials.lua",
+               ["api-gateway.aws.AWSSTSCredentials"] = "api-gateway/aws/AWSSTSCredentials.lua",
+               ["api-gateway.aws.AwsDateConverter"] = "api-gateway/aws/AwsDateConverter.lua",
+               ["api-gateway.aws.AwsService"] = "api-gateway/aws/AwsService.lua",
+               ["api-gateway.aws.AwsV4Signature"] = "api-gateway/aws/AwsV4Signature.lua",
+               ["api-gateway.aws.httpclient.http"] = "api-gateway/aws/httpclient/http.lua",
+               ["api-gateway.aws.httpclient.restyhttp"] = "api-gateway/aws/httpclient/restyhttp.lua",
+               ["api-gateway.aws.httpclient.url"] = "api-gateway/aws/httpclient/url.lua",
+               ["api-gateway.aws.kinesis.KinesisService"] = "api-gateway/aws/kinesis/KinesisService.lua",
+               ["api-gateway.aws.kms.KmsService"] = "api-gateway/aws/kms/KmsService.lua",
+               ["api-gateway.aws.lambda.LambdaService"] = "api-gateway/aws/lambda/LambdaService.lua",
+               ["api-gateway.aws.sns.SnsService"] = "api-gateway/aws/sns/SnsService.lua",
+               ["api-gateway.aws.sts.SecurityTokenService"] = "api-gateway/aws/sts/SecurityTokenService.lua"
+            }
+         }
+      }
+   }
+}

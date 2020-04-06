@@ -1,0 +1,113 @@
+commands = {}
+dependencies = {
+   luadbi = {
+      ["0.7.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   sqltable = {
+      ["1.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luadbi"
+         }
+      }
+   }
+}
+modules = {
+   DBI = {
+      "luadbi/0.7.2-1"
+   },
+   sqltable = {
+      "sqltable/1.4-1"
+   },
+   ["sqltable.connection"] = {
+      "sqltable/1.4-1"
+   },
+   ["sqltable.drivers.MySQL"] = {
+      "sqltable/1.4-1"
+   },
+   ["sqltable.drivers.PostgreSQL"] = {
+      "sqltable/1.4-1"
+   },
+   ["sqltable.drivers.SQLite3"] = {
+      "sqltable/1.4-1"
+   },
+   ["sqltable.env"] = {
+      "sqltable/1.4-1"
+   },
+   ["sqltable.pool"] = {
+      "sqltable/1.4-1"
+   },
+   ["sqltable.table"] = {
+      "sqltable/1.4-1"
+   }
+}
+repository = {
+   luadbi = {
+      ["0.7.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               DBI = "DBI.lua"
+            }
+         }
+      }
+   },
+   sqltable = {
+      ["1.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luadbi = "0.7.2-1"
+            },
+            modules = {
+               sqltable = "sqltable.lua",
+               ["sqltable.connection"] = "sqltable/connection.lua",
+               ["sqltable.drivers.MySQL"] = "sqltable/drivers/MySQL.lua",
+               ["sqltable.drivers.PostgreSQL"] = "sqltable/drivers/PostgreSQL.lua",
+               ["sqltable.drivers.SQLite3"] = "sqltable/drivers/SQLite3.lua",
+               ["sqltable.env"] = "sqltable/env.lua",
+               ["sqltable.pool"] = "sqltable/pool.lua",
+               ["sqltable.table"] = "sqltable/table.lua"
+            }
+         }
+      }
+   }
+}

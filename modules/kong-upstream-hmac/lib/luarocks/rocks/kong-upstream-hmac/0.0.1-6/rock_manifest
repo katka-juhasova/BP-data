@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "2b42edef8fa55315f34f2370b4715ca9",
+      ["README.md"] = "e0eea5cdff43fa10cb076ce978453e45"
+   },
+   ["kong-upstream-hmac-0.0.1-6.rockspec"] = "b6ed3694436b0e778995185288770b16",
+   lua = {
+      kong = {
+         plugins = {
+            ["kong-upstream-hmac"] = {
+               ["access.lua"] = "e9a7cd99bdaf3f0bbfa4a704828eb32e",
+               ["handler.lua"] = "f9b349d1803cc17e499b7d5e55373c4d",
+               ["schema.lua"] = "0f691624da062630e5114ed0820780e7"
+            }
+         }
+      }
+   }
+}

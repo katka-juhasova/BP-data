@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-stdout-log"] = {
+      ["0.0.2-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.stdout-log.handler"] = {
+      "kong-plugin-stdout-log/0.0.2-1"
+   },
+   ["kong.plugins.stdout-log.schema"] = {
+      "kong-plugin-stdout-log/0.0.2-1"
+   }
+}
+repository = {
+   ["kong-plugin-stdout-log"] = {
+      ["0.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.stdout-log.handler"] = "kong/plugins/stdout-log/handler.lua",
+               ["kong.plugins.stdout-log.schema"] = "kong/plugins/stdout-log/schema.lua"
+            }
+         }
+      }
+   }
+}

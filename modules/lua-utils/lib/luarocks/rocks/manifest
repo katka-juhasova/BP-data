@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-utils"] = {
+      ["1.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["utils.string"] = {
+      "lua-utils/1.0.0-0"
+   },
+   ["utils.table"] = {
+      "lua-utils/1.0.0-0"
+   }
+}
+repository = {
+   ["lua-utils"] = {
+      ["1.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["utils.string"] = "utils/string.lua",
+               ["utils.table"] = "utils/table.lua"
+            }
+         }
+      }
+   }
+}

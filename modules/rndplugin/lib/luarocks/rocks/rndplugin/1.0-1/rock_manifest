@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "9878c132a416df1a60837b7e56e44a90"
+   },
+   lua = {
+      kong = {
+         plugins = {
+            rndplugin = {
+               ["handler.lua"] = "ae07c8704b7b4c3ebd2271d4c4e3274c",
+               ["schema.lua"] = "02f82b99acc51eafc5ea8abc52bef3e8"
+            }
+         }
+      }
+   },
+   ["rndplugin-1.0-1.rockspec"] = "faa3a961846f5c0cc9c937759384935b"
+}

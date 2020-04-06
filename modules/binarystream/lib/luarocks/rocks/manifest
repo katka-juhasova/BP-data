@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   binarystream = {
+      ["1.0-2"] = {}
+   }
+}
+modules = {
+   binarystream = {
+      "binarystream/1.0-2"
+   }
+}
+repository = {
+   binarystream = {
+      ["1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               binarystream = "binarystream.lua"
+            }
+         }
+      }
+   }
+}

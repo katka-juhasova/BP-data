@@ -1,0 +1,71 @@
+Help [=[
+
+Values and types
+----------------
+
+Lua is a _dynamically typed language_. This means that variables do not have
+types; only values do. There are no type definitions in the language. All
+values carry their own type.
+
+All values in Lua are _first-class values_. This means that all values can be
+stored in variables, passed as arguments to other functions, and returned as
+results.
+
+There are eight basic types in Lua: _nil_, _boolean_, _number_, _string_,
+_function_, _userdata_, _thread_, and _table_. _Nil_ is the type of the value
+**nil**, whose main property is to be different from any other value; it
+usually represents the absence of a useful value. _Boolean_ is the type of the
+values **false** and **true**. Both **nil** and **false** make a condition
+false; any other value makes it true. _Number_ represents real
+(double-precision floating-point) numbers. (It is easy to build Lua
+interpreters that use other internal representations for numbers, such as
+single-precision float or long integers; see file `luaconf.h`.) _String_
+represents arrays of characters. Lua is 8-bit clean: strings may contain any
+8-bit character, including embedded zeros (`'\0'`).
+
+Lua can call (and manipulate) functions written in Lua and functions written
+in C.
+
+The type _userdata_ is provided to allow arbitrary C data to be stored in Lua
+variables. This type corresponds to a block of raw memory and has no
+pre-defined operations in Lua, except assignment and identity test. However,
+by using _metatables_, the programmer can define operations for userdata
+values. Userdata values cannot be created or modified in Lua, only through the
+C API. This guarantees the integrity of data owned by the host program.
+
+The type _thread_ represents independent threads of execution and it is used
+to implement coroutines. Do not confuse Lua threads with operating-system
+threads. Lua supports coroutines on all systems, even those that do not
+support threads.
+
+The type _table_ implements associative arrays, that is, arrays that can be
+indexed not only with numbers, but with any value (except **nil**). Tables can
+be _heterogeneous_; that is, they can contain values of all types (except
+**nil**). Tables are the sole data structuring mechanism in Lua; they may be
+used to represent ordinary arrays, symbol tables, sets, records, graphs,
+trees, etc. To represent records, Lua uses the field name as an index. The
+language supports this representation by providing `a.name` as syntactic sugar
+for `a["name"]`. There are several convenient ways to create tables in Lua.
+
+Like indices, the value of a table field can be of any type (except **nil**).
+In particular, because functions are first-class values, table fields may
+contain functions. Thus tables may also carry _methods_.
+
+Tables, functions, threads and (full) userdata values are _objects_: variables
+do not actually _contain_ these values, only _references_ to them. Assignment,
+parameter passing, and function returns always manipulate references to such
+values; these operations do not imply any kind of copy.
+
+The library function `type` returns a string describing the type of a given
+value.
+
+
+### Coercion ###
+
+Lua provides automatic conversion between string and number values at run
+time. Any arithmetic operation applied to a string tries to convert that
+string to a number, following the usual conversion rules. Conversely, whenever
+a number is used where a string is expected, the number is converted to a
+string, in a reasonable format. For complete control of how numbers are
+converted to strings, use the `format` function from the string library.
+]=]

@@ -1,0 +1,11 @@
+Help [[
+
+rawset (table, index, value)
+----------------------------
+
+  Sets the real value of `table[index]` to `value`, without invoking any
+  metamethod. `table` must be a table, `index` any value different from
+  **nil**, and `value` any Lua value.
+
+  This function returns `table`.
+]]

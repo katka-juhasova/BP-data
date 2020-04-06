@@ -1,0 +1,15 @@
+rock_manifest = {
+   ["cmark-0.29.0-1.rockspec"] = "b3f79dbfa799beefdd1a6c06f4b92933",
+   doc = {
+      LICENSE = "05b64fb46723f9d0d6b86be80a238ffb",
+      ["README.md"] = "d5d41d59d06edd0b3db89b9826deeeab"
+   },
+   lib = {
+      ["cmark.so"] = "dd05272f1b4c73432121ff9fa5fde608"
+   },
+   lua = {
+      cmark = {
+         ["builder.lua"] = "741f037e7883ed399c6246fe9dc0d6a0"
+      }
+   }
+}

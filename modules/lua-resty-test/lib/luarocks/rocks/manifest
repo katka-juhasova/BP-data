@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-test"] = {
+      ["0.1-0"] = {}
+   }
+}
+modules = {
+   ["resty.iresty_test"] = {
+      "lua-resty-test/0.1-0"
+   }
+}
+repository = {
+   ["lua-resty-test"] = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.iresty_test"] = "resty/iresty_test.lua"
+            }
+         }
+      }
+   }
+}

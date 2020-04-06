@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   inilazy = {
+      ["1.05-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   inilazy = {
+      "inilazy/1.05-1"
+   }
+}
+repository = {
+   inilazy = {
+      ["1.05-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               inilazy = "inilazy.lua"
+            }
+         }
+      }
+   }
+}

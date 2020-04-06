@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["bump-3dpd"] = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["bump-3dpd"] = {
+      "bump-3dpd/0.2.0-1"
+   }
+}
+repository = {
+   ["bump-3dpd"] = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["bump-3dpd"] = "bump-3dpd.lua"
+            }
+         }
+      }
+   }
+}

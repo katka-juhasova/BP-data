@@ -1,0 +1,51 @@
+commands = {}
+dependencies = {
+   ["bgcrypto-aes"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["bgcrypto.aes"] = {
+      "bgcrypto-aes/0.1.0-1"
+   },
+   ["bgcrypto.cmac"] = {
+      "bgcrypto-aes/0.1.0-1"
+   },
+   ["bgcrypto.private.bit"] = {
+      "bgcrypto-aes/0.1.0-1"
+   }
+}
+repository = {
+   ["bgcrypto-aes"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["bgcrypto.aes"] = "bgcrypto/aes.so",
+               ["bgcrypto.cmac"] = "bgcrypto/cmac.lua",
+               ["bgcrypto.private.bit"] = "bgcrypto/private/bit.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   luagearman = {
+      ["0.2-0"] = {}
+   }
+}
+modules = {
+   ["luagearman.argment"] = {
+      "luagearman/0.2-0"
+   },
+   ["luagearman.client"] = {
+      "luagearman/0.2-0"
+   },
+   ["luagearman.gearman"] = {
+      "luagearman/0.2-0"
+   },
+   ["luagearman.worker"] = {
+      "luagearman/0.2-0"
+   }
+}
+repository = {
+   luagearman = {
+      ["0.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["luagearman.argment"] = "luagearman/argment.lua",
+               ["luagearman.client"] = "luagearman/client.lua",
+               ["luagearman.gearman"] = "luagearman/gearman.lua",
+               ["luagearman.worker"] = "luagearman/worker.lua"
+            }
+         }
+      }
+   }
+}

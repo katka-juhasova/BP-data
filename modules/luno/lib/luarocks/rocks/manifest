@@ -1,0 +1,75 @@
+commands = {}
+dependencies = {
+   luno = {
+      ["20170303-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luno = {
+      "luno/20170303-1"
+   },
+   ["luno.argReader"] = {
+      "luno/20170303-1"
+   },
+   ["luno.base"] = {
+      "luno/20170303-1"
+   },
+   ["luno.functional"] = {
+      "luno/20170303-1"
+   },
+   ["luno.io"] = {
+      "luno/20170303-1"
+   },
+   ["luno.oop"] = {
+      "luno/20170303-1"
+   },
+   ["luno.string"] = {
+      "luno/20170303-1"
+   },
+   ["luno.table"] = {
+      "luno/20170303-1"
+   },
+   ["luno.util"] = {
+      "luno/20170303-1"
+   }
+}
+repository = {
+   luno = {
+      ["20170303-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luno = "luno/init.lua",
+               ["luno.argReader"] = "luno/argReader.lua",
+               ["luno.base"] = "luno/base.lua",
+               ["luno.functional"] = "luno/functional.lua",
+               ["luno.io"] = "luno/io.lua",
+               ["luno.oop"] = "luno/oop.lua",
+               ["luno.string"] = "luno/string.lua",
+               ["luno.table"] = "luno/table.lua",
+               ["luno.util"] = "luno/util.lua"
+            }
+         }
+      }
+   }
+}

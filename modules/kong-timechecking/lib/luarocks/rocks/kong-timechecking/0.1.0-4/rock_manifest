@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "680407a8bb46d0c9918055c5b12ef684"
+   },
+   ["kong-timechecking-0.1.0-4.rockspec"] = "028d18d14c7a98a8be4399dd62d3e8b8",
+   lua = {
+      kong = {
+         plugins = {
+            ["kong-timechecking"] = {
+               ["handler.lua"] = "62a23ab06ff22fd37b35985c882088b6",
+               ["schema.lua"] = "073cb34bd655765a571825d5cfbf39db"
+            }
+         }
+      }
+   }
+}

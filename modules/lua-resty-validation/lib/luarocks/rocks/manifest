@@ -1,0 +1,53 @@
+commands = {}
+dependencies = {
+   ["lua-resty-validation"] = {
+      ["2.7-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.validation"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.injection"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.ngx"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.tz"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.utf8"] = {
+      "lua-resty-validation/2.7-1"
+   }
+}
+repository = {
+   ["lua-resty-validation"] = {
+      ["2.7-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.validation"] = "resty/validation.lua",
+               ["resty.validation.injection"] = "resty/validation/injection.lua",
+               ["resty.validation.ngx"] = "resty/validation/ngx.lua",
+               ["resty.validation.tz"] = "resty/validation/tz.lua",
+               ["resty.validation.utf8"] = "resty/validation/utf8.lua"
+            }
+         }
+      }
+   }
+}

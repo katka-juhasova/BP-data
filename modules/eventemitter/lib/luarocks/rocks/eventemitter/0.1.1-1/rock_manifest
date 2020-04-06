@@ -1,0 +1,17 @@
+rock_manifest = {
+   ["eventemitter-0.1.1-1.rockspec"] = "d5de7454f416fe9789be0c65fc90fe18",
+   examples = {
+      ["basic.lua"] = "db38f0c99fc330df3ed653640e6f5d5f",
+      ["extend_30log.lua"] = "cf5788adcfb21845def35e4048ab6839"
+   },
+   lua = {
+      EventEmitter = {
+         ["utils.lua"] = "7986c6ec5732e5c368ab223710cd01a4"
+      },
+      ["EventEmitter.lua"] = "5db8df49f2655e40a26a1e6a9bce1984"
+   },
+   test = {
+      ["test.lua"] = "753737b1797a0b2424ed7175e4a309a3",
+      ["utils.lua"] = "d29e44c468dd8da6ba2972a21cbe1bc1"
+   }
+}

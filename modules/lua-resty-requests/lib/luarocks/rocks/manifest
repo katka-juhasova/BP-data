@@ -1,0 +1,88 @@
+commands = {}
+dependencies = {
+   ["lua-resty-requests"] = {
+      ["0.7.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     1, 0, 0, string = "1.0.0"
+                  }
+               }
+            },
+            name = "lua-resty-socket"
+         }
+      }
+   },
+   ["lua-resty-socket"] = {
+      ["1.0.0-1"] = {}
+   }
+}
+modules = {
+   ["resty.requests"] = {
+      "lua-resty-requests/0.7.3-1"
+   },
+   ["resty.requests.adapter"] = {
+      "lua-resty-requests/0.7.3-1"
+   },
+   ["resty.requests.request"] = {
+      "lua-resty-requests/0.7.3-1"
+   },
+   ["resty.requests.response"] = {
+      "lua-resty-requests/0.7.3-1"
+   },
+   ["resty.requests.session"] = {
+      "lua-resty-requests/0.7.3-1"
+   },
+   ["resty.requests.util"] = {
+      "lua-resty-requests/0.7.3-1"
+   },
+   ["resty.socket"] = {
+      "lua-resty-socket/1.0.0-1"
+   }
+}
+repository = {
+   ["lua-resty-requests"] = {
+      ["0.7.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-socket"] = "1.0.0-1"
+            },
+            modules = {
+               ["resty.requests"] = "resty/requests.lua",
+               ["resty.requests.adapter"] = "resty/requests/adapter.lua",
+               ["resty.requests.request"] = "resty/requests/request.lua",
+               ["resty.requests.response"] = "resty/requests/response.lua",
+               ["resty.requests.session"] = "resty/requests/session.lua",
+               ["resty.requests.util"] = "resty/requests/util.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-socket"] = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.socket"] = "resty/socket.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,26 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "af37ac8a3b845cdc838781204781a63c",
+      ["README.md"] = "1a226f25f50d8e835b1b3d6db3783ded"
+   },
+   lua = {
+      ["lua-lander"] = {
+         ["init.lua"] = "db24af675ec41e3f5098f4deeae63923",
+         mods = {
+            ["array.lua"] = "071dd4c1d99fcab1aad8ad4821a09bfe",
+            ["assert.lua"] = "97a6b88faa96a37635a2bc6b74235171",
+            ["color.lua"] = "a9dbcec3aff9dee5e00ed12bd5fd34ea",
+            ["event.lua"] = "ddf29a8cd2d96705068ba9ccf74ece02",
+            ["func.lua"] = "0afdac429997cbe501eee610353a2555",
+            ["lang.lua"] = "24b81a53e02f43ce274b7c105409390c",
+            ["math.lua"] = "276feb8a2aea0eb06047dbc2d690785e",
+            ["number.lua"] = "adf2eb40371490b0c1ea4ee99aac67a4",
+            ["string.lua"] = "b3e097c97701bcd48014c5f22809e0a0",
+            ["table.lua"] = "c5cadc98fb7a4c43fa0e5722b0a6f15e",
+            ["util.lua"] = "ef93d0a0d69e4aff4d6dd2c4a35f96ae",
+            ["variables.lua"] = "50bde5ad238dca05e75f171767a5348a"
+         }
+      }
+   },
+   ["lua-lander-1.0-1.rockspec"] = "72cc9ae249c5c44899291c1ba78cf040"
+}

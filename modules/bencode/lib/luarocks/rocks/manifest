@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   bencode = {
+      ["2.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   bencode = {
+      "bencode/2.2.0-1"
+   },
+   ["bencode-push"] = {
+      "bencode/2.2.0-1"
+   }
+}
+repository = {
+   bencode = {
+      ["2.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bencode = "bencode.lua",
+               ["bencode-push"] = "bencode-push.lua"
+            }
+         }
+      }
+   }
+}

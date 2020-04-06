@@ -1,0 +1,24 @@
+rock_manifest = {
+   lib = {
+      protobuf = {
+         ["pb.so"] = "1bfb8e0be14a33cdf62c576cf07e7108"
+      }
+   },
+   lua = {
+      protobuf = {
+         ["containers.lua"] = "7f0b790170bbadca123ff7b50c7b7651",
+         ["decoder.lua"] = "8e39d9f7c7a2e803fb0f2e3d0c46714f",
+         ["descriptor.lua"] = "031de35fd8b26b740a223988ce4363d8",
+         ["encoder.lua"] = "90118d9fc2933cfbeae58a433edc1d93",
+         ["init.lua"] = "7e5768dd8d4e96dd494fd9441c557eeb",
+         ["listener.lua"] = "253927c95d114133a8cafe5c4af57f58",
+         ["text_format.lua"] = "b8843572b1caaefe7645a531b13afc3e",
+         ["type_checkers.lua"] = "b0f84f9917eb3bac2933aa4968db055e",
+         ["wire_format.lua"] = "9ec4c61c52dc4e389c26f07609cc5576"
+      }
+   },
+   ["protobuf-1.1.2-0.rockspec"] = "0e5db1911c8c3168acb1cb32bb22aba2",
+   ["protoc-plugin"] = {
+      ["protoc-gen-lua"] = "327ec342241096ac44fb65b14584fe7a"
+   }
+}

@@ -1,0 +1,12 @@
+rock_manifest = {
+   lua = {
+      org = {
+         conman = {
+            parsers = {
+               ["strftime.lua"] = "331fbfc3663322fac6924fe8effa0357"
+            }
+         }
+      }
+   },
+   ["org.conman.parsers.strftime-1.0.0-1.rockspec"] = "d80c591d28f5db7563ff33b276a4e4e1"
+}

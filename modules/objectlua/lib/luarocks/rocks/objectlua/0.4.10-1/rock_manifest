@@ -1,0 +1,18 @@
+rock_manifest = {
+   lua = {
+      objectlua = {
+         ["Class.lua"] = "5315b85af2cdd888bc493315bc160565",
+         ["Object.lua"] = "044b340110a0b39e0f3acf389ebb7f72",
+         ["Prototype.lua"] = "7dc7a87c6e71137c831e9caab1428863",
+         ["bootstrap.lua"] = "42165d9313fce0493cac1694486daf69"
+      }
+   },
+   ["objectlua-0.4.10-1.rockspec"] = "9248686d5533b6f1d48ffd0db95f1160",
+   test = {
+      ["SomeClass.lua"] = "7f61947d9140366f76cf02105b709e21",
+      ["TestObject.lua"] = "defe003528cfbb19d25d2fe272fe3964",
+      ["TestObjectImplementation.lua"] = "ad83ced6fd854ba50bdaa7a64927e48f",
+      ["TestObjectLua.lua"] = "8d5a25aa921e634e64ce3dcd529baee9",
+      ["TestPrototype.lua"] = "6d32a1f9be6d6a1baff8269d29e508cf"
+   }
+}

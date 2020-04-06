@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   itertools = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   itertools = {
+      "itertools/0.1-1"
+   }
+}
+repository = {
+   itertools = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               itertools = "itertools.lua"
+            }
+         }
+      }
+   }
+}

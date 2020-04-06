@@ -1,0 +1,81 @@
+commands = {
+   obey = {
+      "obey/0.1.0-7"
+   }
+}
+dependencies = {
+   obey = {
+      ["0.1.0-7"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   obey = {
+      "obey/0.1.0-7"
+   },
+   ["obey.arguments"] = {
+      "obey/0.1.0-7"
+   },
+   ["obey.execute"] = {
+      "obey/0.1.0-7"
+   },
+   ["obey.interface"] = {
+      "obey/0.1.0-7"
+   },
+   ["obey.loader"] = {
+      "obey/0.1.0-7"
+   },
+   ["obey.main"] = {
+      "obey/0.1.0-7"
+   },
+   ["obey.plugins"] = {
+      "obey/0.1.0-7"
+   },
+   ["obey.start"] = {
+      "obey/0.1.0-7"
+   },
+   ["obey.strings"] = {
+      "obey/0.1.0-7"
+   }
+}
+repository = {
+   obey = {
+      ["0.1.0-7"] = {
+         {
+            arch = "installed",
+            commands = {
+               obey = "obey"
+            },
+            dependencies = {},
+            modules = {
+               obey = "obey/init.lua",
+               ["obey.arguments"] = "obey/arguments.lua",
+               ["obey.execute"] = "obey/execute.lua",
+               ["obey.interface"] = "obey/interface.lua",
+               ["obey.loader"] = "obey/loader.lua",
+               ["obey.main"] = "obey/main.lua",
+               ["obey.plugins"] = "obey/plugins.lua",
+               ["obey.start"] = "obey/start.lua",
+               ["obey.strings"] = "obey/strings.lua"
+            }
+         }
+      }
+   }
+}

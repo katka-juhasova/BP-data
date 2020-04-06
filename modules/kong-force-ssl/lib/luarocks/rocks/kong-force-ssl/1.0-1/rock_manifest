@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "0f83615c6bac36ae52c93e287279e902"
+   },
+   ["kong-force-ssl-1.0-1.rockspec"] = "ad4f52f43a66589b74f553fcf7b5831e",
+   lua = {
+      kong = {
+         plugins = {
+            ["force-ssl"] = {
+               ["handler.lua"] = "9487f9ba63aafdb32e24c4a6441d2144",
+               ["schema.lua"] = "37e1ffd9b668beeb0698497bcd3032e1"
+            }
+         }
+      }
+   }
+}

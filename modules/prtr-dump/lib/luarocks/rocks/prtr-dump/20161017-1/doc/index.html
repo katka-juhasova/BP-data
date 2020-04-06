@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+lang="en">
+<head>
+<title>dump @ piratery.net</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="doc.css" type="text/css"/>
+</head>
+<body>
+
+<div class="chapter" id="header">
+<img width="128" height="128" alt="prtr-dump" src="logo.png"/>
+<p>A simple module to dump Lua values to strings and files</p>
+<p class="bar">
+<a href="index.html">home</a> &middot;
+<a href="index.html#installation">installation</a> &middot;
+<a href="index.html#manual">manual</a>
+</p>
+</div>
+
+<div class="chapter">
+<a id="about"/><h1>1 - About</h1>
+
+<p>The prtr-dump module is a simple Lua module that pretty-prints some Lua values in such a way that they are human-readable, while still being valid Lua source to be reloaded by the Lua interpreter.</p>
+
+<p>The name dump is not original, but it reflects the purpose of the library. The prtr- prefix (a contraction for piratery.net, the website domain) is used in case some other Linux bindings emerge with the same naming problems.</p>
+
+<h2>Support</h2>
+
+<p>All support is done through the <a href="http://www.lua.org/lua-l.html">Lua mailing list</a>.</p>
+
+<p>Feel free to ask for further developments. I can't guarantee that I'll develop everything you ask, but I want my code to be as useful as possible, so I'll do my best to help you. You can also send me request or bug reports (for code and documentation) directly at <a href="mailto:jerome.vuarand@gmail.com">jerome.vuarand@gmail.com</a>.</p>
+
+<h2>Credits</h2>
+
+<p>This module is written and maintained by <a href="mailto:jerome.vuarand@gmail.com">Jérôme Vuarand</a>.</p>
+
+<p>It is available under a <a href="LICENSE.txt">MIT-style license</a>.</p>
+
+</div>
+
+<div class="chapter">
+<a id="installation"/><h1>2 - Installation</h1>
+
+<p>prtr-dump sources are available in its <a href="http://hg.piratery.net/dump/">Mercurial repository</a>:</p>
+
+<pre><code>hg clone http://hg.piratery.net/dump/
+</code></pre>
+
+<p>Tarballs of the latest code can be downloaded directly from there: as <a href="http://hg.piratery.net/dump/get/tip.tar.gz">gz</a>, <a href="http://hg.piratery.net/dump/get/tip.tar.bz2">bz2</a> or <a href="http://hg.piratery.net/dump/get/tip.zip">zip</a>.</p>
+
+<p>Finally, I published some rockspecs:</p>
+
+<pre><code>luarocks install prtr-dump
+</code></pre>
+
+</div>
+
+<div class="chapter">
+<a id="manual"/><h1>3 - Manual</h1>
+
+<p>This module is very basic: it exposes three functions, <code>tostring</code>, <code>toscript</code> and <code>tofile</code>, that all take a <code>value</code> parameter. The following Lua types are supported: <code>nil</code>, <code>boolean</code>, <code>number</code>, <code>string</code> and <code>table</code>. For tables, additional restrictions apply. The table keys must be booleans, numbers or strings. The values can be any type supported by this library.</p>
+
+<p>Tables are printed with indentation, recursively. Key-value pairs are ordered in a predictable way so that two identical tables will always be serialized to the same string or file. The key-value pairs are also ordered in a sensible way to improve reading of the data by a human (string keys come first, integer keys are omitted when compatible with an array constructor).</p>
+
+<p>Note that reference comparison is done during the dump to detect and handle multiple references to sub-tables. However this can only be dumped by the <code>toscript</code> and <code>tofile</code> functions. And at the moment none of the functions can handle reference cycles in the reference graph.</p>
+
+<p>Finally very large tables will be serialized in a special way to avoid the limit on the number of constants in a Lua chunk. By default the key-value pairs will be grouped in chunks of 10 000. This may however be too large if the values are moderately large tables themselves. You can change the <code>dump.groupsize</code> variable dynamically to adjust that behaviour.</p>
+
+<p>To use this module:</p>
+
+<pre><code>local dump = require 'dump'
+</code></pre>
+
+<h3>dump.tostring ( value )</h3>
+
+<p>The <code>tostring</code> function takes a value as parameter, and returns an equivalent <code>string</code>:</p>
+
+<pre><code>local value = {
+    attribute = 42,
+    'foo',
+    37,
+}
+
+local s = dump.tostring(value)
+</code></pre>
+
+<p>To reload the value, use the following code:</p>
+
+<pre><code>local script = 'return '..s
+local value = loadstring(script)() -- note the double set of parenthesis
+</code></pre>
+
+<h3>dump.tofile ( value, file )<br/>dump.tofile ( value, filename )</h3>
+
+<p>The <code>tofile</code> function takes a <code>value</code> and a <code>file</code> object or a <code>filename</code> string as parameters. The <code>file</code> object can be any value that has a <code>write</code> method that takes a single <code>string</code> as parameter, for example the file objects of the Lua <code>io</code> library. If a string is passed as a second parameter, it is considered as a filename that will be open, written to and closed. The serialized value is prefixed with the string <code>"return "</code>, so that executing the file with for example <code>dofile</code> will return the equivalent value. Also if the value is a table containing multiple references (direct or indirect) to some sub-table, some local variables will be created so that dofile reconstructs an equivalent table graph.</p>
+
+<pre><code>local file = io.open('value.lua')
+dump.tofile(value, file)
+file:close()
+
+dump.tofile(value, 'value.lua')
+</code></pre>
+
+<p>To reload the value, use the following code:</p>
+
+<pre><code>local value = dofile('value.lua')
+</code></pre>
+
+<h3>dump.toscript ( value )</h3>
+
+<p>The <code>toscript</code> function takes a value as parameter, and returns a <code>string</code> that is a Lua script which would recreate an equivalent value. Like <code>tofile</code> it can handle multiple references to sub-tables. As such it is more powerful than <code>tostring</code>, but the returned <code>string</code> for simple values is less human-friendly.</p>
+
+<pre><code>local script = dump.toscript(value)
+</code></pre>
+
+<p>To reload the value, use the following code:</p>
+
+<pre><code>local value = loadstring(script)() -- note the double set of parenthesis
+</code></pre>
+
+
+</div>
+
+<div class="chapter" id="footer">
+<small>Last update: 2016-01-11 10:53:43 GMT</small>
+</div>
+
+</body>
+</html>
+

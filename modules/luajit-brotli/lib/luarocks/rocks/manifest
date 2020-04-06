@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["luajit-brotli"] = {
+      ["0.2.0-1"] = {}
+   }
+}
+modules = {
+   ["brotli.decoder"] = {
+      "luajit-brotli/0.2.0-1"
+   },
+   ["brotli.encoder"] = {
+      "luajit-brotli/0.2.0-1"
+   }
+}
+repository = {
+   ["luajit-brotli"] = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["brotli.decoder"] = "brotli/decoder.lua",
+               ["brotli.encoder"] = "brotli/encoder.lua"
+            }
+         }
+      }
+   }
+}

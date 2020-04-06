@@ -1,0 +1,15 @@
+rock_manifest = {
+   ["aesfileencrypt-0.1.3-1.rockspec"] = "449199d1969a92d38099e1425d1b3490",
+   examples = {
+      ["eload.lua"] = "9442172f2586323b343d92803f7ea740",
+      ["fileenc.lua"] = "5455d922628019cc40a199aeaabf1c12",
+      ["prog.elua"] = "7c200d3679426f82607a5e3bc201c1fa",
+      ["prog.lua"] = "7bd8247bbebb7ca6080f13dc3f641d26"
+   },
+   lib = {
+      ["AesFileEncrypt.so"] = "57e867ee07733557aa789fe5c676404a"
+   },
+   test = {
+      ["test.lua"] = "700360da74360cbe1c2f7ec7dbd43504"
+   }
+}

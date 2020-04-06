@@ -1,0 +1,34 @@
+rock_manifest = {
+   ["cmdbuild-0.1.0-1.rockspec"] = "67c421b4eaba4b30f30cf3538570c58d",
+   doc = {
+      ["CMDBuild_WebserviceManual_ENG_V240.pdf"] = "5bdd660223f8d42f99a5aa6c27341412",
+      ["index.html"] = "aeafccaae8493fde06103efe59a28696",
+      ["ldoc.css"] = "ca8708a2582297c21286b80212aec0f5",
+      modules = {
+         ["Utils.html"] = "88b844c6c91cddc23c8e638a0be213f3",
+         ["base64.html"] = "5c2edcfdb0d1e780683e4f197b9ebb9d",
+         ["cmdbuild.attachment.html"] = "9afc0ad3d3e07bf5a23a30b73f4a15e8",
+         ["cmdbuild.card.html"] = "be4a2a33d70e40b995180bd1bc3e0a9e",
+         ["cmdbuild.html"] = "601da9ca636932bda78fa57822f72a34",
+         ["cmdbuild.lookup.html"] = "9b53c7e7c56202ec6a80de1fda985206",
+         ["cmdbuild.relation.html"] = "9829990a625e9ed24c376fb7961cbf19",
+         ["cmdbuild.workflow.html"] = "6877a4960239d1d7c642b48cbae89d4c"
+      },
+      topics = {
+         ["Readme.md.html"] = "a65be29e2b5ca98ce0629aab1a632b9f"
+      }
+   },
+   lua = {
+      ["Log.lua"] = "6c85b57019c83dd6e2c7af9edd9e2bdc",
+      ["Utils.lua"] = "90435a1e3879ba01a699fa8d5a33b501",
+      ["base64.lua"] = "229754abb82c985c6f696075857d21c2",
+      cmdbuild = {
+         ["attachment.lua"] = "e40b1b085dd4ee88f5c2fe2ae6a1f4ee",
+         ["card.lua"] = "fd7952ac3e9071685446d3dfc135d9a5",
+         ["lookup.lua"] = "7435bac9511f9eb8907b71b07fef25f7",
+         ["relation.lua"] = "fe364a24bcbde51542d740e133d2125a",
+         ["workflow.lua"] = "61d39bb554cea45d09e27cb3f8cfcb9b"
+      },
+      ["cmdbuild.lua"] = "7cf1be0eb104018bce9b8adc3488c897"
+   }
+}

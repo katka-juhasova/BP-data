@@ -1,0 +1,47 @@
+commands = {
+   fennel = {
+      "fennel/0.3.2-1"
+   }
+}
+dependencies = {
+   fennel = {
+      ["0.3.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   fennel = {
+      "fennel/0.3.2-1"
+   },
+   fennelview = {
+      "fennel/0.3.2-1"
+   }
+}
+repository = {
+   fennel = {
+      ["0.3.2-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               fennel = "fennel"
+            },
+            dependencies = {},
+            modules = {
+               fennel = "fennel.lua",
+               fennelview = "fennelview.lua"
+            }
+         }
+      }
+   }
+}

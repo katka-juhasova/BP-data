@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   date = {
+      ["2.1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   date = {
+      "date/2.1.2-1"
+   }
+}
+repository = {
+   date = {
+      ["2.1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               date = "date.lua"
+            }
+         }
+      }
+   }
+}

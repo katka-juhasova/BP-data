@@ -1,0 +1,11 @@
+Help [[
+
+coroutine.wrap (f)
+------------------
+
+  Creates a new coroutine, with body `f`. `f` must be a Lua function. Returns
+  a function that resumes the coroutine each time it is called. Any arguments
+  passed to the function behave as the extra arguments to `resume`. Returns
+  the same values returned by `resume`, except the first boolean. In case of
+  error, propagates the error.
+]]

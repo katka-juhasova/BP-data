@@ -1,0 +1,85 @@
+commands = {}
+dependencies = {
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   middleware = {
+      ["1.0.8-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-resty-http"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.middleware.access"] = {
+      "middleware/1.0.8-1"
+   },
+   ["kong.plugins.middleware.handler"] = {
+      "middleware/1.0.8-1"
+   },
+   ["kong.plugins.middleware.schema"] = {
+      "middleware/1.0.8-1"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.15-0"
+   }
+}
+repository = {
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   middleware = {
+      ["1.0.8-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-http"] = "0.15-0"
+            },
+            modules = {
+               ["kong.plugins.middleware.access"] = "kong/plugins/middleware/access.lua",
+               ["kong.plugins.middleware.handler"] = "kong/plugins/middleware/handler.lua",
+               ["kong.plugins.middleware.schema"] = "kong/plugins/middleware/schema.lua"
+            }
+         }
+      }
+   }
+}

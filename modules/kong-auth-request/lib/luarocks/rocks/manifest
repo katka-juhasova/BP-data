@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["kong-auth-request"] = {
+      ["0.1.7-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-auth-request.access"] = {
+      "kong-auth-request/0.1.7-0"
+   },
+   ["kong.plugins.kong-auth-request.handler"] = {
+      "kong-auth-request/0.1.7-0"
+   },
+   ["kong.plugins.kong-auth-request.schema"] = {
+      "kong-auth-request/0.1.7-0"
+   }
+}
+repository = {
+   ["kong-auth-request"] = {
+      ["0.1.7-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-auth-request.access"] = "kong/plugins/kong-auth-request/access.lua",
+               ["kong.plugins.kong-auth-request.handler"] = "kong/plugins/kong-auth-request/handler.lua",
+               ["kong.plugins.kong-auth-request.schema"] = "kong/plugins/kong-auth-request/schema.lua"
+            }
+         }
+      }
+   }
+}

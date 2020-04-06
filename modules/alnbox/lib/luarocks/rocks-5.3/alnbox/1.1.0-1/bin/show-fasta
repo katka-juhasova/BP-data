@@ -1,0 +1,20 @@
+#!/usr/bin/env lua
+
+-- alnbox, alignment viewer based on the curses library
+-- Copyright (C) 2015 Boris Nagaev
+-- See the LICENSE file for terms of use
+
+if os.getenv('LOAD_LUACOV') then
+    require 'luacov'
+end
+
+local alnbox = require 'alnbox'
+
+local fasta_fname = assert(arg[1])
+local fasta_f = io.open(fasta_fname, 'r')
+local aln = alnbox.readFasta(fasta_f)
+fasta_f:close()
+
+local curses = require 'curses'
+local parameters = alnbox.alignmentParameters(aln, curses)
+alnbox.runAlnbox(parameters)

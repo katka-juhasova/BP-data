@@ -1,0 +1,119 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luna = {
+      ["0.2.0-0"] = {
+         {
+            constraints = {},
+            name = "lua-cjson"
+         },
+         {
+            constraints = {},
+            name = "luafilesystem"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   luna = {
+      "luna/0.2.0-0"
+   }
+}
+repository = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luna = {
+      ["0.2.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               luna = "luna.lua"
+            }
+         }
+      }
+   }
+}

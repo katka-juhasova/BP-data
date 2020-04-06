@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["request-limit-validator"] = {
+      ["0.1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.request-limit-validator.handler"] = {
+      "request-limit-validator/0.1.2-1"
+   },
+   ["kong.plugins.request-limit-validator.schema"] = {
+      "request-limit-validator/0.1.2-1"
+   }
+}
+repository = {
+   ["request-limit-validator"] = {
+      ["0.1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.request-limit-validator.handler"] = "kong/plugins/request-limit-validator/handler.lua",
+               ["kong.plugins.request-limit-validator.schema"] = "kong/plugins/request-limit-validator/schema.lua"
+            }
+         }
+      }
+   }
+}

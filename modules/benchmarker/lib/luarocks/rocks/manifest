@@ -1,0 +1,134 @@
+commands = {}
+dependencies = {
+   benchmarker = {
+      ["0.0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 2, 0, revision = 0, string = "0.2.0-0"
+                  }
+               }
+            },
+            name = "cputime"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, revision = 0, string = "0.1.0-0"
+                  }
+               }
+            },
+            name = "hires-time"
+         }
+      }
+   },
+   cputime = {
+      ["0.2.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["hires-time"] = {
+      ["0.1.0-0"] = {}
+   }
+}
+modules = {
+   benchmarker = {
+      "benchmarker/0.0.1-0"
+   },
+   ["benchmarker.result"] = {
+      "benchmarker/0.0.1-0"
+   },
+   ["benchmarker.scenario_result"] = {
+      "benchmarker/0.0.1-0"
+   },
+   ["benchmarker.score"] = {
+      "benchmarker/0.0.1-0"
+   },
+   cputime = {
+      "cputime/0.2.0-0"
+   },
+   hires_time = {
+      "hires-time/0.1.0-0"
+   }
+}
+repository = {
+   benchmarker = {
+      ["0.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               cputime = "0.2.0-0",
+               ["hires-time"] = "0.1.0-0"
+            },
+            modules = {
+               benchmarker = "benchmarker.lua",
+               ["benchmarker.result"] = "benchmarker/result.lua",
+               ["benchmarker.scenario_result"] = "benchmarker/scenario_result.lua",
+               ["benchmarker.score"] = "benchmarker/score.lua"
+            }
+         }
+      }
+   },
+   cputime = {
+      ["0.2.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cputime = "cputime.so"
+            }
+         }
+      }
+   },
+   ["hires-time"] = {
+      ["0.1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               hires_time = "hires_time.so"
+            }
+         }
+      }
+   }
+}

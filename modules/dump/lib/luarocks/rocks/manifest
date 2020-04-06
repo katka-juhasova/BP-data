@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   dump = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   dump = {
+      "dump/0.1.1-1"
+   }
+}
+repository = {
+   dump = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dump = "dump.lua"
+            }
+         }
+      }
+   }
+}

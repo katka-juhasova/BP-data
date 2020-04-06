@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Dado: Facilidades sobre a LuaSQL</title>
+    <link rel="stylesheet" href="https://keplerproject.github.io/luasql/doc.css" type="text/css"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<div id="container">
+	
+<div id="product">
+	<div id="product_logo">
+		<img width="128" alt="Dado logo" src="dado.png"/>
+	</div>
+	<div id="product_name"><big><b>Dado</b></big></div>
+	<div id="product_description">Facilidades sobre a LuaSQL</div>
+    <div id="product_languages" align="right"><small>
+        <a href="../index.html">english</a>&middot;portugu&ecirc;s
+    </small></div>
+</div> <!-- id="product" -->
+
+<div id="main">
+	
+<div id="navigation">
+<h1>Dado</h1>
+	<ul>
+		<li><strong>Home</strong>
+			<ul>
+				<li><a href="index.html#overview">Vis&atilde;o Geral</a></li>
+				<li><a href="index.html#status">Status</a></li>
+				<li><a href="index.html#download">Download</a></li>
+				<li><a href="index.html#install">Instala&ccedil;&atilde;o</a></li>
+		        <li><a href="index.html#manual">Manual</a></li>
+				<li><a href="index.html#history">Hist&oacute;rico</a></li>
+				<li><a href="index.html#credits">Cr&eacute;ditos</a></li>
+				<li><a href="index.html#contact">Fale conosco</a></li>
+			</ul>
+		</li>
+		<li><a href="license.html">Licen&ccedil;a</a></li>
+		<li><a href="examples.html">Exemplos</a></li>
+	</ul>
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+
+<h2><a name="overview"></a>Vis&atilde;o Geral</h2>
+
+<p>
+Dado &eacute; um pacote que oferece facilidades implementadas sobre objetos de conex&atilde;o da LuaSQL.
+Seus principais objetivos s&atilde;o:
+</p>
+<ul>
+  <li>mensagens de erro melhores,
+  <li>iteradores para acessar os resultados, e
+  <li>mais homogeneidade em algumas opera&ccedil;&otilde;es comumente usadas sobre bancos de dados.
+</ul>
+
+<p>
+Dado &eacute; software livre e usa a mesma <a href="license.html">licen&ccedil;a</a> de Lua.
+</p>
+
+<h4>Abstra&ccedil;&otilde;es sobre objetos</h4>
+<p>
+O pacote tamb&eacute;m cont&eacute;m um m&oacute;dulo de objetos que prov&ecirc; um meio de definir classes e objetos que representem linhas de tabelas do banco com um esfor&ccedil;o m&iacute;nimo.
+Dado n&atilde;o imp&otilde;e um sistema de classes, ele sugere apenas um esquema com heran&ccedil;a simples:
+</p>
+<ul>
+  <li>objetos com recupera&ccedil;&atilde;o autom&aacute;tica de atributos do banco de dados
+  <li>m&eacute;todos diferentes para a cria&ccedil;&atilde;o de objetos e para a defini&ccedil;&atilde;o de classes
+</ul>
+<p>
+O mecanismo default usa <em>classes</em> para representar <em>tabelas do banco</em> e <em>inst&acirc;ncias</em> para representar <em>linhas de tabelas do banco</em>.
+Entretanto &eacute; f&aacute;cil definir atributos que n&atilde;o sejam relacionados com colunas de tabelas, ou classes que n&atilde;o sejam relacionadas com tabelas &uacute;nicas.
+</p>
+
+
+<h2><a name="status"></a>Status</h2>
+
+<p>
+A vers&atilde;o atual &eacute; a 1.8.3.
+Ela foi desenvolvida para Lua 5.1 e Lua 5.2.
+Esta versão deve funcionar também em Lua 5.3, embora apenas os módulos <code>dado.sql</code> e <code>table.extra</code> tenham sido testados (os outros módulos dependem da LuaSQL, que ainda não estava disponível para esta versão da linguagem no lan&ccedil;amento desta biblioteca).
+</p>
+
+
+<h2><a name="download"></a>Download</h2>
+
+<p>
+Dado pode ser obtida de sua
+<a href="http://www.ccpa.puc-rio.br/software/dado/download">pr&oacute;pria p&aacute;gina</a>.
+</p>
+
+
+<h2><a name="install"></a>Instala&ccedil;&atilde;o</a></h2>
+
+<p>
+Dado &eacute; um conjunto de m&oacute;dulos para Lua 5 (compat&iacute;vel com todas as vers&otilde;es de Lua 5.X) que deve ser instalado no seu LUA_PATH, respeitando a estrutura de diret&oacute;rios da pasta <code>src</code> do arquivo de distribui&ccedil;&atilde;o.
+</p>
+<p>
+LuaRocks pode ser usado para instalar o pacote, j&aacute; que este &eacute; tamb&eacute;m distribu&iacute;do como um <a href="http://luarocks.org/repositories/rocks/#dado">rock</a>.
+</p>
+
+
+<h2><a name="manual"></a>Manual</h2>
+<p>
+N&atilde;o h&aacute; um manual de refer&ecirc;ncia.
+A <a href="../luadoc/index.html">API</a> &eacute; documentada atrav&eacute;s do LDoc e s&oacute; est&aacute; dispon&iacute;vel em ingl&ecirc;s.
+</p>
+
+
+<h2><a name="history"></a>Hist&oacute;rico</h2>
+
+<ul>
+    <li>[5/abr/2017] Lan&ccedil;amento da vers&atilde;o 1.8.3<ul>
+        <li>Fun&ccedil;&atilde;o <a href="luadoc/modules/dado.sql.html#quote"><code>daod.sql.quote</code></a> passa a tratar n&uacute;meros do mesmo jeito que trata booleanos: ambos passam a ser representados como constantes do banco, i.e. convertidos para strings e colocados entre par&ecirc;nteses duplos</li>
+        <li>Vers&atilde;o testada com Lua sem coer&ccedil;&atilde;o autom&aacute;tica (contribui&ccedil;&atilde;o de François Perrad)</li>
+    </ul></li>
+    <li>[4/abr/2017] Lan&ccedil;amento da vers&atilde;o 1.8.2<ul>
+        <li>Reimplementa&ccedil;&atilde;o da fun&ccedil;&atilde;o <a href="luadoc/modules/table.extra.html#fullconcat"><code>table.extra.fullconcat</code></a>: ela assume que a tabela recebida tem chaves e valores apropriados (contribui&ccedil;&atilde;o de Fran&ccedil;ois Perrad)</li>
+        <li>Adapta&ccedil;&atilde;o da implementa&ccedil;&atilde;o da fun&ccedil;&atilde;o <a href="luadoc/modules/table.extra.html#twostr"><code>table.extra.twostr</code></a> (contribuição de Fran&ccedil;ois Perrad)</li>
+    </ul></li>
+    <li>[16/mar/2017] Lan&ccedil;amento da vers&atilde;o 1.8.1<br/>
+        Melhoria na fun&ccedil;&atilde;o <a href="luadoc/modules/table.extra.html#fullconcat"><code>table.extra.fullconcat</code></a>: força a conversão dos elementos da tabela em strings por default (contribuição de Fran&ccedil;ois Perrad)</li>
+    <li>[22/feb/2017] Lan&ccedil;amento da vers&atilde;o 1.8<br/>
+        Acr&eacute;scimo da fun&ccedil;&atilde;o <a href="luadoc/modules/dado.sql.html#quotedconcat"><code>sql.quotedconcat</code></a></li>
+    <li>[4/dez/2015] Lan&ccedil;amento da vers&atilde;o 1.7.1<br/>
+        Pequenas correções nas variáveis _VERSION de cada módulo.</li>
+    <li>[29/aug/2015] Lan&ccedil;amento da vers&atilde;o 1.7<ul>
+        <li><a href="luadoc/modules/dado.html#select"><code>select</code></a> agora aceita uma tabela como o valor do par&acirc;metro <code>mode</code>, indicanto que <code>mode</code> deve ser <i>a</i> e o resultado da consulta deve ser armazenado na tabela dada</li>
+        <li>Corre&ccedil;&atilde;o de bug em <a href="luadoc/modules/dado.sql.html#quote"><code>sql.quote</code></a>: valores <i>booleanos</i> passam a ser representados como outras constantes do banco, i.e. convertidos para strings e colocados entre par&ecirc;nteses duplos</li>
+        <li>Corre&ccedil;&atilde;o de bug em <a href="luadoc/modules/dado.sql.html#isinteger"><code>sql.isinteger</code></a>: valores fracion&aacute;rios eram aceitos incorretamente</li>
+        <li>Corre&ccedil;&atilde;o de bug em <a href="luadoc/modules/table.extra.html#twostr"><code>table.extra.twostr</code></a>: valores <i>booleanos</i> n&atilde;o estavam sendo corretamente serializados</li>
+    </ul></li>
+    <li>[31/mar/2015] Lan&ccedil;amento da vers&atilde;o 1.6<br/>
+        <a href="luadoc/modules/dado.sql.html#quote"><code>sql.quote</code></a> passa a aceitar <i>booleanos</i> como valores a serem repassados para o banco de dados; valores desse tipo n&atilde;o recebem aspas como as strings e passam a se comportar como os n&uacute;meros</li>
+    <li>[15/oct/2013] Lan&ccedil;amento da vers&atilde;o 1.5.2<br/>
+        Corre&ccedil;&atilde;o de bug na fun&ccedil;&atilde;o <a href="luadoc/modules/dado.sql.html#quote"><code>sql.quote</code></a>: ela n&atilde;o coloca aspas em strings formadas por par&ecirc;nteses duplos balanceados, como <code>((NULL))</code> ou <code>((select col from tab where cond))</code>; ela n&atilde;o coloca aspas em n&uacute;meros (embora coloque aspas em strings contendo n&uacute;meros)</li>
+    <li>[4/oct/2013] Lan&ccedil;amento da vers&atilde;o 1.5.1<ul>
+        <li><a href="luadoc/modules/dado.sql.html#escape"><code>sql.escape</code></a> agora segue estritamente o padr&atilde;o SQL: n&atilde;o tenta mais escapar qualquer coisa, apenas o delimitador de strings &apos;; al&eacute;m disso, n&atilde;o remove tr&ecirc;s caracteres especiais: TAB (<code>\t</code> ou <code>\9</code>), LINE FEED (<code>\n</code> ou <code>\10</code>) e CARRIAGE RETURN (<code>\r</code> ou <code>\13</code>)</li>
+        <li><a href="luadoc/modules/dado.sql.html#quote"><code>sql.quote</code></a> N&Atilde;O coloca aspas em n&uacute;meros (embora coloque aspas em strings que contenham d&iacute;gitos, como '12') NEM em strings formadas por par&ecirc;nteses balanceados dentro dos quais exista: apenas um identificador (sem d&iacute;gitos); ou uma string contendo 'select' como substring</li>
+        <li><a href="luadoc/modules/dado.sql.html#insert"><code>sql.insert</code></a> passa a aceitar uma &uacute;nica string como argumento, contendo todo o comando SQL (exceto as duas primeira palavras: <code>insert into</code>)</li>
+    </ul></li>
+    <li>[23/jan/2013] Lan&ccedil;amento da vers&atilde;o 1.4.3<br/>
+        Melhoria na fun&ccedil;&atilde;o <a href="luadoc/modules/dado.sql.html#escape"><code>sql.escape</code></a>: caracteres com c&oacute;digos &lt; 32 passam a ser removidos, para evitar problemas na gera&ccedil;&atilde;o de SQL</li>
+    <li>[13/nov/2012] Lan&ccedil;amento da vers&atilde;o 1.4.2<ul>
+        <li>Reimplementa&ccedil;&atilde;o para tornar-se compat&iacute;vel com Lua 5.2.</li>
+        <li>Melhoria na fun&ccedil;&atilde;o <a href="luadoc/modules/dado.sql.html#escape"><code>sql.escape</code></a>: terceiro par&acirc;metro passa a ser um padr&atilde;o de substitui&ccedil;&atilde;o</li>
+    </ul></li>
+    <li>[06/jun/2011] Lan&ccedil;amento da vers&atilde;o 1.4<br/>
+        Limpeza de fun&ccedil;&otilde;es n&atilde;o usadas: <code>arraytorecord</code>, <code>invert</code>, <code>copyto</code> e <code>cycle</code> do m&oacute;dulo <code>table.extra</code> e o m&oacute;dulo <code>string.extra</code> completamente</li>
+    <li>[14/dez/2010] Lan&ccedil;amento da vers&atilde;o 1.3.1<br/>
+        Corre&ccedil;&atilde;o de bug na fun&ccedil;&atilde;o <a href="luadoc/modules/dado.sql.html#quote"><code>sql.quote</code></a>: n&atilde;o estava colocando aspas em strings que come&ccedil;am e terminam com par&ecirc;nteses que n&atilde;o casam</li>
+    <li>[06/ago/2010] Lan&ccedil;amento da vers&atilde;o 1.3.0<ul>
+        <li>Acr&eacute;scimo da fun&ccedil;&atilde;o de conveni&ecirc;ncia <a href="luadoc/modules/dado.sql.html#isinteger"><code>sql.isinteger</code></a></li>
+        <li>Acr&eacute;scimo da fun&ccedil;&atilde;o de depura&ccedil;&atilde;o <a href="luadoc/modules/table.extra.html#pfullconcat"><code>table.extra.pfullconcat</code></a></li>
+		<li>Mudan&ccedil;a na <a href="http://www.ccpa.puc-rio.br/software/dado">hospedagem</a></li>
+    </ul></li>
+    <li>[10/jun/2010] Lan&ccedil;amento da vers&atilde;o 1.2.0<ul>
+        <li>Acr&eacute;scimo da fun&ccedil;&atilde;o de conveni&ecirc;ncia <a href="luadoc/modules/dado.sql.html#AND"><code>sql.AND</code></a></li>
+        <li>Acr&eacute;scimo de documenta&ccedil;&atilde;o em portugu&ecirc;s</li>
+    </ul></li>
+    <li>[05/out/2009] Lan&ccedil;amento da vers&atilde;o 1.1.0<ul>
+        <li>Acr&eacute;scimo da fun&ccedil;&atilde;o <a href="luadoc/modules/dado.html#wrap_connection"><code>wrap_connection</code></a></li>
+        <li>Remo&ccedil;&atilde;o da biblioteca <code>check</code></li>
+        <li>Implanta&ccedil;&atilde;o via <a href="http://www.luarocks.org">LuaRocks</a></li>
+    </ul></li>
+    <li>[29/set/2009] Lan&ccedil;amento da vers&atilde;o 1.0.1<br/>
+        Corre&ccedil;&atilde;o de bug na fun&ccedil;&atilde;o <a href="luadoc/modules/dado.sql.html#quote"><code>sql.quote</code></a>
+    </li>
+    <li>[20/abr/2008] Lan&ccedil;amento da vers&atilde;o 1.0<br />
+    </li>
+</ul>
+
+
+<h2><a name="credits"></a>Cr&eacute;ditos</h2>
+
+<p>
+Dado foi projetada por Tom&aacute;s Guisasola e Eduardo Quint&atilde;o com muitas contribui&ccedil;&otilde;es importantes de Pedro Maia, Roberto Ierusalimschy, Andr&eacute; Carregal, Raphael Pithan, Maur&iacute;cio Bonfim e Carla Ourofino.
+O logo foi criado por Carla Ourofino.
+</p>
+<p>
+Dado foi desenvolvida para a <a href="http://www.puc-rio.br">PUC-Rio</a> que det&eacute;m o copyright.
+Foi implementada por Tom&aacute;s Guisasola.
+</p>
+
+
+<h2><a name="contact"></a>Fale conosco</h2>
+
+<p>
+Para maiores informa&ccedil;&otilde;es:
+<a href= "mailto:tomas-NO-SPAM-THANKS@esp.puc-rio.br">fale conosco</a>.
+Coment&aacute;rios s&atilde;o bem vindos!</p>
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer">
+    <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+	<p><small>$Id: index.html,v 1.27 2017/04/05 19:14:07 tomas Exp $</small></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->
+
+</body>
+</html> 

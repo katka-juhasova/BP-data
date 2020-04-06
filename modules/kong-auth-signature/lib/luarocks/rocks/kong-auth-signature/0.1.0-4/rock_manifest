@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "07b1300ede62b6303244543771795937"
+   },
+   ["kong-auth-signature-0.1.0-4.rockspec"] = "5ed3edefdd729671e51c2e6ca636f0a4",
+   lua = {
+      kong = {
+         plugins = {
+            ["kong-auth-signature"] = {
+               ["handler.lua"] = "057f7320b224cfd554526b000f50c76f",
+               ["schema.lua"] = "b07c219d097bde9b2a28a429e6818a3e"
+            }
+         }
+      }
+   }
+}

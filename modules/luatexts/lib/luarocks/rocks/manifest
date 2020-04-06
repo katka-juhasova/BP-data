@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   luatexts = {
+      ["0.1.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luatexts = {
+      "luatexts/0.1.5-1"
+   },
+   ["luatexts.lua"] = {
+      "luatexts/0.1.5-1"
+   }
+}
+repository = {
+   luatexts = {
+      ["0.1.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luatexts = "luatexts.so",
+               ["luatexts.lua"] = "luatexts/lua.lua"
+            }
+         }
+      }
+   }
+}

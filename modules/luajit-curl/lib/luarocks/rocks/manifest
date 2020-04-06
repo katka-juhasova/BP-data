@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["luajit-curl"] = {
+      ["1.1-0"] = {}
+   }
+}
+modules = {
+   ["luajit-curl"] = {
+      "luajit-curl/1.1-0"
+   },
+   ["luajit-curl-helper"] = {
+      "luajit-curl/1.1-0"
+   },
+   ["luajit-curl-helper.ftp"] = {
+      "luajit-curl/1.1-0"
+   },
+   ["luajit-curl-helper.http"] = {
+      "luajit-curl/1.1-0"
+   },
+   ["luajit-curl-helper.sftp"] = {
+      "luajit-curl/1.1-0"
+   }
+}
+repository = {
+   ["luajit-curl"] = {
+      ["1.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["luajit-curl"] = "luajit-curl.lua",
+               ["luajit-curl-helper"] = "luajit-curl-helper/init.lua",
+               ["luajit-curl-helper.ftp"] = "luajit-curl-helper/ftp.lua",
+               ["luajit-curl-helper.http"] = "luajit-curl-helper/http.lua",
+               ["luajit-curl-helper.sftp"] = "luajit-curl-helper/sftp.lua"
+            }
+         }
+      }
+   }
+}

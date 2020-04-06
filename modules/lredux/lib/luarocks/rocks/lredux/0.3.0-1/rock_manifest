@@ -1,0 +1,27 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "c0dcdb784ae30d8811dfa87328b143f8",
+      ["README.md"] = "ce3339549f11f1f5c3375819a7186706"
+   },
+   ["lredux-0.3.0-1.rockspec"] = "2b552beb12991263b5efb60fcbbab1db",
+   lua = {
+      lredux = {
+         ["applyMiddleware.lua"] = "685690387823e706dbb823a45cc17839",
+         ["combineReducers.lua"] = "5f0b8590489f7cbf88ef45cb3d1278ee",
+         ["compose.lua"] = "ea506f8cc20204f3222ade817fdd7f95",
+         ["createStore.lua"] = "9bff21967f94772d9b579c8571cbeb5f",
+         ["env.lua"] = "77481ff293e86b1441cfc8b3636ef87a",
+         helpers = {
+            ["array.lua"] = "4f22fd0547ce00a02e4fe3e32c144117",
+            ["assign.lua"] = "2b32cb57158eb5a65555a3704a36bbce"
+         },
+         ["null.lua"] = "f766d7221879762e93a5d36408c5063a",
+         utils = {
+            ["actionTypes.lua"] = "e0e96b7d9416676c0fa77b67d978debc",
+            ["inspect.lua"] = "4d52ed79a729588fddf65616f2773e1a",
+            ["isPlainObject.lua"] = "3400a4aec0ee506727f25139badcff6e",
+            ["logger.lua"] = "23ad9c4cf923e03234c36403f8fb507d"
+         }
+      }
+   }
+}

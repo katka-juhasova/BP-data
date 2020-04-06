@@ -1,0 +1,1048 @@
+commands = {
+   sputnik = {
+      "sputnik/9.03.16-1"
+   },
+   ["wsapi.cgi"] = {
+      "wsapi/1.7-1"
+   }
+}
+dependencies = {
+   colors = {
+      ["8.05.26-1"] = {}
+   },
+   cosmo = {
+      ["16.06.04-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 9, string = "0.9"
+                  }
+               }
+            },
+            name = "lpeg"
+         }
+      }
+   },
+   coxpcall = {
+      ["1.17.0-1"] = {}
+   },
+   diff = {
+      ["8.06.15-2"] = {}
+   },
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   markdown = {
+      ["0.33-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   md5 = {
+      ["1.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   rings = {
+      ["1.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   saci = {
+      ["9.03.16-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     7, 12, 24, string = "7.12.24"
+                  }
+               }
+            },
+            name = "cosmo"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     9, 2, 15, string = "9.02.15"
+                  }
+               }
+            },
+            name = "versium"
+         }
+      }
+   },
+   sputnik = {
+      ["9.03.16-1"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     9, 3, 16, string = "9.03.16"
+                  }
+               }
+            },
+            name = "saci"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     8, 4, 14, string = "8.04.14"
+                  }
+               }
+            },
+            name = "cosmo"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     8, 7, 7, string = "8.07.07"
+                  }
+               }
+            },
+            name = "xssfilter"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     8, 5, 26, string = "8.05.26"
+                  }
+               }
+            },
+            name = "colors"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 32, string = "0.32"
+                  }
+               }
+            },
+            name = "markdown"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 1, string = "1.1"
+                  }
+               }
+            },
+            name = "md5"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, string = "1.0"
+                  }
+               }
+            },
+            name = "wsapi"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 0, string = "2.0"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 13, string = "1.13"
+                  }
+               }
+            },
+            name = "coxpcall"
+         }
+      }
+   },
+   versium = {
+      ["9.02.15-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 3, string = "1.3"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     8, 6, 15, string = "8.06.15"
+                  }
+               }
+            },
+            name = "diff"
+         }
+      }
+   },
+   wsapi = {
+      ["1.7-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 6, 2, string = "1.6.2"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 3, 0, string = "1.3.0"
+                  }
+               }
+            },
+            name = "rings"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 14, string = "1.14"
+                  }
+               }
+            },
+            name = "coxpcall"
+         }
+      }
+   },
+   xssfilter = {
+      ["10.12.28-1"] = {}
+   }
+}
+modules = {
+   colors = {
+      "colors/8.05.26-1"
+   },
+   cosmo = {
+      "cosmo/16.06.04-1"
+   },
+   ["cosmo.fill"] = {
+      "cosmo/16.06.04-1"
+   },
+   ["cosmo.grammar"] = {
+      "cosmo/16.06.04-1"
+   },
+   coxpcall = {
+      "coxpcall/1.17.0-1"
+   },
+   des56 = {
+      "md5/1.3-1"
+   },
+   diff = {
+      "diff/8.06.15-2"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   markdown = {
+      "markdown/0.33-1"
+   },
+   md5 = {
+      "md5/1.3-1"
+   },
+   ["md5.core"] = {
+      "md5/1.3-1"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   },
+   rings = {
+      "rings/1.3.0-1"
+   },
+   saci = {
+      "saci/9.03.16-1"
+   },
+   ["saci.node"] = {
+      "saci/9.03.16-1"
+   },
+   ["saci.sandbox"] = {
+      "saci/9.03.16-1"
+   },
+   ["saci.search"] = {
+      "saci/9.03.16-1"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   },
+   sputnik = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.actions.binaryfile"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.actions.collections"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.actions.comments"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.actions.css"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.actions.javascript"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.actions.register"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.actions.search"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.actions.wiki"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.auth.errors"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.auth.simple"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.cli.encode-binary"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.cli.make-cgi"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.cli.start-xavante"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.editor.resizeable"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.editor.validatelua"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.hooks.forums"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.i18n"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.installer"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.javascript.sorttable"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.markup"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.markup.markdown"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@Binary_File"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@CSS"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@Collection"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@Comment"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@Discussion"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@DiscussionForum"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@Image"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@JavaScript"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@Lua_Config"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@Root"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.@Text_Config"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.history"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.history.edits_by_recent_users"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.admin"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.anon"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.attach"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.basic_node"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.collection"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.diff"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.discussion"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.edit"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.forum"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.history"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.logout"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.lua"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.minus"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.picture"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.plus"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.rss"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.search"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.sputnik"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.star"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.system"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.icons.user"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.index"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.jquery.textarearesizer"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.logo"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sitemap"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.@Account_Activation_Ticket"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.config"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.config_defaults"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.grippie"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.js.editpage"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.login"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.logout"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.navigation"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.passwords"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.register"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.scripts"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.search"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.style"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.templates"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.translations"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.node_defaults.sputnik.version"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.util"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.util.calendar"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.util.html_forms"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.util.jquery"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.util.yui_reset"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.wsapi_app"] = {
+      "sputnik/9.03.16-1"
+   },
+   ["sputnik.xavante"] = {
+      "sputnik/9.03.16-1"
+   },
+   stable = {
+      "rings/1.3.0-1"
+   },
+   ["versium.errors"] = {
+      "versium/9.02.15-1"
+   },
+   ["versium.filedir"] = {
+      "versium/9.02.15-1"
+   },
+   ["versium.util"] = {
+      "versium/9.02.15-1"
+   },
+   ["versium.virtual"] = {
+      "versium/9.02.15-1"
+   },
+   wsapi = {
+      "wsapi/1.7-1"
+   },
+   ["wsapi.cgi"] = {
+      "wsapi/1.7-1"
+   },
+   ["wsapi.common"] = {
+      "wsapi/1.7-1"
+   },
+   ["wsapi.mock"] = {
+      "wsapi/1.7-1"
+   },
+   ["wsapi.request"] = {
+      "wsapi/1.7-1"
+   },
+   ["wsapi.response"] = {
+      "wsapi/1.7-1"
+   },
+   ["wsapi.ringer"] = {
+      "wsapi/1.7-1"
+   },
+   ["wsapi.sapi"] = {
+      "wsapi/1.7-1"
+   },
+   ["wsapi.util"] = {
+      "wsapi/1.7-1"
+   },
+   xssfilter = {
+      "xssfilter/10.12.28-1"
+   }
+}
+repository = {
+   colors = {
+      ["8.05.26-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               colors = "colors.lua"
+            }
+         }
+      }
+   },
+   cosmo = {
+      ["16.06.04-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               cosmo = "cosmo.lua",
+               ["cosmo.fill"] = "cosmo/fill.lua",
+               ["cosmo.grammar"] = "cosmo/grammar.lua"
+            }
+         }
+      }
+   },
+   coxpcall = {
+      ["1.17.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               coxpcall = "coxpcall.lua"
+            }
+         }
+      }
+   },
+   diff = {
+      ["8.06.15-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               diff = "diff.lua"
+            }
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   markdown = {
+      ["0.33-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               markdown = "markdown.lua"
+            }
+         }
+      }
+   },
+   md5 = {
+      ["1.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               des56 = "des56.so",
+               md5 = "md5.lua",
+               ["md5.core"] = "md5/core.so"
+            }
+         }
+      }
+   },
+   rings = {
+      ["1.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rings = "rings.so",
+               stable = "stable.lua"
+            }
+         }
+      }
+   },
+   saci = {
+      ["9.03.16-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               cosmo = "16.06.04-1",
+               diff = "8.06.15-2",
+               lpeg = "1.0.2-1",
+               luafilesystem = "1.7.0-2",
+               versium = "9.02.15-1"
+            },
+            modules = {
+               saci = "saci.lua",
+               ["saci.node"] = "saci/node.lua",
+               ["saci.sandbox"] = "saci/sandbox.lua",
+               ["saci.search"] = "saci/search.lua"
+            }
+         }
+      }
+   },
+   sputnik = {
+      ["9.03.16-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               sputnik = "sputnik"
+            },
+            dependencies = {
+               colors = "8.05.26-1",
+               cosmo = "16.06.04-1",
+               coxpcall = "1.17.0-1",
+               diff = "8.06.15-2",
+               lpeg = "1.0.2-1",
+               luafilesystem = "1.7.0-2",
+               luasocket = "3.0rc1-2",
+               markdown = "0.33-1",
+               md5 = "1.3-1",
+               rings = "1.3.0-1",
+               saci = "9.03.16-1",
+               versium = "9.02.15-1",
+               wsapi = "1.7-1",
+               xssfilter = "10.12.28-1"
+            },
+            modules = {
+               sputnik = "sputnik/init.lua",
+               ["sputnik.actions.binaryfile"] = "sputnik/actions/binaryfile.lua",
+               ["sputnik.actions.collections"] = "sputnik/actions/collections.lua",
+               ["sputnik.actions.comments"] = "sputnik/actions/comments.lua",
+               ["sputnik.actions.css"] = "sputnik/actions/css.lua",
+               ["sputnik.actions.javascript"] = "sputnik/actions/javascript.lua",
+               ["sputnik.actions.register"] = "sputnik/actions/register.lua",
+               ["sputnik.actions.search"] = "sputnik/actions/search.lua",
+               ["sputnik.actions.wiki"] = "sputnik/actions/wiki.lua",
+               ["sputnik.auth.errors"] = "sputnik/auth/errors.lua",
+               ["sputnik.auth.simple"] = "sputnik/auth/simple.lua",
+               ["sputnik.cli.encode-binary"] = "sputnik/cli/encode-binary.lua",
+               ["sputnik.cli.make-cgi"] = "sputnik/cli/make-cgi.lua",
+               ["sputnik.cli.start-xavante"] = "sputnik/cli/start-xavante.lua",
+               ["sputnik.editor.resizeable"] = "sputnik/editor/resizeable.lua",
+               ["sputnik.editor.validatelua"] = "sputnik/editor/validatelua.lua",
+               ["sputnik.hooks.forums"] = "sputnik/hooks/forums.lua",
+               ["sputnik.i18n"] = "sputnik/i18n.lua",
+               ["sputnik.installer"] = "sputnik/installer.lua",
+               ["sputnik.javascript.sorttable"] = "sputnik/javascript/sorttable.lua",
+               ["sputnik.markup"] = "sputnik/markup/init.lua",
+               ["sputnik.markup.markdown"] = "sputnik/markup/markdown.lua",
+               ["sputnik.node_defaults.@Binary_File"] = "sputnik/node_defaults/@Binary_File.lua",
+               ["sputnik.node_defaults.@CSS"] = "sputnik/node_defaults/@CSS.lua",
+               ["sputnik.node_defaults.@Collection"] = "sputnik/node_defaults/@Collection.lua",
+               ["sputnik.node_defaults.@Comment"] = "sputnik/node_defaults/@Comment.lua",
+               ["sputnik.node_defaults.@Discussion"] = "sputnik/node_defaults/@Discussion.lua",
+               ["sputnik.node_defaults.@DiscussionForum"] = "sputnik/node_defaults/@DiscussionForum.lua",
+               ["sputnik.node_defaults.@Image"] = "sputnik/node_defaults/@Image.lua",
+               ["sputnik.node_defaults.@JavaScript"] = "sputnik/node_defaults/@JavaScript.lua",
+               ["sputnik.node_defaults.@Lua_Config"] = "sputnik/node_defaults/@Lua_Config.lua",
+               ["sputnik.node_defaults.@Root"] = "sputnik/node_defaults/@Root.lua",
+               ["sputnik.node_defaults.@Text_Config"] = "sputnik/node_defaults/@Text_Config.lua",
+               ["sputnik.node_defaults.history"] = "sputnik/node_defaults/history/init.lua",
+               ["sputnik.node_defaults.history.edits_by_recent_users"] = "sputnik/node_defaults/history/edits_by_recent_users.lua",
+               ["sputnik.node_defaults.icons.admin"] = "sputnik/node_defaults/icons/admin.lua",
+               ["sputnik.node_defaults.icons.anon"] = "sputnik/node_defaults/icons/anon.lua",
+               ["sputnik.node_defaults.icons.attach"] = "sputnik/node_defaults/icons/attach.lua",
+               ["sputnik.node_defaults.icons.basic_node"] = "sputnik/node_defaults/icons/basic_node.lua",
+               ["sputnik.node_defaults.icons.collection"] = "sputnik/node_defaults/icons/collection.lua",
+               ["sputnik.node_defaults.icons.diff"] = "sputnik/node_defaults/icons/diff.lua",
+               ["sputnik.node_defaults.icons.discussion"] = "sputnik/node_defaults/icons/discussion.lua",
+               ["sputnik.node_defaults.icons.edit"] = "sputnik/node_defaults/icons/edit.lua",
+               ["sputnik.node_defaults.icons.forum"] = "sputnik/node_defaults/icons/forum.lua",
+               ["sputnik.node_defaults.icons.history"] = "sputnik/node_defaults/icons/history.lua",
+               ["sputnik.node_defaults.icons.logout"] = "sputnik/node_defaults/icons/logout.lua",
+               ["sputnik.node_defaults.icons.lua"] = "sputnik/node_defaults/icons/lua.lua",
+               ["sputnik.node_defaults.icons.minus"] = "sputnik/node_defaults/icons/minus.lua",
+               ["sputnik.node_defaults.icons.picture"] = "sputnik/node_defaults/icons/picture.lua",
+               ["sputnik.node_defaults.icons.plus"] = "sputnik/node_defaults/icons/plus.lua",
+               ["sputnik.node_defaults.icons.rss"] = "sputnik/node_defaults/icons/rss.lua",
+               ["sputnik.node_defaults.icons.search"] = "sputnik/node_defaults/icons/search.lua",
+               ["sputnik.node_defaults.icons.sputnik"] = "sputnik/node_defaults/icons/sputnik.lua",
+               ["sputnik.node_defaults.icons.star"] = "sputnik/node_defaults/icons/star.lua",
+               ["sputnik.node_defaults.icons.system"] = "sputnik/node_defaults/icons/system.lua",
+               ["sputnik.node_defaults.icons.user"] = "sputnik/node_defaults/icons/user.lua",
+               ["sputnik.node_defaults.index"] = "sputnik/node_defaults/index.lua",
+               ["sputnik.node_defaults.jquery.textarearesizer"] = "sputnik/node_defaults/jquery/textarearesizer.lua",
+               ["sputnik.node_defaults.logo"] = "sputnik/node_defaults/logo.lua",
+               ["sputnik.node_defaults.sitemap"] = "sputnik/node_defaults/sitemap.lua",
+               ["sputnik.node_defaults.sputnik"] = "sputnik/node_defaults/sputnik/init.lua",
+               ["sputnik.node_defaults.sputnik.@Account_Activation_Ticket"] = "sputnik/node_defaults/sputnik/@Account_Activation_Ticket.lua",
+               ["sputnik.node_defaults.sputnik.config"] = "sputnik/node_defaults/sputnik/config.lua",
+               ["sputnik.node_defaults.sputnik.config_defaults"] = "sputnik/node_defaults/sputnik/config_defaults.lua",
+               ["sputnik.node_defaults.sputnik.grippie"] = "sputnik/node_defaults/sputnik/grippie.lua",
+               ["sputnik.node_defaults.sputnik.js.editpage"] = "sputnik/node_defaults/sputnik/js/editpage.lua",
+               ["sputnik.node_defaults.sputnik.login"] = "sputnik/node_defaults/sputnik/login.lua",
+               ["sputnik.node_defaults.sputnik.logout"] = "sputnik/node_defaults/sputnik/logout.lua",
+               ["sputnik.node_defaults.sputnik.navigation"] = "sputnik/node_defaults/sputnik/navigation.lua",
+               ["sputnik.node_defaults.sputnik.passwords"] = "sputnik/node_defaults/sputnik/passwords.lua",
+               ["sputnik.node_defaults.sputnik.register"] = "sputnik/node_defaults/sputnik/register.lua",
+               ["sputnik.node_defaults.sputnik.scripts"] = "sputnik/node_defaults/sputnik/scripts.lua",
+               ["sputnik.node_defaults.sputnik.search"] = "sputnik/node_defaults/sputnik/search.lua",
+               ["sputnik.node_defaults.sputnik.style"] = "sputnik/node_defaults/sputnik/style.lua",
+               ["sputnik.node_defaults.sputnik.templates"] = "sputnik/node_defaults/sputnik/templates.lua",
+               ["sputnik.node_defaults.sputnik.translations"] = "sputnik/node_defaults/sputnik/translations.lua",
+               ["sputnik.node_defaults.sputnik.version"] = "sputnik/node_defaults/sputnik/version.lua",
+               ["sputnik.util"] = "sputnik/util.lua",
+               ["sputnik.util.calendar"] = "sputnik/util/calendar.lua",
+               ["sputnik.util.html_forms"] = "sputnik/util/html_forms.lua",
+               ["sputnik.util.jquery"] = "sputnik/util/jquery.lua",
+               ["sputnik.util.yui_reset"] = "sputnik/util/yui_reset.lua",
+               ["sputnik.wsapi_app"] = "sputnik/wsapi_app.lua",
+               ["sputnik.xavante"] = "sputnik/xavante.lua"
+            }
+         }
+      }
+   },
+   versium = {
+      ["9.02.15-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               diff = "8.06.15-2",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               ["versium.errors"] = "versium/errors.lua",
+               ["versium.filedir"] = "versium/filedir.lua",
+               ["versium.util"] = "versium/util.lua",
+               ["versium.virtual"] = "versium/virtual.lua"
+            }
+         }
+      }
+   },
+   wsapi = {
+      ["1.7-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["wsapi.cgi"] = "wsapi.cgi"
+            },
+            dependencies = {
+               coxpcall = "1.17.0-1",
+               luafilesystem = "1.7.0-2",
+               rings = "1.3.0-1"
+            },
+            modules = {
+               wsapi = "wsapi.lua",
+               ["wsapi.cgi"] = "wsapi/cgi.lua",
+               ["wsapi.common"] = "wsapi/common.lua",
+               ["wsapi.mock"] = "wsapi/mock.lua",
+               ["wsapi.request"] = "wsapi/request.lua",
+               ["wsapi.response"] = "wsapi/response.lua",
+               ["wsapi.ringer"] = "wsapi/ringer.lua",
+               ["wsapi.sapi"] = "wsapi/sapi.lua",
+               ["wsapi.util"] = "wsapi/util.lua"
+            }
+         }
+      }
+   },
+   xssfilter = {
+      ["10.12.28-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               xssfilter = "xssfilter.lua"
+            }
+         }
+      }
+   }
+}

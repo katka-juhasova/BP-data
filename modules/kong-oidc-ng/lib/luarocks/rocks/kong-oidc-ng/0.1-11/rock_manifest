@@ -1,0 +1,20 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "4f925a374fde2519b135097f7448fb21"
+   },
+   ["kong-oidc-ng-0.1-11.rockspec"] = "d56ec34c6047788cbb86c39d887c6a5d",
+   lua = {
+      kong = {
+         plugins = {
+            oidc = {
+               ["filter.lua"] = "b3388ca10bb6e04b4150581e694ca293",
+               ["handler.lua"] = "c09d29c9fc0c05437eaf15a5b6918c71",
+               ["schema.lua"] = "45307c41e441ea1745c0ae4ebfadd9ad",
+               ["session.lua"] = "942477eb26e81079a7d46caebe397f16",
+               ["utils.lua"] = "0a527631d7408043c493e9934573b0a6"
+            }
+         }
+      }
+   }
+}

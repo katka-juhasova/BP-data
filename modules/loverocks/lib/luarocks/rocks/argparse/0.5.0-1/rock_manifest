@@ -1,0 +1,89 @@
+rock_manifest = {
+   ["argparse-0.5.0-1.rockspec"] = "02db647a5521809390b101a741cca4ff",
+   doc = {
+      _sources = {
+         ["arguments.txt"] = "acc28e8f9a335064bffc3258c323da65",
+         ["callbacks.txt"] = "65a4862f40a33c745865b13ef9d5dc0f",
+         ["commands.txt"] = "18d60c416e39d08f849fe8e4fd38da61",
+         ["defaults.txt"] = "36fe75b81a76665146b29bf125c52ae4",
+         ["index.txt"] = "0baf0807e479da7397407c8eabcd001f",
+         ["misc.txt"] = "678e94d1b9904623fe5ed28b2e381a1f",
+         ["mutexes.txt"] = "5b2b3dce9fba74df0da771267b299b6c",
+         ["options.txt"] = "9da7553fe5f187a9d47ed4d386375161",
+         ["parsers.txt"] = "bd51eddad942cf5197323d358a387765"
+      },
+      _static = {
+         ["ajax-loader.gif"] = "ae6667053ad118020b8e68ccf307b519",
+         ["basic.css"] = "e1a690dc2757e7c8bb69841065efc6b2",
+         ["comment-bright.png"] = "0c850bb4920b581bf5e5dba5fa493a64",
+         ["comment-close.png"] = "2635dda49c823e8122d4d11ed385f33d",
+         ["comment.png"] = "882e40f3d6a16c6ed35659b105251525",
+         css = {
+            ["badge_only.css"] = "0f15a588dd2e51cd756d0fc4ff567123",
+            ["theme.css"] = "7a539308267cffcf51d6327d923cc577"
+         },
+         ["doctools.js"] = "12aafa75c19bd4ea48ae3761b27477cb",
+         ["down-pressed.png"] = "71f5c3a4c398f4fe22a9494fdf7a0192",
+         ["down.png"] = "6bcc489d1138b05d8bd82273fa63a6d2",
+         ["file.png"] = "bcf7eb06f6c72f1cf23eeefe71195e63",
+         fonts = {
+            ["Inconsolata-Bold.ttf"] = "e156a118727053f0f6072d0ee05a48eb",
+            ["Inconsolata-Regular.ttf"] = "631f4ecd69f75ecc4c543b38da8f1b9c",
+            ["Lato-Bold.ttf"] = "44dfe8cc676882243911a3197a50169e",
+            ["Lato-Regular.ttf"] = "7f690e503a254e0b8349aec0177e07aa",
+            ["RobotoSlab-Bold.ttf"] = "d63ef23299458362f3edbf6cd8c2c510",
+            ["RobotoSlab-Regular.ttf"] = "1ec06eed11bbcb1ee510b8f3522adea8",
+            ["fontawesome-webfont.eot"] = "7149833697a959306ec3012a8588dcfa",
+            ["fontawesome-webfont.svg"] = "65bcbc899f379216109acd0b6c494618",
+            ["fontawesome-webfont.ttf"] = "c4668ed2440df82d3fd2f8be9d31d07d",
+            ["fontawesome-webfont.woff"] = "d95d6f5d5ab7cfefd09651800b69bd54"
+         },
+         ["jquery-1.11.1.js"] = "3d93b072d14f2bd1ede58f4847f537fd",
+         ["jquery.js"] = "8101d596b2b8fa35fe3a634ea342d7c3",
+         js = {
+            ["modernizr.min.js"] = "42306a279a9e831515347ae319181cd1",
+            ["theme.js"] = "38618d398f5bdbadb82d53215f681bd7"
+         },
+         ["minus.png"] = "611d6118f1968c8bd445ef0e1a845e92",
+         ["plus.png"] = "90680331edb32156fe420df2ec7fb04e",
+         ["pygments.css"] = "c4e419d5e979b086a588d106854aeeae",
+         ["searchtools.js"] = "cb276abdbcc6dac9428f1f28cf93ad49",
+         ["underscore-1.3.1.js"] = "4eb64db36175fefa3e36b9e57606512c",
+         ["underscore.js"] = "b538b8a3ed2c5519b19409eace25c38b",
+         ["up-pressed.png"] = "b40e1299cd69ebd73f81d66b09f4b271",
+         ["up.png"] = "312cfdc6fc45b7154332238f1950ffff",
+         ["websupport.js"] = "7741e463ecfefb66990b7aef70cd9679"
+      },
+      ["arguments.html"] = "fd0392f2916b1b5e94340b8cd600912c",
+      ["callbacks.html"] = "d7e0c3c61f50205111fd9984c6c0d43f",
+      ["commands.html"] = "39e639a73b93aa68c92407cbb110b5f2",
+      ["defaults.html"] = "e7ed03f9c6fe97bd26df4dfbfce949a8",
+      ["genindex.html"] = "8b814a18f173667e1d11b6dc95b734b9",
+      ["index.html"] = "2afdac6a2ce1e96f429be1e81d6bd3dd",
+      ["misc.html"] = "5aa2d724e9c72a11326155343b32c225",
+      ["mutexes.html"] = "a039d24d925816748cda0c6c0359d288",
+      ["objects.inv"] = "fc798735a1a340b03840f8f6c8297001",
+      ["options.html"] = "e758f667588d3cc56ccce467996567fa",
+      ["parsers.html"] = "01ae5fae92f1c371ca4b29a1ebce27fb",
+      ["search.html"] = "89629b82c942639018c4cde6ddfc6552",
+      ["searchindex.js"] = "0e1694e3034f70458b781c1a410eb762"
+   },
+   lua = {
+      ["argparse.lua"] = "b726b6d24642a2962cb46d7b04551738"
+   },
+   spec = {
+      ["actions_spec.lua"] = "04d5beb4ec251b94f843a0012d6b4aee",
+      ["arguments_spec.lua"] = "32daef96162f4f17f45aebd1239714ae",
+      ["commands_spec.lua"] = "b3f7836ed08bf36459d7657a13f4ae6a",
+      ["convert_spec.lua"] = "11998f45725fbf0a6ad49746dd5e0097",
+      ["default_spec.lua"] = "2214e7b88015c83045a1a2d810a30b0e",
+      ["help_spec.lua"] = "fb92e230faaef60878d2facbcd69de8b",
+      ["integrity_spec.lua"] = "270933418c02722fcf26a866f7f82e47",
+      ["mutex_spec.lua"] = "63fb60b7b8583460006f856fbe32cf64",
+      ["options_spec.lua"] = "7abed3b36b2d35245d2e480daae819d6",
+      ["pparse_spec.lua"] = "b185701242c17394be277dc1575d276d",
+      ["script.lua"] = "71f0afdf5dcbfeb79be07a538991ac39",
+      ["tip_spec.lua"] = "5e5fc51639d38d6b6cacf09a6a190967",
+      ["usage_spec.lua"] = "11520ad07eb1f89cd3d9f7c9ea5af79e"
+   }
+}

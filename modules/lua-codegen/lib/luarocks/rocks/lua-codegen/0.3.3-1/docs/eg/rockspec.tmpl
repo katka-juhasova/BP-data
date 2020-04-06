@@ -1,0 +1,37 @@
+-- file: rockspec.tmpl
+return CodeGen {
+    rockspec = [[
+package = '${name}'
+version = '${version}-${revision}'
+${_source()}
+${_description()}
+${_dependencies()}
+]],
+    _source = [[
+source = {
+    url = ${_url()},
+    md5 = '${md5}',
+    dir = '${name}-${version}',
+},
+]],
+    _description = [[
+description = {
+    ${desc.summary?_summary()}
+    ${desc.homepage?_homepage()}
+    ${desc.maintainer?_maintainer()}
+    ${desc.license?_license()}
+},
+]],
+    _summary = 'summary = "${desc.summary}",',
+    _homepage = 'homepage = "${desc.homepage}",',
+    _maintainer = 'maintainer = "${desc.maintainer}",',
+    _license = 'license = "${desc.license}",',
+    _dependencies = [[
+dependencies = {
+${dependencies/_depend()}
+}
+]],
+    _depend = [[
+    '${name} >= ${version}',
+]],
+}

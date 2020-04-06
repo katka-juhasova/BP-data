@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      ["README.markdown"] = "309152ca34a375ef712828f4cf60e60d"
+   },
+   lua = {
+      wtf = {
+         fork = {
+            resty = {
+               redis = {
+                  ["tcp.lua"] = "7d6872ae619d1931a5b71d589f6b4947",
+                  ["unix.lua"] = "e890c3ee46bbc0ae2e587ece01366e06"
+               }
+            }
+         }
+      }
+   },
+   ["wtf-fork-lua-resty-redis-0.3-1.rockspec"] = "e6fbe38b69f8fdd99313ca905bc2b792"
+}

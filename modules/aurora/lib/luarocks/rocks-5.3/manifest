@@ -1,0 +1,400 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0-1"
+   }
+}
+dependencies = {
+   aurora = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 7, 0, revision = 2, string = "1.7.0-2"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     3, 0, -999.99999, revision = 2, string = "3.0rc1-2"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     2, 1, 0, revision = 1, string = "2.1.0-1"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 4, 1, 53, revision = 1, string = "0.4.1.53-1"
+                  }
+               }
+            },
+            name = "lzlib"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     1, 0, 0, revision = 2, string = "1.0.0-2"
+                  }
+               }
+            },
+            name = "mimetypes"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lzlib = {
+      ["0.4.1.53-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   mimetypes = {
+      ["1.0.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["aurora.fs.basename"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.fs.dirname"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.fs.getFileContents"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.fs.init"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.fs.isDir"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.fs.isFile"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.fs.mkdir"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.fs.setFileContents"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.httpserver.init"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.httpserver.pegasus.compress"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.httpserver.pegasus.file"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.httpserver.pegasus.handler"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.httpserver.pegasus.init"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.httpserver.pegasus.request"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.httpserver.pegasus.response"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.init"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.string.init"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.string.split"] = {
+      "aurora/0.2-1"
+   },
+   ["aurora.template.init"] = {
+      "aurora/0.2-1"
+   },
+   cjson = {
+      "lua-cjson/2.1.0-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0-1"
+   },
+   gzip = {
+      "lzlib/0.4.1.53-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0-1"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   mimetypes = {
+      "mimetypes/1.0.0-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   },
+   zlib = {
+      "lzlib/0.4.1.53-1"
+   }
+}
+repository = {
+   aurora = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0-1",
+               luafilesystem = "1.7.0-2",
+               luasocket = "3.0rc1-2",
+               lzlib = "0.4.1.53-1",
+               mimetypes = "1.0.0-2"
+            },
+            modules = {
+               ["aurora.fs.basename"] = "aurora/fs/basename.lua",
+               ["aurora.fs.dirname"] = "aurora/fs/dirname.lua",
+               ["aurora.fs.getFileContents"] = "aurora/fs/getFileContents.lua",
+               ["aurora.fs.init"] = "aurora/fs/init.lua",
+               ["aurora.fs.isDir"] = "aurora/fs/isDir.lua",
+               ["aurora.fs.isFile"] = "aurora/fs/isFile.lua",
+               ["aurora.fs.mkdir"] = "aurora/fs/mkdir.lua",
+               ["aurora.fs.setFileContents"] = "aurora/fs/setFileContents.lua",
+               ["aurora.httpserver.init"] = "aurora/httpserver/init.lua",
+               ["aurora.httpserver.pegasus.compress"] = "aurora/httpserver/pegasus/compress.lua",
+               ["aurora.httpserver.pegasus.file"] = "aurora/httpserver/pegasus/file.lua",
+               ["aurora.httpserver.pegasus.handler"] = "aurora/httpserver/pegasus/handler.lua",
+               ["aurora.httpserver.pegasus.init"] = "aurora/httpserver/pegasus/init.lua",
+               ["aurora.httpserver.pegasus.request"] = "aurora/httpserver/pegasus/request.lua",
+               ["aurora.httpserver.pegasus.response"] = "aurora/httpserver/pegasus/response.lua",
+               ["aurora.init"] = "aurora/init.lua",
+               ["aurora.string.init"] = "aurora/string/init.lua",
+               ["aurora.string.split"] = "aurora/string/split.lua",
+               ["aurora.template.init"] = "aurora/template/init.lua"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   lzlib = {
+      ["0.4.1.53-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               gzip = "gzip.lua",
+               zlib = "zlib.so"
+            }
+         }
+      }
+   },
+   mimetypes = {
+      ["1.0.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               mimetypes = "mimetypes.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,24 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "dde2e78db8b4451d9f22cdbd91fc095d",
+      ["README.md"] = "b9cf768fdf85cd43ef40fca918c3b9a2"
+   },
+   ["families-0.1-1.rockspec"] = "4e45b21268b1cd650ceec9966fa58ac6",
+   lua = {
+      families = {
+         ["init.lua"] = "0a3dbdd996a56e8a0f3bd75727237d7e",
+         internals = {
+            ["memory.lua"] = "5b6d6a0334bf644bd2f63b342f766e02",
+            ["metatable.lua"] = "8ebf15cee66517fce3ddf838e5eef77b",
+            reason = {
+               ["invalid.lua"] = "9ec37884face1017d26e405a9be692ef",
+               ["missing.lua"] = "596ea92df8fcb166f9dd68580e7345dc"
+            },
+            ["reason.lua"] = "22d2e8b5b9607bcd7da5b73ad474b5a1",
+            ["standard.lua"] = "d04ad9728e1380f2d882b11b56a18668",
+            ["structure.lua"] = "2b0d16e07f12f72336ef1a4df186b42d",
+            ["weak.lua"] = "da1bc5c4bf58a2063521acdb814b13bc"
+         }
+      }
+   }
+}

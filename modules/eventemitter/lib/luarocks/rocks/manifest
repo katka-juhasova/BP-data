@@ -1,0 +1,47 @@
+commands = {}
+dependencies = {
+   eventemitter = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   EventEmitter = {
+      "eventemitter/0.1.1-1"
+   },
+   ["EventEmitter.utils"] = {
+      "eventemitter/0.1.1-1"
+   }
+}
+repository = {
+   eventemitter = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               EventEmitter = "EventEmitter.lua",
+               ["EventEmitter.utils"] = "EventEmitter/utils.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,27 @@
+rock_manifest = {
+   bin = {
+      newick2dot = "d469a945b360e4757e9f8029920b9639"
+   },
+   doc = {
+      LICENSE = "1f443f33803c0e1b6cde3e88a7635c68",
+      ["README.md"] = "8f62aa99a879daa4b8628c5c42d5368b"
+   },
+   lua = {
+      treelua = {
+         ["Graph.lua"] = "1b28dc2b03ff129c106ece6505bd21fd",
+         ["Tree.lua"] = "60626e1f77cb9237c9465fb55612ea36",
+         detail = {
+            ["arrayFromIt.lua"] = "f7f3e1223c8511fb7449b4c955061d30",
+            ["breadthFirst.lua"] = "1513f322eaf6a6a60ee131b42b0ced0e",
+            ["compat.lua"] = "1de29a1cf4021da6feea2d1f97ac1c40",
+            ["depthFirst.lua"] = "c0537e45453856561db98b463d92d151",
+            ["newNeighbours.lua"] = "2c664c7bde1a78ca18780cca4d1007c8"
+         },
+         ["fromNewick.lua"] = "f8d78c03db20456a8a7cb9499a8cfbe8",
+         ["init.lua"] = "b88a967ff2929015b63bf32258b4f34d",
+         ["toDot.lua"] = "026f391e7469bff7f8c7e1b4df02ea62",
+         ["toNewick.lua"] = "4c0add013ec8cd32d2a39a3b492d7c9b"
+      }
+   },
+   ["tree-1.1.0-1.rockspec"] = "62dbc5a4398dccca42b5a0c429d83760"
+}

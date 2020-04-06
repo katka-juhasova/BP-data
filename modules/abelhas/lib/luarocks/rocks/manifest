@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   abelhas = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   pso = {
+      "abelhas/1.1-1"
+   }
+}
+repository = {
+   abelhas = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               pso = "pso.lua"
+            }
+         }
+      }
+   }
+}

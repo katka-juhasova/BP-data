@@ -1,0 +1,27 @@
+rock_manifest = {
+   ["copastimer-1.0.0-1.rockspec"] = "89c343c506defba03705ee0844abc369",
+   doc = {
+      ["index.html"] = "59a82b16f618ec25409e3d010afa30af",
+      ["ldoc.css"] = "ca8708a2582297c21286b80212aec0f5",
+      modules = {
+         ["eventer.html"] = "0aa19e00fbc45fae4abd46d6b8301b2a",
+         ["queueitem.html"] = "770a313d4dcbc0af126e634224df6316",
+         ["timer.html"] = "cde022d0f4e4a51d1bb09cfc76c8e6d8",
+         ["type.html"] = "ba6c4b88883f0af04062e794c933c103"
+      },
+      topics = {
+         ["readme.md.html"] = "d22dc870ce8e9beaf3ccfd151347ba54"
+      }
+   },
+   lua = {
+      copas = {
+         ["eventer.lua"] = "9d4e0978198fd28de25a3b1633a23d56",
+         ["timer.lua"] = "9d621582b650305c6efd3cdd2980a1ff"
+      }
+   },
+   test = {
+      ["eventer_test.lua"] = "56d2868fc8230a2bac0ceb2dc0494cee",
+      ["timer_test.lua"] = "9421a299c3eedfa81c5e06665361781d",
+      ["waitforcondition_test.lua"] = "106ffe733a6b4af504122aa4a0c7e9be"
+   }
+}

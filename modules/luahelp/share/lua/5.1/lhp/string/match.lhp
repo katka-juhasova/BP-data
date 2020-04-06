@@ -1,0 +1,13 @@
+Help [[
+
+string.match (s, pattern [, init])
+----------------------------------
+
+  Looks for the first _match_ of `pattern` in the string `s`. If it finds one,
+  then `match` returns the captures from the pattern; otherwise it returns
+  **nil**. If `pattern` specifies no captures, then the whole match is
+  returned. A third, optional numerical argument `init` specifies where to
+  start the search; its default value is 1 and may be negative.
+
+  __See also__: patterns.
+]]

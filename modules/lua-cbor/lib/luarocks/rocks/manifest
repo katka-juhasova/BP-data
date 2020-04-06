@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-cbor"] = {
+      ["0.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cbor = {
+      "lua-cbor/0.4-1"
+   },
+   ["cbor.bignum"] = {
+      "lua-cbor/0.4-1"
+   }
+}
+repository = {
+   ["lua-cbor"] = {
+      ["0.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cbor = "cbor.lua",
+               ["cbor.bignum"] = "cbor/bignum.lua"
+            }
+         }
+      }
+   }
+}

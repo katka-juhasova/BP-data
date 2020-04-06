@@ -1,0 +1,20 @@
+rock_manifest = {
+   ["bgcrypto-aes-0.1.0-1.rockspec"] = "e0fdc712e0d49cd316a2ab11686ac955",
+   lib = {
+      bgcrypto = {
+         ["aes.so"] = "4df1161dd929268e9381817786ee788a"
+      }
+   },
+   lua = {
+      bgcrypto = {
+         ["cmac.lua"] = "91587b34dc5d844e606e6c89b4498af5",
+         private = {
+            ["bit.lua"] = "69f8844d849b20bcdd761f8004dda14e"
+         }
+      }
+   },
+   test = {
+      ["test_aes.lua"] = "27142f225a35bd49fa39ad78001cdc51",
+      ["utest_aes.lua"] = "3a82cd3e52cf974af1d31c5ffde25875"
+   }
+}

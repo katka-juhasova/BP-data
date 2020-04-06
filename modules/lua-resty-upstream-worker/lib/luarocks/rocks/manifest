@@ -1,0 +1,84 @@
+commands = {}
+dependencies = {
+   ["lua-resty-http"] = {
+      ["0.10-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-upstream-worker"] = {
+      ["0.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 10, revision = 0, string = "0.10-0"
+                  }
+               }
+            },
+            name = "lua-resty-http"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.http"] = {
+      "lua-resty-http/0.10-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.10-0"
+   },
+   ["resty.upstream.worker"] = {
+      "lua-resty-upstream-worker/0.1-2"
+   }
+}
+repository = {
+   ["lua-resty-http"] = {
+      ["0.10-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-upstream-worker"] = {
+      ["0.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-http"] = "0.10-0"
+            },
+            modules = {
+               ["resty.upstream.worker"] = "resty/upstream/worker.lua"
+            }
+         }
+      }
+   }
+}

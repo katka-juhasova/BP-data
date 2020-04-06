@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   ["kong-influxdb"] = {
+      ["1.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.influxdb.buffer"] = {
+      "kong-influxdb/1.0.1-1"
+   },
+   ["kong.plugins.influxdb.handler"] = {
+      "kong-influxdb/1.0.1-1"
+   },
+   ["kong.plugins.influxdb.http"] = {
+      "kong-influxdb/1.0.1-1"
+   },
+   ["kong.plugins.influxdb.schema"] = {
+      "kong-influxdb/1.0.1-1"
+   }
+}
+repository = {
+   ["kong-influxdb"] = {
+      ["1.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.influxdb.buffer"] = "kong/plugins/influxdb/buffer.lua",
+               ["kong.plugins.influxdb.handler"] = "kong/plugins/influxdb/handler.lua",
+               ["kong.plugins.influxdb.http"] = "kong/plugins/influxdb/http.lua",
+               ["kong.plugins.influxdb.schema"] = "kong/plugins/influxdb/schema.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {
+   testingunit = {
+      "testingunit/0.1-0"
+   }
+}
+dependencies = {
+   testingunit = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {}
+repository = {
+   testingunit = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               testingunit = "testingunit"
+            },
+            dependencies = {},
+            modules = {}
+         }
+      }
+   }
+}

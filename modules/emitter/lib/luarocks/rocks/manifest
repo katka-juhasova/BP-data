@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   emitter = {
+      ["0.0.3-1"] = {}
+   }
+}
+modules = {
+   emitter = {
+      "emitter/0.0.3-1"
+   }
+}
+repository = {
+   emitter = {
+      ["0.0.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               emitter = "emitter/init.lua"
+            }
+         }
+      }
+   }
+}

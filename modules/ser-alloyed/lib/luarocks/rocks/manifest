@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["ser-alloyed"] = {
+      ["1.0.0-1"] = {}
+   }
+}
+modules = {
+   ser = {
+      "ser-alloyed/1.0.0-1"
+   }
+}
+repository = {
+   ["ser-alloyed"] = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ser = "ser.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["dromozoa-shlex"] = {
+      ["1.2-1"] = {}
+   }
+}
+modules = {
+   ["dromozoa.shlex"] = {
+      "dromozoa-shlex/1.2-1"
+   }
+}
+repository = {
+   ["dromozoa-shlex"] = {
+      ["1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["dromozoa.shlex"] = "dromozoa/shlex.lua"
+            }
+         }
+      }
+   }
+}

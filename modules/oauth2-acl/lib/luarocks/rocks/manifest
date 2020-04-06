@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["oauth2-acl"] = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.oauth2-acl.handler"] = {
+      "oauth2-acl/0.1-1"
+   },
+   ["kong.plugins.oauth2-acl.schema"] = {
+      "oauth2-acl/0.1-1"
+   }
+}
+repository = {
+   ["oauth2-acl"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.oauth2-acl.handler"] = "kong/plugins/oauth2-acl/handler.lua",
+               ["kong.plugins.oauth2-acl.schema"] = "kong/plugins/oauth2-acl/schema.lua"
+            }
+         }
+      }
+   }
+}

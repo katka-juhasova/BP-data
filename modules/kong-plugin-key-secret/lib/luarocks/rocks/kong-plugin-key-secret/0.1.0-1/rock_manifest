@@ -1,0 +1,22 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "7f960b3a26edb79ab5a1394786eff8fd"
+   },
+   ["kong-plugin-key-secret-0.1.0-1.rockspec"] = "2f16880633c4fe8b9ca7af9b268a019a",
+   lua = {
+      kong = {
+         plugins = {
+            ["key-secret"] = {
+               ["access.lua"] = "785cff9cc011544d9fdf2f77d6d7d9d2",
+               ["handler.lua"] = "6943e119fca7c596fc0af94033b2396e",
+               ["schema.lua"] = "463b9392cf13830fe79adea21019737c"
+            }
+         }
+      },
+      spec = {
+         ["key-secret"] = {
+            ["01-access_spec.lua"] = "5c3e4dd92e118b706a2b1f58bc1f6e7b"
+         }
+      }
+   }
+}

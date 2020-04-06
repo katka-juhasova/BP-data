@@ -1,0 +1,90 @@
+commands = {}
+dependencies = {
+   lerror = {
+      ["1.0-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 1, string = "1.1"
+                  }
+               }
+            },
+            name = "lobject"
+         }
+      }
+   },
+   lobject = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lerror.exceptions"] = {
+      "lerror/1.0-3"
+   },
+   ["lerror.init"] = {
+      "lerror/1.0-3"
+   },
+   lobject = {
+      "lobject/1.1-1"
+   }
+}
+repository = {
+   lerror = {
+      ["1.0-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lobject = "1.1-1"
+            },
+            modules = {
+               ["lerror.exceptions"] = "lerror/exceptions.lua",
+               ["lerror.init"] = "lerror/init.lua"
+            }
+         }
+      }
+   },
+   lobject = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lobject = "lobject.lua"
+            }
+         }
+      }
+   }
+}

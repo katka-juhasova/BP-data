@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "9741c346eef56131163e13b9db1241b3",
+      ["README.md"] = "2a22f60063ef5e09618220cfaa58d51d"
+   },
+   ["gonapps-url-query-parser-1.0-4.rockspec"] = "97403d81fd50492069388ae2aa61dc95",
+   lua = {
+      gonapps = {
+         url = {
+            query = {
+               ["parser.lua"] = "025bf24f7806961f73b0fc79fd84a5d7"
+            }
+         }
+      }
+   }
+}

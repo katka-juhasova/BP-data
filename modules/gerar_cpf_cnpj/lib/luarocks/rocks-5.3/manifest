@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   gerar_cpf_cnpj = {
+      ["0.1.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   gerar_cpf_cnpj = {
+      "gerar_cpf_cnpj/0.1.1-2"
+   }
+}
+repository = {
+   gerar_cpf_cnpj = {
+      ["0.1.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               gerar_cpf_cnpj = "gerar_cpf_cnpj.lua"
+            }
+         }
+      }
+   }
+}

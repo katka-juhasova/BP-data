@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Peter Aronoff">
+<title>tableutils documentation</title>
+<link rel="stylesheet" href="normalize.css" media="screen,projection">
+<link rel="stylesheet" href="screen.css" media="screen,projection">
+</head>
+<body>
+<h1>tableutils <a href="https://travis-ci.org/telemachus/tableutils"><img src="https://travis-ci.org/telemachus/tableutils.svg?branch=master" alt="Build Status" /></a> <a href="https://codecov.io/gh/telemachus/tableutils"><img src="https://codecov.io/gh/telemachus/tableutils/branch/master/graph/badge.svg" alt="codecov" /></a></h1>
+
+<p>Convenience methods for processing and testing tables. One set of utility
+methods for list-like tables and another for hash-like tables.</p>
+
+<p>In all methods below, the term &lsquo;list&rsquo; or &lsquo;hash&rsquo; refers to a Lua table. Lua
+tables can be list-like, ordered by integers, or hash-like, unordered
+collections of key-value pairs.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> They can also be a combination of both
+types at once. However, the methods here are designed only for pure list- or
+hash-like tables. Also, all list-like tables are assumed to start at 1, which
+is the norm in Lua.</p>
+
+<h2>listutils</h2>
+
+<p>Unless otherwise specified, all listutils functions process lists in the order
+<code>list[1]</code> to <code>list[#list]</code>. To access these methods, use <code>require 'listutils'</code>.</p>
+
+<ul>
+<li><p><code>foreach(func, list)</code></p>
+
+<p>  Applies a function to every item in a list. No return value.</p></li>
+<li><p><code>foreach_withindex(func, list)</code></p>
+
+<p>  Like <code>foreach</code> except that the inner function receives two arguments:
+  an item from the list and the items&rsquo;s index, in that order. No return
+  value.</p></li>
+<li><p><code>map(func, list)</code></p>
+
+<p>  Returns a new list containing the result of applying a function to
+  every item in a list.</p></li>
+<li><p><code>foldl(func, accumulator, list)</code></p>
+
+<p>  Returns a single value produced by repeatedly applying a function to
+  the items in a list. The function receives two arguments and should
+  return a single value. The initial arguments are <code>accumulator</code> and
+  <code>list[1]</code>.  The return value of each function call becomes the first of
+  the two values for subsequent calls.</p>
+
+<p>  <code>reduce</code> is provided as an alias for <code>foldl</code>.</p></li>
+<li><p><code>foldr(func, accumulator, list)</code></p>
+
+<p>  Returns a single value produced by repeatedly applying a function to
+  the items in a list in the order <code>list[#list]</code> to <code>list[1]</code>. The
+  function receives two arguments and should return a single result. The
+  first two arguments are <code>accumulator</code> and <code>list[#last]</code>. The return
+  value of each function call becomes the first of the two values for
+  subsequent calls.</p></li>
+<li><p><code>filter(func, list)</code></p>
+
+<p>  Returns a new list containing all items from a list which return <code>true</code>
+  for a function.</p></li>
+<li><p><code>partition(func, list)</code></p>
+
+<p>  Returns two new lists, the first containing all the items from a list
+  that return <code>true</code> for a function and the second containing all the
+  items that return <code>false</code>.</p></li>
+<li><p><code>all(func, list)</code></p>
+
+<p>  Returns <code>false</code> if any item in a list returns <code>false</code> for a function.
+  Otherwise, returns <code>true</code>.</p>
+
+<p>  Thus, <code>all</code> returns <code>true</code> if called on an empty list.</p></li>
+<li><p><code>any(func, list)</code></p>
+
+<p>  Returns <code>true</code> if any item in a list returns <code>true</code> for a function.
+  Otherwise, returns <code>false</code>.</p>
+
+<p>  Thus, <code>any</code> returns <code>false</code> if called on an empty list.</p></li>
+<li><p><code>member(element, list)</code></p>
+
+<p>  Returns <code>true</code> if any of the items in a list are equal to an element.
+  Otherwise, returns <code>false</code>. <code>member</code> uses <code>==</code> to test for equality.</p></li>
+<li><p><code>zip(list1, list2)</code></p>
+
+<p>  Returns a new list composed of sublists of pairs of items formed by
+  joining the first item in <code>list1</code> with the first item in <code>list2</code> and so
+  on. If the two lists are of unequal length, the return value will only
+  extend as far as the shorter of the two; extra values in either lists
+  are ignored.</p></li>
+<li><p><code>stitch(list1, list2)</code></p>
+
+<p>  Returns a hash-like table using <code>list1</code> for keys and <code>list2</code> for
+  values. If the two lists are of unequal length, the return value will
+  only have as many pairs as the shorter of the two; extra values are
+  ignored.</p></li>
+<li><p><code>max(list)</code></p>
+
+<p>  Returns the largest item in list. Items are compared using <code>&gt;</code>, so for
+  all intents and purposes, the function is only designed for numbers.
+  Returns nil if given an empty list.</p></li>
+<li><p><code>min(list)</code></p>
+
+<p>  Returns the smallest item in list. Items are compared using <code>&lt;</code>, so for
+  all intents and purposes, the function is only designed for numbers.
+  Returns nil if given an empty list.</p></li>
+<li><p><code>sum(list)</code></p>
+
+<p>  Returns a sum of the contents of a list. The method uses <code>+</code>, so the
+  list should only contain numbers. Returns 0 if the list is empty.</p></li>
+<li><p><code>product(list)</code></p>
+
+<p>  Returns a product of the contents of a list. The method uses <code>*</code>, so
+  the list should only contain numbers. Returns 1 if the list is empty.</p></li>
+</ul>
+
+
+<h2>hashutils</h2>
+
+<p>To access these methods, use <code>require 'hashutils'</code>.</p>
+
+<ul>
+<li><p><code>foreach(func, hash)</code></p>
+
+<p>  Applies a function to the key, value pairs in a hash. The function
+  receives two arguments each iteration: a key and a value, in that
+  order.  No return value.</p></li>
+<li><p><code>map(func, hash)</code></p>
+
+<p>  Returns a table formed by applying a function to the key, value pairs
+  in a hash. Unlike <code>map</code> in listutils, the function receives three
+  arguments: a key, a value, and the table that <code>map</code> will eventually
+  return. As a result this <code>map</code> is more flexible than the one in
+  listutils. It can return a hash-like table, a list-like table, or
+  a mixed table.</p></li>
+<li><p><code>reduce(func, accumulator, hash)</code></p>
+
+<p>  Returns a single value produced by repeatedly applying a function to
+  the key, value pairs in a hash. The function receives three arguments
+  and should return a single value. Each call to the function receives an
+  accumulator, a key, and a value, in that order. The initial function
+  call receives the original accumulator argument passed to <code>reduce</code>.
+  Each subsequent call receives the result of the previous call as the
+  current accumulator.</p></li>
+<li><p><code>filter(func, hash)</code></p>
+
+<p>  Returns a new hash containing all key, value pairs from a hash which
+  return <code>true</code> for a function.</p></li>
+<li><p><code>partition(func, hash)</code></p>
+
+<p>  Returns two new hashes, the first containing all key, value pairs from
+  a hash that return <code>true</code> for a function and the second containing all
+  key, value pairs that return <code>false</code>.</p></li>
+<li><p><code>all(func, hash)</code></p>
+
+<p>  Returns <code>false</code> if any item in a hash returns <code>false</code> for a function.
+  Otherwise, returns <code>true</code>.</p>
+
+<p>  Thus, <code>all</code> returns <code>true</code> if called on an empty hash.</p></li>
+<li><p><code>any(func, hash)</code></p>
+
+<p>  Returns <code>true</code> if any item in a hash returns <code>true</code> for a function.
+  Otherwise, returns <code>false</code>.</p>
+
+<p>  Thus, <code>any</code> returns <code>false</code> if called on an empty hash.</p></li>
+<li><p><code>iskey(element, hash)</code></p>
+
+<p>  Returns <code>true</code> if any key in a hash is equal to an element. Otherwise,
+  returns <code>false</code>. <code>iskey</code> uses <code>==</code> to test for equality.</p></li>
+<li><p><code>isval(element, hash)</code></p>
+
+<p>  Returns <code>true</code> if any value in a hash is equal to an element.
+  Otherwise, returns <code>false</code>. <code>isval</code> uses <code>==</code> to test for equality.</p></li>
+<li><p><code>keys(hash)</code></p>
+
+<p>  Returns a list-like table containing the keys from a hash.</p></li>
+<li><p><code>values(hash)</code></p>
+
+<p>  Returns a list-like table containing the values from a hash.</p></li>
+</ul>
+
+
+<h2>Varia</h2>
+
+<p>The module provides four informational functions that return strings. Both sub-modules export the same four functions.</p>
+
+<ul>
+<li><p><code>version() -- 2.2.1</code></p></li>
+<li><p><code>author() -- Peter Aronoff</code></p></li>
+<li><p><code>url() -- https://github.com/telemachus/tableutils</code></p></li>
+<li><p><code>license() -- BSD 3-Clause</code></p></li>
+</ul>
+
+
+<h2>Credits/See Also</h2>
+
+<p>I think I first got the idea for a utility library like this from
+<a href="http://underscorejs.org">Underscore.js</a>. But I also looked at <a href="https://github.com/stevedonovan/Penlight">Penlight</a> and
+Underscore for Lua. (There are two versions of Underscore for Lua, and both
+appear to be unmaintained. The older one is <a href="https://github.com/mirven/underscore.lua">Marcus Irven&rsquo;s underscore.lua</a>,
+and a more recent one is <a href="https://github.com/jtarchie/underscore-lua">JT Archie&rsquo;s underscore-lua</a>. Irven&rsquo;s version
+hasn&rsquo;t been updated in six years, and it was never uploaded to LuaRocks.
+Archie&rsquo;s was uploaded to LuaRocks, but it is explicitly deprecated in favor of
+<a href="https://github.com/Yonaba/Moses">Moses</a>. In any case, I was only aware of Irven&rsquo;s version when writing
+tableutils. I discovered Archie&rsquo;s version much later.) I also took some
+ideas from Perl&rsquo;s built-in methods and those found in <a href="http://perldoc.perl.org/List/Util.html">List::Util</a>. After
+writing tableutils, I discovered <a href="https://github.com/Yonaba/Moses">Moses</a>, a &ldquo;utility library for functional
+programming in Lua&rdquo;.</p>
+
+<p>All mistakes are mine. See <a href="changes.html">version history</a> for release details.</p>
+
+<hr />
+
+<p>&copy; 2013-2018 Peter Aronoff. BSD 3-Clause license; see <a href="license.html">the license</a> for
+details.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>This isn&rsquo;t quite true. The truth is that <em>all</em> Lua tables are unordered collections of key-value pairs. However, if the keys are consecutive integers, then it is easy enough to treat such a table as if it were ordered.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</body>
+</html>

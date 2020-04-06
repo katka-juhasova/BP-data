@@ -1,0 +1,106 @@
+commands = {
+   lualines = {
+      "lualines/1.0-0"
+   }
+}
+dependencies = {
+   ["alt-getopt"] = {
+      ["0.8.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lualines = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 7, string = "0.7"
+                  }
+               }
+            },
+            name = "alt-getopt"
+         }
+      }
+   }
+}
+modules = {
+   alt_getopt = {
+      "alt-getopt/0.8.0-1"
+   },
+   lualines = {
+      "lualines/1.0-0"
+   },
+   ["lualines.methods"] = {
+      "lualines/1.0-0"
+   },
+   ["lualines.util"] = {
+      "lualines/1.0-0"
+   }
+}
+repository = {
+   ["alt-getopt"] = {
+      ["0.8.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               alt_getopt = "alt_getopt.lua"
+            }
+         }
+      }
+   },
+   lualines = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               lualines = "lualines"
+            },
+            dependencies = {
+               ["alt-getopt"] = "0.8.0-1"
+            },
+            modules = {
+               lualines = "lualines/init.lua",
+               ["lualines.methods"] = "lualines/methods.lua",
+               ["lualines.util"] = "lualines/util.lua"
+            }
+         }
+      }
+   }
+}

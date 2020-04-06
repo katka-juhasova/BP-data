@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-aws-lambda-status-code"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.aws-lambda-status-code.handler"] = {
+      "kong-plugin-aws-lambda-status-code/0.1.0-1"
+   },
+   ["kong.plugins.aws-lambda-status-code.schema"] = {
+      "kong-plugin-aws-lambda-status-code/0.1.0-1"
+   },
+   ["kong.plugins.aws-lambda-status-code.v4"] = {
+      "kong-plugin-aws-lambda-status-code/0.1.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-aws-lambda-status-code"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.aws-lambda-status-code.handler"] = "kong/plugins/aws-lambda-status-code/handler.lua",
+               ["kong.plugins.aws-lambda-status-code.schema"] = "kong/plugins/aws-lambda-status-code/schema.lua",
+               ["kong.plugins.aws-lambda-status-code.v4"] = "kong/plugins/aws-lambda-status-code/v4.lua"
+            }
+         }
+      }
+   }
+}

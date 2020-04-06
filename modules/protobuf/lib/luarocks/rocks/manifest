@@ -1,0 +1,79 @@
+commands = {}
+dependencies = {
+   protobuf = {
+      ["1.1.2-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   protobuf = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.containers"] = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.decoder"] = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.descriptor"] = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.encoder"] = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.listener"] = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.pb"] = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.text_format"] = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.type_checkers"] = {
+      "protobuf/1.1.2-0"
+   },
+   ["protobuf.wire_format"] = {
+      "protobuf/1.1.2-0"
+   }
+}
+repository = {
+   protobuf = {
+      ["1.1.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               protobuf = "protobuf/init.lua",
+               ["protobuf.containers"] = "protobuf/containers.lua",
+               ["protobuf.decoder"] = "protobuf/decoder.lua",
+               ["protobuf.descriptor"] = "protobuf/descriptor.lua",
+               ["protobuf.encoder"] = "protobuf/encoder.lua",
+               ["protobuf.listener"] = "protobuf/listener.lua",
+               ["protobuf.pb"] = "protobuf/pb.so",
+               ["protobuf.text_format"] = "protobuf/text_format.lua",
+               ["protobuf.type_checkers"] = "protobuf/type_checkers.lua",
+               ["protobuf.wire_format"] = "protobuf/wire_format.lua"
+            }
+         }
+      }
+   }
+}

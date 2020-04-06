@@ -1,0 +1,72 @@
+rock_manifest = {
+   doc = {
+      COPYING = "7dd2aad04bb7ca212e69127ba8d58f9f",
+      README = "d2086c9a43cecc3d3df3d31fe63e356f",
+      luaposix = {
+         examples = {
+            ["dir.lua.html"] = "8066cfb0d169e24701ba6b2c4a15849f",
+            ["fork.lua.html"] = "58e4921590adeddbb51047310765bab4",
+            ["fork2.lua.html"] = "6ded0d3c0be0c4b1d8b7eaa602c42f00",
+            ["getopt.lua.html"] = "985687ab444d072f4262d406b9d3a558",
+            ["glob.lua.html"] = "4d814d6a274f36d5aa203009e35c7b1d",
+            ["limit.lua.html"] = "169ab0e11e185dfe5767423de5fa7020",
+            ["lock.lua.html"] = "76788cb5b2932885df956a5653730c8f",
+            ["netlink-uevent.lua.html"] = "ea8ca702452c8777da7f2112fac2a220",
+            ["ping.lua.html"] = "31a69590d0d0f65682cb6246b1353fbd",
+            ["poll.lua.html"] = "e04d3adec96860048a9bae312a354ed3",
+            ["signal.lua.html"] = "bd4f812537dd14367eb4758889ea8fcf",
+            ["socket.lua.html"] = "dae0f157949943b4c9c0e2582ae9f49f",
+            ["termios.lua.html"] = "7bbff509e75f0773661f51c0808c6c5d",
+            ["tree.lua.html"] = "3068335e3bf61462b10594bfa45e9e9a"
+         },
+         ["index.html"] = "ab92f81d7598864463bdce49ac0d0dbe",
+         ["ldoc.css"] = "f9ac1f28d976ae7c42bfabc154196d68",
+         modules = {
+            ["posix.ctype.html"] = "430ab01985def11e194c3aae54f0b665",
+            ["posix.dirent.html"] = "ab9dc19d883c32128ea1c870eef84663",
+            ["posix.errno.html"] = "dfc04eb6c45c9a9242c50bbb6ee91d1f",
+            ["posix.fcntl.html"] = "b51103862b62ef9ff5c94e486aa5bf13",
+            ["posix.fnmatch.html"] = "d70fcf0dd9fe8e08cbc5bed502c69578",
+            ["posix.getopt.html"] = "c8231a2b88dec0da19927ebe0c0ad2d8",
+            ["posix.glob.html"] = "9bcdf294469191ad21500c387bbbd4ef",
+            ["posix.grp.html"] = "4877245f788bdde32aa6aa3776b0c3f4",
+            ["posix.html"] = "e17ddd628ea035f374742beac68f3ede",
+            ["posix.libgen.html"] = "9942d5f94fd501ab5195c19abbbf6d9b",
+            ["posix.poll.html"] = "08d3ee9237026a2a87b539311250efb3",
+            ["posix.pwd.html"] = "96c317b2a61161ade63000d188b412c7",
+            ["posix.sched.html"] = "948919cf9599c06af616a0906580d45e",
+            ["posix.signal.html"] = "d4d707bf36dd6d789795de1c9797e916",
+            ["posix.stdio.html"] = "fffd74ad15bec5c9ae9cb3f3e1045d1a",
+            ["posix.stdlib.html"] = "b0b585b5139cc17938b2da3e49e8e6c3",
+            ["posix.sys.msg.html"] = "a48b09a09282311e5045ad82eaae5340",
+            ["posix.sys.resource.html"] = "b772757815eda1e189838c2a9ab6d360",
+            ["posix.sys.socket.html"] = "a9a808e21ab0e728b6b07774f80f0042",
+            ["posix.sys.stat.html"] = "c512cb7e075b1d206b94190fccb97702",
+            ["posix.sys.statvfs.html"] = "2c47e6de47111593d6299e7ef761b35c",
+            ["posix.sys.time.html"] = "f92c7d063ee4820bebcd6ef3100e937c",
+            ["posix.sys.times.html"] = "159a31460583012953e36df0f7554dda",
+            ["posix.sys.utsname.html"] = "3e8e3e7d964639a623f421b2c9c3ced3",
+            ["posix.sys.wait.html"] = "f03ecf2fb67bf09899a5588f62437d29",
+            ["posix.syslog.html"] = "735a409db5f64505510cf720990ed46e",
+            ["posix.termio.html"] = "4712f496892c1e73d9c5547161107f2e",
+            ["posix.time.html"] = "a87fa56005f907fefae5dd8d4a6f6b4e",
+            ["posix.unistd.html"] = "cf302c9407a85d521b537e24634cf7bf",
+            ["posix.utime.html"] = "99b224a120a4ac8b033e36461c265397"
+         }
+      }
+   },
+   lib = {
+      ["posix.so"] = "e68861bf6b4631f70fe6c98182c258a3"
+   },
+   lua = {
+      posix = {
+         ["_argcheck.lua"] = "21bcd86cc6f3c7ed141d40b06fba5c5d",
+         ["compat.lua"] = "52966fa0f23c5d096b26fb7eb613eb60",
+         ["deprecated.lua"] = "cfbf112d5c83fc14697e08b8b3a418eb",
+         ["init.lua"] = "c842ca07bc4acd5dbfd6123cb86c7950",
+         ["sys.lua"] = "03a27f148b2792e1f994c17813adb6e5",
+         ["util.lua"] = "6c3c97305cdf3a4d0b88c23a113b3216"
+      }
+   },
+   ["luaposix-33.4.0-1.rockspec"] = "e413e0b9a680a040d8fb1adfa0dc4c11"
+}

@@ -1,0 +1,19 @@
+rock_manifest = {
+   ["ansikit-1.0-1.rockspec"] = "9a90607bffb7eecab55e1505ad16e5bf",
+   doc = {
+      ["LICENSE.md"] = "304a6e0c5de13fc85e286dd853bbd675",
+      ["README.md"] = "4191f0f75b1d33afc000fb61760c7ebf"
+   },
+   lua = {
+      ansikit = {
+         ["color.lua"] = "1885de7f7a092ab492a98144bce9d5e1",
+         ["cursor.lua"] = "0ce2817eb454f1f2359a615d7c058937",
+         ["page.lua"] = "3ede80cc4f3eee915c8a6c83561c6eaa",
+         ["paint.lua"] = "6e4d33f847c84834c739bad3715d45a3",
+         ["palette.lua"] = "55bf1269e07e40cbcd5de7defb968cc6",
+         ["sequence.lua"] = "d706128395e9f43a8bd8bec17cfb6d00",
+         ["style.lua"] = "5afb72b1f65d25cf072d4d31bf58be2d",
+         ["text.lua"] = "cdcbc793abee421564de51afd93f4ccc"
+      }
+   }
+}

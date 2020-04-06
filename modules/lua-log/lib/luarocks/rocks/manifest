@@ -1,0 +1,256 @@
+commands = {}
+dependencies = {
+   date = {
+      ["2.1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-log"] = {
+      ["0.1.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 0, string = "2.0"
+                  }
+               }
+            },
+            name = "date"
+         }
+      }
+   }
+}
+modules = {
+   date = {
+      "date/2.1.2-1"
+   },
+   log = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.formatter.concat"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.formatter.default"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.formatter.format"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.formatter.mix"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.formatter.pformat"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.logformat.default"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.logformat.proxy"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.logformat.proxy.pack"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.logformat.syslog"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.async._private.server"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.async.lane"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.async.server.lane"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.async.server.udp"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.async.server.zmq"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.async.udp"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.async.zmq"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.console"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.console.color"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.file"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.file.by_day"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.file.private.impl"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.file.roll"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.filter"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.filter.lvl.eq"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.filter.lvl.le"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.format"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.list"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.server.udp"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.server.zmq"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.smtp"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.udp"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.zmq"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.zmq._private.compat"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.zmq._private.impl"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.zmq.pub"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.zmq.push"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.net.zmq.srv.pub"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.prefix"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.stderr"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log.writer.stdout"] = {
+      "lua-log/0.1.6-1"
+   },
+   ["log/writer/console/.color.lua.un~"] = {
+      "lua-log/0.1.6-1"
+   }
+}
+repository = {
+   date = {
+      ["2.1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               date = "date.lua"
+            }
+         }
+      }
+   },
+   ["lua-log"] = {
+      ["0.1.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               date = "2.1.2-1"
+            },
+            modules = {
+               log = "log.lua",
+               ["log.formatter.concat"] = "log/formatter/concat.lua",
+               ["log.formatter.default"] = "log/formatter/default.lua",
+               ["log.formatter.format"] = "log/formatter/format.lua",
+               ["log.formatter.mix"] = "log/formatter/mix.lua",
+               ["log.formatter.pformat"] = "log/formatter/pformat.lua",
+               ["log.logformat.default"] = "log/logformat/default.lua",
+               ["log.logformat.proxy"] = "log/logformat/proxy.lua",
+               ["log.logformat.proxy.pack"] = "log/logformat/proxy/pack.lua",
+               ["log.logformat.syslog"] = "log/logformat/syslog.lua",
+               ["log.writer.async._private.server"] = "log/writer/async/_private/server.lua",
+               ["log.writer.async.lane"] = "log/writer/async/lane.lua",
+               ["log.writer.async.server.lane"] = "log/writer/async/server/lane.lua",
+               ["log.writer.async.server.udp"] = "log/writer/async/server/udp.lua",
+               ["log.writer.async.server.zmq"] = "log/writer/async/server/zmq.lua",
+               ["log.writer.async.udp"] = "log/writer/async/udp.lua",
+               ["log.writer.async.zmq"] = "log/writer/async/zmq.lua",
+               ["log.writer.console"] = "log/writer/console.lua",
+               ["log.writer.console.color"] = "log/writer/console/color.lua",
+               ["log.writer.file"] = "log/writer/file.lua",
+               ["log.writer.file.by_day"] = "log/writer/file/by_day.lua",
+               ["log.writer.file.private.impl"] = "log/writer/file/private/impl.lua",
+               ["log.writer.file.roll"] = "log/writer/file/roll.lua",
+               ["log.writer.filter"] = "log/writer/filter.lua",
+               ["log.writer.filter.lvl.eq"] = "log/writer/filter/lvl/eq.lua",
+               ["log.writer.filter.lvl.le"] = "log/writer/filter/lvl/le.lua",
+               ["log.writer.format"] = "log/writer/format.lua",
+               ["log.writer.list"] = "log/writer/list.lua",
+               ["log.writer.net.server.udp"] = "log/writer/net/server/udp.lua",
+               ["log.writer.net.server.zmq"] = "log/writer/net/server/zmq.lua",
+               ["log.writer.net.smtp"] = "log/writer/net/smtp.lua",
+               ["log.writer.net.udp"] = "log/writer/net/udp.lua",
+               ["log.writer.net.zmq"] = "log/writer/net/zmq.lua",
+               ["log.writer.net.zmq._private.compat"] = "log/writer/net/zmq/_private/compat.lua",
+               ["log.writer.net.zmq._private.impl"] = "log/writer/net/zmq/_private/impl.lua",
+               ["log.writer.net.zmq.pub"] = "log/writer/net/zmq/pub.lua",
+               ["log.writer.net.zmq.push"] = "log/writer/net/zmq/push.lua",
+               ["log.writer.net.zmq.srv.pub"] = "log/writer/net/zmq/srv/pub.lua",
+               ["log.writer.prefix"] = "log/writer/prefix.lua",
+               ["log.writer.stderr"] = "log/writer/stderr.lua",
+               ["log.writer.stdout"] = "log/writer/stdout.lua",
+               ["log/writer/console/.color.lua.un~"] = "log/writer/console/.color.lua.un~"
+            }
+         }
+      }
+   }
+}

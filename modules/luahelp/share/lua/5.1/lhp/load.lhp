@@ -1,0 +1,16 @@
+Help [[
+
+load (func [, chunkname])
+-------------------------
+
+  Loads a chunk using function `func` to get its pieces. Each call to `func`
+  must return a string that concatenates with previous results. A return
+  of **nil** (or no value) signals the end of the chunk.
+
+  If there are no errors, returns the compiled chunk as a function; otherwise,
+  returns **nil** plus the error message. The environment of the returned
+  function is the global environment.
+
+  `chunkname` is used as the chunk name for error messages and debug
+  information.
+]]

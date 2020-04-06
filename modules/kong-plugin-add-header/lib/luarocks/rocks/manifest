@@ -1,0 +1,181 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   classic = {
+      ["0.1.0-1"] = {}
+   },
+   ["kong-lib-logger"] = {
+      ["0.4.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, revision = 1, string = "0.1.0-1"
+                  }
+               }
+            },
+            name = "classic"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, 0, revision = 1, string = "2.1.0-1"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         }
+      }
+   },
+   ["kong-plugin-add-header"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 1, 0, revision = 1, string = "0.1.0-1"
+                  }
+               }
+            },
+            name = "classic"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 3, 0, revision = 1, string = "0.3.0-1"
+                  }
+               }
+            },
+            name = "kong-lib-logger"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   classic = {
+      "classic/0.1.0-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["kong.plugins.add-header.handler"] = {
+      "kong-plugin-add-header/0.1.0-1"
+   },
+   ["kong.plugins.add-header.schema"] = {
+      "kong-plugin-add-header/0.1.0-1"
+   },
+   logger = {
+      "kong-lib-logger/0.4.0-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+repository = {
+   classic = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               classic = "classic.lua"
+            }
+         }
+      }
+   },
+   ["kong-lib-logger"] = {
+      ["0.4.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               classic = "0.1.0-1",
+               ["lua-cjson"] = "2.1.0.6-1"
+            },
+            modules = {
+               logger = "logger.lua"
+            }
+         }
+      }
+   },
+   ["kong-plugin-add-header"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               classic = "0.1.0-1",
+               ["kong-lib-logger"] = "0.4.0-1",
+               ["lua-cjson"] = "2.1.0.6-1"
+            },
+            modules = {
+               ["kong.plugins.add-header.handler"] = "kong/plugins/add-header/handler.lua",
+               ["kong.plugins.add-header.schema"] = "kong/plugins/add-header/schema.lua"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   }
+}

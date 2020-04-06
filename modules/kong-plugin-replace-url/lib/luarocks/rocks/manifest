@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-replace-url"] = {
+      ["0.3.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.replace-url.handler"] = {
+      "kong-plugin-replace-url/0.3.0-1"
+   },
+   ["kong.plugins.replace-url.schema"] = {
+      "kong-plugin-replace-url/0.3.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-replace-url"] = {
+      ["0.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.replace-url.handler"] = "kong/plugins/replace-url/handler.lua",
+               ["kong.plugins.replace-url.schema"] = "kong/plugins/replace-url/schema.lua"
+            }
+         }
+      }
+   }
+}

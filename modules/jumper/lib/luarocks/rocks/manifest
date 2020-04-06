@@ -1,0 +1,77 @@
+commands = {}
+dependencies = {
+   jumper = {
+      ["1.8.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["jumper.core.bheap"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.core.heuristics"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.core.node"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.core.path"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.grid"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.pathfinder"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.search.astar"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.search.bfs"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.search.dfs"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.search.dijkstra"] = {
+      "jumper/1.8.1-1"
+   },
+   ["jumper.search.jps"] = {
+      "jumper/1.8.1-1"
+   }
+}
+repository = {
+   jumper = {
+      ["1.8.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["jumper.core.bheap"] = "jumper/core/bheap.lua",
+               ["jumper.core.heuristics"] = "jumper/core/heuristics.lua",
+               ["jumper.core.node"] = "jumper/core/node.lua",
+               ["jumper.core.path"] = "jumper/core/path.lua",
+               ["jumper.grid"] = "jumper/grid.lua",
+               ["jumper.pathfinder"] = "jumper/pathfinder.lua",
+               ["jumper.search.astar"] = "jumper/search/astar.lua",
+               ["jumper.search.bfs"] = "jumper/search/bfs.lua",
+               ["jumper.search.dfs"] = "jumper/search/dfs.lua",
+               ["jumper.search.dijkstra"] = "jumper/search/dijkstra.lua",
+               ["jumper.search.jps"] = "jumper/search/jps.lua"
+            }
+         }
+      }
+   }
+}

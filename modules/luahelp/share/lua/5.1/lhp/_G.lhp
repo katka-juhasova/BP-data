@@ -1,0 +1,10 @@
+Help [[
+
+_G
+--
+
+  A global variable (not a function) that holds the global environment (that
+  is, `_G._G = _G`). Lua itself does not use this variable; changing its value
+  does not affect any environment, nor vice-versa. (Use `setfenv` to change
+  environments.)
+]]

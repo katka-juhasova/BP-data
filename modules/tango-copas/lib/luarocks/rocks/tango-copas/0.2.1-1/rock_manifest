@@ -1,0 +1,24 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "270dc9220810736a717789547a34035a"
+   },
+   lua = {
+      tango = {
+         client = {
+            ["socket.lua"] = "336bdd57dfbf8b7992555e880658538f"
+         },
+         ["config.lua"] = "b4cec2c83002747cdd3e98aabd0c9d6d",
+         ["dispatcher.lua"] = "ef6cc481acf1bd9a2dc7b0c1692e86c7",
+         ["proxy.lua"] = "d30cbd41b4df52a748054161b2ccbe82",
+         server = {
+            ["copas_socket.lua"] = "913e6646e38b12cb0dba0a860318a09b"
+         },
+         utils = {
+            ["serialization.lua"] = "a8e82e98bd1b14f27a9c707b0c3d72e9",
+            ["socket_message.lua"] = "dad695cae54a9037eafc5aacadb717c6"
+         }
+      },
+      ["tango.lua"] = "45d18bb874f2b427bdcbda41fde5da16"
+   },
+   ["tango-copas-0.2.1-1.rockspec"] = "d11f484a5aa7ce0039d7f818202d7e5f"
+}

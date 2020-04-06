@@ -1,0 +1,124 @@
+commands = {}
+dependencies = {
+   ["lua-resty-qless"] = {
+      ["0.11-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 5, string = "0.05"
+                  }
+               }
+            },
+            name = "lua-resty-redis-connector"
+         }
+      }
+   },
+   ["lua-resty-redis-connector"] = {
+      ["0.08-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   qless = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["qless-lib"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.job"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.luascript"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.queue"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.recurring_job"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.reserver.ordered"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.reserver.round_robin"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.reserver.shuffled_round_robin"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.worker"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.redis.connector"] = {
+      "lua-resty-redis-connector/0.08-0"
+   },
+   ["resty.redis.sentinel"] = {
+      "lua-resty-redis-connector/0.08-0"
+   }
+}
+repository = {
+   ["lua-resty-qless"] = {
+      ["0.11-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-redis-connector"] = "0.08-0"
+            },
+            modules = {
+               qless = "qless.lua",
+               ["qless-lib"] = "qless-lib.lua",
+               ["resty.qless"] = "resty/qless.lua",
+               ["resty.qless.job"] = "resty/qless/job.lua",
+               ["resty.qless.luascript"] = "resty/qless/luascript.lua",
+               ["resty.qless.queue"] = "resty/qless/queue.lua",
+               ["resty.qless.recurring_job"] = "resty/qless/recurring_job.lua",
+               ["resty.qless.reserver.ordered"] = "resty/qless/reserver/ordered.lua",
+               ["resty.qless.reserver.round_robin"] = "resty/qless/reserver/round_robin.lua",
+               ["resty.qless.reserver.shuffled_round_robin"] = "resty/qless/reserver/shuffled_round_robin.lua",
+               ["resty.qless.worker"] = "resty/qless/worker.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-redis-connector"] = {
+      ["0.08-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.redis.connector"] = "resty/redis/connector.lua",
+               ["resty.redis.sentinel"] = "resty/redis/sentinel.lua"
+            }
+         }
+      }
+   }
+}

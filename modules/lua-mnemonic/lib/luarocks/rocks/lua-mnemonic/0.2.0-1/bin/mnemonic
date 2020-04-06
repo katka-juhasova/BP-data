@@ -1,0 +1,22 @@
+#!/usr/bin/env lua
+
+-- lua-mnemonic, Return random words from the list
+-- Copyright (c) 2015 Boris Nagaev
+-- See the LICENSE file for terms of use.
+
+local mnemonic = require 'mnemonic'
+local has_arc4random, arc4random = pcall(require, 'arc4random')
+
+local n = tonumber(arg[1])
+local random
+if has_arc4random then
+    random = arc4random.random
+else
+    print('*** Warning! Using insecure math.random ***')
+    print('Install arc4random to get more secure random.')
+    print()
+    math.randomseed(os.time())
+    random = math.random
+end
+local words = mnemonic.randomWords(n, random)
+print(table.concat(words, "-"))

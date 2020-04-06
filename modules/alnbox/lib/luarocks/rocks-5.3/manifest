@@ -1,0 +1,145 @@
+commands = {
+   ["show-fasta"] = {
+      "alnbox/1.1.0-1"
+   }
+}
+dependencies = {
+   alnbox = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lcurses"
+         }
+      }
+   },
+   lcurses = {
+      ["9.0.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["alnbox.alignmentParameters"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.alnwindow"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.cleanChar"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.columnDigit"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.consensusChar"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.dnaCells"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.init"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.initializeColors"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.initializeCurses"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.makeAlignment"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.makePair"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.navigate"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.putCell"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.readFasta"] = {
+      "alnbox/1.1.0-1"
+   },
+   ["alnbox.runAlnbox"] = {
+      "alnbox/1.1.0-1"
+   },
+   curses = {
+      "lcurses/9.0.0-1"
+   },
+   curses_c = {
+      "lcurses/9.0.0-1"
+   }
+}
+repository = {
+   alnbox = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["show-fasta"] = "show-fasta"
+            },
+            dependencies = {
+               lcurses = "9.0.0-1"
+            },
+            modules = {
+               ["alnbox.alignmentParameters"] = "alnbox/alignmentParameters.lua",
+               ["alnbox.alnwindow"] = "alnbox/alnwindow.lua",
+               ["alnbox.cleanChar"] = "alnbox/cleanChar.lua",
+               ["alnbox.columnDigit"] = "alnbox/columnDigit.lua",
+               ["alnbox.consensusChar"] = "alnbox/consensusChar.lua",
+               ["alnbox.dnaCells"] = "alnbox/dnaCells.lua",
+               ["alnbox.init"] = "alnbox/init.lua",
+               ["alnbox.initializeColors"] = "alnbox/initializeColors.lua",
+               ["alnbox.initializeCurses"] = "alnbox/initializeCurses.lua",
+               ["alnbox.makeAlignment"] = "alnbox/makeAlignment.lua",
+               ["alnbox.makePair"] = "alnbox/makePair.lua",
+               ["alnbox.navigate"] = "alnbox/navigate.lua",
+               ["alnbox.putCell"] = "alnbox/putCell.lua",
+               ["alnbox.readFasta"] = "alnbox/readFasta.lua",
+               ["alnbox.runAlnbox"] = "alnbox/runAlnbox.lua"
+            }
+         }
+      }
+   },
+   lcurses = {
+      ["9.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               curses = "curses.lua",
+               curses_c = "curses_c.so"
+            }
+         }
+      }
+   }
+}

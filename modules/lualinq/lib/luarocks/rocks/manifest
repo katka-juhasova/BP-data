@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lualinq = {
+      ["1.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lualinq = {
+      "lualinq/1.6-1"
+   }
+}
+repository = {
+   lualinq = {
+      ["1.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lualinq = "lualinq.lua"
+            }
+         }
+      }
+   }
+}

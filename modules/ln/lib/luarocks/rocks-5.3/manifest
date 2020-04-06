@@ -1,0 +1,79 @@
+commands = {}
+dependencies = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ln = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "dkjson"
+         }
+      }
+   }
+}
+modules = {
+   dkjson = {
+      "dkjson/2.5-2"
+   },
+   ln = {
+      "ln/0.2.0-1"
+   }
+}
+repository = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dkjson = "dkjson.lua"
+            }
+         }
+      }
+   },
+   ln = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               dkjson = "2.5-2"
+            },
+            modules = {
+               ln = "ln.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,140 @@
+commands = {
+   luacmodule = {
+      "lualibrarytemplate/1.2-1"
+   }
+}
+dependencies = {
+   datafile = {
+      ["0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lualibrarytemplate = {
+      ["1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luafilesystem"
+         },
+         {
+            constraints = {},
+            name = "datafile"
+         }
+      }
+   }
+}
+modules = {
+   datafile = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.caller"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.luarocks"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.unix"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.xdg"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.util"] = {
+      "datafile/0.6-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   ["lualibrarytemplate.datafile"] = {
+      "lualibrarytemplate/1.2-1"
+   }
+}
+repository = {
+   datafile = {
+      ["0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               datafile = "datafile.lua",
+               ["datafile.openers.caller"] = "datafile/openers/caller.lua",
+               ["datafile.openers.luarocks"] = "datafile/openers/luarocks.lua",
+               ["datafile.openers.unix"] = "datafile/openers/unix.lua",
+               ["datafile.openers.xdg"] = "datafile/openers/xdg.lua",
+               ["datafile.util"] = "datafile/util.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   lualibrarytemplate = {
+      ["1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luacmodule = "luacmodule"
+            },
+            dependencies = {
+               datafile = "0.6-1",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               ["lualibrarytemplate.datafile"] = "lualibrarytemplate/datafile.lua"
+            }
+         }
+      }
+   }
+}

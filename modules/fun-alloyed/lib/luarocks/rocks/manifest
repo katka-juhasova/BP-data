@@ -1,0 +1,30 @@
+commands = {}
+dependencies = {
+   ["fun-alloyed"] = {
+      ["0.1.3-1"] = {
+         {
+            constraints = {},
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   fun = {
+      "fun-alloyed/0.1.3-1"
+   }
+}
+repository = {
+   ["fun-alloyed"] = {
+      ["0.1.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               fun = "fun.lua"
+            }
+         }
+      }
+   }
+}

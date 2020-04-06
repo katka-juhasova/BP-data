@@ -1,0 +1,307 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   cmdbuild = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     3, 0, -999.99999, revision = 2, string = "3.0rc1-2"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     101012, revision = 2, string = "101012-2"
+                  }
+               }
+            },
+            name = "luaxml"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 1, 0, revision = 1, string = "2.1.0-1"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 3, 0, revision = 1, string = "5.3.0-1"
+                  }
+               }
+            },
+            name = "bit32"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luaxml = {
+      ["101012-2"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   Log = {
+      "cmdbuild/0.1.0-1"
+   },
+   LuaXML = {
+      "luaxml/101012-2"
+   },
+   LuaXML_lib = {
+      "luaxml/101012-2"
+   },
+   Utils = {
+      "cmdbuild/0.1.0-1"
+   },
+   base64 = {
+      "cmdbuild/0.1.0-1"
+   },
+   bit32 = {
+      "bit32/5.3.0-1"
+   },
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   cmdbuild = {
+      "cmdbuild/0.1.0-1"
+   },
+   ["cmdbuild.attachment"] = {
+      "cmdbuild/0.1.0-1"
+   },
+   ["cmdbuild.card"] = {
+      "cmdbuild/0.1.0-1"
+   },
+   ["cmdbuild.lookup"] = {
+      "cmdbuild/0.1.0-1"
+   },
+   ["cmdbuild.relation"] = {
+      "cmdbuild/0.1.0-1"
+   },
+   ["cmdbuild.workflow"] = {
+      "cmdbuild/0.1.0-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit32 = "bit32.so"
+            }
+         }
+      }
+   },
+   cmdbuild = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               bit32 = "5.3.0-1",
+               ["lua-cjson"] = "2.1.0.6-1",
+               luasocket = "3.0rc1-2",
+               luaxml = "101012-2"
+            },
+            modules = {
+               Log = "Log.lua",
+               Utils = "Utils.lua",
+               base64 = "base64.lua",
+               cmdbuild = "cmdbuild.lua",
+               ["cmdbuild.attachment"] = "cmdbuild/attachment.lua",
+               ["cmdbuild.card"] = "cmdbuild/card.lua",
+               ["cmdbuild.lookup"] = "cmdbuild/lookup.lua",
+               ["cmdbuild.relation"] = "cmdbuild/relation.lua",
+               ["cmdbuild.workflow"] = "cmdbuild/workflow.lua"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   luaxml = {
+      ["101012-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               LuaXML = "LuaXML.lua",
+               LuaXML_lib = "LuaXML_lib.so"
+            }
+         }
+      }
+   }
+}

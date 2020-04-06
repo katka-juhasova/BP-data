@@ -1,0 +1,84 @@
+commands = {}
+dependencies = {
+   ["lua-resty-exec"] = {
+      ["3.0.3-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, 6, string = "1.0.6"
+                  }
+               }
+            },
+            name = "netstring"
+         }
+      }
+   },
+   netstring = {
+      ["1.0.6-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   netstring = {
+      "netstring/1.0.6-0"
+   },
+   ["resty.exec"] = {
+      "lua-resty-exec/3.0.3-0"
+   },
+   ["resty.exec.socket"] = {
+      "lua-resty-exec/3.0.3-0"
+   }
+}
+repository = {
+   ["lua-resty-exec"] = {
+      ["3.0.3-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               netstring = "1.0.6-0"
+            },
+            modules = {
+               ["resty.exec"] = "resty/exec.lua",
+               ["resty.exec.socket"] = "resty/exec/socket.lua"
+            }
+         }
+      }
+   },
+   netstring = {
+      ["1.0.6-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               netstring = "netstring.lua"
+            }
+         }
+      }
+   }
+}

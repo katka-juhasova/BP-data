@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-i18n"] = {
+      ["1.0.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   i18n = {
+      "lua-i18n/1.0.0-1"
+   }
+}
+repository = {
+   ["lua-i18n"] = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               i18n = "i18n.lua"
+            }
+         }
+      }
+   }
+}

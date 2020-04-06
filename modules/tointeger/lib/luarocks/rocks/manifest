@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   tointeger = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   tointeger = {
+      "tointeger/0.1.0-1"
+   },
+   ["tointeger.implc"] = {
+      "tointeger/0.1.0-1"
+   }
+}
+repository = {
+   tointeger = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               tointeger = "tointeger.lua",
+               ["tointeger.implc"] = "tointeger/implc.so"
+            }
+         }
+      }
+   }
+}

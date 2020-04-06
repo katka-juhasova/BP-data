@@ -1,0 +1,40 @@
+rock_manifest = {
+   ["aurora-0.2-1.rockspec"] = "9860da629c63d01d1e68ecd5b7c716cd",
+   doc = {
+      license = "f3ced530d81422c043167577397c97a3",
+      ["readme.md"] = "5d7a986cca163341017daf5e5ed33c38"
+   },
+   lua = {
+      aurora = {
+         fs = {
+            ["basename.lua"] = "0a4b91666d3fe344154f287423e9dd39",
+            ["dirname.lua"] = "e94056d00321505214472f78f372c5be",
+            ["getFileContents.lua"] = "dbdf56ab8b11633740a836ff4c5bdeb3",
+            ["init.lua"] = "198138b01e35fcf5823349d5002acce5",
+            ["isDir.lua"] = "43e41d1e2cc61e4755ea1a5b4ba2bc7f",
+            ["isFile.lua"] = "d52f3904eab70d6b2a6318e4b23557dc",
+            ["mkdir.lua"] = "36690067e98a70f4594471b0ba7963ae",
+            ["setFileContents.lua"] = "2f7e64eea3aabe3f06e5c4a5fe5b4362"
+         },
+         httpserver = {
+            ["init.lua"] = "c5108702c71166a0340f631e1de676bb",
+            pegasus = {
+               ["compress.lua"] = "9f182a663c9672c35bb9548d73e6802b",
+               ["file.lua"] = "956ec469a82806f7e840c9760d52cd87",
+               ["handler.lua"] = "cd59372708ba12adcd184ee7c1bd21cc",
+               ["init.lua"] = "c9bd94b274aec7e438d3577eddc86e67",
+               ["request.lua"] = "4cd16dd3a72e4d157ffabd6a46f5a3e2",
+               ["response.lua"] = "4682ef7ac6fe84a06046ec3ff81dd18c"
+            }
+         },
+         ["init.lua"] = "3841ae2efae7245d58bba7372c60fe7a",
+         string = {
+            ["init.lua"] = "5d572985f1134ed8beb06c1ac5d10185",
+            ["split.lua"] = "1f2307db8b0cc3bc08bc54881ab24708"
+         },
+         template = {
+            ["init.lua"] = "81abbe2cfd7d9ab5da7780b961796495"
+         }
+      }
+   }
+}

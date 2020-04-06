@@ -1,0 +1,16 @@
+rock_manifest = {
+   ["dislua-1.0-1.rockspec"] = "ab1b0c1f736c9e01a786b39a88ec5612",
+   doc = {
+      LICENSE = "ee946ecc2c7eb622d68b14d8fc470f6a",
+      ["README.md"] = "b1f326f8d6ebd1dd3a702463ffa4cdb3"
+   },
+   lua = {
+      dislua = {
+         ["init.lua"] = "50a72a687af226a6fc3a13e92d7cb6ba",
+         ["luajit-2"] = {
+            ["opcodes.lua"] = "76971b72359ebf8227e9fe2f4fa09ba9",
+            ["read.lua"] = "bda0ef150d8c93741ab875ea59418ea8"
+         }
+      }
+   }
+}

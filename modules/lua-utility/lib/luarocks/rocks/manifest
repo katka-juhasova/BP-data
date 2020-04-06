@@ -1,0 +1,111 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-utility"] = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-cjson"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   utility = {
+      "lua-utility/0.2-1"
+   },
+   ["utility.array"] = {
+      "lua-utility/0.2-1"
+   },
+   ["utility.function"] = {
+      "lua-utility/0.2-1"
+   },
+   ["utility.object"] = {
+      "lua-utility/0.2-1"
+   },
+   ["utility.string"] = {
+      "lua-utility/0.2-1"
+   }
+}
+repository = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   ["lua-utility"] = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1"
+            },
+            modules = {
+               utility = "utility.lua",
+               ["utility.array"] = "utility/array.lua",
+               ["utility.function"] = "utility/function.lua",
+               ["utility.object"] = "utility/object.lua",
+               ["utility.string"] = "utility/string.lua"
+            }
+         }
+      }
+   }
+}

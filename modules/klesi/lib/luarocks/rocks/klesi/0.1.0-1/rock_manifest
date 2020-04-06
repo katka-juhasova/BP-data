@@ -1,0 +1,21 @@
+rock_manifest = {
+   ["doc-md"] = {
+      ["casting.md"] = "972e1f76fb8ae7f5c71fc06eda936d2e",
+      ["cloning.md"] = "9b627e88dc2c187366203f32bcd5ebe3",
+      ["extension.md"] = "9732e00b3e135ebfeca5859cfa80f67f",
+      ["home.md"] = "3c20319c6b30905adc01ae43da344c57",
+      ["metamethods.md"] = "cc81395ae46a801886703c13fdc38c55"
+   },
+   ["klesi-0.1.0-1.rockspec"] = "ef200f6feb5396b6ec090e594852910d",
+   lua = {
+      ["klesi.lua"] = "7065d84c8d7e803871a463915dd463df"
+   },
+   test = {
+      ["00-basic.lua"] = "296798daa2e13a509d0f355652f05a57",
+      ["01-extend.lua"] = "f1f8c9571748f03560928bc42f2154d3",
+      ["02-clone.lua"] = "98b6dbe4a97ad87a854eacdf40944bfe",
+      ["03-cast.lua"] = "25daa0427674c2115270b220e06222b3",
+      ["04-metamethods.lua"] = "0a0836d2b10c05620f0eb4d3a2716c9f",
+      ["README.md"] = "2a039e1d67ef7d2016196d034a3fb540"
+   }
+}

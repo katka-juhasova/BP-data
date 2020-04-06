@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-dns"] = {
+      ["0.21-1"] = {}
+   }
+}
+modules = {
+   ["resty.dns.resolver"] = {
+      "lua-resty-dns/0.21-1"
+   }
+}
+repository = {
+   ["lua-resty-dns"] = {
+      ["0.21-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.dns.resolver"] = "resty/dns/resolver.lua"
+            }
+         }
+      }
+   }
+}

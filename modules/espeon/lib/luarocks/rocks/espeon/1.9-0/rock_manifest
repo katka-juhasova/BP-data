@@ -1,0 +1,42 @@
+rock_manifest = {
+   bin = {
+      espeon = "85d04e16952727f054e1c52af75a1b0f"
+   },
+   ["espeon-1.9-0.rockspec"] = "93b42653513715ce8d2279f526358994",
+   lua = {
+      espeon = {
+         command = {
+            ["console.lua"] = "a0f93a9b9acd14129e697debdb0eb1a3",
+            ["erase.lua"] = "ffd5a44e421becd225a676cee09ed725",
+            ["flash.lua"] = "87ab961c89f2ae54e877618eafc6511d",
+            ["format.lua"] = "c97b53250794997a0da6d95b5e13b2f8",
+            ["fs.lua"] = "3c2223dcd1fd15b4708a08f4c153e4e6",
+            ["init.lua"] = "dc2a00d445f264b832de8aed8d5e0ed0",
+            ["install_dependencies.lua"] = "6c6225c3d1d7ff416cd8a2bbc8e1796e",
+            ["reset.lua"] = "53ae6e0952dfd3cdc14b3676ccd0bd48",
+            ["upload.lua"] = "d8ad69fe4b1a38312c4a5234f7a8d488"
+         },
+         ["espeon.lua"] = "dafa69003cc08fda1446da1775914194",
+         util = {
+            ["amalg.lua"] = "e6b1d3cb8b2b8b5a7911c3c014bc880d",
+            ["build_lfs.lua"] = "ee1c40cbf310ac6e537c523f4b4f9f9e",
+            ["compile.lua"] = "f64188bd2992c091520bd360ac8ac390",
+            ["detect_platform.lua"] = "978f05ea2739adb9c7f11746dcec73bc",
+            ["detect_serial_port.lua"] = "2872b4c758f731ff8a0205277a6c796a",
+            ["exec.lua"] = "89fd8257d09d877e42d5ff1030f33650",
+            ["load_config.lua"] = "7a3b4fb6638147eb6af7802b8512e25e",
+            ["read_file.lua"] = "8f1746750834a5ab868cf421e0c8da95",
+            ["shell.lua"] = "d0a52b7e3a0b2aee521ded2370b50a4c"
+         }
+      }
+   },
+   res = {
+      ["amalg_init.lua"] = "817c22984544306118f1a8c4c1b820da",
+      ["espeon.conf"] = "18ccfb5cd055d7cb6050d9af0a84ce42",
+      ["init.lua"] = "017ff320feef3a6aa6ab37983ea7614f",
+      ["lfs_init.lua"] = "776911a4ad87b6d092c86ada2b5f8084",
+      ["lfs_probe.lua"] = "bd660287bf6d046b88dd20cd300566e8",
+      ["luac.cross-linux"] = "0786a111028370d4f99b00a30a401411",
+      ["luac.cross-mac"] = "3a73ca59e2d985b4e2d24ad7185452e4"
+   }
+}

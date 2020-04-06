@@ -1,0 +1,272 @@
+commands = {}
+dependencies = {
+   luacs = {
+      ["1.0.2-0"] = {
+         {
+            constraints = {},
+            name = "luautf8"
+         }
+      }
+   },
+   luautf8 = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   xmlua = {
+      ["1.1.4-0"] = {
+         {
+            constraints = {},
+            name = "luacs"
+         }
+      }
+   }
+}
+modules = {
+   ["lua-utf8"] = {
+      "luautf8/0.1.1-1"
+   },
+   luacs = {
+      "luacs/1.0.2-0"
+   },
+   ["luacs.parser"] = {
+      "luacs/1.0.2-0"
+   },
+   ["luacs.source"] = {
+      "luacs/1.0.2-0"
+   },
+   ["luacs.xpath-converter"] = {
+      "luacs/1.0.2-0"
+   },
+   xmlua = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.attribute"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.attribute-declaration"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.cdata-section"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.comment"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.converter"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.document"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.document-fragment"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.document-type"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.element"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.element-declaration"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.entity"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.entity-declaration"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.entity-reference"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.html"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.html-sax-parser"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.dict"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.encoding"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.entities"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.global"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.hash"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.html-parser"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.html-tree"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.memory"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.parser"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.tree"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.valid"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.xmlerror"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.xmlsave"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.xmlstring"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.libxml2.xpath"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.namespace"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.namespace-declaration"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.node"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.node-set"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.notation-declaration"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.processing-instruction"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.searchable"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.serializable"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.text"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.xml"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.xml-sax-parser"] = {
+      "xmlua/1.1.4-0"
+   },
+   ["xmlua.xml-stream-sax-parser"] = {
+      "xmlua/1.1.4-0"
+   }
+}
+repository = {
+   luacs = {
+      ["1.0.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luautf8 = "0.1.1-1"
+            },
+            modules = {
+               luacs = "luacs.lua",
+               ["luacs.parser"] = "luacs/parser.lua",
+               ["luacs.source"] = "luacs/source.lua",
+               ["luacs.xpath-converter"] = "luacs/xpath-converter.lua"
+            }
+         }
+      }
+   },
+   luautf8 = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lua-utf8"] = "lua-utf8.so"
+            }
+         }
+      }
+   },
+   xmlua = {
+      ["1.1.4-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luacs = "1.0.2-0",
+               luautf8 = "0.1.1-1"
+            },
+            modules = {
+               xmlua = "xmlua.lua",
+               ["xmlua.attribute"] = "xmlua/attribute.lua",
+               ["xmlua.attribute-declaration"] = "xmlua/attribute-declaration.lua",
+               ["xmlua.cdata-section"] = "xmlua/cdata-section.lua",
+               ["xmlua.comment"] = "xmlua/comment.lua",
+               ["xmlua.converter"] = "xmlua/converter.lua",
+               ["xmlua.document"] = "xmlua/document.lua",
+               ["xmlua.document-fragment"] = "xmlua/document-fragment.lua",
+               ["xmlua.document-type"] = "xmlua/document-type.lua",
+               ["xmlua.element"] = "xmlua/element.lua",
+               ["xmlua.element-declaration"] = "xmlua/element-declaration.lua",
+               ["xmlua.entity"] = "xmlua/entity.lua",
+               ["xmlua.entity-declaration"] = "xmlua/entity-declaration.lua",
+               ["xmlua.entity-reference"] = "xmlua/entity-reference.lua",
+               ["xmlua.html"] = "xmlua/html.lua",
+               ["xmlua.html-sax-parser"] = "xmlua/html-sax-parser.lua",
+               ["xmlua.libxml2"] = "xmlua/libxml2.lua",
+               ["xmlua.libxml2.dict"] = "xmlua/libxml2/dict.lua",
+               ["xmlua.libxml2.encoding"] = "xmlua/libxml2/encoding.lua",
+               ["xmlua.libxml2.entities"] = "xmlua/libxml2/entities.lua",
+               ["xmlua.libxml2.global"] = "xmlua/libxml2/global.lua",
+               ["xmlua.libxml2.hash"] = "xmlua/libxml2/hash.lua",
+               ["xmlua.libxml2.html-parser"] = "xmlua/libxml2/html-parser.lua",
+               ["xmlua.libxml2.html-tree"] = "xmlua/libxml2/html-tree.lua",
+               ["xmlua.libxml2.memory"] = "xmlua/libxml2/memory.lua",
+               ["xmlua.libxml2.parser"] = "xmlua/libxml2/parser.lua",
+               ["xmlua.libxml2.tree"] = "xmlua/libxml2/tree.lua",
+               ["xmlua.libxml2.valid"] = "xmlua/libxml2/valid.lua",
+               ["xmlua.libxml2.xmlerror"] = "xmlua/libxml2/xmlerror.lua",
+               ["xmlua.libxml2.xmlsave"] = "xmlua/libxml2/xmlsave.lua",
+               ["xmlua.libxml2.xmlstring"] = "xmlua/libxml2/xmlstring.lua",
+               ["xmlua.libxml2.xpath"] = "xmlua/libxml2/xpath.lua",
+               ["xmlua.namespace"] = "xmlua/namespace.lua",
+               ["xmlua.namespace-declaration"] = "xmlua/namespace-declaration.lua",
+               ["xmlua.node"] = "xmlua/node.lua",
+               ["xmlua.node-set"] = "xmlua/node-set.lua",
+               ["xmlua.notation-declaration"] = "xmlua/notation-declaration.lua",
+               ["xmlua.processing-instruction"] = "xmlua/processing-instruction.lua",
+               ["xmlua.searchable"] = "xmlua/searchable.lua",
+               ["xmlua.serializable"] = "xmlua/serializable.lua",
+               ["xmlua.text"] = "xmlua/text.lua",
+               ["xmlua.xml"] = "xmlua/xml.lua",
+               ["xmlua.xml-sax-parser"] = "xmlua/xml-sax-parser.lua",
+               ["xmlua.xml-stream-sax-parser"] = "xmlua/xml-stream-sax-parser.lua"
+            }
+         }
+      }
+   }
+}

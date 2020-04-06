@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-typeof"] = {
+      ["0.1-0"] = {}
+   }
+}
+modules = {
+   typeof = {
+      "lua-typeof/0.1-0"
+   }
+}
+repository = {
+   ["lua-typeof"] = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               typeof = "typeof.lua"
+            }
+         }
+      }
+   }
+}

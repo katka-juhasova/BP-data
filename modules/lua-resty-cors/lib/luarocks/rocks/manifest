@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-cors"] = {
+      ["0.2-1"] = {}
+   }
+}
+modules = {
+   ["lib.resty.cors"] = {
+      "lua-resty-cors/0.2-1"
+   }
+}
+repository = {
+   ["lua-resty-cors"] = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lib.resty.cors"] = "lib/resty/cors.lua"
+            }
+         }
+      }
+   }
+}

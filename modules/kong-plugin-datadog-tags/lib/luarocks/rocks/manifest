@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-datadog-tags"] = {
+      ["0.2.3-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.datadog-tags.handler"] = {
+      "kong-plugin-datadog-tags/0.2.3-1"
+   },
+   ["kong.plugins.datadog-tags.schema"] = {
+      "kong-plugin-datadog-tags/0.2.3-1"
+   }
+}
+repository = {
+   ["kong-plugin-datadog-tags"] = {
+      ["0.2.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.datadog-tags.handler"] = "kong/plugins/datadog-tags/handler.lua",
+               ["kong.plugins.datadog-tags.schema"] = "kong/plugins/datadog-tags/schema.lua"
+            }
+         }
+      }
+   }
+}

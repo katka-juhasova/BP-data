@@ -1,0 +1,17 @@
+rock_manifest = {
+   examples = {
+      ["log.lua"] = "a29300e41214d9146e7f78b03c32ab52",
+      ["version.lua"] = "f599e59dd1d6557a4334abea9a9f88b7"
+   },
+   ["hglib-0.8-1.rockspec"] = "2066389b638509f9e6b1dfcc008a0db6",
+   lua = {
+      ["hglib.lua"] = "61e5712e07ab797f0cc42a6c76df781b"
+   },
+   spec = {
+      data = {
+         ["foo.patch"] = "ca623e5375c3a365ad5b06c5bca6398f",
+         hello = "cf2e4b64cbf44e20d59277bd6b90ac01"
+      },
+      ["hglib_spec.lua"] = "1d9e5bcda22e2872b41842e2d15ea1a2"
+   }
+}

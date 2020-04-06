@@ -1,0 +1,9 @@
+Help [[
+
+string.dump (function)
+----------------------
+
+  Returns a string containing a binary representation of the given function,
+  so that a later `loadstring` on this string returns a copy of the function.
+  `function` must be a Lua function without upvalues.
+]]

@@ -1,0 +1,104 @@
+commands = {}
+dependencies = {
+   classic = {
+      ["0.1.0-1"] = {}
+   },
+   ["kong-client"] = {
+      ["1.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 1, 0, revision = 1, string = "0.1.0-1"
+                  }
+               }
+            },
+            name = "classic"
+         }
+      }
+   }
+}
+modules = {
+   classic = {
+      "classic/0.1.0-1"
+   },
+   kong_client = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.helpers.merge"] = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.helpers.pager"] = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.resources.consumer"] = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.resources.plugin"] = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.resources.resource_object"] = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.resources.route"] = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.resources.service"] = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.resources.upstream"] = {
+      "kong-client/1.3.0-1"
+   },
+   ["kong_client.spec.test_helpers"] = {
+      "kong-client/1.3.0-1"
+   }
+}
+repository = {
+   classic = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               classic = "classic.lua"
+            }
+         }
+      }
+   },
+   ["kong-client"] = {
+      ["1.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               classic = "0.1.0-1"
+            },
+            modules = {
+               kong_client = "kong_client/init.lua",
+               ["kong_client.helpers.merge"] = "kong_client/helpers/merge.lua",
+               ["kong_client.helpers.pager"] = "kong_client/helpers/pager.lua",
+               ["kong_client.resources.consumer"] = "kong_client/resources/consumer.lua",
+               ["kong_client.resources.plugin"] = "kong_client/resources/plugin.lua",
+               ["kong_client.resources.resource_object"] = "kong_client/resources/resource_object.lua",
+               ["kong_client.resources.route"] = "kong_client/resources/route.lua",
+               ["kong_client.resources.service"] = "kong_client/resources/service.lua",
+               ["kong_client.resources.upstream"] = "kong_client/resources/upstream.lua",
+               ["kong_client.spec.test_helpers"] = "kong_client/spec/test_helpers.lua"
+            }
+         }
+      }
+   }
+}

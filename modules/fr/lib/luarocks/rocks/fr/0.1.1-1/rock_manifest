@@ -1,0 +1,23 @@
+rock_manifest = {
+   ["fr-0.1.1-1.rockspec"] = "eda753558952bac5643acb9eba31b4a3",
+   lua = {
+      fr = {
+         ["bus.lua"] = "53ca57d3a820163319992666844924c3",
+         ["combineTemplate.lua"] = "09a16476caf2904f833c3343e56265f3",
+         ["eventStream.lua"] = "91392ef2b1fb587bda1fbf279bc41419",
+         ["fromTable.lua"] = "6733f0212946fb05e4d4ce2b4b426700",
+         ["functionTools.lua"] = "2e8c0829e716476511632361827560dc",
+         ["isObservable.lua"] = "eca046043f332fe70b19656b8cf68101",
+         ["never.lua"] = "bd3597bb2f509554af13d0d3f2ee0d66",
+         ["once.lua"] = "767b697fa61bece7a2918234d77f8be2",
+         ["property.lua"] = "79f3175c7321a457fc9347dc9089a0bf",
+         ["repeat.lua"] = "0f462cfc08c9d3c34cf5f6edc8f1a536"
+      },
+      ["fr.lua"] = "6c337ef0a1e6d09981d846a69c158d2f"
+   },
+   tests = {
+      ["atomicProperty.lua"] = "04f085afd73683112dbcbd37f03af523",
+      ["mapEach.lua"] = "422e59362763b199a8f00ca26b01e401",
+      ["propertyCombine.lua"] = "9e36ced57a5a2473c3f62353db90566d"
+   }
+}

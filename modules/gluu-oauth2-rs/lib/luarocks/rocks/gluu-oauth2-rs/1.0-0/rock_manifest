@@ -1,0 +1,15 @@
+rock_manifest = {
+   ["gluu-oauth2-rs-1.0-0.rockspec"] = "ac0f7cf8b2ea01fdaf58f8efc2787015",
+   lua = {
+      kong = {
+         plugins = {
+            ["gluu-oauth2-rs"] = {
+               ["access.lua"] = "91291193a13a982d4892655dcbacf331",
+               ["handler.lua"] = "b10df56e43babf783e8bab98eaff9dc2",
+               ["helper.lua"] = "93af3d033e121d18b75df00129e5187b",
+               ["schema.lua"] = "caff3a644432bf9c8229a0680748ea8c"
+            }
+         }
+      }
+   }
+}

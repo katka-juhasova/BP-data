@@ -1,0 +1,140 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["lua-mud-read"] = {
+      "lua-mud/0.2-1"
+   },
+   ["lua-mud-rulebuilder"] = {
+      "lua-mud/0.2-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-mud"] = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 0, 0, revision = 1, string = "2.0.0-1"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["mud.mud"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.mud-cli-match"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.mud-cli-read"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.mud-cli-rulebuilder"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.rulebuilders.iptables"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.rulebuilders.nftables"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.yang"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.yang.basic_types"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.yang.complex_types"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud.yang.util"] = {
+      "lua-mud/0.2-1"
+   },
+   ["mud/Makefile"] = {
+      "lua-mud/0.2-1"
+   }
+}
+repository = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   ["lua-mud"] = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["lua-mud-read"] = "lua-mud-read",
+               ["lua-mud-rulebuilder"] = "lua-mud-rulebuilder"
+            },
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1"
+            },
+            modules = {
+               ["mud.mud"] = "mud/mud.lua",
+               ["mud.mud-cli-match"] = "mud/mud-cli-match.lua",
+               ["mud.mud-cli-read"] = "mud/mud-cli-read.lua",
+               ["mud.mud-cli-rulebuilder"] = "mud/mud-cli-rulebuilder.lua",
+               ["mud.rulebuilders.iptables"] = "mud/rulebuilders/iptables.lua",
+               ["mud.rulebuilders.nftables"] = "mud/rulebuilders/nftables.lua",
+               ["mud.yang"] = "mud/yang.lua",
+               ["mud.yang.basic_types"] = "mud/yang/basic_types.lua",
+               ["mud.yang.complex_types"] = "mud/yang/complex_types.lua",
+               ["mud.yang.util"] = "mud/yang/util.lua",
+               ["mud/Makefile"] = "mud/Makefile"
+            }
+         }
+      }
+   }
+}

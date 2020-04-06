@@ -1,0 +1,43 @@
+=head1 NAME
+
+middleclass.mixin.singleton - singleton mixin for middleclass OO library
+
+=head1 SYNOPSIS
+
+  local MyClass = require('middleclass')('MyClass')
+    :include(require('middleclass.mixin.singleton'))
+
+  -- Get the first instance
+  local obj1 = MyClass:instance()
+
+  -- Get the second instance, which is the same as the first one
+  local obj2 = MyClass:instance()
+
+=head1 DESCRIPTION
+
+This is a simple mixin that allows to have middleclass-based singletone objects.
+See L</"SYNOPSIS"> section for usage example.
+
+=head1 LICENSE
+
+MIT/X11
+
+=head1 AUTHORS
+
+=over
+
+=item *
+
+L<Enrique Garcia Cota|https://github.com/kikito>
+
+=item *
+
+L<Ilya Chesnokov|https://github.com/ichesnokov>
+
+=back
+
+This code is taken from L<Love2d forums|https://love2d.org/forums/viewtopic.php?t=78747>, where the
+author of middleclass itself published it. I only copied the code from there, modified it slightly
+according to my taste and released as a module.
+
+=cut

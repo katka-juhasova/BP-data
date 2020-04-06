@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-nats"] = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   ["resty.nats"] = {
+      "lua-resty-nats/0.1.0-1"
+   }
+}
+repository = {
+   ["lua-resty-nats"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.nats"] = "resty/nats.lua"
+            }
+         }
+      }
+   }
+}

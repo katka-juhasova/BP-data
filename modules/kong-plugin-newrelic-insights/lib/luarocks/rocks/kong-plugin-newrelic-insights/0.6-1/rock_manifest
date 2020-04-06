@@ -1,0 +1,19 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "1c2a3ff40e02402c7480cb99c49acbda"
+   },
+   ["kong-plugin-newrelic-insights-0.6-1.rockspec"] = "4bfe8ef93f6b7d699c5ea837d77d56dc",
+   lua = {
+      kong = {
+         plugins = {
+            ["newrelic-insights"] = {
+               ["debug.lua"] = "868897e6f365f89ecc078f30c0c191cd",
+               ["handler.lua"] = "ece738eec33d7e72971aaa5a1e4dea91",
+               ["json.lua"] = "f42c9e067cabd76f4f2a9a2b91f51c4a",
+               ["schema.lua"] = "c057fda1e05d28ebdcf9cbdd601d579e"
+            }
+         }
+      }
+   }
+}

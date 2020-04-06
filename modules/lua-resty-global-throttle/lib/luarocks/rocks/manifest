@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-resty-global-throttle"] = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   ["resty.global_throttle"] = {
+      "lua-resty-global-throttle/0.1.0-1"
+   },
+   ["resty.global_throttle.sliding_window"] = {
+      "lua-resty-global-throttle/0.1.0-1"
+   },
+   ["resty.global_throttle.store"] = {
+      "lua-resty-global-throttle/0.1.0-1"
+   },
+   ["resty.global_throttle.store.memcached"] = {
+      "lua-resty-global-throttle/0.1.0-1"
+   },
+   ["resty.global_throttle.store.shared_dict"] = {
+      "lua-resty-global-throttle/0.1.0-1"
+   }
+}
+repository = {
+   ["lua-resty-global-throttle"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.global_throttle"] = "resty/global_throttle.lua",
+               ["resty.global_throttle.sliding_window"] = "resty/global_throttle/sliding_window.lua",
+               ["resty.global_throttle.store"] = "resty/global_throttle/store.lua",
+               ["resty.global_throttle.store.memcached"] = "resty/global_throttle/store/memcached.lua",
+               ["resty.global_throttle.store.shared_dict"] = "resty/global_throttle/store/shared_dict.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,187 @@
+commands = {
+   precompiler = {
+      "loop/2.3beta-1"
+   },
+   preloader = {
+      "loop/2.3beta-1"
+   }
+}
+dependencies = {
+   loop = {
+      ["2.3beta-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["loop.base"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.cached"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.collection.MapWithArrayOfKeys"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.collection.ObjectCache"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.collection.OrderedSet"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.collection.PriorityQueue"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.collection.UnorderedArray"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.collection.UnorderedArraySet"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.compiler.Arguments"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.compiler.Conditional"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.compiler.Expression"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.component.base"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.component.contained"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.component.dynamic"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.component.intercepted"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.component.wrapped"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.debug.Inspector"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.debug.Matcher"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.debug.Verbose"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.debug.Viewer"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.multiple"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.object.Exception"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.object.Publisher"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.object.Wrapper"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.scoped"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.serial.FileStream"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.serial.Serializer"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.serial.SocketStream"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.serial.StringStream"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.simple"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.table"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.thread.CoSocket"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.thread.IOScheduler"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.thread.Scheduler"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.thread.SocketScheduler"] = {
+      "loop/2.3beta-1"
+   },
+   ["loop.thread.Timer"] = {
+      "loop/2.3beta-1"
+   }
+}
+repository = {
+   loop = {
+      ["2.3beta-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               precompiler = "precompiler.lua",
+               preloader = "preloader.lua"
+            },
+            dependencies = {},
+            modules = {
+               ["loop.base"] = "loop/base.lua",
+               ["loop.cached"] = "loop/cached.lua",
+               ["loop.collection.MapWithArrayOfKeys"] = "loop/collection/MapWithArrayOfKeys.lua",
+               ["loop.collection.ObjectCache"] = "loop/collection/ObjectCache.lua",
+               ["loop.collection.OrderedSet"] = "loop/collection/OrderedSet.lua",
+               ["loop.collection.PriorityQueue"] = "loop/collection/PriorityQueue.lua",
+               ["loop.collection.UnorderedArray"] = "loop/collection/UnorderedArray.lua",
+               ["loop.collection.UnorderedArraySet"] = "loop/collection/UnorderedArraySet.lua",
+               ["loop.compiler.Arguments"] = "loop/compiler/Arguments.lua",
+               ["loop.compiler.Conditional"] = "loop/compiler/Conditional.lua",
+               ["loop.compiler.Expression"] = "loop/compiler/Expression.lua",
+               ["loop.component.base"] = "loop/component/base.lua",
+               ["loop.component.contained"] = "loop/component/contained.lua",
+               ["loop.component.dynamic"] = "loop/component/dynamic.lua",
+               ["loop.component.intercepted"] = "loop/component/intercepted.lua",
+               ["loop.component.wrapped"] = "loop/component/wrapped.lua",
+               ["loop.debug.Inspector"] = "loop/debug/Inspector.lua",
+               ["loop.debug.Matcher"] = "loop/debug/Matcher.lua",
+               ["loop.debug.Verbose"] = "loop/debug/Verbose.lua",
+               ["loop.debug.Viewer"] = "loop/debug/Viewer.lua",
+               ["loop.multiple"] = "loop/multiple.lua",
+               ["loop.object.Exception"] = "loop/object/Exception.lua",
+               ["loop.object.Publisher"] = "loop/object/Publisher.lua",
+               ["loop.object.Wrapper"] = "loop/object/Wrapper.lua",
+               ["loop.scoped"] = "loop/scoped.lua",
+               ["loop.serial.FileStream"] = "loop/serial/FileStream.lua",
+               ["loop.serial.Serializer"] = "loop/serial/Serializer.lua",
+               ["loop.serial.SocketStream"] = "loop/serial/SocketStream.lua",
+               ["loop.serial.StringStream"] = "loop/serial/StringStream.lua",
+               ["loop.simple"] = "loop/simple.lua",
+               ["loop.table"] = "loop/table.lua",
+               ["loop.thread.CoSocket"] = "loop/thread/CoSocket.lua",
+               ["loop.thread.IOScheduler"] = "loop/thread/IOScheduler.lua",
+               ["loop.thread.Scheduler"] = "loop/thread/Scheduler.lua",
+               ["loop.thread.SocketScheduler"] = "loop/thread/SocketScheduler.lua",
+               ["loop.thread.Timer"] = "loop/thread/Timer.lua"
+            }
+         }
+      }
+   }
+}

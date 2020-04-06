@@ -1,0 +1,38 @@
+# CHANGELOG #
+
+## Version 0.11 ##
+
+* added simple config files to change the colors used by debug.lua
+* fixed a bug where the output of the '=' command was getting formatted
+  on a weird (and also wrong) way
+
+## Version 0.10 ##
+
+* fixed bug where last line in a source file would not be read if it did
+  not end in a newline
+* added conditional breakpoints
+* when called with `-l file` argument, debug.lua will now also log all
+  pinned expressions to the output log whenever they're updated.
+* fixed number lexing bug in loader.lua
+* fixed short string lexing bug in loader.lua
+* fixed error "handling" in loader.lua
+* added D command as interface to mobdebugs `DONE` command
+* read default port from environment var MOBDEBUG_PORT if it exists
+* added check for required mobdebug version (currently 0.63 or later)
+
+## Version 0.9 ##
+
+* removed (R)estart command, misunderstood what it does.
+* no longer exits when the client exits, instead returns to the startup
+  screen. Exits only on q command.
+* d now also prefills input with db <current_line> if current line has a
+  breakpoint
+* made colors configurable (in a way... you need to edit a table in the
+  source code)
+* added optional quit on client exit
+* added support for lua skripts with #! at the start
+* added search in current source file
+
+## Version 0.8 ##
+
+* initial release

@@ -1,0 +1,13 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "f3284d13d7ea63138b271ee98c52d0bf",
+      ["README.md"] = "d41d8cd98f00b204e9800998ecf8427e"
+   },
+   lua = {
+      resty = {
+         ["newrelic.lua"] = "b3f220b921887b59eb86b59ca0f4af8a",
+         ["newrelic_agent.lua"] = "7ff91eb25d0190840c6a39ce32f5e100"
+      }
+   },
+   ["resty-newrelic-0.01-6.rockspec"] = "ee200544c213072f37dcc497d8e3eeec"
+}

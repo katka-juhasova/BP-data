@@ -1,0 +1,53 @@
+= lzt
+
+Command-line tool to work with a LuaZDF repository.
+
+== Usage
+
+----
+lzt [--args <file>] [--debug|--justdebug] [--dir <dir>] <subcommand>
+
+These are the existing subcommands:
+
+check                   - checks the consistency
+checkname <name>        - checks if a function <name> is allready used
+info <name>             - shows the information for function <name>
+init <name> <module>    - creates default dir for a new function
+inject <src> [dest]     - injects the functions into src, writes to stdout/dest
+luapath                 - writes a LUA_PATH value with all functions included
+makelib <selection>     - writes a Lua module to the stdout
+testenv <selection>     - creates a shell script that allows to test all
+usage                   - prints a short usage overview
+vdiff <filename>        - shows the functions where the version not up to date
+whattodo                - lists all function files that have a --TODO comment
+----
+
+== Installation
+
+Use just the following line to get the latest release.
+
+----
+luarocks install lzt
+----
+
+If you want to use the current development version, clone this repository and
+use LuaRocks with the following command.
+
+----
+luarocks make dist/lzt-scm-0.rockspec
+----
+
+== Tests
+
+The unit tests are working with https://github.com/sstephenson/bats[bats].
+Use the folling lines to run the unit tests.
+
+----
+$ cd test
+$ bats .
+----
+
+== License
+
+lzt is licensed under the MIT Open Source license.
+For more information, see the LICENSE file in this repository.

@@ -1,0 +1,25 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "9dc082c66a7e8e9ee00e572b3f01af80"
+   },
+   lua = {
+      ["qless-lib.lua"] = "7891d7c1032a04358f49f0a5f0215f81",
+      ["qless.lua"] = "6b4f566e220c39d7185c55565ca453f9",
+      resty = {
+         qless = {
+            ["job.lua"] = "1c6f9cc63f7df9b25197e08fc7ab73eb",
+            ["luascript.lua"] = "be90d94b2418c796d7ced0ee6043e50e",
+            ["queue.lua"] = "a2f2a090b7837f2ef8928a671c827f2e",
+            ["recurring_job.lua"] = "2fcd7aef9e7b25c6440e12507a923eaf",
+            reserver = {
+               ["ordered.lua"] = "304020d7e78dfe5e8c55e4b40c75ac8d",
+               ["round_robin.lua"] = "a143f609aac5e3c9794f10f13668bde0",
+               ["shuffled_round_robin.lua"] = "0bf4dd7c797e54dd2622e3d568aa7776"
+            },
+            ["worker.lua"] = "a68c1600a1dcf03288976ffb7634eb38"
+         },
+         ["qless.lua"] = "2ef1e2c4d310fe066a75889e90f55f6f"
+      }
+   },
+   ["lua-resty-qless-0.11-0.rockspec"] = "e3d102e0c3592c43188898e913c7cb1c"
+}

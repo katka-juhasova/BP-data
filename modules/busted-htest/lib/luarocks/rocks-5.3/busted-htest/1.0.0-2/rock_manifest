@@ -1,0 +1,14 @@
+rock_manifest = {
+   ["busted-htest-1.0.0-2.rockspec"] = "88bb7fa74eef3cb827735d060a7f1b8c",
+   doc = {
+      LICENSE = "adf807a9b60020eb0777ef28658a4a83",
+      ["README.md"] = "67278d123add4c159a7be4efc9199667"
+   },
+   lua = {
+      busted = {
+         outputHandlers = {
+            ["htest.lua"] = "47311fc260f2e3bb539b486a08cd0f69"
+         }
+      }
+   }
+}

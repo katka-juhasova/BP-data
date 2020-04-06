@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["tiny-ecs"] = {
+      ["1.3-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   tiny = {
+      "tiny-ecs/1.3-3"
+   }
+}
+repository = {
+   ["tiny-ecs"] = {
+      ["1.3-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               tiny = "tiny.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["prtr-path"] = {
+      ["20180201-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   serial = {
+      "prtr-path/20180201-1"
+   }
+}
+repository = {
+   ["prtr-path"] = {
+      ["20180201-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               serial = "serial.lua"
+            }
+         }
+      }
+   }
+}

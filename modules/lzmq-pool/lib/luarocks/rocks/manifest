@@ -1,0 +1,85 @@
+commands = {}
+dependencies = {
+   luq = {
+      ["0.1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lzmq-pool"] = {
+      ["0.1.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luq"
+         }
+      }
+   }
+}
+modules = {
+   luq = {
+      "luq/0.1.2-1"
+   },
+   ["lzmq.pool"] = {
+      "lzmq-pool/0.1.0-2"
+   }
+}
+repository = {
+   luq = {
+      ["0.1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luq = "luq.so"
+            }
+         }
+      }
+   },
+   ["lzmq-pool"] = {
+      ["0.1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luq = "0.1.2-1"
+            },
+            modules = {
+               ["lzmq.pool"] = "lzmq/pool.lua"
+            }
+         }
+      }
+   }
+}

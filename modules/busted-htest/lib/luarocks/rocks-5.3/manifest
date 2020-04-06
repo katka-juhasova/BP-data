@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["busted-htest"] = {
+      ["1.0.0-2"] = {}
+   }
+}
+modules = {
+   ["busted.outputHandlers.htest"] = {
+      "busted-htest/1.0.0-2"
+   }
+}
+repository = {
+   ["busted-htest"] = {
+      ["1.0.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["busted.outputHandlers.htest"] = "busted/outputHandlers/htest.lua"
+            }
+         }
+      }
+   }
+}

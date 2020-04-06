@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-erento-uuid"] = {
+      ["1.0-6"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["libuuid.so.1"] = {
+      "lua-erento-uuid/1.0-6"
+   },
+   ["resty.uuid"] = {
+      "lua-erento-uuid/1.0-6"
+   }
+}
+repository = {
+   ["lua-erento-uuid"] = {
+      ["1.0-6"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["libuuid.so.1"] = "libuuid.so.1",
+               ["resty.uuid"] = "resty/uuid.lua"
+            }
+         }
+      }
+   }
+}

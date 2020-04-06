@@ -1,0 +1,80 @@
+commands = {}
+dependencies = {
+   deviant = {
+      ["0.1.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   web = {
+      ["0.2.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 3, string = "0.1.3"
+                  }
+               }
+            },
+            name = "deviant"
+         }
+      }
+   }
+}
+modules = {
+   deviant = {
+      "deviant/0.1.3-1"
+   },
+   web = {
+      "web/0.2.4-1"
+   }
+}
+repository = {
+   deviant = {
+      ["0.1.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               deviant = "deviant.lua"
+            }
+         }
+      }
+   },
+   web = {
+      ["0.2.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               deviant = "0.1.3-1"
+            },
+            modules = {
+               web = "web.lua"
+            }
+         }
+      }
+   }
+}

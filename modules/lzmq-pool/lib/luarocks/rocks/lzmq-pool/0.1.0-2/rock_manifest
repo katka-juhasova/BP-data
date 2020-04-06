@@ -1,0 +1,14 @@
+rock_manifest = {
+   examples = {
+      ["hwclient.lua"] = "890d793538105dc61e204d24121292e9"
+   },
+   lua = {
+      lzmq = {
+         ["pool.lua"] = "cd0a902ae5a8a65e9dbc1cf8f96f383d"
+      }
+   },
+   ["lzmq-pool-0.1.0-2.rockspec"] = "0d05f30af7a307e73156a19c6d331f68",
+   test = {
+      ["test_pool.lua"] = "e17ce5f6bb119569b215260d273cd0bf"
+   }
+}

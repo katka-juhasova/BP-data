@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   pbc = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   protobuf = {
+      "pbc/0.1.0-1"
+   },
+   ["protobuf.c"] = {
+      "pbc/0.1.0-1"
+   }
+}
+repository = {
+   pbc = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               protobuf = "protobuf.lua",
+               ["protobuf.c"] = "protobuf/c.so"
+            }
+         }
+      }
+   }
+}

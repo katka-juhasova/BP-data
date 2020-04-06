@@ -1,0 +1,63 @@
+commands = {}
+dependencies = {
+   fat_error = {
+      ["0.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   fat_error = {
+      "fat_error/0.4-1"
+   },
+   ["fat_error.Error"] = {
+      "fat_error/0.4-1"
+   },
+   ["fat_error.Frame"] = {
+      "fat_error/0.4-1"
+   },
+   ["fat_error.utils.color"] = {
+      "fat_error/0.4-1"
+   },
+   ["fat_error.utils.pretty_print"] = {
+      "fat_error/0.4-1"
+   },
+   ["fat_error.writers.FancyWriter"] = {
+      "fat_error/0.4-1"
+   }
+}
+repository = {
+   fat_error = {
+      ["0.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               fat_error = "fat_error.lua",
+               ["fat_error.Error"] = "fat_error/Error.lua",
+               ["fat_error.Frame"] = "fat_error/Frame.lua",
+               ["fat_error.utils.color"] = "fat_error/utils/color.lua",
+               ["fat_error.utils.pretty_print"] = "fat_error/utils/pretty_print.lua",
+               ["fat_error.writers.FancyWriter"] = "fat_error/writers/FancyWriter.lua"
+            }
+         }
+      }
+   }
+}

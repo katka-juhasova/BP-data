@@ -1,0 +1,26 @@
+rock_manifest = {
+   bin = {
+      ["resty-repl"] = "2a5b5edc888fc7cf35661d55465d8217"
+   },
+   doc = {
+      ["README.md"] = "0ce9e628496f667c9644e0100479206e"
+   },
+   lua = {
+      ["inspect.lua"] = "e8cc5e77d2cd86124854b51de28ed149",
+      resty = {
+         repl = {
+            ["binding.lua"] = "b3bdc5390fc874758f57219f9a042a0f",
+            ["compiler.lua"] = "bd9ee2b554307b1357b9384e90f2bc49",
+            ["completer.lua"] = "19c76cf5400f0c9f1299c7bb9b7a7259",
+            ["formatter.lua"] = "4a72dd0f85f8f5445f731e9ea8632495",
+            ["readline.lua"] = "126aa71143738dbd060ace081afc2e74",
+            ["readline_stub.lua"] = "1925e039762e23130af58a2269585f8e",
+            ["readline_utils.lua"] = "c5f8edbf16f7328883dfaf0a231eb9fe",
+            ["sources.lua"] = "9041ea363df26a948b0d76f098be8f1f",
+            ["ui.lua"] = "fdddc09e588b18258e616e12e5dfbb47"
+         },
+         ["repl.lua"] = "89e5fe718debc2f2666f21b916f254e0"
+      }
+   },
+   ["lua-resty-repl-0.0.6-0.rockspec"] = "f8b1c3471905bee46b28a02e972da535"
+}

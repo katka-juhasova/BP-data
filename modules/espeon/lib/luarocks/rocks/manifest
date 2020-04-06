@@ -1,0 +1,231 @@
+commands = {
+   amalg = {
+      "amalg/0.4-1"
+   },
+   espeon = {
+      "espeon/1.9-0"
+   }
+}
+dependencies = {
+   amalg = {
+      ["0.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   datafile = {
+      ["0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   espeon = {
+      ["1.9-0"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 4, revision = 1, string = "0.4-1"
+                  }
+               }
+            },
+            name = "amalg"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 6, revision = 1, string = "0.6-1"
+                  }
+               }
+            },
+            name = "datafile"
+         }
+      }
+   }
+}
+modules = {
+   amalg = {
+      "amalg/0.4-1"
+   },
+   datafile = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.caller"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.luarocks"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.unix"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.xdg"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.util"] = {
+      "datafile/0.6-1"
+   },
+   ["espeon.command"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.command.console"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.command.erase"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.command.flash"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.command.format"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.command.fs"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.command.install_dependencies"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.command.reset"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.command.upload"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.espeon"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.amalg"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.build_lfs"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.compile"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.detect_platform"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.detect_serial_port"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.exec"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.load_config"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.read_file"] = {
+      "espeon/1.9-0"
+   },
+   ["espeon.util.shell"] = {
+      "espeon/1.9-0"
+   }
+}
+repository = {
+   amalg = {
+      ["0.4-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               amalg = "amalg.lua"
+            },
+            dependencies = {},
+            modules = {
+               amalg = "amalg.lua"
+            }
+         }
+      }
+   },
+   datafile = {
+      ["0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               datafile = "datafile.lua",
+               ["datafile.openers.caller"] = "datafile/openers/caller.lua",
+               ["datafile.openers.luarocks"] = "datafile/openers/luarocks.lua",
+               ["datafile.openers.unix"] = "datafile/openers/unix.lua",
+               ["datafile.openers.xdg"] = "datafile/openers/xdg.lua",
+               ["datafile.util"] = "datafile/util.lua"
+            }
+         }
+      }
+   },
+   espeon = {
+      ["1.9-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               espeon = "espeon"
+            },
+            dependencies = {
+               amalg = "0.4-1",
+               datafile = "0.6-1"
+            },
+            modules = {
+               ["espeon.command"] = "espeon/command/init.lua",
+               ["espeon.command.console"] = "espeon/command/console.lua",
+               ["espeon.command.erase"] = "espeon/command/erase.lua",
+               ["espeon.command.flash"] = "espeon/command/flash.lua",
+               ["espeon.command.format"] = "espeon/command/format.lua",
+               ["espeon.command.fs"] = "espeon/command/fs.lua",
+               ["espeon.command.install_dependencies"] = "espeon/command/install_dependencies.lua",
+               ["espeon.command.reset"] = "espeon/command/reset.lua",
+               ["espeon.command.upload"] = "espeon/command/upload.lua",
+               ["espeon.espeon"] = "espeon/espeon.lua",
+               ["espeon.util.amalg"] = "espeon/util/amalg.lua",
+               ["espeon.util.build_lfs"] = "espeon/util/build_lfs.lua",
+               ["espeon.util.compile"] = "espeon/util/compile.lua",
+               ["espeon.util.detect_platform"] = "espeon/util/detect_platform.lua",
+               ["espeon.util.detect_serial_port"] = "espeon/util/detect_serial_port.lua",
+               ["espeon.util.exec"] = "espeon/util/exec.lua",
+               ["espeon.util.load_config"] = "espeon/util/load_config.lua",
+               ["espeon.util.read_file"] = "espeon/util/read_file.lua",
+               ["espeon.util.shell"] = "espeon/util/shell.lua"
+            }
+         }
+      }
+   }
+}

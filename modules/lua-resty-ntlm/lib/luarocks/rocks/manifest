@@ -1,0 +1,128 @@
+commands = {}
+dependencies = {
+   ["lua-iconv"] = {
+      ["7-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-ntlm"] = {
+      ["0.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 4, revision = 1, string = "1.4-1"
+                  }
+               }
+            },
+            name = "struct"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     7, revision = 1, string = "7-1"
+                  }
+               }
+            },
+            name = "lua-iconv"
+         }
+      }
+   },
+   struct = {
+      ["1.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   iconv = {
+      "lua-iconv/7-3"
+   },
+   ["resty.ntlm"] = {
+      "lua-resty-ntlm/0.1-2"
+   },
+   struct = {
+      "struct/1.4-1"
+   }
+}
+repository = {
+   ["lua-iconv"] = {
+      ["7-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               iconv = "iconv.so"
+            }
+         }
+      }
+   },
+   ["lua-resty-ntlm"] = {
+      ["0.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-iconv"] = "7-3",
+               struct = "1.4-1"
+            },
+            modules = {
+               ["resty.ntlm"] = "resty/ntlm.lua"
+            }
+         }
+      }
+   },
+   struct = {
+      ["1.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               struct = "struct.so"
+            }
+         }
+      }
+   }
+}

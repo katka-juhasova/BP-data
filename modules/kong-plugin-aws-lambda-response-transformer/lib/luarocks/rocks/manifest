@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-aws-lambda-response-transformer"] = {
+      ["0.1.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.aws-lambda-response-transformer.handler"] = {
+      "kong-plugin-aws-lambda-response-transformer/0.1.6-1"
+   },
+   ["kong.plugins.aws-lambda-response-transformer.schema"] = {
+      "kong-plugin-aws-lambda-response-transformer/0.1.6-1"
+   },
+   ["kong.plugins.aws-lambda-response-transformer.v4"] = {
+      "kong-plugin-aws-lambda-response-transformer/0.1.6-1"
+   }
+}
+repository = {
+   ["kong-plugin-aws-lambda-response-transformer"] = {
+      ["0.1.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.aws-lambda-response-transformer.handler"] = "kong/plugins/aws-lambda-response-transformer/handler.lua",
+               ["kong.plugins.aws-lambda-response-transformer.schema"] = "kong/plugins/aws-lambda-response-transformer/schema.lua",
+               ["kong.plugins.aws-lambda-response-transformer.v4"] = "kong/plugins/aws-lambda-response-transformer/v4.lua"
+            }
+         }
+      }
+   }
+}

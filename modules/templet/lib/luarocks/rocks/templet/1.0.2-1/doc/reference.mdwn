@@ -1,0 +1,29 @@
+---
+title: Reference
+---
+
+`templet.loadstring(s)`
+
+  : Loads a template from the given string, and returns a function.
+
+    That function takes as arguments `([env[, f]])`, and, when called,
+    renders the template in the environment specified by the table `env`,
+    using the specified output function `f`. If `env` is **nil**, the
+    global environment (`_G`) is used. If `f` is **nil**, an output
+    function equivalent to
+
+    ~~~ {.lua}
+    local result = {}
+    local f = function(chunk)
+      if chunk ~= nil then
+        table.insert(result, tostring(chunk))
+      end
+    end
+    ~~~
+
+    is used, and the result of `table.concat(result)` is returned.
+
+`templet.loadfile(filename)`
+
+  : Loads a template from the file with the given name, and returns a
+    function as described above.

@@ -1,0 +1,15 @@
+rock_manifest = {
+   docs = {
+      ["index.md"] = "329c2871df07d2e10878b26a256bfc6b",
+      ["rotas.md"] = "1e72cb7fd59d301b54f7b02389e44bd0"
+   },
+   lua = {
+      ["Rotas.lua"] = "cd0521a3fdea3bb91a4ab59b1411de43"
+   },
+   ["lua-rotas-0.2.0-1.rockspec"] = "c39185f5ab2e95846c8589176d8115c5",
+   test = {
+      ["00-require.lua"] = "9e6e5c76dba4466dd896c21658341cff",
+      ["01-basic.lua"] = "6752ea239a6ea6f766ec790b7cee3cbd",
+      ["02-array.lua"] = "6ee753eb1d5c7c8b659bac1b1164b191"
+   }
+}

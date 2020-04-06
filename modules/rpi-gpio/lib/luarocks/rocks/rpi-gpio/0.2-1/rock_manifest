@@ -1,0 +1,49 @@
+rock_manifest = {
+   doc = {
+      ["README.txt"] = "c50d1d21d9ec1d74a332cdc36fdc66d4",
+      ["readme.md"] = "6c0bd0d3292e4494241f403fd40d52ef"
+   },
+   lib = {
+      ["GPIO.so"] = "1ffab18352386be38361d90d08396895"
+   },
+   lua = {
+      ["CHANGELOG.txt"] = "64224a917b9a8364e62d23fd1761f381",
+      GPIO = {
+         ["lcd-hd44780.lua"] = "9b1be23b5e1552457efa4710de7d88af"
+      },
+      ["INSTALL.txt"] = "35b27602e0d62cd376e1d3c492675aee",
+      ["LICENCE.txt"] = "392553db322084abbc1064ffa8430574",
+      ["README.md"] = "25c6c7992b9fbd5ea0073115ca06d2d1",
+      ["RPi_GPIO_Lua_module.c"] = "9586321b7ec272bddc5c39f6d7b1e46a",
+      ["RPi_GPIO_Lua_module.o"] = "a9af7aeedf95356d95b0e838b453aa89",
+      ["config.ld"] = "89c922f632eea92687387292f066a772",
+      ["darksidesync_api.h"] = "c2512a4e87245e32b8bd2fd9d3c45a09",
+      ["darksidesync_aux.c"] = "96fdbfe58cdaaae8f4286fef62d03173",
+      ["darksidesync_aux.h"] = "dd1d7832fa0a2d2b35ffc4159cf288be",
+      ["darksidesync_aux.o"] = "16c1e3c3f261e39ef500d0808b5c3cdb",
+      doc = {
+         ["index.html"] = "d52cbec65b22c5530c66e9866264a442",
+         ["ldoc.css"] = "ca8708a2582297c21286b80212aec0f5",
+         modules = {
+            ["GPIO.html"] = "009c56bbf2ffc96fedae9171446b2d24",
+            ["GPIO.lcd-hd44780.html"] = "4e745279415e94b584b181071ca479fd"
+         }
+      },
+      makefile = "638e941193a77cc4f7cb7635f21d54ef",
+      module = {
+         ["lcd-hd44780.lua"] = "9b1be23b5e1552457efa4710de7d88af"
+      },
+      scripts = {
+         ["test1_blink.lua"] = "cf35a3c837f104d4770f17a344f57245",
+         ["test2_input.lua"] = "63e9bd07d4aaa5a8c62ed5423e466f01",
+         ["test3_inout.lua"] = "cb9704519b5ab4e6a985cfba12b2efc6",
+         ["test4_edge.lua"] = "98c9e9742cbec0ccbf4106f3b51a6678",
+         ["test5_pwm.lua"] = "f6e98274606f974381f7dba9ec3034be",
+         ["test6_callbacks.lua"] = "9c3db222a77300e9dd3910d713bf7a6b",
+         ["test_lcd.lua"] = "1f73534a8f38c60b0fd202481fdedb13",
+         ["test_leds.lua"] = "5beb57aac7440f73b82cccb1d0cf92f2",
+         ["test_switches.lua"] = "44537d59744f03c279e4b4d67858571f"
+      }
+   },
+   ["rpi-gpio-0.2-1.rockspec"] = "3ef6e58591e4c66fab593e26fe9e9441"
+}

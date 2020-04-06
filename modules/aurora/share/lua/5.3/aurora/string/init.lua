@@ -1,0 +1,1 @@
+return ondemand('aurora.string')

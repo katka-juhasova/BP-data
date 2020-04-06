@@ -1,0 +1,9 @@
+Help [[
+
+math.frexp (x)
+--------------
+
+  Returns `m` and `e` such that `x = m * 2^e`, `e` is an integer and the
+  absolute value of `m` is in the range __[0.5, 1)__ (or zero when `x` is
+  zero).
+]]

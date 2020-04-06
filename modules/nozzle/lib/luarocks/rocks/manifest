@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   nozzle = {
+      ["0.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   nozzle = {
+      "nozzle/0.0.1-1"
+   },
+   ["nozzle.generic"] = {
+      "nozzle/0.0.1-1"
+   },
+   ["nozzle.helpers"] = {
+      "nozzle/0.0.1-1"
+   },
+   ["nozzle.stock"] = {
+      "nozzle/0.0.1-1"
+   }
+}
+repository = {
+   nozzle = {
+      ["0.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               nozzle = "nozzle.lua",
+               ["nozzle.generic"] = "nozzle/generic.lua",
+               ["nozzle.helpers"] = "nozzle/helpers.lua",
+               ["nozzle.stock"] = "nozzle/stock.lua"
+            }
+         }
+      }
+   }
+}

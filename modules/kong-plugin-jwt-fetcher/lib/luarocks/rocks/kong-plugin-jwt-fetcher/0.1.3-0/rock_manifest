@@ -1,0 +1,17 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "852341247e709b7d4b41cf2780f09ec1"
+   },
+   ["kong-plugin-jwt-fetcher-0.1.3-0.rockspec"] = "a9d49151deb7e4607cab32cbf606c6ac",
+   lua = {
+      kong = {
+         plugins = {
+            ["jwt-fetcher"] = {
+               ["handler.lua"] = "7efe2e4a944c24127a09e64d6ac56a16",
+               ["schema.lua"] = "aab293f09be1ab892d94c85ef99e747b"
+            }
+         }
+      }
+   }
+}

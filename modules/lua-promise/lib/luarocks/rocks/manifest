@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-promise"] = {
+      ["0.1-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lua-promise"] = {
+      "lua-promise/0.1-3"
+   }
+}
+repository = {
+   ["lua-promise"] = {
+      ["0.1-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lua-promise"] = "lua-promise.lua"
+            }
+         }
+      }
+   }
+}

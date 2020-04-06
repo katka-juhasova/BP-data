@@ -1,0 +1,102 @@
+commands = {}
+dependencies = {
+   ["lua-periphery"] = {
+      ["2.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 2, string = "0.2"
+                  }
+               }
+            },
+            name = "luarocks-fetch-gitrec"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["luarocks-fetch-gitrec"] = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["luarocks.fetch.gitrec"] = {
+      "luarocks-fetch-gitrec/0.2-1"
+   },
+   ["luarocks.fetch.gitrec_file"] = {
+      "luarocks-fetch-gitrec/0.2-1"
+   },
+   ["luarocks.fetch.gitrec_http"] = {
+      "luarocks-fetch-gitrec/0.2-1"
+   },
+   ["luarocks.fetch.gitrec_https"] = {
+      "luarocks-fetch-gitrec/0.2-1"
+   },
+   ["luarocks.fetch.gitrec_ssh"] = {
+      "luarocks-fetch-gitrec/0.2-1"
+   },
+   periphery = {
+      "lua-periphery/2.1.0-1"
+   }
+}
+repository = {
+   ["lua-periphery"] = {
+      ["2.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["luarocks-fetch-gitrec"] = "0.2-1"
+            },
+            modules = {
+               periphery = "periphery.so"
+            }
+         }
+      }
+   },
+   ["luarocks-fetch-gitrec"] = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["luarocks.fetch.gitrec"] = "luarocks/fetch/gitrec.lua",
+               ["luarocks.fetch.gitrec_file"] = "luarocks/fetch/gitrec_file.lua",
+               ["luarocks.fetch.gitrec_http"] = "luarocks/fetch/gitrec_http.lua",
+               ["luarocks.fetch.gitrec_https"] = "luarocks/fetch/gitrec_https.lua",
+               ["luarocks.fetch.gitrec_ssh"] = "luarocks/fetch/gitrec_ssh.lua"
+            }
+         }
+      }
+   }
+}

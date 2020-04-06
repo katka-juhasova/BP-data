@@ -1,0 +1,17 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "1ea9f19f588ff9fb11480a7b900843eb"
+   },
+   ["kong-plugin-moocherio-0.1-1.rockspec"] = "60905f483a38520e323842740eb1faf3",
+   lua = {
+      kong = {
+         plugins = {
+            moocherio = {
+               ["handler.lua"] = "ddbc08e5c414d27f914fc0e9db63dd34",
+               ["schema.lua"] = "41634a5c983276b972c1a01e9666bffe"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,86 @@
+#! /usr/bin/env lua
+
+-- Copyright (C) 2015,2017,2018 Tomoyuki Fujimori <moyu@dromozoa.com>
+--
+-- This file is part of dromozoa-ubench.
+--
+-- dromozoa-ubench is free software: you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or
+-- (at your option) any later version.
+--
+-- dromozoa-ubench is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with dromozoa-ubench.  If not, see <http://www.gnu.org/licenses/>.
+
+local ubench = require "dromozoa.ubench"
+
+local unpack = table.unpack or unpack
+
+local dir = ...
+
+local results = {}
+for i = 2, #arg do
+  assert(assert(assert(loadfile(arg[i]))())(results))
+end
+
+local dataset = ubench.report(results, dir)
+
+local version_max = 0
+local name_max = 0
+
+local versions = {}
+local version_set = {}
+local names = {}
+local name_set = {}
+local rows = {}
+
+for i = 1, #dataset do
+  local data = dataset[i]
+  local version = data.version
+  local x = version_set[version] 
+  if not x then
+    x = #versions + 1
+    versions[x] = version
+    version_set[version] = x
+  end
+  local name = data.name
+  local y = name_set[name]
+  if not y then
+    y = #names + 1
+    names[y] = name
+    name_set[name] = y
+  end
+  local row = rows[y]
+  if not row then
+    row = { name = name }
+    rows[y] = row
+  end
+  row[x] = ("%.3f"):format(data.avg)
+end
+
+local name_max = 0
+for i = 1, #names do
+  local name = names[i]
+  if name_max < #name then
+    name_max = #name
+  end
+end
+local n = #versions
+local format = "%-" .. name_max .. "s" .. (" | %12s"):rep(n) .. "\n"
+
+io.write(format:format("", unpack(versions, 1, n)))
+io.write(("-"):rep(name_max), ("-|-------------"):rep(n), "\n")
+for y = 1, #rows do
+  local row = rows[y]
+  for x = 1, n do
+    if not row[x] then
+      row[x] = ""
+    end
+  end
+  io.write(format:format(row.name, unpack(row, 1, n)))
+end

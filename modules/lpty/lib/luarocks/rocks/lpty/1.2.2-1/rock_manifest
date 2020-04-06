@@ -1,0 +1,17 @@
+rock_manifest = {
+   doc = {
+      CHANGELOG = "037261dd232fd564730888d5f32411b6",
+      LICENSE = "c536070396b9cd27fed8aadae1c66fb8",
+      README = "908542ead95b094af9de9fa7e4632c32"
+   },
+   lib = {
+      ["lpty.so"] = "73c165375f94f58e7ffe2749e9c2f716"
+   },
+   ["lpty-1.2.2-1.rockspec"] = "f6bc3e6e941e7f572f7674c916815ddc",
+   samples = {
+      ["expectex.lua"] = "b349e3ca5479e99391cac473213b3b82",
+      ["lptytest.lua"] = "0995c97cba6937f5613a605f903cfee6",
+      ["simpleex.lua"] = "b4c632177bf5c16e7dc261bdcdc412b0",
+      ["testclient.lua"] = "0fd4c8dee84cda4902079436dfd878d7"
+   }
+}

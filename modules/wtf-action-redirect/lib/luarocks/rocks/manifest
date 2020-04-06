@@ -1,0 +1,203 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   wtf = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 7, string = "1.7"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, string = "2.1"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         }
+      }
+   },
+   ["wtf-action-redirect"] = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 2, string = "0.2"
+                  }
+               }
+            },
+            name = "wtf"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["wtf.actions.redirect"] = {
+      "wtf-action-redirect/0.1-1"
+   },
+   ["wtf.core.classes.action"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.classes.configurable_object"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.classes.instance"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.classes.object"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.classes.plugin"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.classes.policy"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.classes.solver"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.classes.storage"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.loader"] = {
+      "wtf/0.2-1"
+   },
+   ["wtf.core.tools"] = {
+      "wtf/0.2-1"
+   }
+}
+repository = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   wtf = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               ["wtf.core.classes.action"] = "wtf/core/classes/action.lua",
+               ["wtf.core.classes.configurable_object"] = "wtf/core/classes/configurable_object.lua",
+               ["wtf.core.classes.instance"] = "wtf/core/classes/instance.lua",
+               ["wtf.core.classes.object"] = "wtf/core/classes/object.lua",
+               ["wtf.core.classes.plugin"] = "wtf/core/classes/plugin.lua",
+               ["wtf.core.classes.policy"] = "wtf/core/classes/policy.lua",
+               ["wtf.core.classes.solver"] = "wtf/core/classes/solver.lua",
+               ["wtf.core.classes.storage"] = "wtf/core/classes/storage.lua",
+               ["wtf.core.loader"] = "wtf/core/loader.lua",
+               ["wtf.core.tools"] = "wtf/core/tools.lua"
+            }
+         }
+      }
+   },
+   ["wtf-action-redirect"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1",
+               luafilesystem = "1.7.0-2",
+               wtf = "0.2-1"
+            },
+            modules = {
+               ["wtf.actions.redirect"] = "wtf/actions/redirect.lua"
+            }
+         }
+      }
+   }
+}

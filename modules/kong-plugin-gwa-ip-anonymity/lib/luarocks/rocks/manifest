@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-gwa-ip-anonymity"] = {
+      ["1.1.6-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.gwa-ip-anonymity.handler"] = {
+      "kong-plugin-gwa-ip-anonymity/1.1.6-0"
+   },
+   ["kong.plugins.gwa-ip-anonymity.schema"] = {
+      "kong-plugin-gwa-ip-anonymity/1.1.6-0"
+   }
+}
+repository = {
+   ["kong-plugin-gwa-ip-anonymity"] = {
+      ["1.1.6-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.gwa-ip-anonymity.handler"] = "kong/plugins/gwa-ip-anonymity/handler.lua",
+               ["kong.plugins.gwa-ip-anonymity.schema"] = "kong/plugins/gwa-ip-anonymity/schema.lua"
+            }
+         }
+      }
+   }
+}

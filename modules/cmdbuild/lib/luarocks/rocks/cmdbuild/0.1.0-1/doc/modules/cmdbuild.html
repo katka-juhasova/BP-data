@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>CMDBuild SOAP API Library</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>cmdbuild</strong></li>
+  <li><a href="../modules/cmdbuild.attachment.html">cmdbuild.attachment</a></li>
+  <li><a href="../modules/cmdbuild.card.html">cmdbuild.card</a></li>
+  <li><a href="../modules/cmdbuild.lookup.html">cmdbuild.lookup</a></li>
+  <li><a href="../modules/cmdbuild.relation.html">cmdbuild.relation</a></li>
+  <li><a href="../modules/cmdbuild.workflow.html">cmdbuild.workflow</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/Readme.md.html">Readme</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>cmdbuild</code></h1>
+<p>vim: ts=2 tabstop=2 shiftwidth=2 expandtab</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#CMDBuild:new">CMDBuild:new (pid, logcolor, verbose, _debug)</a></td>
+	<td class="summary">CMDBuild:new
+  Create new instance</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#CMDBuild:set_credentials">CMDBuild:set_credentials (credentials)</a></td>
+	<td class="summary">CMDBuild:set_credentials
+ Set credentials for connected to CMDBuild</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#serialize">serialize (obj)</a></td>
+	<td class="summary">serialize
+  Serialize an object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#self.insert_header">self.insert_header (Object, template)</a></td>
+	<td class="summary">insert_header
+  Add header element (if it exists) to object
+ Cleans old header element anywat</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#args">args</a></td>
+	<td class="summary">CMDBuild.call
+  Call a remote method.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#args">args</a></td>
+	<td class="summary">encode
+ Converts a LuaXml table into a SOAP message</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "CMDBuild:new"></a>
+    <strong>CMDBuild:new (pid, logcolor, verbose, _debug)</strong>
+    </dt>
+    <dd>
+    CMDBuild:new
+  Create new instance
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pid</span>
+         - {+DESCRIPTION+} (string or number)
+        </li>
+        <li><span class="parameter">logcolor</span>
+         - {+DESCRIPTION+} (boolean)
+        </li>
+        <li><span class="parameter">verbose</span>
+         - {+DESCRIPTION+} (boolean)
+        </li>
+        <li><span class="parameter">_debug</span>
+         - {+DESCRIPTION+} (boolean)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        instance
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "CMDBuild:set_credentials"></a>
+    <strong>CMDBuild:set_credentials (credentials)</strong>
+    </dt>
+    <dd>
+    CMDBuild:set_credentials
+ Set credentials for connected to CMDBuild
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">credentials</span>
+        ` The value object
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        soap header
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "serialize"></a>
+    <strong>serialize (obj)</strong>
+    </dt>
+    <dd>
+    serialize
+  Serialize an object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">obj</span>
+         - Table with the object to be serialized (table)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        String with string.representation of the object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "self.insert_header"></a>
+    <strong>self.insert_header (Object, template)</strong>
+    </dt>
+    <dd>
+    insert_header
+  Add header element (if it exists) to object
+ Cleans old header element anywat
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Object</span>
+            <span class="types"><span class="type">obj</span></span>
+         for insert new header (table)
+        </li>
+        <li><span class="parameter">template</span>
+            <span class="types"><span class="type">header</span></span>
+         header (table)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        header_template (table)
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Tables"></a>Tables</h2>
+    <dl class="function">
+    <dt>
+    <a name = "args"></a>
+    <strong>args</strong>
+    </dt>
+    <dd>
+    CMDBuild.call
+  Call a remote method.  Table with the arguments which could be
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">url</span>
+         String with the location of the server
+        </li>
+        <li><span class="parameter">namespace</span>
+         String with the namespace of the elements
+        </li>
+        <li><span class="parameter">method</span>
+         String with the method's name
+        </li>
+        <li><span class="parameter">entries</span>
+         Table of SOAP elements (LuaExpat's format)
+        </li>
+        <li><span class="parameter">header</span>
+         Table describing the header of the SOAP-ENV (optional)
+        </li>
+        <li><span class="parameter">internal_namespace</span>
+         String with the optional namespace used as a prefix for the method name (default = "")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "args"></a>
+    <strong>args</strong>
+    </dt>
+    <dd>
+    encode
+ Converts a LuaXml table into a SOAP message  Table with the arguments, which could be (table)
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">namespace</span>
+         String with the namespace of the elements.
+        </li>
+        <li><span class="parameter">method</span>
+         String with the method's name
+        </li>
+        <li><span class="parameter">entries</span>
+         Table of SOAP elements (LuaExpat's format)
+        </li>
+        <li><span class="parameter">header</span>
+         Table describing the header of the SOAP envelope (optional)
+        </li>
+        <li><span class="parameter">internal_namespace</span>
+         String with the optional namespace used as a prefix for the method name (default = "")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.2</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

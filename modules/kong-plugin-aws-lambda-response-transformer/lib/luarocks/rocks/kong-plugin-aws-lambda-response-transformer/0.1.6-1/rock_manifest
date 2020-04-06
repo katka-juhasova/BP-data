@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "9bddca5f093c72e1e87385d17262e128",
+      ["README.md"] = "9e5774ef13a40af2b50a76c1ab6dc40f"
+   },
+   ["kong-plugin-aws-lambda-response-transformer-0.1.6-1.rockspec"] = "789598f2082f84a6be00cb7d1bdb69f5",
+   lua = {
+      kong = {
+         plugins = {
+            ["aws-lambda-response-transformer"] = {
+               ["handler.lua"] = "27d68e5b6c83bcf1aa8a32017f512915",
+               ["schema.lua"] = "1dcf34e728f5f3ce9af91260a102fca3",
+               ["v4.lua"] = "e43626d53923174aaea93769ac48dd7f"
+            }
+         }
+      }
+   }
+}

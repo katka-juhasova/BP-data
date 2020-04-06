@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["keycloak-rbac"] = {
+      ["1.1.0-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.keycloak-rbac.handler"] = {
+      "keycloak-rbac/1.1.0-0"
+   },
+   ["kong.plugins.keycloak-rbac.schema"] = {
+      "keycloak-rbac/1.1.0-0"
+   }
+}
+repository = {
+   ["keycloak-rbac"] = {
+      ["1.1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.keycloak-rbac.handler"] = "kong/plugins/keycloak-rbac/handler.lua",
+               ["kong.plugins.keycloak-rbac.schema"] = "kong/plugins/keycloak-rbac/schema.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["kong-custom-error-handlers"] = {
+      ["0.3.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.custom.error_handlers"] = {
+      "kong-custom-error-handlers/0.3.0-0"
+   }
+}
+repository = {
+   ["kong-custom-error-handlers"] = {
+      ["0.3.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.custom.error_handlers"] = "kong/custom/error_handlers.lua"
+            }
+         }
+      }
+   }
+}

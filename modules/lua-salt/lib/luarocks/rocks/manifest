@@ -1,0 +1,62 @@
+commands = {}
+dependencies = {
+   lrandom = {
+      ["20180729-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-salt"] = {
+      ["0.0.1-0"] = {
+         {
+            constraints = {},
+            name = "lrandom"
+         }
+      }
+   }
+}
+modules = {
+   random = {
+      "lrandom/20180729-1"
+   },
+   salt = {
+      "lua-salt/0.0.1-0"
+   }
+}
+repository = {
+   lrandom = {
+      ["20180729-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               random = "random.so"
+            }
+         }
+      }
+   },
+   ["lua-salt"] = {
+      ["0.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lrandom = "20180729-1"
+            },
+            modules = {
+               salt = "salt.lua"
+            }
+         }
+      }
+   }
+}

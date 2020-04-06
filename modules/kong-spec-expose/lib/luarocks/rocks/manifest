@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["kong-spec-expose"] = {
+      ["0.2-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-spec-expose.access"] = {
+      "kong-spec-expose/0.2-1"
+   },
+   ["kong.plugins.kong-spec-expose.handler"] = {
+      "kong-spec-expose/0.2-1"
+   },
+   ["kong.plugins.kong-spec-expose.schema"] = {
+      "kong-spec-expose/0.2-1"
+   }
+}
+repository = {
+   ["kong-spec-expose"] = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-spec-expose.access"] = "kong/plugins/kong-spec-expose/access.lua",
+               ["kong.plugins.kong-spec-expose.handler"] = "kong/plugins/kong-spec-expose/handler.lua",
+               ["kong.plugins.kong-spec-expose.schema"] = "kong/plugins/kong-spec-expose/schema.lua"
+            }
+         }
+      }
+   }
+}

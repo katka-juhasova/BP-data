@@ -1,0 +1,14 @@
+-- file: my_rockspec.tmpl
+local parent = dofile 'rockspec.tmpl'
+
+return CodeGen({
+    lower = string.lower,
+    _tarball = "${name; format=lower}-${version}.tar.gz",
+    _url = "'https://framagit.org/fperrad/${name}/raw/releases/${_tarball()}'",
+    _homepage = 'homepage = "https://fperrad.frama.io/${name}",',
+    desc = {
+        homepage = true,
+        maintainer = "Francois Perrad",
+        license = "MIT/X11",
+    },
+}, parent)

@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   hashids = {
+      ["1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   hashids = {
+      "hashids/1.0.6-1"
+   },
+   ["hashids.clib"] = {
+      "hashids/1.0.6-1"
+   }
+}
+repository = {
+   hashids = {
+      ["1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               hashids = "hashids/init.lua",
+               ["hashids.clib"] = "hashids/clib.so"
+            }
+         }
+      }
+   }
+}

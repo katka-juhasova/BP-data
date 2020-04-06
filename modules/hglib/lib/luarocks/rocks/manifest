@@ -1,0 +1,80 @@
+commands = {}
+dependencies = {
+   hglib = {
+      ["0.8-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 0, 0, string = "1.0.0"
+                  }
+               }
+            },
+            name = "lpc"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lpc = {
+      ["1.0.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   hglib = {
+      "hglib/0.8-1"
+   },
+   lpc = {
+      "lpc/1.0.0-2"
+   }
+}
+repository = {
+   hglib = {
+      ["0.8-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpc = "1.0.0-2"
+            },
+            modules = {
+               hglib = "hglib.lua"
+            }
+         }
+      }
+   },
+   lpc = {
+      ["1.0.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpc = "lpc.so"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   strong = {
+      ["1.0.4-1"] = {}
+   }
+}
+modules = {
+   strong = {
+      "strong/1.0.4-1"
+   }
+}
+repository = {
+   strong = {
+      ["1.0.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               strong = "strong.lua"
+            }
+         }
+      }
+   }
+}

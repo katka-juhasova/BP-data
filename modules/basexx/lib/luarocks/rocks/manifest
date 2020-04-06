@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   basexx = {
+      ["0.4.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   basexx = {
+      "basexx/0.4.1-1"
+   }
+}
+repository = {
+   basexx = {
+      ["0.4.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               basexx = "basexx.lua"
+            }
+         }
+      }
+   }
+}

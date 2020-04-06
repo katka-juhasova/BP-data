@@ -1,0 +1,17 @@
+Help [[
+
+help.print (desc)
+-----------------
+
+  Prints help description `desc`. This function is used internally by `help`
+  to print help pages. As an example, here's a simple pager:
+
+          help.print = function(desc)
+            local pipe = io.popen("less", "w")
+            pipe:write(desc)
+            pipe:close()
+          end
+
+  LuaHelp provides a module `helpman` that translates pages written in
+  markdown to troff and prints them using a suitable pager.
+]]

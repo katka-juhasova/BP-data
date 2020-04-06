@@ -1,0 +1,55 @@
+commands = {
+   lit2lua = {
+      "lualit/0.0.2-1"
+   },
+   lualit = {
+      "lualit/0.0.2-1"
+   }
+}
+dependencies = {
+   lualit = {
+      ["0.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lualit.lit_parser"] = {
+      "lualit/0.0.2-1"
+   },
+   ["lualit.loader"] = {
+      "lualit/0.0.2-1"
+   },
+   ["lualit.register"] = {
+      "lualit/0.0.2-1"
+   }
+}
+repository = {
+   lualit = {
+      ["0.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               lit2lua = "lit2lua",
+               lualit = "lualit"
+            },
+            dependencies = {},
+            modules = {
+               ["lualit.lit_parser"] = "lualit/lit_parser.lua",
+               ["lualit.loader"] = "lualit/loader.lua",
+               ["lualit.register"] = "lualit/register.lua"
+            }
+         }
+      }
+   }
+}

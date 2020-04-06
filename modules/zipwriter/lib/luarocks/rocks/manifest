@@ -1,0 +1,75 @@
+commands = {}
+dependencies = {
+   zipwriter = {
+      ["0.1.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ZipWriter = {
+      "zipwriter/0.1.5-1"
+   },
+   ["ZipWriter.binary_converter"] = {
+      "zipwriter/0.1.5-1"
+   },
+   ["ZipWriter.bit"] = {
+      "zipwriter/0.1.5-1"
+   },
+   ["ZipWriter.charset"] = {
+      "zipwriter/0.1.5-1"
+   },
+   ["ZipWriter.encrypt.aes"] = {
+      "zipwriter/0.1.5-1"
+   },
+   ["ZipWriter.encrypt.aes.AesFileEncrypt"] = {
+      "zipwriter/0.1.5-1"
+   },
+   ["ZipWriter.module"] = {
+      "zipwriter/0.1.5-1"
+   },
+   ["ZipWriter.utils"] = {
+      "zipwriter/0.1.5-1"
+   },
+   ["ZipWriter.win.cp"] = {
+      "zipwriter/0.1.5-1"
+   }
+}
+repository = {
+   zipwriter = {
+      ["0.1.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ZipWriter = "ZipWriter.lua",
+               ["ZipWriter.binary_converter"] = "ZipWriter/binary_converter.lua",
+               ["ZipWriter.bit"] = "ZipWriter/bit.lua",
+               ["ZipWriter.charset"] = "ZipWriter/charset.lua",
+               ["ZipWriter.encrypt.aes"] = "ZipWriter/encrypt/aes.lua",
+               ["ZipWriter.encrypt.aes.AesFileEncrypt"] = "ZipWriter/encrypt/aes/AesFileEncrypt.lua",
+               ["ZipWriter.module"] = "ZipWriter/module.lua",
+               ["ZipWriter.utils"] = "ZipWriter/utils.lua",
+               ["ZipWriter.win.cp"] = "ZipWriter/win/cp.lua"
+            }
+         }
+      }
+   }
+}

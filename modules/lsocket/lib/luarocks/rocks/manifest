@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   lsocket = {
+      ["1.4.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lsocket = {
+      "lsocket/1.4.1-1"
+   }
+}
+repository = {
+   lsocket = {
+      ["1.4.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lsocket = "lsocket.so"
+            }
+         }
+      }
+   }
+}

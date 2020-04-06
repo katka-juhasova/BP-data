@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-jwt-auth"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.jwt-auth.handler"] = {
+      "kong-plugin-jwt-auth/0.1.0-1"
+   },
+   ["kong.plugins.jwt-auth.schema"] = {
+      "kong-plugin-jwt-auth/0.1.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-jwt-auth"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.jwt-auth.handler"] = "kong/plugins/jwt-auth/handler.lua",
+               ["kong.plugins.jwt-auth.schema"] = "kong/plugins/jwt-auth/schema.lua"
+            }
+         }
+      }
+   }
+}

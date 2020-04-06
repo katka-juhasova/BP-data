@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "93330e9f1285f9e343eefa3855395004"
+   },
+   lua = {
+      ["luajit-curl-helper"] = {
+         ["ftp.lua"] = "8515a7242d52501c676f0aad844ca0d6",
+         ["http.lua"] = "09f9ba8f634a7d1e1ec7fa13c8380b53",
+         ["init.lua"] = "ed1779b771d101ab1bb9db4d0b988eec",
+         ["sftp.lua"] = "ddb8215f961cf7fc04a1b8f4470e568e"
+      },
+      ["luajit-curl.lua"] = "a264d3fb9638cb3c60a659214721b63f"
+   },
+   ["luajit-curl-1.1-0.rockspec"] = "7371962a945f58212eff51528acd9ca8"
+}

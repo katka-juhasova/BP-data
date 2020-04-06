@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>runkit Documentation</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>runkit</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Constants">Constants</a></li>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>runkit</strong></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="topics/manual.md.html">manual</a></li>
+</ul>
+<h2>Examples</h2>
+<ul class="nowrap">
+  <li><a href="examples/test.moon.html">test.moon</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>runkit</code></h1>
+<p>A better version of <a href="https://github.com/daelvn/lrunkit">lrunkit</a>.</p>
+<p>
+
+</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Author</strong>: daelvn</li>
+    </ul>
+
+
+<h2><a href="#Constants">Constants</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SILENT">SILENT</a></td>
+	<td class="summary">Makes a command silent.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#REDIRECT_STDERR">REDIRECT_STDERR</a></td>
+	<td class="summary">Redirects <code>stderr</code> to <code>stdout</code></td>
+	</tr>
+</table>
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#command">command (cmd, ...)</a></td>
+	<td class="summary">Runs a simple command, without capturing output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#capture">capture (cmd, ...)</a></td>
+	<td class="summary">Runs a command and captures its output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#interact">interact (cmd, ...)</a></td>
+	<td class="summary">Perform basic IO operations on a command.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#popenC">popenC (self, mode)</a></td>
+	<td class="summary">Uses <a href="https://www.lua.org/manual/5.3/manual.html#pdf-io.popen">io.popen</a> on the command.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readC">readC (self, format)</a></td>
+	<td class="summary">Reads from the open handle in a command.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readAllC">readAllC (self)</a></td>
+	<td class="summary">Shortcut for <code>readC cmd, &quot;*a&quot;</code></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#writeC">writeC (self, str)</a></td>
+	<td class="summary">Writes to the command.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#closeC">closeC (self)</a></td>
+	<td class="summary">Closes the command.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Constants"></a>Constants</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "SILENT"></a>
+    <strong>SILENT</strong>
+    </dt>
+    <dd>
+    Makes a command silent.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "REDIRECT_STDERR"></a>
+    <strong>REDIRECT_STDERR</strong>
+    </dt>
+    <dd>
+    Redirects <code>stderr</code> to <code>stdout</code>
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "command"></a>
+    <strong>command (cmd, ...)</strong>
+    </dt>
+    <dd>
+    Runs a simple command, without capturing output.  <em>*Curried function.</em>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cmd</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Command to be run.
+        </li>
+        <li><span class="parameter">...</span>
+         Parameters to the command, may be tables (if using <code>$</code>) or strings.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">boolean</span></span>
+        Whether the command ran successfully or not.</li>
+        <li>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        Reason for exit ("exit" or "signal").</li>
+        <li>
+           <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
+        If the reason for exit is "signal, this contains the signal.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "capture"></a>
+    <strong>capture (cmd, ...)</strong>
+    </dt>
+    <dd>
+    Runs a command and captures its output.  <strong>Curried function.</strong>
+ This function uses <a href="https://www.lua.org/manual/5.3/manual.html#pdf-io.popen">io.popen</a>, which may not be availiable in all platforms.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cmd</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Command to be run.
+        </li>
+        <li><span class="parameter">...</span>
+         Parameters to the command, may be tables (if using <code>$</code>) or strings.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        Result of the command.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "interact"></a>
+    <strong>interact (cmd, ...)</strong>
+    </dt>
+    <dd>
+    Perform basic IO operations on a command.  <strong>Curried function.</strong>
+ The command structure returned only contains one field, <a href="index.html#command">command</a>, which contains the final command.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cmd</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Command to be run.
+        </li>
+        <li><span class="parameter">...</span>
+         Parameters to the command, may be tables (if using <code>$</code>) or strings.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Command</span></span>
+        Command structure.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "popenC"></a>
+    <strong>popenC (self, mode)</strong>
+    </dt>
+    <dd>
+    Uses <a href="https://www.lua.org/manual/5.3/manual.html#pdf-io.popen">io.popen</a> on the command.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><span class="type">Command</span></span>
+         Command structure.
+        </li>
+        <li><span class="parameter">mode</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Mode to open with <a href="https://www.lua.org/manual/5.3/manual.html#pdf-io.popen">io.popen</a>.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "readC"></a>
+    <strong>readC (self, format)</strong>
+    </dt>
+    <dd>
+    Reads from the open handle in a command.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><span class="type">Command</span></span>
+         Command structure.
+        </li>
+        <li><span class="parameter">format</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Format to read. Defaults to "r"
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        Result.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "readAllC"></a>
+    <strong>readAllC (self)</strong>
+    </dt>
+    <dd>
+    Shortcut for <code>readC cmd, &quot;*a&quot;</code>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><span class="type">Command</span></span>
+         Command structure.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        Whole results of the command.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "writeC"></a>
+    <strong>writeC (self, str)</strong>
+    </dt>
+    <dd>
+    Writes to the command.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><span class="type">Command</span></span>
+         Command structure.
+        </li>
+        <li><span class="parameter">str</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Contents to be written.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "closeC"></a>
+    <strong>closeC (self)</strong>
+    </dt>
+    <dd>
+    Closes the command.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><span class="type">Command</span></span>
+         Command structure.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2019-09-15 04:08:44 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

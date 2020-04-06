@@ -1,0 +1,125 @@
+commands = {}
+dependencies = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["kong-plugin-abac"] = {
+      ["0.0.8-1"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 12, string = "0.12"
+                  }
+               }
+            },
+            name = "lua-resty-http"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     2, 5, string = "2.5"
+                  }
+               }
+            },
+            name = "dkjson"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.12-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   dkjson = {
+      "dkjson/2.5-2"
+   },
+   ["kong.plugins.abac.handler"] = {
+      "kong-plugin-abac/0.0.8-1"
+   },
+   ["kong.plugins.abac.schema"] = {
+      "kong-plugin-abac/0.0.8-1"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.12-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.12-0"
+   }
+}
+repository = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dkjson = "dkjson.lua"
+            }
+         }
+      }
+   },
+   ["kong-plugin-abac"] = {
+      ["0.0.8-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               dkjson = "2.5-2",
+               ["lua-resty-http"] = "0.12-0"
+            },
+            modules = {
+               ["kong.plugins.abac.handler"] = "kong/plugins/abac/handler.lua",
+               ["kong.plugins.abac.schema"] = "kong/plugins/abac/schema.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.12-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,280 @@
+#!/usr/bin/env lua
+---------------------------------------------------------------------
+--     This Lua5 script is Copyright (c) 2018, Peter J Billam      --
+--                       www.pjb.com.au                            --
+--  This script is free software; you can redistribute it and/or   --
+--         modify it under the same terms as Lua5 itself.          --
+---------------------------------------------------------------------
+local Version = '1.2  for Lua5'
+local VersionDate  = '20180402'
+local Synopsis = [[
+pgn2eco.lua  1. d4 f5 2. g3
+]]
+
+local FEN = require 'chess.fen'
+local DBM = require 'gdbm'
+-- local POS = require 'posix'
+local STA = require "posix.sys.stat"
+-- or LuaFileSystem http://keplerproject.github.io/luafilesystem/manual.html
+
+-- local infile    = os.getenv('ECOMAST_FILE')  or '/home/eco/ECOMast.txt'
+local infile    = os.getenv('ECOMAST_FILE')  or '/home/eco/P3eco.txt'
+local out_dbdir = os.getenv('PGN2ECO_DBDIR') or '/tmp'
+
+---------------------------------------------------------------------
+local function split(s, pattern, maxNb) -- http://lua-users.org/wiki/SplitJoin
+    if not s or string.len(s)<2 then return {s} end
+    if not pattern then return {s} end
+    if maxNb and maxNb <2 then return {s} end
+    local result = { }
+    local theStart = 1
+    local theSplitStart,theSplitEnd = string.find(s,pattern,theStart)
+    local nb = 1
+    while theSplitStart do
+        table.insert( result, string.sub(s,theStart,theSplitStart-1) )
+        theStart = theSplitEnd + 1
+        theSplitStart,theSplitEnd = string.find(s,pattern,theStart)
+        nb = nb + 1
+        if maxNb and nb >= maxNb then break end
+    end
+    table.insert( result, string.sub(s,theStart,-1) )
+    return result
+end
+function warn(...)
+    local a = {}
+    for k,v in pairs{...} do table.insert(a, tostring(v)) end
+    io.stderr:write(table.concat(a),'\n') ; io.stderr:flush()
+end
+function die(...) warn(...);  os.exit(1) end
+function more_recent(f1, f2)
+	local f1_stat = STA.stat(f1)
+	local f2_stat = STA.stat(f2)
+	if not f2_stat then return true end
+	-- print( f1_stat['st_mtime'] , f2_stat['st_mtime'] )
+	return f1_stat['st_mtime'] > f2_stat['st_mtime']
+end
+
+---------------------------------------------------------------------
+
+local iarg=1; while arg[iarg] ~= nil do
+	if not string.find(arg[iarg], '^-[a-z]') then break end
+	local first_letter = string.sub(arg[iarg],2,2)
+	if first_letter == 'v' then
+		local n = string.gsub(arg[0],"^.*/","",1)
+		print(n.." version "..Version.."  "..VersionDate)
+		os.exit(0)
+	elseif first_letter == 'd' then
+		iarg = iarg + 1
+		out_dbdir = arg[iarg]
+	elseif first_letter == 'e' then
+		iarg = iarg + 1
+		infile = arg[iarg]
+	else
+		local n = string.gsub(arg[0],"^.*/","",1)
+		print(n.." version "..Version.."  "..VersionDate.."\n\n"..Synopsis)
+		os.exit(0)
+	end
+	iarg = iarg+1
+end
+local pgn
+if iarg <= #arg then
+	local a = {}
+	for i = iarg,#arg do a[#a+1] = arg[i] end
+	pgn = table.concat(a, ' ')
+else
+	pgn = io.read('a')
+end
+
+local eco2fen_db = out_dbdir..'/eco2fen.gdbm'
+local fen2eco_db = out_dbdir..'/fen2eco.gdbm'
+local start = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+
+--print(infile, out_dbdir)
+--print(eco2fen_db, fen2eco_db) ; os.exit()
+
+if more_recent(infile, eco2fen_db) or more_recent(infile, fen2eco_db) then
+	warn('regenerating '..eco2fen_db..' and '..fen2eco_db)
+	local eco2fen = assert(DBM.open(eco2fen_db, "n"))
+	local fen2eco = assert(DBM.open(fen2eco_db, "n"))
+
+	local ecomast_file = assert(io.open(infile, 'r'))
+	while true do
+		local line = ecomast_file:read('l')
+		if not line then break end
+		if string.match(line, '^([A-E][0-9][0-9]) ') then
+			local econum = string.match(line, '^([A-E][0-9][0-9]) ')
+			local var = ecomast_file:read('l')
+			if not var then break end
+			var = string.gsub(var, ' 1/2 ?', '')
+			var = string.gsub(var, '[0-9]%. ?', '')
+			var = string.gsub(var, '%(', '')
+			var = string.gsub(var, '%)', '')
+			local moves = split(var, ' +')
+			local fen = start
+			for i,move in ipairs(moves) do
+    			local newfen,msg = FEN.fenstr_move(fen, move)
+				if not newfen then
+					-- warn(msg)
+					warn(line,'\n ',fen,'\n ',var,'\n ',msg) ; break
+				end
+				fen = newfen
+			end
+			eco2fen:insert(econum, FEN.fenstr2key(fen))
+			fen2eco:insert(FEN.fenstr2key(fen), econum) 
+		end
+	end
+	ecomast_file:close()
+	eco2fen:close()  -- don't forget to do this!
+	fen2eco:close()  -- don't forget to do this!
+	warn('finished regenerating')
+end
+
+local fen2eco = assert(DBM.open(fen2eco_db, "r"))
+local newfen = start
+local eco
+for v in FEN.pgn_moves(pgn) do
+	newfen = assert(FEN.fenstr_move(newfen, v))
+	local neweco = fen2eco:fetch(FEN.fenstr2key(newfen))
+	if neweco then eco = neweco end
+	-- print(newfen, neweco, eco)
+end
+print(eco)
+
+os.exit()
+
+--[=[
+
+=pod
+
+=head1 NAME
+
+pgn2eco.lua - Constructs a FEN->ECO database from ECOMast.txt
+
+=head1 SYNOPSIS
+
+  # in ~/.profile
+  export PGN2ECO_DBDIR=$HOME/chess
+  export ECOMAST_FILE=/home/eco/P3eco.txt
+  # these can be overridden with the -d and -e options
+
+  ~> pgn2eco 1. d4 Nf6 2. c4 c5 3. d5 e6 4. Nc3 exd5 5. cd5 d6
+  A60
+  ~> pgn2eco e4 e6 d4 d5 Nd2 c5
+  C07
+
+=head1 DESCRIPTION
+
+The files C</home/eco/ECOMast.txt> or C</home/eco/P3eco.txt>
+classify the openings in the format:
+
+    A22    English: Bellon Gambit
+    1.c4 e5 2.Nc3 Nf6 3.Nf3 e4 4.Ng5 b5 1/2
+
+    A23    English: Bremen System: Keres Variation
+    1.c4 e5 2.Nc3 Nf6 3.g3 c6 1/2
+
+    A24    English: Bremen System: (with...g6)
+    1.c4 e5 2.Nc3 Nf6 3.g3 g6 1/2
+
+This program uses that file to construct a I<gdbm> database of
+ECO-numbers indexed by their defining positions in a FEN-based form,
+therefore independent of move-order (except for en-passant).
+
+This database is then used to go through an opening line of unknown ECO,
+and find its most relevant ECO number.
+
+The FEN-based key does not include the move number,
+since the same position can be reached at different move-numbers
+(the Sveshnikov Sicilian, for example).
+
+=head1 ENVIRONMENT VARIABLES
+
+=over 3
+
+=item I<ECOMAST_FILE>
+
+This environment variable specifies the filename of your copy of
+C<ECOMast.txt> or C<P3eco.txt>
+
+It can be overriden with the B<-e> option.
+
+=item I<PGN2ECO_DBDIR>
+
+This environment variable sets the directory where the I<gdbm> databases
+C<eco2fen.gdbm> and C<fen2eco.gdbm> will be placed.
+It can be overriden with the B<-d> option.
+
+If it is not specified they are placed in I</tmp/>
+
+In I</tmp/> they will cost you a couple of seconds
+the first time you invoke I<pgn2eco> after a reboot,
+because the databases get deleted on shut-down.
+
+=back
+
+=head1 ARGUMENTS
+
+=over 3
+
+=item I<-d ~/gloop>
+
+Set the directory where the I<gdbm> databases
+I<eco2fen.gdbm> and
+I<fen2eco.gdbm> will be placed.
+This option can be used to override the environment variable
+I<PGN2ECO_DBDIR>
+
+By default they will be in I<$HOME/chess/>
+
+
+=item I<-e /usr/share/chess/P3eco.txt>
+
+Set the location of the I<ECOMast.txt> file.
+This option can be used to override the environment variable
+I<ECOMAST_FILE>
+
+=item I<-f>
+
+Prints also the FEN of the resulting position
+
+=item I<-v>
+
+Print the Version
+
+=back
+
+=head1 DOWNLOAD
+
+This at is available at
+http://www.pjb.com.au/comp/lua/pgn2eco
+
+It uses the file C<P3eco.txt>, and
+It requires the B<chess-fen> module :
+
+    luarocks install chess-fen
+
+=head1 CHANGES
+
+ 20180407 1.2 uses FEN.fenstr2key() - first released version
+ 20180403 1.1 several important bugs fixed
+ 20180326 1.0 first half-working vesion
+
+=head1 AUTHOR
+
+Peter J Billam, http://www.pjb.com.au/comp/contact.html
+
+=head1 SEE ALSO
+
+ http://www.enpassant.dk/chess/palview/manual/p3eco.htm
+ http://www.neerpeltersk.be/palview4/p4sets/P3eco.txt
+ http://rybkaforum.net/cgi-bin/rybkaforum/topic_show.pl?tid=7579
+ http://www.neerpeltersk.be/palview4/p4sets/P3eco.txt
+ http://www.pjb.com.au/comp/lua/pgn2eco
+ http://www.pjb.com.au/comp/lua/fen.html
+ http://www.bookup.com/downloads.htm
+ https://www.chesshere.com/forums_topic.php?id=6582
+ http://www.pjb.com.au/
+
+=cut
+
+]=]

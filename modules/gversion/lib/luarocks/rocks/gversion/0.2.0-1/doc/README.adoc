@@ -1,0 +1,92 @@
+= Lua library for Gentoo-style versioning format
+Jakub Jirutka <https://github.com/jirutka[@jirutka]>
+:gh-name: jirutka/gversion.lua
+:gh-branch: master
+:ldoc-url: https://jirutka.github.io/gversion.lua/ldoc/
+
+ifdef::env-github[]
+image:https://travis-ci.org/{gh-name}.svg?branch={gh-branch}["Build Status", link="https://travis-ci.org/{gh-name}"]
+image:https://coveralls.io/repos/github/{gh-name}/badge.svg?branch={gh-branch}&service=github["Coverage Status", link="https://coveralls.io/github/{gh-name}?branch={gh-branch}"]
+image:https://img.shields.io/badge/ldoc-docs-blue.svg["LDoc", link="{ldoc-url}"]
+endif::env-github[]
+
+https://devmanual.gentoo.org/ebuild-writing/file-format/#file-naming-rules[Gentoo versioning format] (scheme) is like http://semver.org/[Semantic Versioning], but more flexible and complex.
+It was designed to be compatible with various versioning formats used in open-source projects.
+This format is used also in https://alpinelinux.org/[Alpine Linux].
+
+This library allows to parse, normalize, validate and compare version numbers.
+
+
+== Usage
+
+[source, lua]
+----
+local ver = require "gversion"
+
+-- Parse version
+local pkgver = ver.parse("2.1_rc3-r1")
+local pkgver = ver"2.1_rc3-r1"
+
+-- Access version components
+pkgver[1]     --> "2"
+pkgver.major  --> "2"
+pkgver[2]     --> "1"
+pkgver.minor  --> "1"
+pkgver.rc     --> "3"
+pkgver.r      --> "1"
+
+-- Change version components
+pkgver[1] = "2"     -- 2.1_rc3-r1
+pkgver.minor = "0"  -- 2.0_rc3-r1
+pkgver.rc = nil     -- 2.0-r1
+
+-- Compare versions
+ver"1.5" == ver"1.005"           --> true
+ver"1.2_rc1" < ver"1.2b"         --> true
+ver"1.2_beta_pre" > ver"1.2_p1"  --> false
+
+-- Normalize version; try to convert it into our versioning format
+ver.normalize("2_1-beta3")  --> "2.1_beta3"
+ver.normalize("2.1b3")      --> "2.1_beta3"
+----
+
+
+== Installation
+
+You can install gversion using https://luarocks.org[LuaRocks] (the Lua package manager):
+
+    luarocks install gversion
+
+or to get the latest development version:
+
+    luarocks install --server=http://luarocks.org/dev gversion
+
+Note: If you want to bootstrap development environment for running tests, read the next section.
+
+
+== Set up development environment
+
+. Clone this repository:
+
+    git clone https://github.com/jirutka/gversion.lua.git
+    cd gversion.lua
+
+. Source file `.envrc` into your shell (or manually add `$(pwd)/.venv/bin` to your `PATH`):
+
+    source .envrc
+
+. Install Lua and modules for running tests into directory `.venv`:
+
+    ./script/bootstrap
+
+. Start hacking!
+
+. Run tests with code coverage and linter:
+
+    ./script/test
+
+
+== License
+
+This project is licensed under http://opensource.org/licenses/MIT/[MIT License].
+For the full text of the license, see the link:LICENSE[LICENSE] file.

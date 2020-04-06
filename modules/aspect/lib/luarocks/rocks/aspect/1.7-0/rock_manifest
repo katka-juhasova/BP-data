@@ -1,0 +1,36 @@
+rock_manifest = {
+   ["aspect-1.7-0.rockspec"] = "1985528e5a8c29855f487bd800491d5d",
+   doc = {
+      ["CODE_OF_CONDUCT.md"] = "19a59e188f594c19b1319debbb5bff5b",
+      ["CONTRIBUTING.md"] = "6e57cd2c46be101d65c88dbab7c98c85",
+      LICENSE = "f97755f7a8714870a18dbbc75d414f65",
+      ["readme.md"] = "8fe5c67cf331cc59de8b417650ea9db5"
+   },
+   lua = {
+      aspect = {
+         ast = {
+            ["ops.lua"] = "bb71583569fcf73f8deaf124d2ffe879"
+         },
+         ["ast.lua"] = "899e0ff0128dc3c67d857b4788cc2c0f",
+         ["compiler.lua"] = "012de8f9d737024c5395118e1093b8cb",
+         ["config.lua"] = "0225a5054ff6fc4b771d9f814b676f82",
+         ["err.lua"] = "30caf3285887a3165634ef06dafba531",
+         ["filters.lua"] = "d375bd5b6c446a5ded8e9a4eb9bb95b7",
+         ["funcs.lua"] = "fd546a965cee844fe098288e08c6c821",
+         ["init.lua"] = "4b26f8a1709632c4208b8f7b287b0faa",
+         loader = {
+            ["array.lua"] = "0ce4828cb287e31bfadee4373c23165e"
+         },
+         ["output.lua"] = "5e9217101d80b3a5fda6b4317422f569",
+         ["tags.lua"] = "9dd739510d24fa37e5e74350523ace21",
+         ["template.lua"] = "797262e49dfde29b693f4b716c6384d1",
+         ["tests.lua"] = "e6143315c3e9e83c7a2bdfe2a8dd593d",
+         ["tokenizer.lua"] = "3f077e22354f44c002334b95cfb2aca7",
+         utils = {
+            ["batch.lua"] = "7bdfaa064688f40337ab4293f2f3ee9b",
+            ["range.lua"] = "b41e296d28ae43c5df9d03dec044e67c"
+         },
+         ["utils.lua"] = "a2e1fcb3dc9ce6c7d6484b61f98d43a9"
+      }
+   }
+}

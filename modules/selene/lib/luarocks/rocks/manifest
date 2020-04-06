@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   selene = {
+      ["0.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   selene = {
+      "selene/0.0.1-1"
+   }
+}
+repository = {
+   selene = {
+      ["0.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               selene = "selene.lua"
+            }
+         }
+      }
+   }
+}

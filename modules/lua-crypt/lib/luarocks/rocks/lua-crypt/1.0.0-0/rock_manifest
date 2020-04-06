@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "05efb78ced602fcc5c5e23810251a87b",
+      ["README.md"] = "becbcbcb8a436d76f6678aff01fc9961"
+   },
+   lib = {
+      crypt = {
+         ["core.so"] = "6daee34f9466a50a1f7bb363054312c2"
+      }
+   },
+   lua = {
+      ["crypt.lua"] = "adf0c520a02f2ad36b2bad585c300f43"
+   },
+   ["lua-crypt-1.0.0-0.rockspec"] = "bfd55579df503d509babd5320e74c7c4"
+}

@@ -1,0 +1,9 @@
+Help [[
+
+coroutine.yield (...)
+---------------------
+
+  Suspends the execution of the calling coroutine. The coroutine cannot be
+  running a C function, a metamethod, or an iterator. Any arguments to `yield`
+  are passed as extra results to `resume`.
+]]

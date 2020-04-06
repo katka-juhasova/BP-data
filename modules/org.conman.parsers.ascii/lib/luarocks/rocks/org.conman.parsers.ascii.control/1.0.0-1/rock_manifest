@@ -1,0 +1,14 @@
+rock_manifest = {
+   lua = {
+      org = {
+         conman = {
+            parsers = {
+               ascii = {
+                  ["control.lua"] = "42e13275aefe9fb19bcba95a295c3207"
+               }
+            }
+         }
+      }
+   },
+   ["org.conman.parsers.ascii.control-1.0.0-1.rockspec"] = "370c900f0533592c689bb10560deee4a"
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   tamale = {
+      ["1.2.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   tamale = {
+      "tamale/1.2.2-1"
+   }
+}
+repository = {
+   tamale = {
+      ["1.2.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               tamale = "tamale.lua"
+            }
+         }
+      }
+   }
+}

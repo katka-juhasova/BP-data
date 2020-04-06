@@ -1,0 +1,13 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "158de84ba7687c4bd2820213a8b9ed5a"
+   },
+   ["libssh-0.2-0.rockspec"] = "b928249203ce312c3d31aab0a3ffe303",
+   lua = {
+      libssh = {
+         ["libssh.lua"] = "d3824675a2e4b4e29512928c53a8d61f",
+         ["sftp.lua"] = "30c54249410275565c0c5c0a06dd0fc1",
+         ["types.lua"] = "db419b0858fcfcdd0b0a9303171d53af"
+      }
+   }
+}

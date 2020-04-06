@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "a19c1b5da019de31e87f84eb96b06376",
+      ["README.md"] = "6c261ebebcfa62692d3eb8ac33191d08"
+   },
+   lib = {
+      ["luasodium.so"] = "1c6951506fe987bc9d79213a7b873c4c"
+   },
+   lua = {
+      paseto = {
+         v2 = {
+            ["core.lua"] = "994299a4f071a2056c4c2327d7d92b7a"
+         },
+         ["v2.lua"] = "adfc8019b018c9dd82184a60f8abc46a"
+      }
+   },
+   ["paseto-0.4.0-1.rockspec"] = "e293bdef619e4d8bcdbf3d6f9b900628"
+}

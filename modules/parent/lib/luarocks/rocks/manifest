@@ -1,0 +1,43 @@
+commands = {
+   parent = {
+      "parent/1.0.0-0"
+   }
+}
+dependencies = {
+   parent = {
+      ["1.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   parent = {
+      "parent/1.0.0-0"
+   }
+}
+repository = {
+   parent = {
+      ["1.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               parent = "parent"
+            },
+            dependencies = {},
+            modules = {
+               parent = "parent.lua"
+            }
+         }
+      }
+   }
+}

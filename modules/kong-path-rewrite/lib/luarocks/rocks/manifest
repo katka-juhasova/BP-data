@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-path-rewrite"] = {
+      ["0.0.1-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-path-rewrite.handler"] = {
+      "kong-path-rewrite/0.0.1-0"
+   },
+   ["kong.plugins.kong-path-rewrite.schema"] = {
+      "kong-path-rewrite/0.0.1-0"
+   }
+}
+repository = {
+   ["kong-path-rewrite"] = {
+      ["0.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-path-rewrite.handler"] = "kong/plugins/kong-path-rewrite/handler.lua",
+               ["kong.plugins.kong-path-rewrite.schema"] = "kong/plugins/kong-path-rewrite/schema.lua"
+            }
+         }
+      }
+   }
+}

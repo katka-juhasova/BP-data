@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-env"] = {
+      ["0.4.0-1"] = {}
+   }
+}
+modules = {
+   ["resty.env"] = {
+      "lua-resty-env/0.4.0-1"
+   }
+}
+repository = {
+   ["lua-resty-env"] = {
+      ["0.4.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.env"] = "resty/env.lua"
+            }
+         }
+      }
+   }
+}

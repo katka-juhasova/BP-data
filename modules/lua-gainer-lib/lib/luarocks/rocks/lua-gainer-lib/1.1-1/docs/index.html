@@ -1,0 +1,882 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Lua GAINER library documentation</title>
+    <link rel="stylesheet" href="ldoc_new.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>lua-gainer-lib</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Tables">Tables</a></li>
+</ul>
+
+
+<h2>Programs</h2>
+<ul class="nowrap">
+  <li><strong>gainer</strong></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="manual/README.md.html">README</a></li>
+</ul>
+<h2>Examples</h2>
+<ul class="nowrap">
+  <li><a href="examples/advancedAnalogRead.lua.html">advancedAnalogRead.lua</a></li>
+  <li><a href="examples/analogRead.lua.html">analogRead.lua</a></li>
+  <li><a href="examples/analogSampling.lua.html">analogSampling.lua</a></li>
+  <li><a href="examples/analogWrite.lua.html">analogWrite.lua</a></li>
+  <li><a href="examples/blink.lua.html">blink.lua</a></li>
+  <li><a href="examples/buttonInterrupt.lua.html">buttonInterrupt.lua</a></li>
+  <li><a href="examples/capacitiveSensing.lua.html">capacitiveSensing.lua</a></li>
+  <li><a href="examples/changeConfiguration.lua.html">changeConfiguration.lua</a></li>
+  <li><a href="examples/digitalRead.lua.html">digitalRead.lua</a></li>
+  <li><a href="examples/digitalSampling.lua.html">digitalSampling.lua</a></li>
+  <li><a href="examples/digitalWrite.lua.html">digitalWrite.lua</a></li>
+  <li><a href="examples/getVersion.lua.html">getVersion.lua</a></li>
+  <li><a href="examples/ledDimming.lua.html">ledDimming.lua</a></li>
+  <li><a href="examples/ledMatrix.lua.html">ledMatrix.lua</a></li>
+  <li><a href="examples/matrixRandom.lua.html">matrixRandom.lua</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Script <code>gainer</code></h1>
+<p>LuaJIT library to control GAINER - an USB I/O board
+ for educational purpose.</p>
+<p> It uses serial port connection and simple commands
+ allowing for easily use digital input and analog input from environment or
+ control any devices like LEDs or servos by digital and analog outputs.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: galion</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#sleep">sleep (s)</a></td>
+	<td class="summary">Halts execution of script for s seconds.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#map">map (value, fromLow, fromHigh, toLow, toHigh)</a></td>
+	<td class="summary">Arduino-like function that re-maps a number from one range to another.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:init">board:init (serialPort, configuration)</a></td>
+	<td class="summary">Inits gainer library.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:attatchInterrupt">board:attatchInterrupt (isrName, isr)</a></td>
+	<td class="summary">Sets the function to run when interrupt is detected.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:wait">board:wait (time)</a></td>
+	<td class="summary">Delays the program for s seconds with detection of interrupts.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:digitalRead">board:digitalRead (...)</a></td>
+	<td class="summary">Gets digital output of GAINER board.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:digitalWrite">board:digitalWrite (mode, ...)</a></td>
+	<td class="summary">Turns on or off digital outputs of GAINER board.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:setConfiguration">board:setConfiguration (configuration)</a></td>
+	<td class="summary">Sets new configuration of GAINER device.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:analogRead">board:analogRead (...)</a></td>
+	<td class="summary">Reads analog value from pins of GAINER device.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:setMatrix">board:setMatrix (table)</a></td>
+	<td class="summary">Sets lights on 8x8 LED matrix connected to GAINER board.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:analogWrite">board:analogWrite (mode, ...)</a></td>
+	<td class="summary">Sets analog outputs of GAINER board.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:getSample">board:getSample (...)</a></td>
+	<td class="summary">Gets sample from continuous mode from GAINER device.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:endSampling">board:endSampling ()</a></td>
+	<td class="summary">Exits continuous mode if GAINER board was set to it.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:beginAnalogSampling">board:beginAnalogSampling ()</a></td>
+	<td class="summary">Sets GAINER board in continuous mode to read analog-to-digital converters
+ and send values from them automatically.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:beginDigitalSampling">board:beginDigitalSampling ()</a></td>
+	<td class="summary">Sets GAINER board in continuous mode to read digital values from all pins
+ and send values from them automatically.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:setSensitivity">board:setSensitivity (value)</a></td>
+	<td class="summary">Sets sensitivity for capacitive sensors.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:setSamplingMode">board:setSamplingMode (mode)</a></td>
+	<td class="summary">Sets sampling mode For GAINER board.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:setGain">board:setGain (reference, value)</a></td>
+	<td class="summary">Sets gain of programmable gain amplifiers
+ and reference of analog-to-digital converters of GAINER board.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:getVersion">board:getVersion ()</a></td>
+	<td class="summary">Prints version of GAINER firmware.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:setDebug">board:setDebug (mode)</a></td>
+	<td class="summary">Sets debug mode.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:setVerbose">board:setVerbose (mode)</a></td>
+	<td class="summary">Sets verbose mode of GAINER firmware.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:getLastDigitalInput">board:getLastDigitalInput ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:getLastAnalogInput">board:getLastAnalogInput ()</a></td>
+	<td class="summary">
+
+</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#board:start">board:start (setup, loop)</a></td>
+	<td class="summary">Starts the script to control GAINER board.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#new">new ()</a></td>
+	<td class="summary">Creates new board object.</td>
+	</tr>
+</table>
+<h2><a href="#Tables">Tables</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#M">M</a></td>
+	<td class="summary">Table with modes, parameters, and constants.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "sleep"></a>
+    <strong>sleep (s)</strong>
+    </dt>
+    <dd>
+    Halts execution of script for s seconds.
+ Interrupts will not be caught when using this function.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">s</span>
+         seconds for delay - decimals can be used.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "map"></a>
+    <strong>map (value, fromLow, fromHigh, toLow, toHigh)</strong>
+    </dt>
+    <dd>
+    Arduino-like function that re-maps a number from one range to another.
+ A value of fromLow would get mapped to toLow, a value
+ of fromHigh to toHigh, values in-between to values in-between, etc.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+         value to re-map.
+        </li>
+        <li><span class="parameter">fromLow</span>
+         Lowest possible value from value range.
+        </li>
+        <li><span class="parameter">fromHigh</span>
+         Highest possible value from value range.
+        </li>
+        <li><span class="parameter">toLow</span>
+         Lowest possible value from desired range.
+        </li>
+        <li><span class="parameter">toHigh</span>
+         Highest possible value from desired range.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        result Re-mapped value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:init"></a>
+    <strong>board:init (serialPort, configuration)</strong>
+    </dt>
+    <dd>
+    Inits gainer library.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">serialPort</span>
+         Serial port that is connected to GAINER board like "/dev/ttyS0".
+ Default port is "/dev/ttyUSB0"
+        </li>
+        <li><span class="parameter">configuration</span>
+         Configuration number to set when GAINER board is connected.
+ Default configuration is 1.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:attatchInterrupt"></a>
+    <strong>board:attatchInterrupt (isrName, isr)</strong>
+    </dt>
+    <dd>
+    Sets the function to run when interrupt is detected.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">isrName</span>
+         Interrupt name. The only one avarible now is "button".
+        </li>
+        <li><span class="parameter">isr</span>
+         function name that will be attached.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:wait"></a>
+    <strong>board:wait (time)</strong>
+    </dt>
+    <dd>
+    Delays the program for s seconds with detection of interrupts.
+ Interrupts will be detected and in any
+ interrupts are attached, they  will run.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+         time in seconds - decimals can be used.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:digitalRead"></a>
+    <strong>board:digitalRead (...)</strong>
+    </dt>
+    <dd>
+    Gets digital output of GAINER board.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+         Input numbers of GAINER board. For din 0 it will be 1, for
+ all digital inputs it will be 1,2,3,4 and so on.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Output table with booleans. For digital 1 it will be true and for digital 0 it
+ will be false. Table index with value is equal to argument number.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:digitalWrite"></a>
+    <strong>board:digitalWrite (mode, ...)</strong>
+    </dt>
+    <dd>
+    Turns on or off digital outputs of GAINER board.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mode</span>
+         State to set on pin or pins. For digital 1 gainer.HIGH is used and for
+ digital 0 gaier.LOW is used.
+        </li>
+        <li><span class="parameter">...</span>
+         Output numbers of board. For dout 0 it will be 1 and for all all digital
+ outputs it will be 1,2,3,4 and so on. It can also set a on-board
+ LED when gainer.LED is used as parameter. Order of arguments does not matter.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:setConfiguration"></a>
+    <strong>board:setConfiguration (configuration)</strong>
+    </dt>
+    <dd>
+    Sets new configuration of GAINER device.
+ Functions resets GAIENR device and sets it to a new configuration.
+ State of pins after reset is undefined.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">configuration</span>
+         configuration number.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:analogRead"></a>
+    <strong>board:analogRead (...)</strong>
+    </dt>
+    <dd>
+    Reads analog value from pins of GAINER device.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+         input numbers of GAINER board. For ain 0 it will be 1, for
+ all analog inputs it will be 1,2,3,4 and so on.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Output table with integers with values between 0 an 255 - from 0V to 5V. That value can be
+ re-mapped using gainer.map function. Table index with value is equal to argument number.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#map">map</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "board:setMatrix"></a>
+    <strong>board:setMatrix (table)</strong>
+    </dt>
+    <dd>
+    Sets lights on 8x8 LED matrix connected to GAINER board. <br/>
+ It does it in one long command allowing faster refresh time
+ comparing to analogWrite function.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+         table with 8 numbers. To read it hex format is used.
+ For example number 0x0f0f0f0f will light every second LED on matrix.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#board:analogWrite">analogWrite</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "board:analogWrite"></a>
+    <strong>board:analogWrite (mode, ...)</strong>
+    </dt>
+    <dd>
+    Sets analog outputs of GAINER board.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mode</span>
+         Writing mode for writing analog values. There are two modes:
+ SINGlE that  changes only one analog output and MULTI that sets all of analog
+ outputs.
+        </li>
+        <li><span class="parameter">...</span>
+         For single mode there are two arguments needed. First is port number and
+ second is value for that port from 0 to 255. If GAINER board is set at configuration 7 port number is
+ column number and value is from 0 to 4294967295 (from 0x00000000 to 0xFFFFFFFF) to set matrix led row.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="index.html#M">M</a></li>
+         <li><a href="index.html#board:setMatrix">setMatrix</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "board:getSample"></a>
+    <strong>board:getSample (...)</strong>
+    </dt>
+    <dd>
+    Gets sample from continuous mode from GAINER device.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+         Port numbers from which sample will be returned. All samples will
+ be written to internal field of board table and can be returned via
+ getLastDigitalInput or getLastAnalogInput for digital or analog samples respectively.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+         table with values if analog sampling is used or booleans for digital sampling.
+ For digital 1 it will be true and for digital 0 it will be false.
+ For analog sampling integers with values between 0 an 255 - from 0V to 5V. That value can be
+ re-mapped using gainer.map function.
+ Table index with value is equal to argument number.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#map">map</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "board:endSampling"></a>
+    <strong>board:endSampling ()</strong>
+    </dt>
+    <dd>
+    Exits continuous mode if GAINER board was set to it.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:beginAnalogSampling"></a>
+    <strong>board:beginAnalogSampling ()</strong>
+    </dt>
+    <dd>
+    Sets GAINER board in continuous mode to read analog-to-digital converters
+ and send values from them automatically.
+ In that mode some commands might be inaccessible.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="index.html#board:getSample">getSample</a></li>
+         <li><a href="index.html#board:endSampling">endSampling</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "board:beginDigitalSampling"></a>
+    <strong>board:beginDigitalSampling ()</strong>
+    </dt>
+    <dd>
+    Sets GAINER board in continuous mode to read digital values from all pins
+ and send values from them automatically.
+ In that mode some commands might be inaccessible.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="index.html#board:getSample">getSample</a></li>
+         <li><a href="index.html#board:endSampling">endSampling</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "board:setSensitivity"></a>
+    <strong>board:setSensitivity (value)</strong>
+    </dt>
+    <dd>
+    Sets sensitivity for capacitive sensors.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+         Capacitive sensitivity.
+ Can be set from 1 to 16 where 16 is most sensitive selection.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:setSamplingMode"></a>
+    <strong>board:setSamplingMode (mode)</strong>
+    </dt>
+    <dd>
+    Sets sampling mode For GAINER board.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mode</span>
+         Sampling mode. There are two sampling modes:
+ ALL_PORTS (default setting) all ports will be sampled. This can reduce
+ accuracy of sampling but the difference is very little.</p>
+
+<p> AIN_ONLY - only ain port of GAINER board will be sampled. it can increase
+ accuracy and speed of sampling.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#M">M</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "board:setGain"></a>
+    <strong>board:setGain (reference, value)</strong>
+    </dt>
+    <dd>
+    Sets gain of programmable gain amplifiers
+ and reference of analog-to-digital converters of GAINER board.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">reference</span>
+         Analog-to-digital converter voltage reference. There are two
+ references: VSS which is 5V and AGND which is default setting.
+        </li>
+        <li><span class="parameter">value</span>
+         Programmable gain amplifier gain. It can be set from 1 to 16. 16 will have
+ 48x gain. More information can be found in source code of GAINER firmware.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:getVersion"></a>
+    <strong>board:getVersion ()</strong>
+    </dt>
+    <dd>
+    Prints version of GAINER firmware.  Can only run in configuration 0.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        GAINER firmware version.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:setDebug"></a>
+    <strong>board:setDebug (mode)</strong>
+    </dt>
+    <dd>
+    Sets debug mode.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mode</span>
+         Set to true for enabling debug output or false to disable it.
+ Disabled is default setting.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:setVerbose"></a>
+    <strong>board:setVerbose (mode)</strong>
+    </dt>
+    <dd>
+    Sets verbose mode of GAINER firmware.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mode</span>
+         Set to true for enabling it. In this mode GAINER will respond for
+ all commands to confirm them. This takes time and processing power to read them, but it
+ guarantees that all commands will be checked for confirmation.
+ Set false to disable it - it's the default setting.
+ Requires setting before initialization or reset of the board. This can be achieved
+ via setConfiguration function.
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#board:setConfiguration">setConfiguration</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "board:getLastDigitalInput"></a>
+    <strong>board:getLastDigitalInput ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table of booleans of last saved of sampled digital input
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:getLastAnalogInput"></a>
+    <strong>board:getLastAnalogInput ()</strong>
+    </dt>
+    <dd>
+
+
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table of integers of last saved of sampled analog input
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "board:start"></a>
+    <strong>board:start (setup, loop)</strong>
+    </dt>
+    <dd>
+    Starts the script to control GAINER board.  It is used to set
+ setup and loop functions to imitate arduino-like sketch.
+ Both functions are optional but recommended.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">setup</span>
+         Function that will be ran only one time
+        </li>
+        <li><span class="parameter">loop</span>
+          Function that will be ran forever
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "new"></a>
+    <strong>new ()</strong>
+    </dt>
+    <dd>
+    Creates new board object.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        board Board object
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Tables"></a>Tables</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "M"></a>
+    <strong>M</strong>
+    </dt>
+    <dd>
+    Table with modes, parameters, and constants.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">HIGH</span>
+        High (5V) state of pin.
+        </li>
+        <li><span class="parameter">LOW</span>
+        Low (GND) Low state of pin.
+        </li>
+        <li><span class="parameter">LED</span>
+        On-board LED pin.
+        </li>
+        <li><span class="parameter">SINGLE</span>
+        Mode used to change only one analog pin output.
+        </li>
+        <li><span class="parameter">MULTI</span>
+        Mode used to write to all analog pins.
+        </li>
+        <li><span class="parameter">VSS</span>
+        Voltage reference or analog-to-digital converters connected to 5V.
+        </li>
+        <li><span class="parameter">AGND</span>
+        Voltage reference or analog-to-digital converters connected to GND.
+        </li>
+        <li><span class="parameter">ALL_PORTS</span>
+        Mode used to sample from all avarible analog ports.
+        </li>
+        <li><span class="parameter">AIN_ONLY</span>
+        Mode used to sample only from ain ports.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="https://github.com/eruber/LDoc">LDoc 1.4.7</a></i>
+<i style="float:right;">Last updated 2018-10-30 14:36:58 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+rock_manifest = {
+   bin = {
+      drcom = "4939c812edc42303a7e101d2fd3a01f8"
+   },
+   ["cwnu-drcom-3.2-0.rockspec"] = "e3cb2462c5daed121df8a9db99fdc079",
+   doc = {
+      LICENSE = "84dcc94da3adb52b53ae4fa38fe49e5d",
+      ["README.md"] = "296be89057e46da3b2cf924fa05f1ff9"
+   },
+   lua = {
+      ["cwnu-drcom"] = {
+         ["config.lua"] = "65423f7bdabc2463e71b845b979fb476",
+         ["core.lua"] = "ceb48adeb732e7d938edf5b010ed4784"
+      }
+   }
+}

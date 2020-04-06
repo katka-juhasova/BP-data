@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   gambiarra = {
+      ["0.4.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = "<=",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   gambiarra = {
+      "gambiarra/0.4.1-0"
+   }
+}
+repository = {
+   gambiarra = {
+      ["0.4.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               gambiarra = "gambiarra.lua"
+            }
+         }
+      }
+   }
+}

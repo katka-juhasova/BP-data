@@ -1,0 +1,73 @@
+commands = {}
+dependencies = {
+   ["lua-resty-consul-event"] = {
+      ["0.3.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 12, string = "0.12"
+                  }
+               }
+            },
+            name = "lua-resty-http"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.12-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.consul.event"] = {
+      "lua-resty-consul-event/0.3.0-0"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.12-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.12-0"
+   }
+}
+repository = {
+   ["lua-resty-consul-event"] = {
+      ["0.3.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-http"] = "0.12-0"
+            },
+            modules = {
+               ["resty.consul.event"] = "resty/consul/event.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.12-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   }
+}

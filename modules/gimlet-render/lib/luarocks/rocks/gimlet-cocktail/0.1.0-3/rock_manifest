@@ -1,0 +1,26 @@
+rock_manifest = {
+   bin = {
+      gimlet = "dc610d8ef8332b435ec531f6750874c2"
+   },
+   doc = {
+      LICENSE = "f310ca59fec829b16e39ccfd3a8b2da6",
+      ["README.md"] = "0c2d7d0e7ebaedd071ce7131341b903a"
+   },
+   ["gimlet-cocktail-0.1.0-3.rockspec"] = "409e35a5d0893b7a86691a539ad99e18",
+   lua = {
+      gimlet = {
+         backend = {
+            ["nginx.lua"] = "f41450ed194ca56f4f1d760ba3b20f6e",
+            ["wsapi.lua"] = "5b52fb0776171c6986a7c45511b0cd46"
+         },
+         ["classic.lua"] = "34c287d672f9653911a376c495d1e9a4",
+         ["dispatcher.lua"] = "5fb49a9abb1dfba7a99cb0039f050e13",
+         ["init.lua"] = "528953af3324b5dedbad5008a85c92fc",
+         ["logger.lua"] = "15b4e13ba9c90b5a45fcd4e41ec3f089",
+         ["router.lua"] = "21115365bb0cce36559dbc84a5f11cfb",
+         ["static.lua"] = "2bfbeada06ea5df2124f723204172fbf",
+         ["utils.lua"] = "cc6e9e521f6bee2430f8d5d8a047aead",
+         ["version.lua"] = "a54feec1fbe75134d637effa39436dc9"
+      }
+   }
+}

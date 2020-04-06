@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-http-log-with-body"] = {
+      ["0.1.1-2"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.http-log-with-body.handler"] = {
+      "kong-plugin-http-log-with-body/0.1.1-2"
+   },
+   ["kong.plugins.http-log-with-body.schema"] = {
+      "kong-plugin-http-log-with-body/0.1.1-2"
+   }
+}
+repository = {
+   ["kong-plugin-http-log-with-body"] = {
+      ["0.1.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.http-log-with-body.handler"] = "kong/plugins/http-log-with-body/handler.lua",
+               ["kong.plugins.http-log-with-body.schema"] = "kong/plugins/http-log-with-body/schema.lua"
+            }
+         }
+      }
+   }
+}

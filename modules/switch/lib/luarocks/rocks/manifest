@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   switch = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   switch = {
+      "switch/1.0-0"
+   }
+}
+repository = {
+   switch = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               switch = "switch.lua"
+            }
+         }
+      }
+   }
+}

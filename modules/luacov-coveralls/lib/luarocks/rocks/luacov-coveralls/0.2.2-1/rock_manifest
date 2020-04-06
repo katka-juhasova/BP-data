@@ -1,0 +1,26 @@
+rock_manifest = {
+   bin = {
+      ["luacov-coveralls"] = "686384d8fbc96cd98e4e56a4da25f7ba"
+   },
+   doc = {
+      LICENSE = "ec8c521e287e61f3c1bfa03ece117fb3",
+      ["README.md"] = "3546134cd1a3cbce759d15fe1c419ccf"
+   },
+   lua = {
+      luacov = {
+         coveralls = {
+            ["CiInfo.lua"] = "735b123b9a419aefd93a9ed87db0a96d",
+            ["CiRepo.lua"] = "21a0839c8efd121544aaca7a78940dcf",
+            repo = {
+               ["appveyor.lua"] = "06f4081d6ce10b261a8fa04309b912fb",
+               ["git.lua"] = "416dcb3c03b39c1c59bbb13283859fc1"
+            },
+            ["utils.lua"] = "89693043ee328daf871e43a789446c18"
+         },
+         reporter = {
+            ["coveralls.lua"] = "08d3929f0bf5499c0311092a5e57210a"
+         }
+      }
+   },
+   ["luacov-coveralls-0.2.2-1.rockspec"] = "2361211f22583b091dba860b88a15e4e"
+}

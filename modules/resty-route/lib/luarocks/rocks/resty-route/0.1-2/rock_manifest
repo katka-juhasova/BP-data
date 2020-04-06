@@ -1,0 +1,35 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "4dae8cf35bc92d5a1adb1a2f75d76fdb",
+      ["README.md"] = "d8f45ffbd99d15babbea8a7007224764"
+   },
+   lua = {
+      resty = {
+         route = {
+            handlers = {
+               ["http.lua"] = "37ce1c1c9f38acb993be3ccbb51c0104",
+               ["sse.lua"] = "37ce1c1c9f38acb993be3ccbb51c0104",
+               ["websocket.lua"] = "89ef1b18db271c7330cb85a089fee771"
+            },
+            matchers = {
+               ["equals.lua"] = "d315db2fc5cb77b1b882e7928ba9e5d4",
+               ["match.lua"] = "c0880bb139dcd15e0889077833a40f83",
+               ["prefix.lua"] = "9edcb3fa43ba166e067d8165981e3f70",
+               ["regex.lua"] = "cb30880312f97d22231d2c265e6655db",
+               ["simple.lua"] = "0c52136db8bdad7eaa7ff3ba37220feb"
+            },
+            middleware = {
+               ["ajax.lua"] = "7e045272cc797ffc7a311d6ea4c15f8d",
+               ["form.lua"] = "7b19ecff0061ff3acc466cc6d94ff6d5",
+               ["pjax.lua"] = "23b098f912d107d71634b536983d4e2e",
+               ["redis.lua"] = "9359c8065129435548c64a7c82c1279e",
+               ["reqargs.lua"] = "1754c13b3a11c3f08e73aa22bd80d8e4",
+               ["template.lua"] = "6156c90c61eaf88f86de9860b8f66b4e"
+            },
+            ["router.lua"] = "6cc8992e6b22ffa47645a7ae58f15653"
+         },
+         ["route.lua"] = "bfc7e14d2f4ec1bbcdfc474742c7e7eb"
+      }
+   },
+   ["resty-route-0.1-2.rockspec"] = "6fe646299a0362b8e785005da104020a"
+}

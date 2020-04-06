@@ -1,0 +1,404 @@
+commands = {
+   discovery2spore = {
+      "lua-spore/0.3.3-2"
+   },
+   swagger2spore = {
+      "lua-spore/0.3.3-2"
+   },
+   wadl2spore = {
+      "lua-spore/0.3.3-2"
+   }
+}
+dependencies = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-spore"] = {
+      ["0.3.3-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 0, 2, string = "2.0.2"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 3, string = "1.3"
+                  }
+               }
+            },
+            name = "luajson"
+         }
+      }
+   },
+   luajson = {
+      ["1.3.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 8, 1, string = "0.8.1"
+                  }
+               }
+            },
+            name = "lpeg"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   Spore = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Core"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.GoogleDiscovery"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Auth.AWS"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Auth.Basic"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Auth.Bearer"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Auth.DataPublica"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Auth.Digest"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Auth.OAuth"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Cache"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.DoNotTrack"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Format.JSON"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Format.XML"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Format.YAML"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Logging"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Mock"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Parameter.Default"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Parameter.Force"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Proxy.Basic"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Redirection"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.Runtime"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Middleware.UserAgent"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Protocols"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Request"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.Swagger"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.WADL"] = {
+      "lua-spore/0.3.3-2"
+   },
+   ["Spore.XML"] = {
+      "lua-spore/0.3.3-2"
+   },
+   json = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.composite"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.number"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.others"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.state"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.strings"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.decode.util"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.array"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.calls"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.number"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.object"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.others"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.output"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.output_utility"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.encode.strings"] = {
+      "luajson/1.3.4-1"
+   },
+   ["json.util"] = {
+      "luajson/1.3.4-1"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   ["lua-spore"] = {
+      ["0.3.3-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               discovery2spore = "discovery2spore",
+               swagger2spore = "swagger2spore",
+               wadl2spore = "wadl2spore"
+            },
+            dependencies = {
+               lpeg = "1.0.2-1",
+               luajson = "1.3.4-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               Spore = "Spore.lua",
+               ["Spore.Core"] = "Spore/Core.lua",
+               ["Spore.GoogleDiscovery"] = "Spore/GoogleDiscovery.lua",
+               ["Spore.Middleware.Auth.AWS"] = "Spore/Middleware/Auth/AWS.lua",
+               ["Spore.Middleware.Auth.Basic"] = "Spore/Middleware/Auth/Basic.lua",
+               ["Spore.Middleware.Auth.Bearer"] = "Spore/Middleware/Auth/Bearer.lua",
+               ["Spore.Middleware.Auth.DataPublica"] = "Spore/Middleware/Auth/DataPublica.lua",
+               ["Spore.Middleware.Auth.Digest"] = "Spore/Middleware/Auth/Digest.lua",
+               ["Spore.Middleware.Auth.OAuth"] = "Spore/Middleware/Auth/OAuth.lua",
+               ["Spore.Middleware.Cache"] = "Spore/Middleware/Cache.lua",
+               ["Spore.Middleware.DoNotTrack"] = "Spore/Middleware/DoNotTrack.lua",
+               ["Spore.Middleware.Format.JSON"] = "Spore/Middleware/Format/JSON.lua",
+               ["Spore.Middleware.Format.XML"] = "Spore/Middleware/Format/XML.lua",
+               ["Spore.Middleware.Format.YAML"] = "Spore/Middleware/Format/YAML.lua",
+               ["Spore.Middleware.Logging"] = "Spore/Middleware/Logging.lua",
+               ["Spore.Middleware.Mock"] = "Spore/Middleware/Mock.lua",
+               ["Spore.Middleware.Parameter.Default"] = "Spore/Middleware/Parameter/Default.lua",
+               ["Spore.Middleware.Parameter.Force"] = "Spore/Middleware/Parameter/Force.lua",
+               ["Spore.Middleware.Proxy.Basic"] = "Spore/Middleware/Proxy/Basic.lua",
+               ["Spore.Middleware.Redirection"] = "Spore/Middleware/Redirection.lua",
+               ["Spore.Middleware.Runtime"] = "Spore/Middleware/Runtime.lua",
+               ["Spore.Middleware.UserAgent"] = "Spore/Middleware/UserAgent.lua",
+               ["Spore.Protocols"] = "Spore/Protocols.lua",
+               ["Spore.Request"] = "Spore/Request.lua",
+               ["Spore.Swagger"] = "Spore/Swagger.lua",
+               ["Spore.WADL"] = "Spore/WADL.lua",
+               ["Spore.XML"] = "Spore/XML.lua"
+            }
+         }
+      }
+   },
+   luajson = {
+      ["1.3.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               json = "json.lua",
+               ["json.decode"] = "json/decode.lua",
+               ["json.decode.composite"] = "json/decode/composite.lua",
+               ["json.decode.number"] = "json/decode/number.lua",
+               ["json.decode.others"] = "json/decode/others.lua",
+               ["json.decode.state"] = "json/decode/state.lua",
+               ["json.decode.strings"] = "json/decode/strings.lua",
+               ["json.decode.util"] = "json/decode/util.lua",
+               ["json.encode"] = "json/encode.lua",
+               ["json.encode.array"] = "json/encode/array.lua",
+               ["json.encode.calls"] = "json/encode/calls.lua",
+               ["json.encode.number"] = "json/encode/number.lua",
+               ["json.encode.object"] = "json/encode/object.lua",
+               ["json.encode.others"] = "json/encode/others.lua",
+               ["json.encode.output"] = "json/encode/output.lua",
+               ["json.encode.output_utility"] = "json/encode/output_utility.lua",
+               ["json.encode.strings"] = "json/encode/strings.lua",
+               ["json.util"] = "json/util.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   }
+}

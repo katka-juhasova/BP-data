@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-resty-murmurhash3"] = {
+      ["1.0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   libmurmurhash3 = {
+      "lua-resty-murmurhash3/1.0.1-0"
+   },
+   murmurhash3 = {
+      "lua-resty-murmurhash3/1.0.1-0"
+   }
+}
+repository = {
+   ["lua-resty-murmurhash3"] = {
+      ["1.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               libmurmurhash3 = "libmurmurhash3.so",
+               murmurhash3 = "murmurhash3.lua"
+            }
+         }
+      }
+   }
+}

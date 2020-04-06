@@ -1,0 +1,38 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "8139bea2e49b5649955d51e299470e2b"
+   },
+   lua = {
+      ["api-gateway"] = {
+         aws = {
+            ["AWSBasicCredentials.lua"] = "5d5fda04394b0d2f31c48b7b618fd7cb",
+            ["AWSIAMCredentials.lua"] = "ccd326f27ee4d898b81aa3dc763a123c",
+            ["AWSSTSCredentials.lua"] = "ab5d9dd2d9ae7a07a2addfa52f84abc7",
+            ["AwsDateConverter.lua"] = "262937d8d9b6c4880d2e520ade73680b",
+            ["AwsService.lua"] = "0357272e44baf3b162478df532b416f5",
+            ["AwsV4Signature.lua"] = "c66c0baf90b57f98bdc2c45816151972",
+            httpclient = {
+               ["http.lua"] = "615fdada1d8333b87549f8e49d8d0fb5",
+               ["restyhttp.lua"] = "c21b2bdfd68152f07cbc0b681d5c9aad",
+               ["url.lua"] = "7e9c714bd37f590d1e418c21352d4330"
+            },
+            kinesis = {
+               ["KinesisService.lua"] = "7890ae6162948c660cf1dd19a7f880f1"
+            },
+            kms = {
+               ["KmsService.lua"] = "c66b8feff3552b8caa69cf32a1b7c543"
+            },
+            lambda = {
+               ["LambdaService.lua"] = "f48fc8af88ffc2f22b1557be871a1af6"
+            },
+            sns = {
+               ["SnsService.lua"] = "594ae091eab663e9d8cc94c1f6cbbede"
+            },
+            sts = {
+               ["SecurityTokenService.lua"] = "aba438c1877f602b5db3ffca4c2a28ad"
+            }
+         }
+      }
+   },
+   ["x-lua-api-gateway-aws-1.7.1-0.rockspec"] = "6173eded895cc33fec445b8f0c65cd8c"
+}

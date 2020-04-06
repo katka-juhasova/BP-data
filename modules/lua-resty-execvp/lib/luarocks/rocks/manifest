@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-execvp"] = {
+      ["0.1.1-1"] = {}
+   }
+}
+modules = {
+   ["resty.execvp"] = {
+      "lua-resty-execvp/0.1.1-1"
+   }
+}
+repository = {
+   ["lua-resty-execvp"] = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.execvp"] = "resty/execvp.lua"
+            }
+         }
+      }
+   }
+}

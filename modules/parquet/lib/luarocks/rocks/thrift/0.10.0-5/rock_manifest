@@ -1,0 +1,54 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "acc456aee6b71f8d1894b6f2dad5d023",
+      LICENSE = "394465e125cffc0f133695ed43f14047",
+      ["README.md"] = "de5d515f0d5e4fe8e285764db250c70d"
+   },
+   lua = {
+      thrift = {
+         ["TApplicationException.lua"] = "6f5eadc7b6443b4a251f53af3b17b07e",
+         ["TApplicationExceptionType.lua"] = "239d7c10b4f12c236989f597ff38a49e",
+         ["TException.lua"] = "403735166e7921e42b9bbacea9752612",
+         ["TServer.lua"] = "cccd382d377e55268a9f9e02c487b551",
+         ["TSimpleServer.lua"] = "2e85060c4d58dfa07525eea71db22a34",
+         ["libluabitwise.lua"] = "6ae25fb9f902f3b4b48919a0978dc08c",
+         ["libluabpack.lua"] = "c8134bf636da11703c0ac7c9a2a1b0fb",
+         ["liblualongnumber.lua"] = "6cc30dca92ebae3877968c4c14726763",
+         ["print_r.lua"] = "e12142bca47a7598b02746722fcc8bf4",
+         protocol = {
+            ["TBinaryProtocol.lua"] = "621b7756688fb51efffc628932ac2e43",
+            ["TBinaryProtocolFactory.lua"] = "f44ff42daa6f3c3475e81de197c1a8ee",
+            ["TCompactProtocol.lua"] = "4846fa4e49871a2831a9540944178218",
+            ["TCompactProtocolFactory.lua"] = "e350f3acca975772271770e33d5f8a7a",
+            ["TCompactProtocolType.lua"] = "4cf3fdcd8a27d1f7730f9383af57c5f2",
+            ["TJsonProtocol.lua"] = "9db6e2af6761f21c235df662fff01a37",
+            ["TJsonProtocolFactory.lua"] = "c1b1232b82587b1bdba0bac5c168e126",
+            ["TMessageType.lua"] = "acd59c43827eeffeb3376d9bbe0e02cf",
+            ["TProtocol.lua"] = "1665f8f4cf08f3894e18f9d5ed597d38",
+            ["TProtocolException.lua"] = "776790a9ffb9a8be59756a43d040a303",
+            ["TProtocolExceptionType.lua"] = "cfb77bd8b53693d936ecfe2b7e40ed9a",
+            ["TProtocolFactory.lua"] = "a760b70b818c698c0564c4815b6de74c",
+            ["TType.lua"] = "aad05c2b673e65fd3130914399ae7c43"
+         },
+         ["terror.lua"] = "3b59b5be93e99914db8947304280fa92",
+         transport = {
+            ["TBufferedTransport.lua"] = "5a0f0c30128b43c4ca56b7f1dc9b32be",
+            ["TBufferedTransportFactory.lua"] = "cc8239d3b8b3111882debfa89db9e2ae",
+            ["TFramedTransport.lua"] = "c2d12845d7a0a9ad675d4e3d183ef369",
+            ["TFramedTransportFactory.lua"] = "f1b541db61e9b7fc06c4381883390d58",
+            ["THttpTransport.lua"] = "05d075fed6af320116d0d88b232a0108",
+            ["THttpTransportFactory.lua"] = "78023e3813490a3fbf58300946087b5c",
+            ["TMemoryBuffer.lua"] = "aa6e17b8fa2c58e1226cee216e55f2ea",
+            ["TServerSocket.lua"] = "fe2eddd6682a93fa8b229afda13054bb",
+            ["TServerTransport.lua"] = "7ed280ae899b5a8d8d5c88943a95a8ee",
+            ["TSocket.lua"] = "1198b8ac5fca7654ddd6b5b7a008eafd",
+            ["TTransport.lua"] = "75242c75aad342fc0630a7c798e06e3e",
+            ["TTransportException.lua"] = "33de5a99194422ce26a84d00feeb3e4a",
+            ["TTransportExceptionType.lua"] = "1e1e6a2a68c68dd465c5f7fb174f38f8",
+            ["TTransportFactory.lua"] = "bcadf461840c83e603b4ca8ae7a3dd46"
+         }
+      },
+      ["thrift.lua"] = "333454b748586ca529eae2d97db05dd6"
+   },
+   ["thrift-0.10.0-5.rockspec"] = "76592a2f13d96b43f231fce1e8517438"
+}

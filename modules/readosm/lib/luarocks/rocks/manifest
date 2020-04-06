@@ -1,0 +1,53 @@
+commands = {}
+dependencies = {
+   readosm = {
+      ["1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["config.ld"] = {
+      "readosm/1-1"
+   },
+   ["examples.list-tags"] = {
+      "readosm/1-1"
+   },
+   readosm = {
+      "readosm/1-1"
+   },
+   ["readosm-ffi"] = {
+      "readosm/1-1"
+   },
+   ["readosm.cdefs"] = {
+      "readosm/1-1"
+   }
+}
+repository = {
+   readosm = {
+      ["1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["config.ld"] = "config.ld",
+               ["examples.list-tags"] = "examples/list-tags.lua",
+               readosm = "readosm.lua",
+               ["readosm-ffi"] = "readosm-ffi.lua",
+               ["readosm.cdefs"] = "readosm/cdefs.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,264 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   inspect = {
+      ["3.1.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lanes = {
+      ["3.13.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luastream = {
+      ["0.1-3"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luasocket"
+         },
+         {
+            constraints = {},
+            name = "inspect"
+         },
+         {
+            constraints = {},
+            name = "lanes"
+         },
+         {
+            constraints = {},
+            name = "lua-cjson"
+         }
+      }
+   }
+}
+modules = {
+   bit = {
+      "luastream/0.1-3"
+   },
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   inspect = {
+      "inspect/3.1.1-0"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lanes = {
+      "lanes/3.13.0-0"
+   },
+   ["lanes.core"] = {
+      "lanes/3.13.0-0"
+   },
+   log = {
+      "luastream/0.1-3"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   },
+   streaming = {
+      "luastream/0.1-3"
+   },
+   streaming_message = {
+      "luastream/0.1-3"
+   }
+}
+repository = {
+   inspect = {
+      ["3.1.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               inspect = "inspect.lua"
+            }
+         }
+      }
+   },
+   lanes = {
+      ["3.13.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lanes = "lanes.lua",
+               ["lanes.core"] = "lanes/core.so"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   luastream = {
+      ["0.1-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               inspect = "3.1.1-0",
+               lanes = "3.13.0-0",
+               ["lua-cjson"] = "2.1.0.6-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               bit = "bit.lua",
+               log = "log.lua",
+               streaming = "streaming.lua",
+               streaming_message = "streaming_message.lua"
+            }
+         }
+      }
+   }
+}

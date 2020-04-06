@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   plain = {
+      ["0.4-1"] = {}
+   }
+}
+modules = {
+   plain = {
+      "plain/0.4-1"
+   },
+   ["plain.widgets.battery"] = {
+      "plain/0.4-1"
+   },
+   ["plain.widgets.brightness"] = {
+      "plain/0.4-1"
+   },
+   ["plain.widgets.separator"] = {
+      "plain/0.4-1"
+   },
+   ["plain.widgets.volume"] = {
+      "plain/0.4-1"
+   },
+   ["plain.widgets.widget"] = {
+      "plain/0.4-1"
+   }
+}
+repository = {
+   plain = {
+      ["0.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               plain = "plain.lua",
+               ["plain.widgets.battery"] = "plain/widgets/battery.lua",
+               ["plain.widgets.brightness"] = "plain/widgets/brightness.lua",
+               ["plain.widgets.separator"] = "plain/widgets/separator.lua",
+               ["plain.widgets.volume"] = "plain/widgets/volume.lua",
+               ["plain.widgets.widget"] = "plain/widgets/widget.lua"
+            }
+         }
+      }
+   }
+}

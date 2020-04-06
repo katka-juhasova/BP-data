@@ -1,0 +1,103 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   sidekiqjobpusher = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lua-cjson"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["sidekiqjobpusher.client"] = {
+      "sidekiqjobpusher/1.0-1"
+   },
+   ["sidekiqjobpusher.key_generator"] = {
+      "sidekiqjobpusher/1.0-1"
+   },
+   ["sidekiqjobpusher.message_serialiser"] = {
+      "sidekiqjobpusher/1.0-1"
+   }
+}
+repository = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   sidekiqjobpusher = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1"
+            },
+            modules = {
+               ["sidekiqjobpusher.client"] = "sidekiqjobpusher/client.lua",
+               ["sidekiqjobpusher.key_generator"] = "sidekiqjobpusher/key_generator.lua",
+               ["sidekiqjobpusher.message_serialiser"] = "sidekiqjobpusher/message_serialiser.lua"
+            }
+         }
+      }
+   }
+}

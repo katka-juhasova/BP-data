@@ -1,0 +1,47 @@
+commands = {
+   tsc = {
+      "telescope/0.6.0-1"
+   }
+}
+dependencies = {
+   telescope = {
+      ["0.6.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   telescope = {
+      "telescope/0.6.0-1"
+   },
+   ["telescope.compat_env"] = {
+      "telescope/0.6.0-1"
+   }
+}
+repository = {
+   telescope = {
+      ["0.6.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               tsc = "tsc"
+            },
+            dependencies = {},
+            modules = {
+               telescope = "telescope.lua",
+               ["telescope.compat_env"] = "telescope/compat_env.lua"
+            }
+         }
+      }
+   }
+}

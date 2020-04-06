@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "53f348c197f4273cc2b34e0df327dde7",
+      ["README.md"] = "a50605cb23d43cb5e090c05805e21e3e"
+   },
+   ["fly-bgcrypto-pbkdf2-0.0.1-1.rockspec"] = "95d2701cb8061ff77bb856fd724038f1",
+   lua = {
+      bgcrypto = {
+         ["pbkdf2.lua"] = "9f792d655ccd9ca4954052bd7fe9d33c",
+         private = {
+            ["bit.lua"] = "69f8844d849b20bcdd761f8004dda14e"
+         }
+      }
+   }
+}

@@ -1,0 +1,333 @@
+commands = {}
+dependencies = {
+   ledge = {
+      ["1.28-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 10, string = "0.10"
+                  }
+               }
+            },
+            name = "lua-resty-http"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 3, string = "0.03"
+                  }
+               }
+            },
+            name = "lua-resty-redis-connector"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 8, string = "0.08"
+                  }
+               }
+            },
+            name = "lua-resty-qless"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, string = "0.1"
+                  }
+               }
+            },
+            name = "lua-resty-cookie"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, string = "0.1"
+                  }
+               }
+            },
+            name = "lua-ffi-zlib"
+         }
+      }
+   },
+   ["lua-ffi-zlib"] = {
+      ["0.5-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-qless"] = {
+      ["0.11-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 5, string = "0.05"
+                  }
+               }
+            },
+            name = "lua-resty-redis-connector"
+         }
+      }
+   },
+   ["lua-resty-redis-connector"] = {
+      ["0.08-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["ffi-zlib"] = {
+      "lua-ffi-zlib/0.5-0"
+   },
+   ["ledge.esi"] = {
+      "ledge/1.28-1"
+   },
+   ["ledge.header_util"] = {
+      "ledge/1.28-1"
+   },
+   ["ledge.jobs.collect_entity"] = {
+      "ledge/1.28-1"
+   },
+   ["ledge.jobs.purge"] = {
+      "ledge/1.28-1"
+   },
+   ["ledge.jobs.revalidate"] = {
+      "ledge/1.28-1"
+   },
+   ["ledge.ledge"] = {
+      "ledge/1.28-1"
+   },
+   ["ledge.response"] = {
+      "ledge/1.28-1"
+   },
+   qless = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["qless-lib"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.cookie"] = {
+      "lua-resty-cookie/0.1.0-1"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.qless"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.job"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.luascript"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.queue"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.recurring_job"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.reserver.ordered"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.reserver.round_robin"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.reserver.shuffled_round_robin"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.qless.worker"] = {
+      "lua-resty-qless/0.11-0"
+   },
+   ["resty.redis.connector"] = {
+      "lua-resty-redis-connector/0.08-0"
+   },
+   ["resty.redis.sentinel"] = {
+      "lua-resty-redis-connector/0.08-0"
+   }
+}
+repository = {
+   ledge = {
+      ["1.28-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-ffi-zlib"] = "0.5-0",
+               ["lua-resty-cookie"] = "0.1.0-1",
+               ["lua-resty-http"] = "0.15-0",
+               ["lua-resty-qless"] = "0.11-0",
+               ["lua-resty-redis-connector"] = "0.08-0"
+            },
+            modules = {
+               ["ledge.esi"] = "ledge/esi.lua",
+               ["ledge.header_util"] = "ledge/header_util.lua",
+               ["ledge.jobs.collect_entity"] = "ledge/jobs/collect_entity.lua",
+               ["ledge.jobs.purge"] = "ledge/jobs/purge.lua",
+               ["ledge.jobs.revalidate"] = "ledge/jobs/revalidate.lua",
+               ["ledge.ledge"] = "ledge/ledge.lua",
+               ["ledge.response"] = "ledge/response.lua"
+            }
+         }
+      }
+   },
+   ["lua-ffi-zlib"] = {
+      ["0.5-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["ffi-zlib"] = "ffi-zlib.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.cookie"] = "resty/cookie.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-qless"] = {
+      ["0.11-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-redis-connector"] = "0.08-0"
+            },
+            modules = {
+               qless = "qless.lua",
+               ["qless-lib"] = "qless-lib.lua",
+               ["resty.qless"] = "resty/qless.lua",
+               ["resty.qless.job"] = "resty/qless/job.lua",
+               ["resty.qless.luascript"] = "resty/qless/luascript.lua",
+               ["resty.qless.queue"] = "resty/qless/queue.lua",
+               ["resty.qless.recurring_job"] = "resty/qless/recurring_job.lua",
+               ["resty.qless.reserver.ordered"] = "resty/qless/reserver/ordered.lua",
+               ["resty.qless.reserver.round_robin"] = "resty/qless/reserver/round_robin.lua",
+               ["resty.qless.reserver.shuffled_round_robin"] = "resty/qless/reserver/shuffled_round_robin.lua",
+               ["resty.qless.worker"] = "resty/qless/worker.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-redis-connector"] = {
+      ["0.08-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.redis.connector"] = "resty/redis/connector.lua",
+               ["resty.redis.sentinel"] = "resty/redis/sentinel.lua"
+            }
+         }
+      }
+   }
+}

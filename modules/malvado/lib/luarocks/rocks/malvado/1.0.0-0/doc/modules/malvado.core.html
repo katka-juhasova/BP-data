@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>malvado documentation</title>
+    <link rel="stylesheet" href="../ldoc_fixed.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>malvado</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Fields">Fields</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>malvado.core</strong></li>
+  <li><a href="../modules/malvado.draw.html">malvado.draw</a></li>
+  <li><a href="../modules/malvado.effects.html">malvado.effects</a></li>
+  <li><a href="../modules/malvado.key.html">malvado.key</a></li>
+  <li><a href="../modules/malvado.map.html">malvado.map</a></li>
+  <li><a href="../modules/malvado.math.html">malvado.math</a></li>
+  <li><a href="../modules/malvado.mouse.html">malvado.mouse</a></li>
+  <li><a href="../modules/malvado.text.html">malvado.text</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>malvado.core</code></h1>
+<p>Core module implements all the process workflow</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#process.recv">process.recv (self)</a></td>
+	<td class="summary">Non blocking message receiver</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.update_zdepths">engine.update_zdepths ()</a></td>
+	<td class="summary">Updates the list of processes by it z pos.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.addProc">engine.addProc (proc)</a></td>
+	<td class="summary">Add a new process to the engine.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.newProcId">engine.newProcId ()</a></td>
+	<td class="summary">Returns a new proces identified.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.find_process">engine.find_process (proc_id)</a></td>
+	<td class="summary">Find a process by his id.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.find_by_class">engine.find_by_class (class_name)</a></td>
+	<td class="summary">Returns a list of processes by his class.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.del_process">engine.del_process (proc_id)</a></td>
+	<td class="summary">Delete a process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.kill">engine.kill (processToKill)</a></td>
+	<td class="summary">Kills a process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.start">engine.start (init, debug_activated)</a></td>
+	<td class="summary">Start the game program</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#engine.mod_process">engine.mod_process (proc_id, values)</a></td>
+	<td class="summary">Modifies the properties of a process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#process">process (func)</a></td>
+	<td class="summary">Define a process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#frame">frame ()</a></td>
+	<td class="summary">Stops the process executions and allow that itself can be rendered.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kill">kill (processToKill)</a></td>
+	<td class="summary">Kills one process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#send">send (proc_id, data)</a></td>
+	<td class="summary">Sends a message to a process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#exit">exit (statusCode)</a></td>
+	<td class="summary">Exits from the application</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#set_proc">set_proc (proc_id, values)</a></td>
+	<td class="summary">Change process internal values</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#malvado">malvado</a></td>
+	<td class="summary">Engine instantiation.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "process.recv"></a>
+    <strong>process.recv (self)</strong>
+    </dt>
+    <dd>
+    Non blocking message receiver
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.update_zdepths"></a>
+    <strong>engine.update_zdepths ()</strong>
+    </dt>
+    <dd>
+    Updates the list of processes by it z pos.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.addProc"></a>
+    <strong>engine.addProc (proc)</strong>
+    </dt>
+    <dd>
+    Add a new process to the engine.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">proc</span>
+         Process to add
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.newProcId"></a>
+    <strong>engine.newProcId ()</strong>
+    </dt>
+    <dd>
+    Returns a new proces identified.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        New process ID
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.find_process"></a>
+    <strong>engine.find_process (proc_id)</strong>
+    </dt>
+    <dd>
+    Find a process by his id.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">proc_id</span>
+         Process id
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Proces with id = proc_id
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.find_by_class"></a>
+    <strong>engine.find_by_class (class_name)</strong>
+    </dt>
+    <dd>
+    Returns a list of processes by his class.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">class_name</span>
+         Class Name
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        list of processes
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.del_process"></a>
+    <strong>engine.del_process (proc_id)</strong>
+    </dt>
+    <dd>
+    Delete a process.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">proc_id</span>
+         Process Id
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.kill"></a>
+    <strong>engine.kill (processToKill)</strong>
+    </dt>
+    <dd>
+    Kills a process.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">processToKill</span>
+         Process Id
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.start"></a>
+    <strong>engine.start (init, debug_activated)</strong>
+    </dt>
+    <dd>
+    Start the game program
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">init</span>
+         Initial function
+        </li>
+        <li><span class="parameter">debug_activated</span>
+         Debug mode, default false
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "engine.mod_process"></a>
+    <strong>engine.mod_process (proc_id, values)</strong>
+    </dt>
+    <dd>
+    Modifies the properties of a process.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">proc_id</span>
+         Process Id
+        </li>
+        <li><span class="parameter">values</span>
+         Object Values (as a table)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "process"></a>
+    <strong>process (func)</strong>
+    </dt>
+    <dd>
+    Define a process.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+         the function definition of the process
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The process definition (not the instance)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "frame"></a>
+    <strong>frame ()</strong>
+    </dt>
+    <dd>
+    Stops the process executions and allow that itself can be rendered.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kill"></a>
+    <strong>kill (processToKill)</strong>
+    </dt>
+    <dd>
+    Kills one process.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">processToKill</span>
+         Unique identifier of the process, returned when is instantiated.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "send"></a>
+    <strong>send (proc_id, data)</strong>
+    </dt>
+    <dd>
+    Sends a message to a process.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">proc_id</span>
+         Unique identifier of the process, returned when is instantiated.
+        </li>
+        <li><span class="parameter">data</span>
+         Table with the data to send
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "exit"></a>
+    <strong>exit (statusCode)</strong>
+    </dt>
+    <dd>
+    Exits from the application
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">statusCode</span>
+         Exit status code. Default value 0
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "set_proc"></a>
+    <strong>set_proc (proc_id, values)</strong>
+    </dt>
+    <dd>
+    Change process internal values
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">proc_id</span>
+         Process id
+        </li>
+        <li><span class="parameter">values</span>
+         Object with values to change
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "malvado"></a>
+    <strong>malvado</strong>
+    </dt>
+    <dd>
+    Engine instantiation.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-07-29 15:26:59 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

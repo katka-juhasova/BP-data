@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "dff35b193ddc722f9d7dfd9aa814dc5f"
+   },
+   ["keycloak-rbac-1.1.0-0.rockspec"] = "f1ecc12d717a5c95ff823511029590f7",
+   lua = {
+      kong = {
+         plugins = {
+            ["keycloak-rbac"] = {
+               ["handler.lua"] = "bfcb989ba79d37d1de830dba6724d5cf",
+               ["schema.lua"] = "d4ba028c25c991794369e20bc2eff33e"
+            }
+         }
+      }
+   }
+}

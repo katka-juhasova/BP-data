@@ -1,0 +1,49 @@
+rock_manifest = {
+   bin = {
+      ["resty-auto-ssl"] = {
+         dehydrated = "8e47a8cefe010f627ec2831952995606",
+         letsencrypt_hooks = "fbaf0d21c37bb942c725731a2aa7aae3",
+         sockproc = "dfca92cf93885f34e9adf7ccb3a85923",
+         start_sockproc = "897b3441f6311da28cd751f511e620bf"
+      }
+   },
+   doc = {
+      ["CHANGELOG.md"] = "dd98b6beee50325dd3b592e1c88b2c6c",
+      ["LICENSE.txt"] = "12c264b596ad686f4a0237626754e1be",
+      ["README.md"] = "c05e0994c6ac8801c3090a962fec6f41"
+   },
+   lua = {
+      resty = {
+         ["auto-ssl"] = {
+            ["init_master.lua"] = "7d5561210b0accd343d18482c7714663",
+            ["init_worker.lua"] = "8ff5c9aca21aa93ecdd1db94339dd739",
+            jobs = {
+               ["renewal.lua"] = "d9d4acfaa0967dcd8f4bb38db91ef1c9"
+            },
+            servers = {
+               ["challenge.lua"] = "1a2d76085a6e4f5ed02bd4a5dac18205",
+               ["hook.lua"] = "6affed1d1950c8d3fed372ca0ab94786"
+            },
+            ["ssl_certificate.lua"] = "20d1838e2b192c800e8216b1d284a8db",
+            ssl_providers = {
+               ["lets_encrypt.lua"] = "20c1b667a06ed1281a65aff96800e0e6"
+            },
+            ["storage.lua"] = "883f0af280cbcc8d74bb8bfa28a456e9",
+            storage_adapters = {
+               ["file.lua"] = "076cd31f725e3701839db7e66c307740",
+               ["redis.lua"] = "9339e82417845037f0db37e2f7dfe562"
+            },
+            utils = {
+               ["run_command.lua"] = "ca3d5bf730a95e2debf5f44fe95a813e",
+               ["shell_execute.lua"] = "a8952e7efad869c7c342c81206072e53",
+               ["start_sockproc.lua"] = "99f7754dda0f64d72477edf823a516d9"
+            },
+            vendor = {
+               ["shell.lua"] = "1a414263d1df0e9245be50b81f551d56"
+            }
+         },
+         ["auto-ssl.lua"] = "eccaaf3a286edba18c539750fa4df7e7"
+      }
+   },
+   ["lua-resty-auto-ssl-de-0.11.1-1.rockspec"] = "51e2022844c259d53d64713419ab7359"
+}

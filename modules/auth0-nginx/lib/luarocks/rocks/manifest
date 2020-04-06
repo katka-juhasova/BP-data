@@ -1,0 +1,138 @@
+commands = {}
+dependencies = {
+   ["auth0-nginx"] = {
+      ["1.5.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 1, 5, string = "0.1.5"
+                  }
+               }
+            },
+            name = "lua-resty-jwt"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 8, string = "0.08"
+                  }
+               }
+            },
+            name = "lua-resty-http"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.08-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-jwt"] = {
+      ["0.1.5-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["auth0-nginx"] = {
+      "auth0-nginx/1.5.0-0"
+   },
+   ["resty.evp"] = {
+      "lua-resty-jwt/0.1.5-0"
+   },
+   ["resty.hmac"] = {
+      "lua-resty-jwt/0.1.5-0"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.08-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.08-0"
+   },
+   ["resty.jwt"] = {
+      "lua-resty-jwt/0.1.5-0"
+   },
+   ["resty.jwt-validators"] = {
+      "lua-resty-jwt/0.1.5-0"
+   }
+}
+repository = {
+   ["auth0-nginx"] = {
+      ["1.5.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-http"] = "0.08-0",
+               ["lua-resty-jwt"] = "0.1.5-0"
+            },
+            modules = {
+               ["auth0-nginx"] = "auth0-nginx.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.08-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-jwt"] = {
+      ["0.1.5-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.evp"] = "resty/evp.lua",
+               ["resty.hmac"] = "resty/hmac.lua",
+               ["resty.jwt"] = "resty/jwt.lua",
+               ["resty.jwt-validators"] = "resty/jwt-validators.lua"
+            }
+         }
+      }
+   }
+}

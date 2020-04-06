@@ -1,0 +1,18 @@
+rock_manifest = {
+   bin = {
+      pgn2eco = "6e1998497a7a56dea03529e0a2166d84",
+      pgn2fen = "98ee34ed6da518fdbff9590567ce923d"
+   },
+   ["chess-fen-1.6-0.rockspec"] = "dbb7713940608c7fb5349441fc428eee",
+   doc = {
+      ["fen.html"] = "83b6e2eb16da4dd6a17052e0aef7d267"
+   },
+   lua = {
+      chess = {
+         ["fen.lua"] = "41724d97c2f34a191122fa761af51cfa"
+      }
+   },
+   test = {
+      ["test_fen.lua"] = "ef31eaa0a9ec92343abd04c62a2bd6e9"
+   }
+}

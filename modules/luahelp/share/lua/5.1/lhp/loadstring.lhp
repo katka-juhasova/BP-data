@@ -1,0 +1,11 @@
+Help [[
+
+loadstring (string [, chunkname])
+---------------------------------
+
+  Similar to `load`, but gets the chunk from the given string.
+
+  To load and run a given string, use the idiom
+
+          assert(loadstring(s))()
+]]

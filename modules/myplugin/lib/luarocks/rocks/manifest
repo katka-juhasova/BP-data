@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   myplugin = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.myplugin.access"] = {
+      "myplugin/1.0-1"
+   },
+   ["kong.plugins.myplugin.handler"] = {
+      "myplugin/1.0-1"
+   },
+   ["kong.plugins.myplugin.schema"] = {
+      "myplugin/1.0-1"
+   }
+}
+repository = {
+   myplugin = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.myplugin.access"] = "kong/plugins/myplugin/access.lua",
+               ["kong.plugins.myplugin.handler"] = "kong/plugins/myplugin/handler.lua",
+               ["kong.plugins.myplugin.schema"] = "kong/plugins/myplugin/schema.lua"
+            }
+         }
+      }
+   }
+}

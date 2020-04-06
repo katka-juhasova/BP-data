@@ -1,0 +1,301 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-reqargs"] = {
+      ["1.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-template"] = {
+      ["1.9-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-validation"] = {
+      ["2.7-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["resty-route"] = {
+      ["0.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 9, string = "1.9"
+                  }
+               }
+            },
+            name = "lua-resty-template"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, string = "2.1"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 4, string = "1.4"
+                  }
+               }
+            },
+            name = "lua-resty-reqargs"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 7, string = "2.7"
+                  }
+               }
+            },
+            name = "lua-resty-validation"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["resty.reqargs"] = {
+      "lua-resty-reqargs/1.4-1"
+   },
+   ["resty.route"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.handlers.http"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.handlers.sse"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.handlers.websocket"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.matchers.equals"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.matchers.match"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.matchers.prefix"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.matchers.regex"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.matchers.simple"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.middleware.ajax"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.middleware.form"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.middleware.pjax"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.middleware.redis"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.middleware.reqargs"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.middleware.template"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.route.router"] = {
+      "resty-route/0.1-2"
+   },
+   ["resty.template"] = {
+      "lua-resty-template/1.9-1"
+   },
+   ["resty.template.html"] = {
+      "lua-resty-template/1.9-1"
+   },
+   ["resty.template.microbenchmark"] = {
+      "lua-resty-template/1.9-1"
+   },
+   ["resty.validation"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.injection"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.ngx"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.tz"] = {
+      "lua-resty-validation/2.7-1"
+   },
+   ["resty.validation.utf8"] = {
+      "lua-resty-validation/2.7-1"
+   }
+}
+repository = {
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-reqargs"] = {
+      ["1.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.reqargs"] = "resty/reqargs.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-template"] = {
+      ["1.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.template"] = "resty/template.lua",
+               ["resty.template.html"] = "resty/template/html.lua",
+               ["resty.template.microbenchmark"] = "resty/template/microbenchmark.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-validation"] = {
+      ["2.7-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.validation"] = "resty/validation.lua",
+               ["resty.validation.injection"] = "resty/validation/injection.lua",
+               ["resty.validation.ngx"] = "resty/validation/ngx.lua",
+               ["resty.validation.tz"] = "resty/validation/tz.lua",
+               ["resty.validation.utf8"] = "resty/validation/utf8.lua"
+            }
+         }
+      }
+   },
+   ["resty-route"] = {
+      ["0.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-cjson"] = "2.1.0.6-1",
+               ["lua-resty-reqargs"] = "1.4-1",
+               ["lua-resty-template"] = "1.9-1",
+               ["lua-resty-validation"] = "2.7-1"
+            },
+            modules = {
+               ["resty.route"] = "resty/route.lua",
+               ["resty.route.handlers.http"] = "resty/route/handlers/http.lua",
+               ["resty.route.handlers.sse"] = "resty/route/handlers/sse.lua",
+               ["resty.route.handlers.websocket"] = "resty/route/handlers/websocket.lua",
+               ["resty.route.matchers.equals"] = "resty/route/matchers/equals.lua",
+               ["resty.route.matchers.match"] = "resty/route/matchers/match.lua",
+               ["resty.route.matchers.prefix"] = "resty/route/matchers/prefix.lua",
+               ["resty.route.matchers.regex"] = "resty/route/matchers/regex.lua",
+               ["resty.route.matchers.simple"] = "resty/route/matchers/simple.lua",
+               ["resty.route.middleware.ajax"] = "resty/route/middleware/ajax.lua",
+               ["resty.route.middleware.form"] = "resty/route/middleware/form.lua",
+               ["resty.route.middleware.pjax"] = "resty/route/middleware/pjax.lua",
+               ["resty.route.middleware.redis"] = "resty/route/middleware/redis.lua",
+               ["resty.route.middleware.reqargs"] = "resty/route/middleware/reqargs.lua",
+               ["resty.route.middleware.template"] = "resty/route/middleware/template.lua",
+               ["resty.route.router"] = "resty/route/router.lua"
+            }
+         }
+      }
+   }
+}

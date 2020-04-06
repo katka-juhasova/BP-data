@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["try-catch-finally"] = {
+      ["1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["try-catch-finally"] = {
+      "try-catch-finally/1.0-0"
+   }
+}
+repository = {
+   ["try-catch-finally"] = {
+      ["1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["try-catch-finally"] = "try-catch-finally.lua"
+            }
+         }
+      }
+   }
+}

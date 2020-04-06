@@ -1,0 +1,43 @@
+commands = {
+   runliluat = {
+      "liluat/1.2.0-1"
+   }
+}
+dependencies = {
+   liluat = {
+      ["1.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   liluat = {
+      "liluat/1.2.0-1"
+   }
+}
+repository = {
+   liluat = {
+      ["1.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               runliluat = "runliluat"
+            },
+            dependencies = {},
+            modules = {
+               liluat = "liluat.lua"
+            }
+         }
+      }
+   }
+}

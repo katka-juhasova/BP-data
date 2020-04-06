@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-di"] = {
+      ["0.6-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lua-di.DependencyInjectionModule"] = {
+      "lua-di/0.6-0"
+   }
+}
+repository = {
+   ["lua-di"] = {
+      ["0.6-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lua-di.DependencyInjectionModule"] = "lua-di/DependencyInjectionModule.lua"
+            }
+         }
+      }
+   }
+}

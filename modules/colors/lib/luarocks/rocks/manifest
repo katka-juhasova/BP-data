@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   colors = {
+      ["8.05.26-1"] = {}
+   }
+}
+modules = {
+   colors = {
+      "colors/8.05.26-1"
+   }
+}
+repository = {
+   colors = {
+      ["8.05.26-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               colors = "colors.lua"
+            }
+         }
+      }
+   }
+}

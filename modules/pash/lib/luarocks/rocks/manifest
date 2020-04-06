@@ -1,0 +1,138 @@
+commands = {
+   pash = {
+      "pash/1.0-1"
+   }
+}
+dependencies = {
+   inspect = {
+      ["3.1.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   pash = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luafilesystem"
+         },
+         {
+            constraints = {},
+            name = "templet"
+         },
+         {
+            constraints = {},
+            name = "inspect"
+         }
+      }
+   },
+   templet = {
+      ["1.0.2-1"] = {}
+   }
+}
+modules = {
+   inspect = {
+      "inspect/3.1.1-0"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   templet = {
+      "templet/1.0.2-1"
+   }
+}
+repository = {
+   inspect = {
+      ["3.1.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               inspect = "inspect.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   pash = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               pash = "pash"
+            },
+            dependencies = {
+               inspect = "3.1.1-0",
+               luafilesystem = "1.7.0-2",
+               templet = "1.0.2-1"
+            },
+            modules = {}
+         }
+      }
+   },
+   templet = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               templet = "templet.lua"
+            }
+         }
+      }
+   }
+}

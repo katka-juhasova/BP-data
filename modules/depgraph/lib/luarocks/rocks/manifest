@@ -1,0 +1,164 @@
+commands = {
+   luadepgraph = {
+      "depgraph/0.2.0-1"
+   }
+}
+dependencies = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   depgraph = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 6, 0, string = "0.6.0"
+                  }
+               }
+            },
+            name = "argparse"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 6, 3, string = "1.6.3"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   argparse = {
+      "argparse/0.7.0-1"
+   },
+   depgraph = {
+      "depgraph/0.2.0-1"
+   },
+   ["depgraph.cli"] = {
+      "depgraph/0.2.0-1"
+   },
+   ["depgraph.luacheck.lexer"] = {
+      "depgraph/0.2.0-1"
+   },
+   ["depgraph.luacheck.linearize"] = {
+      "depgraph/0.2.0-1"
+   },
+   ["depgraph.luacheck.parser"] = {
+      "depgraph/0.2.0-1"
+   },
+   ["depgraph.luacheck.utils"] = {
+      "depgraph/0.2.0-1"
+   },
+   ["depgraph.scan"] = {
+      "depgraph/0.2.0-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   }
+}
+repository = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               argparse = "argparse.lua"
+            }
+         }
+      }
+   },
+   depgraph = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luadepgraph = "luadepgraph"
+            },
+            dependencies = {
+               argparse = "0.7.0-1",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               depgraph = "depgraph/init.lua",
+               ["depgraph.cli"] = "depgraph/cli.lua",
+               ["depgraph.luacheck.lexer"] = "depgraph/luacheck/lexer.lua",
+               ["depgraph.luacheck.linearize"] = "depgraph/luacheck/linearize.lua",
+               ["depgraph.luacheck.parser"] = "depgraph/luacheck/parser.lua",
+               ["depgraph.luacheck.utils"] = "depgraph/luacheck/utils.lua",
+               ["depgraph.scan"] = "depgraph/scan.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   }
+}

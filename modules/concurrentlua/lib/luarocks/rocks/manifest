@@ -1,0 +1,322 @@
+commands = {
+   clpmd = {
+      "concurrentlua/1.0.6-1"
+   }
+}
+dependencies = {
+   concurrentlua = {
+      ["1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 0, string = "2.0"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 1, string = "1.1"
+                  }
+               }
+            },
+            name = "copas"
+         }
+      }
+   },
+   copas = {
+      ["2.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, string = "2.1"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 14, string = "1.14"
+                  }
+               }
+            },
+            name = "coxpcall"
+         }
+      }
+   },
+   coxpcall = {
+      ["1.17.0-1"] = {}
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cldaemon = {
+      "concurrentlua/1.0.6-1"
+   },
+   cltime = {
+      "concurrentlua/1.0.6-1"
+   },
+   concurrent = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.cookie"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.link"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.message"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.monitor"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.network"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.node"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.process"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.register"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.distributed.scheduler"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.link"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.message"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.monitor"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.option"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.process"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.register"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.root"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   ["concurrent.scheduler"] = {
+      "concurrentlua/1.0.6-1"
+   },
+   copas = {
+      "copas/2.0.2-1"
+   },
+   ["copas.ftp"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.http"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.limit"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.smtp"] = {
+      "copas/2.0.2-1"
+   },
+   coxpcall = {
+      "coxpcall/1.17.0-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   concurrentlua = {
+      ["1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               clpmd = "clpmd"
+            },
+            dependencies = {
+               copas = "2.0.2-1",
+               coxpcall = "1.17.0-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               cldaemon = "cldaemon.so",
+               cltime = "cltime.so",
+               concurrent = "concurrent/init.lua",
+               ["concurrent.distributed"] = "concurrent/distributed/init.lua",
+               ["concurrent.distributed.cookie"] = "concurrent/distributed/cookie.lua",
+               ["concurrent.distributed.link"] = "concurrent/distributed/link.lua",
+               ["concurrent.distributed.message"] = "concurrent/distributed/message.lua",
+               ["concurrent.distributed.monitor"] = "concurrent/distributed/monitor.lua",
+               ["concurrent.distributed.network"] = "concurrent/distributed/network.lua",
+               ["concurrent.distributed.node"] = "concurrent/distributed/node.lua",
+               ["concurrent.distributed.process"] = "concurrent/distributed/process.lua",
+               ["concurrent.distributed.register"] = "concurrent/distributed/register.lua",
+               ["concurrent.distributed.scheduler"] = "concurrent/distributed/scheduler.lua",
+               ["concurrent.link"] = "concurrent/link.lua",
+               ["concurrent.message"] = "concurrent/message.lua",
+               ["concurrent.monitor"] = "concurrent/monitor.lua",
+               ["concurrent.option"] = "concurrent/option.lua",
+               ["concurrent.process"] = "concurrent/process.lua",
+               ["concurrent.register"] = "concurrent/register.lua",
+               ["concurrent.root"] = "concurrent/root.lua",
+               ["concurrent.scheduler"] = "concurrent/scheduler.lua"
+            }
+         }
+      }
+   },
+   copas = {
+      ["2.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               coxpcall = "1.17.0-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               copas = "copas.lua",
+               ["copas.ftp"] = "copas/ftp.lua",
+               ["copas.http"] = "copas/http.lua",
+               ["copas.limit"] = "copas/limit.lua",
+               ["copas.smtp"] = "copas/smtp.lua"
+            }
+         }
+      }
+   },
+   coxpcall = {
+      ["1.17.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               coxpcall = "coxpcall.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   }
+}

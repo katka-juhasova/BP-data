@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   optarg = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   optarg = {
+      "optarg/0.2-1"
+   }
+}
+repository = {
+   optarg = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               optarg = "optarg.lua"
+            }
+         }
+      }
+   }
+}

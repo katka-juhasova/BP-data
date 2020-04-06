@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   huntable = {
+      ["0.9-1"] = {}
+   }
+}
+modules = {
+   huntable = {
+      "huntable/0.9-1"
+   }
+}
+repository = {
+   huntable = {
+      ["0.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               huntable = "huntable.lua"
+            }
+         }
+      }
+   }
+}

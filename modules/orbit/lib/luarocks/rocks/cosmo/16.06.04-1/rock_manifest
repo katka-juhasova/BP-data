@@ -1,0 +1,22 @@
+rock_manifest = {
+   ["cosmo-16.06.04-1.rockspec"] = "7db3f70246eeea472b4545a1cb47fee7",
+   doc = {
+      ["cosmo.md"] = "a25319b9a95716b9e4c61b92423798fa",
+      ["cosmo.png"] = "418056b57010e241350749f74842b1e7",
+      dummy = "d41d8cd98f00b204e9800998ecf8427e",
+      ["index.html"] = "71147420657e6921e70e01791e543622"
+   },
+   lua = {
+      cosmo = {
+         ["fill.lua"] = "0ec2f3ff26a0fa58d9294746d8f11d46",
+         ["grammar.lua"] = "dddcea034fce80e2f9098052becf0331"
+      },
+      ["cosmo.lua"] = "7c90a6e78b30b271e594debc226a4c6f"
+   },
+   samples = {
+      ["sample.lua"] = "44895b77eec3f4986556adea4baadc58"
+   },
+   tests = {
+      ["test_cosmo.lua"] = "0848dfecbc14f8f5d7af0e215123a4c8"
+   }
+}

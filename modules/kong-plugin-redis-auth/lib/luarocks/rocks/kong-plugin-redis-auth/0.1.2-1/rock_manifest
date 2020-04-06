@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.MD"] = "0bd38644e8a628edee0692faf5796d16"
+   },
+   ["kong-plugin-redis-auth-0.1.2-1.rockspec"] = "544426a968bd01a6290da93e516ab0f6",
+   lua = {
+      kong = {
+         plugins = {
+            ["redis-auth"] = {
+               ["handler.lua"] = "7da5e62f0484ef5723beac8d7d0643c3",
+               ["schema.lua"] = "1c7a4a33a75296b19b893373b6d511b3"
+            }
+         }
+      }
+   }
+}

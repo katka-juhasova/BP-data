@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-jwt-claims-validate"] = {
+      ["1.1-4"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.jwt-claims-validate.handler"] = {
+      "kong-plugin-jwt-claims-validate/1.1-4"
+   },
+   ["kong.plugins.jwt-claims-validate.schema"] = {
+      "kong-plugin-jwt-claims-validate/1.1-4"
+   }
+}
+repository = {
+   ["kong-plugin-jwt-claims-validate"] = {
+      ["1.1-4"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.jwt-claims-validate.handler"] = "kong/plugins/jwt-claims-validate/handler.lua",
+               ["kong.plugins.jwt-claims-validate.schema"] = "kong/plugins/jwt-claims-validate/schema.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,177 @@
+commands = {}
+dependencies = {
+   llui = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["LLUI.DRM"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.DRMCard"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.DRMCardConnector"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.DRMCardMode"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.DRMCrtController"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.DRMEncoder"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.DRMFrameBuffer"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.EVContext"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.EVDevice"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.EVEvent"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.UDVContext"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.UDVDevice"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.UDVHwdb"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.UDVListEntry"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.UDVListIterator"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.drm"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.drm_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.drm_mode"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.evdev"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.evdev_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.fun"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.kernel"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.libc"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.libudev_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.linux_input"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.lz4_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.lz4frame_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.lz4hc_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.pixman"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.pixman_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.stat"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.uinput"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.xf86drmMode_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.xf86drm_ffi"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.xxhash"] = {
+      "llui/0.1-1"
+   },
+   ["LLUI.xxhash_ffi"] = {
+      "llui/0.1-1"
+   }
+}
+repository = {
+   llui = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["LLUI.DRM"] = "LLUI/DRM.lua",
+               ["LLUI.DRMCard"] = "LLUI/DRMCard.lua",
+               ["LLUI.DRMCardConnector"] = "LLUI/DRMCardConnector.lua",
+               ["LLUI.DRMCardMode"] = "LLUI/DRMCardMode.lua",
+               ["LLUI.DRMCrtController"] = "LLUI/DRMCrtController.lua",
+               ["LLUI.DRMEncoder"] = "LLUI/DRMEncoder.lua",
+               ["LLUI.DRMFrameBuffer"] = "LLUI/DRMFrameBuffer.lua",
+               ["LLUI.EVContext"] = "LLUI/EVContext.lua",
+               ["LLUI.EVDevice"] = "LLUI/EVDevice.lua",
+               ["LLUI.EVEvent"] = "LLUI/EVEvent.lua",
+               ["LLUI.UDVContext"] = "LLUI/UDVContext.lua",
+               ["LLUI.UDVDevice"] = "LLUI/UDVDevice.lua",
+               ["LLUI.UDVHwdb"] = "LLUI/UDVHwdb.lua",
+               ["LLUI.UDVListEntry"] = "LLUI/UDVListEntry.lua",
+               ["LLUI.UDVListIterator"] = "LLUI/UDVListIterator.lua",
+               ["LLUI.drm"] = "LLUI/drm.lua",
+               ["LLUI.drm_ffi"] = "LLUI/drm_ffi.lua",
+               ["LLUI.drm_mode"] = "LLUI/drm_mode.lua",
+               ["LLUI.evdev"] = "LLUI/evdev.lua",
+               ["LLUI.evdev_ffi"] = "LLUI/evdev_ffi.lua",
+               ["LLUI.fun"] = "LLUI/fun.lua",
+               ["LLUI.kernel"] = "LLUI/kernel.lua",
+               ["LLUI.libc"] = "LLUI/libc.lua",
+               ["LLUI.libudev_ffi"] = "LLUI/libudev_ffi.lua",
+               ["LLUI.linux_input"] = "LLUI/linux_input.lua",
+               ["LLUI.lz4_ffi"] = "LLUI/lz4_ffi.lua",
+               ["LLUI.lz4frame_ffi"] = "LLUI/lz4frame_ffi.lua",
+               ["LLUI.lz4hc_ffi"] = "LLUI/lz4hc_ffi.lua",
+               ["LLUI.pixman"] = "LLUI/pixman.lua",
+               ["LLUI.pixman_ffi"] = "LLUI/pixman_ffi.lua",
+               ["LLUI.stat"] = "LLUI/stat.lua",
+               ["LLUI.uinput"] = "LLUI/uinput.lua",
+               ["LLUI.xf86drmMode_ffi"] = "LLUI/xf86drmMode_ffi.lua",
+               ["LLUI.xf86drm_ffi"] = "LLUI/xf86drm_ffi.lua",
+               ["LLUI.xxhash"] = "LLUI/xxhash.lua",
+               ["LLUI.xxhash_ffi"] = "LLUI/xxhash_ffi.lua"
+            }
+         }
+      }
+   }
+}

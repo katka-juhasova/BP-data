@@ -1,0 +1,209 @@
+commands = {}
+dependencies = {
+   ["bgcrypto-hmac"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["bgcrypto-lmd5"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lmd5"
+         },
+         {
+            constraints = {},
+            name = "bgcrypto-hmac"
+         },
+         {
+            constraints = {},
+            name = "bgcrypto-pbkdf2"
+         }
+      }
+   },
+   ["bgcrypto-pbkdf2"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lmd5 = {
+      ["20130228-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["bgcrypto.hmac"] = {
+      "bgcrypto-hmac/0.1.0-1"
+   },
+   ["bgcrypto.md5"] = {
+      "bgcrypto-lmd5/0.1.0-1"
+   },
+   ["bgcrypto.pbkdf2"] = {
+      "bgcrypto-pbkdf2/0.1.0-1"
+   },
+   ["bgcrypto.private.bit"] = {
+      "bgcrypto-hmac/0.1.0-1",
+      "bgcrypto-pbkdf2/0.1.0-1"
+   },
+   ["bgcrypto.private.digest"] = {
+      "bgcrypto-lmd5/0.1.0-1"
+   },
+   ["bgcrypto.ripemd160"] = {
+      "bgcrypto-lmd5/0.1.0-1"
+   },
+   md4 = {
+      "lmd5/20130228-2"
+   },
+   md5 = {
+      "lmd5/20130228-2"
+   },
+   ripemd160 = {
+      "lmd5/20130228-2"
+   },
+   sha1 = {
+      "lmd5/20130228-2"
+   },
+   sha224 = {
+      "lmd5/20130228-2"
+   },
+   sha256 = {
+      "lmd5/20130228-2"
+   },
+   sha384 = {
+      "lmd5/20130228-2"
+   },
+   sha512 = {
+      "lmd5/20130228-2"
+   }
+}
+repository = {
+   ["bgcrypto-hmac"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["bgcrypto.hmac"] = "bgcrypto/hmac.lua",
+               ["bgcrypto.private.bit"] = "bgcrypto/private/bit.lua"
+            }
+         }
+      }
+   },
+   ["bgcrypto-lmd5"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["bgcrypto-hmac"] = "0.1.0-1",
+               ["bgcrypto-pbkdf2"] = "0.1.0-1",
+               lmd5 = "20130228-2"
+            },
+            modules = {
+               ["bgcrypto.md5"] = "bgcrypto/md5.lua",
+               ["bgcrypto.private.digest"] = "bgcrypto/private/digest.lua",
+               ["bgcrypto.ripemd160"] = "bgcrypto/ripemd160.lua"
+            }
+         }
+      }
+   },
+   ["bgcrypto-pbkdf2"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["bgcrypto.pbkdf2"] = "bgcrypto/pbkdf2.lua",
+               ["bgcrypto.private.bit"] = "bgcrypto/private/bit.lua"
+            }
+         }
+      }
+   },
+   lmd5 = {
+      ["20130228-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               md4 = "md4.so",
+               md5 = "md5.so",
+               ripemd160 = "ripemd160.so",
+               sha1 = "sha1.so",
+               sha224 = "sha224.so",
+               sha256 = "sha256.so",
+               sha384 = "sha384.so",
+               sha512 = "sha512.so"
+            }
+         }
+      }
+   }
+}

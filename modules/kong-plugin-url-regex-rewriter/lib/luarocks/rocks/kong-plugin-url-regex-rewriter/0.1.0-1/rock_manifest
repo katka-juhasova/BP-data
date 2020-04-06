@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "cc802a3be072b1c1906e8838dd43e48a"
+   },
+   ["kong-plugin-url-regex-rewriter-0.1.0-1.rockspec"] = "6d749e8205cf6b9d99308c8d0fc488c3",
+   lua = {
+      kong = {
+         plugins = {
+            ["kong-plugin-url-regex-rewriter"] = {
+               ["handler.lua"] = "5db2ed5a1f6e15e85d84d25853993d65",
+               ["schema.lua"] = "2d4a606223aaff9288d2b8440c58cf05"
+            }
+         }
+      }
+   }
+}

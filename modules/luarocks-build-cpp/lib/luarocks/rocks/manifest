@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["luarocks-build-cpp"] = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["luarocks.build.cpp"] = {
+      "luarocks-build-cpp/0.2.0-1"
+   }
+}
+repository = {
+   ["luarocks-build-cpp"] = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["luarocks.build.cpp"] = "luarocks/build/cpp.lua"
+            }
+         }
+      }
+   }
+}

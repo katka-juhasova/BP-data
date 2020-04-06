@@ -1,0 +1,17 @@
+Help [[
+
+help (obj)
+----------
+
+  Prints the help available for `obj`. The help description is obtained in the
+  following manner: first a _cache_ is queried for `obj`; if there is no entry
+  for `obj` then `help` tries `getmetatable(obj).__help`; otherwise, if `obj`
+  is a string, `help` reads a Lua help page (LHP) file `obj.lhp` stored at
+  some template path in `help.path`, similarly to how modules are searched
+  using `package.path` (check `help("package.path")`). In the last two cases
+  the help description is cached if found. The cache can be directly updated
+  by issuing a `help.register` command. The description is printed using
+  `help.print`.
+
+  __See also__: `help.register`, `help.print`.
+]]

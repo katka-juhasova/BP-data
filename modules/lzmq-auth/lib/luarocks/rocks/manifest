@@ -1,0 +1,51 @@
+commands = {}
+dependencies = {
+   ["lzmq-auth"] = {
+      ["0.1.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lzmq.auth"] = {
+      "lzmq-auth/0.1.0-2"
+   },
+   ["lzmq.cert"] = {
+      "lzmq-auth/0.1.0-2"
+   },
+   ["lzmq.impl.auth_zap"] = {
+      "lzmq-auth/0.1.0-2"
+   }
+}
+repository = {
+   ["lzmq-auth"] = {
+      ["0.1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lzmq.auth"] = "lzmq/auth.lua",
+               ["lzmq.cert"] = "lzmq/cert.lua",
+               ["lzmq.impl.auth_zap"] = "lzmq/impl/auth_zap.lua"
+            }
+         }
+      }
+   }
+}

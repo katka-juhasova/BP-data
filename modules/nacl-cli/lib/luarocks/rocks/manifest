@@ -1,0 +1,206 @@
+commands = {}
+dependencies = {
+   base58 = {
+      ["1.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lbase64 = {
+      ["20120820-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luatweetnacl = {
+      ["0.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["nacl-cli"] = {
+      ["0.5-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luatweetnacl"
+         },
+         {
+            constraints = {},
+            name = "base58"
+         },
+         {
+            constraints = {},
+            name = "lbase64"
+         },
+         {
+            constraints = {},
+            name = "sha2"
+         }
+      }
+   },
+   sha2 = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   base58 = {
+      "base58/1.0.1-1"
+   },
+   base64 = {
+      "lbase64/20120820-1"
+   },
+   hmac = {
+      "sha2/0.2.0-1"
+   },
+   ["hmac.md5"] = {
+      "sha2/0.2.0-1"
+   },
+   ["hmac.sha2"] = {
+      "sha2/0.2.0-1"
+   },
+   ["lnacl-cli.armour"] = {
+      "nacl-cli/0.5-3"
+   },
+   ["lnacl-cli.cli"] = {
+      "nacl-cli/0.5-3"
+   },
+   ["lnacl-cli.cli-cmds"] = {
+      "nacl-cli/0.5-3"
+   },
+   ["lnacl-cli.ext-string"] = {
+      "nacl-cli/0.5-3"
+   },
+   ["lnacl-cli.util"] = {
+      "nacl-cli/0.5-3"
+   },
+   luatweetnacl = {
+      "luatweetnacl/0.5-1"
+   },
+   sha2 = {
+      "sha2/0.2.0-1"
+   }
+}
+repository = {
+   base58 = {
+      ["1.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               base58 = "base58/init.lua"
+            }
+         }
+      }
+   },
+   lbase64 = {
+      ["20120820-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               base64 = "base64.so"
+            }
+         }
+      }
+   },
+   luatweetnacl = {
+      ["0.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luatweetnacl = "luatweetnacl.so"
+            }
+         }
+      }
+   },
+   ["nacl-cli"] = {
+      ["0.5-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               base58 = "1.0.1-1",
+               lbase64 = "20120820-1",
+               luatweetnacl = "0.5-1",
+               sha2 = "0.2.0-1"
+            },
+            modules = {
+               ["lnacl-cli.armour"] = "lnacl-cli/armour.lua",
+               ["lnacl-cli.cli"] = "lnacl-cli/cli.lua",
+               ["lnacl-cli.cli-cmds"] = "lnacl-cli/cli-cmds.lua",
+               ["lnacl-cli.ext-string"] = "lnacl-cli/ext-string.lua",
+               ["lnacl-cli.util"] = "lnacl-cli/util.lua"
+            }
+         }
+      }
+   },
+   sha2 = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               hmac = "hmac.lua",
+               ["hmac.md5"] = "hmac/md5.lua",
+               ["hmac.sha2"] = "hmac/sha2.lua",
+               sha2 = "sha2.so"
+            }
+         }
+      }
+   }
+}

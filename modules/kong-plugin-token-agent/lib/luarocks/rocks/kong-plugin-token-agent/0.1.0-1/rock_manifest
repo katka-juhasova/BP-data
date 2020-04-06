@@ -1,0 +1,22 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "7f960b3a26edb79ab5a1394786eff8fd"
+   },
+   ["kong-plugin-token-agent-0.1.0-1.rockspec"] = "c517d77369b30a819bf70cea8989f908",
+   lua = {
+      kong = {
+         plugins = {
+            ["token-agent"] = {
+               ["access.lua"] = "56deb0a2d9174f249692919d8f8b7e45",
+               ["handler.lua"] = "eca630c7747ca9c280727bb325375e8c",
+               ["schema.lua"] = "d9aba98623cb2fc3d321b0a31cf87dbe"
+            }
+         }
+      },
+      spec = {
+         ["token-agent"] = {
+            ["01-access_spec.lua"] = "f014522a9804460b6477e5f2182a0bcf"
+         }
+      }
+   }
+}

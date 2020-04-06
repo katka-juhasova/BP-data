@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   ["org.conman.iconv"] = {
+      ["2.0.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["org.conman.iconv"] = {
+      "org.conman.iconv/2.0.0-2"
+   }
+}
+repository = {
+   ["org.conman.iconv"] = {
+      ["2.0.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["org.conman.iconv"] = "org/conman/iconv.so"
+            }
+         }
+      }
+   }
+}

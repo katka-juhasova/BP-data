@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Lugate module</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../classes/lugate.html">lugate</a></li>
+  <li><strong>request</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>request</code></h1>
+<p>The lugate module.</p>
+<p>
+ Lugate is a lua module for building JSON-RPC 2.0 Gateway APIs just inside of your Nginx configuration file.
+ Lugate is meant to be used with [ngx\_http\_lua\_module](https://github.com/openresty/lua-nginx-module) together.
+</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: Ivan Zinovyev <vanyazin@gmail.com></li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Request:new">Request:new (data, routes)</a></td>
+	<td class="summary">Create new request
+ return[type=table] New request instance</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:configure">Request:configure (data, routes)</a></td>
+	<td class="summary">Configure request instance</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:is_valid">Request:is_valid ()</a></td>
+	<td class="summary">Check if request is valid JSON-RPC 2.0</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:is_proxy_call">Request:is_proxy_call (data)</a></td>
+	<td class="summary">Check if request is a valid Lugate proxy call over JSON-RPC 2.0</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_method">Request:get_method ()</a></td>
+	<td class="summary">Get method name</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_params">Request:get_params ()</a></td>
+	<td class="summary">Get request params</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_id">Request:get_id ()</a></td>
+	<td class="summary">Get request id</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_route">Request:get_route ()</a></td>
+	<td class="summary">Get request route</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_cache">Request:get_cache ()</a></td>
+	<td class="summary">Get request cache time</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_key">Request:get_key ()</a></td>
+	<td class="summary">Get request cache key</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_data">Request:get_data ()</a></td>
+	<td class="summary">Get request data table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_uri">Request:get_uri ()</a></td>
+	<td class="summary">Get which uri is passing for request data</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_body">Request:get_body ()</a></td>
+	<td class="summary">Get request body</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Request:get_ngx_request">Request:get_ngx_request (data)</a></td>
+	<td class="summary">Build a request in format acceptable by nginx</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "Request:new"></a>
+    <strong>Request:new (data, routes)</strong>
+    </dt>
+    <dd>
+    Create new request
+ return[type=table] New request instance
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+
+        </li>
+        <li><span class="parameter">routes</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:configure"></a>
+    <strong>Request:configure (data, routes)</strong>
+    </dt>
+    <dd>
+    Configure request instance
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Table of request data
+        </li>
+        <li><span class="parameter">routes</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Table of routes
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:is_valid"></a>
+    <strong>Request:is_valid ()</strong>
+    </dt>
+    <dd>
+    Check if request is valid JSON-RPC 2.0
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:is_proxy_call"></a>
+    <strong>Request:is_proxy_call (data)</strong>
+    </dt>
+    <dd>
+    Check if request is a valid Lugate proxy call over JSON-RPC 2.0
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Decoded request body
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_method"></a>
+    <strong>Request:get_method ()</strong>
+    </dt>
+    <dd>
+    Get method name
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_params"></a>
+    <strong>Request:get_params ()</strong>
+    </dt>
+    <dd>
+    Get request params
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_id"></a>
+    <strong>Request:get_id ()</strong>
+    </dt>
+    <dd>
+    Get request id
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_route"></a>
+    <strong>Request:get_route ()</strong>
+    </dt>
+    <dd>
+    Get request route
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_cache"></a>
+    <strong>Request:get_cache ()</strong>
+    </dt>
+    <dd>
+    Get request cache time
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_key"></a>
+    <strong>Request:get_key ()</strong>
+    </dt>
+    <dd>
+    Get request cache key
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_data"></a>
+    <strong>Request:get_data ()</strong>
+    </dt>
+    <dd>
+    Get request data table
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_uri"></a>
+    <strong>Request:get_uri ()</strong>
+    </dt>
+    <dd>
+    Get which uri is passing for request data
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_body"></a>
+    <strong>Request:get_body ()</strong>
+    </dt>
+    <dd>
+    Get request body
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        Json array
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Request:get_ngx_request"></a>
+    <strong>Request:get_ngx_request (data)</strong>
+    </dt>
+    <dd>
+    Build a request in format acceptable by nginx
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Decoded requets body
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2016-03-22 10:15:48 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

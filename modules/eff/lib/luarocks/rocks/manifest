@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   eff = {
+      ["4.1-2"] = {}
+   }
+}
+modules = {
+   eff = {
+      "eff/4.1-2"
+   }
+}
+repository = {
+   eff = {
+      ["4.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               eff = "eff.lua"
+            }
+         }
+      }
+   }
+}

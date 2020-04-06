@@ -1,0 +1,426 @@
+commands = {
+   vanilla = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla-console"] = {
+      "vanilla/0.1.0.rc4-1"
+   }
+}
+dependencies = {
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.06-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-session"] = {
+      ["2.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-resty-template"] = {
+      ["1.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.6.2-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   vanilla = {
+      ["0.1.0.rc4-1"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     1, 6, 2, revision = 2, string = "1.6.2-2"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     1, 5, revision = 1, string = "1.5-1"
+                  }
+               }
+            },
+            name = "lua-resty-template"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 1, 0, revision = 1, string = "0.1.0-1"
+                  }
+               }
+            },
+            name = "lua-resty-cookie"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     2, 2, revision = 1, string = "2.2-1"
+                  }
+               }
+            },
+            name = "lua-resty-session"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 6, revision = 0, string = "0.06-0"
+                  }
+               }
+            },
+            name = "lua-resty-http"
+         }
+      }
+   }
+}
+modules = {
+   lfs = {
+      "luafilesystem/1.6.2-2"
+   },
+   ["resty.cookie"] = {
+      "lua-resty-cookie/0.1.0-1"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.06-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.06-0"
+   },
+   ["resty.session"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.ciphers.aes"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.ciphers.none"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.encoders.base16"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.encoders.base64"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.encoders.hex"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.serializers.json"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.storage.cookie"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.storage.memcache"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.storage.memcached"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.storage.redis"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.session.storage.shm"] = {
+      "lua-resty-session/2.2-1"
+   },
+   ["resty.template"] = {
+      "lua-resty-template/1.5-1"
+   },
+   ["resty.template.html"] = {
+      "lua-resty-template/1.5-1"
+   },
+   ["resty.template.microbenchmark"] = {
+      "lua-resty-template/1.5-1"
+   },
+   ["vanilla.sys.application"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.sys.config"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.sys.console"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.sys.nginx.config"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.sys.nginx.directive"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.sys.nginx.handle"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.sys.vanilla"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.sys.waf.acc"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.sys.waf.config"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.application"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.bootstrap"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.controller"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.dispatcher"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.error"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.libs.ansicolors"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.libs.cookie"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.libs.http"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.libs.logs"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.libs.session"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.libs.shcache"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.libs.utils"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.plugin"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.registry"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.request"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.response"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.router"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.routes.simple"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.view"] = {
+      "vanilla/0.1.0.rc4-1"
+   },
+   ["vanilla.v.views.rtpl"] = {
+      "vanilla/0.1.0.rc4-1"
+   }
+}
+repository = {
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.cookie"] = "resty/cookie.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.06-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-session"] = {
+      ["2.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.session"] = "resty/session.lua",
+               ["resty.session.ciphers.aes"] = "resty/session/ciphers/aes.lua",
+               ["resty.session.ciphers.none"] = "resty/session/ciphers/none.lua",
+               ["resty.session.encoders.base16"] = "resty/session/encoders/base16.lua",
+               ["resty.session.encoders.base64"] = "resty/session/encoders/base64.lua",
+               ["resty.session.encoders.hex"] = "resty/session/encoders/hex.lua",
+               ["resty.session.serializers.json"] = "resty/session/serializers/json.lua",
+               ["resty.session.storage.cookie"] = "resty/session/storage/cookie.lua",
+               ["resty.session.storage.memcache"] = "resty/session/storage/memcache.lua",
+               ["resty.session.storage.memcached"] = "resty/session/storage/memcached.lua",
+               ["resty.session.storage.redis"] = "resty/session/storage/redis.lua",
+               ["resty.session.storage.shm"] = "resty/session/storage/shm.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-template"] = {
+      ["1.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.template"] = "resty/template.lua",
+               ["resty.template.html"] = "resty/template/html.lua",
+               ["resty.template.microbenchmark"] = "resty/template/microbenchmark.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.6.2-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   vanilla = {
+      ["0.1.0.rc4-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               vanilla = "vanilla",
+               ["vanilla-console"] = "vanilla-console"
+            },
+            dependencies = {
+               ["lua-resty-cookie"] = "0.1.0-1",
+               ["lua-resty-http"] = "0.06-0",
+               ["lua-resty-session"] = "2.2-1",
+               ["lua-resty-template"] = "1.5-1",
+               luafilesystem = "1.6.2-2"
+            },
+            modules = {
+               ["vanilla.sys.application"] = "vanilla/sys/application.lua",
+               ["vanilla.sys.config"] = "vanilla/sys/config.lua",
+               ["vanilla.sys.console"] = "vanilla/sys/console.lua",
+               ["vanilla.sys.nginx.config"] = "vanilla/sys/nginx/config.lua",
+               ["vanilla.sys.nginx.directive"] = "vanilla/sys/nginx/directive.lua",
+               ["vanilla.sys.nginx.handle"] = "vanilla/sys/nginx/handle.lua",
+               ["vanilla.sys.vanilla"] = "vanilla/sys/vanilla.lua",
+               ["vanilla.sys.waf.acc"] = "vanilla/sys/waf/acc.lua",
+               ["vanilla.sys.waf.config"] = "vanilla/sys/waf/config.lua",
+               ["vanilla.v.application"] = "vanilla/v/application.lua",
+               ["vanilla.v.bootstrap"] = "vanilla/v/bootstrap.lua",
+               ["vanilla.v.controller"] = "vanilla/v/controller.lua",
+               ["vanilla.v.dispatcher"] = "vanilla/v/dispatcher.lua",
+               ["vanilla.v.error"] = "vanilla/v/error.lua",
+               ["vanilla.v.libs.ansicolors"] = "vanilla/v/libs/ansicolors.lua",
+               ["vanilla.v.libs.cookie"] = "vanilla/v/libs/cookie.lua",
+               ["vanilla.v.libs.http"] = "vanilla/v/libs/http.lua",
+               ["vanilla.v.libs.logs"] = "vanilla/v/libs/logs.lua",
+               ["vanilla.v.libs.session"] = "vanilla/v/libs/session.lua",
+               ["vanilla.v.libs.shcache"] = "vanilla/v/libs/shcache.lua",
+               ["vanilla.v.libs.utils"] = "vanilla/v/libs/utils.lua",
+               ["vanilla.v.plugin"] = "vanilla/v/plugin.lua",
+               ["vanilla.v.registry"] = "vanilla/v/registry.lua",
+               ["vanilla.v.request"] = "vanilla/v/request.lua",
+               ["vanilla.v.response"] = "vanilla/v/response.lua",
+               ["vanilla.v.router"] = "vanilla/v/router.lua",
+               ["vanilla.v.routes.simple"] = "vanilla/v/routes/simple.lua",
+               ["vanilla.v.view"] = "vanilla/v/view.lua",
+               ["vanilla.v.views.rtpl"] = "vanilla/v/views/rtpl.lua"
+            }
+         }
+      }
+   }
+}

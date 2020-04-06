@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>String Distance: Distance Between Two Strings</title>
+    <link rel="stylesheet" href="http://www.keplerproject.org/doc.css" type="text/css"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<div id="container">
+	
+<div id="product">
+	<div id="product_logo">
+		<img width="128" alt="String Distance logo" src="stringdistance.png"/>
+	</div>
+	<div id="product_name"><big><b>String Distance</b></big></div>
+	<div id="product_description">Distance Between Two Strings</div>
+</div> <!-- id="product" -->
+
+<div id="main">
+	
+<div id="navigation">
+<h1>String Distance</h1>
+	<ul>
+		<li><strong>Home</strong>
+			<ul>
+				<li><a href="index.html#overview">Overview</a></li>
+				<li><a href="index.html#status">Status</a></li>
+				<li><a href="index.html#download">Download</a></li>
+				<li><a href="index.html#compiling">Compiling</a></li>
+				<li><a href="index.html#install">Installation</a></li>
+		        <li><a href="index.html#reference">Reference</a></li>
+				<li><a href="index.html#history">History</a></li>
+				<li><a href="index.html#credits">Credits</a></li>
+				<li><a href="index.html#references">References</a></li>
+				<li><a href="index.html#contact">Contact us</a></li>
+			</ul>
+		</li>
+		<li><a href="license.html">License</a></li>
+		<li><a href="examples.html">Examples</a></li>
+	</ul>
+</div> <!-- id="navigation" -->
+
+<div id="content">
+
+<h2><a name="overview"></a>Overview</h2>
+
+<p>
+String Distance is a package that offers two algorithms to calculate string distances: Levenshtein and Damerau-Levenshtein.
+The distance between two strings is the minimum number of operations needed to transform one string into the other, where an operation is defined as an insertion, deletion, substitution of a single character, or a transposition of two adjacent characters.
+<p>
+String Distance is free software and uses the same <a href="license.html">license</a> as Lua 5.1.
+</p>
+
+<h4>Algorithms</h4>
+<dl>
+  <dd>Levenshtein distance</dd>
+  <dt>
+  This algorithm returns the minimum number of edits needed to transform one string into the other, with the allowable edit operations being insertion, deletion, or substitution of a single character.
+  </dt>
+</dl>
+
+<dl>
+  <dd>Damerau-Levenshtein distance</dd>
+  <dt>
+  The Damerau-Levenshtein distance is based on the Levenstein algorithm.
+  In addiction of the three basic edit operations (insertion, deletion and substituition) this algorith includes also the operation of transposing two adjacent characters.
+  </dt>
+</dl>
+
+
+<h2><a name="status"></a>Status</h2>
+
+<p>
+Current version is 1.1.0.
+It was developed to work for Lua 5.0, 5.1 and 5.2.
+</p>
+
+
+<h2><a name="download"></a>Download</h2>
+
+<p>
+String Distance can be downloaded from its
+<a href="http://www.ccpa.puc-rio.br/software/stringdistance/download">own download page</a>.
+</p>
+
+<h2><a name="compiling"></a>Compiling</a></h2>
+<p>
+String Distance is distributed as a C source file: stringdistance.c.
+This library can be linked to the application or dynamically loaded.
+The initialization function is luaopen_stringdistance and it is a Lua open-library compatible function. 
+</p>
+
+<h2><a name="install"></a>Installation</a></h2>
+<p>
+String Distance is C module which must be
+<a href="#compiling">compiled</a> and installed in your LUA_CPATH.
+LuaRocks can be used to install it since String Distance is also distributed as a <a href="http://luarocks.org/repositories/rocks/#stringdistance">rock</a>.
+</p>
+
+
+<h2><a name="reference"></a>Reference</h2>
+<p>
+String Distance module provides two functions, which implements the corresponding algorithms:
+</p>
+
+<dl class="reference">
+	<dt><a name="lev"></a><strong><code>lev(str1, str2)</code></strong></dt>
+	<dd>Calculates the distance between the given strings (arguments
+    <code>str1</code> and <code>str2</code>) according to Levenshtein's
+    algorithm.
+    The function returns the distance (a number) between the two strings.
+    </dd>
+</dl>
+<dl class="reference">
+    <dt><a name="dam"></a><strong><code>dam(str1, str2)</code></strong></dt>
+    <dd>Calculates the distance between the given strings (arguments
+    <code>str1</code> and <code>str2</code>) according to Damerau-Levenshtein's
+    algorithm.
+    The function returns the distance (a number) between the two strings considering transpositions.
+    </dd>
+</dl>
+
+<h2><a name="history"></a>History</h2>
+
+<ul>
+    <li>[21/12/2011] Version 1.1 released<br />
+        Reimplementation to add compatibility to all Lua 5 versions
+    </li>
+    <li>[19/01/2011] Version 1.0 released</li>
+</ul>
+
+
+<h2><a name="credits"></a>Credits</h2>
+
+<p>
+String Distance was implemented by Tom&aacute;s Guisasola, Marcelle Mota and Pablo Musa. 
+</p>
+<p>
+String Distance was developed for <a href="http://www.puc-rio.br">PUC-Rio</a> which holds its copyright.
+</p>
+
+<h2><a name="references"</a>References</h2>
+<p>
+The algorithms are implemented based on pseudocode available at <a href="http://en.wikipedia.org/wiki/Damerau-Levenshtein_distance">Wikipedia</a>.
+</p>
+<p>
+The original paper about the algorithm is the following<br>
+<a href="http://portal.acm.org/citation.cfm?id=363994">Fred J. Damerau. 1964. A technique for computer detection and correction of spelling errors. Commun. ACM 7, 3 (March 1964), 171-176.</a>
+</p>
+
+<h2><a name="contact"></a>Contact us</h2>
+
+<p>For more information please <a href=
+"mailto:tomas-NO-SPAM-THANKS@esp.puc-rio.br">contact us</a>.
+Comments are welcome!</p>
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+	<p><a href="http://validator.w3.org/check?uri=referer">
+    <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88" /></a></p>
+	<p><small>$Id: index.html,v 1.8 2011-12-21 13:35:37 tomas Exp $</small></p>
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->
+
+</body>
+</html> 

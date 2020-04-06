@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Lugate module</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>lugate</strong></li>
+</ul>
+<h2>Classes</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../classes/request.html">request</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>lugate</code></h1>
+<p>The lugate module.</p>
+<p>
+ Lugate is a lua module for building JSON-RPC 2.0 Gateway APIs just inside of your Nginx configuration file.
+ Lugate is meant to be used with [ngx\_http\_lua\_module](https://github.com/openresty/lua-nginx-module) together.
+</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: Ivan Zinovyev <vanyazin@gmail.com></li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:new">Lugate:new (config)</a></td>
+	<td class="summary">Create new Lugate instance</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:configure">Lugate:configure (config)</a></td>
+	<td class="summary">Configure lugate instance</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:get_data">Lugate:get_data ()</a></td>
+	<td class="summary">Parse raw body</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:get_requests">Lugate:get_requests ()</a></td>
+	<td class="summary">Get request collection</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:create_request">Lugate:create_request (data)</a></td>
+	<td class="summary">Create new request object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:is_batch">Lugate:is_batch (data)</a></td>
+	<td class="summary">Check if request is a batch</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:is_valid">Lugate:is_valid (data)</a></td>
+	<td class="summary">Check if single request is valid</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:is_proxy_call">Lugate:is_proxy_call (data)</a></td>
+	<td class="summary">Is a valid proxy call over JSON-RPC 2.0</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:get_route">Lugate:get_route (data)</a></td>
+	<td class="summary">Get route for request data</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:normalize_params">Lugate:normalize_params (data)</a></td>
+	<td class="summary">Normalize data params</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:ngx_request">Lugate:ngx_request (data)</a></td>
+	<td class="summary">Build a request in format acceptable by nginx</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Lugate:ngx_requests">Lugate:ngx_requests (data)</a></td>
+	<td class="summary">Build all requests in format acceptable by nginx</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "Lugate:new"></a>
+    <strong>Lugate:new (config)</strong>
+    </dt>
+    <dd>
+    Create new Lugate instance
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">config</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Table of configuration options: body for raw request body and routes for routing map config
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Lugate</span></span>
+        The new instance of Lugate
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:configure"></a>
+    <strong>Lugate:configure (config)</strong>
+    </dt>
+    <dd>
+    Configure lugate instance
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">config</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Table of configuration options
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:get_data"></a>
+    <strong>Lugate:get_data ()</strong>
+    </dt>
+    <dd>
+    Parse raw body
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:get_requests"></a>
+    <strong>Lugate:get_requests ()</strong>
+    </dt>
+    <dd>
+    Get request collection
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The table of requests
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:create_request"></a>
+    <strong>Lugate:create_request (data)</strong>
+    </dt>
+    <dd>
+    Create new request object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The request object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:is_batch"></a>
+    <strong>Lugate:is_batch (data)</strong>
+    </dt>
+    <dd>
+    Check if request is a batch
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Decoded request body
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:is_valid"></a>
+    <strong>Lugate:is_valid (data)</strong>
+    </dt>
+    <dd>
+    Check if single request is valid
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Decoded request body
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:is_proxy_call"></a>
+    <strong>Lugate:is_proxy_call (data)</strong>
+    </dt>
+    <dd>
+    Is a valid proxy call over JSON-RPC 2.0
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Decoded request body
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:get_route"></a>
+    <strong>Lugate:get_route (data)</strong>
+    </dt>
+    <dd>
+    Get route for request data
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Decoded requets body
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:normalize_params"></a>
+    <strong>Lugate:normalize_params (data)</strong>
+    </dt>
+    <dd>
+    Normalize data params
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:ngx_request"></a>
+    <strong>Lugate:ngx_request (data)</strong>
+    </dt>
+    <dd>
+    Build a request in format acceptable by nginx
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Decoded requets body
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Lugate:ngx_requests"></a>
+    <strong>Lugate:ngx_requests (data)</strong>
+    </dt>
+    <dd>
+    Build all requests in format acceptable by nginx
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Decoded requets body
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        table
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2016-03-16 13:28:47 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

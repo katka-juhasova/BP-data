@@ -1,0 +1,146 @@
+commands = {}
+dependencies = {
+   kpgmoon = {
+      ["1.8.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luabitop"
+         },
+         {
+            constraints = {},
+            name = "lpeg"
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   bit = {
+      "luabitop/1.0.2-3"
+   },
+   kpgmoon = {
+      "kpgmoon/1.8.1-1"
+   },
+   ["kpgmoon.arrays"] = {
+      "kpgmoon/1.8.1-1"
+   },
+   ["kpgmoon.cqueues"] = {
+      "kpgmoon/1.8.1-1"
+   },
+   ["kpgmoon.crypto"] = {
+      "kpgmoon/1.8.1-1"
+   },
+   ["kpgmoon.hstore"] = {
+      "kpgmoon/1.8.1-1"
+   },
+   ["kpgmoon.json"] = {
+      "kpgmoon/1.8.1-1"
+   },
+   ["kpgmoon.socket"] = {
+      "kpgmoon/1.8.1-1"
+   },
+   ["kpgmoon.util"] = {
+      "kpgmoon/1.8.1-1"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   kpgmoon = {
+      ["1.8.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1",
+               luabitop = "1.0.2-3"
+            },
+            modules = {
+               kpgmoon = "kpgmoon/init.lua",
+               ["kpgmoon.arrays"] = "kpgmoon/arrays.lua",
+               ["kpgmoon.cqueues"] = "kpgmoon/cqueues.lua",
+               ["kpgmoon.crypto"] = "kpgmoon/crypto.lua",
+               ["kpgmoon.hstore"] = "kpgmoon/hstore.lua",
+               ["kpgmoon.json"] = "kpgmoon/json.lua",
+               ["kpgmoon.socket"] = "kpgmoon/socket.lua",
+               ["kpgmoon.util"] = "kpgmoon/util.lua"
+            }
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit = "bit.so"
+            }
+         }
+      }
+   }
+}

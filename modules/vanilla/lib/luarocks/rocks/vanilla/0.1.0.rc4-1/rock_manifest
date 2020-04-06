@@ -1,0 +1,60 @@
+rock_manifest = {
+   bin = {
+      vanilla = "2b3f223e0183cc670c039def6a67b197",
+      ["vanilla-console"] = "22f714fe57f2fffce38fd0478621c207"
+   },
+   doc = {
+      ["CHANGELOG.md"] = "d41d8cd98f00b204e9800998ecf8427e",
+      ["LICENSE.md"] = "a5518d83630af2e34d5ce806cb56f7d2",
+      ["README-zh.md"] = "4802ae959968fc0f4ede52f31a85254d",
+      ["README.md"] = "1a6c84aef6f2218b408069f256928f1b"
+   },
+   lua = {
+      vanilla = {
+         sys = {
+            ["application.lua"] = "e28492439f311da2bd8b94e2418d5532",
+            ["config.lua"] = "433c7f2f333b3f75d602e996faae2032",
+            ["console.lua"] = "7a7c725269ed20803fcec7776663d838",
+            nginx = {
+               ["config.lua"] = "210d5db26e625ea9b7a73a52a23085d4",
+               ["directive.lua"] = "599d9dd56130f09017e8001dcbbd6b98",
+               ["handle.lua"] = "aeef9ab280c5a5cdbebe35d4ffc810b1"
+            },
+            ["vanilla.lua"] = "6e7c43d003bc75c31ceba5416216a7da",
+            waf = {
+               ["acc.lua"] = "87960630e2f4e62d595ce60a56215154",
+               ["config.lua"] = "2745995c2a68ca06ca2501593751918a"
+            }
+         },
+         v = {
+            ["application.lua"] = "880330176e1c396f520c281d84926a58",
+            ["bootstrap.lua"] = "04e9a724b48fff5e17e2fe44573b350c",
+            ["controller.lua"] = "71eb16c08b54c6e1a273354a15d61faa",
+            ["dispatcher.lua"] = "eb9f1aae6c44b74b3a4c721e55467228",
+            ["error.lua"] = "3843631a5b117a79d6b900dab14912cf",
+            libs = {
+               ["ansicolors.lua"] = "b9b58b5a23a65d8c14a736065ff0e6b2",
+               ["cookie.lua"] = "3efaa58e3c0fcb6bb639ccad97edd11d",
+               ["http.lua"] = "39aa5fd19c6a57aad8eb3552923b5e17",
+               ["logs.lua"] = "11bbb84b2801021af3e4ac64caeca253",
+               ["session.lua"] = "4fb4d8c11e8b72eb4ac0133c2aa6fbee",
+               ["shcache.lua"] = "79a8bc5a1d2ea03ec737c4250eeec54c",
+               ["utils.lua"] = "83838205acc1021ed76021f724e4e2f5"
+            },
+            ["plugin.lua"] = "05f2398a2cf85161f7d3815461037078",
+            ["registry.lua"] = "732b350c054e87097a55646e326d579d",
+            ["request.lua"] = "d10cfe32788560e04451ac3da2d5a4a4",
+            ["response.lua"] = "e5a7cf52c7e00b037da2c181506e2f5b",
+            ["router.lua"] = "e806ad81c972fd6cbfdf5c766bebf1ec",
+            routes = {
+               ["simple.lua"] = "8ed9191dafec69f327bf1f4a7a5c5fd5"
+            },
+            ["view.lua"] = "a8c45e552117ff9703f40ae6d0b99b1c",
+            views = {
+               ["rtpl.lua"] = "3222b6e241c60a6e1301d69db931803e"
+            }
+         }
+      }
+   },
+   ["vanilla-0.1.0.rc4-1.rockspec"] = "0ff1ae035f339f8ebf714c793551f2c9"
+}

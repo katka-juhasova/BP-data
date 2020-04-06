@@ -1,0 +1,24 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "3b83ef96387f14655fc854ddc3c6bd57",
+      ["README.md"] = "05154f17f18f1d238e5dcfde3ce6f264"
+   },
+   ["kong-plugin-jwt-keycloak-1.1.0-1.rockspec"] = "b25bc5616966b88400f65abc1c90d640",
+   lua = {
+      kong = {
+         plugins = {
+            ["jwt-keycloak"] = {
+               ["handler.lua"] = "583678cbf5d6b3d0a95294ec699ecca5",
+               ["key_conversion.lua"] = "586a73f03ea3bc730d96e7eb01adf0be",
+               ["keycloak_keys.lua"] = "f06fbc8ae10e0c259b4a7aff74e68b79",
+               ["schema.lua"] = "7848cb600a5d03c20380c083ff650062",
+               validators = {
+                  ["issuers.lua"] = "7c0c57c37b5042232321b0351a4e0b3f",
+                  ["roles.lua"] = "45bcf6f2062fd9eaee6e904949f29b13",
+                  ["scope.lua"] = "0456f1b0312e2ee4eb26f564fa764d98"
+               }
+            }
+         }
+      }
+   }
+}

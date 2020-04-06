@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Peter Colberg" />
+  <title>Reference &mdash; Templet for Lua</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+<ul>
+<li><a href="index.html">Templet for Lua</a></li>
+<li><a href="INSTALL.html">Installing</a></li>
+<li><a href="README.html">User's Guide</a></li>
+<li><a href="examples.html">Examples</a></li>
+<li><a href="reference.html">Reference</a></li>
+<li><a href="https://lists.colberg.org/listinfo/lua-templet">Mailing list</a></li>
+<li><a href="CHANGES.html">Releases</a></li>
+</ul>
+</div>
+<div class="body">
+<h1>Reference</h1>
+<dl>
+<dt><code>templet.loadstring(s)</code></dt>
+<dd><p>Loads a template from the given string, and returns a function.</p>
+<p>That function takes as arguments <code>([env[, f]])</code>, and, when called, renders the template in the environment specified by the table <code>env</code>, using the specified output function <code>f</code>. If <code>env</code> is <strong>nil</strong>, the global environment (<code>_G</code>) is used. If <code>f</code> is <strong>nil</strong>, an output function equivalent to</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> result <span class="ot">=</span> <span class="ot">{}</span>
+<span class="kw">local</span> f <span class="ot">=</span> <span class="kw">function</span><span class="ot">(</span>chunk<span class="ot">)</span>
+  <span class="kw">if</span> chunk <span class="ot">~=</span> <span class="kw">nil</span> <span class="kw">then</span>
+    <span class="fu">table.insert</span><span class="ot">(</span>result<span class="ot">,</span> <span class="fu">tostring</span><span class="ot">(</span>chunk<span class="ot">))</span>
+  <span class="kw">end</span>
+<span class="kw">end</span></code></pre>
+<p>is used, and the result of <code>table.concat(result)</code> is returned.</p>
+</dd>
+<dt><code>templet.loadfile(filename)</code></dt>
+<dd><p>Loads a template from the file with the given name, and returns a function as described above.</p>
+</dd>
+</dl>
+</div>
+<div class="footer">
+&copy; Copyright 2012–2015, Peter Colberg.
+Created using <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>.
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   ["cirru-parser"] = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["cirru-parser"] = {
+      "cirru-parser/0.1-1"
+   },
+   ["cirru-parser.array"] = {
+      "cirru-parser/0.1-1"
+   },
+   ["cirru-parser.tree"] = {
+      "cirru-parser/0.1-1"
+   }
+}
+repository = {
+   ["cirru-parser"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["cirru-parser"] = "cirru-parser.lua",
+               ["cirru-parser.array"] = "cirru-parser/array.lua",
+               ["cirru-parser.tree"] = "cirru-parser/tree.lua"
+            }
+         }
+      }
+   }
+}

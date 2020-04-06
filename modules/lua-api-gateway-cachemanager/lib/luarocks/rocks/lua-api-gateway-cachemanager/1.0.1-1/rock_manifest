@@ -1,0 +1,27 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "da27c9faf12d099d2a5c25b14232487d",
+      ["README.md"] = "4baf6eabd8858dfab169c313d491f1d8"
+   },
+   lua = {
+      ["api-gateway"] = {
+         cache = {
+            ["cache.lua"] = "39ab8945e7636115f185ecbca5783e58",
+            request = {
+               ["rcache.lua"] = "1ab8dc1963ff0ae1a16e4f2ebd04934a"
+            },
+            status = {
+               ["remoteCacheStatus.lua"] = "2ef1faad7cf07cbcffa3a4ff13bf7de5"
+            },
+            store = {
+               ["localCache.lua"] = "5a461327f0607fc6a7646bd9119fa7ec",
+               ["redisCache.lua"] = "f80b3cf99dd96931d6120953146ff982",
+               ["redisHashCache.lua"] = "5def2c376cc132090d624a7d7e86cfc3",
+               ["redisSetCache.lua"] = "722e6a6dcd499e008fa0c8d7b9a1b246"
+            },
+            ["store.lua"] = "5122f650560f69de8e604988ba6a9a97"
+         }
+      }
+   },
+   ["lua-api-gateway-cachemanager-1.0.1-1.rockspec"] = "41f4e933cea950f7a62b9c15c60a3db7"
+}

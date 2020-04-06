@@ -1,0 +1,53 @@
+rock_manifest = {
+   bin = {
+      ["resty-auto-ssl"] = {
+         dehydrated = "df19db99f5707e6bb5f40f3c80cfcdaa",
+         letsencrypt_hooks = "6919d57355e028215e4749944ef5c8c0",
+         sockproc = "dfca92cf93885f34e9adf7ccb3a85923",
+         start_sockproc = "897b3441f6311da28cd751f511e620bf"
+      }
+   },
+   doc = {
+      ["CHANGELOG.md"] = "002a998e0cb7d3d1cb4ad188d2fda385",
+      ["LICENSE.txt"] = "12c264b596ad686f4a0237626754e1be",
+      ["README.md"] = "a4935ff05172f50fcf75d4e1a62cb9fc"
+   },
+   ["fork3-sc-lua-resty-auto-ssl-0.12.0-1.rockspec"] = "c84f5a7c261c221a4a1c29267135e607",
+   lua = {
+      resty = {
+         ["auto-ssl"] = {
+            ["init_master.lua"] = "a24e60bff0469b63f7718e226f5d788f",
+            ["init_worker.lua"] = "9de74cfa735570e450b9e2c0350ede27",
+            jobs = {
+               ["renewal.lua"] = "435abb82a5bcb75e8a2398f5c1c75f26"
+            },
+            json_adapters = {
+               ["cjson.lua"] = "88f79227e050a2adc8b2013fbcfcd66c",
+               ["dkjson.lua"] = "1c5c090774153ca81ab59ad9ea7ed97d"
+            },
+            servers = {
+               ["challenge.lua"] = "c58f74dd39e2e2feebea8ed22b593739",
+               ["hook.lua"] = "69b79b14bffd2e0c6915d41f3a000387"
+            },
+            ["ssl_certificate.lua"] = "b5057f9ffa81d8b0f8d5ee95b7f93327",
+            ssl_providers = {
+               ["lets_encrypt.lua"] = "def2e1db8911911ec78f310cb44bd1b6"
+            },
+            ["storage.lua"] = "23eff5ce6b8457decb6f40930247c71f",
+            storage_adapters = {
+               ["file.lua"] = "0cee30469ad303e65c1d6616fe55c735",
+               ["redis.lua"] = "8f2eaa7bdc7ab70fe271430f24e6af17"
+            },
+            utils = {
+               ["run_command.lua"] = "ca3d5bf730a95e2debf5f44fe95a813e",
+               ["shell_execute.lua"] = "a8952e7efad869c7c342c81206072e53",
+               ["start_sockproc.lua"] = "99f7754dda0f64d72477edf823a516d9"
+            },
+            vendor = {
+               ["shell.lua"] = "1a414263d1df0e9245be50b81f551d56"
+            }
+         },
+         ["auto-ssl.lua"] = "d35461a8ce0f7fb31601eed0f8b7e7ee"
+      }
+   }
+}

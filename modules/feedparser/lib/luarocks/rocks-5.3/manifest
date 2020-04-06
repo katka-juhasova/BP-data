@@ -1,0 +1,99 @@
+commands = {}
+dependencies = {
+   feedparser = {
+      ["0.71-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luaexpat"
+         }
+      }
+   },
+   luaexpat = {
+      ["1.3.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   feedparser = {
+      "feedparser/0.71-3"
+   },
+   ["feedparser.XMLElement"] = {
+      "feedparser/0.71-3"
+   },
+   ["feedparser.dateparser"] = {
+      "feedparser/0.71-3"
+   },
+   ["feedparser.url"] = {
+      "feedparser/0.71-3"
+   },
+   lxp = {
+      "luaexpat/1.3.3-1"
+   },
+   ["lxp.lom"] = {
+      "luaexpat/1.3.3-1"
+   },
+   ["lxp.totable"] = {
+      "luaexpat/1.3.3-1"
+   }
+}
+repository = {
+   feedparser = {
+      ["0.71-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luaexpat = "1.3.3-1"
+            },
+            modules = {
+               feedparser = "feedparser.lua",
+               ["feedparser.XMLElement"] = "feedparser/XMLElement.lua",
+               ["feedparser.dateparser"] = "feedparser/dateparser.lua",
+               ["feedparser.url"] = "feedparser/url.lua"
+            }
+         }
+      }
+   },
+   luaexpat = {
+      ["1.3.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lxp = "lxp.so",
+               ["lxp.lom"] = "lxp/lom.lua",
+               ["lxp.totable"] = "lxp/totable.lua"
+            }
+         }
+      }
+   }
+}

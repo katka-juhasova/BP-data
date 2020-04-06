@@ -1,0 +1,10 @@
+project='malvado'
+title='malvado documentation'
+description='A game programming library with "DIV Game Studio"-style processes for Lua/Love2D'
+style = '!fixed'
+use_markdown_titles = true
+package = 'malvado'
+format = 'discount'
+sort_modules=true
+file = '../malvado'
+dir = '../doc'

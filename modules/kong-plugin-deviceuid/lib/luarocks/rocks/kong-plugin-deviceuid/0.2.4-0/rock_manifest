@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "bbcdeb4ae22015431e18b9a8d6c962fa"
+   },
+   ["kong-plugin-deviceuid-0.2.4-0.rockspec"] = "3ac1c83f551e30ffc1fd8fb437eea4da",
+   lua = {
+      kong = {
+         plugins = {
+            deviceuid = {
+               ["handler.lua"] = "03661c5643cc7d0d4eca1bd1aad3af8f",
+               ["schema.lua"] = "44f33ba2277c1ca618bed713cadf98f3"
+            }
+         }
+      }
+   }
+}

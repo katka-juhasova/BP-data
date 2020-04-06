@@ -1,0 +1,18 @@
+rock_manifest = {
+   lua = {
+      waf = {
+         ["config.lua"] = "1b9f8ef41ed1edeb69333312904be8a0",
+         ["init.lua"] = "340732d608c5dbf171e9ce992b37dfd3",
+         ["waf.lua"] = "cd690c52c7c7b02f39f34eff22dc928e"
+      }
+   },
+   ["nginx-lua-waf-1.0-1.rockspec"] = "c97a078e572e80c055104c6681eb5323",
+   wafconf = {
+      args = "4a0405568cac209218d9a19ce1347f14",
+      cookie = "09e37ad930d9191bb8b4fa5edfe8831e",
+      post = "d6172a0502322d5027dd43de3b59db68",
+      url = "7cf82de8b9dc946539fe627ecc3ec35e",
+      ["user-agent"] = "ece31bc7de65f2ae28542656c8e49f74",
+      whiteurl = "ef99677089b1c49666658c347d4c2e2c"
+   }
+}

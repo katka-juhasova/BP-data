@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["endel-struct"] = {
+      ["1.0.0-1"] = {}
+   }
+}
+modules = {
+   struct = {
+      "endel-struct/1.0.0-1"
+   }
+}
+repository = {
+   ["endel-struct"] = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               struct = "struct.lua"
+            }
+         }
+      }
+   }
+}

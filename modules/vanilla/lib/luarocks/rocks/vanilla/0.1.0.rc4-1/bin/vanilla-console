@@ -1,0 +1,3 @@
+#!/usr/bin/env luajit
+local console = require('vanilla.sys.console')
+console.start()

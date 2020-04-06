@@ -1,0 +1,134 @@
+commands = {}
+dependencies = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["pgmoon-mashape"] = {
+      ["2.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luabitop"
+         },
+         {
+            constraints = {},
+            name = "lpeg"
+         }
+      }
+   }
+}
+modules = {
+   bit = {
+      "luabitop/1.0.2-3"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   ["pgmoon-mashape"] = {
+      "pgmoon-mashape/2.0.1-1"
+   },
+   ["pgmoon-mashape.arrays"] = {
+      "pgmoon-mashape/2.0.1-1"
+   },
+   ["pgmoon-mashape.crypto"] = {
+      "pgmoon-mashape/2.0.1-1"
+   },
+   ["pgmoon-mashape.json"] = {
+      "pgmoon-mashape/2.0.1-1"
+   },
+   ["pgmoon-mashape.socket"] = {
+      "pgmoon-mashape/2.0.1-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   },
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit = "bit.so"
+            }
+         }
+      }
+   },
+   ["pgmoon-mashape"] = {
+      ["2.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1",
+               luabitop = "1.0.2-3"
+            },
+            modules = {
+               ["pgmoon-mashape"] = "pgmoon-mashape/init.lua",
+               ["pgmoon-mashape.arrays"] = "pgmoon-mashape/arrays.lua",
+               ["pgmoon-mashape.crypto"] = "pgmoon-mashape/crypto.lua",
+               ["pgmoon-mashape.json"] = "pgmoon-mashape/json.lua",
+               ["pgmoon-mashape.socket"] = "pgmoon-mashape/socket.lua"
+            }
+         }
+      }
+   }
+}

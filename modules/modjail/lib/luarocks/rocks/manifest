@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   modjail = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   modjail = {
+      "modjail/0.1-1"
+   }
+}
+repository = {
+   modjail = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               modjail = "modjail.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-counter"] = {
+      ["0.2.0-1"] = {}
+   }
+}
+modules = {
+   ["resty.counter"] = {
+      "lua-resty-counter/0.2.0-1"
+   }
+}
+repository = {
+   ["lua-resty-counter"] = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.counter"] = "resty/counter.lua"
+            }
+         }
+      }
+   }
+}

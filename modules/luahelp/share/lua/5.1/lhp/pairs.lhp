@@ -1,0 +1,12 @@
+Help [[
+
+pairs (t)
+---------
+
+  Returns three values: the `next` function, the table `t`, and **nil**, so that
+  the construction
+
+        for k,v in pairs(t) do body end
+
+  will iterate over all key-value pairs of table `t`.
+]]

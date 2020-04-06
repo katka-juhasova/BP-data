@@ -1,0 +1,122 @@
+commands = {}
+dependencies = {
+   chronos = {
+      ["0.2-4"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   dumper = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     3, 1, 1, string = "3.1.1"
+                  }
+               }
+            },
+            name = "inspect"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 2, string = "0.2"
+                  }
+               }
+            },
+            name = "chronos"
+         }
+      }
+   },
+   inspect = {
+      ["3.1.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   chronos = {
+      "chronos/0.2-4"
+   },
+   dumper = {
+      "dumper/0.1.1-1"
+   },
+   inspect = {
+      "inspect/3.1.1-0"
+   }
+}
+repository = {
+   chronos = {
+      ["0.2-4"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               chronos = "chronos.so"
+            }
+         }
+      }
+   },
+   dumper = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               chronos = "0.2-4",
+               inspect = "3.1.1-0"
+            },
+            modules = {
+               dumper = "dumper.lua"
+            }
+         }
+      }
+   },
+   inspect = {
+      ["3.1.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               inspect = "inspect.lua"
+            }
+         }
+      }
+   }
+}

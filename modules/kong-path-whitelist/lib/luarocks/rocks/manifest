@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-path-whitelist"] = {
+      ["0.1-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-path-whitelist.handler"] = {
+      "kong-path-whitelist/0.1-0"
+   },
+   ["kong.plugins.kong-path-whitelist.schema"] = {
+      "kong-path-whitelist/0.1-0"
+   }
+}
+repository = {
+   ["kong-path-whitelist"] = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-path-whitelist.handler"] = "kong/plugins/kong-path-whitelist/handler.lua",
+               ["kong.plugins.kong-path-whitelist.schema"] = "kong/plugins/kong-path-whitelist/schema.lua"
+            }
+         }
+      }
+   }
+}

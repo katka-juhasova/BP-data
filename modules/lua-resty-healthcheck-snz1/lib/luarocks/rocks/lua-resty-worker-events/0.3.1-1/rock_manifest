@@ -1,0 +1,13 @@
+rock_manifest = {
+   doc = {
+      ["README.markdown"] = "f9b0a608f22c1a70864a4eb21d00d169"
+   },
+   lua = {
+      resty = {
+         worker = {
+            ["events.lua"] = "298ac360b4aeaacd6cc2dd1b625d1a50"
+         }
+      }
+   },
+   ["lua-resty-worker-events-0.3.1-1.rockspec"] = "0e8d222d82619198e0a5b3fd09c79125"
+}

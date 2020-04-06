@@ -1,0 +1,50 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "86caf6ee6b65fa208e9e4294b8d11b0a",
+      ["CONTRIBUTING.md"] = "c3a4b34c46f48ea7f4dbe6c9f42faae6",
+      LICENSE = "e3fc50a88d0a364313df4b21ef20c29e",
+      ["README.md"] = "a0cacadf7a452c6161b2e979781c5e9e"
+   },
+   lua = {
+      stuart = {
+         ["Context.lua"] = "4a2e72477b6f6448d734193448b8b4f7",
+         ["FileSystem.lua"] = "59baae3f27956387dc3d9980e4c16f18",
+         ["LocalFileSystem.lua"] = "2a5edfbd3899b2caa4d78e8d060731ed",
+         ["Partition.lua"] = "e167185509452676e2d163e38eb33dfe",
+         ["RDD.lua"] = "80638cf52a8b8a3e053f18651e311aec",
+         ["SparkConf.lua"] = "141823cd4b7bf3e8d63327c34389fd17",
+         ["WebHdfsFileSystem.lua"] = "8e1b3ecc3c7c32f403e212a9b60939ab",
+         ["class.lua"] = "e27d23ba656f1d40231d7ddb2052db0c",
+         ["fileSystemFactory.lua"] = "3a82893ff3d585c4db5ff0aafe8da037",
+         hadoop = {
+            ["Path.lua"] = "7ad0b602a1a9513003347deb4699e4ac"
+         },
+         ["interface.lua"] = "175498e13f495a40bb26e415cd2794e1",
+         internal = {
+            ["Logger.lua"] = "b5a7d993c49ba0b869f2e6d8e47224b2",
+            ["logging.lua"] = "66325eba160f01171b1f5aef10a5213e"
+         },
+         streaming = {
+            ["DStream.lua"] = "0b889923c0feb37aaa642b1a59430f5d",
+            ["HttpReceiver.lua"] = "c6762fe081093474d41df8962d906bf6",
+            ["QueueInputDStream.lua"] = "0b38d5d162779b8106dc63109e8fca6a",
+            ["Receiver.lua"] = "4ccc599cd6c5dceb6c90b0e283cf2dee",
+            ["ReceiverInputDStream.lua"] = "05b2dfc041798e70fb29da2d6ae3fef0",
+            ["SocketInputDStream.lua"] = "8d0e0cc91daf50c42097de13f876caa5",
+            ["SocketReceiver.lua"] = "895f0c64009d469919b40953a6f1c07f",
+            ["StreamingContext.lua"] = "b3736e04ce6347196ed01eb1abab1375",
+            ["TransformedDStream.lua"] = "c767766a237d1ee8ffdecb9d918bb2ea",
+            ["WindowedDStream.lua"] = "300f2b20b00a89c460ae9b407536a4de"
+         },
+         util = {
+            spark = {
+               ["samplingUtils.lua"] = "af10d3349bdd1df3cff491d56dc54810"
+            },
+            ["spark.lua"] = "747162fb574aa409129c773add7f91fe"
+         },
+         ["util.lua"] = "6cea28530836ad57ff9b5e684e14eab6"
+      },
+      ["stuart.lua"] = "aeeab25ffd9a905bc223ca19091ee0c6"
+   },
+   ["stuart-2.0.4-0.rockspec"] = "e0caf013c08f1a2025561eb6f5081fa5"
+}

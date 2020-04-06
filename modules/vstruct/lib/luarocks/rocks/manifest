@@ -1,0 +1,175 @@
+commands = {}
+dependencies = {
+   vstruct = {
+      ["2.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   vstruct = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.api"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast.Bitpack"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast.IO"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast.List"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast.Name"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast.Node"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast.Repeat"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast.Root"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.ast.Table"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.compat1x"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.cursor"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.a"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.b"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.bigendian"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.c"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.defaults"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.endianness"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.f"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.hostendian"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.i"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.littleendian"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.m"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.p"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.s"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.seekb"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.seekf"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.seekto"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.u"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.x"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.io.z"] = {
+      "vstruct/2.0.2-1"
+   },
+   ["vstruct.lexer"] = {
+      "vstruct/2.0.2-1"
+   }
+}
+repository = {
+   vstruct = {
+      ["2.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               vstruct = "vstruct/init.lua",
+               ["vstruct.api"] = "vstruct/api.lua",
+               ["vstruct.ast"] = "vstruct/ast.lua",
+               ["vstruct.ast.Bitpack"] = "vstruct/ast/Bitpack.lua",
+               ["vstruct.ast.IO"] = "vstruct/ast/IO.lua",
+               ["vstruct.ast.List"] = "vstruct/ast/List.lua",
+               ["vstruct.ast.Name"] = "vstruct/ast/Name.lua",
+               ["vstruct.ast.Node"] = "vstruct/ast/Node.lua",
+               ["vstruct.ast.Repeat"] = "vstruct/ast/Repeat.lua",
+               ["vstruct.ast.Root"] = "vstruct/ast/Root.lua",
+               ["vstruct.ast.Table"] = "vstruct/ast/Table.lua",
+               ["vstruct.compat1x"] = "vstruct/compat1x.lua",
+               ["vstruct.cursor"] = "vstruct/cursor.lua",
+               ["vstruct.io"] = "vstruct/io.lua",
+               ["vstruct.io.a"] = "vstruct/io/a.lua",
+               ["vstruct.io.b"] = "vstruct/io/b.lua",
+               ["vstruct.io.bigendian"] = "vstruct/io/bigendian.lua",
+               ["vstruct.io.c"] = "vstruct/io/c.lua",
+               ["vstruct.io.defaults"] = "vstruct/io/defaults.lua",
+               ["vstruct.io.endianness"] = "vstruct/io/endianness.lua",
+               ["vstruct.io.f"] = "vstruct/io/f.lua",
+               ["vstruct.io.hostendian"] = "vstruct/io/hostendian.lua",
+               ["vstruct.io.i"] = "vstruct/io/i.lua",
+               ["vstruct.io.littleendian"] = "vstruct/io/littleendian.lua",
+               ["vstruct.io.m"] = "vstruct/io/m.lua",
+               ["vstruct.io.p"] = "vstruct/io/p.lua",
+               ["vstruct.io.s"] = "vstruct/io/s.lua",
+               ["vstruct.io.seekb"] = "vstruct/io/seekb.lua",
+               ["vstruct.io.seekf"] = "vstruct/io/seekf.lua",
+               ["vstruct.io.seekto"] = "vstruct/io/seekto.lua",
+               ["vstruct.io.u"] = "vstruct/io/u.lua",
+               ["vstruct.io.x"] = "vstruct/io/x.lua",
+               ["vstruct.io.z"] = "vstruct/io/z.lua",
+               ["vstruct.lexer"] = "vstruct/lexer.lua"
+            }
+         }
+      }
+   }
+}

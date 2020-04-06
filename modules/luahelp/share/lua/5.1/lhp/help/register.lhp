@@ -1,0 +1,8 @@
+Help [[
+
+help.register (obj, desc)
+-------------------------
+
+  Registers help description `desc` for object `obj`, so that `help(obj)`
+  prints `desc`. `desc` should be a string.
+]]

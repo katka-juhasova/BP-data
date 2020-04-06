@@ -1,0 +1,21 @@
+Help [[
+
+collectgarbage (opt [, arg])
+----------------------------
+
+  This function is a generic interface to the garbage collector. It performs
+  different functions according to its first argument, `opt`:
+
+  * `"stop"`: stops the garbage collector.
+  * `"restart"`: restarts the garbage collector.
+  * `"collect"`: performs a full garbage-collection cycle.
+  * `"count"`: returns the total memory in use by Lua (in Kbytes).
+  * `"step"`: performs a garbage-collection step. The step "size" is
+    controlled by `arg` (larger values mean more steps) in a non-specified
+    way. If you want to control the step size you must experimentally tune the
+    value of `arg`. Returns **true** if the step finished a collection cycle.
+  * `"setpause"`: sets `arg`/100 as the new value for the _pause_ of the
+    collector.
+  * `"setstepmul"`: sets `arg`/100 as the new value for the _step multiplier_
+    of the collector.
+]]

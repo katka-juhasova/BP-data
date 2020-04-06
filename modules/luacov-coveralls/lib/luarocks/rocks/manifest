@@ -1,0 +1,330 @@
+commands = {
+   luacov = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov-coveralls"] = {
+      "luacov-coveralls/0.2.2-1"
+   }
+}
+dependencies = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-path"] = {
+      ["0.3.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luacov = {
+      ["0.14.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["luacov-coveralls"] = {
+      ["0.2.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "dkjson"
+         },
+         {
+            constraints = {
+               {
+                  op = ">",
+                  version = {
+                     0, 5, string = "0.5"
+                  }
+               }
+            },
+            name = "luacov"
+         },
+         {
+            constraints = {},
+            name = "luafilesystem"
+         },
+         {
+            constraints = {},
+            name = "lua-path"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   dkjson = {
+      "dkjson/2.5-2"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   luacov = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.coveralls.CiInfo"] = {
+      "luacov-coveralls/0.2.2-1"
+   },
+   ["luacov.coveralls.CiRepo"] = {
+      "luacov-coveralls/0.2.2-1"
+   },
+   ["luacov.coveralls.repo.appveyor"] = {
+      "luacov-coveralls/0.2.2-1"
+   },
+   ["luacov.coveralls.repo.git"] = {
+      "luacov-coveralls/0.2.2-1"
+   },
+   ["luacov.coveralls.utils"] = {
+      "luacov-coveralls/0.2.2-1"
+   },
+   ["luacov.defaults"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.hook"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.linescanner"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.reporter"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.reporter.coveralls"] = {
+      "luacov-coveralls/0.2.2-1"
+   },
+   ["luacov.reporter.default"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.runner"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.stats"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.tick"] = {
+      "luacov/0.14.0-1"
+   },
+   ["luacov.util"] = {
+      "luacov/0.14.0-1"
+   },
+   path = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.findfile"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.lfs.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.lfs.impl.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.module"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.syscall.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.types"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.utils"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.wcs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.types"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.wcs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.wcs"] = {
+      "lua-path/0.3.1-1"
+   }
+}
+repository = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dkjson = "dkjson.lua"
+            }
+         }
+      }
+   },
+   ["lua-path"] = {
+      ["0.3.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               path = "path.lua",
+               ["path.findfile"] = "path/findfile.lua",
+               ["path.fs"] = "path/fs.lua",
+               ["path.lfs.fs"] = "path/lfs/fs.lua",
+               ["path.lfs.impl.fs"] = "path/lfs/impl/fs.lua",
+               ["path.module"] = "path/module.lua",
+               ["path.syscall.fs"] = "path/syscall/fs.lua",
+               ["path.win32.alien.fs"] = "path/win32/alien/fs.lua",
+               ["path.win32.alien.types"] = "path/win32/alien/types.lua",
+               ["path.win32.alien.utils"] = "path/win32/alien/utils.lua",
+               ["path.win32.alien.wcs"] = "path/win32/alien/wcs.lua",
+               ["path.win32.ffi.fs"] = "path/win32/ffi/fs.lua",
+               ["path.win32.ffi.types"] = "path/win32/ffi/types.lua",
+               ["path.win32.ffi.wcs"] = "path/win32/ffi/wcs.lua",
+               ["path.win32.fs"] = "path/win32/fs.lua",
+               ["path.win32.wcs"] = "path/win32/wcs.lua"
+            }
+         }
+      }
+   },
+   luacov = {
+      ["0.14.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luacov = "luacov"
+            },
+            dependencies = {},
+            modules = {
+               luacov = "luacov.lua",
+               ["luacov.defaults"] = "luacov/defaults.lua",
+               ["luacov.hook"] = "luacov/hook.lua",
+               ["luacov.linescanner"] = "luacov/linescanner.lua",
+               ["luacov.reporter"] = "luacov/reporter.lua",
+               ["luacov.reporter.default"] = "luacov/reporter/default.lua",
+               ["luacov.runner"] = "luacov/runner.lua",
+               ["luacov.stats"] = "luacov/stats.lua",
+               ["luacov.tick"] = "luacov/tick.lua",
+               ["luacov.util"] = "luacov/util.lua"
+            }
+         }
+      }
+   },
+   ["luacov-coveralls"] = {
+      ["0.2.2-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["luacov-coveralls"] = "luacov-coveralls"
+            },
+            dependencies = {
+               dkjson = "2.5-2",
+               ["lua-path"] = "0.3.1-1",
+               luacov = "0.14.0-1",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               ["luacov.coveralls.CiInfo"] = "luacov/coveralls/CiInfo.lua",
+               ["luacov.coveralls.CiRepo"] = "luacov/coveralls/CiRepo.lua",
+               ["luacov.coveralls.repo.appveyor"] = "luacov/coveralls/repo/appveyor.lua",
+               ["luacov.coveralls.repo.git"] = "luacov/coveralls/repo/git.lua",
+               ["luacov.coveralls.utils"] = "luacov/coveralls/utils.lua",
+               ["luacov.reporter.coveralls"] = "luacov/reporter/coveralls.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   }
+}

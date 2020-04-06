@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["req-content-type-transformer"] = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.req-content-type-transformer.access"] = {
+      "req-content-type-transformer/0.1-1"
+   },
+   ["kong.plugins.req-content-type-transformer.handler"] = {
+      "req-content-type-transformer/0.1-1"
+   },
+   ["kong.plugins.req-content-type-transformer.schema"] = {
+      "req-content-type-transformer/0.1-1"
+   }
+}
+repository = {
+   ["req-content-type-transformer"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.req-content-type-transformer.access"] = "kong/plugins/req-content-type-transformer/access.lua",
+               ["kong.plugins.req-content-type-transformer.handler"] = "kong/plugins/req-content-type-transformer/handler.lua",
+               ["kong.plugins.req-content-type-transformer.schema"] = "kong/plugins/req-content-type-transformer/schema.lua"
+            }
+         }
+      }
+   }
+}

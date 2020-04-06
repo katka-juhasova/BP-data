@@ -1,0 +1,19 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "0ff60b9c2f33c483d0aeeedc33b4b60f"
+   },
+   ["ffiex-0.2.0-8.rockspec"] = "63993de357a68d15814444f5f1066774",
+   lua = {
+      ffiex = {
+         builder = {
+            ["gcc.lua"] = "6422e60083d597fefd8ffd5a0ff5fcb7",
+            ["tcc.lua"] = "b7e43f61016ecea886e5c2ae2516ded8"
+         },
+         ["init.lua"] = "c879e8b7cb0af9de5edea07c50671361",
+         ["lcpp.lua"] = "de4520dc6db8766109e013370736ea23",
+         ["parser.lua"] = "39af5568addd03c3f12cbe7c88391ace",
+         ["util.lua"] = "0b7bcd0b9dc32272285448593a9322c1"
+      },
+      ["ffiex.lua"] = "c879e8b7cb0af9de5edea07c50671361"
+   }
+}

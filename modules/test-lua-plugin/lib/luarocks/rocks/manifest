@@ -1,0 +1,47 @@
+commands = {}
+dependencies = {
+   ["test-lua-plugin"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.test-lua-plugin.handler"] = {
+      "test-lua-plugin/0.1.0-1"
+   },
+   ["kong.plugins.test-lua-plugin.schema"] = {
+      "test-lua-plugin/0.1.0-1"
+   }
+}
+repository = {
+   ["test-lua-plugin"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.test-lua-plugin.handler"] = "kong/plugins/test-lua-plugin/handler.lua",
+               ["kong.plugins.test-lua-plugin.schema"] = "kong/plugins/test-lua-plugin/schema.lua"
+            }
+         }
+      }
+   }
+}

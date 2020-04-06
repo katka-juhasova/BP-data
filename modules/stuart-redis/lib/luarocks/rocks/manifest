@@ -1,0 +1,371 @@
+commands = {}
+dependencies = {
+   lunajson = {
+      ["1.2.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   moses = {
+      ["2.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["net-url"] = {
+      ["0.9-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   stuart = {
+      ["2.0.4-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 2, string = "1.2"
+                  }
+               }
+            },
+            name = "lunajson"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 1, 0, string = "2.1.0"
+                  }
+               }
+            },
+            name = "moses"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 9, string = "0.9"
+                  }
+               }
+            },
+            name = "net-url"
+         }
+      }
+   },
+   ["stuart-redis"] = {
+      ["0.2.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 9, string = "0.9"
+                  }
+               }
+            },
+            name = "net-url"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, string = "2"
+                  }
+               }
+            },
+            name = "stuart"
+         }
+      }
+   }
+}
+modules = {
+   lunajson = {
+      "lunajson/1.2.2-1"
+   },
+   ["lunajson.decoder"] = {
+      "lunajson/1.2.2-1"
+   },
+   ["lunajson.encoder"] = {
+      "lunajson/1.2.2-1"
+   },
+   ["lunajson.sax"] = {
+      "lunajson/1.2.2-1"
+   },
+   moses = {
+      "moses/2.1.0-1"
+   },
+   moses_min = {
+      "moses/2.1.0-1"
+   },
+   ["net.url"] = {
+      "net-url/0.9-1"
+   },
+   stuart = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart-redis"] = {
+      "stuart-redis/0.2.0-0"
+   },
+   ["stuart-redis.RedisConfig"] = {
+      "stuart-redis/0.2.0-0"
+   },
+   ["stuart-redis.RedisContext"] = {
+      "stuart-redis/0.2.0-0"
+   },
+   ["stuart-redis.RedisEmbeddedContext"] = {
+      "stuart-redis/0.2.0-0"
+   },
+   ["stuart-redis.RedisEndpoint"] = {
+      "stuart-redis/0.2.0-0"
+   },
+   ["stuart-redis.RedisRemoteContext"] = {
+      "stuart-redis/0.2.0-0"
+   },
+   ["stuart-redis.streaming.PubSubReceiver"] = {
+      "stuart-redis/0.2.0-0"
+   },
+   ["stuart.Context"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.FileSystem"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.LocalFileSystem"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.Partition"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.RDD"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.SparkConf"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.WebHdfsFileSystem"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.class"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.fileSystemFactory"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.hadoop.Path"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.interface"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.internal.Logger"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.internal.logging"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.DStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.HttpReceiver"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.QueueInputDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.Receiver"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.ReceiverInputDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.SocketInputDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.SocketReceiver"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.StreamingContext"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.TransformedDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.WindowedDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.util"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.util.spark"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.util.spark.samplingUtils"] = {
+      "stuart/2.0.4-0"
+   }
+}
+repository = {
+   lunajson = {
+      ["1.2.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lunajson = "lunajson.lua",
+               ["lunajson.decoder"] = "lunajson/decoder.lua",
+               ["lunajson.encoder"] = "lunajson/encoder.lua",
+               ["lunajson.sax"] = "lunajson/sax.lua"
+            }
+         }
+      }
+   },
+   moses = {
+      ["2.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               moses = "moses.lua",
+               moses_min = "moses_min.lua"
+            }
+         }
+      }
+   },
+   ["net-url"] = {
+      ["0.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["net.url"] = "net/url.lua"
+            }
+         }
+      }
+   },
+   stuart = {
+      ["2.0.4-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lunajson = "1.2.2-1",
+               moses = "2.1.0-1",
+               ["net-url"] = "0.9-1"
+            },
+            modules = {
+               stuart = "stuart.lua",
+               ["stuart.Context"] = "stuart/Context.lua",
+               ["stuart.FileSystem"] = "stuart/FileSystem.lua",
+               ["stuart.LocalFileSystem"] = "stuart/LocalFileSystem.lua",
+               ["stuart.Partition"] = "stuart/Partition.lua",
+               ["stuart.RDD"] = "stuart/RDD.lua",
+               ["stuart.SparkConf"] = "stuart/SparkConf.lua",
+               ["stuart.WebHdfsFileSystem"] = "stuart/WebHdfsFileSystem.lua",
+               ["stuart.class"] = "stuart/class.lua",
+               ["stuart.fileSystemFactory"] = "stuart/fileSystemFactory.lua",
+               ["stuart.hadoop.Path"] = "stuart/hadoop/Path.lua",
+               ["stuart.interface"] = "stuart/interface.lua",
+               ["stuart.internal.Logger"] = "stuart/internal/Logger.lua",
+               ["stuart.internal.logging"] = "stuart/internal/logging.lua",
+               ["stuart.streaming.DStream"] = "stuart/streaming/DStream.lua",
+               ["stuart.streaming.HttpReceiver"] = "stuart/streaming/HttpReceiver.lua",
+               ["stuart.streaming.QueueInputDStream"] = "stuart/streaming/QueueInputDStream.lua",
+               ["stuart.streaming.Receiver"] = "stuart/streaming/Receiver.lua",
+               ["stuart.streaming.ReceiverInputDStream"] = "stuart/streaming/ReceiverInputDStream.lua",
+               ["stuart.streaming.SocketInputDStream"] = "stuart/streaming/SocketInputDStream.lua",
+               ["stuart.streaming.SocketReceiver"] = "stuart/streaming/SocketReceiver.lua",
+               ["stuart.streaming.StreamingContext"] = "stuart/streaming/StreamingContext.lua",
+               ["stuart.streaming.TransformedDStream"] = "stuart/streaming/TransformedDStream.lua",
+               ["stuart.streaming.WindowedDStream"] = "stuart/streaming/WindowedDStream.lua",
+               ["stuart.util"] = "stuart/util.lua",
+               ["stuart.util.spark"] = "stuart/util/spark.lua",
+               ["stuart.util.spark.samplingUtils"] = "stuart/util/spark/samplingUtils.lua"
+            }
+         }
+      }
+   },
+   ["stuart-redis"] = {
+      ["0.2.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lunajson = "1.2.2-1",
+               moses = "2.1.0-1",
+               ["net-url"] = "0.9-1",
+               stuart = "2.0.4-0"
+            },
+            modules = {
+               ["stuart-redis"] = "stuart-redis.lua",
+               ["stuart-redis.RedisConfig"] = "stuart-redis/RedisConfig.lua",
+               ["stuart-redis.RedisContext"] = "stuart-redis/RedisContext.lua",
+               ["stuart-redis.RedisEmbeddedContext"] = "stuart-redis/RedisEmbeddedContext.lua",
+               ["stuart-redis.RedisEndpoint"] = "stuart-redis/RedisEndpoint.lua",
+               ["stuart-redis.RedisRemoteContext"] = "stuart-redis/RedisRemoteContext.lua",
+               ["stuart-redis.streaming.PubSubReceiver"] = "stuart-redis/streaming/PubSubReceiver.lua"
+            }
+         }
+      }
+   }
+}

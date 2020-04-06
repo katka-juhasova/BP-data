@@ -1,0 +1,24 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "5340bb1359984df71be3b13abd8d59a0"
+   },
+   ["libssh2-0.1-0.rockspec"] = "7c2e4375f20c39bf91ed7e6c81d7dc93",
+   lua = {
+      libssh2 = {
+         ["agent.lua"] = "00c683fa9debae1d08e5155a96beecca",
+         ["base64.lua"] = "4a9791613aee9f9ed6b6b85247303f19",
+         ["channel.lua"] = "a753fa6e444167e09b089bea4365910f",
+         ["hostkey.lua"] = "fe7e032ff91485fc2ff85201334067cb",
+         ["keeplive.lua"] = "aa7747e585556bb6a69281f7476b50fb",
+         ["knownhost.lua"] = "17ffbfcc3f4bddec5e5a88e516ca42c7",
+         ["libssh2.lua"] = "760d5d226e9fb055e64cd11696304e4e",
+         ["prototype.lua"] = "3eb76401d8495b71c945c3ff0bbdbea2",
+         ["publickey.lua"] = "5be1b0640bb66972b2d2548b196406ff",
+         ["scp.lua"] = "043f7065e3d488d48fba39eb789f6d45",
+         ["session.lua"] = "84a41d634e3a2ea2f00999d1389eebad",
+         ["sftp.lua"] = "2722867b4d34d5e579b2f9ed0db6e379",
+         ["trace.lua"] = "0380157f108e13e1095110bd2dbb13e5",
+         ["userauth.lua"] = "3fcb076e48428338b871806b27e847c2"
+      }
+   }
+}

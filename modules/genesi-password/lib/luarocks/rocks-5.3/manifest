@@ -1,0 +1,43 @@
+commands = {
+   genesiPassword = {
+      "genesi-password/1.1.1-0"
+   }
+}
+dependencies = {
+   ["genesi-password"] = {
+      ["1.1.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   genesiPassaword = {
+      "genesi-password/1.1.1-0"
+   }
+}
+repository = {
+   ["genesi-password"] = {
+      ["1.1.1-0"] = {
+         {
+            arch = "installed",
+            commands = {
+               genesiPassword = "genesiPassword"
+            },
+            dependencies = {},
+            modules = {
+               genesiPassaword = "genesiPassaword.lua"
+            }
+         }
+      }
+   }
+}

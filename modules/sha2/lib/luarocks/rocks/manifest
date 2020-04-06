@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   sha2 = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   hmac = {
+      "sha2/0.2.0-1"
+   },
+   ["hmac.md5"] = {
+      "sha2/0.2.0-1"
+   },
+   ["hmac.sha2"] = {
+      "sha2/0.2.0-1"
+   },
+   sha2 = {
+      "sha2/0.2.0-1"
+   }
+}
+repository = {
+   sha2 = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               hmac = "hmac.lua",
+               ["hmac.md5"] = "hmac/md5.lua",
+               ["hmac.sha2"] = "hmac/sha2.lua",
+               sha2 = "sha2.so"
+            }
+         }
+      }
+   }
+}

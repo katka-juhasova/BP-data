@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "6194ed366981b95318c29d2e559aca1f",
+      ["README.md"] = "7b464230b8996bf0cb3c515fef974559"
+   },
+   lua = {
+      rocksolver = {
+         ["DependencySolver.lua"] = "0c8822bc66ed37295c103f3afe1e74bb",
+         ["Package.lua"] = "5e38a83e4d086b526e535aee20a12d46",
+         ["constraints.lua"] = "7ed58c7fad09fa54ecb9bc2e15c568d8",
+         ["utils.lua"] = "d1b48a17e70ec0080afed4fbf639baa1"
+      }
+   },
+   ["rocksolver-0.4.2-1.rockspec"] = "396a9a13df5d155c94262cf102dc8663"
+}

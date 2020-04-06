@@ -1,0 +1,24 @@
+rock_manifest = {
+   bin = {
+      obey = "32842f5fe9b1b1f4846cbe6a4a1575d3"
+   },
+   doc = {
+      ["CHANGELOG.md"] = "a2311262d6319dd63fbc7355013c0e14",
+      LICENSE = "d07c84f9b752e14ef9f7df625a63e25d",
+      ["README.md"] = "edf5fb956dae7b2960b8d15cee5ed2b9"
+   },
+   lua = {
+      obey = {
+         ["arguments.lua"] = "9324e65ba239ae7bf1bc7b29b684af75",
+         ["execute.lua"] = "485918f1070d6b7f478405bbd1281fdc",
+         ["init.lua"] = "9b4bf4f065e1df0d025f075a2a76e431",
+         ["interface.lua"] = "9d0e4460779750d180da1bacf6ba70b3",
+         ["loader.lua"] = "578b0207d4174163facca563fae2b25b",
+         ["main.lua"] = "e28fd26eadbe1aacb45ee7318715d0a1",
+         ["plugins.lua"] = "78b61ecbc08082d8d40a6f8fc3d0e7f1",
+         ["start.lua"] = "c16dfe5be80b37e3d52b854fc4afadce",
+         ["strings.lua"] = "a91e1a3e102201c0b69162df258e1f2a"
+      }
+   },
+   ["obey-0.1.0-7.rockspec"] = "1cbd64900d930c8f9245c1fe489c7811"
+}

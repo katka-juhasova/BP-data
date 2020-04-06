@@ -1,0 +1,55 @@
+rock_manifest = {
+   bin = {
+      ["resty-auto-ssl"] = {
+         dehydrated = "6c952dc63542082ecd1bf826c6c4ce9c",
+         letsencrypt_hooks = "9a05f2771b507b8d18a26f0c55b99624",
+         sockproc = "154b7bcafa1170ea53656a76f3328c23",
+         start_sockproc = "5422e32ec5488289647a6aa47789aad0"
+      }
+   },
+   doc = {
+      ["CHANGELOG.md"] = "f5550e0c12d657c93634ddef22e42499",
+      ["LICENSE.txt"] = "12c264b596ad686f4a0237626754e1be",
+      ["README.md"] = "f97018c51e686c88a2c75578b68b7ad4"
+   },
+   lua = {
+      resty = {
+         ["auto-ssl"] = {
+            ["init_master.lua"] = "3d8290016a28f0ffc017be2f4028b270",
+            ["init_worker.lua"] = "7f9c519cea5b6856e94777ccdc10ea94",
+            jobs = {
+               ["renewal.lua"] = "18bb47242e36250cb1446810cacf9f4a"
+            },
+            json_adapters = {
+               ["cjson.lua"] = "88f79227e050a2adc8b2013fbcfcd66c",
+               ["dkjson.lua"] = "1c5c090774153ca81ab59ad9ea7ed97d"
+            },
+            servers = {
+               ["challenge.lua"] = "ec95edb5dc9f30a9088d194dd140c740",
+               ["hook.lua"] = "0c94ae749162fe96b739cc5edb812ca4"
+            },
+            ["ssl_certificate.lua"] = "08604c9ced60e3eab30dc051fa25951f",
+            ssl_providers = {
+               ["lets_encrypt.lua"] = "6539088ed0ef45d6618123746ce90781"
+            },
+            ["storage.lua"] = "5bca1b808ca92b424ce1c05071990a57",
+            storage_adapters = {
+               ["file.lua"] = "d87a067c90f3c3adb64f4dd578741f0c",
+               ["redis.lua"] = "9499628e672f7c02c759bda271ec4099"
+            },
+            utils = {
+               ["parse_openssl_time.lua"] = "cdef900b0adb842a7d2c153d98221e51",
+               ["random_seed.lua"] = "95fd5078a09291386a7b58db1691458d",
+               ["shell_execute.lua"] = "89536e01935afc1abc2c5c365271a902",
+               ["shuffle_table.lua"] = "8bd98132961f431e082e63c10a746780",
+               ["start_sockproc.lua"] = "299285a64747e74834aa2c1c309c3d3b"
+            },
+            vendor = {
+               ["shell.lua"] = "1a414263d1df0e9245be50b81f551d56"
+            }
+         },
+         ["auto-ssl.lua"] = "6cc458df541ea5bb0eb41b0c1164b3d3"
+      }
+   },
+   ["sc-lua-resty-auto-ssl-0.13.1-1.rockspec"] = "c51a815d333859f3b614c9d894d86f89"
+}

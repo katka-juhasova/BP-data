@@ -1,0 +1,96 @@
+commands = {}
+dependencies = {
+   flyzip = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 4, 0.11903, revision = 1, string = "0.4.work3-1"
+                  }
+               }
+            },
+            name = "lzlib"
+         }
+      }
+   },
+   lzlib = {
+      ["0.4.1.53-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   flyzip = {
+      "flyzip/1.0-1"
+   },
+   gzip = {
+      "lzlib/0.4.1.53-1"
+   },
+   zlib = {
+      "lzlib/0.4.1.53-1"
+   }
+}
+repository = {
+   flyzip = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lzlib = "0.4.1.53-1"
+            },
+            modules = {
+               flyzip = "flyzip.lua"
+            }
+         }
+      }
+   },
+   lzlib = {
+      ["0.4.1.53-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               gzip = "gzip.lua",
+               zlib = "zlib.so"
+            }
+         }
+      }
+   }
+}

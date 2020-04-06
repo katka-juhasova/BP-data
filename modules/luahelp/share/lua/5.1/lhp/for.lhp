@@ -1,0 +1,76 @@
+Help [[
+
+The _for_ statement has two forms: one numeric and one generic.
+
+The numeric _for_ loop repeats a block of code while a control variable runs
+through an arithmetic progression. It has the following syntax:
+
+`stat ::=` _for_ `Name` _'='_ `exp` _','_ `exp [`_','_ `exp ]` _do_ `block` _end_
+
+The _block_ is repeated for _name_ starting at the value of the first _exp_,
+until it passes the second _exp_ by steps of the third _exp_. More precisely,
+a _for_ statement like
+
+        for var = e1, e2, e3 do _block_ end
+
+is equivalent to the code:
+
+        do
+          local var, limit, step = tonumber(e1), tonumber(e2),
+                                   tonumber(e3)
+          if not (var and limit and step) then error() end
+          while (step > 0 and var <= limit)
+                 or (step <= 0 and var >= limit) do
+            _block_
+            var = var + step
+          end
+        end
+
+Note the following:
+
+  * All three control expressions are evaluated only once, before the loop
+    starts. They must all result in numbers.
+  * _var_, _limit_ and _step_ are invisible variables. The names are here for
+    explanatory purposes only.
+  * If the third expression (the step) is absent, then a step of 1 is used.
+  * You can use _break_ to exit a _for_ loop.
+  * The loop variable `var` is local to the loop; you cannot use its value
+    after the _for_ ends or is broken. If you need this value, assign it to
+    another variable before breaking or exiting the loop.
+
+The generic _for_ statement works over functions, called _iterators_. On each
+iteration, the iterator function is called to produce a new value, stopping
+when this new value is **nil**. The generic _for_ loop has the following
+syntax:
+
+`stat ::=` _for_ `namelist` _in_ `explist1` _do_ `block` _end_
+
+`namelist ::= Name {` _','_ `Name }`
+
+A _for_ statement like
+
+        for var1, ..., varn in _explist_ do _block_ end
+
+is equivalent to the code:
+
+        do
+          local f, s, var = _explist_
+          while true do
+            local var1, ..., varn = f(s, var)
+            var = var1
+            if var == nil then break end
+            _block_
+          end
+        end
+
+Note the following:
+
+  * _explist_ is evaluated only once. Its results are an _iterator_ function,
+    a _state_, and an initial value for the first _iterator variable_.
+  * _f_, _s_, and _var_ are invisible variables. The names are here for
+    explanatory purposes only.
+  * You can use _break_ to exit a _for_ loop.
+  * The loop variables _var1, ..., varn_ are local to the loop; you cannot use
+    their values after the _for_ ends. If you need these values, then assign
+    them to other variables before breaking or exiting the loop.
+]]

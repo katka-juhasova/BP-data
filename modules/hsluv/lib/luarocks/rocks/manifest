@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   hsluv = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   hsluv = {
+      "hsluv/0.1-1"
+   }
+}
+repository = {
+   hsluv = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               hsluv = "hsluv.lua"
+            }
+         }
+      }
+   }
+}

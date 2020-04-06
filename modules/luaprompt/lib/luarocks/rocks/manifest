@@ -1,0 +1,85 @@
+commands = {
+   luap = {
+      "luaprompt/0.7-1"
+   }
+}
+dependencies = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luaprompt = {
+      ["0.7-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "argparse"
+         }
+      }
+   }
+}
+modules = {
+   argparse = {
+      "argparse/0.7.0-1"
+   },
+   prompt = {
+      "luaprompt/0.7-1"
+   }
+}
+repository = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               argparse = "argparse.lua"
+            }
+         }
+      }
+   },
+   luaprompt = {
+      ["0.7-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               luap = "luap"
+            },
+            dependencies = {
+               argparse = "0.7.0-1"
+            },
+            modules = {
+               prompt = "prompt.so"
+            }
+         }
+      }
+   }
+}

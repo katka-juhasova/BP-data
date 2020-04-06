@@ -1,0 +1,53 @@
+commands = {}
+dependencies = {
+   ["nginx-resumable-upload"] = {
+      ["0.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["shuaicj.upload"] = {
+      "nginx-resumable-upload/0.0.1-1"
+   },
+   ["shuaicj.upload.checksum.crc32"] = {
+      "nginx-resumable-upload/0.0.1-1"
+   },
+   ["shuaicj.upload.checksum.md5"] = {
+      "nginx-resumable-upload/0.0.1-1"
+   },
+   ["shuaicj.upload.checksum.sha1"] = {
+      "nginx-resumable-upload/0.0.1-1"
+   },
+   ["shuaicj.upload.util"] = {
+      "nginx-resumable-upload/0.0.1-1"
+   }
+}
+repository = {
+   ["nginx-resumable-upload"] = {
+      ["0.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["shuaicj.upload"] = "shuaicj/upload.lua",
+               ["shuaicj.upload.checksum.crc32"] = "shuaicj/upload/checksum/crc32.lua",
+               ["shuaicj.upload.checksum.md5"] = "shuaicj/upload/checksum/md5.lua",
+               ["shuaicj.upload.checksum.sha1"] = "shuaicj/upload/checksum/sha1.lua",
+               ["shuaicj.upload.util"] = "shuaicj/upload/util.lua"
+            }
+         }
+      }
+   }
+}

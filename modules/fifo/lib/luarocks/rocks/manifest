@@ -1,0 +1,30 @@
+commands = {}
+dependencies = {
+   fifo = {
+      ["0.2-0"] = {
+         {
+            constraints = {},
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   fifo = {
+      "fifo/0.2-0"
+   }
+}
+repository = {
+   fifo = {
+      ["0.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               fifo = "fifo.lua"
+            }
+         }
+      }
+   }
+}

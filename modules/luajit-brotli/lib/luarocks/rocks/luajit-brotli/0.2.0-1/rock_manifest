@@ -1,0 +1,12 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "122d22aa0ba2476f07fbf4a7ea8a4bab"
+   },
+   lua = {
+      brotli = {
+         ["decoder.lua"] = "d4d2640160dee5d84fef79bec86375d8",
+         ["encoder.lua"] = "a7c9f7433dd0da606bbf624786dbc7dd"
+      }
+   },
+   ["luajit-brotli-0.2.0-1.rockspec"] = "3d2a246c59636fed8a08348d52311605"
+}

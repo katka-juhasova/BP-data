@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>CMDBuild SOAP API Library</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/cmdbuild.html">cmdbuild</a></li>
+  <li><a href="../modules/cmdbuild.attachment.html">cmdbuild.attachment</a></li>
+  <li><strong>cmdbuild.card</strong></li>
+  <li><a href="../modules/cmdbuild.lookup.html">cmdbuild.lookup</a></li>
+  <li><a href="../modules/cmdbuild.relation.html">cmdbuild.relation</a></li>
+  <li><a href="../modules/cmdbuild.workflow.html">cmdbuild.workflow</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/Readme.md.html">Readme</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>cmdbuild.card</code></h1>
+<p>get
+ list mts: getCard, getCardList, getCardHistory and etc.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#mts.card">mts.card (card_id, attributes_list)</a></td>
+	<td class="summary">Card:card
+  It returns the required card with all attributes specified in “attributeList” (all card attributes if “attributeList” is null).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#mts.history">mts.history (card_id)</a></td>
+	<td class="summary">Card:history
+  It returns the list of the historicized versions of the specified card.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#mts.list">mts.list (attributes_list, filter, filter_sq_operator, order_type, limit, offset, full_text_query, cql_query, cql_query_parameters)</a></td>
+	<td class="summary">Card:list
+  It returns the card list resulting from the specified query, completed with all attributes specified
+ in “attributeList” (all card attributes if “attributeList” is null).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Card:create">Card:create (classname, attributes_list, metadata)</a></td>
+	<td class="summary">Card:create
+  It creates in the database a new card, containing the information inserted in the "Card" object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Card:update">Card:update (classname, card_id, attributes_list, metadata)</a></td>
+	<td class="summary">Card:update
+  It updates a pre-existing card.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Card:delete">Card:delete (classname, card_id)</a></td>
+	<td class="summary">Card:delete
+  It deletes logically - in the identified class - the pre-existing card with the identified "id".</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "mts.card"></a>
+    <strong>mts.card (card_id, attributes_list)</strong>
+    </dt>
+    <dd>
+    Card:card
+  It returns the required card with all attributes specified in “attributeList” (all card attributes if “attributeList” is null).
+ They correspond to additional attributes defined in the Card Administration Module and available in the card management.
+ The list includes also the ClassId (not the className)(table)
+ ex.: {name='',value=''}
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">card_id</span>
+         - {+DESCRIPTION+} (number)
+        </li>
+        <li><span class="parameter">attributes_list</span>
+         - Array of "Attribute" objects containing the values of additional custom attributes in the class.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        xml response (string)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "mts.history"></a>
+    <strong>mts.history (card_id)</strong>
+    </dt>
+    <dd>
+    Card:history
+  It returns the list of the historicized versions of the specified card.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">card_id</span>
+         - CMDBuild Card Id (number)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        xml response (string)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "mts.list"></a>
+    <strong>mts.list (attributes_list, filter, filter_sq_operator, order_type, limit, offset, full_text_query, cql_query, cql_query_parameters)</strong>
+    </dt>
+    <dd>
+    Card:list
+  It returns the card list resulting from the specified query, completed with all attributes specified
+ in “attributeList” (all card attributes if “attributeList” is null).
+ If the query is made on a superclass, the "className" attribute of the returned Card objects contains the name of the specific string.subclass
+ the card belongs to, while in the attributeList it appears the ClassId of the same string.subclass.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">attributes_list</span>
+         - Array of "Attribute" objects containing the values of additional custom attributes in the class.
+ They correspond to additional attributes defined in the Card Administration Module and available in the card management.
+ The list includes also the ClassId (not the className)(table) ex.: {name='',value=''}
+        </li>
+        <li><span class="parameter">filter</span>
+         - It string.represents an atomic filter condition to select a card list. (table)
+        </li>
+        <li><span class="parameter">filter_sq_operator</span>
+         - It string.represents a concatenation of atomic filter conditions connected with an operator. (string)
+        </li>
+        <li><span class="parameter">order_type</span>
+         - It string.represents the ordering standard among the cards drawn from the filter query. (table)
+        </li>
+        <li><span class="parameter">limit</span>
+         - the number of returned results (number)
+        </li>
+        <li><span class="parameter">offset</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+        <li><span class="parameter">full_text_query</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+        <li><span class="parameter">cql_query</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+        <li><span class="parameter">cql_query_parameters</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        xml response (string)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Card:create"></a>
+    <strong>Card:create (classname, attributes_list, metadata)</strong>
+    </dt>
+    <dd>
+    Card:create
+  It creates in the database a new card, containing the information inserted in the "Card" object.
+ It returns the "id" identification attribute.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">classname</span>
+         - Class name which includes the card.  It corresponds to the table name in the database. (string)
+        </li>
+        <li><span class="parameter">attributes_list</span>
+         - Array of "Attribute" objects containing the values of additional custom attributes in the class.
+ They correspond to additional attributes defined in the Card Administration Module and available in the card management.
+ The list includes also the ClassId (not the className)(table)
+ ex.: {name='',value='',code=''}
+        </li>
+        <li><span class="parameter">metadata</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        : id - (number)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Card:update"></a>
+    <strong>Card:update (classname, card_id, attributes_list, metadata)</strong>
+    </dt>
+    <dd>
+    Card:update
+  It updates a pre-existing card.   It returns “true” if the operation went through.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">classname</span>
+         - Class name which includes the card.  It corresponds to the table name in the database. (string)
+        </li>
+        <li><span class="parameter">card_id</span>
+         - {+DESCRIPTION+} (number)
+        </li>
+        <li><span class="parameter">attributes_list</span>
+         - Array of "Attribute" objects containing the values of additional custom attributes in the class.
+ They correspond to additional attributes defined in the Card Administration Module and available in the card management.
+ The list includes also the ClassId (not the className)(table)
+ ex.: {name='',value=''}
+        </li>
+        <li><span class="parameter">metadata</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Card:delete"></a>
+    <strong>Card:delete (classname, card_id)</strong>
+    </dt>
+    <dd>
+    Card:delete
+  It deletes logically - in the identified class - the pre-existing card with the identified "id".
+ It returns “true” if the operation went through.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">classname</span>
+         - Class name which includes the card.  It corresponds to the table name in the database. (string)
+        </li>
+        <li><span class="parameter">card_id</span>
+         - {+DESCRIPTION+} (number)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.2</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

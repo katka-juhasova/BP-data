@@ -1,0 +1,83 @@
+commands = {
+   luasrcdiet = {
+      "luasrcdiet/1.0.0-2"
+   }
+}
+dependencies = {
+   luasrcdiet = {
+      ["1.0.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luasrcdiet = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.equiv"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.fs"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.llex"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.lparser"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.optlex"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.optparser"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.plugin.example"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.plugin.html"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.plugin.sloc"] = {
+      "luasrcdiet/1.0.0-2"
+   },
+   ["luasrcdiet.utils"] = {
+      "luasrcdiet/1.0.0-2"
+   }
+}
+repository = {
+   luasrcdiet = {
+      ["1.0.0-2"] = {
+         {
+            arch = "installed",
+            commands = {
+               luasrcdiet = "luasrcdiet"
+            },
+            dependencies = {},
+            modules = {
+               luasrcdiet = "luasrcdiet/init.lua",
+               ["luasrcdiet.equiv"] = "luasrcdiet/equiv.lua",
+               ["luasrcdiet.fs"] = "luasrcdiet/fs.lua",
+               ["luasrcdiet.llex"] = "luasrcdiet/llex.lua",
+               ["luasrcdiet.lparser"] = "luasrcdiet/lparser.lua",
+               ["luasrcdiet.optlex"] = "luasrcdiet/optlex.lua",
+               ["luasrcdiet.optparser"] = "luasrcdiet/optparser.lua",
+               ["luasrcdiet.plugin.example"] = "luasrcdiet/plugin/example.lua",
+               ["luasrcdiet.plugin.html"] = "luasrcdiet/plugin/html.lua",
+               ["luasrcdiet.plugin.sloc"] = "luasrcdiet/plugin/sloc.lua",
+               ["luasrcdiet.utils"] = "luasrcdiet/utils.lua"
+            }
+         }
+      }
+   }
+}

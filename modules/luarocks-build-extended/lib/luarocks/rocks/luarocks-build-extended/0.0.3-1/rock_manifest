@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "93d9a93e5b945bad89557a0561ea2d39",
+      ["README.md"] = "c4710494b71f05d9ebaebe651b3085cf"
+   },
+   lua = {
+      luarocks = {
+         build = {
+            extended = {
+               ["builtin.lua"] = "5468d8e174eb6a9a1065be0a6f32bfc9",
+               ["init.lua"] = "87cdd05df842b1a62553f1b5654b517f",
+               ["util.lua"] = "5b9d43547d03285b82ae150b8b4dc89b"
+            }
+         }
+      }
+   },
+   ["luarocks-build-extended-0.0.3-1.rockspec"] = "c2ecabfed6efcb51c6db93e56d997b6f"
+}

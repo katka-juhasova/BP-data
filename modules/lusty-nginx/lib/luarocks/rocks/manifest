@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   ["lusty-nginx"] = {
+      ["0.4-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lusty-nginx"] = {
+      "lusty-nginx/0.4-0"
+   },
+   ["lusty-nginx.log"] = {
+      "lusty-nginx/0.4-0"
+   },
+   ["lusty-nginx.request"] = {
+      "lusty-nginx/0.4-0"
+   },
+   ["lusty-nginx.response"] = {
+      "lusty-nginx/0.4-0"
+   }
+}
+repository = {
+   ["lusty-nginx"] = {
+      ["0.4-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lusty-nginx"] = "lusty-nginx/init.lua",
+               ["lusty-nginx.log"] = "lusty-nginx/log.lua",
+               ["lusty-nginx.request"] = "lusty-nginx/request.lua",
+               ["lusty-nginx.response"] = "lusty-nginx/response.lua"
+            }
+         }
+      }
+   }
+}

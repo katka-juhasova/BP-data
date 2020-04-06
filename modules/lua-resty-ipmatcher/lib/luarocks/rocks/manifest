@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-ipmatcher"] = {
+      ["0.4-0"] = {}
+   }
+}
+modules = {
+   ["resty.ipmatcher"] = {
+      "lua-resty-ipmatcher/0.4-0"
+   }
+}
+repository = {
+   ["lua-resty-ipmatcher"] = {
+      ["0.4-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.ipmatcher"] = "resty/ipmatcher.lua"
+            }
+         }
+      }
+   }
+}

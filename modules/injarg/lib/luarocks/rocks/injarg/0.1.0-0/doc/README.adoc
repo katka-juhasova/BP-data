@@ -1,0 +1,43 @@
+= injarg
+
+----
+inject == inj[ect]args[s]
+----
+
+Command-line tool that allows to call an app with arguments from an args file.
+
+== Usage
+
+----
+injarg 
+----
+
+== Installation
+
+Use just the following line to get the latest release.
+
+----
+luarocks install injarg
+----
+
+If you want to use the current development version, clone the repository and
+use LuaRocks with the following command.
+
+----
+luarocks make dist/injarg-scn-0.rockspec
+----
+
+== Tests
+
+The unit tests are working with https://github.com/sstephenson/bats[bats].
+Use the folling lines to run the unit tests.
+
+----
+$ cd test
+$ bats .
+----
+
+== License
+
+injarg is licensed under the MIT Open Source license.
+For more information, see the LICENSE file in this repository.

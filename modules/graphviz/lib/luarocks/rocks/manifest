@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   graphviz = {
+      ["v1.0-2"] = {}
+   }
+}
+modules = {
+   graphviz = {
+      "graphviz/v1.0-2"
+   }
+}
+repository = {
+   graphviz = {
+      ["v1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               graphviz = "graphviz.lua"
+            }
+         }
+      }
+   }
+}

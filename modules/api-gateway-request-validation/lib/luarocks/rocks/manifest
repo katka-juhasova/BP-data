@@ -1,0 +1,136 @@
+commands = {}
+dependencies = {
+   ["api-gateway-request-validation"] = {
+      ["1.3.12-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, 0, string = "1.0.0"
+                  }
+               }
+            },
+            name = "lua-api-gateway-hmac"
+         }
+      }
+   },
+   ["lua-api-gateway-hmac"] = {
+      ["1.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["api-gateway.dogstatsd.Dogstatsd"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.redis.redisConnectionConfiguration"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.redis.redisConnectionProvider"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.redis.redisHealthCheck"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.resty.hmac"] = {
+      "lua-api-gateway-hmac/1.0.0-0"
+   },
+   ["api-gateway.util.OauthClient"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.util.logger"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.base"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.factory"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.key.redisApiKeyValidator"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.oauth2.oauthTokenValidator"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.oauth2.userProfileValidator"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.signing.hmacGenericSignatureValidator"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.validator"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.validatorsHandler"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   },
+   ["api-gateway.validation.validatorsHandlerErrorDecorator"] = {
+      "api-gateway-request-validation/1.3.12-1"
+   }
+}
+repository = {
+   ["api-gateway-request-validation"] = {
+      ["1.3.12-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-api-gateway-hmac"] = "1.0.0-0"
+            },
+            modules = {
+               ["api-gateway.dogstatsd.Dogstatsd"] = "api-gateway/dogstatsd/Dogstatsd.lua",
+               ["api-gateway.redis.redisConnectionConfiguration"] = "api-gateway/redis/redisConnectionConfiguration.lua",
+               ["api-gateway.redis.redisConnectionProvider"] = "api-gateway/redis/redisConnectionProvider.lua",
+               ["api-gateway.redis.redisHealthCheck"] = "api-gateway/redis/redisHealthCheck.lua",
+               ["api-gateway.util.OauthClient"] = "api-gateway/util/OauthClient.lua",
+               ["api-gateway.util.logger"] = "api-gateway/util/logger.lua",
+               ["api-gateway.validation.base"] = "api-gateway/validation/base.lua",
+               ["api-gateway.validation.factory"] = "api-gateway/validation/factory.lua",
+               ["api-gateway.validation.key.redisApiKeyValidator"] = "api-gateway/validation/key/redisApiKeyValidator.lua",
+               ["api-gateway.validation.oauth2.oauthTokenValidator"] = "api-gateway/validation/oauth2/oauthTokenValidator.lua",
+               ["api-gateway.validation.oauth2.userProfileValidator"] = "api-gateway/validation/oauth2/userProfileValidator.lua",
+               ["api-gateway.validation.signing.hmacGenericSignatureValidator"] = "api-gateway/validation/signing/hmacGenericSignatureValidator.lua",
+               ["api-gateway.validation.validator"] = "api-gateway/validation/validator.lua",
+               ["api-gateway.validation.validatorsHandler"] = "api-gateway/validation/validatorsHandler.lua",
+               ["api-gateway.validation.validatorsHandlerErrorDecorator"] = "api-gateway/validation/validatorsHandlerErrorDecorator.lua"
+            }
+         }
+      }
+   },
+   ["lua-api-gateway-hmac"] = {
+      ["1.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["api-gateway.resty.hmac"] = "api-gateway/resty/hmac.lua"
+            }
+         }
+      }
+   }
+}

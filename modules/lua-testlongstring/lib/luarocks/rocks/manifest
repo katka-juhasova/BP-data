@@ -1,0 +1,96 @@
+commands = {}
+dependencies = {
+   ["lua-testlongstring"] = {
+      ["0.2.2-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 3, 0, string = "0.3.0"
+                  }
+               }
+            },
+            name = "lua-testmore"
+         }
+      }
+   },
+   ["lua-testmore"] = {
+      ["0.3.5-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["Test.Builder"] = {
+      "lua-testmore/0.3.5-2"
+   },
+   ["Test.Builder.SocketOutput"] = {
+      "lua-testmore/0.3.5-2"
+   },
+   ["Test.Builder.Tester"] = {
+      "lua-testmore/0.3.5-2"
+   },
+   ["Test.Builder.Tester.File"] = {
+      "lua-testmore/0.3.5-2"
+   },
+   ["Test.LongString"] = {
+      "lua-testlongstring/0.2.2-2"
+   },
+   ["Test.More"] = {
+      "lua-testmore/0.3.5-2"
+   }
+}
+repository = {
+   ["lua-testlongstring"] = {
+      ["0.2.2-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-testmore"] = "0.3.5-2"
+            },
+            modules = {
+               ["Test.LongString"] = "Test/LongString.lua"
+            }
+         }
+      }
+   },
+   ["lua-testmore"] = {
+      ["0.3.5-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["Test.Builder"] = "Test/Builder.lua",
+               ["Test.Builder.SocketOutput"] = "Test/Builder/SocketOutput.lua",
+               ["Test.Builder.Tester"] = "Test/Builder/Tester.lua",
+               ["Test.Builder.Tester.File"] = "Test/Builder/Tester/File.lua",
+               ["Test.More"] = "Test/More.lua"
+            }
+         }
+      }
+   }
+}

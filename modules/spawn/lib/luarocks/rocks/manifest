@@ -1,0 +1,75 @@
+commands = {}
+dependencies = {
+   lunix = {
+      ["20170920-1"] = {}
+   },
+   spawn = {
+      ["0.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lunix"
+         }
+      }
+   }
+}
+modules = {
+   spawn = {
+      "spawn/0.1-0"
+   },
+   ["spawn.posix"] = {
+      "spawn/0.1-0"
+   },
+   ["spawn.wait"] = {
+      "spawn/0.1-0"
+   },
+   unix = {
+      "lunix/20170920-1"
+   }
+}
+repository = {
+   lunix = {
+      ["20170920-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               unix = "unix.so"
+            }
+         }
+      }
+   },
+   spawn = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lunix = "20170920-1"
+            },
+            modules = {
+               spawn = "spawn/init.lua",
+               ["spawn.posix"] = "spawn/posix.so",
+               ["spawn.wait"] = "spawn/wait.lua"
+            }
+         }
+      }
+   }
+}

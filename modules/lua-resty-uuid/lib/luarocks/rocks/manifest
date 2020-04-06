@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-resty-uuid"] = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.uuid"] = {
+      "lua-resty-uuid/1.1-1"
+   }
+}
+repository = {
+   ["lua-resty-uuid"] = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.uuid"] = "resty/uuid.lua"
+            }
+         }
+      }
+   }
+}

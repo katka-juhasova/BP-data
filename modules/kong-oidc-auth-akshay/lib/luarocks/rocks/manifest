@@ -1,0 +1,89 @@
+commands = {}
+dependencies = {
+   ["kong-oidc-auth-akshay"] = {
+      ["0.1-3"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 2, 0, revision = 0, string = "0.2.0-0"
+                  }
+               }
+            },
+            name = "lua-resty-jwt"
+         }
+      }
+   },
+   ["lua-resty-jwt"] = {
+      ["0.2.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.kong-oidc-auth-akshay.access"] = {
+      "kong-oidc-auth-akshay/0.1-3"
+   },
+   ["kong.plugins.kong-oidc-auth-akshay.handler"] = {
+      "kong-oidc-auth-akshay/0.1-3"
+   },
+   ["kong.plugins.kong-oidc-auth-akshay.schema"] = {
+      "kong-oidc-auth-akshay/0.1-3"
+   },
+   ["resty.evp"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.hmac"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.jwt"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.jwt-validators"] = {
+      "lua-resty-jwt/0.2.0-0"
+   }
+}
+repository = {
+   ["kong-oidc-auth-akshay"] = {
+      ["0.1-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-jwt"] = "0.2.0-0"
+            },
+            modules = {
+               ["kong.plugins.kong-oidc-auth-akshay.access"] = "kong/plugins/kong-oidc-auth-akshay/access.lua",
+               ["kong.plugins.kong-oidc-auth-akshay.handler"] = "kong/plugins/kong-oidc-auth-akshay/handler.lua",
+               ["kong.plugins.kong-oidc-auth-akshay.schema"] = "kong/plugins/kong-oidc-auth-akshay/schema.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-jwt"] = {
+      ["0.2.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.evp"] = "resty/evp.lua",
+               ["resty.hmac"] = "resty/hmac.lua",
+               ["resty.jwt"] = "resty/jwt.lua",
+               ["resty.jwt-validators"] = "resty/jwt-validators.lua"
+            }
+         }
+      }
+   }
+}

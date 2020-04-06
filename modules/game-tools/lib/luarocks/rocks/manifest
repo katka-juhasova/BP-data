@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["game-tools"] = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   ["game-tools.vector"] = {
+      "game-tools/0.1.0-1"
+   }
+}
+repository = {
+   ["game-tools"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["game-tools.vector"] = "game-tools/vector.lua"
+            }
+         }
+      }
+   }
+}

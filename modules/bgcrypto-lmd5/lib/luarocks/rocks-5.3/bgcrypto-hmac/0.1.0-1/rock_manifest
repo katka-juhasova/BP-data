@@ -1,0 +1,15 @@
+rock_manifest = {
+   ["bgcrypto-hmac-0.1.0-1.rockspec"] = "46e4c1be56f8087fe142317c10f75863",
+   doc = {
+      LICENSE = "53f348c197f4273cc2b34e0df327dde7",
+      ["README.md"] = "a50605cb23d43cb5e090c05805e21e3e"
+   },
+   lua = {
+      bgcrypto = {
+         ["hmac.lua"] = "f8dd0a61be8cfa602fd59dfd762d1e2f",
+         private = {
+            ["bit.lua"] = "69f8844d849b20bcdd761f8004dda14e"
+         }
+      }
+   }
+}

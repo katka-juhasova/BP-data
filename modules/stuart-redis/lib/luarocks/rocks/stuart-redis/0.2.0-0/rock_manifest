@@ -1,0 +1,22 @@
+rock_manifest = {
+   doc = {
+      ["embedding.md"] = "c69b921bdce11dcc65c8367c3c389f42",
+      ["rdd.md"] = "1c4e2f17e4bbf7939da9d0ce42b4587b",
+      ["remoting.md"] = "2611e67429cb73221d0a9e589999598c",
+      ["streaming.md"] = "ef6c5676d7113f08cc7a213caca0be56"
+   },
+   lua = {
+      ["stuart-redis"] = {
+         ["RedisConfig.lua"] = "c35ba7b15df06827ddf9cda049945ea3",
+         ["RedisContext.lua"] = "435f7796d912df1d8d82ee0d09fb76d4",
+         ["RedisEmbeddedContext.lua"] = "cdc060e1939cb43200f45c25b0fb3837",
+         ["RedisEndpoint.lua"] = "723dc6ec74c86f7521f8a1361a92fcc7",
+         ["RedisRemoteContext.lua"] = "b1fc124a8e157a62ae0daf4573f56a09",
+         streaming = {
+            ["PubSubReceiver.lua"] = "d1267bb7c1030c156bd04cf7edff2fc9"
+         }
+      },
+      ["stuart-redis.lua"] = "a3477843b66f44bae06f1731e991208e"
+   },
+   ["stuart-redis-0.2.0-0.rockspec"] = "948b31f1628eeafe76f70ceaa552fb9f"
+}

@@ -1,0 +1,20 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "f24a2106baa71fd7209a8a43e387feeb",
+      ["README.md"] = "15317b52dd71aa564eda53f205bf9837"
+   },
+   lua = {
+      resty = {
+         global_throttle = {
+            ["sliding_window.lua"] = "a03364edc1033617afeb9b91bda9df16",
+            store = {
+               ["memcached.lua"] = "c689d5bfab53bc9181940a35de888526",
+               ["shared_dict.lua"] = "e0ceb3c91f52b087d6a3a14255ab99eb"
+            },
+            ["store.lua"] = "6cb864d724c163c40cdfd7a8ffc5eae5"
+         },
+         ["global_throttle.lua"] = "446481c21d0435a749e10bf711359461"
+      }
+   },
+   ["lua-resty-global-throttle-0.1.0-1.rockspec"] = "dc4ab84034a99540f4fc47fc6d3d00ac"
+}

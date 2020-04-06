@@ -1,0 +1,458 @@
+commands = {}
+dependencies = {
+   lunajson = {
+      ["1.2.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   moses = {
+      ["2.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["net-url"] = {
+      ["0.9-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   stuart = {
+      ["2.0.4-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 2, string = "1.2"
+                  }
+               }
+            },
+            name = "lunajson"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 1, 0, string = "2.1.0"
+                  }
+               }
+            },
+            name = "moses"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 9, string = "0.9"
+                  }
+               }
+            },
+            name = "net-url"
+         }
+      }
+   },
+   ["stuart-ml"] = {
+      ["2.0.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, string = "2"
+                  }
+               }
+            },
+            name = "stuart"
+         }
+      }
+   }
+}
+modules = {
+   lunajson = {
+      "lunajson/1.2.2-1"
+   },
+   ["lunajson.decoder"] = {
+      "lunajson/1.2.2-1"
+   },
+   ["lunajson.encoder"] = {
+      "lunajson/1.2.2-1"
+   },
+   ["lunajson.sax"] = {
+      "lunajson/1.2.2-1"
+   },
+   moses = {
+      "moses/2.1.0-1"
+   },
+   moses_min = {
+      "moses/2.1.0-1"
+   },
+   ["net.url"] = {
+      "net-url/0.9-1"
+   },
+   stuart = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart-ml"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.clustering.KMeans"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.clustering.KMeansModel"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.clustering.VectorWithNorm"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.clustering.localKMeans"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.BLAS"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.DenseMatrix"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.DenseVector"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.Matrices"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.Matrix"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.SparseMatrix"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.SparseVector"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.Vector"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.Vectors"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.linalg.distributed.RowMatrix"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.random.RandomRDDs"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.regression.LabeledPoint"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.stat.MultivariateOnlineSummarizer"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.stat.corr.Correlation"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.stat.corr.Correlations"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.stat.corr.PearsonCorrelation"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.stat.statistics"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.util"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.util.Loader"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.util.MLUtils"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.util.NumericParser"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.util.StringTokenizer"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.util.java.arrays"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.util.java.iterator"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart-ml.util.random"] = {
+      "stuart-ml/2.0.4-1"
+   },
+   ["stuart.Context"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.FileSystem"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.LocalFileSystem"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.Partition"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.RDD"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.SparkConf"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.WebHdfsFileSystem"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.class"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.fileSystemFactory"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.hadoop.Path"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.interface"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.internal.Logger"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.internal.logging"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.DStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.HttpReceiver"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.QueueInputDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.Receiver"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.ReceiverInputDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.SocketInputDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.SocketReceiver"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.StreamingContext"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.TransformedDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.streaming.WindowedDStream"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.util"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.util.spark"] = {
+      "stuart/2.0.4-0"
+   },
+   ["stuart.util.spark.samplingUtils"] = {
+      "stuart/2.0.4-0"
+   }
+}
+repository = {
+   lunajson = {
+      ["1.2.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lunajson = "lunajson.lua",
+               ["lunajson.decoder"] = "lunajson/decoder.lua",
+               ["lunajson.encoder"] = "lunajson/encoder.lua",
+               ["lunajson.sax"] = "lunajson/sax.lua"
+            }
+         }
+      }
+   },
+   moses = {
+      ["2.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               moses = "moses.lua",
+               moses_min = "moses_min.lua"
+            }
+         }
+      }
+   },
+   ["net-url"] = {
+      ["0.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["net.url"] = "net/url.lua"
+            }
+         }
+      }
+   },
+   stuart = {
+      ["2.0.4-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lunajson = "1.2.2-1",
+               moses = "2.1.0-1",
+               ["net-url"] = "0.9-1"
+            },
+            modules = {
+               stuart = "stuart.lua",
+               ["stuart.Context"] = "stuart/Context.lua",
+               ["stuart.FileSystem"] = "stuart/FileSystem.lua",
+               ["stuart.LocalFileSystem"] = "stuart/LocalFileSystem.lua",
+               ["stuart.Partition"] = "stuart/Partition.lua",
+               ["stuart.RDD"] = "stuart/RDD.lua",
+               ["stuart.SparkConf"] = "stuart/SparkConf.lua",
+               ["stuart.WebHdfsFileSystem"] = "stuart/WebHdfsFileSystem.lua",
+               ["stuart.class"] = "stuart/class.lua",
+               ["stuart.fileSystemFactory"] = "stuart/fileSystemFactory.lua",
+               ["stuart.hadoop.Path"] = "stuart/hadoop/Path.lua",
+               ["stuart.interface"] = "stuart/interface.lua",
+               ["stuart.internal.Logger"] = "stuart/internal/Logger.lua",
+               ["stuart.internal.logging"] = "stuart/internal/logging.lua",
+               ["stuart.streaming.DStream"] = "stuart/streaming/DStream.lua",
+               ["stuart.streaming.HttpReceiver"] = "stuart/streaming/HttpReceiver.lua",
+               ["stuart.streaming.QueueInputDStream"] = "stuart/streaming/QueueInputDStream.lua",
+               ["stuart.streaming.Receiver"] = "stuart/streaming/Receiver.lua",
+               ["stuart.streaming.ReceiverInputDStream"] = "stuart/streaming/ReceiverInputDStream.lua",
+               ["stuart.streaming.SocketInputDStream"] = "stuart/streaming/SocketInputDStream.lua",
+               ["stuart.streaming.SocketReceiver"] = "stuart/streaming/SocketReceiver.lua",
+               ["stuart.streaming.StreamingContext"] = "stuart/streaming/StreamingContext.lua",
+               ["stuart.streaming.TransformedDStream"] = "stuart/streaming/TransformedDStream.lua",
+               ["stuart.streaming.WindowedDStream"] = "stuart/streaming/WindowedDStream.lua",
+               ["stuart.util"] = "stuart/util.lua",
+               ["stuart.util.spark"] = "stuart/util/spark.lua",
+               ["stuart.util.spark.samplingUtils"] = "stuart/util/spark/samplingUtils.lua"
+            }
+         }
+      }
+   },
+   ["stuart-ml"] = {
+      ["2.0.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lunajson = "1.2.2-1",
+               moses = "2.1.0-1",
+               ["net-url"] = "0.9-1",
+               stuart = "2.0.4-0"
+            },
+            modules = {
+               ["stuart-ml"] = "stuart-ml.lua",
+               ["stuart-ml.clustering.KMeans"] = "stuart-ml/clustering/KMeans.lua",
+               ["stuart-ml.clustering.KMeansModel"] = "stuart-ml/clustering/KMeansModel.lua",
+               ["stuart-ml.clustering.VectorWithNorm"] = "stuart-ml/clustering/VectorWithNorm.lua",
+               ["stuart-ml.clustering.localKMeans"] = "stuart-ml/clustering/localKMeans.lua",
+               ["stuart-ml.linalg.BLAS"] = "stuart-ml/linalg/BLAS.lua",
+               ["stuart-ml.linalg.DenseMatrix"] = "stuart-ml/linalg/DenseMatrix.lua",
+               ["stuart-ml.linalg.DenseVector"] = "stuart-ml/linalg/DenseVector.lua",
+               ["stuart-ml.linalg.Matrices"] = "stuart-ml/linalg/Matrices.lua",
+               ["stuart-ml.linalg.Matrix"] = "stuart-ml/linalg/Matrix.lua",
+               ["stuart-ml.linalg.SparseMatrix"] = "stuart-ml/linalg/SparseMatrix.lua",
+               ["stuart-ml.linalg.SparseVector"] = "stuart-ml/linalg/SparseVector.lua",
+               ["stuart-ml.linalg.Vector"] = "stuart-ml/linalg/Vector.lua",
+               ["stuart-ml.linalg.Vectors"] = "stuart-ml/linalg/Vectors.lua",
+               ["stuart-ml.linalg.distributed.RowMatrix"] = "stuart-ml/linalg/distributed/RowMatrix.lua",
+               ["stuart-ml.random.RandomRDDs"] = "stuart-ml/random/RandomRDDs.lua",
+               ["stuart-ml.regression.LabeledPoint"] = "stuart-ml/regression/LabeledPoint.lua",
+               ["stuart-ml.stat.MultivariateOnlineSummarizer"] = "stuart-ml/stat/MultivariateOnlineSummarizer.lua",
+               ["stuart-ml.stat.corr.Correlation"] = "stuart-ml/stat/corr/Correlation.lua",
+               ["stuart-ml.stat.corr.Correlations"] = "stuart-ml/stat/corr/Correlations.lua",
+               ["stuart-ml.stat.corr.PearsonCorrelation"] = "stuart-ml/stat/corr/PearsonCorrelation.lua",
+               ["stuart-ml.stat.statistics"] = "stuart-ml/stat/statistics.lua",
+               ["stuart-ml.util"] = "stuart-ml/util.lua",
+               ["stuart-ml.util.Loader"] = "stuart-ml/util/Loader.lua",
+               ["stuart-ml.util.MLUtils"] = "stuart-ml/util/MLUtils.lua",
+               ["stuart-ml.util.NumericParser"] = "stuart-ml/util/NumericParser.lua",
+               ["stuart-ml.util.StringTokenizer"] = "stuart-ml/util/StringTokenizer.lua",
+               ["stuart-ml.util.java.arrays"] = "stuart-ml/util/java/arrays.lua",
+               ["stuart-ml.util.java.iterator"] = "stuart-ml/util/java/iterator.lua",
+               ["stuart-ml.util.random"] = "stuart-ml/util/random.lua"
+            }
+         }
+      }
+   }
+}

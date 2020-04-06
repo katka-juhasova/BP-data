@@ -1,0 +1,15 @@
+rock_manifest = {
+   ["cppjwt-0.0-1.rockspec"] = "6a3b3a355de135f643d3939d298901db",
+   doc = {
+      LICENSE = "b234ee4d69f5fce4486a80fdaf4a4263",
+      ["README.md"] = "c172997e5ab121353add7f00b7f25b31"
+   },
+   lib = {
+      ["libcppjwt.so"] = "f77a8a69622b29bbe4475f58a01c381d"
+   },
+   lua = {
+      cpp = {
+         ["jwt.lua"] = "6e739aa330f69579697ef39b904df0c3"
+      }
+   }
+}

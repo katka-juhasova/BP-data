@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   tinyobj = {
+      ["0.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   tinyobj = {
+      "tinyobj/0.0.0-0"
+   }
+}
+repository = {
+   tinyobj = {
+      ["0.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               tinyobj = "tinyobj.lua"
+            }
+         }
+      }
+   }
+}

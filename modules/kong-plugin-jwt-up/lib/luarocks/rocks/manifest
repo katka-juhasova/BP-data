@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-jwt-up"] = {
+      ["1.7-0"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.jwt-up.fixtures"] = {
+      "kong-plugin-jwt-up/1.7-0"
+   },
+   ["kong.plugins.jwt-up.handler"] = {
+      "kong-plugin-jwt-up/1.7-0"
+   },
+   ["kong.plugins.jwt-up.jwt_parser"] = {
+      "kong-plugin-jwt-up/1.7-0"
+   },
+   ["kong.plugins.jwt-up.schema"] = {
+      "kong-plugin-jwt-up/1.7-0"
+   }
+}
+repository = {
+   ["kong-plugin-jwt-up"] = {
+      ["1.7-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.jwt-up.fixtures"] = "kong/plugins/jwt-up/fixtures.lua",
+               ["kong.plugins.jwt-up.handler"] = "kong/plugins/jwt-up/handler.lua",
+               ["kong.plugins.jwt-up.jwt_parser"] = "kong/plugins/jwt-up/jwt_parser.lua",
+               ["kong.plugins.jwt-up.schema"] = "kong/plugins/jwt-up/schema.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,59 @@
+commands = {}
+dependencies = {
+   ["30log"] = {
+      ["1.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["30log"] = {
+      "30log/1.3.0-1"
+   },
+   ["30log-clean"] = {
+      "30log/1.3.0-1"
+   },
+   ["30log-commons"] = {
+      "30log/1.3.0-1"
+   },
+   ["30log-global"] = {
+      "30log/1.3.0-1"
+   },
+   ["30log-singleton"] = {
+      "30log/1.3.0-1"
+   }
+}
+repository = {
+   ["30log"] = {
+      ["1.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["30log"] = "30log.lua",
+               ["30log-clean"] = "30log-clean.lua",
+               ["30log-commons"] = "30log-commons.lua",
+               ["30log-global"] = "30log-global.lua",
+               ["30log-singleton"] = "30log-singleton.lua"
+            }
+         }
+      }
+   }
+}

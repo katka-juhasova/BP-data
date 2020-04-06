@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-resty-signal"] = {
+      ["0.02-1"] = {}
+   }
+}
+modules = {
+   ["resty.signal"] = {
+      "lua-resty-signal/0.02-1"
+   }
+}
+repository = {
+   ["lua-resty-signal"] = {
+      ["0.02-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.signal"] = "resty/signal.lua"
+            }
+         }
+      }
+   }
+}

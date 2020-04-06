@@ -1,0 +1,84 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-cookies-to-headers"] = {
+      ["1.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 1, 0, string = "0.1.0"
+                  }
+               }
+            },
+            name = "lua-resty-cookie"
+         }
+      }
+   },
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.cookies-to-headers.handler"] = {
+      "kong-plugin-cookies-to-headers/1.0-2"
+   },
+   ["kong.plugins.cookies-to-headers.schema"] = {
+      "kong-plugin-cookies-to-headers/1.0-2"
+   },
+   ["resty.cookie"] = {
+      "lua-resty-cookie/0.1.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-cookies-to-headers"] = {
+      ["1.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-cookie"] = "0.1.0-1"
+            },
+            modules = {
+               ["kong.plugins.cookies-to-headers.handler"] = "kong/plugins/cookies-to-headers/handler.lua",
+               ["kong.plugins.cookies-to-headers.schema"] = "kong/plugins/cookies-to-headers/schema.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-cookie"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.cookie"] = "resty/cookie.lua"
+            }
+         }
+      }
+   }
+}

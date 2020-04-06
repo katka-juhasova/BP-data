@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   ["lua-silva"] = {
+      ["0.1.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   Silva = {
+      "lua-silva/0.1.6-1"
+   },
+   ["Silva.identity"] = {
+      "lua-silva/0.1.6-1"
+   },
+   ["Silva.lua"] = {
+      "lua-silva/0.1.6-1"
+   },
+   ["Silva.pcre"] = {
+      "lua-silva/0.1.6-1"
+   },
+   ["Silva.shell"] = {
+      "lua-silva/0.1.6-1"
+   },
+   ["Silva.template"] = {
+      "lua-silva/0.1.6-1"
+   }
+}
+repository = {
+   ["lua-silva"] = {
+      ["0.1.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               Silva = "Silva.lua",
+               ["Silva.identity"] = "Silva/identity.lua",
+               ["Silva.lua"] = "Silva/lua.lua",
+               ["Silva.pcre"] = "Silva/pcre.lua",
+               ["Silva.shell"] = "Silva/shell.lua",
+               ["Silva.template"] = "Silva/template.lua"
+            }
+         }
+      }
+   }
+}

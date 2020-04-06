@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   emdcriterion = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   EMDCriterion = {
+      "emdcriterion/1.0-1"
+   }
+}
+repository = {
+   emdcriterion = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               EMDCriterion = "EMDCriterion.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "9a972ad90317abc3a33f21b67628895c",
+      COPYING = "6a30425f4a3e7b4846dfc8b210eab79c",
+      ["README.md"] = "8c2a6dc4e376205e0224dcf92d69988b"
+   },
+   ["ljndpi-0.1.0-1.rockspec"] = "b52cf1c5d52b6393c52b19303cfcf13a",
+   lua = {
+      ndpi = {
+         ["c.lua"] = "4868e4e0ba2a3d305623fdc80dd62426",
+         ["protocol_bitmask.lua"] = "5ba11413a39f6974279ad76bce6baeef",
+         ["protocol_ids_1_7.lua"] = "25947104351c60a0f02a100189aac8ce",
+         ["protocol_ids_1_8.lua"] = "dab37be24dad8560cf844fae69cb8297",
+         ["wrap.lua"] = "bec28c1f4d83785bad9d93e7b43586f9"
+      },
+      ["ndpi.lua"] = "1b4e8d0fc768dbdab056af0072674b34"
+   }
+}

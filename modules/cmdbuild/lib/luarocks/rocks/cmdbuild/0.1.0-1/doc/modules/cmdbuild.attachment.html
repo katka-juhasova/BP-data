@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>CMDBuild SOAP API Library</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/cmdbuild.html">cmdbuild</a></li>
+  <li><strong>cmdbuild.attachment</strong></li>
+  <li><a href="../modules/cmdbuild.card.html">cmdbuild.card</a></li>
+  <li><a href="../modules/cmdbuild.lookup.html">cmdbuild.lookup</a></li>
+  <li><a href="../modules/cmdbuild.relation.html">cmdbuild.relation</a></li>
+  <li><a href="../modules/cmdbuild.workflow.html">cmdbuild.workflow</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/Readme.md.html">Readme</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>cmdbuild.attachment</code></h1>
+<p>Attachment:upload
+  It uploads the specified file in the DMS Alfresco and the relating connection
+ to the Attachment card belonging to the “className” class and having the “id” identification.</p>
+<p>
+ It returns “true” if the operation went through.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Attachment:download">Attachment:download (classname, card_id, filename)</a></td>
+	<td class="summary">Attachment:download
+  It returns the file enclosed in the specified card, which has the specified name.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Attachment:delete">Attachment:delete (classname, card_id, filename)</a></td>
+	<td class="summary">Attachment:delete
+  It removes from the DMS Alfresco the file enclosed in the specified card, which has the specified name.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Attachment:update">Attachment:update (classname, card_id, filename, description)</a></td>
+	<td class="summary">Attachment:update
+  It updates the description of the file enclosed in the specified card, which has the specified name.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "Attachment:download"></a>
+    <strong>Attachment:download (classname, card_id, filename)</strong>
+    </dt>
+    <dd>
+    Attachment:download
+  It returns the file enclosed in the specified card, which has the specified name.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">classname</span>
+         - Class name which includes the card.  It corresponds to the table name in the database. (string)
+        </li>
+        <li><span class="parameter">card_id</span>
+         - {+DESCRIPTION+} (number)
+        </li>
+        <li><span class="parameter">filename</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        base64 (string)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Attachment:delete"></a>
+    <strong>Attachment:delete (classname, card_id, filename)</strong>
+    </dt>
+    <dd>
+    Attachment:delete
+  It removes from the DMS Alfresco the file enclosed in the specified card, which has the specified name.
+ It returns “true” if the operation went through.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">classname</span>
+         - Class name which includes the card.  It corresponds to the table name in the database. (string)
+        </li>
+        <li><span class="parameter">card_id</span>
+         - {+DESCRIPTION+} (number)
+        </li>
+        <li><span class="parameter">filename</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Attachment:update"></a>
+    <strong>Attachment:update (classname, card_id, filename, description)</strong>
+    </dt>
+    <dd>
+    Attachment:update
+  It updates the description of the file enclosed in the specified card, which has the specified name.
+ It returns “true” if the operation went through.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">classname</span>
+         - Class name which includes the card.  It corresponds to the table name in the database. (string)
+        </li>
+        <li><span class="parameter">card_id</span>
+         - {+DESCRIPTION+} (number)
+        </li>
+        <li><span class="parameter">filename</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+        <li><span class="parameter">description</span>
+         - {+DESCRIPTION+} ({+TYPE+})
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.2</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

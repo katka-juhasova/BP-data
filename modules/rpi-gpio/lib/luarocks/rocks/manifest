@@ -1,0 +1,430 @@
+commands = {}
+dependencies = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   copas = {
+      ["2.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, string = "2.1"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 14, string = "1.14"
+                  }
+               }
+            },
+            name = "coxpcall"
+         }
+      }
+   },
+   copastimer = {
+      ["1.0.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 15, string = "1.15"
+                  }
+               }
+            },
+            name = "coxpcall"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 1, 6, string = "1.1.6"
+                  }
+               }
+            },
+            name = "copas"
+         }
+      }
+   },
+   coxpcall = {
+      ["1.17.0-1"] = {}
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["rpi-gpio"] = {
+      ["0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "bit32"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, string = "1.0"
+                  }
+               }
+            },
+            name = "copastimer"
+         }
+      }
+   }
+}
+modules = {
+   ["CHANGELOG.txt"] = {
+      "rpi-gpio/0.2-1"
+   },
+   GPIO = {
+      "rpi-gpio/0.2-1"
+   },
+   ["GPIO.lcd-hd44780"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["INSTALL.txt"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["LICENCE.txt"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["README.md"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["RPi_GPIO_Lua_module.c"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["RPi_GPIO_Lua_module.o"] = {
+      "rpi-gpio/0.2-1"
+   },
+   bit32 = {
+      "bit32/5.3.0-1"
+   },
+   ["config.ld"] = {
+      "rpi-gpio/0.2-1"
+   },
+   copas = {
+      "copas/2.0.2-1"
+   },
+   ["copas.eventer"] = {
+      "copastimer/1.0.0-1"
+   },
+   ["copas.ftp"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.http"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.limit"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.smtp"] = {
+      "copas/2.0.2-1"
+   },
+   ["copas.timer"] = {
+      "copastimer/1.0.0-1"
+   },
+   coxpcall = {
+      "coxpcall/1.17.0-1"
+   },
+   ["darksidesync_api.h"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["darksidesync_aux.c"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["darksidesync_aux.h"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["darksidesync_aux.o"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["doc/index.html"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["doc/ldoc.css"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["doc/modules/GPIO.html"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["doc/modules/GPIO.lcd-hd44780.html"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   makefile = {
+      "rpi-gpio/0.2-1"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["module.lcd-hd44780"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test1_blink"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test2_input"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test3_inout"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test4_edge"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test5_pwm"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test6_callbacks"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test_lcd"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test_leds"] = {
+      "rpi-gpio/0.2-1"
+   },
+   ["scripts.test_switches"] = {
+      "rpi-gpio/0.2-1"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   bit32 = {
+      ["5.3.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit32 = "bit32.so"
+            }
+         }
+      }
+   },
+   copas = {
+      ["2.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               coxpcall = "1.17.0-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               copas = "copas.lua",
+               ["copas.ftp"] = "copas/ftp.lua",
+               ["copas.http"] = "copas/http.lua",
+               ["copas.limit"] = "copas/limit.lua",
+               ["copas.smtp"] = "copas/smtp.lua"
+            }
+         }
+      }
+   },
+   copastimer = {
+      ["1.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               copas = "2.0.2-1",
+               coxpcall = "1.17.0-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               ["copas.eventer"] = "copas/eventer.lua",
+               ["copas.timer"] = "copas/timer.lua"
+            }
+         }
+      }
+   },
+   coxpcall = {
+      ["1.17.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               coxpcall = "coxpcall.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   ["rpi-gpio"] = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               bit32 = "5.3.0-1",
+               copas = "2.0.2-1",
+               copastimer = "1.0.0-1",
+               coxpcall = "1.17.0-1",
+               luasocket = "3.0rc1-2"
+            },
+            modules = {
+               ["CHANGELOG.txt"] = "CHANGELOG.txt",
+               GPIO = "GPIO.so",
+               ["GPIO.lcd-hd44780"] = "GPIO/lcd-hd44780.lua",
+               ["INSTALL.txt"] = "INSTALL.txt",
+               ["LICENCE.txt"] = "LICENCE.txt",
+               ["README.md"] = "README.md",
+               ["RPi_GPIO_Lua_module.c"] = "RPi_GPIO_Lua_module.c",
+               ["RPi_GPIO_Lua_module.o"] = "RPi_GPIO_Lua_module.o",
+               ["config.ld"] = "config.ld",
+               ["darksidesync_api.h"] = "darksidesync_api.h",
+               ["darksidesync_aux.c"] = "darksidesync_aux.c",
+               ["darksidesync_aux.h"] = "darksidesync_aux.h",
+               ["darksidesync_aux.o"] = "darksidesync_aux.o",
+               ["doc/index.html"] = "doc/index.html",
+               ["doc/ldoc.css"] = "doc/ldoc.css",
+               ["doc/modules/GPIO.html"] = "doc/modules/GPIO.html",
+               ["doc/modules/GPIO.lcd-hd44780.html"] = "doc/modules/GPIO.lcd-hd44780.html",
+               makefile = "makefile",
+               ["module.lcd-hd44780"] = "module/lcd-hd44780.lua",
+               ["scripts.test1_blink"] = "scripts/test1_blink.lua",
+               ["scripts.test2_input"] = "scripts/test2_input.lua",
+               ["scripts.test3_inout"] = "scripts/test3_inout.lua",
+               ["scripts.test4_edge"] = "scripts/test4_edge.lua",
+               ["scripts.test5_pwm"] = "scripts/test5_pwm.lua",
+               ["scripts.test6_callbacks"] = "scripts/test6_callbacks.lua",
+               ["scripts.test_lcd"] = "scripts/test_lcd.lua",
+               ["scripts.test_leds"] = "scripts/test_leds.lua",
+               ["scripts.test_switches"] = "scripts/test_switches.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,19 @@
+rock_manifest = {
+   doc = {
+      files = {
+         ["netcheck.html"] = "70be4a1877f300abf774565f797c5fd1"
+      },
+      ["index.html"] = "1acaacf214a59c0a8e5a3cd846b495fd",
+      ["luadoc.css"] = "80099988f7bbcd81acbd6527eb4962fc",
+      modules = {
+         ["netcheck.html"] = "6aef13bacf4c6994fa1d09b43c847eb7"
+      }
+   },
+   lua = {
+      ["netcheck.lua"] = "31d620f2cf0d041610f159903feb0bc4"
+   },
+   ["netcheck-0.1.0-1.rockspec"] = "c22710d45a0480f09fef46e047702bf7",
+   test = {
+      ["test.lua"] = "c3ac649b8202ed398b9a6d7b0c66ee44"
+   }
+}

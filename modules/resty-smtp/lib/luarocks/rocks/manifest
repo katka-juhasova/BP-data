@@ -1,0 +1,65 @@
+commands = {}
+dependencies = {
+   ["resty-smtp"] = {
+      ["1.0rc1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.smtp"] = {
+      "resty-smtp/1.0rc1-1"
+   },
+   ["resty.smtp.base64"] = {
+      "resty-smtp/1.0rc1-1"
+   },
+   ["resty.smtp.ltn12"] = {
+      "resty-smtp/1.0rc1-1"
+   },
+   ["resty.smtp.mime"] = {
+      "resty-smtp/1.0rc1-1"
+   },
+   ["resty.smtp.mime-core"] = {
+      "resty-smtp/1.0rc1-1"
+   },
+   ["resty.smtp.misc"] = {
+      "resty-smtp/1.0rc1-1"
+   },
+   ["resty.smtp.qp"] = {
+      "resty-smtp/1.0rc1-1"
+   },
+   ["resty.smtp.tp"] = {
+      "resty-smtp/1.0rc1-1"
+   }
+}
+repository = {
+   ["resty-smtp"] = {
+      ["1.0rc1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.smtp"] = "resty/smtp.lua",
+               ["resty.smtp.base64"] = "resty/smtp/base64.lua",
+               ["resty.smtp.ltn12"] = "resty/smtp/ltn12.lua",
+               ["resty.smtp.mime"] = "resty/smtp/mime.lua",
+               ["resty.smtp.mime-core"] = "resty/smtp/mime-core.lua",
+               ["resty.smtp.misc"] = "resty/smtp/misc.lua",
+               ["resty.smtp.qp"] = "resty/smtp/qp.lua",
+               ["resty.smtp.tp"] = "resty/smtp/tp.lua"
+            }
+         }
+      }
+   }
+}

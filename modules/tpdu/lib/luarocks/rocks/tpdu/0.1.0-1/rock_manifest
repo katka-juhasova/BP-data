@@ -1,0 +1,16 @@
+rock_manifest = {
+   lua = {
+      tpdu = {
+         ["bcd.lua"] = "03b574c8238b6a31ec46f4b2174de2c3",
+         ["bit.lua"] = "dc0d86abde9cb7ddcca0c505ec21978f",
+         ["bit7.lua"] = "955d9656e8f61cb58dcea897fb252ed5",
+         ["utils.lua"] = "8d3f8dfc2aa7954abcc736fcc682dcd1"
+      },
+      ["tpdu.lua"] = "b351b48f97e95e3806013d3366ac5415"
+   },
+   test = {
+      ["test.lua"] = "1f3d0079b1b6a4b43f0dfdd0209a4ed5",
+      ["utils.lua"] = "f1feb54f72ea113b039c992f35380c76"
+   },
+   ["tpdu-0.1.0-1.rockspec"] = "090222f3560f175033ebd789a0b70997"
+}

@@ -1,0 +1,58 @@
+---
+title: Examples
+---
+
+Include templates
+-----------------
+
+This example shows how to implement an `include` function that evaluates
+template files included within a template.
+
+`templet.loadfile` loads template files relative to the current directory.
+Instead we call [package.searchpath] with [package.path] to determine the
+absolute path of a template file from the Lua modules path, both for loading
+the main and included template files.
+
+[package.searchpath]: http://www.lua.org/manual/5.2/manual.html#pdf-package.searchpath
+[package.path]: http://www.lua.org/manual/5.2/manual.html#pdf-package.path
+
+~~~ {.lua}
+local templet = require("templet")
+
+local function template(filename, env)
+  local function include(filename)
+    local filename, err = package.searchpath(filename, package.path)
+    if not filename then return error(err) end
+    local template = templet.loadfile(filename)
+    return template(env)
+  end
+  env = setmetatable({include = include}, {__index = env})
+  return include(filename)
+end
+~~~
+
+Suppose we have a template file `test/included.lua`:
+
+~~~ {.lua}
+print("${hello}, ${world}!")
+~~~
+
+We include `test/included.lua` in the template file `test/main.lua`:
+
+~~~ {.lua}
+|for i = 1, 3 do
+${include "test.included"}
+|end
+~~~
+
+We evaluate `test/main.lua` using the function defined above:
+
+~~~ {.lua}
+io.write(template("test.main", {hello = "Ciao", world = "mondo"}))
+~~~
+
+~~~
+print("Ciao, mondo!")
+print("Ciao, mondo!")
+print("Ciao, mondo!")
+~~~

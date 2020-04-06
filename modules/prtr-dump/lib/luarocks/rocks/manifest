@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["prtr-dump"] = {
+      ["20161017-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   serial = {
+      "prtr-dump/20161017-1"
+   }
+}
+repository = {
+   ["prtr-dump"] = {
+      ["20161017-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               serial = "serial.lua"
+            }
+         }
+      }
+   }
+}

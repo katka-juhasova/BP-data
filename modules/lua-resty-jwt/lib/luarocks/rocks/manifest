@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   ["lua-resty-jwt"] = {
+      ["0.2.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.evp"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.hmac"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.jwt"] = {
+      "lua-resty-jwt/0.2.0-0"
+   },
+   ["resty.jwt-validators"] = {
+      "lua-resty-jwt/0.2.0-0"
+   }
+}
+repository = {
+   ["lua-resty-jwt"] = {
+      ["0.2.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.evp"] = "resty/evp.lua",
+               ["resty.hmac"] = "resty/hmac.lua",
+               ["resty.jwt"] = "resty/jwt.lua",
+               ["resty.jwt-validators"] = "resty/jwt-validators.lua"
+            }
+         }
+      }
+   }
+}

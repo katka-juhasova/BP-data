@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lcsv = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lcsv = {
+      "lcsv/1.1-1"
+   }
+}
+repository = {
+   lcsv = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lcsv = "lcsv.lua"
+            }
+         }
+      }
+   }
+}

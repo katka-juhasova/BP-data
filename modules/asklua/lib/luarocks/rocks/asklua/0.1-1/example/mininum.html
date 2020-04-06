@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=iso-8859-15" />
+   <title>Module mininum</title><style type="text/css">
+body {
+   font-family: Verdana, Helvetica, Arial, sans-serif;
+   font-size: 11pt; color: black; background-color: #fbfbfb;
+}
+#content {
+   top: 120px; margin-left: 225px;
+}
+#navigate {
+   position: fixed; top: 10px; width: 210px; float: left;
+	padding: 0 0 0 5px; background-color: #e6e6f2; line-height: 170%;
+}
+#navigate h1 {
+   font-size: large; text-align: left;  
+}
+#navigate ul {
+	margin-left: 5px; padding-left: 10px;
+}
+#navigate ul ul {
+   font-size: 10pt; margin-left: 5px; padding-left: 10px; line-height: 130%;
+}
+#navigate ul ul ul {
+   font-size: 90%; margin-left: 5px; padding-left: 10px; line-height: 110%;
+}
+#navigate a:link {
+	color: #000099; text-decoration: none;
+}
+#navigate a:visited {
+	color: #000099; text-decoration: none;
+}
+#navigate a:hover {
+   color: #996633; text-decoration: none;
+}
+h1 {
+   text-align: center; color: #000000; width: auto;
+}
+h2 {
+   color: #006600; background-color: #ccffff; padding: 10px;
+}
+h3 {
+   color: #000099; background-color: #ffffcc; padding: 5px;
+}
+h4 {
+   font-size: normal; color: #990099;
+}
+h5 {
+   border-top: 1px solid; font-size: medium; color: #990000;
+}
+h6 {
+   font-size: medium; font-style: italic;
+}
+a:hover {
+   color: #996633;
+}
+p.listoffun {
+   word-spacing: 2em;
+}
+pre {
+   font-size: 90%; border: 1px dotted #888888;
+   background-color: #f9f9f9; padding: 5pt;
+}
+code {
+   font-size: 95%; color: #006666;
+}
+var {
+   color: #008040; font-style: italic; font-weight: normal;
+}
+</style>
+</head> <body>
+<div class="noprint" id="navigate">
+
+<h1>Module <code>mininum</code></h1>
+
+
+<ul>
+
+<li><a href="#basic">Basic information</a></li>
+
+<li><a href="#list">List of functions</a></li>
+
+<li><a href="#description">Description of functions</a>
+
+<ul>
+
+<li><a href="#derivative">derivative</a></li>
+<li><a href="#quadrature">quadrature</a></li>
+<li><a href="#root">root</a></li>
+
+</ul></li>
+
+<li><a href="#version">Version</a></li>
+
+<li><a href="#notes">Notes</a></li>
+
+</ul></div>
+
+<div id="content">
+
+<h1>Module mininum</h1>
+
+
+<h2 id ="basic">Basic information</h2>
+
+
+
+<p><code>mininum</code> is a <strong>mini</strong>mal <strong>num</strong>erical library (with only three
+functions), developed for accompanying the <code>ask</code> helping system. The
+purpose is only to serve as an example.</p>
+
+<p><code>mininum</code> displays error messages in stderr.</p>
+
+<p>Note: this library is very simple, and it is not intended
+for heavy calculation (but it is usable).</p>
+
+<p>Call <code>ask"&lt;function&gt;"</code> for information on <code>&lt;function&gt;</code>.</p>
+
+
+
+
+<h2 id ="list">List of functions</h2>
+
+
+<p class="listoffun">
+<a href="#derivative">derivative</a>
+<a href="#quadrature">quadrature</a>
+<a href="#root">root</a>
+</p>
+
+
+
+
+
+<h2 id = "description">Description of functions</h2>
+
+
+<h3 id="derivative">mininum.derivative</h3>
+
+
+<h4>Basic information</h4>
+
+
+
+<p>Calculates the first derivative of a function</p>
+
+
+
+
+<h4>Usage of function</h4>
+
+
+
+<p><code>mininum.derivative(f, x, aerr)</code></p>
+
+<p>@params:</p>
+
+<ol>
+    <li><p><code>f</code>: a function of a real variable.</p></li>
+    <li><p><code>x</code>: number, is the abscissa at which <em>f'(x)</em> is calculated.</p></li>
+    <li><p><code>aerr</code>: number (optional), is the intended absolute error of the solution
+    (1.0e-6 as default). The minimum value of <code>aerr</code> is 1.0e-15.</p></li>
+</ol>
+
+<p>@returns: number, the first derivative of function <em>f</em> at <em>x</em>.</p>
+
+
+
+
+<h4>More specific information</h4>
+
+
+
+<p>Function <code>mininum.derivative</code> uses the central difference formula:</p>
+
+<p><em>f'(x0) ~ [f(x0+h)-f(x0-h)]/(2 h)</em></p>
+
+<p>with successive decreasing values of <em>h: h/2, h/4, h/8</em>, etc.,
+and applying the Richardson extrapolation method to improve
+the convergence.</p>
+
+
+
+
+<h4>See also</h4>
+
+
+
+<p>Press et al. (1992),
+Numerical Recipes in Fortran, p. 180, CUP.</p>
+
+
+
+
+<h4>Examples</h4>
+
+
+
+<pre><code>require"mininum"
+
+local eval = 0
+local function g (x)
+   eval = eval+1
+   return sin(x)
+end
+
+local aerr = 1.e-6
+local d1 = mininum.derivative(g, 2, aerr)
+local e1 = cos(2)
+
+print("calculated solution = ", d1)    -- -0.41614683654713
+print("actual solution     = ", e1)    -- -0.41614683654714
+print("intended error      = ", aerr)  -- 1e-06
+print("actual absol. error = ", d1-e1) -- 9.9364960703952e-15
+print("function evaluations= ", eval)  -- 10
+</code></pre>
+
+
+
+<h3 id="quadrature">mininum.quadrature</h3>
+
+
+<h4>Basic information</h4>
+
+
+
+<p>Calculates the definite integral of a function</p>
+
+
+
+
+<h4>Usage of function</h4>
+
+
+
+<p><code>mininum.quadrature(f, a, b, rerr)</code></p>
+
+<p>@params:</p>
+
+<ol>
+    <li><p><code>f</code>: a function of a real variable.</p></li>
+    <li><p><code>a</code>: number, the lower limit in the integral.</p></li>
+    <li><p><code>b</code>: number, the upper limit in the integral.</p></li>
+    <li><p><code>rerr</code>: number (optional), the relative intended error in the solution
+    (if not given 1.0e-6 is assumed). The minimum value of <code>rerr</code> is 1.0e-15.</p></li>
+</ol>
+
+<p>@returns: number, the definite integral of <code>f</code> between abscissas <code>a</code> and <code>b</code>.</p>
+
+
+
+
+<h4>More specific information</h4>
+
+
+
+<p>Function <code>mininum.quadrature</code> uses the <strong>midpoint formula</strong>:</p>
+
+<p><em>I ~ h*[sum f(xi)]    with i = 1/2, 3/2, ...</em></p>
+
+<p>being <em>n</em> the number of intervals, <em>h = (b-a)/n</em>, and <em>xi = a+h*i</em>.</p>
+
+<p>This formula works even for quadratures when the function at
+one or both limits is infinite but the integral exists.</p>
+
+<p>The method is iterative, multiplying <em>n</em> by 3 at each step,
+until the relative error is achieved or a maximum of 14 iterations
+are reached (1594323 function evaluations).
+At least 9 ordinates are calculated.</p>
+
+<p>At each iteration an <em>Aitken-delta^2</em> process is performed.
+This normally accelerates very much the convergence.</p>
+
+
+
+
+<h4>See also</h4>
+
+
+
+<p>Press et al. (1992),
+Numerical Recipes in Fortran, p. 129 and p. 160, CUP.</p>
+
+<p>For the Aitken acceleration see the
+<a href="http://en.wikipedia.org/wiki/Aitken's_delta-squared_process">Wikipedia</a>.</p>
+
+
+
+
+<h4>Examples</h4>
+
+
+
+<pre><code>require"mininum"
+
+local eval
+local function s (x)
+   eval = eval+1
+   -- a difficult case for Romberg quadrature
+   return 1/sqrt(x)
+end
+
+local rerr = 1.0e-5
+local eval = 0
+local q = mininum.quadrature(s, 0, 0.5, rerr)
+local e = 2*sqrt(0.5)
+
+print("calculated solution = ", q)       -- 1.414213736863
+print("actual solution     = ", e)       -- 1.4142135623731
+print("intended error      = ", rerr)    -- 1e-05
+print("actual relat. error = ", (q-e)/e) -- 1.2338296867489e-07
+print("function evaluations= ", eval)    -- 243
+</code></pre>
+
+
+
+<h3 id="root">mininum.root</h3>
+
+
+<h4>Basic information</h4>
+
+
+
+<p>Determines a root of a function between two abscissas</p>
+
+
+
+
+<h4>Usage of function</h4>
+
+
+
+<p><code>mininum.root(f, a, b, errx)</code></p>
+
+<p>@params:</p>
+
+<ol>
+    <li><p><code>f</code>: function of a real variable, of which we want the root,
+    <em>x</em> such that <em>f(x) = 0</em>.</p></li>
+    <li><p><code>a</code>: number.</p></li>
+    <li><p><code>b</code>: number. The root is searched between the abscissas <code>a</code> and <code>b</code>.</p></li>
+    <li><p><code>errx</code>: number (optional). The function returns a value when 
+    the difference between two successive approximations of the
+    root is less than <code>errx</code> (in absolute value). 
+    If no value is provided for <code>errx</code>, then 1.0e-6 is assumed.
+    The minimum value of <code>errx</code> is 1.0e-15.</p></li>
+</ol>
+
+<p>@returns: number, an estimation of the root.</p>
+
+
+
+
+<h4>More specific information</h4>
+
+
+
+<p>function <code>mininum.root</code> uses <strong>regula falsi</strong> method.</p>
+
+<p>The function must be continuous, and the provided
+abscissas <em>a</em> and <em>b</em> must accomplish <em>f(a)*f(b) &lt; 0</em>.
+In this case the method always converge towards a solution.</p>
+
+<p>It is an iterative method, with (somewhat) superlinear convergence.
+As much 30 iterations are done.</p>
+
+<p>Here the "Illinois" version of the method is used.</p>
+
+
+
+
+<h4>See also</h4>
+
+
+
+<p> <a href="http://en.wikipedia.org/wiki/False_position_method">Wikipedia</a>.</p>
+
+
+
+
+<h4>Examples</h4>
+
+
+
+<pre><code>require"mininum"
+
+local eval = 0
+local function f (x)
+   eval = eval+1
+   return x*(3+x*(-4+2*x)) -- difficult for classical regula falsi
+end
+
+local errx = 1.0e-8
+local x = mininum.root(f, -1, 1, errx)
+
+print("calculated solution = ", x)     -- 3.9008079929199e-19
+print("actual solution     = ", 0)     -- 0
+print("intended error      = ", errx)  -- 1e-08
+print("actual error        = ", x)     -- 3.9008079929199e-19
+print("function evaluations= ", eval)  -- 14
+</code></pre>
+
+
+
+
+<h2 id ="version">Version</h2>
+
+
+
+<p>by Julio M. Fernández-Díaz, Dept. of Physics,
+University of Oviedo, Spain, Version 0.1, February 2010</p>
+
+<p>julio a t uniovi d o t es</p>
+
+
+
+
+<h2 id ="notes">Notes</h2>
+
+
+
+<p>THIS CODE IS HEREBY PLACED IN PUBLIC DOMAIN.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+
+
+
+</div>
+
+</body></html>

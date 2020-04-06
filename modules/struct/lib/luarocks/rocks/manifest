@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   struct = {
+      ["1.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   struct = {
+      "struct/1.4-1"
+   }
+}
+repository = {
+   struct = {
+      ["1.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               struct = "struct.so"
+            }
+         }
+      }
+   }
+}

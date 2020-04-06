@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["wtf-action-simple_response"] = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   ["wtf.actions.simple_response.handler"] = {
+      "wtf-action-simple_response/0.1-1"
+   }
+}
+repository = {
+   ["wtf-action-simple_response"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["wtf.actions.simple_response.handler"] = "wtf/actions/simple_response/handler.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,111 @@
+commands = {}
+dependencies = {
+   diff = {
+      ["8.06.15-2"] = {}
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   versium = {
+      ["9.02.15-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 3, string = "1.3"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     8, 6, 15, string = "8.06.15"
+                  }
+               }
+            },
+            name = "diff"
+         }
+      }
+   }
+}
+modules = {
+   diff = {
+      "diff/8.06.15-2"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   ["versium.errors"] = {
+      "versium/9.02.15-1"
+   },
+   ["versium.filedir"] = {
+      "versium/9.02.15-1"
+   },
+   ["versium.util"] = {
+      "versium/9.02.15-1"
+   },
+   ["versium.virtual"] = {
+      "versium/9.02.15-1"
+   }
+}
+repository = {
+   diff = {
+      ["8.06.15-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               diff = "diff.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   versium = {
+      ["9.02.15-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               diff = "8.06.15-2",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               ["versium.errors"] = "versium/errors.lua",
+               ["versium.filedir"] = "versium/filedir.lua",
+               ["versium.util"] = "versium/util.lua",
+               ["versium.virtual"] = "versium/virtual.lua"
+            }
+         }
+      }
+   }
+}

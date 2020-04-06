@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   randomdist = {
+      ["1.5-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   randomdist = {
+      "randomdist/1.5-0"
+   }
+}
+repository = {
+   randomdist = {
+      ["1.5-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               randomdist = "randomdist.lua"
+            }
+         }
+      }
+   }
+}

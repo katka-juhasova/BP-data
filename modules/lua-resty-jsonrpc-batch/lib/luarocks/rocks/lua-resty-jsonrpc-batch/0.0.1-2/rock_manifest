@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "d3dc700ea560b870e24c3a278ae5ea9e"
+   },
+   lua = {
+      lib = {
+         resty = {
+            jsonrpc = {
+               ["batch.lua"] = "13553573319740a108585d4b8e34e24b"
+            }
+         }
+      }
+   },
+   ["lua-resty-jsonrpc-batch-0.0.1-2.rockspec"] = "433bb374416573725ef2e5f3812b2d55"
+}

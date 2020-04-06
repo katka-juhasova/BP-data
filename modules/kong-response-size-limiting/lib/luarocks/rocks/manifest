@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-response-size-limiting"] = {
+      ["0.2-3"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-response-size-limiting.handler"] = {
+      "kong-response-size-limiting/0.2-3"
+   },
+   ["kong.plugins.kong-response-size-limiting.schema"] = {
+      "kong-response-size-limiting/0.2-3"
+   }
+}
+repository = {
+   ["kong-response-size-limiting"] = {
+      ["0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-response-size-limiting.handler"] = "kong/plugins/kong-response-size-limiting/handler.lua",
+               ["kong.plugins.kong-response-size-limiting.schema"] = "kong/plugins/kong-response-size-limiting/schema.lua"
+            }
+         }
+      }
+   }
+}

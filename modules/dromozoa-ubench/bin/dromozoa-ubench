@@ -1,0 +1,57 @@
+#! /bin/sh -e
+
+# Copyright (C) 2015,2018 Tomoyuki Fujimori <moyu@dromozoa.com>
+#
+# This file is part of dromozoa-ubench.
+#
+# dromozoa-ubench is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# dromozoa-ubench is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with dromozoa-ubench.  If not, see <http://www.gnu.org/licenses/>.
+
+dromozoa_basename() {
+  expr  "X$1" : 'X.*\(/[^/][^/]*\)/*$' \
+    '|' "X$1" : '\(X//\)$' \
+    '|' "X$1" : '\(X/\)' \
+    '|' "X$1" | sed 's/^.//'
+}
+
+dromozoa_dirname() {
+  expr  "X$1" : '\(X.*[^/]\)//*[^/][^/]*/*$' \
+    '|' "X$1" : '\(X//\)[^/]' \
+    '|' "X$1" : '\(X//\)$' \
+    '|' "X$1" : '\(X/\)' \
+    '|' X. | sed 's/^.//'
+}
+
+case X$1 in
+  X) exit 1;;
+  *) benchmarks_filename=$1; shift;;
+esac
+
+here=`dromozoa_dirname "$0"`
+here=`(cd "$here" && pwd)`
+
+dir=`dromozoa_basename "$benchmarks_filename"`
+dir=`expr "X$dir" : 'Xubench\(_.*\)' '|' "X$dir" | sed -e 's/^.//'`
+dir=`expr "X$dir" : '\(X.*\)\.' '|' "X$dir" | sed -e 's/^.//'`
+
+mkdir -p "$dir"
+rm -f "$dir/"results-*.dat
+
+i=0
+for lua in "$@"
+do
+  i=`expr "$i" + 1`
+  results_filename=`printf '%s/results-%02d.dat' "$dir" "$i"`
+  echo 'require "dromozoa.ubench" (0.001, 1000, ...)' | "$lua" - "$benchmarks_filename" "$results_filename"
+done
+"$here/dromozoa-ubench-report" "$dir" "$dir"/results-*.dat

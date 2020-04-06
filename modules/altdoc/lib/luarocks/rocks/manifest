@@ -1,0 +1,164 @@
+commands = {
+   altdoc = {
+      "altdoc/0.4.1-1"
+   }
+}
+dependencies = {
+   altdoc = {
+      ["0.4.1-1"] = {
+         {
+            constraints = {},
+            name = "argparse"
+         },
+         {
+            constraints = {},
+            name = "filekit"
+         },
+         {
+            constraints = {},
+            name = "runkit"
+         }
+      }
+   },
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   filekit = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luafilesystem"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   runkit = {
+      ["2.0-1"] = {}
+   }
+}
+modules = {
+   argparse = {
+      "argparse/0.7.0-1"
+   },
+   filekit = {
+      "filekit/1.0-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   runkit = {
+      "runkit/2.0-1"
+   }
+}
+repository = {
+   altdoc = {
+      ["0.4.1-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               altdoc = "altdoc"
+            },
+            dependencies = {
+               argparse = "0.7.0-1",
+               filekit = "1.0-1",
+               luafilesystem = "1.7.0-2",
+               runkit = "2.0-1"
+            },
+            modules = {}
+         }
+      }
+   },
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               argparse = "argparse.lua"
+            }
+         }
+      }
+   },
+   filekit = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               filekit = "filekit.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   runkit = {
+      ["2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               runkit = "runkit.lua"
+            }
+         }
+      }
+   }
+}

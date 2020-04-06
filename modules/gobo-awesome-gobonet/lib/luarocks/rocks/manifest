@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["gobo-awesome-gobonet"] = {
+      ["0.4-1"] = {}
+   }
+}
+modules = {
+   ["gobo.awesome.gobonet"] = {
+      "gobo-awesome-gobonet/0.4-1"
+   },
+   ["gobo.awesome.gobonet.core"] = {
+      "gobo-awesome-gobonet/0.4-1"
+   }
+}
+repository = {
+   ["gobo-awesome-gobonet"] = {
+      ["0.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["gobo.awesome.gobonet"] = "gobo/awesome/gobonet.lua",
+               ["gobo.awesome.gobonet.core"] = "gobo/awesome/gobonet/core.so"
+            }
+         }
+      }
+   }
+}

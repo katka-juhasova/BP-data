@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["open-tiny-util"] = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   ["tiny.util.array"] = {
+      "open-tiny-util/0.1-1"
+   },
+   ["tiny.util.uuid"] = {
+      "open-tiny-util/0.1-1"
+   }
+}
+repository = {
+   ["open-tiny-util"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["tiny.util.array"] = "tiny/util/array.lua",
+               ["tiny.util.uuid"] = "tiny/util/uuid.lua"
+            }
+         }
+      }
+   }
+}

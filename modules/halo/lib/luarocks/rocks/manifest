@@ -1,0 +1,134 @@
+commands = {}
+dependencies = {
+   dump = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   halo = {
+      ["1.1.9-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 1, string = "0.1.1"
+                  }
+               }
+            },
+            name = "dump"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, string = "0.1.0"
+                  }
+               }
+            },
+            name = "loadchunk"
+         }
+      }
+   },
+   loadchunk = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   dump = {
+      "dump/0.1.1-1"
+   },
+   halo = {
+      "halo/1.1.9-1"
+   },
+   ["halo.class"] = {
+      "halo/1.1.9-1"
+   },
+   ["halo.registry"] = {
+      "halo/1.1.9-1"
+   },
+   ["halo.util"] = {
+      "halo/1.1.9-1"
+   },
+   loadchunk = {
+      "loadchunk/0.1.0-1"
+   }
+}
+repository = {
+   dump = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dump = "dump.lua"
+            }
+         }
+      }
+   },
+   halo = {
+      ["1.1.9-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               dump = "0.1.1-1",
+               loadchunk = "0.1.0-1"
+            },
+            modules = {
+               halo = "halo.lua",
+               ["halo.class"] = "halo/class.lua",
+               ["halo.registry"] = "halo/registry.lua",
+               ["halo.util"] = "halo/util.lua"
+            }
+         }
+      }
+   },
+   loadchunk = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               loadchunk = "loadchunk.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["lua-tinyyaml"] = {
+      ["0.1-0"] = {}
+   }
+}
+modules = {
+   tinyyaml = {
+      "lua-tinyyaml/0.1-0"
+   }
+}
+repository = {
+   ["lua-tinyyaml"] = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               tinyyaml = "tinyyaml.lua"
+            }
+         }
+      }
+   }
+}

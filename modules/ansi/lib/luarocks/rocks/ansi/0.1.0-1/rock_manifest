@@ -1,0 +1,15 @@
+rock_manifest = {
+   ["ansi-0.1.0-1.rockspec"] = "9c8e33164adaae959f3d65a73bcbff07",
+   doc = {
+      ["LICENSE.md"] = "bf805e0f845d170f309b1a2620d5a761",
+      ["README.md"] = "fe83934142bcf7045ba918081c75384d"
+   },
+   lua = {
+      ansi = {
+         ["base.lua"] = "bdcf051e84152278778d883837265e9a",
+         ["color.lua"] = "24da1d8ca3961e0a277b42d1a2b6bc9a",
+         ["term.lua"] = "5e56813a5aba6630f2843d9eaa3ef7a2"
+      },
+      ["ansi.lua"] = "29922c02fb657f7e9cc7896692fae476"
+   }
+}

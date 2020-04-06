@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   dialplan = {
+      ["0.0-3"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   dialplan = {
+      "dialplan/0.0-3"
+   }
+}
+repository = {
+   dialplan = {
+      ["0.0-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dialplan = "dialplan.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,26 @@
+rock_manifest = {
+   lua = {
+      ZipWriter = {
+         ["binary_converter.lua"] = "da11698ec5b6190c8bf3607ffde8d6a5",
+         ["bit.lua"] = "69f8844d849b20bcdd761f8004dda14e",
+         ["charset.lua"] = "60cb6ce63457c90f0f89cc1e35f2e261",
+         encrypt = {
+            aes = {
+               ["AesFileEncrypt.lua"] = "cdcb6a731320865e9880e7a7db0632e0"
+            },
+            ["aes.lua"] = "38667980f46943ebb763dc54d981402c"
+         },
+         ["module.lua"] = "dd25e6a50224d21d89b2a565fb84f882",
+         ["utils.lua"] = "e01206eb7ca7ad1a7e9904d367379c89",
+         win = {
+            ["cp.lua"] = "b4d34468d1c78f455fd5181df9cb0ba1"
+         }
+      },
+      ["ZipWriter.lua"] = "1da555d8831476d30367f89e6d74e892"
+   },
+   test = {
+      ["test.lua"] = "7fb09a9d7afb0093584427f6f6c19e2e",
+      ["utils.lua"] = "1ad1b1be50b4415c82c8849cd2e57ba9"
+   },
+   ["zipwriter-0.1.5-1.rockspec"] = "a8d6132f8cc75a6d3a95fa818e1da9c5"
+}

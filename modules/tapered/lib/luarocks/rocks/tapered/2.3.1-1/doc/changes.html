@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Peter Aronoff">
+<title>tapered version history</title>
+<link rel="stylesheet" href="normalize.css" media="screen,projection">
+<link rel="stylesheet" href="screen.css" media="screen,projection">
+</head>
+<body>
+<h1>tapered version history</h1>
+
+<h2><em>1.0-0</em> (July 10, 2015)</h2>
+
+<ul>
+<li>Initial public release</li>
+</ul>
+
+
+<h2><em>1.0-1</em> (July 10, 2015)</h2>
+
+<ul>
+<li>Fix rockspec: the URL for Bitbucket was wrong.</li>
+</ul>
+
+
+<h2><em>1.1-0</em> (July 13, 2015)</h2>
+
+<ul>
+<li>Improve organization and coverage of tests</li>
+<li>Refactor the <code>same</code> method</li>
+<li>Remove <code>same_mt</code></li>
+<li>Meaningful exit statuses via <code>done</code></li>
+<li>Add CI via <a href="https://drone.io/bitbucket.org/telemachus/tapered/latest">drone.io</a></li>
+</ul>
+
+
+<h2><em>1.2.0-1</em> (July 19, 2015)</h2>
+
+<ul>
+<li>Clean up code using luacheck and luacov</li>
+<li>Small tweaks to README and CHANGES</li>
+<li>Fix version number: the previous two digit number was a mistake, based on
+a misunderstanding of LuaRocks conventions. This is an annoying switch, but
+better now than later. And better to do it than to live with a versioning
+pattern I dislike.</li>
+</ul>
+
+
+<h2><em>1.2.1-1</em> (December 5, 2015)</h2>
+
+<ul>
+<li>Test coverage stats are now thanks to <a href="https://codecov.io">codecov</a>.</li>
+<li>Latest stable Lua in the 5.3 series is 5.3.2, so we test against that now.</li>
+</ul>
+
+
+<h2><em>2.0.0-1</em> (May 1, 2016)</h2>
+
+<ul>
+<li>The informational fields are now functions that return strings. This is to prevent them from violating Lua recommendations about variables such as <code>_VERSION</code>. (I&rsquo;ve bumped the major version number since this is technically an API change, though for most users it will not require any changes on their end.)</li>
+</ul>
+
+
+<h2><em>2.0.1-1</em> (May 2, 2016)</h2>
+
+<ul>
+<li>Fix a typo in the documentation.</li>
+<li>Adjust the <code>version()</code> return value to show only software version, not the rockspec version as well.</li>
+</ul>
+
+
+<h2><em>2.1.0-1</em> (July 21, 2016)</h2>
+
+<ul>
+<li>Update to test against Lua 5.3.3</li>
+</ul>
+
+
+<h2><em>2.2.0-1</em> (February 11, 2017)</h2>
+
+<ul>
+<li>Update to test against Lua 5.3.4</li>
+<li>The repo is now housed on <a href="https://github.com/telemachus/tapered">Github</a></li>
+<li>CI is now provided by <a href="https://travis-ci.org/telemachus/tapered">Travis.ci</a></li>
+</ul>
+
+
+<h2><em>2.3.0-1</em> (October 15, 2017)</h2>
+
+<ul>
+<li>Remove <code>setup()</code> and <code>teardown()</code></li>
+<li>Update to use luarocks 2.4.3 for testing on Travis</li>
+</ul>
+
+
+<h2><em>2.3.0-1</em> (October 15, 2017)</h2>
+
+<ul>
+<li>Updated to test against LuaJit 2.0.5</li>
+<li>Updated to test against Lua 5.3.5</li>
+<li>Updated to remove a minor luacheck warning about unpack</li>
+<li>Updated to recognize that it’s 2018</li>
+</ul>
+
+
+<p>Would you rather view the <a href="index.html">documentation</a>?</p>
+
+<hr />
+
+<p>&copy; 2012-2018 Peter Aronoff. BSD 3-Clause license; see <a href="license.html">the license</a> for
+details.</p>
+</body>
+</html>

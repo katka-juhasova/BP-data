@@ -1,0 +1,17 @@
+#!/usr/bin/env lua
+
+local path = require('path')
+local lubs = require('lubs')
+local task = require('lubs.task')
+
+if path.exists('./lubsfile') ~= nil then
+	require('./lubsfile')
+else
+	error('lubfile.lua could not be found')
+end
+
+if arg[1] == nil and task.exists('default') then
+	arg[1] = 'default'
+end
+
+lubs.init(arg)

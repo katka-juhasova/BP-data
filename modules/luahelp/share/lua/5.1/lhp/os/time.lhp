@@ -1,0 +1,17 @@
+Help [[
+
+os.time ([table])
+-----------------
+
+  Returns the current time when called without arguments, or a time
+  representing the date and time specified by the given table. This table must
+  have fields `year`, `month`, and `day`, and may have fields `hour`, `min`,
+  `sec`, and `isdst` (for a description of these fields, see the `os.date`
+  function).
+
+  The returned value is a number, whose meaning depends on your system. In
+  POSIX, Windows, and some other systems, this number counts the number of
+  seconds since some given start time (the "epoch"). In other systems, the
+  meaning is not specified, and the number returned by `time` can be used only
+  as an argument to `date` and `difftime`.
+]]

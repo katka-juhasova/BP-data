@@ -1,0 +1,13 @@
+rock_manifest = {
+   ["fhirformats-1.2-1.rockspec"] = "47a86c9b898eaff8e51e42b822eaebae",
+   lua = {
+      ["fhirformats.lua"] = "174c4dc12d349d3b76ac0b46bade0d0a"
+   },
+   src = {
+      ["fhir-data"] = {
+         ["download-fhir.sh"] = "6ed013d7795c20f07729cae79e2a0a2b",
+         ["fhir-elements.json"] = "820cd1742472b7fc08e29215bf4a41e2",
+         ["generate-fhir-data.lua"] = "025f31c3eb452505d047416008d76fbf"
+      }
+   }
+}

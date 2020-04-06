@@ -1,0 +1,51 @@
+commands = {
+   runslt2 = {
+      "slt2/1.0-1"
+   },
+   slt2dep = {
+      "slt2/1.0-1"
+   },
+   slt2pp = {
+      "slt2/1.0-1"
+   }
+}
+dependencies = {
+   slt2 = {
+      ["1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   slt2 = {
+      "slt2/1.0-1"
+   }
+}
+repository = {
+   slt2 = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               runslt2 = "runslt2",
+               slt2dep = "slt2dep",
+               slt2pp = "slt2pp"
+            },
+            dependencies = {},
+            modules = {
+               slt2 = "slt2.lua"
+            }
+         }
+      }
+   }
+}

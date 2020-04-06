@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   lua_to_html = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   lua_to_html = {
+      "lua_to_html/1.0-1"
+   }
+}
+repository = {
+   lua_to_html = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lua_to_html = "lua_to_html.lua"
+            }
+         }
+      }
+   }
+}

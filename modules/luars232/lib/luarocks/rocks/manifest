@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   luars232 = {
+      ["1.0.3-3"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luars232 = {
+      "luars232/1.0.3-3"
+   }
+}
+repository = {
+   luars232 = {
+      ["1.0.3-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luars232 = "luars232.so"
+            }
+         }
+      }
+   }
+}

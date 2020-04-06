@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   filament = {
+      ["v1.1-1"] = {}
+   }
+}
+modules = {
+   filament = {
+      "filament/v1.1-1"
+   }
+}
+repository = {
+   filament = {
+      ["v1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               filament = "filament.lua"
+            }
+         }
+      }
+   }
+}

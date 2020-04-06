@@ -1,0 +1,19 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "b15da9f00bd9d0db6fbcaf7cef2fa9b9",
+      ["README.md"] = "f8881481dfe3ddf4ec5b22624d295140"
+   },
+   lua = {
+      raven = {
+         ["init.lua"] = "ae4fdf2255b21076f84f06d7581ee563",
+         senders = {
+            ["luasocket.lua"] = "8810d64613bdfd5593cf3b0d9c212f16",
+            ["ngx.lua"] = "3bf77999b156614c7b0dd3341c5faf86",
+            ["reference.lua"] = "d87a5a44f2bcb76f69219b3e8cdffa14",
+            ["test.lua"] = "a03cbaacde14ea11df06d92be12a158f"
+         },
+         ["util.lua"] = "0c0f4eff24f68b58350bd7237008874f"
+      }
+   },
+   ["raven-lua-rjson-0.1-1.rockspec"] = "2f3e8b1d5fbb507e5e0003f5d4c0dcaa"
+}

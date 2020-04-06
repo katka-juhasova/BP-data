@@ -1,0 +1,305 @@
+commands = {}
+dependencies = {
+   bin = {
+      ["5.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lanes = {
+      ["3.13.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lnet = {
+      ["4.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luasocket"
+         },
+         {
+            constraints = {},
+            name = "multi"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   multi = {
+      ["14.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "bin"
+         },
+         {
+            constraints = {},
+            name = "lanes"
+         }
+      }
+   }
+}
+modules = {
+   bin = {
+      "bin/5.1-0"
+   },
+   ["bin.compressors.lzw"] = {
+      "bin/5.1-0"
+   },
+   ["bin.converters.base64"] = {
+      "bin/5.1-0"
+   },
+   ["bin.converters.base91"] = {
+      "bin/5.1-0"
+   },
+   ["bin.hashes.md5"] = {
+      "bin/5.1-0"
+   },
+   ["bin.numbers.BigNum"] = {
+      "bin/5.1-0"
+   },
+   ["bin.numbers.BigRat"] = {
+      "bin/5.1-0"
+   },
+   ["bin.numbers.no_jit_bit"] = {
+      "bin/5.1-0"
+   },
+   ["bin.numbers.random"] = {
+      "bin/5.1-0"
+   },
+   ["bin.support.vfs"] = {
+      "bin/5.1-0"
+   },
+   lanes = {
+      "lanes/3.13.0-0"
+   },
+   ["lanes.core"] = {
+      "lanes/3.13.0-0"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   multi = {
+      "multi/14.0-0"
+   },
+   ["multi.compat.love2d"] = {
+      "multi/14.0-0"
+   },
+   ["multi.integration.lanesManager"] = {
+      "multi/14.0-0"
+   },
+   ["multi.integration.lanesManager.extensions"] = {
+      "multi/14.0-0"
+   },
+   ["multi.integration.lanesManager.threads"] = {
+      "multi/14.0-0"
+   },
+   ["multi.integration.loveManager"] = {
+      "multi/14.0-0"
+   },
+   ["multi.integration.loveManager.extensions"] = {
+      "multi/14.0-0"
+   },
+   ["multi.integration.loveManager.threads"] = {
+      "multi/14.0-0"
+   },
+   ["multi.integration.luvitManager"] = {
+      "multi/14.0-0"
+   },
+   ["multi.integration.shared"] = {
+      "multi/14.0-0"
+   },
+   net = {
+      "lnet/4.0-0"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   }
+}
+repository = {
+   bin = {
+      ["5.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bin = "bin/init.lua",
+               ["bin.compressors.lzw"] = "bin/compressors/lzw.lua",
+               ["bin.converters.base64"] = "bin/converters/base64.lua",
+               ["bin.converters.base91"] = "bin/converters/base91.lua",
+               ["bin.hashes.md5"] = "bin/hashes/md5.lua",
+               ["bin.numbers.BigNum"] = "bin/numbers/BigNum.lua",
+               ["bin.numbers.BigRat"] = "bin/numbers/BigRat.lua",
+               ["bin.numbers.no_jit_bit"] = "bin/numbers/no_jit_bit.lua",
+               ["bin.numbers.random"] = "bin/numbers/random.lua",
+               ["bin.support.vfs"] = "bin/support/vfs.lua"
+            }
+         }
+      }
+   },
+   lanes = {
+      ["3.13.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lanes = "lanes.lua",
+               ["lanes.core"] = "lanes/core.so"
+            }
+         }
+      }
+   },
+   lnet = {
+      ["4.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               bin = "5.1-0",
+               lanes = "3.13.0-0",
+               luasocket = "3.0rc1-2",
+               multi = "14.0-0"
+            },
+            modules = {
+               net = "net/init.lua"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   multi = {
+      ["14.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               bin = "5.1-0",
+               lanes = "3.13.0-0"
+            },
+            modules = {
+               multi = "multi/init.lua",
+               ["multi.compat.love2d"] = "multi/compat/love2d.lua",
+               ["multi.integration.lanesManager"] = "multi/integration/lanesManager/init.lua",
+               ["multi.integration.lanesManager.extensions"] = "multi/integration/lanesManager/extensions.lua",
+               ["multi.integration.lanesManager.threads"] = "multi/integration/lanesManager/threads.lua",
+               ["multi.integration.loveManager"] = "multi/integration/loveManager/init.lua",
+               ["multi.integration.loveManager.extensions"] = "multi/integration/loveManager/extensions.lua",
+               ["multi.integration.loveManager.threads"] = "multi/integration/loveManager/threads.lua",
+               ["multi.integration.luvitManager"] = "multi/integration/luvitManager.lua",
+               ["multi.integration.shared"] = "multi/integration/shared.lua"
+            }
+         }
+      }
+   }
+}

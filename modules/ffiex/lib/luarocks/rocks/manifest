@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   ffiex = {
+      ["0.2.0-8"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ffiex = {
+      "ffiex/0.2.0-8"
+   },
+   ["ffiex.builder.gcc"] = {
+      "ffiex/0.2.0-8"
+   },
+   ["ffiex.builder.tcc"] = {
+      "ffiex/0.2.0-8"
+   },
+   ["ffiex.lcpp"] = {
+      "ffiex/0.2.0-8"
+   },
+   ["ffiex.parser"] = {
+      "ffiex/0.2.0-8"
+   },
+   ["ffiex.util"] = {
+      "ffiex/0.2.0-8"
+   }
+}
+repository = {
+   ffiex = {
+      ["0.2.0-8"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ffiex = "ffiex.lua",
+               ["ffiex.builder.gcc"] = "ffiex/builder/gcc.lua",
+               ["ffiex.builder.tcc"] = "ffiex/builder/tcc.lua",
+               ["ffiex.lcpp"] = "ffiex/lcpp.lua",
+               ["ffiex.parser"] = "ffiex/parser.lua",
+               ["ffiex.util"] = "ffiex/util.lua"
+            }
+         }
+      }
+   }
+}

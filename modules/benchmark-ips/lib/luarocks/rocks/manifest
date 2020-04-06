@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["benchmark-ips"] = {
+      ["0.0.1-0"] = {}
+   }
+}
+modules = {
+   ["benchmark.ips"] = {
+      "benchmark-ips/0.0.1-0"
+   }
+}
+repository = {
+   ["benchmark-ips"] = {
+      ["0.0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["benchmark.ips"] = "benchmark/ips.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,34 @@
+rock_manifest = {
+   bin = {
+      fusion = "164fdf26e5a176ecc1391054d2ac8a20",
+      ["fusion-ast"] = "8663b42acb55a7d774c5ea725f717365",
+      ["fusion-lint"] = "088bc2a8ad923f5e273c183d378de4fa",
+      ["fusion-pkg"] = "961566178430402b6604784f1b1ea075",
+      ["fusion-source"] = "164fdf26e5a176ecc1391054d2ac8a20",
+      fusionc = "07f6e954820a87e2488d496d77680532",
+      ["fusionc-source"] = "07f6e954820a87e2488d496d77680532"
+   },
+   doc = {
+      LICENSE = "ab8e846632612f0f5a83492187717c01",
+      ["README.md"] = "8a5ff5ed49824aba2995f4e82bb19cf1"
+   },
+   ["fusionscript-0.3.2-1.rockspec"] = "8a03ace555e0820bcade1d8dc2b7a287",
+   lua = {
+      fusion = {
+         core = {
+            compilers = {
+               ["source.lua"] = "511288fb0310aaa9c5162880c510c104"
+            },
+            ["parser.lua"] = "00fdce68eae361a523b8ed3d6ff26392"
+         },
+         stdlib = {
+            ["class.lua"] = "b59e2b75dcc874f437461f1bc9429872",
+            ["functional.lua"] = "0717457e4ff271ed688e1408b06b0613",
+            ["iterable.lua"] = "d9be4aff5aa04e587768ee76b1057c3c",
+            ["table.lua"] = "a72ad89c8e7683e6eb6ad366cfacd664",
+            ["ternary.lua"] = "3963706bcae7d5ab8578a11b2842aa5f"
+         },
+         ["util.lua"] = "5c7050d03c28fb262b9e3a28a432d67c"
+      }
+   }
+}

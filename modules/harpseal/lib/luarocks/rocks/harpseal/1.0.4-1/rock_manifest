@@ -1,0 +1,31 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "d2794c0df5b907fdace235a619d80314",
+      ["README.md"] = "4a3bc2279d3542fc7e2e6f064b7d9aab"
+   },
+   ["harpseal-1.0.4-1.rockspec"] = "970df69341a4f218869fdfd1409beb84",
+   lua = {
+      harpseal = {
+         dbg = {
+            ["register_center.lua"] = "9182fcc5065fee51b07a9d131431ab35"
+         },
+         infra = {
+            ["httphelper.lua"] = "55756c451aaa9818fc8a30891a09681c",
+            ["taskhelper.lua"] = "f3cb1dee14ffe1e927a7cbed1afd10df"
+         },
+         tools = {
+            ["taskloader.lua"] = "7edccd495933dc1d592ec332be2afb57"
+         }
+      },
+      ["harpseal.lua"] = "dbcdb2f863b56a7233ff8e2b73f8899b",
+      lib = {
+         ["BASE64.lua"] = "95945bef956335791868a24574668cde",
+         ["JSON.lua"] = "6319f85631e20b622d270f868f4c422c",
+         ["MD5.lua"] = "74b44e222b63de5f10917c2accdbce21",
+         ["Promise.lua"] = "9e1d88565865cdd5de1237552f0d28e7"
+      },
+      tools = {
+         ["loadkit.lua"] = "62b24ef8b7877ead503ce4b01d159452"
+      }
+   }
+}

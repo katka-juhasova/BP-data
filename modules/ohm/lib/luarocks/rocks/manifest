@@ -1,0 +1,138 @@
+commands = {}
+dependencies = {
+   ["json-lua"] = {
+      ["0.1-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lsocket = {
+      ["1.4.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-cmsgpack"] = {
+      ["0.4.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ohm = {
+      ["0.1.1-1"] = {
+         {
+            constraints = {},
+            name = "lua-cmsgpack"
+         },
+         {
+            constraints = {},
+            name = "lsocket"
+         },
+         {
+            constraints = {},
+            name = "json-lua"
+         }
+      }
+   }
+}
+modules = {
+   JSON = {
+      "json-lua/0.1-3"
+   },
+   cmsgpack = {
+      "lua-cmsgpack/0.4.0-0"
+   },
+   lsocket = {
+      "lsocket/1.4.1-1"
+   },
+   ohm = {
+      "ohm/0.1.1-1"
+   }
+}
+repository = {
+   ["json-lua"] = {
+      ["0.1-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               JSON = "JSON.lua"
+            }
+         }
+      }
+   },
+   lsocket = {
+      ["1.4.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lsocket = "lsocket.so"
+            }
+         }
+      }
+   },
+   ["lua-cmsgpack"] = {
+      ["0.4.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cmsgpack = "cmsgpack.so"
+            }
+         }
+      }
+   },
+   ohm = {
+      ["0.1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["json-lua"] = "0.1-3",
+               lsocket = "1.4.1-1",
+               ["lua-cmsgpack"] = "0.4.0-0"
+            },
+            modules = {
+               ohm = "ohm.lua"
+            }
+         }
+      }
+   }
+}

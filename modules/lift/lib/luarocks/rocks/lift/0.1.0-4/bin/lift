@@ -1,0 +1,41 @@
+#!/usr/bin/env lua
+
+local cli = require 'lift.cli'
+local task = require 'lift.task'
+local async = require 'lift.async'
+local config = require 'lift.config'
+local loader = require 'lift.loader'
+local diagnostics = require 'lift.diagnostics'
+
+-- enable colors by default on supported terminals
+require'lift.color'.set_enabled(os.getenv('TERM') or os.getenv('ANSICON'))
+
+-- add files specific to this executable to the ${load_path}
+config.set_const('APP_LOAD_PATH', config.LIFT_SRC_DIR..'/files/lift')
+
+os.exit(diagnostics.wrap(function()
+  -- run init scripts
+  local top_scope = loader.init()
+
+  -- run command-line interface scripts
+  local app = cli.new()
+  config:new_parent('cli')
+  loader.load_all('cli', nil, app)
+
+  -- root command is an alias to the 'task run' command
+  app:delegate_to(app:get_command('task run'))
+
+  -- command 'list' is an alias to 'task list'
+  app:command 'list' :delegate_to(app:get_command 'task list')
+    :desc('list [pattern]', 'Show list of tasks (that match a pattern)')
+
+  -- run the CLI in a new thread
+  local future = async(function()
+    return app:process(arg)
+  end)
+
+  async.run() -- main loop
+  future:check_error() -- propagate CLI errors
+  async.check_errors() -- propagate unchecked errors from other threads
+
+end))

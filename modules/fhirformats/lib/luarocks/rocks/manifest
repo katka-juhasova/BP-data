@@ -1,0 +1,329 @@
+commands = {}
+dependencies = {
+   datafile = {
+      ["0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   fhirformats = {
+      ["1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "xml"
+         },
+         {
+            constraints = {},
+            name = "rapidjson"
+         },
+         {
+            constraints = {},
+            name = "lua-resty-prettycjson"
+         },
+         {
+            constraints = {},
+            name = "datafile"
+         }
+      }
+   },
+   ["lua-resty-prettycjson"] = {
+      ["1.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lub = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 4, 0, string = "1.4.0"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         }
+      }
+   },
+   rapidjson = {
+      ["0.6.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   xml = {
+      ["1.1.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, 3, string = "1.0.3"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     2, string = "2"
+                  }
+               }
+            },
+            name = "lub"
+         }
+      }
+   }
+}
+modules = {
+   datafile = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.caller"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.luarocks"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.unix"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.xdg"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.util"] = {
+      "datafile/0.6-1"
+   },
+   fhirformats = {
+      "fhirformats/1.2-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   lub = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Autoload"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Dir"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Param"] = {
+      "lub/1.1.0-1"
+   },
+   ["lub.Template"] = {
+      "lub/1.1.0-1"
+   },
+   rapidjson = {
+      "rapidjson/0.6.1-1"
+   },
+   ["resty.prettycjson"] = {
+      "lua-resty-prettycjson/1.6-1"
+   },
+   xml = {
+      "xml/1.1.3-1"
+   },
+   ["xml.Parser"] = {
+      "xml/1.1.3-1"
+   },
+   ["xml.core"] = {
+      "xml/1.1.3-1"
+   }
+}
+repository = {
+   datafile = {
+      ["0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               datafile = "datafile.lua",
+               ["datafile.openers.caller"] = "datafile/openers/caller.lua",
+               ["datafile.openers.luarocks"] = "datafile/openers/luarocks.lua",
+               ["datafile.openers.unix"] = "datafile/openers/unix.lua",
+               ["datafile.openers.xdg"] = "datafile/openers/xdg.lua",
+               ["datafile.util"] = "datafile/util.lua"
+            }
+         }
+      }
+   },
+   fhirformats = {
+      ["1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               datafile = "0.6-1",
+               ["lua-resty-prettycjson"] = "1.6-1",
+               luafilesystem = "1.7.0-2",
+               lub = "1.1.0-1",
+               rapidjson = "0.6.1-1",
+               xml = "1.1.3-1"
+            },
+            modules = {
+               fhirformats = "fhirformats.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-prettycjson"] = {
+      ["1.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.prettycjson"] = "resty/prettycjson.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   lub = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               lub = "lub/init.lua",
+               ["lub.Autoload"] = "lub/Autoload.lua",
+               ["lub.Dir"] = "lub/Dir.lua",
+               ["lub.Param"] = "lub/Param.lua",
+               ["lub.Template"] = "lub/Template.lua"
+            }
+         }
+      }
+   },
+   rapidjson = {
+      ["0.6.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rapidjson = "rapidjson.so"
+            }
+         }
+      }
+   },
+   xml = {
+      ["1.1.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2",
+               lub = "1.1.0-1"
+            },
+            modules = {
+               xml = "xml/init.lua",
+               ["xml.Parser"] = "xml/Parser.lua",
+               ["xml.core"] = "xml/core.so"
+            }
+         }
+      }
+   }
+}

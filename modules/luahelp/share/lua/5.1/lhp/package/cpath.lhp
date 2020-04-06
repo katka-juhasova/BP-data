@@ -1,0 +1,11 @@
+Help [[
+
+package.cpath
+-------------
+
+  The path used by `require` to search for a C loader.
+
+  Lua initializes the C path `package.cpath` in the same way it initializes
+  the Lua path `package.path`, using the environment variable LUA_CPATH (plus
+  another default path defined in luaconf.h).
+]]

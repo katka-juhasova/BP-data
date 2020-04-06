@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/dado.html">dado</a></li>
+  <li><a href="../modules/dado.object.html">dado.object</a></li>
+  <li><a href="../modules/dado.sql.html">dado.sql</a></li>
+  <li><strong>table.extra</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>table.extra</code></h1>
+<p>Table manipulation and transformation functions.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Release</strong>: $Id: extra.lua,v 1.19 2017/04/05 19:14:08 tomas Exp $</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#fullconcat">fullconcat (tab, kvsep, pairssep, kfilter, vfilter)</a></td>
+	<td class="summary">Builds a list of pairs field=value, separated by commas.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pfullconcat">pfullconcat (tab, kvsep, pairssep, kfilter, vfilter)</a></td>
+	<td class="summary">Produces the same result as fullconcat, but it checks the arguments'
+	types.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#twostr">twostr (tab, ksep, vsep, kfilter, vfilter)</a></td>
+	<td class="summary">Builds two lists, of keys and of values.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "fullconcat"></a>
+    <strong>fullconcat (tab, kvsep, pairssep, kfilter, vfilter)</strong>
+    </dt>
+    <dd>
+    Builds a list of pairs field=value, separated by commas.
+ The '=' sign could be changed by the kvsep argument.
+ The ',' could also be changed by the pairssep argument.
+ Both the field and the value could be filtered by the kfilter and
+	vfilter respectivelly.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tab</span>
+         Table of field=value pairs.
+        </li>
+        <li><span class="parameter">kvsep</span>
+         String with key-value separator (default = '=').
+        </li>
+        <li><span class="parameter">pairssep</span>
+         String with pairs separator (default = ',').
+        </li>
+        <li><span class="parameter">kfilter</span>
+         Function (should return a string) to filter the keys (optional).
+        </li>
+        <li><span class="parameter">vfilter</span>
+         Function (should return a string) to filter the values (optional).
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        String with field=value pairs separated by ','.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "pfullconcat"></a>
+    <strong>pfullconcat (tab, kvsep, pairssep, kfilter, vfilter)</strong>
+    </dt>
+    <dd>
+    Produces the same result as fullconcat, but it checks the arguments'
+	types.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tab</span>
+         Table of field=value pairs.
+        </li>
+        <li><span class="parameter">kvsep</span>
+         String with key-value separator (default = '=').
+        </li>
+        <li><span class="parameter">pairssep</span>
+         String with pairs separator (default = ',').
+        </li>
+        <li><span class="parameter">kfilter</span>
+         Function (should return a string) to filter the keys (optional).
+        </li>
+        <li><span class="parameter">vfilter</span>
+         Function (should return a string) to filter the values (optional).
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        String with field=value pairs separated by ','.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/table.extra.html#fullconcat">fullconcat</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "twostr"></a>
+    <strong>twostr (tab, ksep, vsep, kfilter, vfilter)</strong>
+    </dt>
+    <dd>
+    Builds two lists, of keys and of values.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tab</span>
+         Table of key=value pairs.
+        </li>
+        <li><span class="parameter">ksep</span>
+         String with key separator (default = ',').
+        </li>
+        <li><span class="parameter">vsep</span>
+         String with value separator (default = ',').
+        </li>
+        <li><span class="parameter">kfilter</span>
+         Function (should return a string) to filter the keys (default = tostring).
+        </li>
+        <li><span class="parameter">vfilter</span>
+         Function (should return a string) to filter the values (default = tostring).
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+         Two strings; the first with a list of the fields and the
+	second with a list of the values.
+
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-04-05 16:14:10 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

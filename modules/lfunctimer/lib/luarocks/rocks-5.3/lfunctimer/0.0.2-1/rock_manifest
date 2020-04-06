@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "391818e0054fc6771cf9fa2b4c1e0fc2"
+   },
+   ["lfunctimer-0.0.2-1.rockspec"] = "6dce263c8fd0079fef87df894a68e035",
+   lib = {
+      lfunctimer = {
+         ["hook.so"] = "3a3d625dc0541e72d7a4f19b23e95bbe"
+      }
+   },
+   lua = {
+      lfunctimer = {
+         ["config.lua"] = "6f548caf152e564308aeded21b02fa23",
+         ["util.lua"] = "ad582d7cc11c5d3caf86588ca83961db"
+      },
+      ["lfunctimer.lua"] = "e023c5c369ed84020690b02855b20de5"
+   }
+}

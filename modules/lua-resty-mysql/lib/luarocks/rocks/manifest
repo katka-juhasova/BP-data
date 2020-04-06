@@ -1,0 +1,79 @@
+commands = {}
+dependencies = {
+   ["lua-resty-mysql"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "luabitop"
+         }
+      }
+   },
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   bit = {
+      "luabitop/1.0.2-3"
+   },
+   ["resty.mysql"] = {
+      "lua-resty-mysql/0.15-0"
+   }
+}
+repository = {
+   ["lua-resty-mysql"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luabitop = "1.0.2-3"
+            },
+            modules = {
+               ["resty.mysql"] = "resty/mysql.lua"
+            }
+         }
+      }
+   },
+   luabitop = {
+      ["1.0.2-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bit = "bit.so"
+            }
+         }
+      }
+   }
+}

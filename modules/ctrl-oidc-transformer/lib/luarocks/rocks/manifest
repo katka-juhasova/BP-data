@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   ["ctrl-oidc-transformer"] = {
+      ["0.1.0-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.ctrl-oidc-transformer.access"] = {
+      "ctrl-oidc-transformer/0.1.0-0"
+   },
+   ["kong.plugins.ctrl-oidc-transformer.handler"] = {
+      "ctrl-oidc-transformer/0.1.0-0"
+   },
+   ["kong.plugins.ctrl-oidc-transformer.schema"] = {
+      "ctrl-oidc-transformer/0.1.0-0"
+   }
+}
+repository = {
+   ["ctrl-oidc-transformer"] = {
+      ["0.1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.ctrl-oidc-transformer.access"] = "kong/plugins/ctrl-oidc-transformer/access.lua",
+               ["kong.plugins.ctrl-oidc-transformer.handler"] = "kong/plugins/ctrl-oidc-transformer/handler.lua",
+               ["kong.plugins.ctrl-oidc-transformer.schema"] = "kong/plugins/ctrl-oidc-transformer/schema.lua"
+            }
+         }
+      }
+   }
+}

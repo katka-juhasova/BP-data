@@ -1,0 +1,9 @@
+Help [[
+
+file:write (...)
+----------------
+
+  Writes the value of each of its arguments to `file`. The arguments must be
+  strings or numbers. To write other values, use `tostring` or `string.format`
+  before `write`.
+]]

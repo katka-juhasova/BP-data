@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   typical = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   typical = {
+      "typical/0.1-1"
+   }
+}
+repository = {
+   typical = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               typical = "typical.lua"
+            }
+         }
+      }
+   }
+}

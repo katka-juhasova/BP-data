@@ -1,0 +1,98 @@
+commands = {}
+dependencies = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["kong-plugin-hal"] = {
+      ["1.0-7"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 5, revision = 2, string = "2.5-2"
+                  }
+               }
+            },
+            name = "dkjson"
+         }
+      }
+   }
+}
+modules = {
+   dkjson = {
+      "dkjson/2.5-2"
+   },
+   ["kong.plugins.hal.body_filter"] = {
+      "kong-plugin-hal/1.0-7"
+   },
+   ["kong.plugins.hal.handler"] = {
+      "kong-plugin-hal/1.0-7"
+   },
+   ["kong.plugins.hal.schema"] = {
+      "kong-plugin-hal/1.0-7"
+   },
+   ["kong.plugins.hal.url"] = {
+      "kong-plugin-hal/1.0-7"
+   }
+}
+repository = {
+   dkjson = {
+      ["2.5-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dkjson = "dkjson.lua"
+            }
+         }
+      }
+   },
+   ["kong-plugin-hal"] = {
+      ["1.0-7"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               dkjson = "2.5-2"
+            },
+            modules = {
+               ["kong.plugins.hal.body_filter"] = "kong/plugins/hal/body_filter.lua",
+               ["kong.plugins.hal.handler"] = "kong/plugins/hal/handler.lua",
+               ["kong.plugins.hal.schema"] = "kong/plugins/hal/schema.lua",
+               ["kong.plugins.hal.url"] = "kong/plugins/hal/url.lua"
+            }
+         }
+      }
+   }
+}

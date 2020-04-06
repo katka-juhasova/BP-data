@@ -1,0 +1,119 @@
+commands = {
+   ["compile_nginx_config.lua"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   nginx = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["start_nginx.sh"] = {
+      "heroku-openresty/1.2.8.6-1"
+   }
+}
+dependencies = {
+   ["heroku-openresty"] = {
+      ["1.2.8.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cjson = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["rds.parser"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["redis.parser"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.aes"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.dns.resolver"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.md5"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.memcached"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.mysql"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.random"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.redis"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.sha"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.sha1"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.sha224"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.sha256"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.sha384"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.sha512"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.string"] = {
+      "heroku-openresty/1.2.8.6-1"
+   },
+   ["resty.upload"] = {
+      "heroku-openresty/1.2.8.6-1"
+   }
+}
+repository = {
+   ["heroku-openresty"] = {
+      ["1.2.8.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["compile_nginx_config.lua"] = "compile_nginx_config.lua",
+               nginx = "nginx",
+               ["start_nginx.sh"] = "start_nginx.sh"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["rds.parser"] = "rds/parser.so",
+               ["redis.parser"] = "redis/parser.so",
+               ["resty.aes"] = "resty/aes.lua",
+               ["resty.dns.resolver"] = "resty/dns/resolver.lua",
+               ["resty.md5"] = "resty/md5.lua",
+               ["resty.memcached"] = "resty/memcached.lua",
+               ["resty.mysql"] = "resty/mysql.lua",
+               ["resty.random"] = "resty/random.lua",
+               ["resty.redis"] = "resty/redis.lua",
+               ["resty.sha"] = "resty/sha.lua",
+               ["resty.sha1"] = "resty/sha1.lua",
+               ["resty.sha224"] = "resty/sha224.lua",
+               ["resty.sha256"] = "resty/sha256.lua",
+               ["resty.sha384"] = "resty/sha384.lua",
+               ["resty.sha512"] = "resty/sha512.lua",
+               ["resty.string"] = "resty/string.lua",
+               ["resty.upload"] = "resty/upload.lua"
+            }
+         }
+      }
+   }
+}

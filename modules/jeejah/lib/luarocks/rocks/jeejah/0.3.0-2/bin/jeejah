@@ -1,0 +1,43 @@
+#!/usr/bin/env lua
+
+require "luarocks.loader"
+
+local opts, port = {foreground = true}
+
+for n,v in ipairs(arg) do
+   if(v == "--port") then
+      port = arg[n+1]
+   elseif(v == "--fennel") then
+      local fennel = require("fennel")
+      table.insert(package.loaders, fennel.make_searcher({correlate=true}))
+      local view = require("fennelview")
+      opts.middleware = function(f, msg)
+         if(msg.op == "load-file") then
+            local f = assert(io.open(msg.filename, "rb"))
+            msg.op, msg.code = "eval", f:read("*all"):gsub("^#![^\n]*\n", "")
+            f:close()
+         end
+         if(msg.op == "eval") then
+            msg.pp = view
+            msg.code = fennel.compileString(msg.code)
+         end
+         return f(msg)
+      end
+   elseif(v == "--debug") then
+      opts.debug = true
+   elseif(v == "--empty-sandbox") then
+      opts.sandbox = {}
+   elseif(v == "--version" or v == "--help") then
+      print("jeejah 0.2.0\n")
+      print("Options:")
+      print("  --fennel  Start a Fennel server instead of Lua")
+      print("  --port    Port on which to listen")
+      print("  --debug   Print verbose debugging information")
+      os.exit(0)
+   end
+end
+
+local root_dir = debug.getinfo(1).source:sub(2, -(1+#"bin/jeejah"))
+local search_parent = string.format("%s?.lua;%s", root_dir, package.path)
+local jeejah = dofile(package.searchpath("jeejah", search_parent))
+jeejah.start(port, opts)

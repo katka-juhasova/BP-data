@@ -1,0 +1,57 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-proxy-cache"] = {
+      ["2.0.0-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.proxy-cache.access"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   },
+   ["kong.plugins.proxy-cache.body_filter"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   },
+   ["kong.plugins.proxy-cache.cache"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   },
+   ["kong.plugins.proxy-cache.encoder"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   },
+   ["kong.plugins.proxy-cache.handler"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   },
+   ["kong.plugins.proxy-cache.header_filter"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   },
+   ["kong.plugins.proxy-cache.schema"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   },
+   ["kong.plugins.proxy-cache.storage"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   },
+   ["kong.plugins.proxy-cache.validators"] = {
+      "kong-plugin-proxy-cache/2.0.0-1"
+   }
+}
+repository = {
+   ["kong-plugin-proxy-cache"] = {
+      ["2.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.proxy-cache.access"] = "kong/plugins/proxy-cache/access.lua",
+               ["kong.plugins.proxy-cache.body_filter"] = "kong/plugins/proxy-cache/body_filter.lua",
+               ["kong.plugins.proxy-cache.cache"] = "kong/plugins/proxy-cache/cache.lua",
+               ["kong.plugins.proxy-cache.encoder"] = "kong/plugins/proxy-cache/encoder.lua",
+               ["kong.plugins.proxy-cache.handler"] = "kong/plugins/proxy-cache/handler.lua",
+               ["kong.plugins.proxy-cache.header_filter"] = "kong/plugins/proxy-cache/header_filter.lua",
+               ["kong.plugins.proxy-cache.schema"] = "kong/plugins/proxy-cache/schema.lua",
+               ["kong.plugins.proxy-cache.storage"] = "kong/plugins/proxy-cache/storage.lua",
+               ["kong.plugins.proxy-cache.validators"] = "kong/plugins/proxy-cache/validators.lua"
+            }
+         }
+      }
+   }
+}

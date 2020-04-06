@@ -1,0 +1,80 @@
+commands = {}
+dependencies = {
+   cl = {
+      ["20100607-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   cue = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     20100607, string = "20100607"
+                  }
+               }
+            },
+            name = "cl"
+         }
+      }
+   }
+}
+modules = {
+   cl = {
+      "cl/20100607-1"
+   },
+   cue = {
+      "cue/1.1.0-1"
+   }
+}
+repository = {
+   cl = {
+      ["20100607-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cl = "cl.so"
+            }
+         }
+      }
+   },
+   cue = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               cl = "20100607-1"
+            },
+            modules = {
+               cue = "cue/init.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   luaconfig = {
+      ["0.1.9-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luaconfig = {
+      "luaconfig/0.1.9-0"
+   }
+}
+repository = {
+   luaconfig = {
+      ["0.1.9-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luaconfig = "luaconfig.lua"
+            }
+         }
+      }
+   }
+}

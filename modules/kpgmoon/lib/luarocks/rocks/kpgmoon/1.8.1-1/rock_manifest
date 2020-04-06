@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "e5ce172cb3f2c2991e9ebf7c5a5c4a2d"
+   },
+   ["kpgmoon-1.8.1-1.rockspec"] = "6c15f9e2b6dd4a41407301dd5a89182e",
+   lua = {
+      kpgmoon = {
+         ["arrays.lua"] = "86280c656c243a75c2cd9a3626421e15",
+         ["cqueues.lua"] = "69b0978d70678e4b9456a00f91fd7bb6",
+         ["crypto.lua"] = "5a47c3b3e29dc1ed46eeaf2a735376fe",
+         ["hstore.lua"] = "ed7f3745e79bc45e7e19cc5bcb9cd33e",
+         ["init.lua"] = "979f155021f84ebc7992adcfd330ca8e",
+         ["json.lua"] = "1d22b4b06eda3b1f6de3b61ac296ad5b",
+         ["socket.lua"] = "c1cdb27a2ab735652ac61f227e7f2225",
+         ["util.lua"] = "1db8c8b2e6c6b6965507c5d277f79836"
+      }
+   }
+}

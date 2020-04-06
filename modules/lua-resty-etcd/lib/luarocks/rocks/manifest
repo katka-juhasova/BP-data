@@ -1,0 +1,115 @@
+commands = {}
+dependencies = {
+   ["lua-resty-etcd"] = {
+      ["0.8-0"] = {
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 15, string = "0.15"
+                  }
+               }
+            },
+            name = "lua-resty-http"
+         },
+         {
+            constraints = {
+               {
+                  op = "==",
+                  version = {
+                     0, 1, string = "0.1"
+                  }
+               }
+            },
+            name = "lua-typeof"
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-typeof"] = {
+      ["0.1-0"] = {}
+   }
+}
+modules = {
+   ["resty.etcd"] = {
+      "lua-resty-etcd/0.8-0"
+   },
+   ["resty.etcd.utils"] = {
+      "lua-resty-etcd/0.8-0"
+   },
+   ["resty.etcd.v2"] = {
+      "lua-resty-etcd/0.8-0"
+   },
+   ["resty.etcd.v3"] = {
+      "lua-resty-etcd/0.8-0"
+   },
+   ["resty.http"] = {
+      "lua-resty-http/0.15-0"
+   },
+   ["resty.http_headers"] = {
+      "lua-resty-http/0.15-0"
+   },
+   typeof = {
+      "lua-typeof/0.1-0"
+   }
+}
+repository = {
+   ["lua-resty-etcd"] = {
+      ["0.8-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               ["lua-resty-http"] = "0.15-0",
+               ["lua-typeof"] = "0.1-0"
+            },
+            modules = {
+               ["resty.etcd"] = "resty/etcd.lua",
+               ["resty.etcd.utils"] = "resty/etcd/utils.lua",
+               ["resty.etcd.v2"] = "resty/etcd/v2.lua",
+               ["resty.etcd.v3"] = "resty/etcd/v3.lua"
+            }
+         }
+      }
+   },
+   ["lua-resty-http"] = {
+      ["0.15-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.http"] = "resty/http.lua",
+               ["resty.http_headers"] = "resty/http_headers.lua"
+            }
+         }
+      }
+   },
+   ["lua-typeof"] = {
+      ["0.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               typeof = "typeof.lua"
+            }
+         }
+      }
+   }
+}

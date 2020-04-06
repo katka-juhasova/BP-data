@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   blackjack = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   blackjack = {
+      "blackjack/0.1.0-1"
+   }
+}
+repository = {
+   blackjack = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               blackjack = "blackjack.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,33 @@
+commands = {}
+dependencies = {
+   dislua = {
+      ["1.0-1"] = {}
+   }
+}
+modules = {
+   dislua = {
+      "dislua/1.0-1"
+   },
+   ["dislua.luajit-2.opcodes"] = {
+      "dislua/1.0-1"
+   },
+   ["dislua.luajit-2.read"] = {
+      "dislua/1.0-1"
+   }
+}
+repository = {
+   dislua = {
+      ["1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               dislua = "dislua/init.lua",
+               ["dislua.luajit-2.opcodes"] = "dislua/luajit-2/opcodes.lua",
+               ["dislua.luajit-2.read"] = "dislua/luajit-2/read.lua"
+            }
+         }
+      }
+   }
+}

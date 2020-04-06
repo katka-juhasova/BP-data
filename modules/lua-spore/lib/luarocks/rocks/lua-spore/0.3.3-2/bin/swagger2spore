@@ -1,0 +1,47 @@
+#!/usr/bin/lua
+--
+-- lua-Spore : <http://fperrad.github.com/lua-Spore>
+--
+
+local tag, spore
+local i = 1
+while i <= #arg do
+    local v = arg[i]
+    if v:sub(1, 2) ~= '--' then
+        break
+    end
+    if v == '--tag' then
+        i = i + 1
+        tag = arg[i]
+    end
+    if v == '--spore' then
+        i = i + 1
+        spore = arg[i]
+    end
+    i = i + 1
+end
+local url = arg[i]
+if not url then
+    print 'Usage: swagger2spore [--tag name] [--spore 1.0|1.1] url'
+    os.exit(0)
+end
+
+local slurp = require 'Spore.Protocols'.slurp
+local swagger = require 'Spore.Swagger'
+local convert = swagger.convert
+local decode = require 'json'.decode
+local encode = require 'json'.encode
+
+if spore then
+    swagger.spore = spore
+end
+
+local content = slurp(url)
+print(encode(convert(decode(content), tag)))
+
+--
+-- Copyright (c) 2016 Francois Perrad
+--
+-- This program is licensed under the terms of the MIT/X11 license,
+-- like Lua itself.
+--

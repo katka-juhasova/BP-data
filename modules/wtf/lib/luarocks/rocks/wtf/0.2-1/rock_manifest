@@ -1,0 +1,25 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "1a52abf6fa499151a8874af7245201a5",
+      ["README.md"] = "f1a22c8ae1ffc7c1c60469e1b87e4ac7"
+   },
+   lua = {
+      wtf = {
+         core = {
+            classes = {
+               ["action.lua"] = "fcb1c41cf6551ede6b45b1d95ee401d0",
+               ["configurable_object.lua"] = "1d609689746da2ddc500c4b0f3d888a8",
+               ["instance.lua"] = "d117c9e12e0d30c6239a117c59d9426b",
+               ["object.lua"] = "a4e696288ca143e06297f2df4bc9f7cb",
+               ["plugin.lua"] = "2f59e4f5330dc6b70c28ff343c5ce752",
+               ["policy.lua"] = "88bcfb330e3e5011d77e54ebeae18722",
+               ["solver.lua"] = "23ad99018dbf86d07da4bebf4e6ff20a",
+               ["storage.lua"] = "ed6ac28e1b73dccc4d6dcc1099916110"
+            },
+            ["loader.lua"] = "2ba5bfe4352d8472c86b4df0361c3dba",
+            ["tools.lua"] = "a68d64f1599a48a2fd5394988162f4a7"
+         }
+      }
+   },
+   ["wtf-0.2-1.rockspec"] = "74cb55fb85d74246b25bed381724c498"
+}

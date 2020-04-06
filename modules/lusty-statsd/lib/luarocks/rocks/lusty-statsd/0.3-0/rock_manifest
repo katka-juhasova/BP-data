@@ -1,0 +1,14 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "07005119ba5ad60ed955c03f725a9773",
+      ["README.md"] = "904dbc9d05d70528f953b57796ff02e0"
+   },
+   lua = {
+      ["lusty-statsd"] = {
+         context = {
+            ["statsd.lua"] = "44192d29cf677bd59a36e4a57861819c"
+         }
+      }
+   },
+   ["lusty-statsd-0.3-0.rockspec"] = "f3f6f88896c4ea5a8a179b7f9e23b9ce"
+}

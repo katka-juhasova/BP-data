@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   luaiter = {
+      ["0.2-1"] = {}
+   }
+}
+modules = {
+   iter = {
+      "luaiter/0.2-1"
+   },
+   query = {
+      "luaiter/0.2-1"
+   }
+}
+repository = {
+   luaiter = {
+      ["0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               iter = "iter.lua",
+               query = "query.lua"
+            }
+         }
+      }
+   }
+}

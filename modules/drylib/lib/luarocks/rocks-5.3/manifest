@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   drylib = {
+      ["0.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   drylib = {
+      "drylib/0.0.0-0"
+   }
+}
+repository = {
+   drylib = {
+      ["0.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               drylib = "drylib.lua"
+            }
+         }
+      }
+   }
+}

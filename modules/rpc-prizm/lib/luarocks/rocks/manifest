@@ -1,0 +1,104 @@
+commands = {}
+dependencies = {
+   rapidjson = {
+      ["0.4.5-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["rpc-prizm"] = {
+      ["1.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     0, 4, string = "0.4"
+                  }
+               }
+            },
+            name = "rapidjson"
+         }
+      }
+   }
+}
+modules = {
+   rapidjson = {
+      "rapidjson/0.4.5-1"
+   },
+   ["rpc-prizm"] = {
+      "rpc-prizm/1.0.1-1"
+   },
+   ["rpc-prizm.http_statuses"] = {
+      "rpc-prizm/1.0.1-1"
+   },
+   ["rpc-prizm.logger"] = {
+      "rpc-prizm/1.0.1-1"
+   },
+   ["rpc-prizm.proxy"] = {
+      "rpc-prizm/1.0.1-1"
+   },
+   ["rpc-prizm.request"] = {
+      "rpc-prizm/1.0.1-1"
+   },
+   ["rpc-prizm.response_builder"] = {
+      "rpc-prizm/1.0.1-1"
+   },
+   ["rpc-prizm.router"] = {
+      "rpc-prizm/1.0.1-1"
+   }
+}
+repository = {
+   rapidjson = {
+      ["0.4.5-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               rapidjson = "rapidjson.so"
+            }
+         }
+      }
+   },
+   ["rpc-prizm"] = {
+      ["1.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               rapidjson = "0.4.5-1"
+            },
+            modules = {
+               ["rpc-prizm"] = "rpc-prizm.lua",
+               ["rpc-prizm.http_statuses"] = "rpc-prizm/http_statuses.lua",
+               ["rpc-prizm.logger"] = "rpc-prizm/logger.lua",
+               ["rpc-prizm.proxy"] = "rpc-prizm/proxy.lua",
+               ["rpc-prizm.request"] = "rpc-prizm/request.lua",
+               ["rpc-prizm.response_builder"] = "rpc-prizm/response_builder.lua",
+               ["rpc-prizm.router"] = "rpc-prizm/router.lua"
+            }
+         }
+      }
+   }
+}

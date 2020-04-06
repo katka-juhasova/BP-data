@@ -1,0 +1,69 @@
+commands = {}
+dependencies = {
+   ["lua-resty-woothee"] = {
+      ["1.10.0-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.woothee"] = {
+      "lua-resty-woothee/1.10.0-3"
+   },
+   ["resty.woothee.appliance"] = {
+      "lua-resty-woothee/1.10.0-3"
+   },
+   ["resty.woothee.browser"] = {
+      "lua-resty-woothee/1.10.0-3"
+   },
+   ["resty.woothee.crawler"] = {
+      "lua-resty-woothee/1.10.0-3"
+   },
+   ["resty.woothee.dataset"] = {
+      "lua-resty-woothee/1.10.0-3"
+   },
+   ["resty.woothee.misc"] = {
+      "lua-resty-woothee/1.10.0-3"
+   },
+   ["resty.woothee.mobile_phone"] = {
+      "lua-resty-woothee/1.10.0-3"
+   },
+   ["resty.woothee.os"] = {
+      "lua-resty-woothee/1.10.0-3"
+   },
+   ["resty.woothee.util"] = {
+      "lua-resty-woothee/1.10.0-3"
+   }
+}
+repository = {
+   ["lua-resty-woothee"] = {
+      ["1.10.0-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.woothee"] = "resty/woothee.lua",
+               ["resty.woothee.appliance"] = "resty/woothee/appliance.lua",
+               ["resty.woothee.browser"] = "resty/woothee/browser.lua",
+               ["resty.woothee.crawler"] = "resty/woothee/crawler.lua",
+               ["resty.woothee.dataset"] = "resty/woothee/dataset.lua",
+               ["resty.woothee.misc"] = "resty/woothee/misc.lua",
+               ["resty.woothee.mobile_phone"] = "resty/woothee/mobile_phone.lua",
+               ["resty.woothee.os"] = "resty/woothee/os.lua",
+               ["resty.woothee.util"] = "resty/woothee/util.lua"
+            }
+         }
+      }
+   }
+}

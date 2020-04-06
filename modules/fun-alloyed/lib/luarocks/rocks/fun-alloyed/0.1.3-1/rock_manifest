@@ -1,0 +1,18 @@
+rock_manifest = {
+   ["fun-alloyed-0.1.3-1.rockspec"] = "5286abc208c43d288006cc647073d7ba",
+   lua = {
+      ["fun.lua"] = "9173612027b94ae834a2466157e6b215"
+   },
+   tests = {
+      ["basic.lua"] = "bd746db8ef5ad71816e228f56cd11d5b",
+      ["compositions.lua"] = "a765fa79b73139e59c0a646d501dd7d5",
+      ["filtering.lua"] = "37324d6129365c4124300ba822544dca",
+      ["generators.lua"] = "6c9ce3f0c2b62e0c6cc676593cfd9633",
+      ["indexing.lua"] = "7aa72d0f806f36b4d0f60803c5899c45",
+      ["operators.lua"] = "f76e12e00c39127d02dd2e79276562d1",
+      ["reducing.lua"] = "3bd50569c9389779463a3c2ed7d483c6",
+      runtest = "db68f366707a7298f4bb09e70b9a35eb",
+      ["slicing.lua"] = "b519ae1fdf3b805b3c7daf7924bc0b92",
+      ["transformations.lua"] = "756273e738ef91cae5050a11bbedf049"
+   }
+}

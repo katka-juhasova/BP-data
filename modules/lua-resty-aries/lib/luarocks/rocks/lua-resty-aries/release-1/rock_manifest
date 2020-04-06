@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "5072a47204061290fdc1efa93c8fcd9f",
+      ["readme.md"] = "ff2f119741f24d1d4789c6376213a214"
+   },
+   lua = {
+      resty = {
+         aries = {
+            ["lib.lua"] = "cf4abc0ecb09997ce62799c7acc4e198",
+            ["tools.lua"] = "5bf27308415bf73521ea53f7d4fd6168"
+         },
+         ["aries.lua"] = "90a1fcbabbe477c781d7ad7403253259"
+      }
+   },
+   ["lua-resty-aries-release-1.rockspec"] = "b6956a4fd4003298db2631eece860360"
+}

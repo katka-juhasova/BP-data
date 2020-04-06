@@ -1,0 +1,18 @@
+rock_manifest = {
+   ["aka-1.3.0-1.rockspec"] = "408e3b9771a326b1058ef3c7396f038b",
+   bin = {
+      aka = "68eafb06d6b4e78e209da1acaa3a492a"
+   },
+   doc = {
+      ["CHANGELOG.md"] = "cfa3de3154f3ff7be95783072f1d9dd2",
+      LICENSE = "1ebbd3e34237af26da5dc08a4e440464",
+      ["README.md"] = "2f6110ced60ab4ffa7cd65ebd0760d9e"
+   },
+   lua = {
+      aka = {
+         ["core.lua"] = "1eb20d6aa34401d68ed9929dd6366f48",
+         ["init.lua"] = "12c0b7b4fe074c3cc6fc904d9b4c9e56",
+         ["utils.lua"] = "56ea6190788d6c4b4c9ea9b8314e5348"
+      }
+   }
+}

@@ -1,0 +1,115 @@
+commands = {}
+dependencies = {
+   environ = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "lpeg"
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   environ = {
+      "environ/0.1.0-1"
+   },
+   ["environ.core"] = {
+      "environ/0.1.0-1"
+   },
+   ["environ.process"] = {
+      "environ/0.1.0-1"
+   },
+   ["environ.system"] = {
+      "environ/0.1.0-1"
+   },
+   ["environ.user"] = {
+      "environ/0.1.0-1"
+   },
+   ["environ.utils"] = {
+      "environ/0.1.0-1"
+   },
+   ["environ.volatile"] = {
+      "environ/0.1.0-1"
+   },
+   ["environ.win32.reg"] = {
+      "environ/0.1.0-1"
+   },
+   ["environ.win32.system"] = {
+      "environ/0.1.0-1"
+   },
+   lpeg = {
+      "lpeg/1.0.2-1"
+   },
+   re = {
+      "lpeg/1.0.2-1"
+   }
+}
+repository = {
+   environ = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lpeg = "1.0.2-1"
+            },
+            modules = {
+               environ = "environ.lua",
+               ["environ.core"] = "environ/core.so",
+               ["environ.process"] = "environ/process.lua",
+               ["environ.system"] = "environ/system.lua",
+               ["environ.user"] = "environ/user.lua",
+               ["environ.utils"] = "environ/utils.lua",
+               ["environ.volatile"] = "environ/volatile.lua",
+               ["environ.win32.reg"] = "environ/win32/reg.lua",
+               ["environ.win32.system"] = "environ/win32/system.lua"
+            }
+         }
+      }
+   },
+   lpeg = {
+      ["1.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lpeg = "lpeg.so",
+               re = "re.lua"
+            }
+         }
+      }
+   }
+}

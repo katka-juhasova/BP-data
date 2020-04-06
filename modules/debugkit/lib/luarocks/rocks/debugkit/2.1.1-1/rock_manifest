@@ -1,0 +1,16 @@
+rock_manifest = {
+   ["debugkit-2.1.1-1.rockspec"] = "52028716fcfac93390582aed3168e751",
+   doc = {
+      ["README.md"] = "848093c75e1f541b0f877e6ef5e4a12e"
+   },
+   lua = {
+      debugkit = {
+         ["inspect.lua"] = "9c2a73350b1d9ee1d9cfe56e1965412f",
+         log = {
+            ["init.lua"] = "5ffce07c8e86848fdcb7d8ba9200f460",
+            ["loggers.lua"] = "b168e71811a1a9523623fdd48333ae00",
+            ["sinks.lua"] = "218c2779366be1041e62d2c7f88b0da8"
+         }
+      }
+   }
+}

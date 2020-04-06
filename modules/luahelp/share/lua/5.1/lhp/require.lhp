@@ -1,0 +1,47 @@
+Help [[
+
+require (modname)
+-----------------
+
+  Loads the given module. The function starts by looking into the
+  `package.loaded` table to determine whether `modname` is already loaded. If
+  it is, then `require` returns the value stored at `package.loaded[modname]`.
+  Otherwise, it tries to find a _loader_ for the module.
+
+  To find a loader, first `require` queries `package.preload[modname]`. If it
+  has a value, this value (which should be a function) is the loader.
+  Otherwise `require` searches for a Lua loader using the path stored in
+  `package.path`. If that also fails, it searches for a C loader using the
+  path stored in `package.cpath`. If that also fails, it tries an _all-in-one_
+  loader (see below).
+
+  When loading a C library, `require` first uses a dynamic link facility to
+  link the application with the library. Then it tries to find a C function
+  inside this library to be used as the loader. The name of this C function is
+  the string `"luaopen_"` concatenated with a copy of the module name where each
+  dot is replaced by an underscore. Moreover, if the module name has a hyphen,
+  its prefix up to (and including) the first hyphen is removed. For instance,
+  if the module name is `a.v1-b.c`, the function name will be `luaopen_b_c`.
+
+  If `require` finds neither a Lua library nor a C library for a module, it
+  calls the _all-in-one loader_. This loader searches the C path for a library
+  for the root name of the given module. For instance, when requiring `a.b.c`,
+  it will search for a C library for `a`. If found, it looks into it for an
+  open function for the submodule; in our example, that would be
+  `luaopen_a_b_c`. With this facility, a package can pack several C submodules
+  into one single library, with each submodule keeping its original open
+  function.
+
+  Once a loader is found, `require` calls the loader with a single argument,
+  `modname`. If the loader returns any value, `require` assigns the returned
+  value to `package.loaded[modname]`. If the loader returns no value and has
+  not assigned any value to `package.loaded[modname]`, then `require` assigns
+  **true** to this entry. In any case, `require` returns the final value of
+  `package.loaded[modname]`.
+
+  If there is any error loading or running the module, or if it cannot find
+  any loader for the module, then `require` signals an error.
+
+  __See also__: `package.cpath`, `package.loaded`, `package.path`, and
+                `package.preload`.
+]]

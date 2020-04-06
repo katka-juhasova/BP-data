@@ -1,0 +1,103 @@
+commands = {
+   kikgit = {
+      "kikgit/1.0.1-1"
+   }
+}
+dependencies = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   kikgit = {
+      ["1.0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, string = "2.1"
+                  }
+               }
+            },
+            name = "lrunkit"
+         },
+         {
+            constraints = {},
+            name = "argparse"
+         }
+      }
+   },
+   lrunkit = {
+      ["2.1-2"] = {}
+   }
+}
+modules = {
+   argparse = {
+      "argparse/0.7.0-1"
+   },
+   lrunkit = {
+      "lrunkit/2.1-2"
+   },
+   ["lrunkit.v3"] = {
+      "lrunkit/2.1-2"
+   }
+}
+repository = {
+   argparse = {
+      ["0.7.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               argparse = "argparse.lua"
+            }
+         }
+      }
+   },
+   kikgit = {
+      ["1.0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               kikgit = "kikgit"
+            },
+            dependencies = {
+               argparse = "0.7.0-1",
+               lrunkit = "2.1-2"
+            },
+            modules = {}
+         }
+      }
+   },
+   lrunkit = {
+      ["2.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lrunkit = "lrunkit/init.lua",
+               ["lrunkit.v3"] = "lrunkit/v3.lua"
+            }
+         }
+      }
+   }
+}

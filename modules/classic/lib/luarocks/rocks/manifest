@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   classic = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   classic = {
+      "classic/0.1.0-1"
+   }
+}
+repository = {
+   classic = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               classic = "classic.lua"
+            }
+         }
+      }
+   }
+}

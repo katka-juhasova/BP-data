@@ -1,0 +1,13 @@
+Help [[
+
+file:lines ()
+-------------
+
+  Returns an iterator function that, each time it is called, returns a new
+  line from the file. Therefore, the construction
+
+        for line in file:lines() do body end
+
+  will iterate over all lines of the file. (Unlike `io.lines`, this function
+  does not close the file when the loop ends.)
+]]

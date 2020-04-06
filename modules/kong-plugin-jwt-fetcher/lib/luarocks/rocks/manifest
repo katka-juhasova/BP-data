@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-jwt-fetcher"] = {
+      ["0.1.3-0"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.jwt-fetcher.handler"] = {
+      "kong-plugin-jwt-fetcher/0.1.3-0"
+   },
+   ["kong.plugins.jwt-fetcher.schema"] = {
+      "kong-plugin-jwt-fetcher/0.1.3-0"
+   }
+}
+repository = {
+   ["kong-plugin-jwt-fetcher"] = {
+      ["0.1.3-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.jwt-fetcher.handler"] = "kong/plugins/jwt-fetcher/handler.lua",
+               ["kong.plugins.jwt-fetcher.schema"] = "kong/plugins/jwt-fetcher/schema.lua"
+            }
+         }
+      }
+   }
+}

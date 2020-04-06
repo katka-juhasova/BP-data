@@ -1,0 +1,6 @@
+local function set_io(input, output)
+	if input then assert(io.input(input)) end
+	if output then assert(io.output(output)) end
+end
+set_io(...)
+require"jwk2pem"

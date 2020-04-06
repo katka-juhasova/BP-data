@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["lua-testclass"] = {
+      ["0.01-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["File.Find"] = {
+      "lua-testclass/0.01-1"
+   },
+   ["Test.Class"] = {
+      "lua-testclass/0.01-1"
+   }
+}
+repository = {
+   ["lua-testclass"] = {
+      ["0.01-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["File.Find"] = "File/Find.lua",
+               ["Test.Class"] = "Test/Class.lua"
+            }
+         }
+      }
+   }
+}

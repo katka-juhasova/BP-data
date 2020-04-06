@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   markov = {
+      ["v1.1-1"] = {}
+   }
+}
+modules = {
+   markov = {
+      "markov/v1.1-1"
+   }
+}
+repository = {
+   markov = {
+      ["v1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               markov = "markov.lua"
+            }
+         }
+      }
+   }
+}

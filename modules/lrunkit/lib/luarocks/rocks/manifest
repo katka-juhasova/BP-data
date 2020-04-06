@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   lrunkit = {
+      ["2.1-2"] = {}
+   }
+}
+modules = {
+   lrunkit = {
+      "lrunkit/2.1-2"
+   },
+   ["lrunkit.v3"] = {
+      "lrunkit/2.1-2"
+   }
+}
+repository = {
+   lrunkit = {
+      ["2.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lrunkit = "lrunkit/init.lua",
+               ["lrunkit.v3"] = "lrunkit/v3.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Module11 checksum generator and verificator</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>mod11</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul>
+  <li><strong>mod11</strong></li>
+</ul>
+<h2>Topics</h2>
+<ul>
+  <li><a href="topics/readme.md.html">readme.md</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>mod11</code></h1>
+
+<p>mod11 is a Lua module to calculate and verify modulo11 checksums.</p>
+<p> Modulo 11 is commonly used to prevent human errors. Common usecases
+ are; bank account numbers, creditcard numbers, social security numbers.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Release</strong>: Version 1.0, mod11 module to calculate and verify  checksums</li>
+        <li><strong>License</strong>: mod11 is free software under the MIT license.</li>
+        <li><strong>Author</strong>: Thijs Schreijer, http://www.thijsschreijer.nl</li>
+        <li><strong>Copyright</strong>: 2014 Thijs Schreijer</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#new">new&nbsp;(verify, allowed)</a></td>
+	<td class="summary">Creates a new object based on the given verify weights and allowed characters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getverify">getverify&nbsp;(self)</a></td>
+	<td class="summary">Returns the string with verify weights as passed to <a href="index.html#new">new</a> </td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getallowed">getallowed&nbsp;(self)</a></td>
+	<td class="summary">Returns the string with allowed characters as passed to <a href="index.html#new">new</a> .</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#calc">calc&nbsp;(self, inp)</a></td>
+	<td class="summary">Calculates the checksum.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#split">split&nbsp;(self, inp)</a></td>
+	<td class="summary">Splits a number with checksum into number and checksum.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#check">check&nbsp;(self, inp)</a></td>
+	<td class="summary">Checks a number to be a valid one.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#foreach">foreach&nbsp;(self, text, minsize, maxsize)</a></td>
+	<td class="summary">Iterator factory.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    <dl class="function">
+    <dt>
+    <a name = "new"></a>
+    <strong>new&nbsp;(verify, allowed)</strong>
+    </dt>
+    <dd>
+    Creates a new object based on the given verify weights and allowed characters.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">verify</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         A string of size 8, containing the digits 2-9, in some random order (no doubles).</li>
+        <li><span class="parameter">allowed</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         (optional) A string of characters allowed in between the digits. The digits (0-9) will automatically be added to the allowed set.</li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        mod11 object that can be used to generate and verify checksums</li>
+        <li>
+        Throws an error on invalid input</li>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ <span class="keyword">local</span> mod11 = <span class="global">require</span>(<span class="string">"mod11"</span>)
+ <span class="keyword">local</span> m = mod11(<span class="string">"25834967"</span>,<span class="string">"-/"</span>)               <span class="comment">-- mod11() is a shortcut to mod11:new()
+</span> <span class="keyword">local</span> invoicenr = <span class="string">"2013-12-23/013-"</span>            <span class="comment">-- a date and a sequential nr
+</span> invoicenr = invoicenr..m:calc(invoicenr)       <span class="comment">-- append the checksum
+</span> <span class="global">print</span>(<span class="string">"Invoicenr including check:"</span>,invoicenr)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "getverify"></a>
+    <strong>getverify&nbsp;(self)</strong>
+    </dt>
+    <dd>
+    Returns the string with verify weights as passed to <a href="index.html#new">new</a>
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+         The mod11 object created by <a href="index.html#new">new</a> .</li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getallowed"></a>
+    <strong>getallowed&nbsp;(self)</strong>
+    </dt>
+    <dd>
+    Returns the string with allowed characters as passed to <a href="index.html#new">new</a> .
+ The returned string will also contain the digits (0-9), which are also allowed. Hence
+ the string returned will not be identical to the string passed to <a href="index.html#new">new</a> .
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+         The mod11 object created by <a href="index.html#new">new</a> .</li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "calc"></a>
+    <strong>calc&nbsp;(self, inp)</strong>
+    </dt>
+    <dd>
+    Calculates the checksum.  See <a href="index.html#new">new</a>  for an example.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+         The mod11 object created by <a href="index.html#new">new</a> .</li>
+        <li><span class="parameter">inp</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The string to calculate the checksum for. The string can only contain
+ digits and 'allowed' characters</li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        2 values; 1) input with checksum appended, 2) checksum only</li>
+        <li>
+        Throws an error on invalid input</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "split"></a>
+    <strong>split&nbsp;(self, inp)</strong>
+    </dt>
+    <dd>
+    Splits a number with checksum into number and checksum.
+ It will not test validity of the checksum, use <a href="index.html#check">check</a>  for testing validity.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+         The mod11 object created by <a href="index.html#new">new</a> .</li>
+        <li><span class="parameter">inp</span>
+         The string containing the number sequence to split.</li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        2 strings; number and checksum. Both will be digits only, all other
+ characters will be removed</li>
+        <li>
+        Throws an error on invalid input</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "check"></a>
+    <strong>check&nbsp;(self, inp)</strong>
+    </dt>
+    <dd>
+    Checks a number to be a valid one.
+ The check will only succeed if the <code>verify</code> number used is the exact same number
+ as the one used to create the checksum.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+         The mod11 object created by <a href="index.html#new">new</a> .</li>
+        <li><span class="parameter">inp</span>
+         The string containing the number sequence to verify.</li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        <code>true</code> if the checksum matches</li>
+        <li>
+        <code>false</code> if the checksum failed</li>
+        <li>
+        <code>nil</code> + error message if bad input was provided</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "foreach"></a>
+    <strong>foreach&nbsp;(self, text, minsize, maxsize)</strong>
+    </dt>
+    <dd>
+    Iterator factory.  Return an iterator, which returns all valid numbers in the provided string.
+ The optional <code>minsize</code> and <code>maxsize</code> parameters can be used to minimize the chance of false positives.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+         The mod11 object created by <a href="index.html#new">new</a> .</li>
+        <li><span class="parameter">text</span>
+         The string to search. If text is not a string it will be 'tostring'ed</li>
+        <li><span class="parameter">minsize</span>
+         (optional) The minimum length (in digits, excluding 'allowed' characters)</li>
+        <li><span class="parameter">maxsize</span>
+         (optional) The maximum length (in digits, excluding 'allowed' characters)</li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        an iterator function that will return 3 values; 1) value (incl chk nr), 2) startpos, 3) endpos</li>
+        <li>
+        Throws an error on invalid input (<code>minsize &lt; 2</code>, or <code>maxsize &lt; minsize</code>)</li>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">-- see the sample directory <span class="keyword">for</span> an example of the iterator</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.3.12</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

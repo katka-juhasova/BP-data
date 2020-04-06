@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-plugin-myredirect"] = {
+      ["0.1-6"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-plugin-myredirect.handler"] = {
+      "kong-plugin-myredirect/0.1-6"
+   },
+   ["kong.plugins.kong-plugin-myredirect.schema"] = {
+      "kong-plugin-myredirect/0.1-6"
+   }
+}
+repository = {
+   ["kong-plugin-myredirect"] = {
+      ["0.1-6"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-plugin-myredirect.handler"] = "kong/plugins/kong-plugin-myredirect/handler.lua",
+               ["kong.plugins.kong-plugin-myredirect.schema"] = "kong/plugins/kong-plugin-myredirect/schema.lua"
+            }
+         }
+      }
+   }
+}

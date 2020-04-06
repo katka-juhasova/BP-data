@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["kong-cluster-drain"] = {
+      ["0.1-1"] = {}
+   }
+}
+modules = {
+   ["kong.plugins.kong-cluster-drain.handler"] = {
+      "kong-cluster-drain/0.1-1"
+   },
+   ["kong.plugins.kong-cluster-drain.schema"] = {
+      "kong-cluster-drain/0.1-1"
+   }
+}
+repository = {
+   ["kong-cluster-drain"] = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.kong-cluster-drain.handler"] = "kong/plugins/kong-cluster-drain/handler.lua",
+               ["kong.plugins.kong-cluster-drain.schema"] = "kong/plugins/kong-cluster-drain/schema.lua"
+            }
+         }
+      }
+   }
+}

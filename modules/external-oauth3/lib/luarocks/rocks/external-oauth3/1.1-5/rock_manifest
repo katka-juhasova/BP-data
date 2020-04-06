@@ -1,0 +1,14 @@
+rock_manifest = {
+   ["external-oauth3-1.1-5.rockspec"] = "677bc39c3116098131fe0d28fc9e9594",
+   lua = {
+      kong = {
+         plugins = {
+            ["external-oauth"] = {
+               ["access.lua"] = "dfe8e9da8866f2c42aa5d21ad7a2a38e",
+               ["handler.lua"] = "aaeab668656c953153aeccc29bec41a5",
+               ["schema.lua"] = "2110ce4fed012c44d59743535d39542e"
+            }
+         }
+      }
+   }
+}

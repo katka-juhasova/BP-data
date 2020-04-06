@@ -1,0 +1,63 @@
+rock_manifest = {
+   bin = {
+      smithsnmpd = "643153a6146c628ca9a16b3af799d34b"
+   },
+   config = {
+      ["agentx.conf"] = "adb0c46ac5666277f721c64710019bf8",
+      ["snmp.conf"] = "5c3202ff08c9491f82e92056e57ca7f9"
+   },
+   doc = {
+      ["api.md"] = "fa45d9cf413009d477f6295e682164fc",
+      ["how-to-write-mib-group.md"] = "9dd002c9cf25fd68f1006de6b3d2c168",
+      ["how-to-write-snmp-trap.md"] = "c421cfa95441a25de0e08ef93316d90d"
+   },
+   lib = {
+      smithsnmp = {
+         ["core.so"] = "2e4fd49fa0648645b3c1d0eeff6bbc10"
+      }
+   },
+   lua = {
+      smithsnmp = {
+         ["init.lua"] = "2594df968e7161e49d615d17c2359a95",
+         ["trap.lua"] = "1860513058282e7a663be5f508e1d035",
+         ["utils.lua"] = "12cf52d05456bfb0726562e780a1453c"
+      }
+   },
+   mibs = {
+      ["alarm.lua"] = "9e162b16f3a8d47bc251d07eabd26966",
+      ["dummy.lua"] = "e49726b15cdb1a57ff7b20e0b21f17ae",
+      ["icmp.lua"] = "2ae0799dba8375e76c297912856dee25",
+      ["interfaces.lua"] = "e1a2ead6dafba1946ddd1fd654bf3ea0",
+      ["ip.lua"] = "46384d5ebcf4ff7caceac44f1ae1f793",
+      ["snmptrap.lua"] = "bf26a899f6e658022d01a5e32c95eb41",
+      ["system.lua"] = "10df9c5b6a95b4c54a5fc28d2e3c2b8c",
+      ["tcp.lua"] = "b5ed92df8a3d0284150aaa249c1424c7",
+      ["three_cascaded_index_table.lua"] = "3c2e125475d7cb003e0b2200c98e63c0",
+      ["two_cascaded_index_table.lua"] = "d0eca81c5f036fc071a2fc14e5968aa2",
+      ["udp.lua"] = "ccb74629daf805bfd08242fa4b0b33e0"
+   },
+   ["smithsnmp-0.8-2.rockspec"] = "9e74bca19b50e0b04858de013e09eb1c",
+   tests = {
+      ["agentx_daemon.sh"] = "121d39cadbbe909724fdd563c6712ad4",
+      ["net-snmp-5.7.3.tar.gz"] = "d4a3459e1577d0efa8d96ca70a885e53",
+      ["netsnmp_build.sh"] = "7b0c86543ff4ea464704be1fa7b7e085",
+      ["netsnmpd.sh"] = "d2ef39b7c44cffd1eb18e4c2ac58733d",
+      ["netsnmptrapd.sh"] = "b09110179af9042e82753acd18858c40",
+      ["smithsnmp_testcases.py"] = "76e7602982ad2c42fc175a1163f85fc1",
+      ["smithsnmp_testframework.py"] = "d5bc65e9cfdc6d713b4ae13a09c7f3eb",
+      ["snmp_daemon.sh"] = "36ddb1cb298f8b0f7724c9bcf21d897f",
+      ["snmpd.conf"] = "93333c2a403fa2672b50b07f5a63398e",
+      ["snmptrapd.conf"] = "7550584dc9d6c3f51aabb1c1d1e47aa8",
+      ["test_agentxv2c.py"] = "fefcfc13bb32d9fa85c090cb86ac72a1",
+      ["test_agentxv3_authonly.py"] = "1ad79daf8c74f345bb99a5aca7eb27ce",
+      ["test_agentxv3_authpriv.py"] = "8d0a89a49bef5abe8a0cc80846d4308b",
+      ["test_agentxv3_noauth.py"] = "c55ee445db20b9c3f5dde211737df85c",
+      ["test_all.py"] = "8641e51d29e3e2769a6d7343968fca37",
+      ["test_snmpv2c.py"] = "63c987b035d8a8478a2868d8633b0165",
+      ["test_snmpv3_authonly.py"] = "b2efc659fa0c9b15d5ca3399564a4c1b",
+      ["test_snmpv3_authpriv.py"] = "ae2001a5cd8e3a5900f000ef1e43c9aa",
+      ["test_snmpv3_noauth.py"] = "589f47fca81c85ba51f53a7612fe02d6",
+      ["test_utils.lua"] = "b31041fc4c0bf19da016415632f03c94",
+      ["testcases.sh"] = "5938fcf8ac46c61cd69f011fb25713d2"
+   }
+}

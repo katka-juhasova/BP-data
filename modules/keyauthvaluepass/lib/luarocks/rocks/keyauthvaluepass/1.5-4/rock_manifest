@@ -1,0 +1,17 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "532d9ea2012e230059dfbc1c9363287c",
+      ["README.md"] = "e985c5d5dc6eb24fedf527ec737d01d8"
+   },
+   ["keyauthvaluepass-1.5-4.rockspec"] = "5a09b22faabaef9b8656f69f9da13b22",
+   lua = {
+      kong = {
+         plugins = {
+            ["key-auth-value-pass"] = {
+               ["handler.lua"] = "8493d7339c67de7a201da6b103a66276",
+               ["schema.lua"] = "b997509c3b062497141a98d1dc650beb"
+            }
+         }
+      }
+   }
+}

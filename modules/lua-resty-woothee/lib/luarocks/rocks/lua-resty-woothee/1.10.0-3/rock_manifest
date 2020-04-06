@@ -1,0 +1,21 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "2c2e2562921d0f2cac58d7225ea77306"
+   },
+   lua = {
+      resty = {
+         woothee = {
+            ["appliance.lua"] = "a8f487aa887d7f1e6c472bcf5f7b313c",
+            ["browser.lua"] = "11059b5e46624ba1e910a604b9b5e891",
+            ["crawler.lua"] = "341e6c6e87aabcd01645557f4dc14e7f",
+            ["dataset.lua"] = "4c7ce8e12b93b31dd88fdd6ab9aa6624",
+            ["misc.lua"] = "7a09abf5395a39044aefb9d4d7fd3607",
+            ["mobile_phone.lua"] = "587092e084eb22378b53cda11bdddf27",
+            ["os.lua"] = "e4af215c3d60f0564eec33324e05fcbc",
+            ["util.lua"] = "fe709df0fa643762eea74e803d5f2698"
+         },
+         ["woothee.lua"] = "0c33bfa81349a5f7d2cb553e48735ded"
+      }
+   },
+   ["lua-resty-woothee-1.10.0-3.rockspec"] = "b8333eaffc77292e68a0f06146247358"
+}

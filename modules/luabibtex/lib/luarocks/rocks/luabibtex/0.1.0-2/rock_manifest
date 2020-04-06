@@ -1,0 +1,20 @@
+rock_manifest = {
+   bin = {
+      luaBibTex = "55eada748457965301f5eb58000e3ba7",
+      ["luaBibTex.bat"] = "4da983cf4b65bf12812b109b2a8b2deb"
+   },
+   lua = {
+      luaBibTex = {
+         ["auxParser.lua"] = "5405fe5841f3e520507e8a3efb530f73",
+         ["bblGenerator.lua"] = "6241dc28ef5ac079ef61f96a49f9ffd8",
+         ["bibFunctions.lua"] = "fd41d886a5bd1122d5821d7871ff24c1",
+         ["bibParser.lua"] = "4f8c847849a97448eb5e7cd3a6927146",
+         ["fileSystemHelper.lua"] = "42250cc803c89190736899cd33c58c02",
+         ["logger.lua"] = "7a7345ff427b6b22001a9aeaaf2911b4",
+         ["nameObject.lua"] = "6a728349ab75d331e7817fe529cc7c84",
+         ["plain.lbst"] = "8cd7c001a5e8bb96f826fd4b652050dc"
+      },
+      ["luaBibTex.lua"] = "e08f75e2becec18f15a3c2e3a482fc79"
+   },
+   ["luabibtex-0.1.0-2.rockspec"] = "422c977c7a4b0291f8000ecc8ecd7d02"
+}

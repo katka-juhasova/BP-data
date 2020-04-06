@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["CHANGELOG.md"] = "71e919773bd1bab8e41b99288f5cb490",
+      ["LICENSE.txt"] = "518f697455150d64d4247864a42db32d",
+      ["README.md"] = "2b89bab7da165de56fc81f9826a6d87e"
+   },
+   lua = {
+      resty = {
+         txid = {
+            ["base32hex.lua"] = "3341dc9cac1a9d75ea32680b5def3f00"
+         },
+         ["txid.lua"] = "bc219fc270551c9c010bb16aec816df3"
+      }
+   },
+   ["lua-resty-txid-1.0.0-1.rockspec"] = "f590fac1493634c67bcfec2e123c8682"
+}

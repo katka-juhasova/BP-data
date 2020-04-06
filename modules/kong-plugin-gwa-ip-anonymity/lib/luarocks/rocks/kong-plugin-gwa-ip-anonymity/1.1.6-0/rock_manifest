@@ -1,0 +1,18 @@
+rock_manifest = {
+   doc = {
+      ["LICENSE.txt"] = "56d5df72296b8aea4d46bf57e638d4aa",
+      ["README.md"] = "4e66f2c83bc0afedc1739fc02c5db3dd",
+      ["RELEASING.md"] = "10ddc7d6f3d739c178b1d2c816bc34a4"
+   },
+   ["kong-plugin-gwa-ip-anonymity-1.1.6-0.rockspec"] = "83df3b9bd7c1de7917d2eb7a5d584981",
+   lua = {
+      kong = {
+         plugins = {
+            ["gwa-ip-anonymity"] = {
+               ["handler.lua"] = "58191c901f6725292b114046b677e4f2",
+               ["schema.lua"] = "12fe98b55d77633f9cdaa7993d321b89"
+            }
+         }
+      }
+   }
+}

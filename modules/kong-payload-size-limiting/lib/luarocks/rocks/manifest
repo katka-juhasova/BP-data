@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-payload-size-limiting"] = {
+      ["0.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.payload-size-limiting.handler"] = {
+      "kong-payload-size-limiting/0.0.0-0"
+   },
+   ["kong.plugins.payload-size-limiting.schema"] = {
+      "kong-payload-size-limiting/0.0.0-0"
+   }
+}
+repository = {
+   ["kong-payload-size-limiting"] = {
+      ["0.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.payload-size-limiting.handler"] = "kong/plugins/payload-size-limiting/handler.lua",
+               ["kong.plugins.payload-size-limiting.schema"] = "kong/plugins/payload-size-limiting/schema.lua"
+            }
+         }
+      }
+   }
+}

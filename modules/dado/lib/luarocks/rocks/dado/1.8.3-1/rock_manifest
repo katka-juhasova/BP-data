@@ -1,0 +1,42 @@
+rock_manifest = {
+   ["dado-1.8.3-1.rockspec"] = "5eb53c4656cd7c75275af9e09ca25dd7",
+   doc = {
+      br = {
+         ["dado.png"] = "efdb7b9c5aa6bad9312cd148be52a0a5",
+         ["examples.html"] = "30b2a7f3819889db86db056ef4444b7a",
+         ["index.html"] = "6f238e6ccf94e3a4a0cd192efa4a0b88",
+         ["license.html"] = "d3500ff85b7e8068786f22a5c58c4eb8"
+      },
+      ["dado.png"] = "efdb7b9c5aa6bad9312cd148be52a0a5",
+      ["examples.html"] = "404502935c5f959d7cf2e028517fb4bd",
+      ["index.html"] = "023fdeb03537f4032d26f66bbd2bdd60",
+      ["license.html"] = "a0e51e3669465502276ce55f59d4cfa3",
+      luadoc = {
+         ["index.html"] = "e7ee12050423e623a2606c46ea93b8f3",
+         ["ldoc.css"] = "e2b04e90ff648f8e00d9d4d458de59d9",
+         modules = {
+            ["dado.html"] = "e2382401cde74b404e09f311c3a55c30",
+            ["dado.object.html"] = "5674561f86fb17604d60e8a6a7c3cd89",
+            ["dado.sql.html"] = "3f9804ece245d7db79a584c5e412222b",
+            ["table.extra.html"] = "3cd503b4c50b497e65f3337c0cf09970"
+         }
+      }
+   },
+   lua = {
+      dado = {
+         ["object.lua"] = "2aa69f88a18ea53b647014954b5263fd",
+         ["sql.lua"] = "4ad1ae2d2538fc55eef28ac12be77176"
+      },
+      ["dado.lua"] = "0f2fa5d1fcd610b4a48291e5c319dd55",
+      table = {
+         ["extra.lua"] = "2297e20983b50d51b051019e580cb4c8"
+      }
+   },
+   tests = {
+      ["overall.lua"] = "7868aa45a24bb881e2dfba7048d22419",
+      ["tdado.lua"] = "1f8f408be19d25f12a312f00a7cebdbc",
+      ["tdbobj.lua"] = "9fbb52db78698ce11949398ea3e89909",
+      ["tsql.lua"] = "958b2b75c61ceeb8eacd9831332a65b3",
+      ["ttable.extra.lua"] = "061e29632da3eb17530e5d8dfc26f310"
+   }
+}

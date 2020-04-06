@@ -1,0 +1,96 @@
+commands = {
+   ["dromozoa-ubench"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa-ubench-report"] = {
+      "dromozoa-ubench/1.5-1"
+   }
+}
+dependencies = {
+   ["dromozoa-ubench"] = {
+      ["1.5-1"] = {
+         {
+            constraints = {},
+            name = "dromozoa-unix"
+         }
+      }
+   },
+   ["dromozoa-unix"] = {
+      ["1.69-1"] = {}
+   }
+}
+modules = {
+   ["dromozoa.ubench"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.ubench.context"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.ubench.dump"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.ubench.linest"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.ubench.max"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.ubench.min"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.ubench.report"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.ubench.run"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.ubench.stdev"] = {
+      "dromozoa-ubench/1.5-1"
+   },
+   ["dromozoa.unix"] = {
+      "dromozoa-unix/1.69-1"
+   },
+   ["dromozoa/unix.la"] = {
+      "dromozoa-unix/1.69-1"
+   }
+}
+repository = {
+   ["dromozoa-ubench"] = {
+      ["1.5-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["dromozoa-ubench"] = "dromozoa-ubench",
+               ["dromozoa-ubench-report"] = "dromozoa-ubench-report"
+            },
+            dependencies = {
+               ["dromozoa-unix"] = "1.69-1"
+            },
+            modules = {
+               ["dromozoa.ubench"] = "dromozoa/ubench.lua",
+               ["dromozoa.ubench.context"] = "dromozoa/ubench/context.lua",
+               ["dromozoa.ubench.dump"] = "dromozoa/ubench/dump.lua",
+               ["dromozoa.ubench.linest"] = "dromozoa/ubench/linest.lua",
+               ["dromozoa.ubench.max"] = "dromozoa/ubench/max.lua",
+               ["dromozoa.ubench.min"] = "dromozoa/ubench/min.lua",
+               ["dromozoa.ubench.report"] = "dromozoa/ubench/report.lua",
+               ["dromozoa.ubench.run"] = "dromozoa/ubench/run.lua",
+               ["dromozoa.ubench.stdev"] = "dromozoa/ubench/stdev.lua"
+            }
+         }
+      }
+   },
+   ["dromozoa-unix"] = {
+      ["1.69-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["dromozoa.unix"] = "dromozoa/unix.so",
+               ["dromozoa/unix.la"] = "dromozoa/unix.la"
+            }
+         }
+      }
+   }
+}

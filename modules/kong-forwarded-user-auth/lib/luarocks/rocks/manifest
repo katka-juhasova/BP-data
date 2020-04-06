@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   ["kong-forwarded-user-auth"] = {
+      ["0.1.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["kong.plugins.forwarded-user-auth.handler"] = {
+      "kong-forwarded-user-auth/0.1.0-0"
+   },
+   ["kong.plugins.forwarded-user-auth.schema"] = {
+      "kong-forwarded-user-auth/0.1.0-0"
+   }
+}
+repository = {
+   ["kong-forwarded-user-auth"] = {
+      ["0.1.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["kong.plugins.forwarded-user-auth.handler"] = "kong/plugins/forwarded-user-auth/handler.lua",
+               ["kong.plugins.forwarded-user-auth.schema"] = "kong/plugins/forwarded-user-auth/schema.lua"
+            }
+         }
+      }
+   }
+}
