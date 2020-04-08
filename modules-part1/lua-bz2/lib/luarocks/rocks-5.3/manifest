@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["lua-bz2"] = {
+      ["0.1.0-1"] = {}
+   }
+}
+modules = {
+   bz2 = {
+      "lua-bz2/0.1.0-1"
+   },
+   ["bz2.ltn12"] = {
+      "lua-bz2/0.1.0-1"
+   }
+}
+repository = {
+   ["lua-bz2"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               bz2 = "bz2.so",
+               ["bz2.ltn12"] = "bz2/ltn12.lua"
+            }
+         }
+      }
+   }
+}

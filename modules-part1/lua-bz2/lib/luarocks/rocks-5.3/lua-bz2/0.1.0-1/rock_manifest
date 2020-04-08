@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "c0fadba92ab4970dc5684e87bf1b18ae",
+      README = "01ee059439c2e017da5cab3764bce820"
+   },
+   lib = {
+      ["bz2.so"] = "896b35d04f83de74158038c9e2408e89"
+   },
+   lua = {
+      bz2 = {
+         ["ltn12.lua"] = "c8b4c0444025558b37ca52d1495f4e62"
+      }
+   },
+   ["lua-bz2-0.1.0-1.rockspec"] = "efd484264b23bc017f3fcf3af23f2de9"
+}

@@ -1,0 +1,25 @@
+commands = {}
+dependencies = {
+   ["luarocks-build-rust"] = {
+      ["0.1-2"] = {}
+   }
+}
+modules = {
+   ["luarocks.build.rust"] = {
+      "luarocks-build-rust/0.1-2"
+   }
+}
+repository = {
+   ["luarocks-build-rust"] = {
+      ["0.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["luarocks.build.rust"] = "luarocks/build/rust.lua"
+            }
+         }
+      }
+   }
+}

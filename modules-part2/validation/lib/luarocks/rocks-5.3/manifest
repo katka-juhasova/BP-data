@@ -1,0 +1,89 @@
+commands = {}
+dependencies = {
+   validation = {
+      ["0.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   context = {
+      "validation/0.1-1"
+   },
+   message = {
+      "validation/0.1-1"
+   },
+   ["rules.absent"] = {
+      "validation/0.1-1"
+   },
+   ["rules.all"] = {
+      "validation/0.1-1"
+   },
+   ["rules.between"] = {
+      "validation/0.1-1"
+   },
+   ["rules.dummy"] = {
+      "validation/0.1-1"
+   },
+   ["rules.equals"] = {
+      "validation/0.1-1"
+   },
+   ["rules.key"] = {
+      "validation/0.1-1"
+   },
+   ["rules.never"] = {
+      "validation/0.1-1"
+   },
+   ["rules.number"] = {
+      "validation/0.1-1"
+   },
+   ["rules.numeric"] = {
+      "validation/0.1-1"
+   },
+   ["rules.positive"] = {
+      "validation/0.1-1"
+   },
+   ["rules.string"] = {
+      "validation/0.1-1"
+   },
+   validation = {
+      "validation/0.1-1"
+   }
+}
+repository = {
+   validation = {
+      ["0.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               context = "context.lua",
+               message = "message.lua",
+               ["rules.absent"] = "rules/absent.lua",
+               ["rules.all"] = "rules/all.lua",
+               ["rules.between"] = "rules/between.lua",
+               ["rules.dummy"] = "rules/dummy.lua",
+               ["rules.equals"] = "rules/equals.lua",
+               ["rules.key"] = "rules/key.lua",
+               ["rules.never"] = "rules/never.lua",
+               ["rules.number"] = "rules/number.lua",
+               ["rules.numeric"] = "rules/numeric.lua",
+               ["rules.positive"] = "rules/positive.lua",
+               ["rules.string"] = "rules/string.lua",
+               validation = "validation.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,149 @@
+{
+    "repository": "orbit",
+    "module": "makedoc.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 51,
+            "container": "other",
+            "line": 4,
+            "lines_count": 7,
+            "characters_count": 297,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 57,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 350,
+            "container": "other",
+            "line": 12,
+            "lines_count": 5,
+            "characters_count": 100,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 356,
+                    "container": "variable",
+                    "line": 12,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 452,
+            "container": "other",
+            "line": 18,
+            "lines_count": 59,
+            "characters_count": 1217,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 458,
+                    "container": "variable",
+                    "line": 18,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 8,
+            "tag": "LocalFunction",
+            "position": 1671,
+            "container": "function",
+            "line": 78,
+            "lines_count": 6,
+            "characters_count": 138,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 9,
+            "tag": "LocalFunction",
+            "position": 1811,
+            "container": "function",
+            "line": 85,
+            "lines_count": 5,
+            "characters_count": 125,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 10,
+            "tag": "LocalFunction",
+            "position": 1938,
+            "container": "function",
+            "line": 91,
+            "lines_count": 19,
+            "characters_count": 882,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 11,
+            "tag": "GenericFor",
+            "position": 2822,
+            "container": "other",
+            "line": 111,
+            "lines_count": 4,
+            "characters_count": 148,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "Assign",
+                    "position": 2853,
+                    "container": "other",
+                    "line": 112,
+                    "lines_count": 1,
+                    "characters_count": 53,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 12,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/orbit/lib/luarocks/rocks-5.3/orbit/2.2.0-2/doc/us/makedoc.lua"
+}

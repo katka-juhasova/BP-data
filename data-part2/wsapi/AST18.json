@@ -1,0 +1,66 @@
+{
+    "repository": "wsapi",
+    "module": "mock_test.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 2,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 38,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "GlobalFunction",
+            "position": 42,
+            "container": "function",
+            "line": 4,
+            "lines_count": 7,
+            "characters_count": 204,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "Do",
+            "position": 248,
+            "container": "other",
+            "line": 12,
+            "lines_count": 10,
+            "characters_count": 426,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "LocalAssign",
+                    "position": 288,
+                    "container": "other",
+                    "line": 14,
+                    "lines_count": 1,
+                    "characters_count": 41,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 5,
+                    "tag": "LocalAssign",
+                    "position": 332,
+                    "container": "other",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 57,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 5,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/wsapi/lib/luarocks/rocks-5.3/wsapi/1.7-1/tests/mock_test.lua"
+}

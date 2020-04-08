@@ -1,0 +1,68 @@
+{
+    "repository": "luacov-cobertura",
+    "module": "hook.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 115,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 15,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 121,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "GlobalFunction",
+            "position": 355,
+            "container": "function",
+            "line": 12,
+            "lines_count": 63,
+            "characters_count": 1677,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LastStat",
+            "position": 2034,
+            "container": "other",
+            "line": 76,
+            "lines_count": 1,
+            "characters_count": 11,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "_SimpleExp",
+                    "position": 2041,
+                    "container": "interface",
+                    "line": 76,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 5,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/luacov-cobertura/share/lua/5.3/luacov/hook.lua"
+}

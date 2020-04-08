@@ -1,0 +1,88 @@
+commands = {}
+dependencies = {
+   otom = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["uni-queue"] = {
+      ["1.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 1, string = "1.1"
+                  }
+               }
+            },
+            name = "otom"
+         }
+      }
+   }
+}
+modules = {
+   otom = {
+      "otom/1.1-1"
+   },
+   otom_spec = {
+      "otom/1.1-1"
+   },
+   ["uni-queue"] = {
+      "uni-queue/1.2-1"
+   },
+   ["uni-queue_spec"] = {
+      "uni-queue/1.2-1"
+   }
+}
+repository = {
+   otom = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               otom = "otom.lua",
+               otom_spec = "otom_spec.lua"
+            }
+         }
+      }
+   },
+   ["uni-queue"] = {
+      ["1.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               otom = "1.1-1"
+            },
+            modules = {
+               ["uni-queue"] = "uni-queue.lua",
+               ["uni-queue_spec"] = "uni-queue_spec.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,77 @@
+commands = {}
+dependencies = {
+   lovetoys = {
+      ["0.4.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["lovetoys.lib.middleclass"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.lovetoys"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.Component"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.Engine"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.Entity"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.EventManager"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.System"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.events.ComponentAdded"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.events.ComponentRemoved"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.namespace"] = {
+      "lovetoys/0.4.0-1"
+   },
+   ["lovetoys.src.util"] = {
+      "lovetoys/0.4.0-1"
+   }
+}
+repository = {
+   lovetoys = {
+      ["0.4.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["lovetoys.lib.middleclass"] = "lovetoys/lib/middleclass.lua",
+               ["lovetoys.lovetoys"] = "lovetoys/lovetoys.lua",
+               ["lovetoys.src.Component"] = "lovetoys/src/Component.lua",
+               ["lovetoys.src.Engine"] = "lovetoys/src/Engine.lua",
+               ["lovetoys.src.Entity"] = "lovetoys/src/Entity.lua",
+               ["lovetoys.src.EventManager"] = "lovetoys/src/EventManager.lua",
+               ["lovetoys.src.System"] = "lovetoys/src/System.lua",
+               ["lovetoys.src.events.ComponentAdded"] = "lovetoys/src/events/ComponentAdded.lua",
+               ["lovetoys.src.events.ComponentRemoved"] = "lovetoys/src/events/ComponentRemoved.lua",
+               ["lovetoys.src.namespace"] = "lovetoys/src/namespace.lua",
+               ["lovetoys.src.util"] = "lovetoys/src/util.lua"
+            }
+         }
+      }
+   }
+}

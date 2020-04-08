@@ -1,0 +1,211 @@
+{
+    "repository": "thrift",
+    "module": "THttpTransport.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 37,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 56,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 95,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 58,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 101,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 155,
+            "container": "function",
+            "line": 6,
+            "lines_count": 10,
+            "characters_count": 218,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 375,
+            "container": "function",
+            "line": 17,
+            "lines_count": 3,
+            "characters_count": 65,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 442,
+            "container": "function",
+            "line": 21,
+            "lines_count": 3,
+            "characters_count": 61,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 505,
+            "container": "function",
+            "line": 25,
+            "lines_count": 3,
+            "characters_count": 63,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 570,
+            "container": "function",
+            "line": 29,
+            "lines_count": 3,
+            "characters_count": 64,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 636,
+            "container": "function",
+            "line": 33,
+            "lines_count": 14,
+            "characters_count": 305,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 943,
+            "container": "function",
+            "line": 48,
+            "lines_count": 27,
+            "characters_count": 590,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 1535,
+            "container": "function",
+            "line": 76,
+            "lines_count": 9,
+            "characters_count": 225,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 13,
+            "tag": "GlobalFunction",
+            "position": 1762,
+            "container": "function",
+            "line": 86,
+            "lines_count": 20,
+            "characters_count": 491,
+            "children_count": 0
+        },
+        {
+            "index": 13,
+            "master_index": 14,
+            "tag": "GlobalFunction",
+            "position": 2255,
+            "container": "function",
+            "line": 107,
+            "lines_count": 6,
+            "characters_count": 154,
+            "children_count": 0
+        },
+        {
+            "index": 14,
+            "master_index": 15,
+            "tag": "GlobalFunction",
+            "position": 2411,
+            "container": "function",
+            "line": 114,
+            "lines_count": 20,
+            "characters_count": 878,
+            "children_count": 0
+        },
+        {
+            "index": 15,
+            "master_index": 16,
+            "tag": "GlobalFunction",
+            "position": 3291,
+            "container": "function",
+            "line": 135,
+            "lines_count": 8,
+            "characters_count": 216,
+            "children_count": 0
+        },
+        {
+            "index": 16,
+            "master_index": 17,
+            "tag": "LastStat",
+            "position": 3509,
+            "container": "other",
+            "line": 144,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "_SimpleExp",
+                    "position": 3516,
+                    "container": "interface",
+                    "line": 144,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 18,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/thrift/share/lua/5.1/thrift/transport/THttpTransport.lua"
+}

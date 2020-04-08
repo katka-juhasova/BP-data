@@ -1,0 +1,63 @@
+commands = {}
+dependencies = {
+   tpdu = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "bit32"
+         }
+      }
+   }
+}
+modules = {
+   tpdu = {
+      "tpdu/0.1.0-1"
+   },
+   ["tpdu.bcd"] = {
+      "tpdu/0.1.0-1"
+   },
+   ["tpdu.bit"] = {
+      "tpdu/0.1.0-1"
+   },
+   ["tpdu.bit7"] = {
+      "tpdu/0.1.0-1"
+   },
+   ["tpdu.utils"] = {
+      "tpdu/0.1.0-1"
+   }
+}
+repository = {
+   tpdu = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               tpdu = "tpdu.lua",
+               ["tpdu.bcd"] = "tpdu/bcd.lua",
+               ["tpdu.bit"] = "tpdu/bit.lua",
+               ["tpdu.bit7"] = "tpdu/bit7.lua",
+               ["tpdu.utils"] = "tpdu/utils.lua"
+            }
+         }
+      }
+   }
+}

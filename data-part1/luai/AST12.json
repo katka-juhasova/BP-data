@@ -1,0 +1,147 @@
+{
+    "repository": "luai",
+    "module": "Attribute.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 9,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "Assign",
+            "position": 20,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 27,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Var",
+                    "position": 20,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 49,
+            "container": "function",
+            "line": 4,
+            "lines_count": 8,
+            "characters_count": 161,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 212,
+            "container": "function",
+            "line": 13,
+            "lines_count": 3,
+            "characters_count": 50,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 264,
+            "container": "function",
+            "line": 17,
+            "lines_count": 7,
+            "characters_count": 113,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 379,
+            "container": "function",
+            "line": 25,
+            "lines_count": 3,
+            "characters_count": 65,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 446,
+            "container": "function",
+            "line": 29,
+            "lines_count": 9,
+            "characters_count": 169,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 617,
+            "container": "function",
+            "line": 39,
+            "lines_count": 14,
+            "characters_count": 348,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 11,
+            "tag": "LastStat",
+            "position": 967,
+            "container": "other",
+            "line": 54,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "_SimpleExp",
+                    "position": 974,
+                    "container": "interface",
+                    "line": 54,
+                    "lines_count": 1,
+                    "characters_count": 9,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 12,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/luai/share/lua/5.3/luai/Attribute.lua"
+}

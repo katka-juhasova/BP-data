@@ -1,0 +1,57 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "CORBA_IORUtil.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 180,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 186,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LastStat",
+            "position": 252,
+            "container": "other",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "_SimpleExp",
+                    "position": 259,
+                    "container": "interface",
+                    "line": 13,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sample_rtcomponent/share/lua/5.3/openrtm/CORBA_IORUtil.lua"
+}

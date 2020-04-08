@@ -1,0 +1,199 @@
+{
+    "repository": "datadumper",
+    "module": "DataDumper.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1092,
+            "container": "other",
+            "line": 26,
+            "lines_count": 14,
+            "characters_count": 256,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 1098,
+                    "container": "variable",
+                    "line": 26,
+                    "lines_count": 1,
+                    "characters_count": 15,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 1350,
+            "container": "other",
+            "line": 41,
+            "lines_count": 4,
+            "characters_count": 210,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 1356,
+                    "container": "variable",
+                    "line": 41,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 1562,
+            "container": "function",
+            "line": 46,
+            "lines_count": 16,
+            "characters_count": 334,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 1898,
+            "container": "other",
+            "line": 63,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 1904,
+                    "container": "variable",
+                    "line": 63,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 8,
+            "tag": "GenericFor",
+            "position": 1921,
+            "container": "other",
+            "line": 64,
+            "lines_count": 11,
+            "characters_count": 322,
+            "children_count": 4,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "LocalAssign",
+                    "position": 2028,
+                    "container": "other",
+                    "line": 66,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 10,
+                    "tag": "Assign",
+                    "position": 2054,
+                    "container": "other",
+                    "line": 67,
+                    "lines_count": 1,
+                    "characters_count": 16,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 11,
+                    "tag": "If",
+                    "position": 2073,
+                    "container": "other",
+                    "line": 68,
+                    "lines_count": 1,
+                    "characters_count": 33,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 12,
+                            "tag": "Assign",
+                            "position": 2094,
+                            "container": "other",
+                            "line": 68,
+                            "lines_count": 1,
+                            "characters_count": 8,
+                            "children_count": 0
+                        }
+                    ]
+                },
+                {
+                    "index": 4,
+                    "master_index": 13,
+                    "tag": "GenericFor",
+                    "position": 2109,
+                    "container": "other",
+                    "line": 69,
+                    "lines_count": 5,
+                    "characters_count": 130,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 14,
+                            "tag": "If",
+                            "position": 2136,
+                            "container": "other",
+                            "line": 70,
+                            "lines_count": 3,
+                            "characters_count": 97,
+                            "children_count": 1,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 15,
+                                    "tag": "Assign",
+                                    "position": 2202,
+                                    "container": "other",
+                                    "line": 71,
+                                    "lines_count": 1,
+                                    "characters_count": 23,
+                                    "children_count": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 16,
+            "tag": "GlobalFunction",
+            "position": 2245,
+            "container": "function",
+            "line": 76,
+            "lines_count": 161,
+            "characters_count": 5353,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 16,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/datadumper/share/lua/5.1/DataDumper.lua"
+}

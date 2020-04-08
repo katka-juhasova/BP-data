@@ -1,0 +1,57 @@
+{
+    "repository": "nvim-client",
+    "module": "_compat.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 397,
+            "container": "other",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 403,
+                    "container": "variable",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "If",
+            "position": 435,
+            "container": "other",
+            "line": 10,
+            "lines_count": 3,
+            "characters_count": 85,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Assign",
+                    "position": 466,
+                    "container": "other",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/nvim-client/share/lua/5.3/nvim/_compat.lua"
+}

@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   lobject = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lobject = {
+      "lobject/1.1-1"
+   }
+}
+repository = {
+   lobject = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lobject = "lobject.lua"
+            }
+         }
+      }
+   }
+}

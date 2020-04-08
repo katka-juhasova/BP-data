@@ -1,0 +1,125 @@
+{
+    "repository": "luaorm",
+    "module": "ChainableSubMethodsClass.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 108,
+            "container": "require",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 96,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 206,
+            "container": "require",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 45,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 253,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 259,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 492,
+            "container": "other",
+            "line": 18,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 498,
+                    "container": "variable",
+                    "line": 18,
+                    "lines_count": 1,
+                    "characters_count": 24,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 856,
+            "container": "function",
+            "line": 31,
+            "lines_count": 43,
+            "characters_count": 1158,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 2310,
+            "container": "function",
+            "line": 86,
+            "lines_count": 2,
+            "characters_count": 75,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LastStat",
+            "position": 2744,
+            "container": "other",
+            "line": 102,
+            "lines_count": 1,
+            "characters_count": 31,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "_SimpleExp",
+                    "position": 2751,
+                    "container": "interface",
+                    "line": 102,
+                    "lines_count": 1,
+                    "characters_count": 24,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/luaorm/share/lua/5.3/LuaORM/LuaORM/Util/Class/ChainableSubMethodsClass.lua"
+}

@@ -1,0 +1,223 @@
+rock_manifest = {
+   bin = {
+      ["op.cgi"] = "4dec0b53026102b40e1e36d70ee351b9",
+      ["op.fcgi"] = "33b31e3389a434e5bbd439cdfc9a8b7f",
+      orbit = "3b932c628fbbc49db8ac86a6696f023f"
+   },
+   doc = {
+      br = {
+         ["blog_config.lua"] = "ad8c4348ae0a001f711907a390ed86a5",
+         ["example.html"] = "afc6e1594ed45e7295f4d7e100d275ee",
+         ["example.md"] = "2c16bd8d35cb936c3cf0ce3ff7c521f4",
+         ["index.html"] = "17d9dfd6ef0b5264ebe1897b8385ecf6",
+         ["index.md"] = "ae935cb7c6c0bb5575036a955c471c85",
+         ["license.html"] = "47e7bd7a16e4ecdcd8514074033e39f0",
+         ["license.md"] = "89b8185849dfdcbc598771409e003620",
+         ["makedoc.lua"] = "dd8ee939253cbdc30cc24477aa9b0d59",
+         ["orbit.png"] = "1dca408ddb7aa1d6dbcb5cd3c4f81dce",
+         ["pages.html"] = "0e6e73a82af0c07e9850da23b9abfa8e",
+         ["pages.md"] = "aa72a20f9a822df1015576db9c6be009",
+         ["reference.html"] = "c10f323a10313a4368215688afc5161e",
+         ["reference.md"] = "c977ff83c848e299bf486fa00f6ce867"
+      },
+      us = {
+         ["blog_config.lua"] = "ad8c4348ae0a001f711907a390ed86a5",
+         ["example.html"] = "ef88bc9d4735b36095a1b31b4c293137",
+         ["example.md"] = "ce3c555c6102cb99f02b5c9b963bfc69",
+         ["index.html"] = "517f88e9fd53bdc889ac4699e3de85c7",
+         ["index.md"] = "5645b7bf09cce26ade85d562b62a5023",
+         ["license.html"] = "43b89094d5b8a9fd2d6ed6ef87cd4dbf",
+         ["license.md"] = "e7b819e02ac8ba1651c9a81fd0825455",
+         ["makedoc.lua"] = "de6bc2e4aa4f5234dd20a54137e12e50",
+         ["orbit.png"] = "1dca408ddb7aa1d6dbcb5cd3c4f81dce",
+         ["pages.html"] = "339e698fae9f997eead7320084400f07",
+         ["pages.md"] = "f973a5e7b344c83f96963a8e48bd0611",
+         ["reference.html"] = "913fbbc15924f02445e5288011c89547",
+         ["reference.md"] = "cb1ede6be91854a9d8ef2f2590d9f89a"
+      }
+   },
+   lua = {
+      orbit = {
+         ["cache.lua"] = "281cfc06359c91f4ef419e82ae47e562",
+         ["model.lua"] = "e71b38c6eedf395da96c31954f661f59",
+         ["ophandler.lua"] = "1e7d6353ae8e69f3d2538932660f8268",
+         ["pages.lua"] = "54f630409bc9a157f52358dc4b4d0a1d",
+         ["routes.lua"] = "4e208c5318a600e11329c6c16c6c846c"
+      },
+      ["orbit.lua"] = "e9e13c4db08783a81b9b1b004c5eeb3b"
+   },
+   ["orbit-2.2.0-2.rockspec"] = "66ce58aca4bb12308c7ba8399abae0ef",
+   samples = {
+      README = "637099e45631e12ca8849df43ca2556c",
+      blog = {
+         [".htaccess"] = "26540b340aca30a423a71ad0adaa4902",
+         ["blog.db"] = "42d87e21c3e32e248df7fb1af5d5427c",
+         ["blog.dump.sqlite3"] = "e4de44553c0098e1abb715ee0d655844",
+         ["blog.lua"] = "21dd7de69644c1099d5675b623635214",
+         ["blog.ws"] = "ce471b71e1d05d71c8cf299734637c7c",
+         ["blog_config.lua"] = "ad8c4348ae0a001f711907a390ed86a5",
+         ["blog_doc.txt"] = "389e06251cba669dac5ed2e677e19fa8",
+         ["blog_schema.mysql"] = "addafa99dd1b6f9c2977e234bdffd740",
+         ["blog_schema.sql"] = "db296e57675bdb575f98cc5627e482c6",
+         ["dump.lua"] = "e9d3efff22e112464fa4c9ae3fc4b773",
+         ["head.jpg"] = "5b626fd923aa1034f7508b65ad326ba0",
+         ["header.xcf"] = "5a3c1ca555f4b69565d83e233bdd3642",
+         ["populate_mysql.lua"] = "b0204c9d47ecf09bc19cd9714eeeea16",
+         ["random_text.lua"] = "347c83ff91d6ef0ea946ee17090b5a17",
+         ["style.css"] = "cb4b88e00fc10cacebc4a5f35dcb5d70"
+      },
+      doc = {
+         nothing = "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      hello = {
+         ["hello.lua"] = "13e2eb120dd5c6e81b1e5c1a8f8e1293",
+         ["hello.ws"] = "0f49066bd95f1fb48efc3c104c5bf772"
+      },
+      ["op.ws"] = "115e0f857b71a10e27fdd939c02c9b23",
+      pages = {
+         ["bar.op"] = "4b41549e794070e016aaf130ee94703e",
+         css = {
+            ["doc.css"] = "667de0f03e32a1b92faacffc424db377"
+         },
+         ["foo.op"] = "597d6fbbac419055d4dc833d598c8494",
+         img = {
+            ["keplerproject.gif"] = "f2e7bcf58ff91206f11f8aea001ede14",
+            ["test.jpg"] = "ba8b6a32b86b5098623673d74671b2f0"
+         },
+         ["index.op"] = "b2ed696f35776dc35da8b466eee45538",
+         ["test.op"] = "1fc41ac8e9cd09e23132440d5d544a66"
+      },
+      routes = {
+         ["hello.lua"] = "434a428bdc49907999a5c13e2577d19d"
+      },
+      songs = {
+         ["songs.cgi"] = "e17ff7cf9c58553a1bf228da0044d749",
+         ["songs.fcgi"] = "4b58207e0066399ae9218f2a9364dbb2",
+         ["songs.lua"] = "7b30aa4a3a48c5eababc9ca7be982be3",
+         ["songs.ws"] = "af8010663f70992307fb436deef1f13e"
+      },
+      sproutcore = {
+         static = {
+            sproutcore = {
+               bootstrap = {
+                  en = {}
+               },
+               datastore = {
+                  en = {}
+               },
+               desktop = {
+                  en = {}
+               },
+               empty_theme = {
+                  en = {}
+               },
+               en = {
+                  ["160fa25cc6d7adb0a0a201d11668361e03d8e9cc"] = {}
+               },
+               foundation = {
+                  en = {}
+               },
+               runtime = {
+                  en = {}
+               },
+               standard_theme = {
+                  en = {}
+               }
+            },
+            todos = {
+               en = {
+                  ee972277c11ed2d7cf0765e9c5b9738575b9248d = {
+                     ["index.html"] = "31a2f383da786f983ca56b9ab2810b9c"
+                  }
+               }
+            }
+         },
+         ["todo.db"] = "d3379eccbad6fb131f4f7aee47eb3b39",
+         ["todo.lua"] = "e8c07e6f416edf0a10fb36187b23e58c",
+         ["todo.sql"] = "3fcef1e386439b9284b56cf784872786"
+      },
+      todo = {
+         ["items.op"] = "245bc840ad157f72fe78b3ff3be1189e",
+         ["jquery-1.2.3.min.js"] = "8e1505e40506c7e0529eec7d98af9c8f",
+         ["todo.db"] = "1035021a01bc49e04aa50a914e80c5c3",
+         ["todo.op"] = "dcf2be4b6e1774dacaadf0d785d83e45",
+         ["todo.sql"] = "e30410906537c8348b7f86542f3a7cd8",
+         ["todo.ws"] = "d50669bedb247d5ec43c3bde7b5c00ba"
+      },
+      toycms = {
+         [".htaccess"] = "df4fba6184801157be67b1923e364c02",
+         ["admin_style.css"] = "7900d747839066b4e0fac71790ca4749",
+         ["blog.db"] = "93e43cdc94678be18dfb373a89f7dd81",
+         ["blog.dump.sqlite3"] = "6e274be8c01d45ce720532b837c13bb4",
+         ["cached.diff"] = "c18ab3f694b5dd8dcc047bdd4ebde9f9",
+         ["dump.lua"] = "48a18b0f1998ecac9eb7e901cc2a4a9c",
+         ["index.lua"] = "ff82216d3911ab0637c1e68deab10765",
+         ["lablua.db"] = "32b855afdf5c0b18939a76a11facb0f4",
+         ["markdown.lua"] = "099bc6dbdd1be33d5a185bcc965c6dcf",
+         ["populate_mysql_blog.lua"] = "56eb462543b6e53083da7b078b9364ce",
+         ["populate_mysql_lablua.lua"] = "c8253928d1bd5595df0ddfde9abedaf0",
+         templates = {
+            aboutanything = {
+               ["archive.html"] = "78d55b3a6c8970d7bc33ed2208f87cc6",
+               ["base_styles.css"] = "d744ae582e9ea7bc2d8c32e19f308246",
+               ["home.html"] = "78d55b3a6c8970d7bc33ed2208f87cc6",
+               ["home.xml"] = "de216eae520262b0f32dcd7704239050",
+               images = {
+                  ["head.jpg"] = "5b626fd923aa1034f7508b65ad326ba0",
+                  ["orbit.png"] = "3c4f6822f7b6ad808a27f9a8c3400b8b"
+               },
+               ["layout.html"] = "003d92f67aa8d08bbac662ca841ab7d0",
+               ["post.html"] = "045f2503613055bdb593fae7241ae235",
+               ["style.css"] = "bb119157e7e1e7d4403c822223e347a0",
+               ["theme_styles.css"] = "a4179eec15dedd77fddc9a906149369f"
+            },
+            blog = {
+               ["archive.html"] = "3477fa12778dc6ecc38799e2bfe6ed83",
+               ["home.html"] = "615f6743992b3f2fca2c1180f36c9333",
+               ["home.xml"] = "de216eae520262b0f32dcd7704239050",
+               images = {
+                  ["head.jpg"] = "5b626fd923aa1034f7508b65ad326ba0"
+               },
+               ["layout.html"] = "b444911f3cb423124e614c33200bc4d9",
+               ["post.html"] = "0224cf8777e448f190419b0994bba226",
+               ["post_pages.html"] = "ea9ff519f678a3765dd6db75fb105f40",
+               ["style.css"] = "bb119157e7e1e7d4403c822223e347a0"
+            },
+            lablua = {
+               ["home.html"] = "682c6e4ed4bafdfc56515bac5fe8f703",
+               images = {
+                  ["header.jpg"] = "5a36c69127c2e01fa3940a922320b01b",
+                  ["xavante.png"] = "e20932d3030cb12f4baa89b8c08274bb"
+               },
+               ["index_short_info.html"] = "f90b649140e133bb6ec5d7ef6ce5d388",
+               ["layout.html"] = "1ad0f4879ca627af1d76da5d160d7e2d",
+               ["list_pubs.html"] = "72b7d36f10e20f8c1e3e7b9326dc9533",
+               ["post.html"] = "ff02bc21d0bbb261be9e5f4a363942a9",
+               ["section_menu-people.html"] = "ecde367f2c69a198bca78e79f9e1aec3",
+               ["section_menu-projects.html"] = "2bddf36ee762fd1770d65f2c68953ade",
+               ["section_menu-publications.html"] = "903fc4ab4e61022039fd5439c2591132",
+               ["simple_post.html"] = "a4217daf73b228dbdc96f9984cd1d5a2",
+               styles = {
+                  ["print.css"] = "7a6d9ac1c2299316a0a1888807f06874",
+                  ["stylesheet1.css"] = "a9be80c515d6a0c8558a5d62b3e2e24f",
+                  ["stylesheet2.css"] = "84b33fa2e2b0624f8edbfdea9479e811"
+               }
+            }
+         },
+         ["toycms.cgi"] = "9ec4ef578873425d7cc8daf7fd361210",
+         ["toycms.db"] = "9a375ee2e6251dcbf8add2907c9e2c24",
+         ["toycms.fcgi"] = "1b257c60db89358a810a66dc89ea4d4e",
+         ["toycms.lua"] = "89b1c3341de01778d087cb21d0660ba5",
+         ["toycms.ws"] = "a1d7c985b1cef9e32780327b50035fdd",
+         ["toycms_admin.lua"] = "e4bf1016df70f6e424fff2bc7a4bdf28",
+         ["toycms_config.lua"] = "cf00e2f7c57008373d1d7c1d57363928",
+         ["toycms_plugins.lua"] = "609486bcd209ab91b8f760c1b76b2a35",
+         ["toycms_schema.mysql"] = "20ccbd2f3b51d00bc73539bbef4ff829",
+         ["toycms_schema.sql"] = "2752f9a8e48fc58dfe3ac56a24d410fe"
+      }
+   },
+   test = {
+      ["test_routes.lua"] = "e543f728070f12fe4455c70a43769e10",
+      ["test_sql.lua"] = "6e6544cae23eee5740e20c79d8e28fa7"
+   }
+}

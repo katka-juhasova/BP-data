@@ -1,0 +1,14 @@
+rock_manifest = {
+   lua = {
+      org = {
+         conman = {
+            parsers = {
+               url = {
+                  ["siptel.lua"] = "4ef7aa192765be6d33b8af08bbfc3205"
+               }
+            }
+         }
+      }
+   },
+   ["org.conman.parsers.url.siptel-1.0.0-1.rockspec"] = "4051cf67bb009cf5f8ea8d4f16dd7336"
+}

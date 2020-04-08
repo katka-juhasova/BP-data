@@ -1,0 +1,57 @@
+{
+    "repository": "sputnik",
+    "module": "logo.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "Var",
+            "position": 30,
+            "container": "variable",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 4,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Assign",
+                    "position": 30,
+                    "container": "other",
+                    "line": 3,
+                    "lines_count": 7,
+                    "characters_count": 146,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "Var",
+            "position": 178,
+            "container": "variable",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Assign",
+                    "position": 178,
+                    "container": "other",
+                    "line": 11,
+                    "lines_count": 68,
+                    "characters_count": 5130,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sputnik/share/lua/5.3/sputnik/node_defaults/logo.lua"
+}

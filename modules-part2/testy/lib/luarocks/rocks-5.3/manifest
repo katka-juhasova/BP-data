@@ -1,0 +1,41 @@
+commands = {
+   ["testy-5.3"] = {
+      "testy/0.2-53"
+   },
+   ["testy.lua"] = {
+      "testy/0.2-53"
+   }
+}
+dependencies = {
+   testy = {
+      ["0.2-53"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {}
+repository = {
+   testy = {
+      ["0.2-53"] = {
+         {
+            arch = "installed",
+            commands = {
+               ["testy-5.3"] = "testy-5.3",
+               ["testy.lua"] = "testy.lua"
+            },
+            dependencies = {},
+            modules = {}
+         }
+      }
+   }
+}

@@ -1,0 +1,114 @@
+{
+    "repository": "thrift",
+    "module": "seekf.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 38,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 15,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 44,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "GlobalFunction",
+            "position": 55,
+            "container": "function",
+            "line": 5,
+            "lines_count": 3,
+            "characters_count": 43,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "GlobalFunction",
+            "position": 100,
+            "container": "function",
+            "line": 9,
+            "lines_count": 4,
+            "characters_count": 86,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 188,
+            "container": "function",
+            "line": 14,
+            "lines_count": 3,
+            "characters_count": 70,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "Assign",
+            "position": 259,
+            "container": "other",
+            "line": 17,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Var",
+                    "position": 259,
+                    "container": "variable",
+                    "line": 17,
+                    "lines_count": 1,
+                    "characters_count": 10,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "LastStat",
+            "position": 283,
+            "container": "other",
+            "line": 19,
+            "lines_count": 1,
+            "characters_count": 11,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "_SimpleExp",
+                    "position": 290,
+                    "container": "interface",
+                    "line": 19,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 9,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/thrift/share/lua/5.1/vstruct/io/seekf.lua"
+}

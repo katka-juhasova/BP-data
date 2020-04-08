@@ -1,0 +1,110 @@
+{
+    "repository": "cgilua",
+    "module": "test_sql2.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 46,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 39,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 86,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 58,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 145,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 61,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 207,
+            "container": "other",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 256,
+            "container": "other",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 293,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 93,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 458,
+            "container": "other",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 27,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 8,
+            "tag": "While",
+            "position": 511,
+            "container": "other",
+            "line": 17,
+            "lines_count": 4,
+            "characters_count": 101,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "Assign",
+                    "position": 587,
+                    "container": "other",
+                    "line": 19,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 9,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/cgilua/lib/luarocks/rocks-5.3/cgilua/5.2.1-1/tests/test_sql2.lua"
+}

@@ -1,0 +1,74 @@
+commands = {}
+dependencies = {
+   crimp = {
+      ["1.0.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "md5",
+            namespace = "kikito"
+         }
+      }
+   },
+   md5 = {
+      ["1.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   crimp = {
+      "crimp/1.0.0-0"
+   },
+   md5 = {
+      "md5/1.1-0"
+   }
+}
+repository = {
+   crimp = {
+      ["1.0.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               md5 = "1.1-0"
+            },
+            modules = {
+               crimp = "crimp.lua"
+            }
+         }
+      }
+   },
+   md5 = {
+      ["1.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               md5 = "md5.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   functional = {
+      ["0.11-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["functional.init"] = {
+      "functional/0.11-0"
+   }
+}
+repository = {
+   functional = {
+      ["0.11-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["functional.init"] = "functional/init.lua"
+            }
+         }
+      }
+   }
+}

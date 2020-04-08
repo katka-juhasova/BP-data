@@ -1,0 +1,53 @@
+commands = {}
+dependencies = {
+   ["lua-gl"] = {
+      ["1.15.05.99-01"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ClickFunctions = {
+      "lua-gl/1.15.05.99-01"
+   },
+   createCanvas = {
+      "lua-gl/1.15.05.99-01"
+   },
+   ["lua-gl"] = {
+      "lua-gl/1.15.05.99-01"
+   },
+   snap = {
+      "lua-gl/1.15.05.99-01"
+   },
+   tableUtils = {
+      "lua-gl/1.15.05.99-01"
+   }
+}
+repository = {
+   ["lua-gl"] = {
+      ["1.15.05.99-01"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ClickFunctions = "ClickFunctions.lua",
+               createCanvas = "createCanvas.lua",
+               ["lua-gl"] = "lua-gl.lua",
+               snap = "snap.lua",
+               tableUtils = "tableUtils.lua"
+            }
+         }
+      }
+   }
+}

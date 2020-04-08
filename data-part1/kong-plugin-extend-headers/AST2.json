@@ -1,0 +1,33 @@
+{
+    "repository": "kong-plugin-extend-headers",
+    "module": "schema.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LastStat",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 3,
+            "characters_count": 26,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Field",
+                    "position": 14,
+                    "container": "interface",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 2,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/kong-plugin-extend-headers/share/lua/5.3/kong/plugins/extend-headers/schema.lua"
+}

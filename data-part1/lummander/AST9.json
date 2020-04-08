@@ -1,0 +1,138 @@
+{
+    "repository": "lummander",
+    "module": "chalk.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 22,
+            "characters_count": 359,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 362,
+            "container": "other",
+            "line": 24,
+            "lines_count": 1,
+            "characters_count": 47,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 368,
+                    "container": "variable",
+                    "line": 24,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 436,
+            "container": "function",
+            "line": 25,
+            "lines_count": 3,
+            "characters_count": 73,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 511,
+            "container": "other",
+            "line": 29,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 517,
+                    "container": "variable",
+                    "line": 29,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 527,
+            "container": "function",
+            "line": 30,
+            "lines_count": 19,
+            "characters_count": 656,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 1185,
+            "container": "function",
+            "line": 50,
+            "lines_count": 15,
+            "characters_count": 485,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 10,
+            "tag": "LastStat",
+            "position": 1672,
+            "container": "other",
+            "line": 66,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 11,
+                    "tag": "_SimpleExp",
+                    "position": 1679,
+                    "container": "interface",
+                    "line": 66,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lummander/share/lua/5.3/chalk.lua"
+}

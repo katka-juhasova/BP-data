@@ -1,0 +1,27 @@
+rock_manifest = {
+   doc = {
+      us = {
+         ["doc.css"] = "9f3436e564a50c354c551e699d2cff00",
+         ["examples.html"] = "9c61c84e93fa5cb8fb2694c80bd6f9d3",
+         ["index.html"] = "c70cc54ddf3f9efbdd1ed754545cb0fe",
+         ["license.html"] = "26b636ae32e73c6171b1598aaf1e9a9f",
+         ["luasoap.png"] = "3160bc959ccdb322c9e14203c9c060fe",
+         ["manual.html"] = "92ebde791e66c606916899f6b61609f8"
+      }
+   },
+   lua = {
+      soap = {
+         ["client.lua"] = "c0c426efb6ad388f6de751bf934c5ada",
+         ["server.lua"] = "e42733fa3498848e5b42145fa6018793",
+         ["wsdl.lua"] = "1e079ca7ad740cd621132cc0846844ae"
+      },
+      ["soap.lua"] = "2d6aa2dc6c78bcef6415f32463add7bb"
+   },
+   ["luasoap-4.0.1-1.rockspec"] = "7d5f947ee6030f91bbf7e619fb7c0b3e",
+   tests = {
+      ["test-http.lua"] = "a8012bc813574a55e655db54afe7ab95",
+      ["test-server.lua"] = "3148c5fd71501daff8f4e8a553805626",
+      ["test-wsdl.lua"] = "02d58b685a5aa43e60cf43064556ed96",
+      ["test.lua"] = "a0d9b86236f35ab04994afcddc1ebe12"
+   }
+}

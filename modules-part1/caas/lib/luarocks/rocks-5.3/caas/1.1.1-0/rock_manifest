@@ -1,0 +1,19 @@
+rock_manifest = {
+   bin = {
+      caas = "61e14c81702e01a9c3f5b20135e3337c"
+   },
+   ["caas-1.1.1-0.rockspec"] = "b49102879a7580b48d07ca2ef7e00e5f",
+   doc = {
+      ["Readme.md"] = "c095f8b3c19ba77c53227950ce13c9b2"
+   },
+   lua = {
+      caas = {
+         ["jobs.lua"] = "0d66ad65f53a2f31e042890625ead73e",
+         ["luvhttpd.lua"] = "22f1635e139d1d6015e44803040f1a44",
+         ["persistence.lua"] = "9aa400bbc3351063b6ddc048f16c0f3b",
+         plugin = {
+            ["prometheus.lua"] = "0529ea572ccdef9fce5ee6c50d9b58c8"
+         }
+      }
+   }
+}

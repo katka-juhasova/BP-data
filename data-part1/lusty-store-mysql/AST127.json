@@ -1,0 +1,191 @@
+{
+    "repository": "lusty-store-mysql",
+    "module": "app.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 156,
+            "container": "other",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 56,
+            "children_count": 3,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 162,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 165,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 173,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 213,
+            "container": "require",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 246,
+            "container": "require",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 30,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 278,
+            "container": "other",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 284,
+                    "container": "variable",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 431,
+            "container": "function",
+            "line": 16,
+            "lines_count": 6,
+            "characters_count": 143,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 1097,
+            "container": "function",
+            "line": 31,
+            "lines_count": 25,
+            "characters_count": 799,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 2459,
+            "container": "function",
+            "line": 69,
+            "lines_count": 12,
+            "characters_count": 445,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 3021,
+            "container": "function",
+            "line": 84,
+            "lines_count": 11,
+            "characters_count": 247,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 13,
+            "tag": "GlobalFunction",
+            "position": 3629,
+            "container": "function",
+            "line": 105,
+            "lines_count": 16,
+            "characters_count": 336,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 14,
+            "tag": "GlobalFunction",
+            "position": 6234,
+            "container": "function",
+            "line": 174,
+            "lines_count": 120,
+            "characters_count": 4207,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 15,
+            "tag": "LastStat",
+            "position": 10443,
+            "container": "other",
+            "line": 295,
+            "lines_count": 1,
+            "characters_count": 10,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "_SimpleExp",
+                    "position": 10450,
+                    "container": "interface",
+                    "line": 295,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 16,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lusty-store-mysql/share/lua/5.3/pl/app.lua"
+}

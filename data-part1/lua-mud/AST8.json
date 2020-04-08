@@ -1,0 +1,217 @@
+{
+    "repository": "lua-mud",
+    "module": "nftables.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalFunction",
+            "position": 908,
+            "container": "function",
+            "line": 31,
+            "lines_count": 18,
+            "characters_count": 764,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalFunction",
+            "position": 1674,
+            "container": "function",
+            "line": 50,
+            "lines_count": 75,
+            "characters_count": 3166,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalFunction",
+            "position": 4842,
+            "container": "function",
+            "line": 126,
+            "lines_count": 29,
+            "characters_count": 1414,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 6290,
+            "container": "other",
+            "line": 159,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 6296,
+                    "container": "variable",
+                    "line": 159,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 6305,
+            "container": "other",
+            "line": 161,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 6311,
+                    "container": "variable",
+                    "line": 161,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 6328,
+            "container": "other",
+            "line": 162,
+            "lines_count": 1,
+            "characters_count": 48,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 6334,
+                    "container": "variable",
+                    "line": 162,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 6378,
+            "container": "function",
+            "line": 164,
+            "lines_count": 6,
+            "characters_count": 146,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 6526,
+            "container": "function",
+            "line": 171,
+            "lines_count": 3,
+            "characters_count": 75,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 13,
+            "tag": "GlobalFunction",
+            "position": 6603,
+            "container": "function",
+            "line": 175,
+            "lines_count": 3,
+            "characters_count": 48,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 14,
+            "tag": "GlobalFunction",
+            "position": 6653,
+            "container": "function",
+            "line": 179,
+            "lines_count": 3,
+            "characters_count": 49,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 15,
+            "tag": "Var",
+            "position": 6704,
+            "container": "variable",
+            "line": 183,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "Assign",
+                    "position": 6704,
+                    "container": "other",
+                    "line": 183,
+                    "lines_count": 1,
+                    "characters_count": 28,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 13,
+            "master_index": 17,
+            "tag": "LastStat",
+            "position": 6734,
+            "container": "other",
+            "line": 185,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "_SimpleExp",
+                    "position": 6741,
+                    "container": "interface",
+                    "line": 185,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 18,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lua-mud/share/lua/5.3/mud/rulebuilders/nftables.lua"
+}

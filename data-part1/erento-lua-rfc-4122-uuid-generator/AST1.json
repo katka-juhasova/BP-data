@@ -1,0 +1,221 @@
+{
+    "repository": "erento-lua-rfc-4122-uuid-generator",
+    "module": "uuid4.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1091,
+            "container": "other",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 1097,
+                    "container": "variable",
+                    "line": 21,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 1113,
+            "container": "other",
+            "line": 22,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 1119,
+                    "container": "variable",
+                    "line": 22,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 1131,
+            "container": "other",
+            "line": 23,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 1137,
+                    "container": "variable",
+                    "line": 23,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 7,
+            "tag": "If",
+            "position": 1235,
+            "container": "other",
+            "line": 27,
+            "lines_count": 5,
+            "characters_count": 67,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Assign",
+                    "position": 1288,
+                    "container": "other",
+                    "line": 30,
+                    "lines_count": 1,
+                    "characters_count": 10,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 1304,
+            "container": "other",
+            "line": 33,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 1310,
+                    "container": "variable",
+                    "line": 33,
+                    "lines_count": 1,
+                    "characters_count": 1,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 11,
+            "tag": "LocalFunction",
+            "position": 1372,
+            "container": "function",
+            "line": 38,
+            "lines_count": 12,
+            "characters_count": 249,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 12,
+            "tag": "LocalFunction",
+            "position": 1625,
+            "container": "function",
+            "line": 51,
+            "lines_count": 13,
+            "characters_count": 275,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 13,
+            "tag": "LocalFunction",
+            "position": 1904,
+            "container": "function",
+            "line": 65,
+            "lines_count": 9,
+            "characters_count": 198,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 14,
+            "tag": "LocalFunction",
+            "position": 2106,
+            "container": "function",
+            "line": 75,
+            "lines_count": 42,
+            "characters_count": 1113,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 15,
+            "tag": "Var",
+            "position": 3223,
+            "container": "variable",
+            "line": 118,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "Assign",
+                    "position": 3223,
+                    "container": "other",
+                    "line": 118,
+                    "lines_count": 1,
+                    "characters_count": 19,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 11,
+            "master_index": 17,
+            "tag": "LastStat",
+            "position": 3243,
+            "container": "other",
+            "line": 119,
+            "lines_count": 1,
+            "characters_count": 8,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "_SimpleExp",
+                    "position": 3250,
+                    "container": "interface",
+                    "line": 119,
+                    "lines_count": 1,
+                    "characters_count": 1,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 18,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/erento-lua-rfc-4122-uuid-generator/share/lua/5.3/uuid4.lua"
+}

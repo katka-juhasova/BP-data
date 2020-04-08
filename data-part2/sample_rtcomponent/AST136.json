@@ -1,0 +1,164 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "BufferBase.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 279,
+            "container": "other",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 285,
+                    "container": "variable",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 10,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 342,
+            "container": "require",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 51,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "Var",
+            "position": 462,
+            "container": "variable",
+            "line": 18,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Assign",
+                    "position": 462,
+                    "container": "other",
+                    "line": 18,
+                    "lines_count": 93,
+                    "characters_count": 2860,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 6,
+                            "tag": "Function",
+                            "position": 479,
+                            "container": "function",
+                            "line": 18,
+                            "lines_count": 93,
+                            "characters_count": 2843,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 7,
+            "tag": "Assign",
+            "position": 3324,
+            "container": "other",
+            "line": 112,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Var",
+                    "position": 3324,
+                    "container": "variable",
+                    "line": 112,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "Assign",
+            "position": 3425,
+            "container": "other",
+            "line": 116,
+            "lines_count": 5,
+            "characters_count": 121,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Var",
+                    "position": 3425,
+                    "container": "variable",
+                    "line": 116,
+                    "lines_count": 1,
+                    "characters_count": 25,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 11,
+                    "tag": "Function",
+                    "position": 3453,
+                    "container": "function",
+                    "line": 116,
+                    "lines_count": 5,
+                    "characters_count": 93,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 12,
+            "tag": "LastStat",
+            "position": 3550,
+            "container": "other",
+            "line": 124,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "_SimpleExp",
+                    "position": 3557,
+                    "container": "interface",
+                    "line": 124,
+                    "lines_count": 1,
+                    "characters_count": 10,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 13,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sample_rtcomponent/share/lua/5.3/openrtm/BufferBase.lua"
+}

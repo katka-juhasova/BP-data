@@ -1,0 +1,100 @@
+commands = {}
+dependencies = {
+   lcurses = {
+      ["9.0.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   vinspect = {
+      ["0.0.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     9, 0, 0, string = "9.0.0"
+                  }
+               }
+            },
+            name = "lcurses"
+         }
+      }
+   }
+}
+modules = {
+   curses = {
+      "lcurses/9.0.0-1"
+   },
+   curses_c = {
+      "lcurses/9.0.0-1"
+   },
+   vinspect = {
+      "vinspect/0.0.2-1"
+   },
+   ["vinspect.mouse"] = {
+      "vinspect/0.0.2-1"
+   }
+}
+repository = {
+   lcurses = {
+      ["9.0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               curses = "curses.lua",
+               curses_c = "curses_c.so"
+            }
+         }
+      }
+   },
+   vinspect = {
+      ["0.0.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lcurses = "9.0.0-1"
+            },
+            modules = {
+               vinspect = "vinspect.lua",
+               ["vinspect.mouse"] = "vinspect/mouse.so"
+            }
+         }
+      }
+   }
+}

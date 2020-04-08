@@ -1,0 +1,195 @@
+{
+    "repository": "openrtm",
+    "module": "ExecutionContextProfile.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 232,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 238,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 333,
+            "container": "require",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 360,
+            "container": "require",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 45,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 406,
+            "container": "require",
+            "line": 16,
+            "lines_count": 1,
+            "characters_count": 39,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 446,
+            "container": "require",
+            "line": 17,
+            "lines_count": 1,
+            "characters_count": 53,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 501,
+            "container": "other",
+            "line": 19,
+            "lines_count": 1,
+            "characters_count": 31,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 507,
+                    "container": "variable",
+                    "line": 19,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 535,
+            "container": "other",
+            "line": 22,
+            "lines_count": 10,
+            "characters_count": 261,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 541,
+                    "container": "variable",
+                    "line": 22,
+                    "lines_count": 1,
+                    "characters_count": 16,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 11,
+                    "tag": "Function",
+                    "position": 560,
+                    "container": "function",
+                    "line": 22,
+                    "lines_count": 10,
+                    "characters_count": 236,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 12,
+            "tag": "Assign",
+            "position": 989,
+            "container": "other",
+            "line": 36,
+            "lines_count": 162,
+            "characters_count": 4926,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "Var",
+                    "position": 989,
+                    "container": "variable",
+                    "line": 36,
+                    "lines_count": 1,
+                    "characters_count": 27,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 14,
+                    "tag": "Function",
+                    "position": 1019,
+                    "container": "function",
+                    "line": 36,
+                    "lines_count": 162,
+                    "characters_count": 4896,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "master_index": 15,
+            "tag": "LastStat",
+            "position": 5918,
+            "container": "other",
+            "line": 200,
+            "lines_count": 1,
+            "characters_count": 30,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "_SimpleExp",
+                    "position": 5925,
+                    "container": "interface",
+                    "line": 200,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 16,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/openrtm/share/lua/5.3/openrtm/ExecutionContextProfile.lua"
+}

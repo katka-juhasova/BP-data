@@ -1,0 +1,44 @@
+{
+    "repository": "vstruct",
+    "module": "List.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 39,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 42,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "_SimpleExp",
+                    "position": 49,
+                    "container": "interface",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 3,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/vstruct/share/lua/5.3/vstruct/ast/List.lua"
+}

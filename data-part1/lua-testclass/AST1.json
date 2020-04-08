@@ -1,0 +1,101 @@
+{
+    "repository": "lua-testclass",
+    "module": "Find.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 16,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "GlobalFunction",
+            "position": 214,
+            "container": "function",
+            "line": 9,
+            "lines_count": 25,
+            "characters_count": 670,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 1083,
+            "container": "function",
+            "line": 40,
+            "lines_count": 9,
+            "characters_count": 256,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 1363,
+            "container": "function",
+            "line": 51,
+            "lines_count": 3,
+            "characters_count": 84,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LastStat",
+            "position": 1449,
+            "container": "other",
+            "line": 55,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "_SimpleExp",
+                    "position": 1456,
+                    "container": "interface",
+                    "line": 55,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 8,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lua-testclass/share/lua/5.3/File/Find.lua"
+}

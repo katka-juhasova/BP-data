@@ -1,0 +1,19 @@
+rock_manifest = {
+   ["datafile-0.6-1.rockspec"] = "4649384413676b6108829b101efbf3d4",
+   doc = {
+      LICENSE = "d3bf3c07c9585e444c8010120cf66618",
+      ["README.md"] = "090a8550f7e330beacfed8671d7b4b0b"
+   },
+   lua = {
+      datafile = {
+         openers = {
+            ["caller.lua"] = "cc56c21464aa8bcf2c008fbb06f45250",
+            ["luarocks.lua"] = "f592e503732673c6626f240679ab49ca",
+            ["unix.lua"] = "ae629c6f6613741815c3583f25b5886f",
+            ["xdg.lua"] = "5a239ba438c15e60bb8bac04b5e8092b"
+         },
+         ["util.lua"] = "fae7490819d51da0958c3a57ed30ac12"
+      },
+      ["datafile.lua"] = "71613a7e623cb5c2402c28ee291ac780"
+   }
+}

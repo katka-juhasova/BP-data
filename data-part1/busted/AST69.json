@@ -1,0 +1,105 @@
+{
+    "repository": "busted",
+    "module": "standalone_loader.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 5,
+            "characters_count": 156,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 3,
+                    "tag": "Function",
+                    "position": 18,
+                    "container": "function",
+                    "line": 1,
+                    "lines_count": 5,
+                    "characters_count": 139,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 4,
+            "tag": "LastStat",
+            "position": 159,
+            "container": "other",
+            "line": 7,
+            "lines_count": 22,
+            "characters_count": 526,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Function",
+                    "position": 166,
+                    "container": "interface",
+                    "line": 7,
+                    "lines_count": 22,
+                    "characters_count": 519,
+                    "children_count": 3,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 6,
+                            "tag": "LocalAssign",
+                            "position": 185,
+                            "container": "other",
+                            "line": 8,
+                            "lines_count": 18,
+                            "characters_count": 470,
+                            "children_count": 1,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 7,
+                                    "tag": "Function",
+                                    "position": 209,
+                                    "container": "function",
+                                    "line": 8,
+                                    "lines_count": 18,
+                                    "characters_count": 446,
+                                    "children_count": 0
+                                }
+                            ]
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 8,
+                            "tag": "LastStat",
+                            "position": 659,
+                            "container": "other",
+                            "line": 27,
+                            "lines_count": 1,
+                            "characters_count": 22,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 8,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/busted/share/lua/5.3/busted/modules/standalone_loader.lua"
+}

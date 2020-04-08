@@ -1,0 +1,25 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "e9adb59d92d5859e15e256e3cee0e3ca",
+      ["README.md"] = "5b7b90a90bea54acde1a8b3bb666d2f5",
+      readmegen = "d9d87d645d030fe004d8a9eb95173674"
+   },
+   lua = {
+      luakatsu = {
+         bin = {
+            ["find_birthday.lua"] = "11044016269a1ab295069531437bca12",
+            ["find_keyword.lua"] = "fc40d37805679384c153bc6a4d04e020",
+            ["makemt.lua"] = "9aa3978a63eb8eca33ffda891cd8ddac",
+            ["tag.lua"] = "c17bff54c9ff41989cdfada38f1d5adc"
+         },
+         lib = {
+            ["groups.lua"] = "52b9e32dced66369c462ecd11cde1cc8",
+            ["idols.lua"] = "5c93ea2df3c371e7483d67bcca77c4e1"
+         },
+         ["local.lua"] = "e2b46aa738aa1249cdbd2ece2f340fd4"
+      },
+      ["luakatsu.lua"] = "f38a1adb378a279b606628032380dbbe",
+      ["uakatsu.lua"] = "2d5aa0b660056403c143aa641de0fa15"
+   },
+   ["luakatsu-4.0-0.rockspec"] = "f03807526b5664f3bca09f129e930af5"
+}

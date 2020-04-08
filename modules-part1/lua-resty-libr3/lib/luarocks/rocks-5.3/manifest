@@ -1,0 +1,29 @@
+commands = {}
+dependencies = {
+   ["lua-resty-libr3"] = {
+      ["1.2-0"] = {}
+   }
+}
+modules = {
+   libr3 = {
+      "lua-resty-libr3/1.2-0"
+   },
+   ["resty.r3"] = {
+      "lua-resty-libr3/1.2-0"
+   }
+}
+repository = {
+   ["lua-resty-libr3"] = {
+      ["1.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               libr3 = "libr3.so",
+               ["resty.r3"] = "resty/r3.lua"
+            }
+         }
+      }
+   }
+}

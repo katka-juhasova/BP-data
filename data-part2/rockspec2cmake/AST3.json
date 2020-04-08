@@ -1,0 +1,101 @@
+{
+    "repository": "rockspec2cmake",
+    "module": "r2cmake.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 40,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 42,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalFunction",
+            "position": 81,
+            "container": "function",
+            "line": 4,
+            "lines_count": 17,
+            "characters_count": 453,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "If",
+            "position": 536,
+            "container": "other",
+            "line": 22,
+            "lines_count": 17,
+            "characters_count": 437,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "LocalAssign",
+                    "position": 620,
+                    "container": "other",
+                    "line": 25,
+                    "lines_count": 1,
+                    "characters_count": 38,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 6,
+                    "tag": "If",
+                    "position": 664,
+                    "container": "other",
+                    "line": 27,
+                    "lines_count": 11,
+                    "characters_count": 305,
+                    "children_count": 2,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 7,
+                            "tag": "LocalAssign",
+                            "position": 767,
+                            "container": "other",
+                            "line": 30,
+                            "lines_count": 1,
+                            "characters_count": 53,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 8,
+                            "tag": "If",
+                            "position": 830,
+                            "container": "other",
+                            "line": 32,
+                            "lines_count": 5,
+                            "characters_count": 130,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 8,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/rockspec2cmake/share/lua/5.3/r2cmake.lua"
+}

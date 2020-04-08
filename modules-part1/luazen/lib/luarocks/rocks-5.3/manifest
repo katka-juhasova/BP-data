@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   luazen = {
+      ["0.15-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luazen = {
+      "luazen/0.15-1"
+   }
+}
+repository = {
+   luazen = {
+      ["0.15-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luazen = "luazen.so"
+            }
+         }
+      }
+   }
+}

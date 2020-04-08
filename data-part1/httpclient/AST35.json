@@ -1,0 +1,123 @@
+{
+    "repository": "httpclient",
+    "module": "forward.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 31,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 68,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 74,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "If",
+            "position": 152,
+            "container": "other",
+            "line": 6,
+            "lines_count": 5,
+            "characters_count": 111,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 319,
+            "container": "function",
+            "line": 13,
+            "lines_count": 14,
+            "characters_count": 361,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GenericFor",
+            "position": 721,
+            "container": "other",
+            "line": 29,
+            "lines_count": 32,
+            "characters_count": 1275,
+            "children_count": 3,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "LocalAssign",
+                    "position": 789,
+                    "container": "other",
+                    "line": 31,
+                    "lines_count": 1,
+                    "characters_count": 75,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "LocalAssign",
+                    "position": 940,
+                    "container": "other",
+                    "line": 34,
+                    "lines_count": 1,
+                    "characters_count": 36,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 9,
+                    "tag": "Function",
+                    "position": 1178,
+                    "container": "function",
+                    "line": 39,
+                    "lines_count": 21,
+                    "characters_count": 813,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 10,
+            "tag": "While",
+            "position": 2033,
+            "container": "other",
+            "line": 63,
+            "lines_count": 3,
+            "characters_count": 33,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/httpclient/lib/luarocks/rocks-5.3/luasocket/3.0rc1-2/etc/forward.lua"
+}

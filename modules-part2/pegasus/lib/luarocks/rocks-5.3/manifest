@@ -1,0 +1,284 @@
+commands = {}
+dependencies = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   lzlib = {
+      ["0.4.1.53-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   mimetypes = {
+      ["1.0.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   pegasus = {
+      ["0.9.4-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 0, 0, revision = 1, string = "1.0.0-1"
+                  }
+               }
+            },
+            name = "mimetypes"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 1, 0, revision = 0, string = "0.1.0-0"
+                  }
+               }
+            },
+            name = "luasocket"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 6, string = "1.6"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 4, 1, 53, revision = 1, string = "0.4.1.53-1"
+                  }
+               }
+            },
+            name = "lzlib"
+         }
+      }
+   }
+}
+modules = {
+   gzip = {
+      "lzlib/0.4.1.53-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   ltn12 = {
+      "luasocket/3.0rc1-2"
+   },
+   mime = {
+      "luasocket/3.0rc1-2"
+   },
+   ["mime.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   mimetypes = {
+      "mimetypes/1.0.0-2"
+   },
+   ["pegasus.compress"] = {
+      "pegasus/0.9.4-1"
+   },
+   ["pegasus.file"] = {
+      "pegasus/0.9.4-1"
+   },
+   ["pegasus.handler"] = {
+      "pegasus/0.9.4-1"
+   },
+   ["pegasus.init"] = {
+      "pegasus/0.9.4-1"
+   },
+   ["pegasus.request"] = {
+      "pegasus/0.9.4-1"
+   },
+   ["pegasus.response"] = {
+      "pegasus/0.9.4-1"
+   },
+   socket = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.core"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.ftp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.headers"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.http"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.serial"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.smtp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.tp"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.unix"] = {
+      "luasocket/3.0rc1-2"
+   },
+   ["socket.url"] = {
+      "luasocket/3.0rc1-2"
+   },
+   zlib = {
+      "lzlib/0.4.1.53-1"
+   }
+}
+repository = {
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   luasocket = {
+      ["3.0rc1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ltn12 = "ltn12.lua",
+               mime = "mime.lua",
+               ["mime.core"] = "mime/core.so",
+               socket = "socket.lua",
+               ["socket.core"] = "socket/core.so",
+               ["socket.ftp"] = "socket/ftp.lua",
+               ["socket.headers"] = "socket/headers.lua",
+               ["socket.http"] = "socket/http.lua",
+               ["socket.serial"] = "socket/serial.so",
+               ["socket.smtp"] = "socket/smtp.lua",
+               ["socket.tp"] = "socket/tp.lua",
+               ["socket.unix"] = "socket/unix.so",
+               ["socket.url"] = "socket/url.lua"
+            }
+         }
+      }
+   },
+   lzlib = {
+      ["0.4.1.53-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               gzip = "gzip.lua",
+               zlib = "zlib.so"
+            }
+         }
+      }
+   },
+   mimetypes = {
+      ["1.0.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               mimetypes = "mimetypes.lua"
+            }
+         }
+      }
+   },
+   pegasus = {
+      ["0.9.4-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luafilesystem = "1.7.0-2",
+               luasocket = "3.0rc1-2",
+               lzlib = "0.4.1.53-1",
+               mimetypes = "1.0.0-2"
+            },
+            modules = {
+               ["pegasus.compress"] = "pegasus/compress.lua",
+               ["pegasus.file"] = "pegasus/file.lua",
+               ["pegasus.handler"] = "pegasus/handler.lua",
+               ["pegasus.init"] = "pegasus/init.lua",
+               ["pegasus.request"] = "pegasus/request.lua",
+               ["pegasus.response"] = "pegasus/response.lua"
+            }
+         }
+      }
+   }
+}

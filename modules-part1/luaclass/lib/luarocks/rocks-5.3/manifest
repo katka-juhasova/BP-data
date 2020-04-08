@@ -1,0 +1,43 @@
+commands = {}
+dependencies = {
+   luaclass = {
+      ["2.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   class = {
+      "luaclass/2.0-0"
+   }
+}
+repository = {
+   luaclass = {
+      ["2.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               class = "class.lua"
+            }
+         }
+      }
+   }
+}

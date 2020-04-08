@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   cctea = {
+      ["0.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   cctea = {
+      "cctea/0.1.0-1"
+   }
+}
+repository = {
+   cctea = {
+      ["0.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               cctea = "cctea.so"
+            }
+         }
+      }
+   }
+}

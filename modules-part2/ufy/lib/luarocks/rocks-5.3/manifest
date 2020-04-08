@@ -1,0 +1,264 @@
+commands = {
+   ufy = {
+      "ufy/1.1.0-1"
+   }
+}
+dependencies = {
+   datafile = {
+      ["0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-path"] = {
+      ["0.3.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ufy = {
+      ["1.1.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 3, string = "0.3"
+                  }
+               }
+            },
+            name = "datafile"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 6, 3, string = "1.6.3"
+                  }
+               }
+            },
+            name = "luafilesystem"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 3, 0, string = "0.3.0"
+                  }
+               }
+            },
+            name = "lua-path"
+         }
+      }
+   }
+}
+modules = {
+   datafile = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.caller"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.luarocks"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.unix"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.openers.xdg"] = {
+      "datafile/0.6-1"
+   },
+   ["datafile.util"] = {
+      "datafile/0.6-1"
+   },
+   lfs = {
+      "luafilesystem/1.7.0-2"
+   },
+   path = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.findfile"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.lfs.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.lfs.impl.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.module"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.syscall.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.types"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.utils"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.alien.wcs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.types"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.ffi.wcs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.fs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["path.win32.wcs"] = {
+      "lua-path/0.3.1-1"
+   },
+   ["ufy.fonts"] = {
+      "ufy/1.1.0-1"
+   },
+   ["ufy.init"] = {
+      "ufy/1.1.0-1"
+   },
+   ["ufy.loader"] = {
+      "ufy/1.1.0-1"
+   }
+}
+repository = {
+   datafile = {
+      ["0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               datafile = "datafile.lua",
+               ["datafile.openers.caller"] = "datafile/openers/caller.lua",
+               ["datafile.openers.luarocks"] = "datafile/openers/luarocks.lua",
+               ["datafile.openers.unix"] = "datafile/openers/unix.lua",
+               ["datafile.openers.xdg"] = "datafile/openers/xdg.lua",
+               ["datafile.util"] = "datafile/util.lua"
+            }
+         }
+      }
+   },
+   ["lua-path"] = {
+      ["0.3.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               path = "path.lua",
+               ["path.findfile"] = "path/findfile.lua",
+               ["path.fs"] = "path/fs.lua",
+               ["path.lfs.fs"] = "path/lfs/fs.lua",
+               ["path.lfs.impl.fs"] = "path/lfs/impl/fs.lua",
+               ["path.module"] = "path/module.lua",
+               ["path.syscall.fs"] = "path/syscall/fs.lua",
+               ["path.win32.alien.fs"] = "path/win32/alien/fs.lua",
+               ["path.win32.alien.types"] = "path/win32/alien/types.lua",
+               ["path.win32.alien.utils"] = "path/win32/alien/utils.lua",
+               ["path.win32.alien.wcs"] = "path/win32/alien/wcs.lua",
+               ["path.win32.ffi.fs"] = "path/win32/ffi/fs.lua",
+               ["path.win32.ffi.types"] = "path/win32/ffi/types.lua",
+               ["path.win32.ffi.wcs"] = "path/win32/ffi/wcs.lua",
+               ["path.win32.fs"] = "path/win32/fs.lua",
+               ["path.win32.wcs"] = "path/win32/wcs.lua"
+            }
+         }
+      }
+   },
+   luafilesystem = {
+      ["1.7.0-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lfs = "lfs.so"
+            }
+         }
+      }
+   },
+   ufy = {
+      ["1.1.0-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               ufy = "ufy"
+            },
+            dependencies = {
+               datafile = "0.6-1",
+               ["lua-path"] = "0.3.1-1",
+               luafilesystem = "1.7.0-2"
+            },
+            modules = {
+               ["ufy.fonts"] = "ufy/fonts.lua",
+               ["ufy.init"] = "ufy/init.lua",
+               ["ufy.loader"] = "ufy/loader.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   ["lua-ezlib"] = {
+      ["0.2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ezlib = {
+      "lua-ezlib/0.2.0-1"
+   }
+}
+repository = {
+   ["lua-ezlib"] = {
+      ["0.2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ezlib = "ezlib.so"
+            }
+         }
+      }
+   }
+}

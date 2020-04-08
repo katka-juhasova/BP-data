@@ -1,0 +1,86 @@
+{
+    "repository": "orbit",
+    "module": "hello.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 44,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 78,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "Function",
+            "position": 124,
+            "container": "function",
+            "line": 8,
+            "lines_count": 3,
+            "characters_count": 94,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "Function",
+            "position": 246,
+            "container": "function",
+            "line": 12,
+            "lines_count": 3,
+            "characters_count": 85,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 5,
+            "tag": "Function",
+            "position": 370,
+            "container": "function",
+            "line": 16,
+            "lines_count": 3,
+            "characters_count": 86,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 6,
+            "tag": "Function",
+            "position": 488,
+            "container": "function",
+            "line": 20,
+            "lines_count": 3,
+            "characters_count": 97,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 7,
+            "tag": "LastStat",
+            "position": 606,
+            "container": "other",
+            "line": 24,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 7,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/orbit/lib/luarocks/rocks-5.3/orbit/2.2.0-2/samples/routes/hello.lua"
+}

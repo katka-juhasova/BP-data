@@ -1,0 +1,1 @@
+Aikatsu = require "luakatsu.local"

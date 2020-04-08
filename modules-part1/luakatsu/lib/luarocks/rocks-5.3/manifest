@@ -1,0 +1,75 @@
+commands = {}
+dependencies = {
+   luakatsu = {
+      ["4.0-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luakatsu = {
+      "luakatsu/4.0-0"
+   },
+   ["luakatsu.bin.find_birthday"] = {
+      "luakatsu/4.0-0"
+   },
+   ["luakatsu.bin.find_keyword"] = {
+      "luakatsu/4.0-0"
+   },
+   ["luakatsu.bin.makemt"] = {
+      "luakatsu/4.0-0"
+   },
+   ["luakatsu.bin.tag"] = {
+      "luakatsu/4.0-0"
+   },
+   ["luakatsu.lib.groups"] = {
+      "luakatsu/4.0-0"
+   },
+   ["luakatsu.lib.idols"] = {
+      "luakatsu/4.0-0"
+   },
+   ["luakatsu.local"] = {
+      "luakatsu/4.0-0"
+   },
+   uakatsu = {
+      "luakatsu/4.0-0"
+   }
+}
+repository = {
+   luakatsu = {
+      ["4.0-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luakatsu = "luakatsu.lua",
+               ["luakatsu.bin.find_birthday"] = "luakatsu/bin/find_birthday.lua",
+               ["luakatsu.bin.find_keyword"] = "luakatsu/bin/find_keyword.lua",
+               ["luakatsu.bin.makemt"] = "luakatsu/bin/makemt.lua",
+               ["luakatsu.bin.tag"] = "luakatsu/bin/tag.lua",
+               ["luakatsu.lib.groups"] = "luakatsu/lib/groups.lua",
+               ["luakatsu.lib.idols"] = "luakatsu/lib/idols.lua",
+               ["luakatsu.local"] = "luakatsu/local.lua",
+               uakatsu = "uakatsu.lua"
+            }
+         }
+      }
+   }
+}

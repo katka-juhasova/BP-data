@@ -1,0 +1,138 @@
+{
+    "repository": "json2lua",
+    "module": "misc.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 410,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 416,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 449,
+            "container": "other",
+            "line": 12,
+            "lines_count": 5,
+            "characters_count": 194,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 455,
+                    "container": "variable",
+                    "line": 12,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 5,
+                    "tag": "Function",
+                    "position": 471,
+                    "container": "function",
+                    "line": 12,
+                    "lines_count": 5,
+                    "characters_count": 172,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 665,
+            "container": "other",
+            "line": 19,
+            "lines_count": 14,
+            "characters_count": 486,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 671,
+                    "container": "variable",
+                    "line": 19,
+                    "lines_count": 1,
+                    "characters_count": 19,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "Function",
+                    "position": 693,
+                    "container": "function",
+                    "line": 19,
+                    "lines_count": 14,
+                    "characters_count": 458,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 9,
+            "tag": "LastStat",
+            "position": 1153,
+            "container": "other",
+            "line": 34,
+            "lines_count": 5,
+            "characters_count": 88,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Field",
+                    "position": 1164,
+                    "container": "interface",
+                    "line": 36,
+                    "lines_count": 1,
+                    "characters_count": 29,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 11,
+                    "tag": "Field",
+                    "position": 1197,
+                    "container": "interface",
+                    "line": 37,
+                    "lines_count": 1,
+                    "characters_count": 41,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/json2lua/share/lua/5.3/lua-nucleo/misc.lua"
+}

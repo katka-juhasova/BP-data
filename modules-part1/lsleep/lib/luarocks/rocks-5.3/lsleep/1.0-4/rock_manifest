@@ -1,0 +1,20 @@
+rock_manifest = {
+   doc = {
+      classes = {
+         ["lsleep.html"] = "11a7bb11903448f90356b0550d819cda"
+      },
+      ["index.html"] = "789e4e0181fb8de152f7cad391dc2baa",
+      ["ldoc.css"] = "ca8708a2582297c21286b80212aec0f5",
+      ["ldoc_pale.css"] = "9bf8097114673183aece60894158824b",
+      topics = {
+         ["readme.md.html"] = "f12b68a1a5142269b96f190eb41d467d"
+      }
+   },
+   lib = {
+      ["lsleep.so"] = "14196bc750cedd672dea9f06f001adaa"
+   },
+   ["lsleep-1.0-4.rockspec"] = "5dbddc6dc88424944c96b1b3c665c98f",
+   test = {
+      ["test_lsleep.lua"] = "064aa110f658eab5e2dcfebacca48544"
+   }
+}

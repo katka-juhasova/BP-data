@@ -1,0 +1,90 @@
+{
+    "repository": "lnet",
+    "module": "lzw.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "Var",
+            "position": 149,
+            "container": "variable",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 15,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Assign",
+                    "position": 149,
+                    "container": "other",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 20,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "GlobalFunction",
+            "position": 170,
+            "container": "function",
+            "line": 7,
+            "lines_count": 18,
+            "characters_count": 440,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "GlobalFunction",
+            "position": 611,
+            "container": "function",
+            "line": 25,
+            "lines_count": 23,
+            "characters_count": 455,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 1067,
+            "container": "function",
+            "line": 48,
+            "lines_count": 24,
+            "characters_count": 541,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LastStat",
+            "position": 1610,
+            "container": "other",
+            "line": 73,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "_SimpleExp",
+                    "position": 1617,
+                    "container": "interface",
+                    "line": 73,
+                    "lines_count": 1,
+                    "characters_count": 15,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 7,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lnet/share/lua/5.3/bin/compressors/lzw.lua"
+}

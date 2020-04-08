@@ -1,0 +1,44 @@
+{
+    "repository": "lj2procfs",
+    "module": "io.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalFunction",
+            "position": 2,
+            "container": "function",
+            "line": 2,
+            "lines_count": 11,
+            "characters_count": 194,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 198,
+            "container": "other",
+            "line": 14,
+            "lines_count": 3,
+            "characters_count": 30,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Field",
+                    "position": 208,
+                    "container": "interface",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 3,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lj2procfs/share/lua/5.1/lj2procfs/codecs/process/io.lua"
+}

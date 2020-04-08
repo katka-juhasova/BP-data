@@ -1,0 +1,90 @@
+{
+    "repository": "eaw-abstraction-layer",
+    "module": "planet.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 61,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 63,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 66,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 130,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 136,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 165,
+            "container": "function",
+            "line": 6,
+            "lines_count": 18,
+            "characters_count": 497,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LastStat",
+            "position": 664,
+            "container": "other",
+            "line": 25,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "_SimpleExp",
+                    "position": 671,
+                    "container": "interface",
+                    "line": 25,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 7,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/eaw-abstraction-layer/share/lua/5.3/eaw-abstraction-layer/types/planet.lua"
+}

@@ -1,0 +1,123 @@
+{
+    "repository": "lua-messagepack",
+    "module": "12-metatable.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 48,
+            "container": "require",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 82,
+            "container": "other",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "Assign",
+            "position": 108,
+            "container": "other",
+            "line": 11,
+            "lines_count": 11,
+            "characters_count": 314,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Function",
+                    "position": 130,
+                    "container": "function",
+                    "line": 11,
+                    "lines_count": 11,
+                    "characters_count": 292,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "Assign",
+            "position": 424,
+            "container": "other",
+            "line": 23,
+            "lines_count": 8,
+            "characters_count": 202,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Function",
+                    "position": 439,
+                    "container": "function",
+                    "line": 23,
+                    "lines_count": 8,
+                    "characters_count": 187,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 628,
+            "container": "other",
+            "line": 32,
+            "lines_count": 1,
+            "characters_count": 72,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "Assign",
+            "position": 717,
+            "container": "other",
+            "line": 34,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "Assign",
+            "position": 797,
+            "container": "other",
+            "line": 38,
+            "lines_count": 1,
+            "characters_count": 68,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 10,
+            "tag": "Assign",
+            "position": 879,
+            "container": "other",
+            "line": 40,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lua-messagepack/lib/luarocks/rocks-5.3/lua-messagepack/0.5.2-1/test/12-metatable.lua"
+}

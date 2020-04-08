@@ -1,0 +1,138 @@
+{
+    "repository": "alnbox",
+    "module": "makeAlignment.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LastStat",
+            "position": 134,
+            "container": "other",
+            "line": 5,
+            "lines_count": 18,
+            "characters_count": 604,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Function",
+                    "position": 141,
+                    "container": "interface",
+                    "line": 5,
+                    "lines_count": 18,
+                    "characters_count": 597,
+                    "children_count": 4,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 3,
+                            "tag": "LocalAssign",
+                            "position": 190,
+                            "container": "other",
+                            "line": 6,
+                            "lines_count": 2,
+                            "characters_count": 71,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 4,
+                            "tag": "GenericFor",
+                            "position": 266,
+                            "container": "other",
+                            "line": 8,
+                            "lines_count": 13,
+                            "characters_count": 447,
+                            "children_count": 5,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 5,
+                                    "tag": "LocalAssign",
+                                    "position": 389,
+                                    "container": "other",
+                                    "line": 11,
+                                    "lines_count": 1,
+                                    "characters_count": 28,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 6,
+                                    "tag": "Assign",
+                                    "position": 465,
+                                    "container": "other",
+                                    "line": 13,
+                                    "lines_count": 1,
+                                    "characters_count": 32,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 3,
+                                    "master_index": 7,
+                                    "tag": "LocalAssign",
+                                    "position": 506,
+                                    "container": "other",
+                                    "line": 14,
+                                    "lines_count": 1,
+                                    "characters_count": 16,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 4,
+                                    "master_index": 8,
+                                    "tag": "If",
+                                    "position": 531,
+                                    "container": "other",
+                                    "line": 15,
+                                    "lines_count": 3,
+                                    "characters_count": 85,
+                                    "children_count": 1,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 9,
+                                            "tag": "Assign",
+                                            "position": 568,
+                                            "container": "other",
+                                            "line": 16,
+                                            "lines_count": 1,
+                                            "characters_count": 36,
+                                            "children_count": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 5,
+                                    "master_index": 10,
+                                    "tag": "Assign",
+                                    "position": 665,
+                                    "container": "other",
+                                    "line": 19,
+                                    "lines_count": 1,
+                                    "characters_count": 40,
+                                    "children_count": 0
+                                }
+                            ]
+                        },
+                        {
+                            "index": 3,
+                            "master_index": 11,
+                            "tag": "LastStat",
+                            "position": 718,
+                            "container": "other",
+                            "line": 21,
+                            "lines_count": 1,
+                            "characters_count": 16,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/alnbox/share/lua/5.3/alnbox/makeAlignment.lua"
+}

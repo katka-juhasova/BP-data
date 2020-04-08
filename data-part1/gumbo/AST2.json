@@ -1,0 +1,140 @@
+{
+    "repository": "gumbo",
+    "module": "Indent.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 35,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 41,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 52,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 58,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 71,
+            "container": "function",
+            "line": 5,
+            "lines_count": 9,
+            "characters_count": 248,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 8,
+            "tag": "LastStat",
+            "position": 321,
+            "container": "other",
+            "line": 15,
+            "lines_count": 4,
+            "characters_count": 117,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "Function",
+                    "position": 328,
+                    "container": "interface",
+                    "line": 15,
+                    "lines_count": 4,
+                    "characters_count": 110,
+                    "children_count": 3,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 10,
+                            "tag": "LocalAssign",
+                            "position": 348,
+                            "container": "other",
+                            "line": 16,
+                            "lines_count": 1,
+                            "characters_count": 32,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 11,
+                            "tag": "LastStat",
+                            "position": 385,
+                            "container": "other",
+                            "line": 17,
+                            "lines_count": 1,
+                            "characters_count": 49,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/gumbo/share/lua/5.3/gumbo/serialize/Indent.lua"
+}

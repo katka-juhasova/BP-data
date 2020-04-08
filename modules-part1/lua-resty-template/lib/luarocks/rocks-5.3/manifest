@@ -1,0 +1,49 @@
+commands = {}
+dependencies = {
+   ["lua-resty-template"] = {
+      ["2.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["resty.template"] = {
+      "lua-resty-template/2.0-1"
+   },
+   ["resty.template.html"] = {
+      "lua-resty-template/2.0-1"
+   },
+   ["resty.template.microbenchmark"] = {
+      "lua-resty-template/2.0-1"
+   },
+   ["resty.template.safe"] = {
+      "lua-resty-template/2.0-1"
+   }
+}
+repository = {
+   ["lua-resty-template"] = {
+      ["2.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["resty.template"] = "resty/template.lua",
+               ["resty.template.html"] = "resty/template/html.lua",
+               ["resty.template.microbenchmark"] = "resty/template/microbenchmark.lua",
+               ["resty.template.safe"] = "resty/template/safe.lua"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,138 @@
+{
+    "repository": "lualogging",
+    "module": "file.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 302,
+            "container": "require",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 336,
+            "container": "other",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 342,
+                    "container": "variable",
+                    "line": 12,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 366,
+            "container": "other",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 372,
+                    "container": "variable",
+                    "line": 13,
+                    "lines_count": 1,
+                    "characters_count": 15,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 389,
+            "container": "other",
+            "line": 15,
+            "lines_count": 16,
+            "characters_count": 447,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 395,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "Function",
+                    "position": 412,
+                    "container": "function",
+                    "line": 15,
+                    "lines_count": 16,
+                    "characters_count": 424,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 838,
+            "container": "function",
+            "line": 32,
+            "lines_count": 15,
+            "characters_count": 386,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 10,
+            "tag": "LastStat",
+            "position": 1226,
+            "container": "other",
+            "line": 48,
+            "lines_count": 1,
+            "characters_count": 19,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 11,
+                    "tag": "_SimpleExp",
+                    "position": 1233,
+                    "container": "interface",
+                    "line": 48,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lualogging/share/lua/5.3/logging/file.lua"
+}

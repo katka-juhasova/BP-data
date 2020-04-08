@@ -1,0 +1,16 @@
+rock_manifest = {
+   doc = {
+      ["README.md"] = "f48a9ac11830595b5d785272d01318ce"
+   },
+   lua = {
+      test = {
+         mock = {
+            ["Mock.lua"] = "012a8189f8899bfa36921277a8f61f3e",
+            ["ProgrammableFn.lua"] = "6bad502429a7776acbca3ef0c55dfcf2",
+            ["Spy.lua"] = "3be18af1421f11f4e70fbd18bfd58f1e",
+            ["ValueMatcher.lua"] = "6fffea2775be806f9df0a6e1e7c3510a"
+         }
+      }
+   },
+   ["lua-mock-2.1-2.rockspec"] = "80442d38fffc0d13617050cb0829b406"
+}

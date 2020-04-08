@@ -1,0 +1,33 @@
+{
+    "repository": "lua-coat",
+    "module": "Foo.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "Var",
+            "position": 41,
+            "container": "variable",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 7,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Assign",
+                    "position": 41,
+                    "container": "other",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 2,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lua-coat/lib/luarocks/rocks-5.3/lua-coat/0.9.2-2/test/MyApp/Baz/Foo.lua"
+}

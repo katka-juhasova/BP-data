@@ -1,0 +1,21 @@
+rock_manifest = {
+   ["bgcrypto-sha-0.1.0-1.rockspec"] = "71afab6b3ef350c4aa0966308b1cb80d",
+   lib = {
+      bgcrypto = {
+         ["sha1.so"] = "4642fbfefae34b369f0fadb6b8f86404",
+         ["sha224.so"] = "6a29ec11ab9819aebb4c1de073f30898",
+         ["sha256.so"] = "b6ddf9391df7ab60129ce4c3d7891c76",
+         ["sha384.so"] = "ffc285c21d74b3b53af43e69c334a9fe",
+         ["sha512.so"] = "61c42a65be8efac1bfecc584df71afac",
+         ["sha512_128.so"] = "25b4f66ab6f53a5cf61cc06a0ae7caa6",
+         ["sha512_192.so"] = "10d5682b0423fb1c26e61d342bcc1761",
+         ["sha512_224.so"] = "8a5598c0a56d90bd34efbe1072af46f9",
+         ["sha512_256.so"] = "ead8f26e5620804687ffe26172463b8f"
+      }
+   },
+   test = {
+      ["test_pbkdf2.lua"] = "9d71d49016516c6a0366ea57e9c78cc9",
+      ["test_sha.lua"] = "2fc6adb7f35534de39ccedc115760f22",
+      ["utest_sha.lua"] = "67197ebfaae557bfaaacd50722226019"
+   }
+}

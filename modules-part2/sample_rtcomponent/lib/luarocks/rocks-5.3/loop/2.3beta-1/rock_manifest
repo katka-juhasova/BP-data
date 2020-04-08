@@ -1,0 +1,128 @@
+rock_manifest = {
+   bin = {
+      ["precompiler.lua"] = "496419b80d046203c339859e847d5fde",
+      ["preloader.lua"] = "5dbd8723774dc492b210b7cadbaae263"
+   },
+   doc = {
+      ["contact.html"] = "bc1aba201f8d466b5ce65a9761d556a6",
+      ["index.html"] = "6a2773633a767b159c4b5d037ab20610",
+      ["latests.html"] = "642872d3c11b7923581a49f5096129e8",
+      ["layout1.css"] = "5359f89eb818b42b6ad65ac9a0b0be66",
+      ["layout2.css"] = "27e69f71bd4a764451a36358ac6f09ca",
+      ["layout3.css"] = "41edb2c191604e67ae08516dc2fe6c39",
+      library = {
+         collection = {
+            ["MapWithArrayOfKeys.html"] = "e11340d477c522693d77bae74a61ffe6",
+            ["ObjectCache.html"] = "cf74ccc27c593faa444bedfc39ec8c1b",
+            ["OrderedSet.html"] = "980d46f10b99181d3fbde0864c3b333c",
+            ["PriorityQueue.html"] = "bc8b5b19a9e7c6543e4606072e7c45b6",
+            ["UnorderedArray.html"] = "bf3e0e685a74636513c684006f3e7b0a",
+            ["UnorderedArraySet.html"] = "6bfd981f55c40dc3b83089ef84e0a0ff"
+         },
+         compiler = {
+            ["Arguments.html"] = "179c4284c793704990fa0f109ac4cf50",
+            ["Conditional.html"] = "14368e0f5cedb1e041b835574d7e3f31",
+            ["Expression.html"] = "32a0005e7da572e3e55d240592564294"
+         },
+         debug = {
+            ["Inspector.html"] = "1dc92da6b3ecf849f8d2745c92bd3b15",
+            ["Matcher.html"] = "2da6c23f0c22dacb26ff08452a31878a",
+            ["Verbose.html"] = "b6a9f01e0b1a5fa088ac684fb1f2321e",
+            ["Viewer.html"] = "3ea1c8704ee7ec5bd794280734796aa2"
+         },
+         ["index.html"] = "ab3d7fe37b3769b65f55ac9c11a02808",
+         object = {
+            ["Exception.html"] = "a76bff046e17d15ca1d02be07ad6e6f6",
+            ["Publisher.html"] = "4ce86bccadcccadfdd1b0b64a1695670",
+            ["Wrapper.html"] = "ea4eb5e74c23be39206b1f3c58230aa4"
+         },
+         ["overview.html"] = "ad9ed64e820bb0159916d7fdbf5ae8bf",
+         serial = {
+            ["FileStream.html"] = "5e6c2aa342040e0df0e085cd61dacb31",
+            ["Serializer.html"] = "507a6c313a210c813ef96154b08620f6",
+            ["SocketStream.html"] = "f9e556dc42b31ad5cb33f889c51ba144",
+            ["StringStream.html"] = "cc6068905d35fc84ea59a397186c3f00"
+         },
+         thread = {
+            ["CoSocket.html"] = "a81021788ac4f0430dfa49bd2ae0dca3",
+            ["IOScheduler.html"] = "bc76e3aeac25cdfb30d3d4d2565d2de6",
+            ["Scheduler.html"] = "872e300523f8eeb5781c31e3b5434e54",
+            ["SocketScheduler.html"] = "67883f93ffe2ffdfc35e556014bf399d",
+            ["Timer.html"] = "7b7e0355063adf8df5c25593e4e3322d"
+         }
+      },
+      ["loop.css"] = "156d5c1fcc83bcf8f932c55cc5900441",
+      manual = {
+         ["basics.html"] = "39d74404cbb32043682caa6f30aa3d12",
+         ["classops.html"] = "12cd615b7c875eb03e9bb95532600846",
+         ["components.html"] = "08029b18928c273f7dff90faa59e34a4",
+         ["contained.jpg"] = "eb967eb08e13365de916b366e05a83bf",
+         ["index.html"] = "54ee8fc6873aa7d3db766ab896dcfe2c",
+         ["intro.html"] = "f2287fb7746fe2a201753291244e2cb7",
+         ["models.html"] = "566eec5954f4707cc757eaab75d9d00c"
+      },
+      ["news.html"] = "d878ea6ddf6cb1c236aeb015ac71a7ee",
+      release = {
+         ["changes.html"] = "45b7bee9502c76b15065d327a0a4e031",
+         ["index.html"] = "1189cf90ed42fc59e53031fa2eb6c107",
+         ["preload.html"] = "fe0be9157979ce0e2d0a40834915ce47",
+         ["previous.html"] = "87b1462f9f2db4619a406790cd3032b1"
+      },
+      ["small.gif"] = "c41eefa6316b435e39df6d329cfd35fb"
+   },
+   ["loop-2.3beta-1.rockspec"] = "1480d9520fe2bcf22db8c1ca15b7887c",
+   lua = {
+      loop = {
+         ["base.lua"] = "f437ce68c83e0cdf45ada3f99ca9ef29",
+         ["cached.lua"] = "1ccbfd5b47da10511d7f27919543658b",
+         collection = {
+            ["MapWithArrayOfKeys.lua"] = "411a31602cc998ebee6b14600c326251",
+            ["ObjectCache.lua"] = "3362a07d070bbea0c8c23b04e3f72779",
+            ["OrderedSet.lua"] = "4a68c753743babe628e6f7a8e19d8f17",
+            ["PriorityQueue.lua"] = "3b3bb3f5d7e0bda750ba1e744ed68e45",
+            ["UnorderedArray.lua"] = "58379da67bfdec3587eb9c358fc06a3a",
+            ["UnorderedArraySet.lua"] = "eee1fce211aa6eb11a1a4391a34ea2fa"
+         },
+         compiler = {
+            ["Arguments.lua"] = "df2f6e7df408d107a6ea8f21afbb82f6",
+            ["Conditional.lua"] = "1c1bd930028058ddae3074a1ce1eb1ff",
+            ["Expression.lua"] = "ccbfbdb542935d5850d4f41395db965c"
+         },
+         component = {
+            ["base.lua"] = "ba31004b3209ff9a49183f4030161fcf",
+            ["contained.lua"] = "702ba59fcc43b518314c1334d47cf35f",
+            ["dynamic.lua"] = "e5c5229c9f44453e36cd8c36778e49b0",
+            ["intercepted.lua"] = "48fe62d5760ba1a341061b9fd006437b",
+            ["wrapped.lua"] = "43f50cfde60fb11e1850c4e3996310e1"
+         },
+         debug = {
+            ["Inspector.lua"] = "d28468a758d9f305230a2ffb916e729f",
+            ["Matcher.lua"] = "36aabfa1873f2833a8dc227c0bc55905",
+            ["Verbose.lua"] = "1ee69c8b7936996a90ba66aefab509c9",
+            ["Viewer.lua"] = "8d7903383fea759bb700e89c8b523f28"
+         },
+         ["multiple.lua"] = "a5382833ae154d32258fc71310e78dc6",
+         object = {
+            ["Exception.lua"] = "25f582e3831bf7d09f87dc39efe0415f",
+            ["Publisher.lua"] = "1fa03eb1c60dda7220619f3e94247a62",
+            ["Wrapper.lua"] = "e88de096a5ac8b20f20fc2dc0928f5bc"
+         },
+         ["scoped.lua"] = "00645f23aca40300924ccf60d9392e2c",
+         serial = {
+            ["FileStream.lua"] = "f1d6d28fcec5a6efa76feaf6364cabb6",
+            ["Serializer.lua"] = "3cffc1e860736178ea74ff0157850eaa",
+            ["SocketStream.lua"] = "adf03ce2a686783c9210798b432cf795",
+            ["StringStream.lua"] = "82faaa602e551a098006cea937420d5d"
+         },
+         ["simple.lua"] = "92c9464c88325b9093a2d18d6d8a1997",
+         ["table.lua"] = "85d504e424beec996d5c2969dba298f1",
+         thread = {
+            ["CoSocket.lua"] = "57a4c1c9dcd7cfd26cc8e862d75ef985",
+            ["IOScheduler.lua"] = "3c50410c1b2869496c6f4c03546d716b",
+            ["Scheduler.lua"] = "c51663a0cc4effa0fffe25a0a5c6077e",
+            ["SocketScheduler.lua"] = "b2825386a9ae570856efdd5d24f40ff9",
+            ["Timer.lua"] = "fb54eb14116034229f63163504a31384"
+         }
+      }
+   }
+}

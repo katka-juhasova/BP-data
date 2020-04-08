@@ -1,0 +1,15 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "05efb78ced602fcc5c5e23810251a87b",
+      ["README.md"] = "df386dbc23c412061a99e1906383f68c"
+   },
+   ["lecho-1.0.2-0.rockspec"] = "a60b94e80b803a008c11d2e41affbb73",
+   lib = {
+      lecho = {
+         ["core.so"] = "8e45341b9f9792eef9f8ee2efa9cc5a0"
+      }
+   },
+   lua = {
+      ["lecho.lua"] = "7a195e98a7597fa2f4ff466297e99778"
+   }
+}

@@ -1,0 +1,136 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "UnorderedArraySet.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1460,
+            "container": "other",
+            "line": 20,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 1466,
+                    "container": "variable",
+                    "line": 20,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 1482,
+            "container": "require",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 34,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "Var",
+            "position": 1573,
+            "container": "variable",
+            "line": 25,
+            "lines_count": 1,
+            "characters_count": 7,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Assign",
+                    "position": 1573,
+                    "container": "other",
+                    "line": 25,
+                    "lines_count": 1,
+                    "characters_count": 16,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "Assign",
+            "position": 1590,
+            "container": "other",
+            "line": 26,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Var",
+                    "position": 1590,
+                    "container": "variable",
+                    "line": 26,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 1608,
+            "container": "function",
+            "line": 28,
+            "lines_count": 3,
+            "characters_count": 61,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 1671,
+            "container": "function",
+            "line": 32,
+            "lines_count": 7,
+            "characters_count": 123,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 1796,
+            "container": "function",
+            "line": 40,
+            "lines_count": 13,
+            "characters_count": 252,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 2050,
+            "container": "function",
+            "line": 54,
+            "lines_count": 3,
+            "characters_count": 67,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sample_rtcomponent/share/lua/5.3/loop/collection/UnorderedArraySet.lua"
+}

@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   otom = {
+      ["1.1-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     5, 3, string = "5.3"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   otom = {
+      "otom/1.1-1"
+   },
+   otom_spec = {
+      "otom/1.1-1"
+   }
+}
+repository = {
+   otom = {
+      ["1.1-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               otom = "otom.lua",
+               otom_spec = "otom_spec.lua"
+            }
+         }
+      }
+   }
+}

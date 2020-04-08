@@ -1,0 +1,129 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "version.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 177,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 183,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "Var",
+            "position": 231,
+            "container": "variable",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Assign",
+                    "position": 231,
+                    "container": "other",
+                    "line": 14,
+                    "lines_count": 1,
+                    "characters_count": 40,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "Assign",
+            "position": 272,
+            "container": "other",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Var",
+                    "position": 272,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 7,
+            "tag": "Assign",
+            "position": 306,
+            "container": "other",
+            "line": 16,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Var",
+                    "position": 306,
+                    "container": "variable",
+                    "line": 16,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "LastStat",
+            "position": 335,
+            "container": "other",
+            "line": 19,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "_SimpleExp",
+                    "position": 342,
+                    "container": "interface",
+                    "line": 19,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sample_rtcomponent/share/lua/5.3/openrtm/version.lua"
+}

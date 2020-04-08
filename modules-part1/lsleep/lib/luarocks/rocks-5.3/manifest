@@ -1,0 +1,37 @@
+commands = {}
+dependencies = {
+   lsleep = {
+      ["1.0-4"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   lsleep = {
+      "lsleep/1.0-4"
+   }
+}
+repository = {
+   lsleep = {
+      ["1.0-4"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lsleep = "lsleep.so"
+            }
+         }
+      }
+   }
+}

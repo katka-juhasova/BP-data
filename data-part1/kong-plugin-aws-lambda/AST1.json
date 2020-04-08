@@ -1,0 +1,669 @@
+{
+    "repository": "kong-plugin-aws-lambda",
+    "module": "aws-serializer.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 253,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 259,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 271,
+            "container": "other",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 48,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 277,
+                    "container": "variable",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 19,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 320,
+            "container": "other",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 49,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 326,
+                    "container": "variable",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 20,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 370,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 46,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 376,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 417,
+            "container": "other",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 46,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 423,
+                    "container": "variable",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 11,
+            "tag": "LocalAssign",
+            "position": 464,
+            "container": "other",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 50,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "Name",
+                    "position": 470,
+                    "container": "variable",
+                    "line": 12,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 13,
+            "tag": "LocalAssign",
+            "position": 515,
+            "container": "other",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 50,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "Name",
+                    "position": 521,
+                    "container": "variable",
+                    "line": 13,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 15,
+            "tag": "LocalAssign",
+            "position": 566,
+            "container": "other",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "Name",
+                    "position": 572,
+                    "container": "variable",
+                    "line": 14,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "master_index": 17,
+            "tag": "LocalAssign",
+            "position": 603,
+            "container": "other",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "Name",
+                    "position": 609,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 10,
+            "master_index": 19,
+            "tag": "LastStat",
+            "position": 642,
+            "container": "other",
+            "line": 18,
+            "lines_count": 86,
+            "characters_count": 2449,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 20,
+                    "tag": "Function",
+                    "position": 649,
+                    "container": "interface",
+                    "line": 18,
+                    "lines_count": 86,
+                    "characters_count": 2442,
+                    "children_count": 16,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 21,
+                            "tag": "Assign",
+                            "position": 673,
+                            "container": "other",
+                            "line": 19,
+                            "lines_count": 1,
+                            "characters_count": 20,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 22,
+                            "tag": "LocalAssign",
+                            "position": 696,
+                            "container": "other",
+                            "line": 20,
+                            "lines_count": 1,
+                            "characters_count": 19,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 3,
+                            "master_index": 23,
+                            "tag": "LocalAssign",
+                            "position": 740,
+                            "container": "other",
+                            "line": 23,
+                            "lines_count": 1,
+                            "characters_count": 37,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 4,
+                            "master_index": 24,
+                            "tag": "LocalAssign",
+                            "position": 780,
+                            "container": "other",
+                            "line": 24,
+                            "lines_count": 1,
+                            "characters_count": 28,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 5,
+                            "master_index": 25,
+                            "tag": "GenericFor",
+                            "position": 811,
+                            "container": "other",
+                            "line": 25,
+                            "lines_count": 11,
+                            "characters_count": 258,
+                            "children_count": 1,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 26,
+                                    "tag": "If",
+                                    "position": 854,
+                                    "container": "other",
+                                    "line": 26,
+                                    "lines_count": 9,
+                                    "characters_count": 209,
+                                    "children_count": 3,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 27,
+                                            "tag": "Assign",
+                                            "position": 913,
+                                            "container": "other",
+                                            "line": 28,
+                                            "lines_count": 1,
+                                            "characters_count": 33,
+                                            "children_count": 0
+                                        },
+                                        {
+                                            "index": 2,
+                                            "master_index": 28,
+                                            "tag": "Assign",
+                                            "position": 953,
+                                            "container": "other",
+                                            "line": 29,
+                                            "lines_count": 1,
+                                            "characters_count": 26,
+                                            "children_count": 0
+                                        },
+                                        {
+                                            "index": 3,
+                                            "master_index": 29,
+                                            "tag": "Assign",
+                                            "position": 1018,
+                                            "container": "other",
+                                            "line": 33,
+                                            "lines_count": 1,
+                                            "characters_count": 37,
+                                            "children_count": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "index": 6,
+                            "master_index": 30,
+                            "tag": "LocalAssign",
+                            "position": 1115,
+                            "container": "other",
+                            "line": 38,
+                            "lines_count": 1,
+                            "characters_count": 25,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 7,
+                            "master_index": 31,
+                            "tag": "GenericFor",
+                            "position": 1143,
+                            "container": "other",
+                            "line": 39,
+                            "lines_count": 5,
+                            "characters_count": 192,
+                            "children_count": 1,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 32,
+                                    "tag": "If",
+                                    "position": 1217,
+                                    "container": "other",
+                                    "line": 40,
+                                    "lines_count": 3,
+                                    "characters_count": 112,
+                                    "children_count": 1,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 33,
+                                            "tag": "Assign",
+                                            "position": 1293,
+                                            "container": "other",
+                                            "line": 41,
+                                            "lines_count": 1,
+                                            "characters_count": 28,
+                                            "children_count": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "index": 8,
+                            "master_index": 34,
+                            "tag": "LocalAssign",
+                            "position": 1361,
+                            "container": "other",
+                            "line": 46,
+                            "lines_count": 1,
+                            "characters_count": 52,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 9,
+                            "master_index": 35,
+                            "tag": "LocalAssign",
+                            "position": 1416,
+                            "container": "other",
+                            "line": 47,
+                            "lines_count": 1,
+                            "characters_count": 42,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 10,
+                            "master_index": 36,
+                            "tag": "GenericFor",
+                            "position": 1461,
+                            "container": "other",
+                            "line": 48,
+                            "lines_count": 11,
+                            "characters_count": 314,
+                            "children_count": 1,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 37,
+                                    "tag": "If",
+                                    "position": 1518,
+                                    "container": "other",
+                                    "line": 49,
+                                    "lines_count": 9,
+                                    "characters_count": 251,
+                                    "children_count": 3,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 38,
+                                            "tag": "Assign",
+                                            "position": 1577,
+                                            "container": "other",
+                                            "line": 51,
+                                            "lines_count": 1,
+                                            "characters_count": 47,
+                                            "children_count": 0
+                                        },
+                                        {
+                                            "index": 2,
+                                            "master_index": 39,
+                                            "tag": "Assign",
+                                            "position": 1631,
+                                            "container": "other",
+                                            "line": 52,
+                                            "lines_count": 1,
+                                            "characters_count": 40,
+                                            "children_count": 0
+                                        },
+                                        {
+                                            "index": 3,
+                                            "master_index": 40,
+                                            "tag": "Assign",
+                                            "position": 1710,
+                                            "container": "other",
+                                            "line": 56,
+                                            "lines_count": 1,
+                                            "characters_count": 51,
+                                            "children_count": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "index": 11,
+                            "master_index": 41,
+                            "tag": "LocalAssign",
+                            "position": 1797,
+                            "container": "other",
+                            "line": 61,
+                            "lines_count": 1,
+                            "characters_count": 27,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 12,
+                            "master_index": 42,
+                            "tag": "Do",
+                            "position": 1827,
+                            "container": "other",
+                            "line": 62,
+                            "lines_count": 23,
+                            "characters_count": 570,
+                            "children_count": 3,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 43,
+                                    "tag": "Assign",
+                                    "position": 1858,
+                                    "container": "other",
+                                    "line": 64,
+                                    "lines_count": 1,
+                                    "characters_count": 30,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 44,
+                                    "tag": "If",
+                                    "position": 1893,
+                                    "container": "other",
+                                    "line": 65,
+                                    "lines_count": 12,
+                                    "characters_count": 361,
+                                    "children_count": 2,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 45,
+                                            "tag": "LocalAssign",
+                                            "position": 1916,
+                                            "container": "other",
+                                            "line": 66,
+                                            "lines_count": 1,
+                                            "characters_count": 45,
+                                            "children_count": 0
+                                        },
+                                        {
+                                            "index": 2,
+                                            "master_index": 46,
+                                            "tag": "If",
+                                            "position": 1968,
+                                            "container": "other",
+                                            "line": 67,
+                                            "lines_count": 9,
+                                            "characters_count": 278,
+                                            "children_count": 1,
+                                            "children": [
+                                                {
+                                                    "index": 1,
+                                                    "master_index": 47,
+                                                    "tag": "If",
+                                                    "position": 1998,
+                                                    "container": "other",
+                                                    "line": 68,
+                                                    "lines_count": 7,
+                                                    "characters_count": 238,
+                                                    "children_count": 2,
+                                                    "children": [
+                                                        {
+                                                            "index": 1,
+                                                            "master_index": 48,
+                                                            "tag": "LocalAssign",
+                                                            "position": 2125,
+                                                            "container": "other",
+                                                            "line": 71,
+                                                            "lines_count": 1,
+                                                            "characters_count": 41,
+                                                            "children_count": 0
+                                                        },
+                                                        {
+                                                            "index": 2,
+                                                            "master_index": 49,
+                                                            "tag": "Assign",
+                                                            "position": 2177,
+                                                            "container": "other",
+                                                            "line": 72,
+                                                            "lines_count": 1,
+                                                            "characters_count": 24,
+                                                            "children_count": 0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 3,
+                                    "master_index": 50,
+                                    "tag": "If",
+                                    "position": 2260,
+                                    "container": "other",
+                                    "line": 78,
+                                    "lines_count": 6,
+                                    "characters_count": 131,
+                                    "children_count": 3,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 51,
+                                            "tag": "Assign",
+                                            "position": 2285,
+                                            "container": "other",
+                                            "line": 79,
+                                            "lines_count": 1,
+                                            "characters_count": 30,
+                                            "children_count": 0
+                                        },
+                                        {
+                                            "index": 2,
+                                            "master_index": 52,
+                                            "tag": "Assign",
+                                            "position": 2322,
+                                            "container": "other",
+                                            "line": 80,
+                                            "lines_count": 1,
+                                            "characters_count": 22,
+                                            "children_count": 0
+                                        },
+                                        {
+                                            "index": 3,
+                                            "master_index": 53,
+                                            "tag": "Assign",
+                                            "position": 2360,
+                                            "container": "other",
+                                            "line": 82,
+                                            "lines_count": 1,
+                                            "characters_count": 23,
+                                            "children_count": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "index": 13,
+                            "master_index": 54,
+                            "tag": "LocalAssign",
+                            "position": 2419,
+                            "container": "other",
+                            "line": 87,
+                            "lines_count": 1,
+                            "characters_count": 47,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 14,
+                            "master_index": 55,
+                            "tag": "LocalAssign",
+                            "position": 2495,
+                            "container": "other",
+                            "line": 89,
+                            "lines_count": 12,
+                            "characters_count": 574,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 15,
+                            "master_index": 56,
+                            "tag": "LastStat",
+                            "position": 3073,
+                            "container": "other",
+                            "line": 102,
+                            "lines_count": 1,
+                            "characters_count": 14,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 56,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/kong-plugin-aws-lambda/share/lua/5.3/kong/plugins/aws-lambda/aws-serializer.lua"
+}

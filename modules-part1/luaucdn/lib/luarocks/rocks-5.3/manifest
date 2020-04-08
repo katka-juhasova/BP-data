@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   luaucdn = {
+      ["0.0.8-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   luaucdn = {
+      "luaucdn/0.0.8-1"
+   },
+   ucdn = {
+      "luaucdn/0.0.8-1"
+   }
+}
+repository = {
+   luaucdn = {
+      ["0.0.8-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luaucdn = "luaucdn.so",
+               ucdn = "ucdn.lua"
+            }
+         }
+      }
+   }
+}

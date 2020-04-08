@@ -1,0 +1,125 @@
+{
+    "repository": "lua-resty-grpc-gateway",
+    "module": "request.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 26,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 53,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 41,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 96,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 102,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "Assign",
+            "position": 470,
+            "container": "other",
+            "line": 15,
+            "lines_count": 38,
+            "characters_count": 1500,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Var",
+                    "position": 470,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "Function",
+                    "position": 479,
+                    "container": "function",
+                    "line": 15,
+                    "lines_count": 38,
+                    "characters_count": 1491,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 9,
+            "tag": "LastStat",
+            "position": 1972,
+            "container": "other",
+            "line": 54,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "_SimpleExp",
+                    "position": 1979,
+                    "container": "interface",
+                    "line": 54,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lua-resty-grpc-gateway/share/lua/5.3/grpc-gateway/request.lua"
+}

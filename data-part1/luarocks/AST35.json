@@ -1,0 +1,158 @@
+{
+    "repository": "luarocks",
+    "module": "busted.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 2,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 8,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 21,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 55,
+            "container": "require",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 93,
+            "container": "require",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 131,
+            "container": "require",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 167,
+            "container": "require",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 43,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 8,
+            "tag": "LocalAssign",
+            "position": 212,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "Name",
+                    "position": 218,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 251,
+            "container": "function",
+            "line": 12,
+            "lines_count": 6,
+            "characters_count": 106,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 359,
+            "container": "function",
+            "line": 19,
+            "lines_count": 39,
+            "characters_count": 1006,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 12,
+            "tag": "LastStat",
+            "position": 1368,
+            "container": "other",
+            "line": 60,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "_SimpleExp",
+                    "position": 1375,
+                    "container": "interface",
+                    "line": 60,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 13,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/luarocks/share/lua/5.3/luarocks/test/busted.lua"
+}

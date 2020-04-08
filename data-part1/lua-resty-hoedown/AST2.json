@@ -1,0 +1,221 @@
+{
+    "repository": "lua-resty-hoedown",
+    "module": "escape.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 51,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 53,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 31,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 59,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 85,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 52,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 138,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 34,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 173,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 179,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "LocalAssign",
+            "position": 203,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "Name",
+                    "position": 209,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 10,
+            "tag": "LocalAssign",
+            "position": 237,
+            "container": "other",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 11,
+                    "tag": "Name",
+                    "position": 243,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 12,
+            "tag": "LocalAssign",
+            "position": 455,
+            "container": "other",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "Name",
+                    "position": 461,
+                    "container": "variable",
+                    "line": 14,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "master_index": 14,
+            "tag": "GlobalFunction",
+            "position": 474,
+            "container": "function",
+            "line": 16,
+            "lines_count": 7,
+            "characters_count": 193,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 15,
+            "tag": "GlobalFunction",
+            "position": 668,
+            "container": "function",
+            "line": 23,
+            "lines_count": 7,
+            "characters_count": 220,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 16,
+            "tag": "LastStat",
+            "position": 889,
+            "container": "other",
+            "line": 30,
+            "lines_count": 3,
+            "characters_count": 112,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 17,
+                    "tag": "_SimpleExp",
+                    "position": 896,
+                    "container": "interface",
+                    "line": 30,
+                    "lines_count": 3,
+                    "characters_count": 105,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 18,
+                            "tag": "Function",
+                            "position": 928,
+                            "container": "function",
+                            "line": 30,
+                            "lines_count": 3,
+                            "characters_count": 70,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 18,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lua-resty-hoedown/share/lua/5.3/resty/hoedown/escape.lua"
+}

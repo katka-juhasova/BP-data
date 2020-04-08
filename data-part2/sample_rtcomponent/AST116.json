@@ -1,0 +1,164 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "OutPort.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 174,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 180,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 228,
+            "container": "require",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 45,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 274,
+            "container": "require",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 49,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 324,
+            "container": "require",
+            "line": 16,
+            "lines_count": 1,
+            "characters_count": 55,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "Var",
+            "position": 455,
+            "container": "variable",
+            "line": 20,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Assign",
+                    "position": 455,
+                    "container": "other",
+                    "line": 20,
+                    "lines_count": 5,
+                    "characters_count": 136,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 8,
+                            "tag": "Function",
+                            "position": 478,
+                            "container": "function",
+                            "line": 20,
+                            "lines_count": 5,
+                            "characters_count": 113,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 9,
+            "tag": "Var",
+            "position": 769,
+            "container": "variable",
+            "line": 32,
+            "lines_count": 1,
+            "characters_count": 11,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Assign",
+                    "position": 769,
+                    "container": "other",
+                    "line": 32,
+                    "lines_count": 71,
+                    "characters_count": 1533,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 11,
+                            "tag": "Function",
+                            "position": 783,
+                            "container": "function",
+                            "line": 32,
+                            "lines_count": 71,
+                            "characters_count": 1519,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 12,
+            "tag": "LastStat",
+            "position": 2305,
+            "container": "other",
+            "line": 105,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "_SimpleExp",
+                    "position": 2312,
+                    "container": "interface",
+                    "line": 105,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 13,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sample_rtcomponent/share/lua/5.3/openrtm/OutPort.lua"
+}

@@ -1,0 +1,79 @@
+{
+    "repository": "concurrentlua",
+    "module": "message.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "Assign",
+            "position": 205,
+            "container": "other",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Var",
+                    "position": 205,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "GlobalFunction",
+            "position": 548,
+            "container": "function",
+            "line": 13,
+            "lines_count": 32,
+            "characters_count": 936,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "GlobalFunction",
+            "position": 1612,
+            "container": "function",
+            "line": 48,
+            "lines_count": 24,
+            "characters_count": 790,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "Var",
+            "position": 2404,
+            "container": "variable",
+            "line": 73,
+            "lines_count": 1,
+            "characters_count": 15,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Assign",
+                    "position": 2404,
+                    "container": "other",
+                    "line": 73,
+                    "lines_count": 1,
+                    "characters_count": 22,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 6,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/concurrentlua/share/lua/5.1/concurrent/distributed/message.lua"
+}

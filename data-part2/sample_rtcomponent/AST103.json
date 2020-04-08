@@ -1,0 +1,199 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "NodeNumberingPolicy.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 217,
+            "container": "other",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 223,
+                    "container": "variable",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 19,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 306,
+            "container": "require",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 41,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 348,
+            "container": "require",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 57,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 406,
+            "container": "require",
+            "line": 16,
+            "lines_count": 1,
+            "characters_count": 65,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 472,
+            "container": "other",
+            "line": 17,
+            "lines_count": 1,
+            "characters_count": 73,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 478,
+                    "container": "variable",
+                    "line": 17,
+                    "lines_count": 1,
+                    "characters_count": 22,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "LocalAssign",
+            "position": 546,
+            "container": "require",
+            "line": 18,
+            "lines_count": 1,
+            "characters_count": 47,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "Var",
+            "position": 596,
+            "container": "variable",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 23,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Assign",
+                    "position": 596,
+                    "container": "other",
+                    "line": 21,
+                    "lines_count": 37,
+                    "characters_count": 752,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 11,
+                            "tag": "Function",
+                            "position": 622,
+                            "container": "function",
+                            "line": 21,
+                            "lines_count": 37,
+                            "characters_count": 726,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 12,
+            "tag": "Var",
+            "position": 1351,
+            "container": "variable",
+            "line": 60,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "Assign",
+                    "position": 1351,
+                    "container": "other",
+                    "line": 60,
+                    "lines_count": 5,
+                    "characters_count": 147,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 14,
+                            "tag": "Function",
+                            "position": 1378,
+                            "container": "function",
+                            "line": 60,
+                            "lines_count": 5,
+                            "characters_count": 120,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "master_index": 15,
+            "tag": "LastStat",
+            "position": 1501,
+            "container": "other",
+            "line": 67,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "_SimpleExp",
+                    "position": 1508,
+                    "container": "interface",
+                    "line": 67,
+                    "lines_count": 1,
+                    "characters_count": 19,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 16,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sample_rtcomponent/share/lua/5.3/openrtm/NodeNumberingPolicy.lua"
+}

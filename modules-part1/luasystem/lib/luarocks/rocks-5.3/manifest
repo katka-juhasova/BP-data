@@ -1,0 +1,41 @@
+commands = {}
+dependencies = {
+   luasystem = {
+      ["0.2.1-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["system.core"] = {
+      "luasystem/0.2.1-0"
+   },
+   ["system.init"] = {
+      "luasystem/0.2.1-0"
+   }
+}
+repository = {
+   luasystem = {
+      ["0.2.1-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["system.core"] = "system/core.so",
+               ["system.init"] = "system/init.lua"
+            }
+         }
+      }
+   }
+}

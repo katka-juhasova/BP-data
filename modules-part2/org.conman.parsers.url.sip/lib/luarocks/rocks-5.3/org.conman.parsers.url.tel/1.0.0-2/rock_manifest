@@ -1,0 +1,14 @@
+rock_manifest = {
+   lua = {
+      org = {
+         conman = {
+            parsers = {
+               url = {
+                  ["tel.lua"] = "912c9dc5b81c230516b8c85e54cfd6ea"
+               }
+            }
+         }
+      }
+   },
+   ["org.conman.parsers.url.tel-1.0.0-2.rockspec"] = "f545e6f797a3d5a6cb45e69710c701ea"
+}

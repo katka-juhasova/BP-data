@@ -1,0 +1,31 @@
+rock_manifest = {
+   doc = {
+      ["Documentation.md"] = "94bd948dbd1de37b50f9e7046136ae42",
+      LICENSE = "ed8ff42d6df866357ddd56a9f2a26bdc",
+      ["README.html"] = "9c864cd0686d6582a8232b254f93849b",
+      ["README.md"] = "c0c5e1e14cf7cc2146a1691a0575cc83",
+      ["changes.md"] = "cc6e10e537585607b4d0819a461a4834"
+   },
+   lua = {
+      multi = {
+         compat = {
+            ["love2d.lua"] = "20492387f2a5d4f10b4a580cc96686b5"
+         },
+         ["init.lua"] = "39da6fc57a0322c68d4573aa15fe7dc0",
+         integration = {
+            lanesManager = {
+               ["extensions.lua"] = "a185d9f47530df019e16a89608d08ba7",
+               ["init.lua"] = "5c3620d0559c5eb1b3179e99612c1756",
+               ["threads.lua"] = "c368910179605af2705ed500ff0e6a8c"
+            },
+            loveManager = {
+               ["extensions.lua"] = "3722e4a94227c5c07ffa89927069337a",
+               ["init.lua"] = "1eda0497c80fb593ebbea87c5328303f",
+               ["threads.lua"] = "7feedc1404774f7a44676d83f593a033"
+            },
+            ["luvitManager.lua"] = "f5051177f1ca5a8088c392761fd371ec"
+         }
+      }
+   },
+   ["multi-14.1-0.rockspec"] = "a1c02d5fc68a83d0662c8032cb16f8b7"
+}

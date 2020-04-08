@@ -1,0 +1,44 @@
+{
+    "repository": "luakatsu",
+    "module": "idols.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 38,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 41,
+            "container": "other",
+            "line": 3,
+            "lines_count": 376,
+            "characters_count": 9959,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "_SimpleExp",
+                    "position": 48,
+                    "container": "interface",
+                    "line": 3,
+                    "lines_count": 376,
+                    "characters_count": 9952,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 3,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/luakatsu/share/lua/5.3/luakatsu/lib/idols.lua"
+}

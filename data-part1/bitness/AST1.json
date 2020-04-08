@@ -1,0 +1,68 @@
+{
+    "repository": "bitness",
+    "module": "bitness.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalFunction",
+            "position": 15,
+            "container": "function",
+            "line": 3,
+            "lines_count": 30,
+            "characters_count": 798,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LastStat",
+            "position": 815,
+            "container": "other",
+            "line": 34,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "_SimpleExp",
+                    "position": 822,
+                    "container": "interface",
+                    "line": 34,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 5,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/bitness/share/lua/5.3/bitness.lua"
+}

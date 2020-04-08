@@ -1,0 +1,103 @@
+{
+    "repository": "crayon",
+    "module": "client.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 24,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 57,
+            "container": "require",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 88,
+            "container": "other",
+            "line": 7,
+            "lines_count": 9,
+            "characters_count": 240,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 94,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 330,
+            "container": "other",
+            "line": 17,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 336,
+                    "container": "variable",
+                    "line": 17,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "Var",
+            "position": 407,
+            "container": "variable",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 4,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Assign",
+                    "position": 407,
+                    "container": "other",
+                    "line": 21,
+                    "lines_count": 1,
+                    "characters_count": 39,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 8,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/crayon/lib/luarocks/rocks-5.3/luasec/0.9-1/samples/info/client.lua"
+}

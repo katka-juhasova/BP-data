@@ -1,0 +1,55 @@
+{
+    "repository": "kong-external-oauth",
+    "module": "schema.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 662,
+            "container": "require",
+            "line": 17,
+            "lines_count": 1,
+            "characters_count": 50,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 714,
+            "container": "other",
+            "line": 19,
+            "lines_count": 27,
+            "characters_count": 981,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Field",
+                    "position": 725,
+                    "container": "interface",
+                    "line": 20,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 4,
+                    "tag": "Field",
+                    "position": 752,
+                    "container": "interface",
+                    "line": 21,
+                    "lines_count": 24,
+                    "characters_count": 940,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/kong-external-oauth/share/lua/5.3/kong/plugins/external-oauth/schema.lua"
+}

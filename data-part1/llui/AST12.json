@@ -1,0 +1,149 @@
+{
+    "repository": "llui",
+    "module": "evdev_ffi.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 122,
+            "container": "require",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 149,
+            "container": "require",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 176,
+            "container": "other",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 182,
+                    "container": "variable",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 188,
+                    "container": "variable",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 212,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 45,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 218,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 226,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 6758,
+            "container": "other",
+            "line": 155,
+            "lines_count": 1,
+            "characters_count": 38,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 6764,
+                    "container": "variable",
+                    "line": 155,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 11,
+            "tag": "LastStat",
+            "position": 6798,
+            "container": "other",
+            "line": 157,
+            "lines_count": 1,
+            "characters_count": 19,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "_SimpleExp",
+                    "position": 6805,
+                    "container": "interface",
+                    "line": 157,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 12,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/llui/share/lua/5.1/LLUI/evdev_ffi.lua"
+}

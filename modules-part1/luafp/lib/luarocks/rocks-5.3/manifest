@@ -1,0 +1,75 @@
+commands = {}
+dependencies = {
+   luafp = {
+      ["1.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   ["luafp.Maybe"] = {
+      "luafp/1.6-1"
+   },
+   ["luafp.Result"] = {
+      "luafp/1.6-1"
+   },
+   ["luafp.array"] = {
+      "luafp/1.6-1"
+   },
+   ["luafp.collection"] = {
+      "luafp/1.6-1"
+   },
+   ["luafp.func"] = {
+      "luafp/1.6-1"
+   },
+   ["luafp.object"] = {
+      "luafp/1.6-1"
+   },
+   ["luafp.predicates"] = {
+      "luafp/1.6-1"
+   },
+   ["luafp.reactive"] = {
+      "luafp/1.6-1"
+   },
+   ["luafp.util"] = {
+      "luafp/1.6-1"
+   }
+}
+repository = {
+   luafp = {
+      ["1.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               ["luafp.Maybe"] = "luafp/Maybe.lua",
+               ["luafp.Result"] = "luafp/Result.lua",
+               ["luafp.array"] = "luafp/array.lua",
+               ["luafp.collection"] = "luafp/collection.lua",
+               ["luafp.func"] = "luafp/func.lua",
+               ["luafp.object"] = "luafp/object.lua",
+               ["luafp.predicates"] = "luafp/predicates.lua",
+               ["luafp.reactive"] = "luafp/reactive.lua",
+               ["luafp.util"] = "luafp/util.lua"
+            }
+         }
+      }
+   }
+}

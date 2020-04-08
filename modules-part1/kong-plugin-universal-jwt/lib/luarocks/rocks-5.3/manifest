@@ -1,0 +1,235 @@
+commands = {
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   }
+}
+dependencies = {
+   ["kong-plugin-universal-jwt"] = {
+      ["1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     1, 3, revision = 7, string = "1.3-7"
+                  }
+               }
+            },
+            name = "luajwtjitsi"
+         }
+      }
+   },
+   lbase64 = {
+      ["20120807-3"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               },
+               {
+                  op = "<",
+                  version = {
+                     5, 4, string = "5.4"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luacrypto = {
+      ["0.3.2-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luajwtjitsi = {
+      ["1.3-7"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     0, 3, 2, revision = 1, string = "0.3.2-1"
+                  }
+               }
+            },
+            name = "luacrypto"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 1, 0, string = "2.1.0"
+                  }
+               }
+            },
+            name = "lua-cjson"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     20120807, revision = 3, string = "20120807-3"
+                  }
+               }
+            },
+            name = "lbase64"
+         }
+      }
+   }
+}
+modules = {
+   base64 = {
+      "lbase64/20120807-3"
+   },
+   cjson = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["cjson.util"] = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   crypto = {
+      "luacrypto/0.3.2-2"
+   },
+   json2lua = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   ["kong.plugins.universal-jwt.env"] = {
+      "kong-plugin-universal-jwt/1.0.6-1"
+   },
+   ["kong.plugins.universal-jwt.handler"] = {
+      "kong-plugin-universal-jwt/1.0.6-1"
+   },
+   ["kong.plugins.universal-jwt.schema"] = {
+      "kong-plugin-universal-jwt/1.0.6-1"
+   },
+   lua2json = {
+      "lua-cjson/2.1.0.6-1"
+   },
+   luajwtjitsi = {
+      "luajwtjitsi/1.3-7"
+   }
+}
+repository = {
+   ["kong-plugin-universal-jwt"] = {
+      ["1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lbase64 = "20120807-3",
+               ["lua-cjson"] = "2.1.0.6-1",
+               luacrypto = "0.3.2-2",
+               luajwtjitsi = "1.3-7"
+            },
+            modules = {
+               ["kong.plugins.universal-jwt.env"] = "kong/plugins/universal-jwt/env.lua",
+               ["kong.plugins.universal-jwt.handler"] = "kong/plugins/universal-jwt/handler.lua",
+               ["kong.plugins.universal-jwt.schema"] = "kong/plugins/universal-jwt/schema.lua"
+            }
+         }
+      }
+   },
+   lbase64 = {
+      ["20120807-3"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               base64 = "base64.so"
+            }
+         }
+      }
+   },
+   ["lua-cjson"] = {
+      ["2.1.0.6-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               json2lua = "json2lua",
+               lua2json = "lua2json"
+            },
+            dependencies = {},
+            modules = {
+               cjson = "cjson.so",
+               ["cjson.util"] = "cjson/util.lua",
+               json2lua = "json2lua.lua",
+               lua2json = "lua2json.lua"
+            }
+         }
+      }
+   },
+   luacrypto = {
+      ["0.3.2-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               crypto = "crypto.so"
+            }
+         }
+      }
+   },
+   luajwtjitsi = {
+      ["1.3-7"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               lbase64 = "20120807-3",
+               ["lua-cjson"] = "2.1.0.6-1",
+               luacrypto = "0.3.2-2"
+            },
+            modules = {
+               luajwtjitsi = "luajwtjitsi.lua"
+            }
+         }
+      }
+   }
+}

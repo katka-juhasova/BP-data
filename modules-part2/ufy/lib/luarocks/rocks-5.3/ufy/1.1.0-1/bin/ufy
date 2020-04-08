@@ -1,0 +1,7 @@
+#!/usr/bin/env lua
+local ufy = require("ufy")
+if arg[1] == "--help" or arg[1] == "-h" then
+  -- TODO show help
+else
+  ufy.run(arg)
+end

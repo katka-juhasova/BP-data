@@ -1,0 +1,434 @@
+{
+    "repository": "dromozoa-ubench",
+    "module": "linest.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LastStat",
+            "position": 774,
+            "container": "other",
+            "line": 18,
+            "lines_count": 47,
+            "characters_count": 1053,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Function",
+                    "position": 781,
+                    "container": "interface",
+                    "line": 18,
+                    "lines_count": 47,
+                    "characters_count": 1046,
+                    "children_count": 6,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 3,
+                            "tag": "LocalAssign",
+                            "position": 802,
+                            "container": "other",
+                            "line": 19,
+                            "lines_count": 1,
+                            "characters_count": 15,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 4,
+                            "tag": "LocalAssign",
+                            "position": 820,
+                            "container": "other",
+                            "line": 20,
+                            "lines_count": 1,
+                            "characters_count": 16,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 3,
+                            "master_index": 5,
+                            "tag": "LocalAssign",
+                            "position": 839,
+                            "container": "other",
+                            "line": 21,
+                            "lines_count": 1,
+                            "characters_count": 16,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 4,
+                            "master_index": 6,
+                            "tag": "LocalAssign",
+                            "position": 858,
+                            "container": "other",
+                            "line": 22,
+                            "lines_count": 1,
+                            "characters_count": 12,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 5,
+                            "master_index": 7,
+                            "tag": "If",
+                            "position": 873,
+                            "container": "other",
+                            "line": 23,
+                            "lines_count": 41,
+                            "characters_count": 950,
+                            "children_count": 6,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 8,
+                                    "tag": "If",
+                                    "position": 887,
+                                    "container": "other",
+                                    "line": 24,
+                                    "lines_count": 16,
+                                    "characters_count": 339,
+                                    "children_count": 2,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 9,
+                                            "tag": "NumericFor",
+                                            "position": 903,
+                                            "container": "other",
+                                            "line": 25,
+                                            "lines_count": 7,
+                                            "characters_count": 161,
+                                            "children_count": 5,
+                                            "children": [
+                                                {
+                                                    "index": 1,
+                                                    "master_index": 10,
+                                                    "tag": "LocalAssign",
+                                                    "position": 927,
+                                                    "container": "other",
+                                                    "line": 26,
+                                                    "lines_count": 1,
+                                                    "characters_count": 14,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 2,
+                                                    "master_index": 11,
+                                                    "tag": "LocalAssign",
+                                                    "position": 950,
+                                                    "container": "other",
+                                                    "line": 27,
+                                                    "lines_count": 1,
+                                                    "characters_count": 14,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 3,
+                                                    "master_index": 12,
+                                                    "tag": "Assign",
+                                                    "position": 973,
+                                                    "container": "other",
+                                                    "line": 28,
+                                                    "lines_count": 1,
+                                                    "characters_count": 17,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 4,
+                                                    "master_index": 13,
+                                                    "tag": "Assign",
+                                                    "position": 999,
+                                                    "container": "other",
+                                                    "line": 29,
+                                                    "lines_count": 1,
+                                                    "characters_count": 23,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 5,
+                                                    "master_index": 14,
+                                                    "tag": "Assign",
+                                                    "position": 1031,
+                                                    "container": "other",
+                                                    "line": 30,
+                                                    "lines_count": 1,
+                                                    "characters_count": 23,
+                                                    "children_count": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "index": 2,
+                                            "master_index": 15,
+                                            "tag": "NumericFor",
+                                            "position": 1080,
+                                            "container": "other",
+                                            "line": 33,
+                                            "lines_count": 6,
+                                            "characters_count": 138,
+                                            "children_count": 4,
+                                            "children": [
+                                                {
+                                                    "index": 1,
+                                                    "master_index": 16,
+                                                    "tag": "LocalAssign",
+                                                    "position": 1104,
+                                                    "container": "other",
+                                                    "line": 34,
+                                                    "lines_count": 1,
+                                                    "characters_count": 14,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 2,
+                                                    "master_index": 17,
+                                                    "tag": "Assign",
+                                                    "position": 1127,
+                                                    "container": "other",
+                                                    "line": 35,
+                                                    "lines_count": 1,
+                                                    "characters_count": 17,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 3,
+                                                    "master_index": 18,
+                                                    "tag": "Assign",
+                                                    "position": 1153,
+                                                    "container": "other",
+                                                    "line": 36,
+                                                    "lines_count": 1,
+                                                    "characters_count": 23,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 4,
+                                                    "master_index": 19,
+                                                    "tag": "Assign",
+                                                    "position": 1185,
+                                                    "container": "other",
+                                                    "line": 37,
+                                                    "lines_count": 1,
+                                                    "characters_count": 23,
+                                                    "children_count": 0
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 20,
+                                    "tag": "LastStat",
+                                    "position": 1231,
+                                    "container": "other",
+                                    "line": 40,
+                                    "lines_count": 1,
+                                    "characters_count": 39,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 3,
+                                    "master_index": 21,
+                                    "tag": "LocalAssign",
+                                    "position": 1282,
+                                    "container": "other",
+                                    "line": 42,
+                                    "lines_count": 1,
+                                    "characters_count": 15,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 4,
+                                    "master_index": 22,
+                                    "tag": "If",
+                                    "position": 1302,
+                                    "container": "other",
+                                    "line": 43,
+                                    "lines_count": 18,
+                                    "characters_count": 391,
+                                    "children_count": 2,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 23,
+                                            "tag": "NumericFor",
+                                            "position": 1318,
+                                            "container": "other",
+                                            "line": 44,
+                                            "lines_count": 8,
+                                            "characters_count": 187,
+                                            "children_count": 6,
+                                            "children": [
+                                                {
+                                                    "index": 1,
+                                                    "master_index": 24,
+                                                    "tag": "LocalAssign",
+                                                    "position": 1342,
+                                                    "container": "other",
+                                                    "line": 45,
+                                                    "lines_count": 1,
+                                                    "characters_count": 14,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 2,
+                                                    "master_index": 25,
+                                                    "tag": "LocalAssign",
+                                                    "position": 1365,
+                                                    "container": "other",
+                                                    "line": 46,
+                                                    "lines_count": 1,
+                                                    "characters_count": 14,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 3,
+                                                    "master_index": 26,
+                                                    "tag": "Assign",
+                                                    "position": 1388,
+                                                    "container": "other",
+                                                    "line": 47,
+                                                    "lines_count": 1,
+                                                    "characters_count": 17,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 4,
+                                                    "master_index": 27,
+                                                    "tag": "Assign",
+                                                    "position": 1414,
+                                                    "container": "other",
+                                                    "line": 48,
+                                                    "lines_count": 1,
+                                                    "characters_count": 17,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 5,
+                                                    "master_index": 28,
+                                                    "tag": "Assign",
+                                                    "position": 1440,
+                                                    "container": "other",
+                                                    "line": 49,
+                                                    "lines_count": 1,
+                                                    "characters_count": 23,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 6,
+                                                    "master_index": 29,
+                                                    "tag": "Assign",
+                                                    "position": 1472,
+                                                    "container": "other",
+                                                    "line": 50,
+                                                    "lines_count": 1,
+                                                    "characters_count": 23,
+                                                    "children_count": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "index": 2,
+                                            "master_index": 30,
+                                            "tag": "NumericFor",
+                                            "position": 1521,
+                                            "container": "other",
+                                            "line": 53,
+                                            "lines_count": 7,
+                                            "characters_count": 164,
+                                            "children_count": 5,
+                                            "children": [
+                                                {
+                                                    "index": 1,
+                                                    "master_index": 31,
+                                                    "tag": "LocalAssign",
+                                                    "position": 1545,
+                                                    "container": "other",
+                                                    "line": 54,
+                                                    "lines_count": 1,
+                                                    "characters_count": 14,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 2,
+                                                    "master_index": 32,
+                                                    "tag": "Assign",
+                                                    "position": 1568,
+                                                    "container": "other",
+                                                    "line": 55,
+                                                    "lines_count": 1,
+                                                    "characters_count": 17,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 3,
+                                                    "master_index": 33,
+                                                    "tag": "Assign",
+                                                    "position": 1594,
+                                                    "container": "other",
+                                                    "line": 56,
+                                                    "lines_count": 1,
+                                                    "characters_count": 17,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 4,
+                                                    "master_index": 34,
+                                                    "tag": "Assign",
+                                                    "position": 1620,
+                                                    "container": "other",
+                                                    "line": 57,
+                                                    "lines_count": 1,
+                                                    "characters_count": 23,
+                                                    "children_count": 0
+                                                },
+                                                {
+                                                    "index": 5,
+                                                    "master_index": 35,
+                                                    "tag": "Assign",
+                                                    "position": 1652,
+                                                    "container": "other",
+                                                    "line": 58,
+                                                    "lines_count": 1,
+                                                    "characters_count": 23,
+                                                    "children_count": 0
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 5,
+                                    "master_index": 36,
+                                    "tag": "LocalAssign",
+                                    "position": 1698,
+                                    "container": "other",
+                                    "line": 61,
+                                    "lines_count": 1,
+                                    "characters_count": 36,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 6,
+                                    "master_index": 37,
+                                    "tag": "LastStat",
+                                    "position": 1739,
+                                    "container": "other",
+                                    "line": 62,
+                                    "lines_count": 1,
+                                    "characters_count": 78,
+                                    "children_count": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 37,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/dromozoa-ubench/share/lua/5.3/dromozoa/ubench/linest.lua"
+}

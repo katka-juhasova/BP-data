@@ -1,0 +1,202 @@
+{
+    "repository": "tree",
+    "module": "Graph.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 138,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 144,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "Var",
+            "position": 152,
+            "container": "variable",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 10,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Assign",
+                    "position": 152,
+                    "container": "other",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 15,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 322,
+            "container": "function",
+            "line": 11,
+            "lines_count": 20,
+            "characters_count": 610,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 934,
+            "container": "function",
+            "line": 32,
+            "lines_count": 3,
+            "characters_count": 82,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 1018,
+            "container": "function",
+            "line": 36,
+            "lines_count": 7,
+            "characters_count": 169,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 1189,
+            "container": "function",
+            "line": 44,
+            "lines_count": 13,
+            "characters_count": 412,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 1603,
+            "container": "function",
+            "line": 58,
+            "lines_count": 4,
+            "characters_count": 129,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 10,
+            "tag": "LocalFunction",
+            "position": 1734,
+            "container": "function",
+            "line": 63,
+            "lines_count": 11,
+            "characters_count": 375,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 2111,
+            "container": "function",
+            "line": 75,
+            "lines_count": 8,
+            "characters_count": 287,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 2400,
+            "container": "function",
+            "line": 84,
+            "lines_count": 8,
+            "characters_count": 277,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 13,
+            "tag": "GlobalFunction",
+            "position": 2679,
+            "container": "function",
+            "line": 93,
+            "lines_count": 12,
+            "characters_count": 268,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 14,
+            "tag": "GlobalFunction",
+            "position": 2949,
+            "container": "function",
+            "line": 106,
+            "lines_count": 17,
+            "characters_count": 432,
+            "children_count": 0
+        },
+        {
+            "index": 13,
+            "master_index": 15,
+            "tag": "GlobalFunction",
+            "position": 3383,
+            "container": "function",
+            "line": 124,
+            "lines_count": 16,
+            "characters_count": 487,
+            "children_count": 0
+        },
+        {
+            "index": 14,
+            "master_index": 16,
+            "tag": "LastStat",
+            "position": 3872,
+            "container": "other",
+            "line": 141,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 17,
+                    "tag": "_SimpleExp",
+                    "position": 3879,
+                    "container": "interface",
+                    "line": 141,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 17,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/tree/share/lua/5.3/treelua/Graph.lua"
+}

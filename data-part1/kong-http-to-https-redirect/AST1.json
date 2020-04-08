@@ -1,0 +1,101 @@
+{
+    "repository": "kong-http-to-https-redirect",
+    "module": "handler.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 53,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 55,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 48,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 105,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 45,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 111,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 152,
+            "container": "function",
+            "line": 6,
+            "lines_count": 3,
+            "characters_count": 98,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 252,
+            "container": "function",
+            "line": 10,
+            "lines_count": 7,
+            "characters_count": 227,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LastStat",
+            "position": 481,
+            "container": "other",
+            "line": 18,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "_SimpleExp",
+                    "position": 488,
+                    "container": "interface",
+                    "line": 18,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 8,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/kong-http-to-https-redirect/share/lua/5.3/kong/plugins/aliyun-http-filter/handler.lua"
+}

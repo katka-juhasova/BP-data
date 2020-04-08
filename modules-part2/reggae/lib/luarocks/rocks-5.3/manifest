@@ -1,0 +1,45 @@
+commands = {}
+dependencies = {
+   reggae = {
+      ["0.0-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 2, string = "5.2"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   JSON = {
+      "reggae/0.0-1"
+   },
+   reggae = {
+      "reggae/0.0-1"
+   },
+   reggae_json_build = {
+      "reggae/0.0-1"
+   }
+}
+repository = {
+   reggae = {
+      ["0.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               JSON = "JSON.lua",
+               reggae = "reggae.lua",
+               reggae_json_build = "reggae_json_build.lua"
+            }
+         }
+      }
+   }
+}

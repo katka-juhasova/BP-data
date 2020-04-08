@@ -1,0 +1,160 @@
+{
+    "repository": "lzmq-ffi",
+    "module": "test_threads_actor_poll.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 45,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 47,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 54,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 53,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 103,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 31,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 135,
+            "container": "require",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 46,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 182,
+            "container": "require",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 51,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "LocalAssign",
+            "position": 235,
+            "container": "other",
+            "line": 8,
+            "lines_count": 4,
+            "characters_count": 112,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "Name",
+                    "position": 241,
+                    "container": "variable",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 10,
+                    "tag": "Function",
+                    "position": 265,
+                    "container": "function",
+                    "line": 8,
+                    "lines_count": 4,
+                    "characters_count": 73,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 11,
+            "tag": "LocalAssign",
+            "position": 349,
+            "container": "other",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "Name",
+                    "position": 355,
+                    "container": "variable",
+                    "line": 13,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 13,
+            "tag": "Function",
+            "position": 399,
+            "container": "function",
+            "line": 15,
+            "lines_count": 4,
+            "characters_count": 50,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 13,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lzmq-ffi/lib/luarocks/rocks-5.3/lzmq-ffi/0.4.4-1/test/test_threads_actor_poll.lua"
+}

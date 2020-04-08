@@ -1,0 +1,88 @@
+commands = {}
+dependencies = {
+   luaexpat = {
+      ["1.3.3-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 0, string = "5.0"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   luaxpath = {
+      ["1.2-4"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     1, 2, string = "1.2"
+                  }
+               }
+            },
+            name = "luaexpat"
+         }
+      }
+   }
+}
+modules = {
+   ["luaxpath.init"] = {
+      "luaxpath/1.2-4"
+   },
+   lxp = {
+      "luaexpat/1.3.3-1"
+   },
+   ["lxp.lom"] = {
+      "luaexpat/1.3.3-1"
+   },
+   ["lxp.totable"] = {
+      "luaexpat/1.3.3-1"
+   }
+}
+repository = {
+   luaexpat = {
+      ["1.3.3-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               lxp = "lxp.so",
+               ["lxp.lom"] = "lxp/lom.lua",
+               ["lxp.totable"] = "lxp/totable.lua"
+            }
+         }
+      }
+   },
+   luaxpath = {
+      ["1.2-4"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               luaexpat = "1.3.3-1"
+            },
+            modules = {
+               ["luaxpath.init"] = "luaxpath/init.lua"
+            }
+         }
+      }
+   }
+}

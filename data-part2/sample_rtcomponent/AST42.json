@@ -1,0 +1,197 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "LogstreamFile.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 204,
+            "container": "require",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 53,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 258,
+            "container": "other",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 55,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 264,
+                    "container": "variable",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 16,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 314,
+            "container": "require",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 41,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 356,
+            "container": "require",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 47,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 404,
+            "container": "require",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 45,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 453,
+            "container": "other",
+            "line": 18,
+            "lines_count": 1,
+            "characters_count": 23,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 459,
+                    "container": "variable",
+                    "line": 18,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "Assign",
+            "position": 641,
+            "container": "other",
+            "line": 24,
+            "lines_count": 169,
+            "characters_count": 4185,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Var",
+                    "position": 641,
+                    "container": "variable",
+                    "line": 24,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 11,
+                    "tag": "Function",
+                    "position": 661,
+                    "container": "function",
+                    "line": 24,
+                    "lines_count": 169,
+                    "characters_count": 4165,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 12,
+            "tag": "Var",
+            "position": 4887,
+            "container": "variable",
+            "line": 196,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "Assign",
+                    "position": 4887,
+                    "container": "other",
+                    "line": 196,
+                    "lines_count": 5,
+                    "characters_count": 122,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 14,
+                            "tag": "Function",
+                            "position": 4908,
+                            "container": "function",
+                            "line": 196,
+                            "lines_count": 5,
+                            "characters_count": 101,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "master_index": 15,
+            "tag": "LastStat",
+            "position": 5013,
+            "container": "other",
+            "line": 204,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "_SimpleExp",
+                    "position": 5020,
+                    "container": "interface",
+                    "line": 204,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 16,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sample_rtcomponent/share/lua/5.3/openrtm/LogstreamFile.lua"
+}

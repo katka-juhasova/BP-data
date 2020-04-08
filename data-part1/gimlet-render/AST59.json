@@ -1,0 +1,178 @@
+{
+    "repository": "gimlet-render",
+    "module": "mock.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 265,
+            "container": "other",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 271,
+                    "container": "variable",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 280,
+            "container": "require",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 38,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 319,
+            "container": "require",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 39,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 449,
+            "container": "function",
+            "line": 16,
+            "lines_count": 38,
+            "characters_count": 1355,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 1891,
+            "container": "function",
+            "line": 57,
+            "lines_count": 3,
+            "characters_count": 133,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalFunction",
+            "position": 2045,
+            "container": "function",
+            "line": 62,
+            "lines_count": 32,
+            "characters_count": 865,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 8,
+            "tag": "LocalFunction",
+            "position": 2935,
+            "container": "function",
+            "line": 96,
+            "lines_count": 15,
+            "characters_count": 390,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 9,
+            "tag": "LocalFunction",
+            "position": 3327,
+            "container": "function",
+            "line": 112,
+            "lines_count": 27,
+            "characters_count": 717,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 10,
+            "tag": "LocalFunction",
+            "position": 4046,
+            "container": "function",
+            "line": 140,
+            "lines_count": 8,
+            "characters_count": 344,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 11,
+            "tag": "LocalFunction",
+            "position": 4392,
+            "container": "function",
+            "line": 149,
+            "lines_count": 3,
+            "characters_count": 117,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 12,
+            "tag": "LocalFunction",
+            "position": 4511,
+            "container": "function",
+            "line": 153,
+            "lines_count": 3,
+            "characters_count": 119,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 13,
+            "tag": "GlobalFunction",
+            "position": 4727,
+            "container": "function",
+            "line": 159,
+            "lines_count": 7,
+            "characters_count": 96,
+            "children_count": 0
+        },
+        {
+            "index": 13,
+            "master_index": 14,
+            "tag": "LastStat",
+            "position": 4825,
+            "container": "other",
+            "line": 167,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 15,
+                    "tag": "_SimpleExp",
+                    "position": 4832,
+                    "container": "interface",
+                    "line": 167,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 15,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/gimlet-render/share/lua/5.3/wsapi/mock.lua"
+}

@@ -1,0 +1,247 @@
+{
+    "repository": "krpc",
+    "module": "daytimeclnt.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 245,
+            "container": "require",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 30,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "Var",
+            "position": 276,
+            "container": "variable",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 4,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Assign",
+                    "position": 276,
+                    "container": "other",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 26,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "Assign",
+            "position": 303,
+            "container": "other",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Var",
+                    "position": 303,
+                    "container": "variable",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "If",
+            "position": 321,
+            "container": "other",
+            "line": 9,
+            "lines_count": 4,
+            "characters_count": 67,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Assign",
+                    "position": 337,
+                    "container": "other",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "Assign",
+                    "position": 363,
+                    "container": "other",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "Assign",
+            "position": 389,
+            "container": "other",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 28,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Var",
+                    "position": 389,
+                    "container": "variable",
+                    "line": 13,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 11,
+            "tag": "Assign",
+            "position": 418,
+            "container": "other",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "Var",
+                    "position": 418,
+                    "container": "variable",
+                    "line": 14,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 13,
+            "tag": "Var",
+            "position": 543,
+            "container": "variable",
+            "line": 18,
+            "lines_count": 1,
+            "characters_count": 4,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "Assign",
+                    "position": 543,
+                    "container": "other",
+                    "line": 18,
+                    "lines_count": 1,
+                    "characters_count": 32,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 15,
+                            "tag": "Var",
+                            "position": 549,
+                            "container": "variable",
+                            "line": 18,
+                            "lines_count": 1,
+                            "characters_count": 3,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 16,
+            "tag": "If",
+            "position": 576,
+            "container": "other",
+            "line": 19,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 17,
+            "tag": "Var",
+            "position": 613,
+            "container": "variable",
+            "line": 20,
+            "lines_count": 1,
+            "characters_count": 5,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "Assign",
+                    "position": 613,
+                    "container": "other",
+                    "line": 20,
+                    "lines_count": 1,
+                    "characters_count": 26,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 19,
+                            "tag": "Var",
+                            "position": 620,
+                            "container": "variable",
+                            "line": 20,
+                            "lines_count": 1,
+                            "characters_count": 3,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 10,
+            "master_index": 20,
+            "tag": "If",
+            "position": 640,
+            "container": "other",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 42,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 20,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/krpc/lib/luarocks/rocks/luasocket/3.0rc1-2/samples/daytimeclnt.lua"
+}

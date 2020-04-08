@@ -1,0 +1,147 @@
+commands = {}
+dependencies = {
+   coxpcall = {
+      ["1.17.0-1"] = {}
+   },
+   luv = {
+      ["1.34.2-0"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   },
+   mpack = {
+      ["1.0.8-0"] = {}
+   },
+   ["nvim-client"] = {
+      ["0.2.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {},
+            name = "mpack"
+         },
+         {
+            constraints = {},
+            name = "luv"
+         },
+         {
+            constraints = {},
+            name = "coxpcall"
+         }
+      }
+   }
+}
+modules = {
+   coxpcall = {
+      "coxpcall/1.17.0-1"
+   },
+   luv = {
+      "luv/1.34.2-0"
+   },
+   mpack = {
+      "mpack/1.0.8-0"
+   },
+   ["nvim._compat"] = {
+      "nvim-client/0.2.2-1"
+   },
+   ["nvim.child_process_stream"] = {
+      "nvim-client/0.2.2-1"
+   },
+   ["nvim.msgpack_rpc_stream"] = {
+      "nvim-client/0.2.2-1"
+   },
+   ["nvim.native"] = {
+      "nvim-client/0.2.2-1"
+   },
+   ["nvim.session"] = {
+      "nvim-client/0.2.2-1"
+   },
+   ["nvim.socket_stream"] = {
+      "nvim-client/0.2.2-1"
+   },
+   ["nvim.stdio_stream"] = {
+      "nvim-client/0.2.2-1"
+   },
+   ["nvim.tcp_stream"] = {
+      "nvim-client/0.2.2-1"
+   }
+}
+repository = {
+   coxpcall = {
+      ["1.17.0-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               coxpcall = "coxpcall.lua"
+            }
+         }
+      }
+   },
+   luv = {
+      ["1.34.2-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               luv = "luv.so"
+            }
+         }
+      }
+   },
+   mpack = {
+      ["1.0.8-0"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               mpack = "mpack.so"
+            }
+         }
+      }
+   },
+   ["nvim-client"] = {
+      ["0.2.2-1"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {
+               coxpcall = "1.17.0-1",
+               luv = "1.34.2-0",
+               mpack = "1.0.8-0"
+            },
+            modules = {
+               ["nvim._compat"] = "nvim/_compat.lua",
+               ["nvim.child_process_stream"] = "nvim/child_process_stream.lua",
+               ["nvim.msgpack_rpc_stream"] = "nvim/msgpack_rpc_stream.lua",
+               ["nvim.native"] = "nvim/native.so",
+               ["nvim.session"] = "nvim/session.lua",
+               ["nvim.socket_stream"] = "nvim/socket_stream.lua",
+               ["nvim.stdio_stream"] = "nvim/stdio_stream.lua",
+               ["nvim.tcp_stream"] = "nvim/tcp_stream.lua"
+            }
+         }
+      }
+   }
+}

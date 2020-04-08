@@ -1,0 +1,116 @@
+{
+    "repository": "openrtm",
+    "module": "DataPortStatus.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 786,
+            "container": "other",
+            "line": 24,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 792,
+                    "container": "variable",
+                    "line": 24,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "Var",
+            "position": 860,
+            "container": "variable",
+            "line": 27,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Assign",
+                    "position": 860,
+                    "container": "other",
+                    "line": 27,
+                    "lines_count": 14,
+                    "characters_count": 435,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "Assign",
+            "position": 1427,
+            "container": "other",
+            "line": 45,
+            "lines_count": 17,
+            "characters_count": 444,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Var",
+                    "position": 1427,
+                    "container": "variable",
+                    "line": 45,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 7,
+                    "tag": "Function",
+                    "position": 1453,
+                    "container": "function",
+                    "line": 45,
+                    "lines_count": 17,
+                    "characters_count": 418,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 8,
+            "tag": "LastStat",
+            "position": 1875,
+            "container": "other",
+            "line": 65,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "_SimpleExp",
+                    "position": 1882,
+                    "container": "interface",
+                    "line": 65,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 9,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/openrtm/share/lua/5.3/openrtm/DataPortStatus.lua"
+}

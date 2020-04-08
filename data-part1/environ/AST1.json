@@ -1,0 +1,68 @@
+{
+    "repository": "environ",
+    "module": "environ.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 10,
+            "characters_count": 267,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 3,
+                    "tag": "Function",
+                    "position": 167,
+                    "container": "function",
+                    "line": 6,
+                    "lines_count": 5,
+                    "characters_count": 99,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 4,
+            "tag": "LastStat",
+            "position": 270,
+            "container": "other",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "_SimpleExp",
+                    "position": 277,
+                    "container": "interface",
+                    "line": 12,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 5,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/environ/share/lua/5.3/environ.lua"
+}

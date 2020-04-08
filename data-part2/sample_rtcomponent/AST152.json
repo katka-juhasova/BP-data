@@ -1,0 +1,116 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "InPort.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 188,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 194,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 239,
+            "container": "require",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 47,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 287,
+            "container": "require",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 55,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "Var",
+            "position": 746,
+            "container": "variable",
+            "line": 28,
+            "lines_count": 1,
+            "characters_count": 10,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Assign",
+                    "position": 746,
+                    "container": "other",
+                    "line": 28,
+                    "lines_count": 144,
+                    "characters_count": 3466,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 7,
+                            "tag": "Function",
+                            "position": 759,
+                            "container": "function",
+                            "line": 28,
+                            "lines_count": 144,
+                            "characters_count": 3453,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 8,
+            "tag": "LastStat",
+            "position": 4215,
+            "container": "other",
+            "line": 174,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "_SimpleExp",
+                    "position": 4222,
+                    "container": "interface",
+                    "line": 174,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 9,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2/sample_rtcomponent/share/lua/5.3/openrtm/InPort.lua"
+}

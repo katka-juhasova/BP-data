@@ -1,0 +1,239 @@
+{
+    "repository": "lua-resty-auto-ssl-instrumented",
+    "module": "auto-ssl.lua",
+    "path": "",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 16,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 76,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 22,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "Assign",
+            "position": 93,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 68,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Var",
+                    "position": 93,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 7,
+            "tag": "If",
+            "position": 162,
+            "container": "other",
+            "line": 5,
+            "lines_count": 4,
+            "characters_count": 144,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "LocalAssign",
+                    "position": 210,
+                    "container": "require",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 25,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 9,
+                    "tag": "Assign",
+                    "position": 238,
+                    "container": "other",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 64,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 308,
+            "container": "function",
+            "line": 10,
+            "lines_count": 39,
+            "characters_count": 944,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 1254,
+            "container": "function",
+            "line": 50,
+            "lines_count": 3,
+            "characters_count": 65,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 1321,
+            "container": "function",
+            "line": 54,
+            "lines_count": 3,
+            "characters_count": 57,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 13,
+            "tag": "GlobalFunction",
+            "position": 1380,
+            "container": "function",
+            "line": 58,
+            "lines_count": 3,
+            "characters_count": 71,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 14,
+            "tag": "GlobalFunction",
+            "position": 1453,
+            "container": "function",
+            "line": 62,
+            "lines_count": 4,
+            "characters_count": 105,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 15,
+            "tag": "GlobalFunction",
+            "position": 1560,
+            "container": "function",
+            "line": 67,
+            "lines_count": 4,
+            "characters_count": 112,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 16,
+            "tag": "GlobalFunction",
+            "position": 1674,
+            "container": "function",
+            "line": 72,
+            "lines_count": 4,
+            "characters_count": 154,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 17,
+            "tag": "GlobalFunction",
+            "position": 1830,
+            "container": "function",
+            "line": 77,
+            "lines_count": 4,
+            "characters_count": 113,
+            "children_count": 0
+        },
+        {
+            "index": 13,
+            "master_index": 18,
+            "tag": "GlobalFunction",
+            "position": 1945,
+            "container": "function",
+            "line": 82,
+            "lines_count": 4,
+            "characters_count": 103,
+            "children_count": 0
+        },
+        {
+            "index": 14,
+            "master_index": 19,
+            "tag": "LastStat",
+            "position": 2050,
+            "container": "other",
+            "line": 87,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 20,
+                    "tag": "_SimpleExp",
+                    "position": 2057,
+                    "container": "interface",
+                    "line": 87,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 20,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1/lua-resty-auto-ssl-instrumented/share/lua/5.3/resty/auto-ssl.lua"
+}

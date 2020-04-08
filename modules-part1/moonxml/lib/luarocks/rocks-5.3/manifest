@@ -1,0 +1,97 @@
+commands = {
+   moonxml = {
+      "moonxml/3.2.2-1"
+   }
+}
+dependencies = {
+   moonxml = {
+      ["3.2.2-1"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         },
+         {
+            constraints = {
+               {
+                  op = "~>",
+                  version = {
+                     2, 0, string = "2.0"
+                  }
+               }
+            },
+            name = "xhmoon"
+         },
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     2, 0, 1, string = "2.0.1"
+                  }
+               }
+            },
+            name = "xhmoon"
+         }
+      }
+   },
+   xhmoon = {
+      ["2.0.1-2"] = {
+         {
+            constraints = {
+               {
+                  op = ">=",
+                  version = {
+                     5, 1, string = "5.1"
+                  }
+               }
+            },
+            name = "lua"
+         }
+      }
+   }
+}
+modules = {
+   moonxml = {
+      "moonxml/3.2.2-1"
+   },
+   xhmoon = {
+      "xhmoon/2.0.1-2"
+   }
+}
+repository = {
+   moonxml = {
+      ["3.2.2-1"] = {
+         {
+            arch = "installed",
+            commands = {
+               moonxml = "moonxml"
+            },
+            dependencies = {
+               xhmoon = "2.0.1-2"
+            },
+            modules = {
+               moonxml = "moonxml.lua"
+            }
+         }
+      }
+   },
+   xhmoon = {
+      ["2.0.1-2"] = {
+         {
+            arch = "installed",
+            commands = {},
+            dependencies = {},
+            modules = {
+               xhmoon = "xhmoon.lua"
+            }
+         }
+      }
+   }
+}
