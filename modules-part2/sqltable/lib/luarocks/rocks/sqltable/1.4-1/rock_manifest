@@ -1,0 +1,28 @@
+rock_manifest = {
+   doc = {
+      ["index.html"] = "3615b7103e4f9342b8306fc00523cb8a",
+      ["ldoc.css"] = "e2b04e90ff648f8e00d9d4d458de59d9",
+      modules = {
+         ["sqltable.connection.html"] = "6e5e02bc81b155c9602b40f4a4447eec",
+         ["sqltable.env.html"] = "702573a2304224e215e45dc68b2fd40a",
+         ["sqltable.html"] = "d3ce7483985fd510d91731791d386150",
+         ["sqltable.pool.html"] = "aa690f27b90c4d92c8339e54586f565d",
+         ["sqltable.table.html"] = "dc9727714aa0b235da34c6a65ed42230"
+      }
+   },
+   lua = {
+      sqltable = {
+         ["connection.lua"] = "e6b65e68b3c73b2592d58f0a1be7c3c6",
+         drivers = {
+            ["MySQL.lua"] = "4cc2f4c9090a8c26472aa41fd595e72f",
+            ["PostgreSQL.lua"] = "1a8d00fbd75b7959aaf8dc655df01849",
+            ["SQLite3.lua"] = "ae466711ca8637f47b2d01784e0cd8ee"
+         },
+         ["env.lua"] = "0e6ac47fb57b9470f2b0ba8e02e49e40",
+         ["pool.lua"] = "97415e2dbfca37a40d67da20f2ea8e26",
+         ["table.lua"] = "835d653aca66728d41441f9ed9f62368"
+      },
+      ["sqltable.lua"] = "1598cae8b6fb269a436b1522ade9e1aa"
+   },
+   ["sqltable-1.4-1.rockspec"] = "aa56753f45fead8123e6ec7269fb0c08"
+}
