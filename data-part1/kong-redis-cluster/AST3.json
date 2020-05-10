@@ -1,7 +1,7 @@
 {
     "repository": "kong-redis-cluster",
     "module": "rediscluster.lua",
-    "path": "",
+    "path": "modules/kong-redis-cluster/share/lua/5.3/resty/rediscluster.lua",
     "nodes": [
         {
             "index": 1,

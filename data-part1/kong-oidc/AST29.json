@@ -1,7 +1,7 @@
 {
     "repository": "kong-oidc",
     "module": "redis.lua",
-    "path": "",
+    "path": "modules/kong-oidc/share/lua/5.3/resty/session/storage/redis.lua",
     "nodes": [
         {
             "index": 1,

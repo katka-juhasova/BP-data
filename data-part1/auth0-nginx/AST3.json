@@ -1,7 +1,7 @@
 {
     "repository": "auth0-nginx",
     "module": "jwt.lua",
-    "path": "",
+    "path": "modules/auth0-nginx/share/lua/5.3/resty/jwt.lua",
     "nodes": [
         {
             "index": 1,
