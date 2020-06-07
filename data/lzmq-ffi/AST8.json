@@ -1,0 +1,850 @@
+{
+    "repository": "lzmq-ffi",
+    "module": "loop.lua",
+    "path": "modules/lzmq-ffi/share/lua/5.3/lzmq/impl/loop.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LastStat",
+            "position": 230,
+            "container": "other",
+            "line": 11,
+            "lines_count": 506,
+            "characters_count": 15962,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Function",
+                    "position": 237,
+                    "container": "interface",
+                    "line": 11,
+                    "lines_count": 506,
+                    "characters_count": 15955,
+                    "children_count": 20,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 3,
+                            "tag": "LocalAssign",
+                            "position": 257,
+                            "container": "require",
+                            "line": 13,
+                            "lines_count": 1,
+                            "characters_count": 35,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 4,
+                            "tag": "LocalAssign",
+                            "position": 293,
+                            "container": "require",
+                            "line": 14,
+                            "lines_count": 1,
+                            "characters_count": 48,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 3,
+                            "master_index": 5,
+                            "tag": "LocalAssign",
+                            "position": 342,
+                            "container": "require",
+                            "line": 15,
+                            "lines_count": 1,
+                            "characters_count": 47,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 4,
+                            "master_index": 6,
+                            "tag": "LocalAssign",
+                            "position": 390,
+                            "container": "other",
+                            "line": 16,
+                            "lines_count": 1,
+                            "characters_count": 59,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 5,
+                            "master_index": 7,
+                            "tag": "If",
+                            "position": 450,
+                            "container": "other",
+                            "line": 17,
+                            "lines_count": 1,
+                            "characters_count": 33,
+                            "children_count": 1,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 8,
+                                    "tag": "Assign",
+                                    "position": 465,
+                                    "container": "other",
+                                    "line": 17,
+                                    "lines_count": 1,
+                                    "characters_count": 14,
+                                    "children_count": 0
+                                }
+                            ]
+                        },
+                        {
+                            "index": 6,
+                            "master_index": 9,
+                            "tag": "LocalAssign",
+                            "position": 485,
+                            "container": "other",
+                            "line": 19,
+                            "lines_count": 1,
+                            "characters_count": 26,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 7,
+                            "master_index": 10,
+                            "tag": "Do",
+                            "position": 512,
+                            "container": "other",
+                            "line": 20,
+                            "lines_count": 5,
+                            "characters_count": 89,
+                            "children_count": 2,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 11,
+                                    "tag": "LocalAssign",
+                                    "position": 515,
+                                    "container": "other",
+                                    "line": 20,
+                                    "lines_count": 1,
+                                    "characters_count": 25,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 12,
+                                    "tag": "If",
+                                    "position": 543,
+                                    "container": "other",
+                                    "line": 21,
+                                    "lines_count": 3,
+                                    "characters_count": 54,
+                                    "children_count": 1,
+                                    "children": [
+                                        {
+                                            "index": 1,
+                                            "master_index": 13,
+                                            "tag": "Assign",
+                                            "position": 574,
+                                            "container": "other",
+                                            "line": 22,
+                                            "lines_count": 1,
+                                            "characters_count": 17,
+                                            "children_count": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "index": 8,
+                            "master_index": 14,
+                            "tag": "LocalFunction",
+                            "position": 603,
+                            "container": "function",
+                            "line": 26,
+                            "lines_count": 9,
+                            "characters_count": 154,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 9,
+                            "master_index": 15,
+                            "tag": "LocalAssign",
+                            "position": 827,
+                            "container": "other",
+                            "line": 37,
+                            "lines_count": 1,
+                            "characters_count": 26,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 10,
+                            "master_index": 16,
+                            "tag": "Do",
+                            "position": 854,
+                            "container": "other",
+                            "line": 37,
+                            "lines_count": 83,
+                            "characters_count": 1994,
+                            "children_count": 13,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 17,
+                                    "tag": "GlobalFunction",
+                                    "position": 895,
+                                    "container": "function",
+                                    "line": 41,
+                                    "lines_count": 8,
+                                    "characters_count": 137,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 18,
+                                    "tag": "GlobalFunction",
+                                    "position": 1034,
+                                    "container": "function",
+                                    "line": 50,
+                                    "lines_count": 6,
+                                    "characters_count": 163,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 3,
+                                    "master_index": 19,
+                                    "tag": "GlobalFunction",
+                                    "position": 1199,
+                                    "container": "function",
+                                    "line": 57,
+                                    "lines_count": 7,
+                                    "characters_count": 208,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 4,
+                                    "master_index": 20,
+                                    "tag": "GlobalFunction",
+                                    "position": 1409,
+                                    "container": "function",
+                                    "line": 65,
+                                    "lines_count": 4,
+                                    "characters_count": 109,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 5,
+                                    "master_index": 21,
+                                    "tag": "GlobalFunction",
+                                    "position": 1619,
+                                    "container": "function",
+                                    "line": 72,
+                                    "lines_count": 3,
+                                    "characters_count": 76,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 6,
+                                    "master_index": 22,
+                                    "tag": "GlobalFunction",
+                                    "position": 1775,
+                                    "container": "function",
+                                    "line": 78,
+                                    "lines_count": 3,
+                                    "characters_count": 72,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 7,
+                                    "master_index": 23,
+                                    "tag": "GlobalFunction",
+                                    "position": 1892,
+                                    "container": "function",
+                                    "line": 84,
+                                    "lines_count": 3,
+                                    "characters_count": 60,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 8,
+                                    "master_index": 24,
+                                    "tag": "GlobalFunction",
+                                    "position": 2156,
+                                    "container": "function",
+                                    "line": 92,
+                                    "lines_count": 11,
+                                    "characters_count": 275,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 9,
+                                    "master_index": 25,
+                                    "tag": "GlobalFunction",
+                                    "position": 2433,
+                                    "container": "function",
+                                    "line": 104,
+                                    "lines_count": 3,
+                                    "characters_count": 72,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 10,
+                                    "master_index": 26,
+                                    "tag": "GlobalFunction",
+                                    "position": 2507,
+                                    "container": "function",
+                                    "line": 108,
+                                    "lines_count": 6,
+                                    "characters_count": 155,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 11,
+                                    "master_index": 27,
+                                    "tag": "GlobalFunction",
+                                    "position": 2664,
+                                    "container": "function",
+                                    "line": 115,
+                                    "lines_count": 1,
+                                    "characters_count": 59,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 12,
+                                    "master_index": 28,
+                                    "tag": "GlobalFunction",
+                                    "position": 2724,
+                                    "container": "function",
+                                    "line": 116,
+                                    "lines_count": 1,
+                                    "characters_count": 59,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 13,
+                                    "master_index": 29,
+                                    "tag": "GlobalFunction",
+                                    "position": 2784,
+                                    "container": "function",
+                                    "line": 117,
+                                    "lines_count": 1,
+                                    "characters_count": 59,
+                                    "children_count": 0
+                                }
+                            ]
+                        },
+                        {
+                            "index": 11,
+                            "master_index": 30,
+                            "tag": "LocalAssign",
+                            "position": 2986,
+                            "container": "other",
+                            "line": 123,
+                            "lines_count": 1,
+                            "characters_count": 26,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 12,
+                            "master_index": 31,
+                            "tag": "Do",
+                            "position": 3013,
+                            "container": "other",
+                            "line": 123,
+                            "lines_count": 106,
+                            "characters_count": 4918,
+                            "children_count": 8,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 32,
+                                    "tag": "GlobalFunction",
+                                    "position": 3017,
+                                    "container": "function",
+                                    "line": 125,
+                                    "lines_count": 3,
+                                    "characters_count": 74,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 33,
+                                    "tag": "GlobalFunction",
+                                    "position": 3093,
+                                    "container": "function",
+                                    "line": 129,
+                                    "lines_count": 4,
+                                    "characters_count": 76,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 3,
+                                    "master_index": 34,
+                                    "tag": "GlobalFunction",
+                                    "position": 3171,
+                                    "container": "function",
+                                    "line": 134,
+                                    "lines_count": 3,
+                                    "characters_count": 62,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 4,
+                                    "master_index": 35,
+                                    "tag": "GlobalFunction",
+                                    "position": 3235,
+                                    "container": "function",
+                                    "line": 138,
+                                    "lines_count": 4,
+                                    "characters_count": 86,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 5,
+                                    "master_index": 36,
+                                    "tag": "GlobalFunction",
+                                    "position": 3323,
+                                    "container": "function",
+                                    "line": 143,
+                                    "lines_count": 3,
+                                    "characters_count": 62,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 6,
+                                    "master_index": 37,
+                                    "tag": "GlobalFunction",
+                                    "position": 3467,
+                                    "container": "function",
+                                    "line": 149,
+                                    "lines_count": 10,
+                                    "characters_count": 308,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 7,
+                                    "master_index": 38,
+                                    "tag": "GlobalFunction",
+                                    "position": 3847,
+                                    "container": "function",
+                                    "line": 162,
+                                    "lines_count": 53,
+                                    "characters_count": 3779,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 8,
+                                    "master_index": 39,
+                                    "tag": "GlobalFunction",
+                                    "position": 7692,
+                                    "container": "function",
+                                    "line": 218,
+                                    "lines_count": 9,
+                                    "characters_count": 234,
+                                    "children_count": 0
+                                }
+                            ]
+                        },
+                        {
+                            "index": 13,
+                            "master_index": 40,
+                            "tag": "LocalAssign",
+                            "position": 8069,
+                            "container": "other",
+                            "line": 232,
+                            "lines_count": 1,
+                            "characters_count": 24,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 14,
+                            "master_index": 41,
+                            "tag": "Do",
+                            "position": 8094,
+                            "container": "other",
+                            "line": 232,
+                            "lines_count": 269,
+                            "characters_count": 7844,
+                            "children_count": 29,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 42,
+                                    "tag": "GlobalFunction",
+                                    "position": 8108,
+                                    "container": "function",
+                                    "line": 235,
+                                    "lines_count": 1,
+                                    "characters_count": 48,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 43,
+                                    "tag": "GlobalFunction",
+                                    "position": 8158,
+                                    "container": "function",
+                                    "line": 237,
+                                    "lines_count": 26,
+                                    "characters_count": 639,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 3,
+                                    "master_index": 44,
+                                    "tag": "GlobalFunction",
+                                    "position": 8799,
+                                    "container": "function",
+                                    "line": 264,
+                                    "lines_count": 3,
+                                    "characters_count": 74,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 4,
+                                    "master_index": 45,
+                                    "tag": "GlobalFunction",
+                                    "position": 8875,
+                                    "container": "function",
+                                    "line": 268,
+                                    "lines_count": 20,
+                                    "characters_count": 476,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 5,
+                                    "master_index": 46,
+                                    "tag": "GlobalFunction",
+                                    "position": 9353,
+                                    "container": "function",
+                                    "line": 289,
+                                    "lines_count": 3,
+                                    "characters_count": 62,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 6,
+                                    "master_index": 47,
+                                    "tag": "GlobalFunction",
+                                    "position": 9417,
+                                    "container": "function",
+                                    "line": 293,
+                                    "lines_count": 4,
+                                    "characters_count": 96,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 7,
+                                    "master_index": 48,
+                                    "tag": "Assign",
+                                    "position": 9514,
+                                    "container": "other",
+                                    "line": 297,
+                                    "lines_count": 1,
+                                    "characters_count": 34,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 8,
+                                    "master_index": 49,
+                                    "tag": "GlobalFunction",
+                                    "position": 9550,
+                                    "container": "function",
+                                    "line": 299,
+                                    "lines_count": 3,
+                                    "characters_count": 116,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 9,
+                                    "master_index": 50,
+                                    "tag": "Assign",
+                                    "position": 9667,
+                                    "container": "other",
+                                    "line": 302,
+                                    "lines_count": 1,
+                                    "characters_count": 39,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 10,
+                                    "master_index": 51,
+                                    "tag": "GlobalFunction",
+                                    "position": 9708,
+                                    "container": "function",
+                                    "line": 304,
+                                    "lines_count": 12,
+                                    "characters_count": 412,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 11,
+                                    "master_index": 52,
+                                    "tag": "GlobalFunction",
+                                    "position": 10273,
+                                    "container": "function",
+                                    "line": 320,
+                                    "lines_count": 12,
+                                    "characters_count": 322,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 12,
+                                    "master_index": 53,
+                                    "tag": "GlobalFunction",
+                                    "position": 10834,
+                                    "container": "function",
+                                    "line": 336,
+                                    "lines_count": 16,
+                                    "characters_count": 501,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 13,
+                                    "master_index": 54,
+                                    "tag": "GlobalFunction",
+                                    "position": 11409,
+                                    "container": "function",
+                                    "line": 356,
+                                    "lines_count": 20,
+                                    "characters_count": 725,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 14,
+                                    "master_index": 55,
+                                    "tag": "GlobalFunction",
+                                    "position": 12666,
+                                    "container": "function",
+                                    "line": 388,
+                                    "lines_count": 13,
+                                    "characters_count": 417,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 15,
+                                    "master_index": 56,
+                                    "tag": "GlobalFunction",
+                                    "position": 13085,
+                                    "container": "function",
+                                    "line": 402,
+                                    "lines_count": 6,
+                                    "characters_count": 135,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 16,
+                                    "master_index": 57,
+                                    "tag": "GlobalFunction",
+                                    "position": 13222,
+                                    "container": "function",
+                                    "line": 409,
+                                    "lines_count": 7,
+                                    "characters_count": 192,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 17,
+                                    "master_index": 58,
+                                    "tag": "GlobalFunction",
+                                    "position": 13416,
+                                    "container": "function",
+                                    "line": 417,
+                                    "lines_count": 7,
+                                    "characters_count": 193,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 18,
+                                    "master_index": 59,
+                                    "tag": "GlobalFunction",
+                                    "position": 13611,
+                                    "container": "function",
+                                    "line": 425,
+                                    "lines_count": 6,
+                                    "characters_count": 175,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 19,
+                                    "master_index": 60,
+                                    "tag": "GlobalFunction",
+                                    "position": 14382,
+                                    "container": "function",
+                                    "line": 444,
+                                    "lines_count": 11,
+                                    "characters_count": 269,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 20,
+                                    "master_index": 61,
+                                    "tag": "GlobalFunction",
+                                    "position": 14653,
+                                    "container": "function",
+                                    "line": 456,
+                                    "lines_count": 7,
+                                    "characters_count": 221,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 21,
+                                    "master_index": 62,
+                                    "tag": "GlobalFunction",
+                                    "position": 14876,
+                                    "container": "function",
+                                    "line": 464,
+                                    "lines_count": 3,
+                                    "characters_count": 93,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 22,
+                                    "master_index": 63,
+                                    "tag": "GlobalFunction",
+                                    "position": 14971,
+                                    "container": "function",
+                                    "line": 468,
+                                    "lines_count": 3,
+                                    "characters_count": 117,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 23,
+                                    "master_index": 64,
+                                    "tag": "GlobalFunction",
+                                    "position": 15090,
+                                    "container": "function",
+                                    "line": 472,
+                                    "lines_count": 3,
+                                    "characters_count": 123,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 24,
+                                    "master_index": 65,
+                                    "tag": "GlobalFunction",
+                                    "position": 15215,
+                                    "container": "function",
+                                    "line": 476,
+                                    "lines_count": 3,
+                                    "characters_count": 102,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 25,
+                                    "master_index": 66,
+                                    "tag": "GlobalFunction",
+                                    "position": 15319,
+                                    "container": "function",
+                                    "line": 480,
+                                    "lines_count": 3,
+                                    "characters_count": 108,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 26,
+                                    "master_index": 67,
+                                    "tag": "GlobalFunction",
+                                    "position": 15429,
+                                    "container": "function",
+                                    "line": 484,
+                                    "lines_count": 3,
+                                    "characters_count": 116,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 27,
+                                    "master_index": 68,
+                                    "tag": "GlobalFunction",
+                                    "position": 15547,
+                                    "container": "function",
+                                    "line": 488,
+                                    "lines_count": 3,
+                                    "characters_count": 122,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 28,
+                                    "master_index": 69,
+                                    "tag": "GlobalFunction",
+                                    "position": 15671,
+                                    "container": "function",
+                                    "line": 492,
+                                    "lines_count": 3,
+                                    "characters_count": 133,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 29,
+                                    "master_index": 70,
+                                    "tag": "GlobalFunction",
+                                    "position": 15806,
+                                    "container": "function",
+                                    "line": 496,
+                                    "lines_count": 3,
+                                    "characters_count": 127,
+                                    "children_count": 0
+                                }
+                            ]
+                        },
+                        {
+                            "index": 15,
+                            "master_index": 71,
+                            "tag": "LocalAssign",
+                            "position": 16008,
+                            "container": "other",
+                            "line": 503,
+                            "lines_count": 1,
+                            "characters_count": 12,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 16,
+                            "master_index": 72,
+                            "tag": "GlobalFunction",
+                            "position": 16022,
+                            "container": "function",
+                            "line": 505,
+                            "lines_count": 4,
+                            "characters_count": 102,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 17,
+                            "master_index": 73,
+                            "tag": "Assign",
+                            "position": 16126,
+                            "container": "other",
+                            "line": 510,
+                            "lines_count": 1,
+                            "characters_count": 22,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 18,
+                            "master_index": 74,
+                            "tag": "Assign",
+                            "position": 16150,
+                            "container": "other",
+                            "line": 512,
+                            "lines_count": 1,
+                            "characters_count": 27,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 19,
+                            "master_index": 75,
+                            "tag": "LastStat",
+                            "position": 16179,
+                            "container": "other",
+                            "line": 514,
+                            "lines_count": 1,
+                            "characters_count": 8,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 75,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lzmq-ffi/share/lua/5.3/lzmq/impl/loop.lua"
+}

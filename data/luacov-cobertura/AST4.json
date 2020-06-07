@@ -1,0 +1,250 @@
+{
+    "repository": "luacov-cobertura",
+    "module": "cobertura.lua",
+    "path": "modules/luacov-cobertura/share/lua/5.3/luacov/reporter/cobertura.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 50,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 52,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 53,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 107,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 49,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 113,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 272,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 57,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 278,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "Do",
+            "position": 330,
+            "container": "other",
+            "line": 10,
+            "lines_count": 130,
+            "characters_count": 3325,
+            "children_count": 9,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Assign",
+                    "position": 333,
+                    "container": "other",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 47,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 9,
+                    "tag": "GlobalFunction",
+                    "position": 382,
+                    "container": "function",
+                    "line": 13,
+                    "lines_count": 22,
+                    "characters_count": 566,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 10,
+                    "tag": "GlobalFunction",
+                    "position": 950,
+                    "container": "function",
+                    "line": 36,
+                    "lines_count": 14,
+                    "characters_count": 239,
+                    "children_count": 0
+                },
+                {
+                    "index": 4,
+                    "master_index": 11,
+                    "tag": "GlobalFunction",
+                    "position": 1191,
+                    "container": "function",
+                    "line": 51,
+                    "lines_count": 38,
+                    "characters_count": 962,
+                    "children_count": 0
+                },
+                {
+                    "index": 5,
+                    "master_index": 12,
+                    "tag": "GlobalFunction",
+                    "position": 2155,
+                    "container": "function",
+                    "line": 90,
+                    "lines_count": 2,
+                    "characters_count": 69,
+                    "children_count": 0
+                },
+                {
+                    "index": 6,
+                    "master_index": 13,
+                    "tag": "GlobalFunction",
+                    "position": 2226,
+                    "container": "function",
+                    "line": 93,
+                    "lines_count": 3,
+                    "characters_count": 165,
+                    "children_count": 0
+                },
+                {
+                    "index": 7,
+                    "master_index": 14,
+                    "tag": "GlobalFunction",
+                    "position": 2393,
+                    "container": "function",
+                    "line": 97,
+                    "lines_count": 3,
+                    "characters_count": 174,
+                    "children_count": 0
+                },
+                {
+                    "index": 8,
+                    "master_index": 15,
+                    "tag": "GlobalFunction",
+                    "position": 2686,
+                    "container": "function",
+                    "line": 105,
+                    "lines_count": 7,
+                    "characters_count": 184,
+                    "children_count": 0
+                },
+                {
+                    "index": 9,
+                    "master_index": 16,
+                    "tag": "GlobalFunction",
+                    "position": 2933,
+                    "container": "function",
+                    "line": 114,
+                    "lines_count": 24,
+                    "characters_count": 717,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 17,
+            "tag": "LocalAssign",
+            "position": 3657,
+            "container": "other",
+            "line": 141,
+            "lines_count": 1,
+            "characters_count": 19,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "Name",
+                    "position": 3663,
+                    "container": "variable",
+                    "line": 141,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 19,
+            "tag": "GlobalFunction",
+            "position": 3678,
+            "container": "function",
+            "line": 143,
+            "lines_count": 3,
+            "characters_count": 81,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 20,
+            "tag": "LastStat",
+            "position": 3761,
+            "container": "other",
+            "line": 147,
+            "lines_count": 1,
+            "characters_count": 15,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 21,
+                    "tag": "_SimpleExp",
+                    "position": 3768,
+                    "container": "interface",
+                    "line": 147,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 21,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/luacov-cobertura/share/lua/5.3/luacov/reporter/cobertura.lua"
+}

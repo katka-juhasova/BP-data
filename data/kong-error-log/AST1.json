@@ -1,0 +1,232 @@
+{
+    "repository": "kong-error-log",
+    "module": "handler.lua",
+    "path": "modules/kong-error-log/share/lua/5.3/kong/plugins/kong-error-log/handler.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 53,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 55,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 40,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 61,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 96,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 132,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 138,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 157,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 163,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 180,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 186,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 11,
+            "tag": "Var",
+            "position": 206,
+            "container": "variable",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "Assign",
+                    "position": 206,
+                    "container": "other",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 26,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 13,
+            "tag": "Var",
+            "position": 233,
+            "container": "variable",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "Assign",
+                    "position": 233,
+                    "container": "other",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 30,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "master_index": 15,
+            "tag": "GlobalFunction",
+            "position": 265,
+            "container": "function",
+            "line": 11,
+            "lines_count": 6,
+            "characters_count": 150,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 16,
+            "tag": "GlobalFunction",
+            "position": 417,
+            "container": "function",
+            "line": 18,
+            "lines_count": 7,
+            "characters_count": 190,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 17,
+            "tag": "GlobalFunction",
+            "position": 609,
+            "container": "function",
+            "line": 26,
+            "lines_count": 24,
+            "characters_count": 983,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 18,
+            "tag": "LastStat",
+            "position": 1594,
+            "container": "other",
+            "line": 51,
+            "lines_count": 1,
+            "characters_count": 19,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 19,
+                    "tag": "_SimpleExp",
+                    "position": 1601,
+                    "container": "interface",
+                    "line": 51,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 19,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/kong-error-log/share/lua/5.3/kong/plugins/kong-error-log/handler.lua"
+}

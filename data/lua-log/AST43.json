@@ -1,0 +1,280 @@
+{
+    "repository": "lua-log",
+    "module": "async_proxy.lua",
+    "path": "modules/lua-log/lib/luarocks/rocks-5.3/lua-log/0.1.6-1/examples/async_proxy.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 23,
+            "children_count": 3,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 11,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 16,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 5,
+            "tag": "Var",
+            "position": 26,
+            "container": "variable",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 2,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Assign",
+                    "position": 26,
+                    "container": "other",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 32,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 7,
+                            "tag": "Var",
+                            "position": 30,
+                            "container": "variable",
+                            "line": 2,
+                            "lines_count": 1,
+                            "characters_count": 3,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 8,
+            "tag": "If",
+            "position": 60,
+            "container": "other",
+            "line": 3,
+            "lines_count": 8,
+            "characters_count": 222,
+            "children_count": 5,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "Assign",
+                    "position": 74,
+                    "container": "other",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 46,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 10,
+                    "tag": "If",
+                    "position": 124,
+                    "container": "other",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 33,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 11,
+                            "tag": "Assign",
+                            "position": 139,
+                            "container": "other",
+                            "line": 5,
+                            "lines_count": 1,
+                            "characters_count": 14,
+                            "children_count": 0
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "master_index": 12,
+                    "tag": "Assign",
+                    "position": 167,
+                    "container": "other",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 24,
+                    "children_count": 0
+                },
+                {
+                    "index": 4,
+                    "master_index": 13,
+                    "tag": "Assign",
+                    "position": 195,
+                    "container": "other",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 45,
+                    "children_count": 0
+                },
+                {
+                    "index": 5,
+                    "master_index": 14,
+                    "tag": "If",
+                    "position": 244,
+                    "container": "other",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 33,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 15,
+                            "tag": "Assign",
+                            "position": 259,
+                            "container": "other",
+                            "line": 9,
+                            "lines_count": 1,
+                            "characters_count": 14,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 16,
+            "tag": "LocalAssign",
+            "position": 286,
+            "container": "other",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 23,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 17,
+                    "tag": "Name",
+                    "position": 292,
+                    "container": "variable",
+                    "line": 12,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 18,
+            "tag": "LocalAssign",
+            "position": 335,
+            "container": "require",
+            "line": 15,
+            "lines_count": 6,
+            "characters_count": 251,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 19,
+            "tag": "LocalAssign",
+            "position": 588,
+            "container": "require",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 20,
+            "tag": "LocalAssign",
+            "position": 667,
+            "container": "other",
+            "line": 24,
+            "lines_count": 11,
+            "characters_count": 363,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 21,
+                    "tag": "Name",
+                    "position": 673,
+                    "container": "variable",
+                    "line": 24,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 22,
+            "tag": "LocalAssign",
+            "position": 1034,
+            "container": "other",
+            "line": 36,
+            "lines_count": 1,
+            "characters_count": 46,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 23,
+                    "tag": "Name",
+                    "position": 1040,
+                    "container": "variable",
+                    "line": 36,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 23,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lua-log/lib/luarocks/rocks-5.3/lua-log/0.1.6-1/examples/async_proxy.lua"
+}

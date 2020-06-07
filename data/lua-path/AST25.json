@@ -1,0 +1,184 @@
+{
+    "repository": "lua-path",
+    "module": "test_lfs.lua",
+    "path": "modules/lua-path/lib/luarocks/rocks-5.3/lua-path/0.3.1-1/test/test_lfs.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 24,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 50,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalFunction",
+            "position": 76,
+            "container": "function",
+            "line": 5,
+            "lines_count": 5,
+            "characters_count": 120,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalFunction",
+            "position": 198,
+            "container": "function",
+            "line": 11,
+            "lines_count": 212,
+            "characters_count": 6159,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 6359,
+            "container": "other",
+            "line": 224,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 6378,
+            "container": "function",
+            "line": 226,
+            "lines_count": 9,
+            "characters_count": 202,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 6,
+            "tag": "If",
+            "position": 6582,
+            "container": "other",
+            "line": 236,
+            "lines_count": 16,
+            "characters_count": 385,
+            "children_count": 3,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "If",
+                    "position": 6603,
+                    "container": "other",
+                    "line": 237,
+                    "lines_count": 4,
+                    "characters_count": 120,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 8,
+                            "tag": "LocalAssign",
+                            "position": 6632,
+                            "container": "require",
+                            "line": 238,
+                            "lines_count": 1,
+                            "characters_count": 53,
+                            "children_count": 0
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "master_index": 9,
+                    "tag": "If",
+                    "position": 6727,
+                    "container": "other",
+                    "line": 242,
+                    "lines_count": 4,
+                    "characters_count": 114,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 10,
+                            "tag": "LocalAssign",
+                            "position": 6754,
+                            "container": "require",
+                            "line": 243,
+                            "lines_count": 1,
+                            "characters_count": 51,
+                            "children_count": 0
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "master_index": 11,
+                    "tag": "If",
+                    "position": 6849,
+                    "container": "other",
+                    "line": 247,
+                    "lines_count": 4,
+                    "characters_count": 114,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 12,
+                            "tag": "LocalAssign",
+                            "position": 6887,
+                            "container": "other",
+                            "line": 248,
+                            "lines_count": 1,
+                            "characters_count": 37,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 13,
+            "tag": "If",
+            "position": 6969,
+            "container": "other",
+            "line": 253,
+            "lines_count": 4,
+            "characters_count": 96,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "LocalAssign",
+                    "position": 7001,
+                    "container": "other",
+                    "line": 254,
+                    "lines_count": 1,
+                    "characters_count": 33,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 15,
+            "tag": "If",
+            "position": 7067,
+            "container": "other",
+            "line": 258,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 15,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lua-path/lib/luarocks/rocks-5.3/lua-path/0.3.1-1/test/test_lfs.lua"
+}

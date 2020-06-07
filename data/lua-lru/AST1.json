@@ -1,0 +1,68 @@
+{
+    "repository": "lua-lru",
+    "module": "lru.lua",
+    "path": "modules/lua-lru/share/lua/5.3/lru.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 108,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 114,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "GlobalFunction",
+            "position": 124,
+            "container": "function",
+            "line": 7,
+            "lines_count": 145,
+            "characters_count": 3704,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LastStat",
+            "position": 3830,
+            "container": "other",
+            "line": 153,
+            "lines_count": 1,
+            "characters_count": 10,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "_SimpleExp",
+                    "position": 3837,
+                    "container": "interface",
+                    "line": 153,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 5,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lua-lru/share/lua/5.3/lru.lua"
+}

@@ -1,0 +1,90 @@
+{
+    "repository": "spawn",
+    "module": "wait.lua",
+    "path": "modules/spawn/share/lua/5.3/spawn/wait.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 102,
+            "container": "require",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 27,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 131,
+            "container": "other",
+            "line": 7,
+            "lines_count": 5,
+            "characters_count": 76,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 137,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalFunction",
+            "position": 247,
+            "container": "function",
+            "line": 14,
+            "lines_count": 3,
+            "characters_count": 101,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 350,
+            "container": "function",
+            "line": 18,
+            "lines_count": 23,
+            "characters_count": 610,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LastStat",
+            "position": 962,
+            "container": "other",
+            "line": 42,
+            "lines_count": 3,
+            "characters_count": 30,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Field",
+                    "position": 972,
+                    "container": "interface",
+                    "line": 43,
+                    "lines_count": 1,
+                    "characters_count": 17,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 7,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/spawn/share/lua/5.3/spawn/wait.lua"
+}

@@ -1,0 +1,156 @@
+{
+    "repository": "lua-quickcheck",
+    "module": "lqc_gen.lua",
+    "path": "modules/lua-quickcheck/share/lua/5.1/lqc/lqc_gen.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 108,
+            "container": "require",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 144,
+            "container": "require",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 180,
+            "container": "require",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 43,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 225,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 231,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LocalFunction",
+            "position": 418,
+            "container": "function",
+            "line": 16,
+            "lines_count": 6,
+            "characters_count": 120,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalFunction",
+            "position": 882,
+            "container": "function",
+            "line": 30,
+            "lines_count": 15,
+            "characters_count": 335,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 1430,
+            "container": "function",
+            "line": 50,
+            "lines_count": 3,
+            "characters_count": 98,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 1728,
+            "container": "function",
+            "line": 58,
+            "lines_count": 13,
+            "characters_count": 376,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 2381,
+            "container": "function",
+            "line": 77,
+            "lines_count": 25,
+            "characters_count": 690,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 3304,
+            "container": "function",
+            "line": 107,
+            "lines_count": 17,
+            "characters_count": 354,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 12,
+            "tag": "LastStat",
+            "position": 3660,
+            "container": "other",
+            "line": 125,
+            "lines_count": 1,
+            "characters_count": 10,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "_SimpleExp",
+                    "position": 3667,
+                    "container": "interface",
+                    "line": 125,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 13,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lua-quickcheck/share/lua/5.1/lqc/lqc_gen.lua"
+}

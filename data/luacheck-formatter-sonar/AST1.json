@@ -1,0 +1,202 @@
+{
+    "repository": "luacheck-formatter-sonar",
+    "module": "sonar.lua",
+    "path": "modules/luacheck-formatter-sonar/share/lua/5.3/sonar.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 41,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 43,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 38,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 83,
+            "container": "other",
+            "line": 4,
+            "lines_count": 4,
+            "characters_count": 63,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 89,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 147,
+            "container": "other",
+            "line": 8,
+            "lines_count": 4,
+            "characters_count": 70,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 153,
+                    "container": "variable",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "LocalFunction",
+            "position": 219,
+            "container": "function",
+            "line": 13,
+            "lines_count": 3,
+            "characters_count": 72,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "LocalFunction",
+            "position": 293,
+            "container": "function",
+            "line": 17,
+            "lines_count": 3,
+            "characters_count": 73,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LocalFunction",
+            "position": 368,
+            "container": "function",
+            "line": 21,
+            "lines_count": 3,
+            "characters_count": 94,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 10,
+            "tag": "LocalFunction",
+            "position": 464,
+            "container": "function",
+            "line": 25,
+            "lines_count": 4,
+            "characters_count": 121,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 11,
+            "tag": "LocalFunction",
+            "position": 587,
+            "container": "function",
+            "line": 30,
+            "lines_count": 13,
+            "characters_count": 402,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 12,
+            "tag": "LocalFunction",
+            "position": 991,
+            "container": "function",
+            "line": 44,
+            "lines_count": 21,
+            "characters_count": 653,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 13,
+            "tag": "LocalFunction",
+            "position": 1646,
+            "container": "function",
+            "line": 66,
+            "lines_count": 13,
+            "characters_count": 401,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 14,
+            "tag": "LocalFunction",
+            "position": 2049,
+            "container": "function",
+            "line": 80,
+            "lines_count": 16,
+            "characters_count": 342,
+            "children_count": 0
+        },
+        {
+            "index": 13,
+            "master_index": 15,
+            "tag": "LocalFunction",
+            "position": 2393,
+            "container": "function",
+            "line": 97,
+            "lines_count": 21,
+            "characters_count": 599,
+            "children_count": 0
+        },
+        {
+            "index": 14,
+            "master_index": 16,
+            "tag": "LastStat",
+            "position": 2994,
+            "container": "other",
+            "line": 119,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 17,
+                    "tag": "_SimpleExp",
+                    "position": 3001,
+                    "container": "interface",
+                    "line": 119,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 17,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/luacheck-formatter-sonar/share/lua/5.3/sonar.lua"
+}

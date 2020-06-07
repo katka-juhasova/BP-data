@@ -1,0 +1,247 @@
+{
+    "repository": "rocktest-foo",
+    "module": "foo.lua",
+    "path": "modules/rocktest-foo/share/lua/5.3/rocktest/foo.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 42,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 47,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 48,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 52,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 4,
+            "tag": "If",
+            "position": 90,
+            "container": "other",
+            "line": 3,
+            "lines_count": 3,
+            "characters_count": 57,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Assign",
+                    "position": 109,
+                    "container": "other",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 34,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 6,
+                            "tag": "Function",
+                            "position": 119,
+                            "container": "function",
+                            "line": 4,
+                            "lines_count": 1,
+                            "characters_count": 24,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 149,
+            "container": "other",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 51,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 155,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 9,
+                    "tag": "Name",
+                    "position": 159,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 9,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 10,
+            "tag": "If",
+            "position": 201,
+            "container": "other",
+            "line": 8,
+            "lines_count": 3,
+            "characters_count": 95,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 11,
+                    "tag": "Assign",
+                    "position": 220,
+                    "container": "other",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 72,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 12,
+                            "tag": "Function",
+                            "position": 232,
+                            "container": "function",
+                            "line": 9,
+                            "lines_count": 1,
+                            "characters_count": 60,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 13,
+            "tag": "LocalAssign",
+            "position": 313,
+            "container": "other",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "Name",
+                    "position": 319,
+                    "container": "variable",
+                    "line": 14,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 15,
+            "tag": "Assign",
+            "position": 338,
+            "container": "other",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "Var",
+                    "position": 338,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 17,
+            "tag": "GlobalFunction",
+            "position": 361,
+            "container": "function",
+            "line": 17,
+            "lines_count": 5,
+            "characters_count": 113,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 18,
+            "tag": "GlobalFunction",
+            "position": 476,
+            "container": "function",
+            "line": 23,
+            "lines_count": 3,
+            "characters_count": 81,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 19,
+            "tag": "LastStat",
+            "position": 559,
+            "container": "other",
+            "line": 27,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 20,
+                    "tag": "_SimpleExp",
+                    "position": 566,
+                    "container": "interface",
+                    "line": 27,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 20,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/rocktest-foo/share/lua/5.3/rocktest/foo.lua"
+}

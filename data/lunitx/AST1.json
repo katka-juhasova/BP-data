@@ -1,0 +1,197 @@
+{
+    "repository": "lunitx",
+    "module": "atexit.lua",
+    "path": "modules/lunitx/share/lua/5.3/lunitx/atexit.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 2,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 8,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 22,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 28,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "If",
+            "position": 36,
+            "container": "other",
+            "line": 6,
+            "lines_count": 24,
+            "characters_count": 472,
+            "children_count": 7,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Assign",
+                    "position": 71,
+                    "container": "other",
+                    "line": 8,
+                    "lines_count": 3,
+                    "characters_count": 92,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 7,
+                            "tag": "Function",
+                            "position": 80,
+                            "container": "function",
+                            "line": 8,
+                            "lines_count": 3,
+                            "characters_count": 83,
+                            "children_count": 0
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "LocalAssign",
+                    "position": 175,
+                    "container": "other",
+                    "line": 14,
+                    "lines_count": 1,
+                    "characters_count": 25,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 9,
+                    "tag": "LocalAssign",
+                    "position": 205,
+                    "container": "other",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 19,
+                    "children_count": 0
+                },
+                {
+                    "index": 4,
+                    "master_index": 10,
+                    "tag": "LocalAssign",
+                    "position": 229,
+                    "container": "other",
+                    "line": 16,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                },
+                {
+                    "index": 5,
+                    "master_index": 11,
+                    "tag": "LocalAssign",
+                    "position": 255,
+                    "container": "other",
+                    "line": 17,
+                    "lines_count": 1,
+                    "characters_count": 33,
+                    "children_count": 0
+                },
+                {
+                    "index": 6,
+                    "master_index": 12,
+                    "tag": "LocalFunction",
+                    "position": 294,
+                    "container": "function",
+                    "line": 19,
+                    "lines_count": 5,
+                    "characters_count": 136,
+                    "children_count": 0
+                },
+                {
+                    "index": 7,
+                    "master_index": 13,
+                    "tag": "Assign",
+                    "position": 436,
+                    "container": "other",
+                    "line": 25,
+                    "lines_count": 3,
+                    "characters_count": 67,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 14,
+                            "tag": "Function",
+                            "position": 445,
+                            "container": "function",
+                            "line": 25,
+                            "lines_count": 3,
+                            "characters_count": 58,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 15,
+            "tag": "LastStat",
+            "position": 510,
+            "container": "other",
+            "line": 31,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "_SimpleExp",
+                    "position": 517,
+                    "container": "interface",
+                    "line": 31,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 16,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lunitx/share/lua/5.3/lunitx/atexit.lua"
+}

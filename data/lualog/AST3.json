@@ -1,0 +1,173 @@
+{
+    "repository": "lualog",
+    "module": "colorizer.lua",
+    "path": "modules/lualog/share/lua/5.3/lualog/colorizer.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 39,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 45,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 9,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "Var",
+            "position": 60,
+            "container": "variable",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Assign",
+                    "position": 60,
+                    "container": "other",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 29,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "Assign",
+            "position": 90,
+            "container": "other",
+            "line": 4,
+            "lines_count": 3,
+            "characters_count": 64,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Var",
+                    "position": 90,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 16,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "Function",
+                    "position": 109,
+                    "container": "function",
+                    "line": 4,
+                    "lines_count": 3,
+                    "characters_count": 45,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 156,
+            "container": "other",
+            "line": 8,
+            "lines_count": 3,
+            "characters_count": 70,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 162,
+                    "container": "variable",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 11,
+                    "tag": "Function",
+                    "position": 172,
+                    "container": "function",
+                    "line": 8,
+                    "lines_count": 3,
+                    "characters_count": 54,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 228,
+            "container": "function",
+            "line": 12,
+            "lines_count": 30,
+            "characters_count": 867,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 13,
+            "tag": "LastStat",
+            "position": 1097,
+            "container": "other",
+            "line": 43,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "_SimpleExp",
+                    "position": 1104,
+                    "container": "interface",
+                    "line": 43,
+                    "lines_count": 1,
+                    "characters_count": 15,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 14,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lualog/share/lua/5.3/lualog/colorizer.lua"
+}

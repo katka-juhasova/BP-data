@@ -1,0 +1,57 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "OutPortSHMConsumer.lua",
+    "path": "modules/sample_rtcomponent/share/lua/5.3/openrtm/OutPortSHMConsumer.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 203,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 209,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LastStat",
+            "position": 282,
+            "container": "other",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "_SimpleExp",
+                    "position": 289,
+                    "container": "interface",
+                    "line": 13,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/sample_rtcomponent/share/lua/5.3/openrtm/OutPortSHMConsumer.lua"
+}

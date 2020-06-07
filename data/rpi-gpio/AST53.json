@@ -1,0 +1,75 @@
+{
+    "repository": "rpi-gpio",
+    "module": "test_leds.lua",
+    "path": "modules/rpi-gpio/share/lua/5.1/scripts/test_leds.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 17,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "Assign",
+            "position": 63,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "GenericFor",
+            "position": 212,
+            "container": "other",
+            "line": 13,
+            "lines_count": 6,
+            "characters_count": 144,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "GenericFor",
+            "position": 358,
+            "container": "other",
+            "line": 20,
+            "lines_count": 3,
+            "characters_count": 50,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 5,
+            "tag": "GenericFor",
+            "position": 433,
+            "container": "other",
+            "line": 26,
+            "lines_count": 3,
+            "characters_count": 57,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 6,
+            "tag": "GenericFor",
+            "position": 515,
+            "container": "other",
+            "line": 32,
+            "lines_count": 3,
+            "characters_count": 53,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 6,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/rpi-gpio/share/lua/5.1/scripts/test_leds.lua"
+}

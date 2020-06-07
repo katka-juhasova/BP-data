@@ -1,0 +1,101 @@
+{
+    "repository": "xavante",
+    "module": "redirecthandler.lua",
+    "path": "modules/xavante/share/lua/5.3/xavante/redirecthandler.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 355,
+            "container": "require",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 388,
+            "container": "require",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 427,
+            "container": "other",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 433,
+                    "container": "variable",
+                    "line": 12,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 912,
+            "container": "function",
+            "line": 22,
+            "lines_count": 39,
+            "characters_count": 1097,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 2011,
+            "container": "function",
+            "line": 62,
+            "lines_count": 5,
+            "characters_count": 148,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LastStat",
+            "position": 2161,
+            "container": "other",
+            "line": 68,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "_SimpleExp",
+                    "position": 2168,
+                    "container": "interface",
+                    "line": 68,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 8,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/xavante/share/lua/5.3/xavante/redirecthandler.lua"
+}

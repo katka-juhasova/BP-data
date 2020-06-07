@@ -1,0 +1,164 @@
+{
+    "repository": "sample_rtcomponent",
+    "module": "StateMachine.lua",
+    "path": "modules/sample_rtcomponent/share/lua/5.3/openrtm/StateMachine.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 182,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 188,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 251,
+            "container": "require",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 47,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "Var",
+            "position": 301,
+            "container": "variable",
+            "line": 17,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Assign",
+                    "position": 301,
+                    "container": "other",
+                    "line": 17,
+                    "lines_count": 1,
+                    "characters_count": 29,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "Assign",
+            "position": 431,
+            "container": "other",
+            "line": 20,
+            "lines_count": 7,
+            "characters_count": 121,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Var",
+                    "position": 431,
+                    "container": "variable",
+                    "line": 20,
+                    "lines_count": 1,
+                    "characters_count": 28,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "Function",
+                    "position": 462,
+                    "container": "function",
+                    "line": 20,
+                    "lines_count": 7,
+                    "characters_count": 90,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "Var",
+            "position": 654,
+            "container": "variable",
+            "line": 31,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Assign",
+                    "position": 654,
+                    "container": "other",
+                    "line": 31,
+                    "lines_count": 160,
+                    "characters_count": 4312,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 11,
+                            "tag": "Function",
+                            "position": 673,
+                            "container": "function",
+                            "line": 31,
+                            "lines_count": 160,
+                            "characters_count": 4293,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 12,
+            "tag": "LastStat",
+            "position": 4969,
+            "container": "other",
+            "line": 193,
+            "lines_count": 1,
+            "characters_count": 19,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "_SimpleExp",
+                    "position": 4976,
+                    "container": "interface",
+                    "line": 193,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 13,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/sample_rtcomponent/share/lua/5.3/openrtm/StateMachine.lua"
+}

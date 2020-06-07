@@ -1,0 +1,44 @@
+{
+    "repository": "kong-auth-request",
+    "module": "schema.lua",
+    "path": "modules/kong-auth-request/share/lua/5.3/kong/plugins/kong-auth-request/schema.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LastStat",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 10,
+            "characters_count": 396,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Field",
+                    "position": 14,
+                    "container": "interface",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 3,
+                    "tag": "Field",
+                    "position": 38,
+                    "container": "interface",
+                    "line": 3,
+                    "lines_count": 7,
+                    "characters_count": 357,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 3,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/kong-auth-request/share/lua/5.3/kong/plugins/kong-auth-request/schema.lua"
+}

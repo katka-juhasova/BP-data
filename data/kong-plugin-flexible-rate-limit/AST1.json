@@ -1,0 +1,228 @@
+{
+    "repository": "kong-plugin-flexible-rate-limit",
+    "module": "handler.lua",
+    "path": "modules/kong-plugin-flexible-rate-limit/share/lua/5.3/kong/plugins/flexible-rate-limit/handler.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 292,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 64,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 298,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 411,
+            "container": "require",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 59,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 472,
+            "container": "require",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 509,
+            "container": "require",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 542,
+            "container": "require",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 68,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 612,
+            "container": "other",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 618,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 637,
+            "container": "other",
+            "line": 16,
+            "lines_count": 1,
+            "characters_count": 23,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 643,
+                    "container": "variable",
+                    "line": 16,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 677,
+            "container": "function",
+            "line": 19,
+            "lines_count": 3,
+            "characters_count": 63,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 742,
+            "container": "function",
+            "line": 23,
+            "lines_count": 8,
+            "characters_count": 152,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 13,
+            "tag": "GlobalFunction",
+            "position": 896,
+            "container": "function",
+            "line": 32,
+            "lines_count": 19,
+            "characters_count": 667,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 14,
+            "tag": "GlobalFunction",
+            "position": 1565,
+            "container": "function",
+            "line": 52,
+            "lines_count": 3,
+            "characters_count": 73,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 15,
+            "tag": "GlobalFunction",
+            "position": 1640,
+            "container": "function",
+            "line": 56,
+            "lines_count": 138,
+            "characters_count": 5530,
+            "children_count": 0
+        },
+        {
+            "index": 13,
+            "master_index": 16,
+            "tag": "Var",
+            "position": 7240,
+            "container": "variable",
+            "line": 196,
+            "lines_count": 1,
+            "characters_count": 15,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 17,
+                    "tag": "Assign",
+                    "position": 7240,
+                    "container": "other",
+                    "line": 196,
+                    "lines_count": 1,
+                    "characters_count": 21,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 14,
+            "master_index": 18,
+            "tag": "LastStat",
+            "position": 7291,
+            "container": "other",
+            "line": 199,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 19,
+                    "tag": "_SimpleExp",
+                    "position": 7298,
+                    "container": "interface",
+                    "line": 199,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 19,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/kong-plugin-flexible-rate-limit/share/lua/5.3/kong/plugins/flexible-rate-limit/handler.lua"
+}

@@ -1,0 +1,112 @@
+{
+    "repository": "restserver-xavante",
+    "module": "xavante.lua",
+    "path": "modules/restserver-xavante/share/lua/5.3/restserver/xavante.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 2,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 8,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 33,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 34,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 68,
+            "container": "require",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 38,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 107,
+            "container": "require",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 38,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "LocalFunction",
+            "position": 147,
+            "container": "function",
+            "line": 8,
+            "lines_count": 51,
+            "characters_count": 1414,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 1563,
+            "container": "function",
+            "line": 60,
+            "lines_count": 3,
+            "characters_count": 66,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 8,
+            "tag": "LastStat",
+            "position": 1631,
+            "container": "other",
+            "line": 64,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 9,
+                    "tag": "_SimpleExp",
+                    "position": 1638,
+                    "container": "interface",
+                    "line": 64,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 9,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/restserver-xavante/share/lua/5.3/restserver/xavante.lua"
+}

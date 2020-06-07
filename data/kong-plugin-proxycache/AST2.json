@@ -1,0 +1,55 @@
+{
+    "repository": "kong-plugin-proxycache",
+    "module": "schema.lua",
+    "path": "modules/kong-plugin-proxycache/share/lua/5.3/kong/plugins/proxycache/schema.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LastStat",
+            "position": 152,
+            "container": "other",
+            "line": 10,
+            "lines_count": 26,
+            "characters_count": 609,
+            "children_count": 3,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Field",
+                    "position": 165,
+                    "container": "interface",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 3,
+                    "tag": "Field",
+                    "position": 189,
+                    "container": "interface",
+                    "line": 12,
+                    "lines_count": 22,
+                    "characters_count": 463,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 4,
+                    "tag": "Field",
+                    "position": 658,
+                    "container": "interface",
+                    "line": 34,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/kong-plugin-proxycache/share/lua/5.3/kong/plugins/proxycache/schema.lua"
+}

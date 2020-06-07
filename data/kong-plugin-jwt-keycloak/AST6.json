@@ -1,0 +1,44 @@
+{
+    "repository": "kong-plugin-jwt-keycloak",
+    "module": "issuers.lua",
+    "path": "modules/kong-plugin-jwt-keycloak/share/lua/5.3/kong/plugins/jwt-keycloak/validators/issuers.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalFunction",
+            "position": 1,
+            "container": "function",
+            "line": 1,
+            "lines_count": 14,
+            "characters_count": 453,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 456,
+            "container": "other",
+            "line": 16,
+            "lines_count": 3,
+            "characters_count": 48,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Field",
+                    "position": 469,
+                    "container": "interface",
+                    "line": 17,
+                    "lines_count": 1,
+                    "characters_count": 33,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 3,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/kong-plugin-jwt-keycloak/share/lua/5.3/kong/plugins/jwt-keycloak/validators/issuers.lua"
+}

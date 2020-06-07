@@ -1,0 +1,125 @@
+{
+    "repository": "hotswap-hash",
+    "module": "hash.lua",
+    "path": "modules/hotswap-hash/share/lua/5.3/hotswap/hash.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 34,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 48,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 40,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 83,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 89,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 103,
+            "container": "function",
+            "line": 5,
+            "lines_count": 9,
+            "characters_count": 174,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 279,
+            "container": "function",
+            "line": 15,
+            "lines_count": 12,
+            "characters_count": 304,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 585,
+            "container": "function",
+            "line": 28,
+            "lines_count": 5,
+            "characters_count": 167,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LastStat",
+            "position": 754,
+            "container": "other",
+            "line": 34,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "_SimpleExp",
+                    "position": 761,
+                    "container": "interface",
+                    "line": 34,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/hotswap-hash/share/lua/5.3/hotswap/hash.lua"
+}

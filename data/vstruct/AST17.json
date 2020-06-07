@@ -1,0 +1,125 @@
+{
+    "repository": "vstruct",
+    "module": "hostendian.lua",
+    "path": "modules/vstruct/share/lua/5.3/vstruct/io/hostendian.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 45,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 31,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 77,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 83,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "GlobalFunction",
+            "position": 92,
+            "container": "function",
+            "line": 6,
+            "lines_count": 3,
+            "characters_count": 41,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 135,
+            "container": "function",
+            "line": 10,
+            "lines_count": 4,
+            "characters_count": 109,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 246,
+            "container": "function",
+            "line": 15,
+            "lines_count": 3,
+            "characters_count": 49,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "Var",
+            "position": 297,
+            "container": "variable",
+            "line": 19,
+            "lines_count": 1,
+            "characters_count": 8,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Assign",
+                    "position": 297,
+                    "container": "other",
+                    "line": 19,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LastStat",
+            "position": 317,
+            "container": "other",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "_SimpleExp",
+                    "position": 324,
+                    "container": "interface",
+                    "line": 21,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/vstruct/share/lua/5.3/vstruct/io/hostendian.lua"
+}

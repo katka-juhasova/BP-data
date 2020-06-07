@@ -1,0 +1,238 @@
+{
+    "repository": "cosy-instance",
+    "module": "loadkey.lua",
+    "path": "modules/cosy-instance/lib/luarocks/rocks-5.3/luasec/0.9-1/samples/key/loadkey.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 24,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 52,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 58,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 74,
+            "container": "other",
+            "line": 7,
+            "lines_count": 5,
+            "characters_count": 75,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 80,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "Assign",
+            "position": 221,
+            "container": "other",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 30,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Var",
+                    "position": 221,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 8,
+                    "tag": "Var",
+                    "position": 226,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "Var",
+            "position": 306,
+            "container": "variable",
+            "line": 20,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Assign",
+                    "position": 306,
+                    "container": "other",
+                    "line": 20,
+                    "lines_count": 1,
+                    "characters_count": 19,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 11,
+            "tag": "Var",
+            "position": 326,
+            "container": "variable",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 3,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "Assign",
+                    "position": 326,
+                    "container": "other",
+                    "line": 21,
+                    "lines_count": 1,
+                    "characters_count": 30,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 13,
+                            "tag": "Var",
+                            "position": 331,
+                            "container": "variable",
+                            "line": 21,
+                            "lines_count": 1,
+                            "characters_count": 3,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 14,
+            "tag": "Var",
+            "position": 405,
+            "container": "variable",
+            "line": 26,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 15,
+                    "tag": "Assign",
+                    "position": 405,
+                    "container": "other",
+                    "line": 26,
+                    "lines_count": 1,
+                    "characters_count": 41,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 16,
+                            "tag": "Function",
+                            "position": 420,
+                            "container": "function",
+                            "line": 26,
+                            "lines_count": 1,
+                            "characters_count": 26,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 17,
+            "tag": "Var",
+            "position": 447,
+            "container": "variable",
+            "line": 27,
+            "lines_count": 1,
+            "characters_count": 3,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "Assign",
+                    "position": 447,
+                    "container": "other",
+                    "line": 27,
+                    "lines_count": 1,
+                    "characters_count": 30,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 19,
+                            "tag": "Var",
+                            "position": 452,
+                            "container": "variable",
+                            "line": 27,
+                            "lines_count": 1,
+                            "characters_count": 3,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 19,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/cosy-instance/lib/luarocks/rocks-5.3/luasec/0.9-1/samples/key/loadkey.lua"
+}

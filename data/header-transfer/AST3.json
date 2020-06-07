@@ -1,0 +1,68 @@
+{
+    "repository": "header-transfer",
+    "module": "schema.lua",
+    "path": "modules/header-transfer/share/lua/5.3/kong/plugins/header-transfer/schema.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LastStat",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 22,
+            "characters_count": 885,
+            "children_count": 3,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Field",
+                    "position": 113,
+                    "container": "interface",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 3,
+                    "tag": "Field",
+                    "position": 135,
+                    "container": "interface",
+                    "line": 5,
+                    "lines_count": 7,
+                    "characters_count": 141,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 4,
+                    "tag": "Field",
+                    "position": 761,
+                    "container": "interface",
+                    "line": 18,
+                    "lines_count": 4,
+                    "characters_count": 123,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 5,
+                            "tag": "Function",
+                            "position": 774,
+                            "container": "function",
+                            "line": 18,
+                            "lines_count": 4,
+                            "characters_count": 110,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 5,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/header-transfer/share/lua/5.3/kong/plugins/header-transfer/schema.lua"
+}

@@ -1,0 +1,180 @@
+{
+    "repository": "hotswap-http",
+    "module": "http.lua",
+    "path": "modules/hotswap-http/share/lua/5.3/hotswap/http.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 39,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 75,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 115,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 29,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 145,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 31,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 177,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 48,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 183,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 226,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 232,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LocalFunction",
+            "position": 449,
+            "container": "function",
+            "line": 27,
+            "lines_count": 26,
+            "characters_count": 575,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 1026,
+            "container": "function",
+            "line": 54,
+            "lines_count": 41,
+            "characters_count": 1173,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 2201,
+            "container": "function",
+            "line": 96,
+            "lines_count": 24,
+            "characters_count": 520,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 2723,
+            "container": "function",
+            "line": 121,
+            "lines_count": 20,
+            "characters_count": 399,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 13,
+            "tag": "GlobalFunction",
+            "position": 3124,
+            "container": "function",
+            "line": 142,
+            "lines_count": 9,
+            "characters_count": 211,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 14,
+            "tag": "LastStat",
+            "position": 3337,
+            "container": "other",
+            "line": 152,
+            "lines_count": 1,
+            "characters_count": 15,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 15,
+                    "tag": "_SimpleExp",
+                    "position": 3344,
+                    "container": "interface",
+                    "line": 152,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 15,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/hotswap-http/share/lua/5.3/hotswap/http.lua"
+}

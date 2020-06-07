@@ -1,0 +1,243 @@
+{
+    "repository": "mpd",
+    "module": "cddb.lua",
+    "path": "modules/mpd/lib/luarocks/rocks-5.3/luasocket/3.0rc1-2/samples/cddb.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 34,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "If",
+            "position": 71,
+            "container": "other",
+            "line": 4,
+            "lines_count": 4,
+            "characters_count": 126,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 199,
+            "container": "other",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 66,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 205,
+                    "container": "variable",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 267,
+            "container": "function",
+            "line": 11,
+            "lines_count": 20,
+            "characters_count": 687,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 956,
+            "container": "other",
+            "line": 32,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 962,
+                    "container": "variable",
+                    "line": 32,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 994,
+            "container": "other",
+            "line": 33,
+            "lines_count": 1,
+            "characters_count": 79,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 1000,
+                    "container": "variable",
+                    "line": 33,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 11,
+            "tag": "LocalAssign",
+            "position": 1074,
+            "container": "other",
+            "line": 34,
+            "lines_count": 1,
+            "characters_count": 62,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "Name",
+                    "position": 1080,
+                    "container": "variable",
+                    "line": 34,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "master_index": 13,
+            "tag": "LocalAssign",
+            "position": 1137,
+            "container": "other",
+            "line": 35,
+            "lines_count": 1,
+            "characters_count": 45,
+            "children_count": 3,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "Name",
+                    "position": 1143,
+                    "container": "variable",
+                    "line": 35,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 15,
+                    "tag": "Name",
+                    "position": 1149,
+                    "container": "variable",
+                    "line": 35,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 16,
+                    "tag": "Name",
+                    "position": 1158,
+                    "container": "variable",
+                    "line": 35,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 10,
+            "master_index": 17,
+            "tag": "If",
+            "position": 1184,
+            "container": "other",
+            "line": 37,
+            "lines_count": 10,
+            "characters_count": 235,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "LocalAssign",
+                    "position": 1208,
+                    "container": "other",
+                    "line": 38,
+                    "lines_count": 1,
+                    "characters_count": 37,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 19,
+                    "tag": "If",
+                    "position": 1250,
+                    "container": "other",
+                    "line": 39,
+                    "lines_count": 7,
+                    "characters_count": 147,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 20,
+                            "tag": "GenericFor",
+                            "position": 1313,
+                            "container": "other",
+                            "line": 42,
+                            "lines_count": 3,
+                            "characters_count": 76,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 20,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/mpd/lib/luarocks/rocks-5.3/luasocket/3.0rc1-2/samples/cddb.lua"
+}

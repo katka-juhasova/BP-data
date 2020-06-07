@@ -1,0 +1,79 @@
+{
+    "repository": "ufy",
+    "module": "caller.lua",
+    "path": "modules/ufy/share/lua/5.3/datafile/openers/caller.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 81,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 87,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 100,
+            "container": "require",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 37,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "GlobalFunction",
+            "position": 139,
+            "container": "function",
+            "line": 8,
+            "lines_count": 35,
+            "characters_count": 1022,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "LastStat",
+            "position": 1163,
+            "container": "other",
+            "line": 44,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "_SimpleExp",
+                    "position": 1170,
+                    "container": "interface",
+                    "line": 44,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 6,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/ufy/share/lua/5.3/datafile/openers/caller.lua"
+}

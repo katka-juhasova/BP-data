@@ -1,0 +1,175 @@
+{
+    "repository": "aurora",
+    "module": "mkdir.lua",
+    "path": "modules/aurora/share/lua/5.3/aurora/fs/mkdir.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 35,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 62,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 68,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "LastStat",
+            "position": 233,
+            "container": "other",
+            "line": 10,
+            "lines_count": 11,
+            "characters_count": 184,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "Function",
+                    "position": 240,
+                    "container": "interface",
+                    "line": 10,
+                    "lines_count": 11,
+                    "characters_count": 177,
+                    "children_count": 5,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 8,
+                            "tag": "If",
+                            "position": 254,
+                            "container": "other",
+                            "line": 11,
+                            "lines_count": 1,
+                            "characters_count": 35,
+                            "children_count": 1,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 9,
+                                    "tag": "LastStat",
+                                    "position": 274,
+                                    "container": "other",
+                                    "line": 11,
+                                    "lines_count": 1,
+                                    "characters_count": 11,
+                                    "children_count": 0
+                                }
+                            ]
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 10,
+                            "tag": "LocalAssign",
+                            "position": 302,
+                            "container": "other",
+                            "line": 14,
+                            "lines_count": 1,
+                            "characters_count": 22,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 3,
+                            "master_index": 11,
+                            "tag": "LocalAssign",
+                            "position": 326,
+                            "container": "other",
+                            "line": 15,
+                            "lines_count": 1,
+                            "characters_count": 12,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 4,
+                            "master_index": 12,
+                            "tag": "GenericFor",
+                            "position": 340,
+                            "container": "other",
+                            "line": 16,
+                            "lines_count": 4,
+                            "characters_count": 73,
+                            "children_count": 2,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 13,
+                                    "tag": "Assign",
+                                    "position": 366,
+                                    "container": "other",
+                                    "line": 17,
+                                    "lines_count": 1,
+                                    "characters_count": 13,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 14,
+                                    "tag": "LocalAssign",
+                                    "position": 382,
+                                    "container": "other",
+                                    "line": 18,
+                                    "lines_count": 1,
+                                    "characters_count": 26,
+                                    "children_count": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 14,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/aurora/share/lua/5.3/aurora/fs/mkdir.lua"
+}

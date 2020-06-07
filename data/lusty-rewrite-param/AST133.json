@@ -1,0 +1,94 @@
+{
+    "repository": "lusty-rewrite-param",
+    "module": "method.lua",
+    "path": "modules/lusty-rewrite-param/share/lua/5.3/lusty-rewrite-param/rewrite/method.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 2,
+            "container": "other",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 8,
+                    "container": "variable",
+                    "line": 2,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LastStat",
+            "position": 30,
+            "container": "other",
+            "line": 4,
+            "lines_count": 15,
+            "characters_count": 287,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Field",
+                    "position": 41,
+                    "container": "interface",
+                    "line": 5,
+                    "lines_count": 4,
+                    "characters_count": 120,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 5,
+                            "tag": "Function",
+                            "position": 51,
+                            "container": "function",
+                            "line": 5,
+                            "lines_count": 4,
+                            "characters_count": 110,
+                            "children_count": 0
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "master_index": 6,
+                    "tag": "Field",
+                    "position": 166,
+                    "container": "interface",
+                    "line": 10,
+                    "lines_count": 8,
+                    "characters_count": 149,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 7,
+                            "tag": "Function",
+                            "position": 194,
+                            "container": "function",
+                            "line": 11,
+                            "lines_count": 6,
+                            "characters_count": 117,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 7,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lusty-rewrite-param/share/lua/5.3/lusty-rewrite-param/rewrite/method.lua"
+}

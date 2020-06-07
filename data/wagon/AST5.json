@@ -1,0 +1,134 @@
+{
+    "repository": "wagon",
+    "module": "init.lua",
+    "path": "modules/wagon/share/lua/5.3/wagon/init.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 2,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 35,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 38,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 39,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 78,
+            "container": "require",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 38,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 118,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 124,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 136,
+            "container": "function",
+            "line": 8,
+            "lines_count": 6,
+            "characters_count": 134,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 341,
+            "container": "function",
+            "line": 16,
+            "lines_count": 7,
+            "characters_count": 173,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 644,
+            "container": "function",
+            "line": 26,
+            "lines_count": 12,
+            "characters_count": 344,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 990,
+            "container": "function",
+            "line": 39,
+            "lines_count": 7,
+            "characters_count": 214,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 10,
+            "tag": "LastStat",
+            "position": 1206,
+            "container": "other",
+            "line": 47,
+            "lines_count": 1,
+            "characters_count": 12,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 11,
+                    "tag": "_SimpleExp",
+                    "position": 1213,
+                    "container": "interface",
+                    "line": 47,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/wagon/share/lua/5.3/wagon/init.lua"
+}

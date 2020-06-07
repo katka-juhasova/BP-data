@@ -1,0 +1,103 @@
+{
+    "repository": "luarocks",
+    "module": "manifest.lua",
+    "path": "modules/luarocks/share/lua/5.3/luarocks/type/manifest.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 27,
+            "container": "require",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 49,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 78,
+            "container": "other",
+            "line": 5,
+            "lines_count": 60,
+            "characters_count": 1678,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 84,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 16,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 2023,
+            "container": "function",
+            "line": 72,
+            "lines_count": 7,
+            "characters_count": 307,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "LastStat",
+            "position": 2332,
+            "container": "other",
+            "line": 80,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "_SimpleExp",
+                    "position": 2339,
+                    "container": "interface",
+                    "line": 80,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 8,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/luarocks/share/lua/5.3/luarocks/type/manifest.lua"
+}

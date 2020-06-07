@@ -1,0 +1,551 @@
+{
+    "repository": "lua-resty-upload",
+    "module": "upload.lua",
+    "path": "modules/lua-resty-upload/share/lua/5.3/resty/upload.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 43,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 49,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 66,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 72,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 10,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 100,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 106,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 7,
+            "tag": "LocalAssign",
+            "position": 122,
+            "container": "other",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 128,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 149,
+            "container": "other",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 155,
+                    "container": "variable",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 6,
+            "master_index": 11,
+            "tag": "LocalAssign",
+            "position": 183,
+            "container": "other",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 19,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 12,
+                    "tag": "Name",
+                    "position": 189,
+                    "container": "variable",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 13,
+            "tag": "LocalAssign",
+            "position": 203,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 39,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "Name",
+                    "position": 209,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "master_index": 15,
+            "tag": "LocalAssign",
+            "position": 243,
+            "container": "other",
+            "line": 11,
+            "lines_count": 1,
+            "characters_count": 17,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "Name",
+                    "position": 249,
+                    "container": "variable",
+                    "line": 11,
+                    "lines_count": 1,
+                    "characters_count": 4,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "master_index": 17,
+            "tag": "LocalAssign",
+            "position": 286,
+            "container": "other",
+            "line": 15,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 18,
+                    "tag": "Name",
+                    "position": 292,
+                    "container": "variable",
+                    "line": 15,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 10,
+            "master_index": 19,
+            "tag": "LocalAssign",
+            "position": 321,
+            "container": "other",
+            "line": 18,
+            "lines_count": 1,
+            "characters_count": 25,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 20,
+                    "tag": "Name",
+                    "position": 327,
+                    "container": "variable",
+                    "line": 18,
+                    "lines_count": 1,
+                    "characters_count": 13,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 11,
+            "master_index": 21,
+            "tag": "LocalAssign",
+            "position": 348,
+            "container": "other",
+            "line": 20,
+            "lines_count": 1,
+            "characters_count": 21,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 22,
+                    "tag": "Name",
+                    "position": 354,
+                    "container": "variable",
+                    "line": 20,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 12,
+            "master_index": 23,
+            "tag": "LocalAssign",
+            "position": 370,
+            "container": "other",
+            "line": 21,
+            "lines_count": 1,
+            "characters_count": 30,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 24,
+                    "tag": "Name",
+                    "position": 376,
+                    "container": "variable",
+                    "line": 21,
+                    "lines_count": 1,
+                    "characters_count": 20,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 13,
+            "master_index": 25,
+            "tag": "LocalAssign",
+            "position": 401,
+            "container": "other",
+            "line": 22,
+            "lines_count": 1,
+            "characters_count": 28,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 26,
+                    "tag": "Name",
+                    "position": 407,
+                    "container": "variable",
+                    "line": 22,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 14,
+            "master_index": 27,
+            "tag": "LocalAssign",
+            "position": 430,
+            "container": "other",
+            "line": 23,
+            "lines_count": 1,
+            "characters_count": 19,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 28,
+                    "tag": "Name",
+                    "position": 436,
+                    "container": "variable",
+                    "line": 23,
+                    "lines_count": 1,
+                    "characters_count": 9,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 15,
+            "master_index": 29,
+            "tag": "LocalAssign",
+            "position": 452,
+            "container": "other",
+            "line": 26,
+            "lines_count": 1,
+            "characters_count": 27,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 30,
+                    "tag": "Name",
+                    "position": 458,
+                    "container": "variable",
+                    "line": 26,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 16,
+            "master_index": 31,
+            "tag": "LocalAssign",
+            "position": 481,
+            "container": "other",
+            "line": 28,
+            "lines_count": 1,
+            "characters_count": 20,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 32,
+                    "tag": "Name",
+                    "position": 487,
+                    "container": "variable",
+                    "line": 28,
+                    "lines_count": 1,
+                    "characters_count": 14,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 17,
+            "master_index": 33,
+            "tag": "LocalFunction",
+            "position": 504,
+            "container": "function",
+            "line": 31,
+            "lines_count": 17,
+            "characters_count": 354,
+            "children_count": 0
+        },
+        {
+            "index": 18,
+            "master_index": 34,
+            "tag": "GlobalFunction",
+            "position": 861,
+            "container": "function",
+            "line": 50,
+            "lines_count": 35,
+            "characters_count": 799,
+            "children_count": 0
+        },
+        {
+            "index": 19,
+            "master_index": 35,
+            "tag": "GlobalFunction",
+            "position": 1663,
+            "container": "function",
+            "line": 87,
+            "lines_count": 8,
+            "characters_count": 173,
+            "children_count": 0
+        },
+        {
+            "index": 20,
+            "master_index": 36,
+            "tag": "LocalFunction",
+            "position": 1839,
+            "container": "function",
+            "line": 97,
+            "lines_count": 19,
+            "characters_count": 375,
+            "children_count": 0
+        },
+        {
+            "index": 21,
+            "master_index": 37,
+            "tag": "LocalFunction",
+            "position": 2217,
+            "container": "function",
+            "line": 118,
+            "lines_count": 15,
+            "characters_count": 304,
+            "children_count": 0
+        },
+        {
+            "index": 22,
+            "master_index": 38,
+            "tag": "LocalFunction",
+            "position": 2524,
+            "container": "function",
+            "line": 135,
+            "lines_count": 35,
+            "characters_count": 786,
+            "children_count": 0
+        },
+        {
+            "index": 23,
+            "master_index": 39,
+            "tag": "LocalFunction",
+            "position": 3313,
+            "container": "function",
+            "line": 172,
+            "lines_count": 32,
+            "characters_count": 696,
+            "children_count": 0
+        },
+        {
+            "index": 24,
+            "master_index": 40,
+            "tag": "LocalFunction",
+            "position": 4012,
+            "container": "function",
+            "line": 206,
+            "lines_count": 3,
+            "characters_count": 46,
+            "children_count": 0
+        },
+        {
+            "index": 25,
+            "master_index": 41,
+            "tag": "GlobalFunction",
+            "position": 4061,
+            "container": "function",
+            "line": 211,
+            "lines_count": 10,
+            "characters_count": 208,
+            "children_count": 0
+        },
+        {
+            "index": 26,
+            "master_index": 42,
+            "tag": "LocalFunction",
+            "position": 4272,
+            "container": "function",
+            "line": 223,
+            "lines_count": 34,
+            "characters_count": 784,
+            "children_count": 0
+        },
+        {
+            "index": 27,
+            "master_index": 43,
+            "tag": "Var",
+            "position": 5059,
+            "container": "variable",
+            "line": 259,
+            "lines_count": 1,
+            "characters_count": 14,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 44,
+                    "tag": "Assign",
+                    "position": 5059,
+                    "container": "other",
+                    "line": 259,
+                    "lines_count": 6,
+                    "characters_count": 84,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 28,
+            "master_index": 45,
+            "tag": "LastStat",
+            "position": 5146,
+            "container": "other",
+            "line": 267,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 46,
+                    "tag": "_SimpleExp",
+                    "position": 5153,
+                    "container": "interface",
+                    "line": 267,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 46,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lua-resty-upload/share/lua/5.3/resty/upload.lua"
+}

@@ -1,0 +1,103 @@
+{
+    "repository": "lusty-rewrite-param",
+    "module": "disect.lua",
+    "path": "modules/lusty-rewrite-param/share/lua/5.3/cliargs/utils/disect.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 44,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 47,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 43,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 53,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 91,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 50,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 97,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 19,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "LocalFunction",
+            "position": 490,
+            "container": "function",
+            "line": 23,
+            "lines_count": 45,
+            "characters_count": 1066,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "LastStat",
+            "position": 1558,
+            "container": "other",
+            "line": 69,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "_SimpleExp",
+                    "position": 1565,
+                    "container": "interface",
+                    "line": 69,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 8,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lusty-rewrite-param/share/lua/5.3/cliargs/utils/disect.lua"
+}

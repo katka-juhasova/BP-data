@@ -1,0 +1,88 @@
+{
+    "repository": "lua-cassandra",
+    "module": "dc_rr.lua",
+    "path": "modules/lua-cassandra/share/lua/5.1/resty/cassandra/policies/lb/dc_rr.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 382,
+            "container": "require",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 84,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "GlobalFunction",
+            "position": 972,
+            "container": "function",
+            "line": 25,
+            "lines_count": 7,
+            "characters_count": 167,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "GlobalFunction",
+            "position": 1141,
+            "container": "function",
+            "line": 33,
+            "lines_count": 20,
+            "characters_count": 520,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalFunction",
+            "position": 1663,
+            "container": "function",
+            "line": 54,
+            "lines_count": 13,
+            "characters_count": 496,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 2161,
+            "container": "function",
+            "line": 68,
+            "lines_count": 9,
+            "characters_count": 334,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 6,
+            "tag": "LastStat",
+            "position": 2497,
+            "container": "other",
+            "line": 78,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 7,
+                    "tag": "_SimpleExp",
+                    "position": 2504,
+                    "container": "interface",
+                    "line": 78,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 7,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lua-cassandra/share/lua/5.1/resty/cassandra/policies/lb/dc_rr.lua"
+}

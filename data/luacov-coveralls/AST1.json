@@ -1,0 +1,44 @@
+{
+    "repository": "luacov-coveralls",
+    "module": "luacov.lua",
+    "path": "modules/luacov-coveralls/share/lua/5.3/luacov.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 214,
+            "container": "require",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 39,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 268,
+            "container": "other",
+            "line": 8,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "_SimpleExp",
+                    "position": 275,
+                    "container": "interface",
+                    "line": 8,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 3,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/luacov-coveralls/share/lua/5.3/luacov.lua"
+}

@@ -1,0 +1,193 @@
+{
+    "repository": "lua-log",
+    "module": "zmq.lua",
+    "path": "modules/lua-log/share/lua/5.3/log/writer/net/server/zmq.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 57,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 60,
+            "container": "require",
+            "line": 2,
+            "lines_count": 1,
+            "characters_count": 55,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 119,
+            "container": "other",
+            "line": 4,
+            "lines_count": 1,
+            "characters_count": 90,
+            "children_count": 5,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 125,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 3,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 5,
+                    "tag": "Name",
+                    "position": 130,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 137,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 9,
+                    "children_count": 0
+                },
+                {
+                    "index": 4,
+                    "master_index": 7,
+                    "tag": "Name",
+                    "position": 148,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 7,
+                    "children_count": 0
+                },
+                {
+                    "index": 5,
+                    "master_index": 8,
+                    "tag": "Name",
+                    "position": 157,
+                    "container": "variable",
+                    "line": 4,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 9,
+            "tag": "LocalAssign",
+            "position": 211,
+            "container": "other",
+            "line": 5,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "Name",
+                    "position": 217,
+                    "container": "variable",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 8,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 11,
+            "tag": "LocalAssign",
+            "position": 241,
+            "container": "require",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 53,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 12,
+            "tag": "LocalAssign",
+            "position": 298,
+            "container": "other",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "Name",
+                    "position": 304,
+                    "container": "variable",
+                    "line": 9,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 14,
+            "tag": "GlobalFunction",
+            "position": 315,
+            "container": "function",
+            "line": 11,
+            "lines_count": 37,
+            "characters_count": 975,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 15,
+            "tag": "LastStat",
+            "position": 1294,
+            "container": "other",
+            "line": 49,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 16,
+                    "tag": "_SimpleExp",
+                    "position": 1301,
+                    "container": "interface",
+                    "line": 49,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 16,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lua-log/share/lua/5.3/log/writer/net/server/zmq.lua"
+}

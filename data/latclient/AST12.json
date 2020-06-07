@@ -1,0 +1,55 @@
+{
+    "repository": "latclient",
+    "module": "js.lua",
+    "path": "modules/latclient/share/lua/5.3/lib/js.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 131,
+            "container": "require",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalFunction",
+            "position": 165,
+            "container": "function",
+            "line": 11,
+            "lines_count": 201,
+            "characters_count": 5700,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "Var",
+            "position": 5868,
+            "container": "variable",
+            "line": 213,
+            "lines_count": 1,
+            "characters_count": 2,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Assign",
+                    "position": 5868,
+                    "container": "other",
+                    "line": 213,
+                    "lines_count": 1,
+                    "characters_count": 18,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/latclient/share/lua/5.3/lib/js.lua"
+}

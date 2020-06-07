@@ -1,0 +1,70 @@
+{
+    "repository": "dromozoa-ubench",
+    "module": "dump.lua",
+    "path": "modules/dromozoa-ubench/share/lua/5.3/dromozoa/ubench/dump.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LastStat",
+            "position": 764,
+            "container": "other",
+            "line": 18,
+            "lines_count": 22,
+            "characters_count": 472,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Function",
+                    "position": 771,
+                    "container": "interface",
+                    "line": 18,
+                    "lines_count": 22,
+                    "characters_count": 465,
+                    "children_count": 2,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 3,
+                            "tag": "NumericFor",
+                            "position": 868,
+                            "container": "other",
+                            "line": 22,
+                            "lines_count": 13,
+                            "characters_count": 325,
+                            "children_count": 2,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 4,
+                                    "tag": "LocalAssign",
+                                    "position": 895,
+                                    "container": "other",
+                                    "line": 23,
+                                    "lines_count": 1,
+                                    "characters_count": 25,
+                                    "children_count": 0
+                                },
+                                {
+                                    "index": 2,
+                                    "master_index": 5,
+                                    "tag": "NumericFor",
+                                    "position": 1083,
+                                    "container": "other",
+                                    "line": 30,
+                                    "lines_count": 3,
+                                    "characters_count": 81,
+                                    "children_count": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 5,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/dromozoa-ubench/share/lua/5.3/dromozoa/ubench/dump.lua"
+}

@@ -1,0 +1,134 @@
+{
+    "repository": "lpty",
+    "module": "expectex.lua",
+    "path": "modules/lpty/lib/luarocks/rocks/lpty/1.2.2-1/samples/expectex.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 260,
+            "container": "require",
+            "line": 12,
+            "lines_count": 1,
+            "characters_count": 27,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "Assign",
+            "position": 289,
+            "container": "other",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 31,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "While",
+            "position": 342,
+            "container": "other",
+            "line": 18,
+            "lines_count": 1,
+            "characters_count": 43,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "If",
+            "position": 386,
+            "container": "other",
+            "line": 19,
+            "lines_count": 4,
+            "characters_count": 165,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "LocalAssign",
+                    "position": 411,
+                    "container": "other",
+                    "line": 20,
+                    "lines_count": 1,
+                    "characters_count": 33,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "Assign",
+            "position": 553,
+            "container": "other",
+            "line": 24,
+            "lines_count": 1,
+            "characters_count": 5,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "While",
+            "position": 559,
+            "container": "other",
+            "line": 25,
+            "lines_count": 7,
+            "characters_count": 195,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 8,
+                    "tag": "Assign",
+                    "position": 665,
+                    "container": "other",
+                    "line": 28,
+                    "lines_count": 1,
+                    "characters_count": 38,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 9,
+                    "tag": "Assign",
+                    "position": 741,
+                    "container": "other",
+                    "line": 30,
+                    "lines_count": 1,
+                    "characters_count": 9,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 7,
+            "master_index": 10,
+            "tag": "While",
+            "position": 778,
+            "container": "other",
+            "line": 34,
+            "lines_count": 1,
+            "characters_count": 24,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 11,
+            "tag": "If",
+            "position": 803,
+            "container": "other",
+            "line": 35,
+            "lines_count": 3,
+            "characters_count": 39,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lpty/lib/luarocks/rocks/lpty/1.2.2-1/samples/expectex.lua"
+}

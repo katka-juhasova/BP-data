@@ -1,0 +1,165 @@
+{
+    "repository": "kong-auth-key-jwt-server",
+    "module": "bench.lua",
+    "path": "modules/kong-auth-key-jwt-server/lib/luarocks/rocks-5.3/lua-cjson/2.1.0.6-1/tests/bench.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 183,
+            "container": "other",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 55,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 257,
+            "container": "require",
+            "line": 13,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 291,
+            "container": "require",
+            "line": 14,
+            "lines_count": 1,
+            "characters_count": 33,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 4,
+            "tag": "LocalFunction",
+            "position": 326,
+            "container": "function",
+            "line": 16,
+            "lines_count": 9,
+            "characters_count": 166,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 494,
+            "container": "other",
+            "line": 26,
+            "lines_count": 1,
+            "characters_count": 93,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 6,
+            "tag": "LocalAssign",
+            "position": 588,
+            "container": "other",
+            "line": 27,
+            "lines_count": 1,
+            "characters_count": 80,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 7,
+            "tag": "LocalFunction",
+            "position": 670,
+            "container": "function",
+            "line": 29,
+            "lines_count": 7,
+            "characters_count": 134,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 806,
+            "container": "function",
+            "line": 37,
+            "lines_count": 61,
+            "characters_count": 1600,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 2408,
+            "container": "function",
+            "line": 99,
+            "lines_count": 17,
+            "characters_count": 437,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 10,
+            "tag": "LocalAssign",
+            "position": 2916,
+            "container": "other",
+            "line": 118,
+            "lines_count": 1,
+            "characters_count": 81,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 11,
+            "tag": "If",
+            "position": 2998,
+            "container": "other",
+            "line": 119,
+            "lines_count": 4,
+            "characters_count": 69,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 12,
+            "tag": "NumericFor",
+            "position": 3069,
+            "container": "other",
+            "line": 124,
+            "lines_count": 6,
+            "characters_count": 154,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 13,
+                    "tag": "LocalAssign",
+                    "position": 3092,
+                    "container": "other",
+                    "line": 125,
+                    "lines_count": 1,
+                    "characters_count": 34,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 14,
+                    "tag": "GenericFor",
+                    "position": 3131,
+                    "container": "other",
+                    "line": 126,
+                    "lines_count": 3,
+                    "characters_count": 88,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 14,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/kong-auth-key-jwt-server/lib/luarocks/rocks-5.3/lua-cjson/2.1.0.6-1/tests/bench.lua"
+}

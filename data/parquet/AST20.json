@@ -1,0 +1,193 @@
+{
+    "repository": "parquet",
+    "module": "lexer.lua",
+    "path": "modules/parquet/share/lua/5.1/vstruct/lexer.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 215,
+            "container": "other",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 221,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalFunction",
+            "position": 233,
+            "container": "function",
+            "line": 9,
+            "lines_count": 5,
+            "characters_count": 122,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LastStat",
+            "position": 785,
+            "container": "other",
+            "line": 31,
+            "lines_count": 69,
+            "characters_count": 1502,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 5,
+                    "tag": "Function",
+                    "position": 792,
+                    "container": "interface",
+                    "line": 31,
+                    "lines_count": 69,
+                    "characters_count": 1495,
+                    "children_count": 11,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 6,
+                            "tag": "LocalAssign",
+                            "position": 811,
+                            "container": "other",
+                            "line": 32,
+                            "lines_count": 1,
+                            "characters_count": 19,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 7,
+                            "tag": "LocalAssign",
+                            "position": 833,
+                            "container": "other",
+                            "line": 33,
+                            "lines_count": 1,
+                            "characters_count": 15,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 3,
+                            "master_index": 8,
+                            "tag": "LocalAssign",
+                            "position": 851,
+                            "container": "other",
+                            "line": 34,
+                            "lines_count": 1,
+                            "characters_count": 27,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 4,
+                            "master_index": 9,
+                            "tag": "LocalFunction",
+                            "position": 884,
+                            "container": "function",
+                            "line": 36,
+                            "lines_count": 3,
+                            "characters_count": 94,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 5,
+                            "master_index": 10,
+                            "tag": "LocalFunction",
+                            "position": 982,
+                            "container": "function",
+                            "line": 40,
+                            "lines_count": 8,
+                            "characters_count": 262,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 6,
+                            "master_index": 11,
+                            "tag": "LocalFunction",
+                            "position": 1248,
+                            "container": "function",
+                            "line": 49,
+                            "lines_count": 15,
+                            "characters_count": 354,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 7,
+                            "master_index": 12,
+                            "tag": "LocalFunction",
+                            "position": 1606,
+                            "container": "function",
+                            "line": 65,
+                            "lines_count": 3,
+                            "characters_count": 58,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 8,
+                            "master_index": 13,
+                            "tag": "LocalFunction",
+                            "position": 1670,
+                            "container": "function",
+                            "line": 69,
+                            "lines_count": 12,
+                            "characters_count": 265,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 9,
+                            "master_index": 14,
+                            "tag": "LocalFunction",
+                            "position": 1939,
+                            "container": "function",
+                            "line": 82,
+                            "lines_count": 9,
+                            "characters_count": 205,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 10,
+                            "master_index": 15,
+                            "tag": "LastStat",
+                            "position": 2148,
+                            "container": "other",
+                            "line": 92,
+                            "lines_count": 7,
+                            "characters_count": 135,
+                            "children_count": 1,
+                            "children": [
+                                {
+                                    "index": 1,
+                                    "master_index": 16,
+                                    "tag": "Function",
+                                    "position": 2252,
+                                    "container": "function",
+                                    "line": 97,
+                                    "lines_count": 1,
+                                    "characters_count": 26,
+                                    "children_count": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 16,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/parquet/share/lua/5.1/vstruct/lexer.lua"
+}

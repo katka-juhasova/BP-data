@@ -1,0 +1,138 @@
+{
+    "repository": "irc-engine",
+    "module": "motd.lua",
+    "path": "modules/irc-engine/share/lua/5.3/irce/modules/motd.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 27,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 30,
+            "container": "other",
+            "line": 3,
+            "lines_count": 47,
+            "characters_count": 1069,
+            "children_count": 3,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Field",
+                    "position": 40,
+                    "container": "interface",
+                    "line": 4,
+                    "lines_count": 9,
+                    "characters_count": 145,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 4,
+                            "tag": "Function",
+                            "position": 65,
+                            "container": "function",
+                            "line": 5,
+                            "lines_count": 7,
+                            "characters_count": 116,
+                            "children_count": 0
+                        }
+                    ]
+                },
+                {
+                    "index": 2,
+                    "master_index": 5,
+                    "tag": "Field",
+                    "position": 189,
+                    "container": "interface",
+                    "line": 14,
+                    "lines_count": 29,
+                    "characters_count": 812,
+                    "children_count": 4,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 6,
+                            "tag": "Function",
+                            "position": 230,
+                            "container": "function",
+                            "line": 16,
+                            "lines_count": 4,
+                            "characters_count": 95,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 2,
+                            "master_index": 7,
+                            "tag": "Function",
+                            "position": 354,
+                            "container": "function",
+                            "line": 21,
+                            "lines_count": 6,
+                            "characters_count": 204,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 3,
+                            "master_index": 8,
+                            "tag": "Function",
+                            "position": 586,
+                            "container": "function",
+                            "line": 28,
+                            "lines_count": 7,
+                            "characters_count": 227,
+                            "children_count": 0
+                        },
+                        {
+                            "index": 4,
+                            "master_index": 9,
+                            "tag": "Function",
+                            "position": 843,
+                            "container": "function",
+                            "line": 36,
+                            "lines_count": 6,
+                            "characters_count": 154,
+                            "children_count": 0
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "master_index": 10,
+                    "tag": "Field",
+                    "position": 1005,
+                    "container": "interface",
+                    "line": 44,
+                    "lines_count": 5,
+                    "characters_count": 91,
+                    "children_count": 1,
+                    "children": [
+                        {
+                            "index": 1,
+                            "master_index": 11,
+                            "tag": "Function",
+                            "position": 1037,
+                            "container": "function",
+                            "line": 45,
+                            "lines_count": 3,
+                            "characters_count": 55,
+                            "children_count": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "nodes_count": 11,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/irc-engine/share/lua/5.3/irce/modules/motd.lua"
+}

@@ -4,12 +4,13 @@ import getopt
 import json
 
 
-if len(sys.argv) != 2:
-	print('Error: Incorrect number of arguments.')
-	exit(1)
+# if len(sys.argv) != 2:
+# 	print('Error: Incorrect number of arguments.')
+# 	exit(1)
 
-BPVis_dir = sys.argv[1]
-path = BPVis_dir + '/data/'
+# BPVis_dir = sys.argv[1]
+# path = BPVis_dir + '/data/'
+path = 'data/'
 files = list()
 
 for r, d, f in os.walk(path):
@@ -26,23 +27,29 @@ for file in files:
 	# except:
 	# 	print(data['path'])
 
-	x = ''
+	# x = ''
 
-	if 'https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1' in data['url']:
-		x = data['url']
-		x = x.replace(
-			'https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1', 
-			BPVis_dir + '/modules'
-		)
+	# if 'https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1' in data['url']:
+	# 	x = data['url']
+	# 	x = x.replace(
+	# 		'https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part1', 
+	# 		BPVis_dir + '/modules'
+	# 	)
 
-	elif 'https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2' in data['url']:
-		x = data['url']
-		x = x.replace(
-			'https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2', 
-			BPVis_dir + '/modules'
-		)
+	# elif 'https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2' in data['url']:
+	# 	x = data['url']
+	# 	x = x.replace(
+	# 		'https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules-part2', 
+	# 		BPVis_dir + '/modules'
+	# 	)
 
-	data['path'] = x
+	# data['path'] = x
+
+	x = data['url']
+	x = x.replace('modules-part1', 'modules')
+	x = x.replace('modules-part2', 'modules')
+
+	data['url'] = x
 
 	with open(file, 'w') as fout:
 		fout.write(json.dumps(data, indent=4))	

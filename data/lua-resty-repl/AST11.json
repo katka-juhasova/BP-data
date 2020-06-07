@@ -1,0 +1,169 @@
+{
+    "repository": "lua-resty-repl",
+    "module": "completer.lua",
+    "path": "modules/lua-resty-repl/share/lua/5.3/resty/repl/completer.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "other",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 13,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 7,
+                    "container": "variable",
+                    "line": 1,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 16,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 22,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalFunction",
+            "position": 50,
+            "container": "function",
+            "line": 5,
+            "lines_count": 7,
+            "characters_count": 134,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 186,
+            "container": "function",
+            "line": 13,
+            "lines_count": 7,
+            "characters_count": 130,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 318,
+            "container": "function",
+            "line": 21,
+            "lines_count": 16,
+            "characters_count": 286,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 606,
+            "container": "function",
+            "line": 38,
+            "lines_count": 39,
+            "characters_count": 998,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 9,
+            "tag": "GlobalFunction",
+            "position": 1606,
+            "container": "function",
+            "line": 78,
+            "lines_count": 53,
+            "characters_count": 1433,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 10,
+            "tag": "GlobalFunction",
+            "position": 3041,
+            "container": "function",
+            "line": 132,
+            "lines_count": 24,
+            "characters_count": 823,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 11,
+            "tag": "GlobalFunction",
+            "position": 3866,
+            "container": "function",
+            "line": 157,
+            "lines_count": 10,
+            "characters_count": 275,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 12,
+            "tag": "GlobalFunction",
+            "position": 4143,
+            "container": "function",
+            "line": 168,
+            "lines_count": 6,
+            "characters_count": 134,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 13,
+            "tag": "LastStat",
+            "position": 4279,
+            "container": "other",
+            "line": 175,
+            "lines_count": 1,
+            "characters_count": 9,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 14,
+                    "tag": "_SimpleExp",
+                    "position": 4286,
+                    "container": "interface",
+                    "line": 175,
+                    "lines_count": 1,
+                    "characters_count": 2,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 14,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/lua-resty-repl/share/lua/5.3/resty/repl/completer.lua"
+}

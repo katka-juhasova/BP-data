@@ -1,0 +1,314 @@
+{
+    "repository": "strictness",
+    "module": "framework.lua",
+    "path": "modules/strictness/lib/luarocks/rocks-5.3/strictness/0.3.0-1/spec/framework.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 196,
+            "container": "other",
+            "line": 6,
+            "lines_count": 1,
+            "characters_count": 15,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 2,
+                    "tag": "Name",
+                    "position": 202,
+                    "container": "variable",
+                    "line": 6,
+                    "lines_count": 1,
+                    "characters_count": 5,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "master_index": 3,
+            "tag": "LocalAssign",
+            "position": 212,
+            "container": "other",
+            "line": 7,
+            "lines_count": 1,
+            "characters_count": 16,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "Name",
+                    "position": 218,
+                    "container": "variable",
+                    "line": 7,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 5,
+            "tag": "LocalAssign",
+            "position": 251,
+            "container": "other",
+            "line": 10,
+            "lines_count": 6,
+            "characters_count": 101,
+            "children_count": 2,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 6,
+                    "tag": "Name",
+                    "position": 257,
+                    "container": "variable",
+                    "line": 10,
+                    "lines_count": 1,
+                    "characters_count": 6,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 7,
+                    "tag": "Function",
+                    "position": 266,
+                    "container": "function",
+                    "line": 10,
+                    "lines_count": 6,
+                    "characters_count": 86,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "master_index": 8,
+            "tag": "LocalFunction",
+            "position": 386,
+            "container": "function",
+            "line": 18,
+            "lines_count": 6,
+            "characters_count": 194,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 9,
+            "tag": "LocalFunction",
+            "position": 684,
+            "container": "function",
+            "line": 30,
+            "lines_count": 5,
+            "characters_count": 149,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 10,
+            "tag": "LocalFunction",
+            "position": 869,
+            "container": "function",
+            "line": 37,
+            "lines_count": 5,
+            "characters_count": 157,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 11,
+            "tag": "LocalFunction",
+            "position": 1059,
+            "container": "function",
+            "line": 44,
+            "lines_count": 5,
+            "characters_count": 152,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 12,
+            "tag": "LocalFunction",
+            "position": 1245,
+            "container": "function",
+            "line": 51,
+            "lines_count": 5,
+            "characters_count": 155,
+            "children_count": 0
+        },
+        {
+            "index": 9,
+            "master_index": 13,
+            "tag": "LocalFunction",
+            "position": 1430,
+            "container": "function",
+            "line": 58,
+            "lines_count": 5,
+            "characters_count": 177,
+            "children_count": 0
+        },
+        {
+            "index": 10,
+            "master_index": 14,
+            "tag": "LocalFunction",
+            "position": 1637,
+            "container": "function",
+            "line": 65,
+            "lines_count": 5,
+            "characters_count": 185,
+            "children_count": 0
+        },
+        {
+            "index": 11,
+            "master_index": 15,
+            "tag": "LocalFunction",
+            "position": 1874,
+            "container": "function",
+            "line": 72,
+            "lines_count": 4,
+            "characters_count": 121,
+            "children_count": 0
+        },
+        {
+            "index": 12,
+            "master_index": 16,
+            "tag": "LocalFunction",
+            "position": 2055,
+            "container": "function",
+            "line": 78,
+            "lines_count": 4,
+            "characters_count": 125,
+            "children_count": 0
+        },
+        {
+            "index": 13,
+            "master_index": 17,
+            "tag": "LocalFunction",
+            "position": 2206,
+            "container": "function",
+            "line": 84,
+            "lines_count": 5,
+            "characters_count": 150,
+            "children_count": 0
+        },
+        {
+            "index": 14,
+            "master_index": 18,
+            "tag": "LastStat",
+            "position": 2379,
+            "container": "other",
+            "line": 91,
+            "lines_count": 11,
+            "characters_count": 301,
+            "children_count": 9,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 19,
+                    "tag": "Field",
+                    "position": 2390,
+                    "container": "interface",
+                    "line": 92,
+                    "lines_count": 1,
+                    "characters_count": 27,
+                    "children_count": 0
+                },
+                {
+                    "index": 2,
+                    "master_index": 20,
+                    "tag": "Field",
+                    "position": 2421,
+                    "container": "interface",
+                    "line": 93,
+                    "lines_count": 1,
+                    "characters_count": 35,
+                    "children_count": 0
+                },
+                {
+                    "index": 3,
+                    "master_index": 21,
+                    "tag": "Field",
+                    "position": 2460,
+                    "container": "interface",
+                    "line": 94,
+                    "lines_count": 1,
+                    "characters_count": 27,
+                    "children_count": 0
+                },
+                {
+                    "index": 4,
+                    "master_index": 22,
+                    "tag": "Field",
+                    "position": 2491,
+                    "container": "interface",
+                    "line": 95,
+                    "lines_count": 1,
+                    "characters_count": 35,
+                    "children_count": 0
+                },
+                {
+                    "index": 5,
+                    "master_index": 23,
+                    "tag": "Field",
+                    "position": 2530,
+                    "container": "interface",
+                    "line": 96,
+                    "lines_count": 1,
+                    "characters_count": 23,
+                    "children_count": 0
+                },
+                {
+                    "index": 6,
+                    "master_index": 24,
+                    "tag": "Field",
+                    "position": 2557,
+                    "container": "interface",
+                    "line": 97,
+                    "lines_count": 1,
+                    "characters_count": 31,
+                    "children_count": 0
+                },
+                {
+                    "index": 7,
+                    "master_index": 25,
+                    "tag": "Field",
+                    "position": 2592,
+                    "container": "interface",
+                    "line": 98,
+                    "lines_count": 1,
+                    "characters_count": 25,
+                    "children_count": 0
+                },
+                {
+                    "index": 8,
+                    "master_index": 26,
+                    "tag": "Field",
+                    "position": 2621,
+                    "container": "interface",
+                    "line": 99,
+                    "lines_count": 1,
+                    "characters_count": 27,
+                    "children_count": 0
+                },
+                {
+                    "index": 9,
+                    "master_index": 27,
+                    "tag": "Field",
+                    "position": 2652,
+                    "container": "interface",
+                    "line": 100,
+                    "lines_count": 1,
+                    "characters_count": 25,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 27,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/strictness/lib/luarocks/rocks-5.3/strictness/0.3.0-1/spec/framework.lua"
+}

@@ -1,0 +1,55 @@
+{
+    "repository": "dado",
+    "module": "overall.lua",
+    "path": "modules/dado/lib/luarocks/rocks-5.3/dado/1.8.3-1/tests/overall.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 23,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 50,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "If",
+            "position": 74,
+            "container": "other",
+            "line": 4,
+            "lines_count": 3,
+            "characters_count": 51,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Assign",
+                    "position": 112,
+                    "container": "other",
+                    "line": 5,
+                    "lines_count": 1,
+                    "characters_count": 9,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "LocalAssign",
+            "position": 148,
+            "container": "require",
+            "line": 9,
+            "lines_count": 1,
+            "characters_count": 26,
+            "children_count": 0
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/dado/lib/luarocks/rocks-5.3/dado/1.8.3-1/tests/overall.lua"
+}

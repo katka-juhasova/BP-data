@@ -1,0 +1,123 @@
+{
+    "repository": "stuart-ml",
+    "module": "KMeansModel.lua",
+    "path": "modules/stuart-ml/share/lua/5.3/stuart-ml/clustering/KMeansModel.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 39,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 31,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 45,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "GlobalFunction",
+            "position": 72,
+            "container": "function",
+            "line": 5,
+            "lines_count": 9,
+            "characters_count": 375,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 449,
+            "container": "function",
+            "line": 15,
+            "lines_count": 5,
+            "characters_count": 229,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 813,
+            "container": "function",
+            "line": 25,
+            "lines_count": 7,
+            "characters_count": 317,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 1132,
+            "container": "function",
+            "line": 33,
+            "lines_count": 15,
+            "characters_count": 855,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 1989,
+            "container": "function",
+            "line": 49,
+            "lines_count": 20,
+            "characters_count": 765,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 9,
+            "tag": "LastStat",
+            "position": 2756,
+            "container": "other",
+            "line": 70,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "_SimpleExp",
+                    "position": 2763,
+                    "container": "interface",
+                    "line": 70,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/stuart-ml/share/lua/5.3/stuart-ml/clustering/KMeansModel.lua"
+}

@@ -1,0 +1,55 @@
+{
+    "repository": "log4l",
+    "module": "sql.lua",
+    "path": "modules/log4l/share/lua/5.3/log4l/sql.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 320,
+            "container": "require",
+            "line": 10,
+            "lines_count": 1,
+            "characters_count": 30,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "GlobalFunction",
+            "position": 352,
+            "container": "function",
+            "line": 12,
+            "lines_count": 49,
+            "characters_count": 1378,
+            "children_count": 0
+        },
+        {
+            "index": 3,
+            "master_index": 3,
+            "tag": "LastStat",
+            "position": 1732,
+            "container": "other",
+            "line": 62,
+            "lines_count": 1,
+            "characters_count": 18,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 4,
+                    "tag": "_SimpleExp",
+                    "position": 1739,
+                    "container": "interface",
+                    "line": 62,
+                    "lines_count": 1,
+                    "characters_count": 11,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 4,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/log4l/share/lua/5.3/log4l/sql.lua"
+}

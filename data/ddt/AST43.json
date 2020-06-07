@@ -1,0 +1,44 @@
+{
+    "repository": "ddt",
+    "module": "disect_argument.lua",
+    "path": "modules/ddt/share/lua/5.3/cliargs/utils/disect_argument.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalFunction",
+            "position": 1,
+            "container": "function",
+            "line": 1,
+            "lines_count": 34,
+            "characters_count": 687,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 690,
+            "container": "other",
+            "line": 36,
+            "lines_count": 1,
+            "characters_count": 22,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "_SimpleExp",
+                    "position": 697,
+                    "container": "interface",
+                    "line": 36,
+                    "lines_count": 1,
+                    "characters_count": 15,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 3,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/ddt/share/lua/5.3/cliargs/utils/disect_argument.lua"
+}

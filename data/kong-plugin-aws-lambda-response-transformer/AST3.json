@@ -1,0 +1,44 @@
+{
+    "repository": "kong-plugin-aws-lambda-response-transformer",
+    "module": "schema.lua",
+    "path": "modules/kong-plugin-aws-lambda-response-transformer/share/lua/5.3/kong/plugins/aws-lambda-response-transformer/schema.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalFunction",
+            "position": 1,
+            "container": "function",
+            "line": 1,
+            "lines_count": 7,
+            "characters_count": 175,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LastStat",
+            "position": 178,
+            "container": "other",
+            "line": 9,
+            "lines_count": 96,
+            "characters_count": 1807,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Field",
+                    "position": 189,
+                    "container": "interface",
+                    "line": 10,
+                    "lines_count": 94,
+                    "characters_count": 1793,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 3,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/kong-plugin-aws-lambda-response-transformer/share/lua/5.3/kong/plugins/aws-lambda-response-transformer/schema.lua"
+}

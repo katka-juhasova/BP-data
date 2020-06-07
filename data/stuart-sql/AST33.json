@@ -1,0 +1,123 @@
+{
+    "repository": "stuart-sql",
+    "module": "SparkSession.lua",
+    "path": "modules/stuart-sql/share/lua/5.1/stuart-sql/SparkSession.lua",
+    "nodes": [
+        {
+            "index": 1,
+            "master_index": 1,
+            "tag": "LocalAssign",
+            "position": 1,
+            "container": "require",
+            "line": 1,
+            "lines_count": 1,
+            "characters_count": 36,
+            "children_count": 0
+        },
+        {
+            "index": 2,
+            "master_index": 2,
+            "tag": "LocalAssign",
+            "position": 39,
+            "container": "other",
+            "line": 3,
+            "lines_count": 1,
+            "characters_count": 32,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 3,
+                    "tag": "Name",
+                    "position": 45,
+                    "container": "variable",
+                    "line": 3,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "master_index": 4,
+            "tag": "GlobalFunction",
+            "position": 73,
+            "container": "function",
+            "line": 5,
+            "lines_count": 6,
+            "characters_count": 232,
+            "children_count": 0
+        },
+        {
+            "index": 4,
+            "master_index": 5,
+            "tag": "GlobalFunction",
+            "position": 307,
+            "container": "function",
+            "line": 12,
+            "lines_count": 4,
+            "characters_count": 118,
+            "children_count": 0
+        },
+        {
+            "index": 5,
+            "master_index": 6,
+            "tag": "GlobalFunction",
+            "position": 427,
+            "container": "function",
+            "line": 17,
+            "lines_count": 3,
+            "characters_count": 83,
+            "children_count": 0
+        },
+        {
+            "index": 6,
+            "master_index": 7,
+            "tag": "GlobalFunction",
+            "position": 512,
+            "container": "function",
+            "line": 21,
+            "lines_count": 3,
+            "characters_count": 82,
+            "children_count": 0
+        },
+        {
+            "index": 7,
+            "master_index": 8,
+            "tag": "GlobalFunction",
+            "position": 596,
+            "container": "function",
+            "line": 25,
+            "lines_count": 3,
+            "characters_count": 92,
+            "children_count": 0
+        },
+        {
+            "index": 8,
+            "master_index": 9,
+            "tag": "LastStat",
+            "position": 690,
+            "container": "other",
+            "line": 29,
+            "lines_count": 1,
+            "characters_count": 19,
+            "children_count": 1,
+            "children": [
+                {
+                    "index": 1,
+                    "master_index": 10,
+                    "tag": "_SimpleExp",
+                    "position": 697,
+                    "container": "interface",
+                    "line": 29,
+                    "lines_count": 1,
+                    "characters_count": 12,
+                    "children_count": 0
+                }
+            ]
+        }
+    ],
+    "nodes_count": 10,
+    "url": "https://raw.githubusercontent.com/katka-juhasova/BP-data/master/modules/stuart-sql/share/lua/5.1/stuart-sql/SparkSession.lua"
+}
