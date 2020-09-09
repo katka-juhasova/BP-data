@@ -1,2 +1,2 @@
 # BP-data
-Data for bachelor thesis and visualization tool CodeNNVis. 
+Data for the bachelor thesis *Visualization and Explainability of Deep Learning*. 
